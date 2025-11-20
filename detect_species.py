@@ -463,15 +463,8 @@ def process_images(
                 'contains_people': num_people > 0,
             }
 
-            # Add bounding box annotations for animals
-            animal_bboxes = []
-            for idx, animal in enumerate(detections['animals']):
-                bbox_str = f"[{animal['bbox'][0]:.4f}, {animal['bbox'][1]:.4f}, {animal['bbox'][2]:.4f}, {animal['bbox'][3]:.4f}]"
-                animal_bboxes.append(f"animal_{idx+1}: {bbox_str}")
-
-            result['animal_bounding_boxes'] = '; '.join(animal_bboxes) if animal_bboxes else ''
-
             # Run species identification if animals detected
+            animal_detections = []
             if num_animals > 0:
                 if species_list:
                     species_results = detector.classify_with_species_list(
@@ -482,46 +475,59 @@ def process_images(
                         image_path, detections['animals']
                     )
 
-                # Add species info to result
-                if species_results:
-                    # Count each species detected
-                    from collections import Counter
-                    species_counts = Counter()
-                    all_confidences = []
+                # Build structured animal detections with species
+                from collections import Counter
+                species_counts = Counter()
+                all_confidences = []
 
-                    for sp_result in species_results:
-                        if sp_result['species_predictions']:
-                            top_pred = sp_result['species_predictions'][0]
-                            species_counts[top_pred['species']] += 1
-                            all_confidences.append(top_pred['confidence'])
+                for idx, (animal, sp_result) in enumerate(zip(detections['animals'], species_results)):
+                    detection_entry = {
+                        "id": idx + 1,
+                        "bbox": [
+                            round(animal['bbox'][0], 4),
+                            round(animal['bbox'][1], 4),
+                            round(animal['bbox'][2], 4),
+                            round(animal['bbox'][3], 4)
+                        ]
+                    }
 
-                    # Format as "species: count" pairs
-                    species_count_str = ', '.join([f"{species}: {count}" for species, count in sorted(species_counts.items())])
+                    # Add species information if available
+                    if sp_result['species_predictions']:
+                        top_pred = sp_result['species_predictions'][0]
+                        detection_entry["species"] = top_pred['species']
+                        detection_entry["confidence"] = round(top_pred['confidence'], 4)
+                        species_counts[top_pred['species']] += 1
+                        all_confidences.append(top_pred['confidence'])
+                    else:
+                        detection_entry["species"] = None
+                        detection_entry["confidence"] = 0.0
 
-                    result['species_counts'] = dict(species_counts)  # For JSON/dict access
-                    result['species_detected'] = species_count_str  # For CSV/readable format
-                    result['num_unique_species'] = len(species_counts)
-                    result['total_animals_identified'] = sum(species_counts.values())
-                    result['avg_species_confidence'] = sum(all_confidences) / len(all_confidences) if all_confidences else 0
+                    animal_detections.append(detection_entry)
 
-                    detailed_results.append({
-                        'file_ID': image_path.name,
-                        'file_path': str(image_path),
-                        'date_time': str(date_time) if date_time else None,
-                        'location': location,
-                        'latitude': latitude,
-                        'longitude': longitude,
-                        'detections': detections,
-                        'species_results': species_results,
-                        'species_counts': dict(species_counts)
-                    })
-                else:
-                    result['species_counts'] = {}
-                    result['species_detected'] = ''
-                    result['num_unique_species'] = 0
-                    result['total_animals_identified'] = 0
-                    result['avg_species_confidence'] = 0
+                # Format summary strings
+                species_count_str = ', '.join([f"{species}: {count}" for species, count in sorted(species_counts.items())])
+
+                result['animal_detections'] = json.dumps(animal_detections)  # JSON string for CSV
+                result['species_counts'] = dict(species_counts)  # For JSON/dict access
+                result['species_detected'] = species_count_str  # For CSV/readable format
+                result['num_unique_species'] = len(species_counts)
+                result['total_animals_identified'] = sum(species_counts.values())
+                result['avg_species_confidence'] = sum(all_confidences) / len(all_confidences) if all_confidences else 0
+
+                detailed_results.append({
+                    'file_ID': image_path.name,
+                    'file_path': str(image_path),
+                    'date_time': str(date_time) if date_time else None,
+                    'location': location,
+                    'latitude': latitude,
+                    'longitude': longitude,
+                    'detections': detections,
+                    'species_results': species_results,
+                    'species_counts': dict(species_counts),
+                    'animal_detections': animal_detections
+                })
             else:
+                result['animal_detections'] = '[]'
                 result['species_counts'] = {}
                 result['species_detected'] = ''
                 result['num_unique_species'] = 0
@@ -541,7 +547,7 @@ def process_images(
     column_order = [
         'file_ID', 'recording/photo/frame', 'date_time', 'location', 'Latitude', 'Longitude',
         'num_animals', 'num_people', 'num_vehicles', 'contains_animals', 'contains_people',
-        'animal_bounding_boxes', 'species_counts', 'species_detected', 'num_unique_species',
+        'animal_detections', 'species_counts', 'species_detected', 'num_unique_species',
         'total_animals_identified', 'avg_species_confidence'
     ]
 
@@ -628,7 +634,7 @@ def main():
     # Show only animal photos
     animal_photos = df[df['contains_animals']]
     print(f"\n=== Animal Photos ({len(animal_photos)}) ===")
-    print(animal_photos[['file_ID', 'date_time', 'location', 'num_animals', 'species_detected', 'animal_bounding_boxes']])
+    print(animal_photos[['file_ID', 'date_time', 'location', 'num_animals', 'species_detected', 'animal_detections']])
 
 
 if __name__ == "__main__":

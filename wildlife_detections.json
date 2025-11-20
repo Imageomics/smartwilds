@@ -156,7 +156,42 @@
     "species_counts": {
       "Grevy's zebra": 1,
       "Scimitar-horned oryx": 2
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.4945,
+          0.5337,
+          0.1033,
+          0.0675
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9559
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.4056,
+          0.5451,
+          0.0742,
+          0.043
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.5092
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.116,
+          0.5611,
+          0.0414,
+          0.0307
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9993
+      }
+    ]
   },
   {
     "file_ID": "5F87CDA2-71E6-49FE-B94D-95B7C0645D5D_1_105_c.jpeg",
@@ -281,7 +316,31 @@
     "species_counts": {
       "Grevy's zebra": 1,
       "Scimitar-horned oryx": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.2664,
+          0.4869,
+          0.1421,
+          0.0893
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9739
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.0725,
+          0.5129,
+          0.0559,
+          0.0324
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.8264
+      }
+    ]
   },
   {
     "file_ID": "21920A67-1B9E-4C80-8FB8-5AEC3ABA9968_1_105_c.jpeg",
@@ -343,7 +402,20 @@
     ],
     "species_counts": {
       "Grevy's zebra": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.4502,
+          0.5061,
+          0.1553,
+          0.135
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9692
+      }
+    ]
   },
   {
     "file_ID": "C8D55EE0-4088-4027-BBEC-E74F9844867C_1_105_c.jpeg",
@@ -577,7 +649,64 @@
     ],
     "species_counts": {
       "Grevy's zebra": 5
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.2101,
+          0.5436,
+          0.1363,
+          0.1249
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9982
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.5359,
+          0.5733,
+          0.1479,
+          0.1253
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9488
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.6534,
+          0.5467,
+          0.0533,
+          0.0642
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.7362
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.3681,
+          0.5475,
+          0.1628,
+          0.0785
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9746
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.5257,
+          0.5714,
+          0.0786,
+          0.0636
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9941
+      }
+    ]
   },
   {
     "file_ID": "FE5A0F1D-EFBD-4980-BF93-1E750005DAFF_1_105_c.jpeg",
@@ -812,7 +941,64 @@
     "species_counts": {
       "Grevy's zebra": 4,
       "Scimitar-horned oryx": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.3356,
+          0.5198,
+          0.0883,
+          0.0894
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9996
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.4829,
+          0.5391,
+          0.0796,
+          0.084
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9416
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.6464,
+          0.5217,
+          0.0388,
+          0.0485
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.7796
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.4524,
+          0.5242,
+          0.0804,
+          0.05
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.946
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.4759,
+          0.5247,
+          0.0869,
+          0.0594
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9844
+      }
+    ]
   },
   {
     "file_ID": "61EB6DF7-6A2B-457A-AB79-941B2A001C39_1_105_c.jpeg",
@@ -1004,7 +1190,53 @@
     "species_counts": {
       "Grevy's zebra": 2,
       "Scimitar-horned oryx": 2
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.4273,
+          0.5527,
+          0.0474,
+          0.0863
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9808
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.7293,
+          0.5568,
+          0.0409,
+          0.0478
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.8972
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.4633,
+          0.5702,
+          0.0371,
+          0.0713
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.8973
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.5395,
+          0.5565,
+          0.1074,
+          0.0565
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9927
+      }
+    ]
   },
   {
     "file_ID": "5E7AA732-E521-4330-8D89-6B32DE87C4BA_1_105_c.jpeg",
@@ -1239,7 +1471,64 @@
     "species_counts": {
       "Grevy's zebra": 4,
       "ostrich": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.0758,
+          0.5208,
+          0.152,
+          0.1445
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.995
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.4312,
+          0.5405,
+          0.056,
+          0.066
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9711
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.8748,
+          0.5463,
+          0.0615,
+          0.0537
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9784
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.6031,
+          0.5474,
+          0.1283,
+          0.064
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9975
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.5047,
+          0.565,
+          0.0498,
+          0.0764
+        ],
+        "species": "ostrich",
+        "confidence": 0.378
+      }
+    ]
   },
   {
     "file_ID": "BAF474DF-EC32-41CB-A6F9-FE5C7B68D7BF_1_105_c.jpeg",
@@ -1474,7 +1763,64 @@
     "species_counts": {
       "Grevy's zebra": 4,
       "Scimitar-horned oryx": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.1771,
+          0.454,
+          0.1184,
+          0.1872
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9937
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.5691,
+          0.5028,
+          0.0992,
+          0.0833
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9989
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.4383,
+          0.4884,
+          0.0387,
+          0.0838
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.996
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.7775,
+          0.5022,
+          0.0575,
+          0.0791
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9675
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.4898,
+          0.52,
+          0.0316,
+          0.0921
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9644
+      }
+    ]
   },
   {
     "file_ID": "E103BF50-1150-4D6F-A171-E90FB5FA0199_1_105_c.jpeg",
@@ -1709,7 +2055,64 @@
     "species_counts": {
       "Grevy's zebra": 3,
       "Scimitar-horned oryx": 2
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.1309,
+          0.4681,
+          0.1219,
+          0.1897
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9799
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.53,
+          0.5155,
+          0.0956,
+          0.0827
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9978
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.732,
+          0.518,
+          0.0433,
+          0.0666
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9051
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.3993,
+          0.5008,
+          0.0353,
+          0.0856
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.8621
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.4366,
+          0.5346,
+          0.0387,
+          0.0936
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9428
+      }
+    ]
   },
   {
     "file_ID": "83116FC5-6C1B-4531-BD03-BEAE3EA171A5_1_105_c.jpeg",
@@ -1911,7 +2314,53 @@
     "species_counts": {
       "Grevy's zebra": 3,
       "Scimitar-horned oryx": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.1525,
+          0.5387,
+          0.0412,
+          0.0684
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9982
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.4669,
+          0.5444,
+          0.0523,
+          0.0361
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9078
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.6096,
+          0.5489,
+          0.0725,
+          0.0387
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9838
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.7775,
+          0.5461,
+          0.0537,
+          0.0258
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.7961
+      }
+    ]
   },
   {
     "file_ID": "373968FD-6848-4658-BDA6-70D03DD5D384_1_105_c.jpeg",
@@ -2059,7 +2508,42 @@
     ],
     "species_counts": {
       "Grevy's zebra": 3
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.5868,
+          0.599,
+          0.0814,
+          0.0667
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9963
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.3461,
+          0.5963,
+          0.1161,
+          0.0546
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9974
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.2447,
+          0.6139,
+          0.0694,
+          0.0451
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.806
+      }
+    ]
   },
   {
     "file_ID": "91A2FBF9-6F50-431C-8737-B2BCADDD2843_1_105_c.jpeg",
@@ -2208,7 +2692,42 @@
     "species_counts": {
       "Grevy's zebra": 2,
       "onager": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.58,
+          0.5967,
+          0.0801,
+          0.0689
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9966
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.3422,
+          0.5917,
+          0.1206,
+          0.0557
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9961
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.2354,
+          0.6076,
+          0.0656,
+          0.0446
+        ],
+        "species": "onager",
+        "confidence": 0.5332
+      }
+    ]
   },
   {
     "file_ID": "BCA704E6-D66F-4F20-9CE7-898D5ABC7EA3_1_105_c.jpeg",
@@ -2443,7 +2962,64 @@
     "species_counts": {
       "onager": 3,
       "Scimitar-horned oryx": 2
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.1083,
+          0.528,
+          0.37,
+          0.2303
+        ],
+        "species": "onager",
+        "confidence": 0.8123
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.6187,
+          0.4935,
+          0.2688,
+          0.1621
+        ],
+        "species": "onager",
+        "confidence": 0.8495
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.4039,
+          0.4994,
+          0.2174,
+          0.1889
+        ],
+        "species": "onager",
+        "confidence": 0.519
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.4704,
+          0.478,
+          0.1653,
+          0.1393
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.7073
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.8917,
+          0.5081,
+          0.1082,
+          0.197
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9757
+      }
+    ]
   },
   {
     "file_ID": "D24411BC-FF20-47E5-B51C-F283630C74D4_1_105_c.jpeg",
@@ -2549,7 +3125,31 @@
     "species_counts": {
       "Scimitar-horned oryx": 1,
       "onager": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.514,
+          0.4208,
+          0.3509,
+          0.406
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9117
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.3165,
+          0.445,
+          0.2904,
+          0.2571
+        ],
+        "species": "onager",
+        "confidence": 0.8568
+      }
+    ]
   },
   {
     "file_ID": "4FCBD952-B993-4DAF-802E-B865B0AB2002_1_102_o.jpeg",
@@ -2740,7 +3340,53 @@
     ],
     "species_counts": {
       "Grevy's zebra": 4
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.5375,
+          0.5254,
+          0.1177,
+          0.1092
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9817
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.181,
+          0.5491,
+          0.1964,
+          0.1
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9935
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.7197,
+          0.5187,
+          0.1186,
+          0.0713
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.996
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.4464,
+          0.608,
+          0.0979,
+          0.0512
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9761
+      }
+    ]
   },
   {
     "file_ID": "803A448E-16C2-4A11-AB34-02BD32BEE29B_1_102_o.jpeg",
@@ -2931,7 +3577,53 @@
     ],
     "species_counts": {
       "Grevy's zebra": 4
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.1312,
+          0.5579,
+          0.1795,
+          0.1018
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9966
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.4823,
+          0.5251,
+          0.1046,
+          0.1208
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9989
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.7277,
+          0.5191,
+          0.1382,
+          0.0751
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9969
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.3556,
+          0.6215,
+          0.1038,
+          0.0545
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9913
+      }
+    ]
   },
   {
     "file_ID": "691A6C99-76E3-4F65-8623-0A0208C5B26C_1_105_c.jpeg",
@@ -3220,7 +3912,75 @@
       "Scimitar-horned oryx": 1,
       "ostrich": 4,
       "Grevy's zebra": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.3099,
+          0.5531,
+          0.2726,
+          0.114
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.642
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.6123,
+          0.4553,
+          0.1535,
+          0.1267
+        ],
+        "species": "ostrich",
+        "confidence": 1.0
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.0237,
+          0.3701,
+          0.0784,
+          0.0409
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9682
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.132,
+          0.5185,
+          0.1881,
+          0.1646
+        ],
+        "species": "ostrich",
+        "confidence": 1.0
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.0074,
+          0.6089,
+          0.3147,
+          0.1382
+        ],
+        "species": "ostrich",
+        "confidence": 0.9961
+      },
+      {
+        "id": 6,
+        "bbox": [
+          0.6209,
+          0.4073,
+          0.2261,
+          0.1726
+        ],
+        "species": "ostrich",
+        "confidence": 1.0
+      }
+    ]
   },
   {
     "file_ID": "D409C5F8-96A5-4121-B1CB-2B522DCC7DAA_1_105_c.jpeg",
@@ -3368,7 +4128,42 @@
     ],
     "species_counts": {
       "Scimitar-horned oryx": 3
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.3698,
+          0.4243,
+          0.3481,
+          0.1871
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.6638
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.2717,
+          0.4144,
+          0.1219,
+          0.151
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.8816
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.5955,
+          0.3312,
+          0.0652,
+          0.0637
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9989
+      }
+    ]
   },
   {
     "file_ID": "41D31B72-B36A-47FE-B511-9AB3A6156BA9_4_5005_c.jpeg",
@@ -3646,7 +4441,75 @@
     "species_counts": {
       "Grevy's zebra": 2,
       "Scimitar-horned oryx": 4
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.5857,
+          0.5049,
+          0.0965,
+          0.0699
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.7468
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.6981,
+          0.5317,
+          0.0394,
+          0.0512
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9825
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.4844,
+          0.52,
+          0.0858,
+          0.0386
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.6612
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.2299,
+          0.5295,
+          0.0841,
+          0.0707
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9765
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.2676,
+          0.5286,
+          0.1326,
+          0.0633
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.6566
+      },
+      {
+        "id": 6,
+        "bbox": [
+          0.3262,
+          0.5252,
+          0.0766,
+          0.0512
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.7226
+      }
+    ]
   },
   {
     "file_ID": "3CE04F48-43AE-4CE1-B9CE-C30E2EA90A75_4_5005_c.jpeg",
@@ -3881,7 +4744,64 @@
     "species_counts": {
       "Grevy's zebra": 2,
       "Scimitar-horned oryx": 3
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.5702,
+          0.5278,
+          0.0706,
+          0.065
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.5051
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.3416,
+          0.5435,
+          0.0964,
+          0.0646
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.8161
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.5044,
+          0.5404,
+          0.0607,
+          0.0371
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9605
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.6491,
+          0.5508,
+          0.03,
+          0.0451
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9959
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.3166,
+          0.5466,
+          0.0522,
+          0.0663
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.8755
+      }
+    ]
   },
   {
     "file_ID": "28ED77B4-56C9-4452-88F9-43C349CCDB3C_4_5005_c.jpeg",
@@ -3986,7 +4906,31 @@
     ],
     "species_counts": {
       "ostrich": 2
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.1029,
+          0.5423,
+          0.3587,
+          0.2977
+        ],
+        "species": "ostrich",
+        "confidence": 1.0
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.6796,
+          0.5196,
+          0.154,
+          0.1535
+        ],
+        "species": "ostrich",
+        "confidence": 0.9997
+      }
+    ]
   },
   {
     "file_ID": "12DCFA89-3D36-49B2-BE81-89BE509DB71F_4_5005_c.jpeg",
@@ -4178,7 +5122,53 @@
     "species_counts": {
       "Scimitar-horned oryx": 3,
       "Grevy's zebra": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.3653,
+          0.5356,
+          0.0813,
+          0.0483
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.8411
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.4257,
+          0.5175,
+          0.1548,
+          0.0988
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.8335
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.5022,
+          0.5151,
+          0.0857,
+          0.0489
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9012
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.4937,
+          0.5567,
+          0.0788,
+          0.057
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.8414
+      }
+    ]
   },
   {
     "file_ID": "73016341-B015-42F8-B86A-4D218307C891_4_5005_c.jpeg",
@@ -4370,7 +5360,53 @@
     "species_counts": {
       "Scimitar-horned oryx": 3,
       "Grevy's zebra": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.3202,
+          0.5082,
+          0.0767,
+          0.0501
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.781
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.4054,
+          0.4941,
+          0.1458,
+          0.0966
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.7865
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.4758,
+          0.4898,
+          0.09,
+          0.0513
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9952
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.4716,
+          0.5296,
+          0.0712,
+          0.0579
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9467
+      }
+    ]
   },
   {
     "file_ID": "B0B41175-0633-4101-8C64-7942B234F273_4_5005_c.jpeg",
@@ -4562,7 +5598,53 @@
     "species_counts": {
       "Grevy's zebra": 2,
       "Scimitar-horned oryx": 2
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.366,
+          0.5448,
+          0.0787,
+          0.0499
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.5604
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.4304,
+          0.5291,
+          0.156,
+          0.0976
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.7791
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.5075,
+          0.5694,
+          0.0603,
+          0.0558
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9794
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.5113,
+          0.5315,
+          0.0801,
+          0.043
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9633
+      }
+    ]
   },
   {
     "file_ID": "1D7ACEB2-1BDF-4C3A-B10C-1F7782CD987C_4_5005_c.jpeg",
@@ -4677,7 +5759,31 @@
     ],
     "species_counts": {
       "ostrich": 2
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          -0.0002,
+          0.4716,
+          0.4916,
+          0.5224
+        ],
+        "species": "ostrich",
+        "confidence": 0.9998
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.5154,
+          0.4332,
+          0.2628,
+          0.1944
+        ],
+        "species": "ostrich",
+        "confidence": 0.9999
+      }
+    ]
   },
   {
     "file_ID": "0363330B-3A9F-42B9-9457-EA1F01D2508C_4_5005_c.jpeg",
@@ -4911,7 +6017,64 @@
     ],
     "species_counts": {
       "Scimitar-horned oryx": 5
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.4431,
+          0.7871,
+          0.5563,
+          0.213
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.973
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.3053,
+          0.5201,
+          0.0612,
+          0.0348
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9695
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.5148,
+          0.5053,
+          0.0588,
+          0.0371
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9207
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.3837,
+          0.5178,
+          0.0524,
+          0.0291
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9884
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.4709,
+          0.5127,
+          0.0363,
+          0.0215
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9885
+      }
+    ]
   },
   {
     "file_ID": "65FDBB8E-A7A6-49EE-9C61-896DE9FB6ADB_4_5005_c.jpeg",
@@ -5016,7 +6179,31 @@
     ],
     "species_counts": {
       "Grevy's zebra": 2
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.4361,
+          0.5303,
+          0.2153,
+          0.1358
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9953
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.3664,
+          0.5559,
+          0.0991,
+          0.0647
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.7232
+      }
+    ]
   },
   {
     "file_ID": "0BE98623-CAE7-4D94-924C-8476AA59E736_4_5005_c.jpeg",
@@ -5218,7 +6405,53 @@
     "species_counts": {
       "ostrich": 1,
       "Scimitar-horned oryx": 3
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.6364,
+          0.5605,
+          0.3343,
+          0.1716
+        ],
+        "species": "ostrich",
+        "confidence": 0.9993
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.4157,
+          0.5894,
+          0.2301,
+          0.1228
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9607
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.1061,
+          0.3685,
+          0.0438,
+          0.0652
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9715
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.169,
+          0.3795,
+          0.0932,
+          0.0531
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9694
+      }
+    ]
   },
   {
     "file_ID": "C084AA38-5F43-478E-BD46-E0464CDF810F_4_5005_c.jpeg",
@@ -5366,7 +6599,42 @@
     ],
     "species_counts": {
       "ostrich": 3
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.1117,
+          0.4721,
+          0.1534,
+          0.2241
+        ],
+        "species": "ostrich",
+        "confidence": 1.0
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.2675,
+          0.4598,
+          0.0991,
+          0.1305
+        ],
+        "species": "ostrich",
+        "confidence": 0.9919
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.3829,
+          0.5378,
+          0.464,
+          0.4614
+        ],
+        "species": "ostrich",
+        "confidence": 1.0
+      }
+    ]
   },
   {
     "file_ID": "1DCAD568-3125-40E7-85AF-6D122ED6AC15_4_5005_c.jpeg",
@@ -5514,7 +6782,42 @@
     ],
     "species_counts": {
       "Grevy's zebra": 3
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.352,
+          0.4274,
+          0.3756,
+          0.1742
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9907
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.2249,
+          0.4598,
+          0.1855,
+          0.0903
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9958
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.447,
+          0.5051,
+          0.2304,
+          0.101
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.98
+      }
+    ]
   },
   {
     "file_ID": "51A19F3E-EB1E-42FE-9A87-60988B57155E_4_5005_c.jpeg",
@@ -5663,7 +6966,42 @@
     "species_counts": {
       "Grevy's zebra": 2,
       "Scimitar-horned oryx": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.3693,
+          0.5296,
+          0.1022,
+          0.1162
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.7858
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.4799,
+          0.5445,
+          0.0814,
+          0.0929
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9797
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.1039,
+          0.5177,
+          0.0427,
+          0.0459
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9956
+      }
+    ]
   },
   {
     "file_ID": "CE1D86DD-EFED-41D4-AC07-96740E03F8F5_4_5005_c.jpeg",
@@ -5769,7 +7107,31 @@
     "species_counts": {
       "ostrich": 1,
       "Grevy's zebra": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.3117,
+          0.4612,
+          0.6873,
+          0.2259
+        ],
+        "species": "ostrich",
+        "confidence": 0.9999
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.1987,
+          0.1795,
+          0.1316,
+          0.0815
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9359
+      }
+    ]
   },
   {
     "file_ID": "A7F4BC4F-114D-44A5-996A-3662D752FAB1_4_5005_c.jpeg",
@@ -5917,7 +7279,42 @@
     ],
     "species_counts": {
       "Scimitar-horned oryx": 3
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.452,
+          0.4847,
+          0.0622,
+          0.1131
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9454
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.5188,
+          0.504,
+          0.0484,
+          0.0744
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9622
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.2637,
+          0.4819,
+          0.0414,
+          0.0412
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9649
+      }
+    ]
   },
   {
     "file_ID": "920BD2B8-4CAD-4DFD-A84F-DF4CBED81477_4_5005_c.jpeg",
@@ -6085,7 +7482,42 @@
     "species_counts": {
       "ostrich": 1,
       "Scimitar-horned oryx": 2
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.2424,
+          0.5033,
+          0.2554,
+          0.2052
+        ],
+        "species": "ostrich",
+        "confidence": 1.0
+      },
+      {
+        "id": 2,
+        "bbox": [
+          -0.0001,
+          0.3746,
+          0.0442,
+          0.0607
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9701
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.4782,
+          0.6183,
+          0.3717,
+          0.0809
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.7298
+      }
+    ]
   },
   {
     "file_ID": "FF2902CF-526D-4BFB-9596-383C14EA6FE8_4_5005_c.jpeg",
@@ -6190,7 +7622,31 @@
     ],
     "species_counts": {
       "Grevy's zebra": 2
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.2831,
+          0.4995,
+          0.2467,
+          0.154
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9966
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.4673,
+          0.5429,
+          0.1015,
+          0.1046
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9952
+      }
+    ]
   },
   {
     "file_ID": "E5723DAC-0632-43F0-AB3D-8324B1A50117_4_5005_c.jpeg",
@@ -6348,7 +7804,42 @@
     ],
     "species_counts": {
       "ostrich": 3
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.1476,
+          0.5479,
+          0.388,
+          0.1949
+        ],
+        "species": "ostrich",
+        "confidence": 0.7674
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.6924,
+          0.3958,
+          0.2441,
+          0.1399
+        ],
+        "species": "ostrich",
+        "confidence": 1.0
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.6312,
+          0.4736,
+          0.2423,
+          0.1163
+        ],
+        "species": "ostrich",
+        "confidence": 0.9998
+      }
+    ]
   },
   {
     "file_ID": "4B798551-7A8E-4170-9CF3-1D053568A870_4_5005_c.jpeg",
@@ -6540,7 +8031,53 @@
     "species_counts": {
       "Grevy's zebra": 2,
       "Scimitar-horned oryx": 2
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.4892,
+          0.4996,
+          0.1828,
+          0.12
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9891
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.7092,
+          0.4943,
+          0.0296,
+          0.0423
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9845
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.3954,
+          0.578,
+          0.1022,
+          0.0456
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9879
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.486,
+          0.4952,
+          0.0824,
+          0.0852
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9936
+      }
+    ]
   },
   {
     "file_ID": "DFB52B44-7A42-452E-BC39-C1E2026BB38B_4_5005_c.jpeg",
@@ -6689,7 +8226,42 @@
     "species_counts": {
       "Grevy's zebra": 2,
       "Scimitar-horned oryx": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.4781,
+          0.4611,
+          0.1761,
+          0.1409
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9965
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.397,
+          0.4652,
+          0.142,
+          0.1007
+        ],
+        "species": "Grevy's zebra",
+        "confidence": 0.9966
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.3534,
+          0.5722,
+          0.1053,
+          0.0413
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9953
+      }
+    ]
   },
   {
     "file_ID": "BE5230DC-FDAD-41C1-B4AD-55A6E1B3A497_4_5005_c.jpeg",
@@ -6837,7 +8409,42 @@
     ],
     "species_counts": {
       "ostrich": 3
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.3232,
+          0.4605,
+          0.0751,
+          0.1306
+        ],
+        "species": "ostrich",
+        "confidence": 0.9464
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.2071,
+          0.4734,
+          0.1146,
+          0.2192
+        ],
+        "species": "ostrich",
+        "confidence": 1.0
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.4056,
+          0.5365,
+          0.359,
+          0.4636
+        ],
+        "species": "ostrich",
+        "confidence": 1.0
+      }
+    ]
   },
   {
     "file_ID": "4A418ADF-432B-4BA2-AE53-3DCDC67DF19B_1_102_o.jpeg",
@@ -6909,7 +8516,20 @@
     ],
     "species_counts": {
       "ostrich": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.1995,
+          0.4784,
+          0.1341,
+          0.2188
+        ],
+        "species": "ostrich",
+        "confidence": 0.5972
+      }
+    ]
   },
   {
     "file_ID": "DBC30691-72BA-4AED-BFEB-4BE8427C1F46_1_105_c.jpeg",
@@ -7014,7 +8634,31 @@
     ],
     "species_counts": {
       "Scimitar-horned oryx": 2
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.3185,
+          0.4107,
+          0.553,
+          0.3111
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9459
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.7035,
+          0.3149,
+          0.2966,
+          0.248
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9323
+      }
+    ]
   },
   {
     "file_ID": "77AF40DF-398D-440E-BE2F-CCF328B3521F_1_102_o.jpeg",
@@ -7292,7 +8936,75 @@
     "species_counts": {
       "onager": 3,
       "Scimitar-horned oryx": 3
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.1105,
+          0.5455,
+          0.263,
+          0.1572
+        ],
+        "species": "onager",
+        "confidence": 0.7428
+      },
+      {
+        "id": 2,
+        "bbox": [
+          -0.0002,
+          0.5449,
+          0.2222,
+          0.1602
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.5255
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.4148,
+          0.5715,
+          0.2638,
+          0.1271
+        ],
+        "species": "onager",
+        "confidence": 0.771
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.5468,
+          0.5058,
+          0.0442,
+          0.0353
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9989
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.4303,
+          0.5055,
+          0.0794,
+          0.0453
+        ],
+        "species": "onager",
+        "confidence": 0.5439
+      },
+      {
+        "id": 6,
+        "bbox": [
+          0.4855,
+          0.5328,
+          0.0271,
+          0.0166
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9163
+      }
+    ]
   },
   {
     "file_ID": "4CD1B68C-AF5B-4B7F-89DE-AA3CC5ADE851_1_105_c.jpeg",
@@ -7569,7 +9281,75 @@
     ],
     "species_counts": {
       "Scimitar-horned oryx": 6
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.0261,
+          0.3444,
+          0.471,
+          0.2489
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.8267
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.6869,
+          0.3555,
+          0.3131,
+          0.2513
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.6947
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.1969,
+          0.3586,
+          0.4674,
+          0.2983
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.5846
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.5023,
+          0.3755,
+          0.2279,
+          0.2044
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.8296
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.5314,
+          0.3431,
+          0.128,
+          0.0435
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.8944
+      },
+      {
+        "id": 6,
+        "bbox": [
+          0.7283,
+          0.353,
+          0.1036,
+          0.0411
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9929
+      }
+    ]
   },
   {
     "file_ID": "B07E7BA1-EC3D-42FA-9251-81A4646E4118_1_105_c.jpeg",
@@ -7761,7 +9541,53 @@
     "species_counts": {
       "Scimitar-horned oryx": 3,
       "onager": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.5015,
+          0.3588,
+          0.1686,
+          0.1205
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9555
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.0117,
+          0.3286,
+          0.2816,
+          0.1359
+        ],
+        "species": "onager",
+        "confidence": 0.951
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.6541,
+          0.5386,
+          0.1632,
+          0.0881
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9887
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.8165,
+          0.4119,
+          0.1835,
+          0.3311
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.999
+      }
+    ]
   },
   {
     "file_ID": "29F09472-E2D2-48C9-B7EB-C8B9EDEC33F5_1_105_c.jpeg",
@@ -7953,7 +9779,53 @@
     "species_counts": {
       "Scimitar-horned oryx": 2,
       "onager": 2
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.3942,
+          0.3916,
+          0.1645,
+          0.1179
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.8303
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.1816,
+          0.3653,
+          0.2358,
+          0.123
+        ],
+        "species": "onager",
+        "confidence": 0.8476
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.6648,
+          0.4466,
+          0.3351,
+          0.3183
+        ],
+        "species": "onager",
+        "confidence": 0.8443
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.5479,
+          0.5659,
+          0.1567,
+          0.0875
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.8619
+      }
+    ]
   },
   {
     "file_ID": "00113818-3AD3-4270-ADC0-F9D8105FB5B3_1_105_c.jpeg",
@@ -8145,7 +10017,53 @@
     "species_counts": {
       "onager": 3,
       "Scimitar-horned oryx": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.5877,
+          0.4524,
+          0.412,
+          0.3028
+        ],
+        "species": "onager",
+        "confidence": 0.6856
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.2939,
+          0.3991,
+          0.1596,
+          0.1224
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9046
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.072,
+          0.3782,
+          0.2407,
+          0.1363
+        ],
+        "species": "onager",
+        "confidence": 0.909
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.473,
+          0.4657,
+          0.1137,
+          0.1405
+        ],
+        "species": "onager",
+        "confidence": 0.5751
+      }
+    ]
   },
   {
     "file_ID": "DBBADA46-8E89-460B-92D1-8A10993A9B61_1_105_c.jpeg",
@@ -8336,7 +10254,53 @@
     ],
     "species_counts": {
       "Scimitar-horned oryx": 4
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.5349,
+          0.5088,
+          0.1053,
+          0.1026
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.5604
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.3434,
+          0.4219,
+          0.1787,
+          0.1195
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.6604
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.3842,
+          0.4498,
+          0.2112,
+          0.1388
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.666
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.1188,
+          0.3935,
+          0.0418,
+          0.0302
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9758
+      }
+    ]
   },
   {
     "file_ID": "60F7E8FA-B92C-458A-9BB6-19F459C23BE3_1_105_c.jpeg",
@@ -8589,7 +10553,64 @@
     ],
     "species_counts": {
       "Scimitar-horned oryx": 5
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.3414,
+          0.5614,
+          0.0689,
+          0.0458
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.829
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.4452,
+          0.5628,
+          0.0601,
+          0.0271
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.6215
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.3108,
+          0.5928,
+          0.0293,
+          0.0186
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9706
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.5998,
+          0.554,
+          0.0255,
+          0.0272
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9377
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.555,
+          0.5537,
+          0.0286,
+          0.0261
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9795
+      }
+    ]
   },
   {
     "file_ID": "1FD53547-DB8E-40E6-94BA-FC69CEBC4F7B_1_105_c.jpeg",
@@ -8909,7 +10930,86 @@
     ],
     "species_counts": {
       "Scimitar-horned oryx": 7
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.1898,
+          0.58,
+          0.6049,
+          0.2669
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9741
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.2401,
+          0.3927,
+          0.227,
+          0.1669
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9994
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.3444,
+          0.4927,
+          0.1703,
+          0.0985
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9983
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.6599,
+          0.404,
+          0.0894,
+          0.1079
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9884
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.5496,
+          0.5083,
+          0.1659,
+          0.1156
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9828
+      },
+      {
+        "id": 6,
+        "bbox": [
+          0.4945,
+          0.3784,
+          0.1068,
+          0.1125
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9993
+      },
+      {
+        "id": 7,
+        "bbox": [
+          0.6746,
+          0.3645,
+          0.1068,
+          0.0626
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9718
+      }
+    ]
   },
   {
     "file_ID": "E361B0A5-A538-464A-A115-8926B27BF825_1_105_c.jpeg",
@@ -9272,7 +11372,97 @@
     ],
     "species_counts": {
       "Scimitar-horned oryx": 8
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.2458,
+          0.5537,
+          0.5264,
+          0.267
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.999
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.3157,
+          0.3888,
+          0.2081,
+          0.1652
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9999
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.3835,
+          0.4885,
+          0.2027,
+          0.0776
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.993
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.7135,
+          0.3894,
+          0.1146,
+          0.1168
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.8482
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.6473,
+          0.5027,
+          0.1434,
+          0.1173
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.8622
+      },
+      {
+        "id": 6,
+        "bbox": [
+          0.6032,
+          0.3698,
+          0.1165,
+          0.1029
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9997
+      },
+      {
+        "id": 7,
+        "bbox": [
+          0.749,
+          0.3555,
+          0.1135,
+          0.0528
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.999
+      },
+      {
+        "id": 8,
+        "bbox": [
+          0.8367,
+          0.4223,
+          0.0216,
+          0.0382
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9987
+      }
+    ]
   },
   {
     "file_ID": "DCFE8627-57C0-4FF3-ABE9-D415B56062F6_1_105_c.jpeg",
@@ -9635,7 +11825,97 @@
     ],
     "species_counts": {
       "Scimitar-horned oryx": 8
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.2014,
+          0.4147,
+          0.7013,
+          0.3311
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9996
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.3222,
+          0.1934,
+          0.2506,
+          0.202
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9988
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.3962,
+          0.3181,
+          0.2505,
+          0.1158
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.7616
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.7878,
+          0.1962,
+          0.1564,
+          0.1443
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9999
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.7591,
+          0.3417,
+          0.1368,
+          0.1424
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9996
+      },
+      {
+        "id": 6,
+        "bbox": [
+          0.8395,
+          0.1439,
+          0.1248,
+          0.0835
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9999
+      },
+      {
+        "id": 7,
+        "bbox": [
+          0.7654,
+          0.1685,
+          0.0829,
+          0.1057
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9266
+      },
+      {
+        "id": 8,
+        "bbox": [
+          0.624,
+          0.0983,
+          0.0193,
+          0.0258
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9318
+      }
+    ]
   },
   {
     "file_ID": "DA0DC07E-1E53-4DD3-ABFE-89CDC20C3764_1_105_c.jpeg",
@@ -9998,7 +12278,97 @@
     ],
     "species_counts": {
       "Scimitar-horned oryx": 8
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.0449,
+          0.5528,
+          0.7751,
+          0.3828
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9999
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.3291,
+          0.4258,
+          0.2551,
+          0.1421
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9424
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.7349,
+          0.3215,
+          0.176,
+          0.1371
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9994
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.2693,
+          0.2948,
+          0.2589,
+          0.1985
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9982
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.6898,
+          0.4718,
+          0.146,
+          0.1522
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9997
+      },
+      {
+        "id": 6,
+        "bbox": [
+          0.7166,
+          0.2864,
+          0.1241,
+          0.0991
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.7415
+      },
+      {
+        "id": 7,
+        "bbox": [
+          0.8149,
+          0.2704,
+          0.1006,
+          0.0649
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9998
+      },
+      {
+        "id": 8,
+        "bbox": [
+          0.9528,
+          0.35,
+          0.0468,
+          0.1251
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9912
+      }
+    ]
   },
   {
     "file_ID": "55F30577-FA77-489F-89EE-D34796316E99_1_105_c.jpeg",
@@ -10060,7 +12430,20 @@
     ],
     "species_counts": {
       "Scimitar-horned oryx": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.6738,
+          -0.0002,
+          0.3243,
+          0.1613
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.892
+      }
+    ]
   },
   {
     "file_ID": "640EABD1-CE0F-43A8-ABE0-CD9E7DDE0DDE_1_105_c.jpeg",
@@ -10122,7 +12505,20 @@
     ],
     "species_counts": {
       "rhinoceros": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.5687,
+          0.4744,
+          0.1,
+          0.0618
+        ],
+        "species": "rhinoceros",
+        "confidence": 0.9718
+      }
+    ]
   },
   {
     "file_ID": "7C06A119-1EB7-49B6-89AA-D326D1B72C47_1_105_c.jpeg",
@@ -10228,7 +12624,31 @@
     "species_counts": {
       "rhinoceros": 1,
       "Scimitar-horned oryx": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.6109,
+          0.3716,
+          0.0876,
+          0.0828
+        ],
+        "species": "rhinoceros",
+        "confidence": 0.9841
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.0397,
+          0.3345,
+          0.0177,
+          0.0151
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9949
+      }
+    ]
   },
   {
     "file_ID": "521895EF-BE66-4ADC-A97F-3521EE9F4EC7_1_105_c.jpeg",
@@ -10333,7 +12753,31 @@
     ],
     "species_counts": {
       "rhinoceros": 2
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.4858,
+          0.3763,
+          0.1025,
+          0.0887
+        ],
+        "species": "rhinoceros",
+        "confidence": 0.9892
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.4161,
+          0.433,
+          0.0601,
+          0.0173
+        ],
+        "species": "rhinoceros",
+        "confidence": 0.5547
+      }
+    ]
   },
   {
     "file_ID": "803F5493-C905-4545-9216-8CAF88A74ECD_1_105_c.jpeg",
@@ -10492,7 +12936,42 @@
     "species_counts": {
       "rhinoceros": 2,
       "Scimitar-horned oryx": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.4817,
+          0.3164,
+          0.2244,
+          0.1574
+        ],
+        "species": "rhinoceros",
+        "confidence": 0.9501
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.3828,
+          0.4126,
+          0.1157,
+          0.0336
+        ],
+        "species": "rhinoceros",
+        "confidence": 0.9757
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.2807,
+          0.2972,
+          0.0161,
+          0.0159
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9858
+      }
+    ]
   },
   {
     "file_ID": "9BAFAF7A-BC71-46CB-BD94-4E6C389B762E_1_105_c.jpeg",
@@ -10564,7 +13043,20 @@
     ],
     "species_counts": {
       "rhinoceros": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.458,
+          0.3306,
+          0.2718,
+          0.1565
+        ],
+        "species": "rhinoceros",
+        "confidence": 0.9941
+      }
+    ]
   },
   {
     "file_ID": "D7214023-0EEC-4F65-BEF2-28722DE0E534_1_105_c.jpeg",
@@ -10626,7 +13118,20 @@
     ],
     "species_counts": {
       "rhinoceros": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.3379,
+          0.3384,
+          0.4308,
+          0.1963
+        ],
+        "species": "rhinoceros",
+        "confidence": 0.9738
+      }
+    ]
   },
   {
     "file_ID": "EC1F84C7-13BC-408D-BC4D-44D505AB0DFC_1_105_c.jpeg",
@@ -10698,7 +13203,20 @@
     ],
     "species_counts": {
       "rhinoceros": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.328,
+          0.3641,
+          0.2654,
+          0.1317
+        ],
+        "species": "rhinoceros",
+        "confidence": 0.9839
+      }
+    ]
   },
   {
     "file_ID": "6FA0083A-7F58-4DFC-AA13-C5D705751767_1_105_c.jpeg",
@@ -10814,7 +13332,31 @@
     "species_counts": {
       "rhinoceros": 1,
       "Scimitar-horned oryx": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.3298,
+          0.3658,
+          0.2805,
+          0.1328
+        ],
+        "species": "rhinoceros",
+        "confidence": 0.9913
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.2291,
+          0.346,
+          0.0171,
+          0.0159
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.956
+      }
+    ]
   },
   {
     "file_ID": "50797854-F65A-4982-A4EA-B8BD575111CD_1_105_c.jpeg",
@@ -10886,7 +13428,20 @@
     ],
     "species_counts": {
       "rhinoceros": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.3177,
+          0.5567,
+          0.4004,
+          0.1732
+        ],
+        "species": "rhinoceros",
+        "confidence": 0.9698
+      }
+    ]
   },
   {
     "file_ID": "23A19D46-19AD-4FA1-B95A-B93D73A14A2C_1_105_c.jpeg",
@@ -10948,7 +13503,20 @@
     ],
     "species_counts": {
       "rhinoceros": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.4008,
+          0.5403,
+          0.2202,
+          0.1041
+        ],
+        "species": "rhinoceros",
+        "confidence": 0.9091
+      }
+    ]
   },
   {
     "file_ID": "B327FE06-07D9-4FB7-8F8A-FEA1E992191D_1_105_c.jpeg",
@@ -11097,7 +13665,42 @@
     "species_counts": {
       "rhinoceros": 2,
       "Scimitar-horned oryx": 1
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.5586,
+          0.3868,
+          0.1488,
+          0.1784
+        ],
+        "species": "rhinoceros",
+        "confidence": 0.9879
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.3571,
+          0.5171,
+          0.1266,
+          0.08
+        ],
+        "species": "rhinoceros",
+        "confidence": 0.9996
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.9837,
+          0.3544,
+          0.0156,
+          0.0188
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9896
+      }
+    ]
   },
   {
     "file_ID": "84B159FD-3FDB-4088-8D74-1BB514931A68_1_105_c.jpeg",
@@ -11418,6 +14021,85 @@
     "species_counts": {
       "rhinoceros": 1,
       "Scimitar-horned oryx": 6
-    }
+    },
+    "animal_detections": [
+      {
+        "id": 1,
+        "bbox": [
+          0.4661,
+          0.5207,
+          0.2883,
+          0.1607
+        ],
+        "species": "rhinoceros",
+        "confidence": 0.9978
+      },
+      {
+        "id": 2,
+        "bbox": [
+          0.2713,
+          0.4807,
+          0.0211,
+          0.0331
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.7911
+      },
+      {
+        "id": 3,
+        "bbox": [
+          0.4539,
+          0.4752,
+          0.0503,
+          0.0225
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9991
+      },
+      {
+        "id": 4,
+        "bbox": [
+          0.593,
+          0.4776,
+          0.048,
+          0.0274
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9973
+      },
+      {
+        "id": 5,
+        "bbox": [
+          0.2997,
+          0.4787,
+          0.0333,
+          0.017
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9927
+      },
+      {
+        "id": 6,
+        "bbox": [
+          0.4397,
+          0.5682,
+          0.0453,
+          0.0678
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 0.9881
+      },
+      {
+        "id": 7,
+        "bbox": [
+          0.5248,
+          0.4767,
+          0.0516,
+          0.0289
+        ],
+        "species": "Scimitar-horned oryx",
+        "confidence": 1.0
+      }
+    ]
   }
 ]
