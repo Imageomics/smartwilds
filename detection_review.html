@@ -1,0 +1,250 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Wildlife Detection Review</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                background-color: #f5f5f5;
+            }
+            h1 {
+                color: #333;
+            }
+            .image-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+                gap: 20px;
+                margin-top: 20px;
+            }
+            .image-card {
+                background: white;
+                border-radius: 8px;
+                padding: 15px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .image-card img {
+                width: 100%;
+                height: auto;
+                border-radius: 4px;
+            }
+            .info {
+                margin-top: 10px;
+            }
+            .info h3 {
+                margin: 5px 0;
+                color: #2c3e50;
+            }
+            .info p {
+                margin: 5px 0;
+                color: #7f8c8d;
+            }
+            .species {
+                font-weight: bold;
+                color: #27ae60;
+            }
+            .confidence {
+                color: #3498db;
+            }
+            .filter-buttons {
+                margin: 20px 0;
+            }
+            .filter-buttons button {
+                padding: 10px 20px;
+                margin-right: 10px;
+                border: none;
+                border-radius: 4px;
+                background-color: #3498db;
+                color: white;
+                cursor: pointer;
+            }
+            .filter-buttons button:hover {
+                background-color: #2980b9;
+            }
+            .notes-section {
+                margin-top: 10px;
+                padding: 10px;
+                background-color: #fff3cd;
+                border-radius: 4px;
+                border-left: 4px solid #ffc107;
+            }
+            textarea {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                resize: vertical;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>🔍 Wildlife Detection Review</h1>
+        <p>Review and annotate detection results</p>
+
+        <div class="filter-buttons">
+            <button onclick="filterImages('all')">All Images</button>
+            <button onclick="filterImages('animals')">With Animals</button>
+            <button onclick="filterImages('people')">With People</button>
+            <button onclick="filterImages('vehicles')">With Vehicles</button>
+        </div>
+
+        <div class="image-grid" id="imageGrid">
+    
+        <div class="image-card" data-classes="animals vehicles">
+            <img src="annotated_images/annotated_3D96ED14-5C52-402E-BB5A-A8B62F973BEA_1_105_c.jpeg" alt="3D96ED14-5C52-402E-BB5A-A8B62F973BEA_1_105_c.jpeg">
+            <div class="info">
+                <h3>3D96ED14-5C52-402E-BB5A-A8B62F973BEA_1_105_c.jpeg</h3>
+                <p><strong>Animals:</strong> 3 |
+                   <strong>People:</strong> 0 |
+                   <strong>Vehicles:</strong> 1</p>
+                <p class="species">Species: Grevy's zebra: 1, Scimitar-horned oryx: 2</p>
+                <p class="confidence">Avg Confidence: 82.1%</p>
+
+                <div class="notes-section">
+                    <strong>Review Notes:</strong>
+                    <textarea rows="3" placeholder="Add notes about mistakes or corrections..."
+                              id="notes_2"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="image-card" data-classes="animals vehicles">
+            <img src="annotated_images/annotated_5F87CDA2-71E6-49FE-B94D-95B7C0645D5D_1_105_c.jpeg" alt="5F87CDA2-71E6-49FE-B94D-95B7C0645D5D_1_105_c.jpeg">
+            <div class="info">
+                <h3>5F87CDA2-71E6-49FE-B94D-95B7C0645D5D_1_105_c.jpeg</h3>
+                <p><strong>Animals:</strong> 2 |
+                   <strong>People:</strong> 0 |
+                   <strong>Vehicles:</strong> 2</p>
+                <p class="species">Species: Grevy's zebra: 1, Scimitar-horned oryx: 1</p>
+                <p class="confidence">Avg Confidence: 90.0%</p>
+
+                <div class="notes-section">
+                    <strong>Review Notes:</strong>
+                    <textarea rows="3" placeholder="Add notes about mistakes or corrections..."
+                              id="notes_3"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="image-card" data-classes="animals">
+            <img src="annotated_images/annotated_21920A67-1B9E-4C80-8FB8-5AEC3ABA9968_1_105_c.jpeg" alt="21920A67-1B9E-4C80-8FB8-5AEC3ABA9968_1_105_c.jpeg">
+            <div class="info">
+                <h3>21920A67-1B9E-4C80-8FB8-5AEC3ABA9968_1_105_c.jpeg</h3>
+                <p><strong>Animals:</strong> 1 |
+                   <strong>People:</strong> 0 |
+                   <strong>Vehicles:</strong> 0</p>
+                <p class="species">Species: Grevy's zebra: 1</p>
+                <p class="confidence">Avg Confidence: 96.9%</p>
+
+                <div class="notes-section">
+                    <strong>Review Notes:</strong>
+                    <textarea rows="3" placeholder="Add notes about mistakes or corrections..."
+                              id="notes_4"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="image-card" data-classes="animals">
+            <img src="annotated_images/annotated_C8D55EE0-4088-4027-BBEC-E74F9844867C_1_105_c.jpeg" alt="C8D55EE0-4088-4027-BBEC-E74F9844867C_1_105_c.jpeg">
+            <div class="info">
+                <h3>C8D55EE0-4088-4027-BBEC-E74F9844867C_1_105_c.jpeg</h3>
+                <p><strong>Animals:</strong> 5 |
+                   <strong>People:</strong> 0 |
+                   <strong>Vehicles:</strong> 0</p>
+                <p class="species">Species: Grevy's zebra: 5</p>
+                <p class="confidence">Avg Confidence: 93.0%</p>
+
+                <div class="notes-section">
+                    <strong>Review Notes:</strong>
+                    <textarea rows="3" placeholder="Add notes about mistakes or corrections..."
+                              id="notes_5"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="image-card" data-classes="animals">
+            <img src="annotated_images/annotated_FE5A0F1D-EFBD-4980-BF93-1E750005DAFF_1_105_c.jpeg" alt="FE5A0F1D-EFBD-4980-BF93-1E750005DAFF_1_105_c.jpeg">
+            <div class="info">
+                <h3>FE5A0F1D-EFBD-4980-BF93-1E750005DAFF_1_105_c.jpeg</h3>
+                <p><strong>Animals:</strong> 5 |
+                   <strong>People:</strong> 0 |
+                   <strong>Vehicles:</strong> 0</p>
+                <p class="species">Species: Grevy's zebra: 4, Scimitar-horned oryx: 1</p>
+                <p class="confidence">Avg Confidence: 93.0%</p>
+
+                <div class="notes-section">
+                    <strong>Review Notes:</strong>
+                    <textarea rows="3" placeholder="Add notes about mistakes or corrections..."
+                              id="notes_6"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="image-card" data-classes="animals">
+            <img src="annotated_images/annotated_61EB6DF7-6A2B-457A-AB79-941B2A001C39_1_105_c.jpeg" alt="61EB6DF7-6A2B-457A-AB79-941B2A001C39_1_105_c.jpeg">
+            <div class="info">
+                <h3>61EB6DF7-6A2B-457A-AB79-941B2A001C39_1_105_c.jpeg</h3>
+                <p><strong>Animals:</strong> 4 |
+                   <strong>People:</strong> 0 |
+                   <strong>Vehicles:</strong> 0</p>
+                <p class="species">Species: Grevy's zebra: 2, Scimitar-horned oryx: 2</p>
+                <p class="confidence">Avg Confidence: 94.2%</p>
+
+                <div class="notes-section">
+                    <strong>Review Notes:</strong>
+                    <textarea rows="3" placeholder="Add notes about mistakes or corrections..."
+                              id="notes_7"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="image-card" data-classes="animals">
+            <img src="annotated_images/annotated_5E7AA732-E521-4330-8D89-6B32DE87C4BA_1_105_c.jpeg" alt="5E7AA732-E521-4330-8D89-6B32DE87C4BA_1_105_c.jpeg">
+            <div class="info">
+                <h3>5E7AA732-E521-4330-8D89-6B32DE87C4BA_1_105_c.jpeg</h3>
+                <p><strong>Animals:</strong> 5 |
+                   <strong>People:</strong> 0 |
+                   <strong>Vehicles:</strong> 0</p>
+                <p class="species">Species: Grevy's zebra: 4, ostrich: 1</p>
+                <p class="confidence">Avg Confidence: 86.4%</p>
+
+                <div class="notes-section">
+                    <strong>Review Notes:</strong>
+                    <textarea rows="3" placeholder="Add notes about mistakes or corrections..."
+                              id="notes_8"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+
+        <script>
+            function filterImages(category) {
+                const cards = document.querySelectorAll('.image-card');
+                cards.forEach(card => {
+                    if (category === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const classes = card.getAttribute('data-classes');
+                        card.style.display = classes.includes(category) ? 'block' : 'none';
+                    }
+                });
+            }
+
+            // Auto-save notes to localStorage
+            document.querySelectorAll('textarea').forEach(textarea => {
+                textarea.addEventListener('change', function() {
+                    localStorage.setItem(this.id, this.value);
+                });
+
+                // Load saved notes
+                const savedValue = localStorage.getItem(textarea.id);
+                if (savedValue) {
+                    textarea.value = savedValue;
+                }
+            });
+        </script>
+    </body>
+    </html>
+    
