@@ -624,7 +624,7 @@ def main():
         output_json=output_json,
         filter_people=True,  # Skip photos with people
         species_list=species_list,  # Use predefined species list
-        max_images=100,  # Remove this to process all images
+        #max_images=100,  # Remove this to process all images
         location="TheWilds"  # Location name for all photos
     )
 
