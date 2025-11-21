@@ -1,6 +1,6 @@
 # Wildlife Detection and Species Identification
 
-A pipeline for processing citizen science photos from The Wilds using MegaDetector v5 for wildlife detection and BioCLIP v2 for species identification.
+A pipeline for processing photos from The Wilds using MegaDetector v5 for wildlife detection and BioCLIP v2 for species identification.
 
 ## Overview
 
@@ -8,7 +8,7 @@ This project processes photos from Google Photos Takeout, extracting metadata an
 
 ### Pipeline Components
 
-1. **Metadata Extraction** ([process_photos.py](process_photos.py))
+1. **Citizen Science Image Metadata Extraction** ([process_photos.py](../citzen_science/process_photos.py))
    - Extracts EXIF data (datetime, GPS coordinates)
    - Parses Google Takeout JSON metadata
    - Creates structured CSV with photo information
@@ -62,22 +62,9 @@ source venv/bin/activate  # Linux/Mac
 pip install -r requirements.txt
 ```
 
-### Required Dependencies
-
-```
-pandas>=2.0.0
-pillow>=10.0.0
-numpy>=1.24.0
-torch>=2.0.0
-torchvision>=0.15.0
-transformers>=4.35.0
-megadetector>=5.0.0
-tqdm>=4.65.0
-```
-
 ## Usage
 
-### Step 1: Extract Photo Metadata
+### Step 1: Extract Citizen Science Photo Metadata
 
 First, extract metadata from your photos:
 
@@ -98,7 +85,7 @@ print(f"Photos with GPS: {df['has_gps'].sum()}")
 
 Run the script:
 ```bash
-python process_photos.py
+python ../citizen_science/process_photos.py
 ```
 
 ### Step 2: Detect Wildlife and Identify Species
@@ -147,7 +134,7 @@ python detect_species.py
 
 ```bash
 # 1. Extract metadata from all photos
-python process_photos.py
+python ../citizen_science/process_photos.py
 
 # 2. Detect wildlife and identify species
 python detect_species.py
@@ -155,7 +142,7 @@ python detect_species.py
 # 3. Analyze results
 python -c "
 import pandas as pd
-df = pd.read_csv('wildlife_detections.csv')
+df = pd.read_csv('../citizen_science/data/wildlife_detections.csv')
 print(df[df['contains_animals']].head())
 "
 ```
@@ -329,21 +316,6 @@ process_images(image_folder, max_images=100)
 image = image.resize((1280, 720))
 ```
 
-## Project Structure
-
-```
-wilds_multimodal_data/
-├── README_SETUP.md          # This file
-├── process_photos.py        # Metadata extraction
-├── detect_species.py        # Wildlife detection & species ID
-├── main.py                  # Entry point
-├── requirements.txt         # Python dependencies
-├── pyproject.toml          # Project configuration
-├── photo_metadata.csv      # Output: metadata
-├── wildlife_detections.csv # Output: detections
-└── wildlife_detections.json # Output: detailed results
-```
-
 ## Cost Analysis
 
 - **MegaDetector**: Free (runs locally)
@@ -355,7 +327,7 @@ No API costs or cloud services needed.
 
 ## Citation
 
-If you use this pipeline, please cite:
+If you use this pipeline, please cite the models used as well:
 
 **MegaDetector**:
 ```
@@ -366,24 +338,35 @@ If you use this pipeline, please cite:
 }
 ```
 
-**BioCLIP**:
+**BioCLIP Model and Paper**:
+```bibtex
+@software{Gu_BioCLIP_2_model,
+  author = {Jianyang Gu and Samuel Stevens and Elizabeth G Campolongo and Matthew J Thompson and Net Zhang and Jiaman Wu and Andrei Kopanev and Zheda Mai and Alexander E. White and James Balhoff and Wasila M Dahdul and Daniel Rubenstein and Hilmar Lapp and Tanya Berger-Wolf and Wei-Lun Chao and Yu Su},
+  license = {MIT},
+  title = {{BioCLIP 2}},
+  url = {https://huggingface.co/imageomics/bioclip-2},
+  version = {1.0.0},
+  doi = {},
+  publisher = {Hugging Face},
+  year = {2025}
+}
+
 ```
-@article{bioclip2024,
-  title = {BioCLIP: A Vision Foundation Model for the Tree of Life},
-  author = {Imageomics Institute},
-  year = {2024},
-  url = {https://huggingface.co/imageomics/bioclip-2}
+
+```
+@article{gu2025bioclip,
+  title = {{B}io{CLIP} 2: Emergent Properties from Scaling Hierarchical Contrastive Learning}, 
+  author = {Jianyang Gu and Samuel Stevens and Elizabeth G Campolongo and Matthew J Thompson and Net Zhang and Jiaman Wu and Andrei Kopanev and Zheda Mai and Alexander E. White and James Balhoff and Wasila M Dahdul and Daniel Rubenstein and Hilmar Lapp and Tanya Berger-Wolf and Wei-Lun Chao and Yu Su},
+  year = {2025},
+  eprint={2505.23883},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2505.23883}, 
 }
 ```
 
-## License
-
-See individual model licenses:
-- MegaDetector: MIT License
-- BioCLIP: Check model card on HuggingFace
-
 ## Support
 
-For issues or questions:
+For issues or questions about using the models:
 - MegaDetector: [CameraTraps GitHub](https://github.com/microsoft/CameraTraps/issues)
-- BioCLIP: [HuggingFace model page](https://huggingface.co/imageomics/bioclip-2)
+- BioCLIP: [BioCLIP 2 GitHub](https://github.com/Imageomics/bioclip-2/issues)
