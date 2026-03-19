@@ -1,0 +1,3 @@
+Scripts from Yuanyang: https://github.com/TIARE006/imageomicsthewilds_cameratraps
+
+Arrival rates from June data collection (saved in HF)

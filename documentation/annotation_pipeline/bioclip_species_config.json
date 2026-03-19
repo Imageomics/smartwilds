@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "generated": "2026-03-17",
+    "description": "BioCLIP species configuration for The Wilds 2025 multi-modal survey",
+    "focus": "Megafauna + Aves (large animals + birds observable in camera/drone footage)",
+    "note": "Excludes small mammals, reptiles, amphibians - unlikely to be reliably detected in images"
+  },
+
+  "target_species": [
+    {
+      "scientific_name": "Bos javanicus",
+      "common_name": "Banteng",
+      "category": "exotic_ungulates",
+      "expected_in_modalities": ["camera_traps", "drones"]
+    },
+    {
+      "scientific_name": "Elapharus davidianus",
+      "common_name": "Pere David's deer",
+      "category": "exotic_ungulates",
+      "expected_in_modalities": ["camera_traps", "drones"]
+    },
+    {
+      "scientific_name": "Odocoileus virginianus",
+      "common_name": "White-tailed deer",
+      "category": "native_ungulates",
+      "expected_in_modalities": ["camera_traps", "drones"],
+      "note": "Primary wildlife species at The Wilds"
+    },
+    {
+      "scientific_name": "Cervidae",
+      "common_name": "Deer (family)",
+      "category": "ungulates_generic",
+      "expected_in_modalities": ["camera_traps", "drones"],
+      "note": "Catch-all for unidentified deer species"
+    },
+    {
+      "scientific_name": "Equus ferus przewalskii",
+      "common_name": "Przewalski's horse",
+      "category": "exotic_ungulates",
+      "expected_in_modalities": ["camera_traps", "drones"]
+    },
+    {
+      "scientific_name": "Equus",
+      "common_name": "Domesticated horse",
+      "category": "equines",
+      "expected_in_modalities": ["camera_traps", "drones"],
+      "note": "Generic domesticated horse genus"
+    },
+    {
+      "scientific_name": "Budorcas taxicolor tibetana",
+      "common_name": "Sichuan takin",
+      "category": "exotic_ungulates",
+      "expected_in_modalities": ["camera_traps", "drones"]
+    },
+    {
+      "scientific_name": "Aves",
+      "common_name": "Birds",
+      "category": "avian",
+      "expected_in_modalities": ["camera_traps", "drones", "bioacoustics"],
+      "note": "All bird species - any size detectable by automated systems"
+    }
+  ],
+
+  "bioclip_prompts": {
+    "ungulates": [
+      "banteng",
+      "pere david's deer",
+      "white-tailed deer",
+      "deer",
+      "cervidae",
+      "przewalski's horse",
+      "domesticated horse",
+      "equus",
+      "takin",
+      "sichuan takin",
+      "hoofed animals",
+      "ungulates"
+    ],
+    "birds": [
+      "bird",
+      "birds",
+      "avian",
+      "songbird",
+      "waterfowl",
+      "raptor",
+      "eagle",
+      "hawk",
+      "owl",
+      "duck",
+      "goose",
+      "swan",
+      "wading bird",
+      "heron",
+      "egret"
+    ]
+  },
+
+  "classification_parameters": {
+    "confidence_threshold": 0.5,
+    "note": "Lower threshold to capture uncertain but plausible detections; manual review will filter",
+    "fallback_labels": [
+      "animal",
+      "mammal",
+      "ungulate",
+      "bird",
+      "wildlife"
+    ],
+    "note_2": "Use fallback labels if BioCLIP cannot confidently classify to species level"
+  },
+
+  "deployment_notes": {
+    "camera_traps": "YOLO+BioCLIP pipeline already operational. Update BioCLIP prompts with above vocabulary.",
+    "drones": "New pipeline: video frames (every 10th frame ~3fps) → YOLO detection → BioCLIP classification",
+    "bioacoustics": "BirdCLIP used for acoustic detection. This BioCLIP config is for image-based modalities only.",
+    "citizen_science": "Manual curation with reference to this species vocabulary"
+  }
+}

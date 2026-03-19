@@ -1,0 +1,6881 @@
+id,behaviour,time
+2.0,Graze,0.0
+1.0,Head Up,0.0
+1.0,Running,0.0
+1.0,Walk,0.0
+1.0,Graze,0.0
+1.0,Head Up,0.0
+6.0,Graze,0.0
+1.0,Head Up,0.0
+5.0,Graze,0.0
+1.0,Head Up,0.0
+5.0,Running,0.0
+1.0,Defecating,0.0
+5.0,Out of Focus,0.0
+1.0,Head Up,0.0
+5.0,Graze,0.0
+5.0,Head Up,0.0
+5.0,Graze,0.0
+5.0,Graze,0.0
+1.0,Head Up,0.0
+5.0,Graze,0.0
+6.0,Graze,0.0
+6.0,Graze,0.0
+6.0,Graze,0.0
+2.0,Graze,0.0
+2.0,Head Up,0.0
+2.0,Walk,0.0
+2.0,Head Up,0.0
+2.0,Graze,0.0
+8.0,Graze,0.0
+2.0,Running,0.0
+2.0,Walk,0.0
+2.0,Walk,0.0
+1.0,Graze,0.0
+6.0,Occluded,0.0
+1.0,Head Up,0.0
+1.0,Out of Focus,0.0
+6.0,Graze,0.0
+6.0,Graze,0.0
+6.0,Out of Frame,0.0
+1.0,Walk,0.0
+1.0,Graze,0.0
+1.0,Graze,0.0
+5.0,Graze,0.0
+2.0,Graze,0.0
+5.0,Head Up,0.0
+1.0,Head Up,0.0
+3.0,Head Up,0.0
+3.0,Head Up,0.0
+3.0,Running,0.0
+3.0,Walk,0.0
+3.0,Graze,0.0
+4.0,Graze,0.0
+4.0,Head Up,0.0
+4.0,Head Up,0.0
+3.0,Walk,0.0
+4.0,Head Up,0.0
+4.0,Graze,0.0
+3.0,Walk,0.0
+3.0,Walk,0.0
+3.0,Graze,0.0
+3.0,Running,0.0
+3.0,Graze,0.0
+3.0,Head Up,0.0
+3.0,Occluded,0.0
+4.0,Graze,0.0
+3.0,Graze,0.0
+4.0,Walk,0.0
+3.0,Walk,0.0
+1.0,Graze,0.0
+1.0,Out of Focus,0.0
+1.0,Walk,0.0
+1.0,Walk,0.0
+3.0,Walk,0.0
+4.0,Running,0.0
+4.0,Graze,0.0
+4.0,Trotting,0.0
+4.0,Out of Focus,0.0
+4.0,Graze,0.0
+4.0,Walk,0.0
+1.0,Graze,0.0
+4.0,Head Up,0.0
+4.0,Head Up,0.0
+1.0,Trotting,0.0
+1.0,Walk,0.0
+1.0,Head Up,0.0
+3.0,Head Up,0.0
+3.0,Head Up,0.0
+1.0,Graze,0.0
+2.0,Head Up,0.0
+4.0,Walk,0.0
+2.0,Walk,0.0
+2.0,Walk,0.0
+2.0,Head Up,0.0
+2.0,Head Up,0.0
+7.0,Graze,0.0
+7.0,Graze,0.0
+7.0,Occluded,0.0
+2.0,Graze,0.0
+7.0,Graze,0.0
+2.0,Running,0.0
+2.0,Walk,0.0
+2.0,Walk,0.0
+2.0,Graze,0.0
+9.0,Graze,0.0
+2.0,Graze,0.0
+7.0,Walk,0.0
+2.0,Head Up,0.0
+4.0,Head Up,1.0
+4.0,Head Up,2.0
+4.0,Graze,2.0
+4.0,Head Up,3.0
+4.0,Head Up,3.0
+4.0,Graze,3.0
+4.0,Graze,4.0
+4.0,Head Up,5.0
+4.0,Head Up,6.0
+4.0,Graze,6.0
+4.0,Head Up,7.0
+4.0,Graze,7.0
+4.0,Graze,8.0
+3.0,Walk,8.0
+3.0,Walk,8.0
+4.0,Head Up,9.0
+4.0,Graze,10.0
+4.0,Graze,11.0
+4.0,Head Up,11.0
+4.0,Head Up,12.0
+4.0,Graze,13.0
+4.0,Head Up,13.0
+7.0,Graze,14.0
+4.0,Graze,14.0
+5.0,Out of Focus,14.0
+4.0,Head Up,14.0
+4.0,Walk,15.0
+4.0,Graze,15.0
+4.0,Head Up,16.0
+3.0,Trotting,17.0
+0.0,Running,17.0
+8.0,Walk,17.0
+4.0,Graze,17.0
+4.0,Graze,18.0
+4.0,Head Up,18.0
+4.0,Head Up,19.0
+4.0,Head Up,20.0
+4.0,Graze,20.0
+4.0,Graze,21.0
+4.0,Graze,22.0
+4.0,Head Up,22.0
+4.0,Head Up,23.0
+4.0,Head Up,24.0
+4.0,Graze,24.0
+4.0,Graze,25.0
+5.0,Graze,25.0
+4.0,Head Up,26.0
+4.0,Graze,26.0
+4.0,Head Up,27.0
+4.0,Head Up,28.0
+4.0,Graze,28.0
+2.0,Walk,28.0
+4.0,Head Up,29.0
+4.0,Graze,29.0
+3.0,Walk,29.0
+4.0,Graze,30.0
+5.0,Walk,30.0
+4.0,Head Up,31.0
+4.0,Graze,32.0
+4.0,Graze,33.0
+4.0,Head Up,33.0
+4.0,Head Up,34.0
+4.0,Graze,34.0
+4.0,Graze,35.0
+1.0,Graze,35.0
+4.0,Head Up,35.0
+4.0,Walk,36.0
+2.0,Walk,36.0
+4.0,Graze,36.0
+4.0,Head Up,37.0
+4.0,Graze,38.0
+4.0,Head Up,39.0
+4.0,Graze,40.0
+4.0,Graze,41.0
+4.0,Head Up,41.0
+4.0,Head Up,42.0
+4.0,Head Up,43.0
+4.0,Graze,43.0
+9.0,Graze,44.0
+4.0,Graze,44.0
+3.0,Graze,44.0
+3.0,Auto-Groom,44.0
+4.0,Head Up,45.0
+3.0,Graze,45.0
+3.0,Auto-Groom,45.0
+4.0,Graze,45.0
+4.0,Head Up,46.0
+3.0,Auto-Groom,46.0
+3.0,Graze,46.0
+3.0,Graze,47.0
+3.0,Auto-Groom,47.0
+4.0,Graze,47.0
+4.0,Head Up,48.0
+4.0,Graze,48.0
+3.0,Auto-Groom,48.0
+3.0,Graze,49.0
+4.0,Head Up,49.0
+3.0,Auto-Groom,50.0
+3.0,Graze,50.0
+4.0,Graze,50.0
+4.0,Head Up,50.0
+3.0,Auto-Groom,51.0
+3.0,Graze,51.0
+4.0,Graze,51.0
+3.0,Auto-Groom,52.0
+4.0,Head Up,52.0
+4.0,Graze,52.0
+4.0,Head Up,53.0
+3.0,Graze,53.0
+4.0,Graze,54.0
+3.0,Graze,54.0
+4.0,Head Up,54.0
+3.0,Auto-Groom,54.0
+3.0,Graze,55.0
+4.0,Graze,55.0
+3.0,Auto-Groom,55.0
+3.0,Auto-Groom,56.0
+4.0,Graze,56.0
+4.0,Head Up,56.0
+5.0,Walk,57.0
+3.0,Graze,57.0
+2.0,Head Up,57.0
+4.0,Head Up,57.0
+3.0,Auto-Groom,58.0
+3.0,Graze,58.0
+4.0,Graze,58.0
+4.0,Head Up,58.0
+4.0,Graze,59.0
+4.0,Head Up,59.0
+3.0,Auto-Groom,59.0
+3.0,Graze,60.0
+4.0,Graze,60.0
+3.0,Graze,61.0
+4.0,Head Up,61.0
+8.0,Head Up,61.0
+3.0,Auto-Groom,61.0
+9.0,Out of Focus,62.0
+4.0,Graze,62.0
+3.0,Auto-Groom,62.0
+3.0,Graze,62.0
+4.0,Head Up,63.0
+4.0,Graze,63.0
+3.0,Auto-Groom,63.0
+3.0,Graze,64.0
+4.0,Head Up,64.0
+4.0,Head Up,65.0
+3.0,Graze,65.0
+3.0,Auto-Groom,65.0
+4.0,Graze,65.0
+3.0,Graze,66.0
+3.0,Auto-Groom,66.0
+4.0,Graze,66.0
+4.0,Head Up,66.0
+3.0,Auto-Groom,67.0
+3.0,Graze,67.0
+4.0,Graze,67.0
+3.0,Trotting,68.0
+4.0,Head Up,68.0
+0.0,Walk,68.0
+4.0,Graze,69.0
+4.0,Head Up,70.0
+4.0,Graze,70.0
+4.0,Head Up,71.0
+4.0,Head Up,72.0
+4.0,Graze,72.0
+4.0,Graze,73.0
+4.0,Graze,74.0
+4.0,Head Up,74.0
+2.0,Head Up,74.0
+4.0,Graze,75.0
+4.0,Head Up,75.0
+4.0,Graze,76.0
+4.0,Head Up,77.0
+4.0,Graze,77.0
+4.0,Head Up,78.0
+4.0,Head Up,79.0
+4.0,Graze,79.0
+4.0,Graze,80.0
+7.0,Graze,80.0
+4.0,Graze,81.0
+4.0,Head Up,81.0
+3.0,Graze,82.0
+4.0,Head Up,82.0
+4.0,Graze,83.0
+4.0,Head Up,83.0
+4.0,Graze,84.0
+4.0,Head Up,85.0
+4.0,Graze,85.0
+4.0,Head Up,86.0
+4.0,Graze,87.0
+4.0,Head Up,87.0
+4.0,Graze,88.0
+4.0,Head Up,89.0
+4.0,Graze,89.0
+4.0,Head Up,90.0
+4.0,Graze,91.0
+4.0,Head Up,92.0
+4.0,Graze,92.0
+4.0,Trotting,93.0
+4.0,Graze,93.0
+4.0,Head Up,93.0
+4.0,Head Up,94.0
+4.0,Graze,95.0
+2.0,Head Up,96.0
+0.0,Trotting,103.0
+5.0,Head Up,104.0
+4.0,Walk,105.0
+2.0,Graze,105.0
+1.0,Walk,107.0
+7.0,Graze,107.0
+4.0,Walk,111.0
+3.0,Walk,117.0
+7.0,Head Up,118.0
+1.0,Walk,120.0
+2.0,Walk,123.0
+1.0,Walk,135.0
+4.0,Head Up,137.0
+7.0,Head Up,140.0
+2.0,Out of Focus,144.0
+5.0,Graze,146.0
+2.0,Out of Focus,146.0
+11.0,Graze,147.0
+1.0,Out of Frame,147.0
+8.0,Sniff,152.0
+5.0,Walk,157.0
+8.0,Mutual Grooming,157.0
+0.0,Head Up,160.0
+2.0,Trotting,161.0
+2.0,Graze,163.0
+1.0,Trotting,173.0
+3.0,Walk,174.0
+4.0,Graze,175.0
+6.0,Walk,177.0
+2.0,Walk,188.0
+4.0,Graze,192.0
+4.0,Out of Frame,201.0
+2.0,Occluded,201.0
+3.0,Graze,204.0
+3.0,Out of Frame,204.0
+4.0,Graze,207.0
+1.0,Occluded,209.0
+7.0,Walk,209.0
+4.0,Head Up,213.0
+2.0,Walk,213.0
+5.0,Walk,214.0
+4.0,Trotting,217.0
+1.0,Out of Frame,219.0
+9.0,Out of Focus,224.0
+5.0,Walk,225.0
+3.0,Walk,225.0
+11.0,Out of Focus,226.0
+6.0,Out of Focus,226.0
+6.0,Walk,231.0
+7.0,Auto-Groom,232.0
+2.0,Graze,233.0
+8.0,Walk,240.0
+9.0,Walk,240.0
+2.0,Head Up,242.0
+8.0,Graze,244.0
+4.0,Walk,245.0
+5.0,Trotting,252.0
+7.0,Out of Focus,252.0
+4.0,Walk,255.0
+11.0,Out of Frame,256.0
+9.0,Out of Frame,262.0
+7.0,Walk,264.0
+6.0,Out of Frame,264.0
+1.0,Walk,266.0
+3.0,Out of Frame,267.0
+7.0,Out of Frame,269.0
+3.0,Graze,269.0
+8.0,Out of Frame,275.0
+1.0,Graze,278.0
+1.0,Graze,281.0
+1.0,Head Up,284.0
+4.0,Head Up,285.0
+5.0,Walk,285.0
+1.0,Out of Focus,291.0
+6.0,Graze,294.0
+1.0,Graze,295.0
+1.0,Out of Focus,299.0
+2.0,Walk,304.0
+1.0,Graze,313.0
+5.0,Graze,316.0
+3.0,Out of Focus,318.0
+7.0,Graze,318.0
+7.0,Walk,319.0
+1.0,Head Up,321.0
+1.0,Out of Focus,321.0
+8.0,Head Up,322.0
+1.0,Graze,323.0
+2.0,Graze,326.0
+5.0,Walk,330.0
+4.0,Head Up,331.0
+4.0,Running,333.0
+1.0,Head Up,337.0
+6.0,Graze,339.0
+4.0,Graze,340.0
+3.0,Walk,340.0
+4.0,Walk,341.0
+6.0,Graze,342.0
+3.0,Walk,345.0
+5.0,Head Up,353.0
+6.0,Walk,358.0
+1.0,Head Up,359.0
+6.0,Out of Focus,360.0
+4.0,Head Up,367.0
+4.0,Head Up,369.0
+5.0,Graze,370.0
+4.0,Walk,371.0
+4.0,Out of Frame,372.0
+4.0,Walk,383.0
+8.0,Head Up,384.0
+6.0,Walk,386.0
+7.0,Graze,392.0
+4.0,Head Up,393.0
+7.0,Out of Focus,396.0
+6.0,Running,397.0
+8.0,Out of Focus,397.0
+8.0,Walk,406.0
+6.0,Head Up,412.0
+8.0,Out of Frame,412.0
+6.0,Out of Focus,413.0
+6.0,Trotting,413.0
+6.0,Head Up,414.0
+4.0,Graze,415.0
+8.0,Head Up,415.0
+1.0,Out of Frame,422.0
+4.0,Walk,424.0
+6.0,Walk,424.0
+3.0,Head Up,426.0
+3.0,Walk,427.0
+8.0,Occluded,429.0
+0.0,Walk,433.0
+4.0,Auto-Groom,435.0
+1.0,Head Up,441.0
+3.0,Graze,442.0
+3.0,Trotting,442.0
+2.0,Out of Frame,444.0
+8.0,Out of Focus,446.0
+2.0,Head Up,447.0
+2.0,Walk,448.0
+4.0,Walk,460.0
+1.0,Graze,460.0
+5.0,Walk,463.0
+9.0,Walk,465.0
+4.0,Graze,465.0
+3.0,Walk,468.0
+8.0,Occluded,470.0
+8.0,Out of Focus,470.0
+8.0,Graze,471.0
+7.0,Head Up,471.0
+4.0,Head Up,471.0
+7.0,Head Up,475.0
+5.0,Walk,476.0
+8.0,Walk,478.0
+5.0,Graze,480.0
+1.0,Occluded,481.0
+5.0,Out of Focus,483.0
+0.0,Occluded,486.0
+6.0,Walk,487.0
+7.0,Graze,487.0
+6.0,Out of Focus,489.0
+7.0,Graze,501.0
+0.0,Trotting,501.0
+3.0,Walk,502.0
+6.0,Graze,503.0
+2.0,Head Up,505.0
+7.0,Head Up,508.0
+1.0,Trotting,509.0
+11.0,Walk,509.0
+12.0,Walk,510.0
+13.0,Walk,516.0
+5.0,Head Up,517.0
+8.0,Out of Focus,534.0
+8.0,Walk,536.0
+3.0,Head Up,536.0
+5.0,Walk,536.0
+6.0,Walk,538.0
+1.0,Mutual Grooming,540.0
+3.0,Graze,541.0
+7.0,Head Up,543.0
+3.0,Head Up,548.0
+6.0,Out of Frame,549.0
+8.0,Head Up,550.0
+8.0,Head Up,551.0
+0.0,Head Up,551.0
+5.0,Graze,554.0
+3.0,Walk,555.0
+3.0,Walk,555.0
+1.0,Graze,559.0
+4.0,Occluded,564.0
+3.0,Graze,565.0
+5.0,Walk,568.0
+1.0,Walk,570.0
+3.0,Head Up,583.0
+8.0,Occluded,583.0
+6.0,Head Up,585.0
+9.0,Head Up,588.0
+10.0,Graze,593.0
+5.0,Head Up,600.0
+6.0,Occluded,600.0
+7.0,Walk,605.0
+7.0,Out of Focus,605.0
+7.0,Head Up,606.0
+4.0,Walk,608.0
+7.0,Out of Focus,608.0
+5.0,Walk,608.0
+7.0,Head Up,609.0
+7.0,Out of Focus,610.0
+6.0,Graze,611.0
+1.0,Occluded,612.0
+7.0,Head Up,612.0
+3.0,Running,618.0
+8.0,Walk,621.0
+1.0,Walk,623.0
+2.0,Walk,624.0
+2.0,Walk,625.0
+9.0,Head Up,628.0
+8.0,Walk,629.0
+4.0,Trotting,634.0
+2.0,Walk,640.0
+4.0,Out of Focus,642.0
+1.0,Walk,643.0
+4.0,Running,643.0
+6.0,Head Up,643.0
+2.0,Out of Focus,645.0
+2.0,Head Up,648.0
+1.0,Graze,653.0
+8.0,Walk,654.0
+5.0,Walk,656.0
+5.0,Out of Focus,656.0
+1.0,Graze,661.0
+4.0,Walk,663.0
+5.0,Walk,670.0
+5.0,Walk,670.0
+2.0,Out of Focus,676.0
+8.0,Graze,677.0
+2.0,Auto-Groom,679.0
+4.0,Graze,681.0
+2.0,Walk,681.0
+1.0,Head Up,688.0
+6.0,Walk,690.0
+1.0,Walk,693.0
+3.0,Graze,693.0
+2.0,Head Up,695.0
+13.0,Walk,701.0
+6.0,Walk,703.0
+5.0,Out of Focus,704.0
+2.0,Head Up,714.0
+2.0,Walk,719.0
+8.0,Out of Focus,720.0
+1.0,Walk,726.0
+1.0,Walk,733.0
+1.0,Out of Frame,733.0
+8.0,Graze,741.0
+9.0,Walk,741.0
+2.0,Graze,742.0
+1.0,Out of Focus,743.0
+2.0,Graze,745.0
+1.0,Walk,746.0
+2.0,Walk,753.0
+10.0,Graze,764.0
+6.0,Graze,765.0
+3.0,Out of Focus,779.0
+5.0,Out of Focus,780.0
+1.0,Head Up,781.0
+5.0,Graze,782.0
+8.0,Out of Frame,788.0
+5.0,Graze,790.0
+5.0,Walk,790.0
+2.0,Head Up,795.0
+10.0,Walk,796.0
+7.0,Out of Frame,796.0
+3.0,Graze,796.0
+3.0,Walk,799.0
+2.0,Graze,805.0
+0.0,Out of Frame,811.0
+10.0,Out of Focus,816.0
+11.0,Head Up,817.0
+1.0,Head Up,820.0
+8.0,Out of Focus,820.0
+3.0,Head Up,823.0
+5.0,Graze,825.0
+2.0,Graze,826.0
+2.0,Occluded,828.0
+6.0,Walk,833.0
+6.0,Graze,842.0
+6.0,Head Up,843.0
+7.0,Out of Focus,845.0
+9.0,Out of Focus,846.0
+10.0,Out of Focus,847.0
+6.0,Walk,850.0
+5.0,Out of Focus,854.0
+5.0,Graze,863.0
+1.0,Occluded,865.0
+4.0,Head Up,866.0
+2.0,Auto-Groom,867.0
+10.0,Walk,869.0
+15.0,Walk,870.0
+2.0,Head Up,871.0
+1.0,Auto-Groom,873.0
+4.0,Out of Focus,875.0
+4.0,Running,877.0
+5.0,Running,881.0
+3.0,Running,883.0
+7.0,Graze,883.0
+2.0,Walk,885.0
+15.0,Walk,887.0
+5.0,Walk,893.0
+3.0,Walk,893.0
+15.0,Head Up,895.0
+1.0,Head Up,899.0
+3.0,Walk,900.0
+18.0,Head Up,908.0
+15.0,Graze,908.0
+2.0,Graze,910.0
+13.0,Head Up,912.0
+3.0,Trotting,912.0
+10.0,Head Up,914.0
+6.0,Walk,917.0
+6.0,Head Up,919.0
+4.0,Graze,923.0
+5.0,Running,924.0
+5.0,Walk,925.0
+5.0,Running,926.0
+5.0,Walk,927.0
+13.0,Head Up,928.0
+5.0,Running,928.0
+4.0,Trotting,928.0
+5.0,Walk,929.0
+10.0,Walk,929.0
+5.0,Running,930.0
+5.0,Walk,931.0
+2.0,Head Up,931.0
+20.0,Graze,931.0
+5.0,Running,932.0
+4.0,Graze,933.0
+5.0,Running,933.0
+5.0,Walk,933.0
+5.0,Walk,934.0
+5.0,Running,935.0
+9.0,Head Up,935.0
+5.0,Head Up,946.0
+12.0,Graze,952.0
+5.0,Trotting,952.0
+11.0,Walk,955.0
+5.0,Out of Focus,955.0
+5.0,Graze,956.0
+5.0,Out of Focus,960.0
+3.0,Graze,960.0
+3.0,Walk,961.0
+9.0,Graze,961.0
+5.0,Graze,969.0
+16.0,Walk,971.0
+5.0,Trotting,973.0
+5.0,Running,974.0
+5.0,Trotting,975.0
+2.0,Walk,975.0
+5.0,Running,976.0
+5.0,Trotting,977.0
+5.0,Running,978.0
+5.0,Trotting,979.0
+2.0,Out of Focus,980.0
+5.0,Running,980.0
+5.0,Trotting,981.0
+17.0,Graze,981.0
+5.0,Running,982.0
+5.0,Out of Focus,983.0
+5.0,Trotting,983.0
+5.0,Trotting,984.0
+5.0,Running,984.0
+5.0,Running,985.0
+5.0,Trotting,986.0
+5.0,Graze,989.0
+13.0,Walk,1001.0
+2.0,Running,1014.0
+8.0,Out of Focus,1019.0
+2.0,Head Up,1020.0
+6.0,Head Up,1023.0
+4.0,Running,1025.0
+4.0,Graze,1027.0
+4.0,Head Up,1027.0
+5.0,Walk,1027.0
+4.0,Graze,1028.0
+4.0,Head Up,1028.0
+4.0,Head Up,1029.0
+4.0,Graze,1030.0
+7.0,Head Up,1030.0
+4.0,Head Up,1030.0
+4.0,Graze,1031.0
+4.0,Graze,1032.0
+4.0,Head Up,1032.0
+4.0,Head Up,1033.0
+2.0,Walk,1033.0
+4.0,Graze,1034.0
+4.0,Head Up,1035.0
+4.0,Out of Focus,1035.0
+4.0,Graze,1036.0
+4.0,Head Up,1036.0
+4.0,Graze,1037.0
+3.0,Graze,1038.0
+4.0,Head Up,1038.0
+4.0,Graze,1039.0
+4.0,Head Up,1040.0
+4.0,Graze,1040.0
+4.0,Head Up,1041.0
+4.0,Graze,1041.0
+4.0,Head Up,1042.0
+4.0,Head Up,1043.0
+4.0,Graze,1043.0
+4.0,Graze,1044.0
+4.0,Graze,1045.0
+11.0,Occluded,1045.0
+4.0,Head Up,1045.0
+8.0,Graze,1046.0
+4.0,Head Up,1046.0
+8.0,Out of Focus,1047.0
+4.0,Graze,1047.0
+4.0,Head Up,1048.0
+4.0,Graze,1048.0
+4.0,Head Up,1049.0
+4.0,Graze,1050.0
+7.0,Head Up,1050.0
+4.0,Head Up,1050.0
+4.0,Graze,1051.0
+4.0,Head Up,1052.0
+4.0,Graze,1052.0
+7.0,Out of Frame,1052.0
+4.0,Head Up,1053.0
+4.0,Running,1053.0
+7.0,Walk,1058.0
+9.0,Head Up,1068.0
+11.0,Walk,1069.0
+11.0,Out of Frame,1072.0
+3.0,Running,1072.0
+8.0,Out of Focus,1075.0
+4.0,Head Up,1075.0
+12.0,Walk,1075.0
+7.0,Walk,1076.0
+8.0,Graze,1080.0
+1.0,Walk,1082.0
+1.0,Graze,1095.0
+3.0,Head Up,1095.0
+1.0,Head Up,1095.0
+3.0,Graze,1096.0
+3.0,Head Up,1096.0
+28.0,Graze,1097.0
+24.0,Occluded,1097.0
+3.0,Head Up,1097.0
+3.0,Graze,1097.0
+26.0,Graze,1097.0
+29.0,Graze,1097.0
+23.0,Graze,1097.0
+3.0,Graze,1098.0
+5.0,Auto-Groom,1099.0
+3.0,Out of Focus,1099.0
+3.0,Head Up,1099.0
+3.0,Head Up,1100.0
+3.0,Graze,1100.0
+3.0,Head Up,1101.0
+3.0,Graze,1101.0
+3.0,Head Up,1102.0
+3.0,Graze,1102.0
+11.0,Walk,1102.0
+3.0,Head Up,1103.0
+3.0,Graze,1103.0
+3.0,Head Up,1104.0
+3.0,Graze,1104.0
+8.0,Walk,1105.0
+3.0,Graze,1105.0
+3.0,Head Up,1106.0
+4.0,Out of Focus,1106.0
+3.0,Graze,1107.0
+3.0,Head Up,1107.0
+3.0,Graze,1108.0
+3.0,Head Up,1108.0
+3.0,Graze,1109.0
+3.0,Head Up,1110.0
+3.0,Graze,1111.0
+3.0,Head Up,1111.0
+3.0,Graze,1112.0
+3.0,Head Up,1112.0
+3.0,Graze,1113.0
+8.0,Graze,1113.0
+3.0,Head Up,1114.0
+3.0,Graze,1115.0
+3.0,Head Up,1115.0
+3.0,Head Up,1116.0
+3.0,Graze,1116.0
+3.0,Graze,1117.0
+5.0,Head Up,1117.0
+3.0,Head Up,1118.0
+3.0,Graze,1119.0
+3.0,Head Up,1119.0
+3.0,Head Up,1120.0
+3.0,Graze,1120.0
+3.0,Head Up,1121.0
+3.0,Graze,1121.0
+5.0,Walk,1122.0
+3.0,Head Up,1122.0
+3.0,Graze,1122.0
+3.0,Graze,1123.0
+5.0,Head Up,1123.0
+3.0,Head Up,1124.0
+3.0,Graze,1124.0
+15.0,Out of Focus,1125.0
+3.0,Head Up,1125.0
+3.0,Head Up,1126.0
+3.0,Graze,1126.0
+5.0,Out of Focus,1126.0
+3.0,Graze,1127.0
+3.0,Head Up,1127.0
+3.0,Graze,1128.0
+3.0,Head Up,1129.0
+3.0,Head Up,1130.0
+3.0,Graze,1130.0
+3.0,Graze,1131.0
+3.0,Head Up,1131.0
+3.0,Head Up,1132.0
+3.0,Graze,1132.0
+3.0,Head Up,1133.0
+3.0,Graze,1133.0
+3.0,Head Up,1134.0
+3.0,Graze,1134.0
+3.0,Graze,1135.0
+3.0,Head Up,1136.0
+4.0,Walk,1136.0
+3.0,Graze,1137.0
+3.0,Head Up,1137.0
+3.0,Head Up,1138.0
+3.0,Graze,1138.0
+3.0,Graze,1139.0
+15.0,Head Up,1140.0
+3.0,Head Up,1140.0
+3.0,Head Up,1141.0
+3.0,Graze,1141.0
+14.0,Out of Focus,1142.0
+15.0,Walk,1142.0
+16.0,Head Up,1142.0
+3.0,Graze,1142.0
+3.0,Head Up,1142.0
+3.0,Graze,1143.0
+13.0,Out of Focus,1143.0
+3.0,Head Up,1144.0
+13.0,Head Up,1144.0
+32.0,Graze,1145.0
+3.0,Graze,1145.0
+3.0,Head Up,1145.0
+3.0,Graze,1146.0
+3.0,Head Up,1146.0
+3.0,Graze,1147.0
+3.0,Head Up,1148.0
+3.0,Graze,1149.0
+3.0,Head Up,1149.0
+3.0,Graze,1150.0
+3.0,Head Up,1151.0
+3.0,Head Up,1152.0
+3.0,Graze,1152.0
+3.0,Graze,1153.0
+3.0,Head Up,1153.0
+5.0,Head Up,1154.0
+3.0,Graze,1154.0
+3.0,Head Up,1155.0
+12.0,Walk,1155.0
+17.0,Head Up,1155.0
+3.0,Graze,1156.0
+3.0,Head Up,1156.0
+3.0,Head Up,1157.0
+3.0,Graze,1157.0
+3.0,Graze,1158.0
+3.0,Graze,1158.0
+5.0,Head Up,1159.0
+3.0,Head Up,1159.0
+3.0,Head Up,1160.0
+3.0,Graze,1160.0
+18.0,Out of Focus,1161.0
+3.0,Head Up,1161.0
+3.0,Graze,1161.0
+3.0,Head Up,1162.0
+3.0,Graze,1162.0
+3.0,Head Up,1163.0
+3.0,Graze,1163.0
+3.0,Head Up,1164.0
+3.0,Graze,1164.0
+3.0,Graze,1165.0
+3.0,Head Up,1166.0
+3.0,Graze,1167.0
+3.0,Head Up,1167.0
+13.0,Walk,1167.0
+3.0,Head Up,1168.0
+3.0,Graze,1168.0
+3.0,Graze,1169.0
+14.0,Head Up,1169.0
+14.0,Graze,1170.0
+3.0,Head Up,1170.0
+18.0,Walk,1171.0
+3.0,Head Up,1171.0
+3.0,Graze,1171.0
+3.0,Head Up,1172.0
+3.0,Graze,1172.0
+3.0,Graze,1173.0
+3.0,Head Up,1174.0
+3.0,Graze,1175.0
+3.0,Head Up,1175.0
+3.0,Graze,1176.0
+7.0,Out of Frame,1177.0
+3.0,Head Up,1177.0
+3.0,Graze,1178.0
+3.0,Head Up,1178.0
+32.0,Walk,1179.0
+3.0,Graze,1179.0
+3.0,Head Up,1179.0
+3.0,Graze,1180.0
+3.0,Head Up,1181.0
+3.0,Head Up,1182.0
+3.0,Graze,1182.0
+3.0,Head Up,1183.0
+3.0,Graze,1183.0
+3.0,Graze,1184.0
+3.0,Head Up,1184.0
+3.0,Graze,1185.0
+3.0,Head Up,1185.0
+3.0,Graze,1186.0
+3.0,Head Up,1186.0
+3.0,Graze,1187.0
+3.0,Head Up,1188.0
+3.0,Head Up,1189.0
+3.0,Graze,1189.0
+4.0,Trotting,1189.0
+3.0,Head Up,1190.0
+3.0,Graze,1190.0
+3.0,Head Up,1191.0
+3.0,Graze,1191.0
+3.0,Head Up,1192.0
+3.0,Graze,1192.0
+3.0,Head Up,1193.0
+3.0,Graze,1193.0
+3.0,Graze,1194.0
+2.0,Out of Frame,1195.0
+3.0,Head Up,1195.0
+20.0,Head Up,1196.0
+3.0,Head Up,1196.0
+3.0,Graze,1196.0
+3.0,Graze,1197.0
+3.0,Head Up,1197.0
+3.0,Graze,1198.0
+7.0,Graze,1199.0
+3.0,Head Up,1199.0
+3.0,Graze,1200.0
+3.0,Head Up,1200.0
+3.0,Head Up,1201.0
+3.0,Graze,1201.0
+3.0,Graze,1202.0
+3.0,Head Up,1203.0
+3.0,Head Up,1204.0
+1.0,Walk,1204.0
+3.0,Graze,1204.0
+3.0,Head Up,1205.0
+3.0,Graze,1205.0
+8.0,Out of Focus,1205.0
+3.0,Graze,1206.0
+3.0,Head Up,1207.0
+3.0,Graze,1208.0
+3.0,Head Up,1208.0
+13.0,Walk,1209.0
+15.0,Walk,1209.0
+11.0,Walk,1209.0
+12.0,Walk,1209.0
+14.0,Walk,1209.0
+3.0,Graze,1209.0
+3.0,Head Up,1210.0
+8.0,Graze,1210.0
+3.0,Head Up,1211.0
+3.0,Graze,1211.0
+3.0,Graze,1212.0
+3.0,Head Up,1212.0
+3.0,Graze,1213.0
+3.0,Head Up,1214.0
+3.0,Graze,1215.0
+3.0,Head Up,1215.0
+3.0,Head Up,1216.0
+3.0,Graze,1216.0
+3.0,Graze,1217.0
+3.0,Head Up,1218.0
+3.0,Head Up,1219.0
+3.0,Graze,1219.0
+3.0,Graze,1220.0
+3.0,Head Up,1220.0
+3.0,Graze,1221.0
+3.0,Head Up,1221.0
+3.0,Head Up,1222.0
+3.0,Graze,1222.0
+3.0,Graze,1223.0
+3.0,Head Up,1223.0
+3.0,Graze,1224.0
+27.0,Graze,1224.0
+20.0,Graze,1224.0
+26.0,Graze,1224.0
+23.0,Graze,1224.0
+22.0,Graze,1224.0
+24.0,Out of Focus,1224.0
+21.0,Out of Focus,1224.0
+19.0,Out of Frame,1224.0
+3.0,Head Up,1225.0
+5.0,Auto-Groom,1225.0
+0.0,Graze,1225.0
+3.0,Head Up,1226.0
+3.0,Graze,1226.0
+3.0,Head Up,1227.0
+3.0,Graze,1227.0
+13.0,Walk,1227.0
+3.0,Graze,1228.0
+3.0,Head Up,1229.0
+13.0,Occluded,1229.0
+3.0,Head Up,1230.0
+3.0,Graze,1230.0
+6.0,Walk,1230.0
+3.0,Head Up,1231.0
+3.0,Graze,1231.0
+17.0,Out of Focus,1232.0
+3.0,Graze,1232.0
+17.0,Walk,1233.0
+3.0,Head Up,1233.0
+3.0,Head Up,1234.0
+19.0,Walk,1234.0
+3.0,Graze,1234.0
+3.0,Graze,1235.0
+3.0,Graze,1235.0
+3.0,Head Up,1235.0
+3.0,Graze,1236.0
+3.0,Head Up,1236.0
+3.0,Head Up,1237.0
+3.0,Graze,1237.0
+3.0,Head Up,1238.0
+3.0,Graze,1238.0
+3.0,Graze,1239.0
+3.0,Head Up,1240.0
+3.0,Graze,1241.0
+3.0,Head Up,1241.0
+3.0,Graze,1242.0
+3.0,Head Up,1242.0
+19.0,Out of Focus,1243.0
+4.0,Walk,1243.0
+3.0,Head Up,1243.0
+3.0,Graze,1243.0
+3.0,Head Up,1244.0
+3.0,Graze,1244.0
+3.0,Graze,1245.0
+3.0,Head Up,1245.0
+3.0,Graze,1246.0
+3.0,Head Up,1247.0
+3.0,Head Up,1248.0
+3.0,Graze,1248.0
+5.0,Head Up,1249.0
+3.0,Graze,1249.0
+3.0,Head Up,1249.0
+3.0,Graze,1250.0
+3.0,Head Up,1250.0
+1.0,Head Up,1250.0
+3.0,Graze,1251.0
+14.0,Out of Focus,1251.0
+3.0,Head Up,1251.0
+13.0,Out of Focus,1251.0
+19.0,Out of Frame,1252.0
+3.0,Head Up,1252.0
+3.0,Graze,1252.0
+2.0,Head Up,1253.0
+3.0,Graze,1253.0
+3.0,Head Up,1254.0
+16.0,Walk,1254.0
+3.0,Graze,1255.0
+3.0,Head Up,1255.0
+3.0,Graze,1256.0
+3.0,Head Up,1256.0
+3.0,Graze,1257.0
+3.0,Head Up,1258.0
+3.0,Head Up,1259.0
+3.0,Graze,1259.0
+19.0,Walk,1259.0
+3.0,Head Up,1260.0
+3.0,Graze,1260.0
+20.0,Walk,1260.0
+3.0,Graze,1261.0
+3.0,Head Up,1262.0
+3.0,Graze,1263.0
+3.0,Head Up,1263.0
+3.0,Head Up,1264.0
+3.0,Graze,1264.0
+3.0,Graze,1265.0
+2.0,Running,1266.0
+3.0,Head Up,1266.0
+3.0,Walk,1267.0
+3.0,Graze,1267.0
+3.0,Head Up,1267.0
+3.0,Graze,1268.0
+2.0,Graze,1268.0
+7.0,Out of Frame,1269.0
+3.0,Head Up,1269.0
+7.0,Walk,1270.0
+3.0,Graze,1270.0
+3.0,Head Up,1270.0
+3.0,Graze,1271.0
+3.0,Head Up,1271.0
+8.0,Out of Focus,1272.0
+3.0,Graze,1272.0
+8.0,Out of Frame,1273.0
+9.0,Walk,1273.0
+3.0,Head Up,1273.0
+3.0,Graze,1274.0
+3.0,Head Up,1274.0
+3.0,Graze,1275.0
+3.0,Head Up,1275.0
+8.0,Walk,1276.0
+3.0,Graze,1276.0
+2.0,Out of Frame,1277.0
+5.0,Head Up,1277.0
+3.0,Head Up,1277.0
+3.0,Head Up,1278.0
+3.0,Graze,1278.0
+3.0,Graze,1279.0
+3.0,Head Up,1279.0
+9.0,Walk,1280.0
+3.0,Graze,1280.0
+3.0,Head Up,1280.0
+3.0,Head Up,1281.0
+3.0,Graze,1281.0
+3.0,Graze,1282.0
+3.0,Head Up,1282.0
+3.0,Graze,1283.0
+3.0,Head Up,1284.0
+3.0,Head Up,1285.0
+3.0,Graze,1285.0
+3.0,Head Up,1286.0
+3.0,Graze,1286.0
+7.0,Walk,1286.0
+2.0,Trotting,1286.0
+3.0,Graze,1287.0
+3.0,Head Up,1288.0
+3.0,Head Up,1289.0
+3.0,Graze,1289.0
+3.0,Head Up,1290.0
+3.0,Graze,1290.0
+3.0,Graze,1291.0
+3.0,Head Up,1292.0
+3.0,Head Up,1293.0
+5.0,Trotting,1293.0
+3.0,Graze,1293.0
+3.0,Graze,1294.0
+2.0,Defecating,1294.0
+3.0,Head Up,1294.0
+3.0,Head Up,1295.0
+3.0,Graze,1295.0
+3.0,Graze,1296.0
+3.0,Head Up,1296.0
+8.0,Graze,1296.0
+3.0,Head Up,1297.0
+3.0,Graze,1297.0
+13.0,Out of Focus,1298.0
+3.0,Graze,1298.0
+3.0,Head Up,1299.0
+13.0,Walk,1299.0
+5.0,Walk,1300.0
+3.0,Graze,1300.0
+3.0,Head Up,1300.0
+8.0,Out of Focus,1301.0
+3.0,Head Up,1301.0
+3.0,Graze,1301.0
+3.0,Graze,1302.0
+3.0,Head Up,1302.0
+3.0,Graze,1303.0
+3.0,Head Up,1303.0
+3.0,Graze,1304.0
+3.0,Head Up,1304.0
+3.0,Graze,1305.0
+17.0,Walk,1306.0
+3.0,Head Up,1306.0
+3.0,Graze,1307.0
+1.0,Trotting,1307.0
+3.0,Head Up,1307.0
+3.0,Head Up,1308.0
+3.0,Graze,1308.0
+3.0,Graze,1309.0
+3.0,Head Up,1309.0
+3.0,Head Up,1310.0
+8.0,Graze,1310.0
+3.0,Graze,1310.0
+3.0,Graze,1311.0
+3.0,Head Up,1311.0
+10.0,Walk,1312.0
+3.0,Graze,1312.0
+12.0,Auto-Groom,1312.0
+3.0,Head Up,1313.0
+3.0,Head Up,1314.0
+3.0,Graze,1314.0
+3.0,Head Up,1315.0
+3.0,Graze,1315.0
+2.0,Walk,1315.0
+3.0,Graze,1316.0
+3.0,Head Up,1317.0
+3.0,Graze,1318.0
+3.0,Head Up,1318.0
+3.0,Head Up,1319.0
+5.0,Auto-Groom,1319.0
+3.0,Graze,1319.0
+1.0,Graze,1320.0
+3.0,Graze,1320.0
+3.0,Head Up,1321.0
+5.0,Trotting,1321.0
+7.0,Head Up,1321.0
+3.0,Graze,1322.0
+3.0,Head Up,1322.0
+3.0,Graze,1323.0
+3.0,Head Up,1323.0
+3.0,Graze,1324.0
+5.0,Walk,1324.0
+2.0,Graze,1324.0
+3.0,Head Up,1325.0
+3.0,Graze,1326.0
+3.0,Head Up,1326.0
+3.0,Graze,1327.0
+4.0,Walk,1327.0
+4.0,Walk,1328.0
+4.0,Head Up,1328.0
+3.0,Head Up,1328.0
+3.0,Graze,1329.0
+3.0,Head Up,1329.0
+4.0,Head Up,1329.0
+3.0,Walk,1330.0
+3.0,Graze,1330.0
+3.0,Head Up,1330.0
+4.0,Walk,1330.0
+13.0,Graze,1331.0
+4.0,Head Up,1331.0
+3.0,Graze,1331.0
+3.0,Head Up,1332.0
+4.0,Walk,1332.0
+3.0,Graze,1333.0
+3.0,Head Up,1333.0
+4.0,Head Up,1333.0
+12.0,Walk,1333.0
+3.0,Graze,1334.0
+3.0,Head Up,1334.0
+6.0,Walk,1334.0
+4.0,Walk,1334.0
+4.0,Walk,1335.0
+4.0,Head Up,1335.0
+3.0,Graze,1335.0
+4.0,Head Up,1336.0
+3.0,Head Up,1336.0
+4.0,Walk,1337.0
+3.0,Out of Frame,1337.0
+3.0,Head Up,1337.0
+3.0,Graze,1337.0
+4.0,Head Up,1337.0
+3.0,Head Up,1338.0
+3.0,Graze,1338.0
+4.0,Walk,1338.0
+4.0,Head Up,1339.0
+3.0,Head Up,1339.0
+3.0,Graze,1339.0
+4.0,Walk,1339.0
+3.0,Head Up,1340.0
+3.0,Graze,1340.0
+4.0,Head Up,1340.0
+3.0,Head Up,1341.0
+3.0,Graze,1341.0
+4.0,Walk,1341.0
+4.0,Head Up,1342.0
+5.0,Head Up,1342.0
+4.0,Walk,1342.0
+3.0,Graze,1342.0
+3.0,Head Up,1343.0
+4.0,Head Up,1343.0
+3.0,Graze,1344.0
+4.0,Head Up,1344.0
+4.0,Walk,1344.0
+3.0,Head Up,1344.0
+3.0,Graze,1345.0
+3.0,Head Up,1345.0
+4.0,Walk,1345.0
+4.0,Head Up,1345.0
+4.0,Walk,1346.0
+3.0,Graze,1346.0
+1.0,Walk,1346.0
+4.0,Head Up,1346.0
+3.0,Head Up,1347.0
+4.0,Head Up,1347.0
+3.0,Graze,1348.0
+4.0,Head Up,1348.0
+3.0,Head Up,1348.0
+4.0,Walk,1348.0
+3.0,Graze,1349.0
+3.0,Head Up,1349.0
+4.0,Walk,1349.0
+4.0,Walk,1350.0
+4.0,Head Up,1350.0
+3.0,Graze,1350.0
+4.0,Head Up,1351.0
+3.0,Head Up,1351.0
+3.0,Graze,1352.0
+3.0,Head Up,1352.0
+4.0,Walk,1352.0
+3.0,Walk,1352.0
+3.0,Graze,1353.0
+3.0,Head Up,1353.0
+3.0,Graze,1354.0
+3.0,Head Up,1355.0
+7.0,Out of Focus,1355.0
+3.0,Graze,1356.0
+7.0,Walk,1356.0
+3.0,Head Up,1356.0
+3.0,Graze,1357.0
+3.0,Head Up,1357.0
+3.0,Head Up,1358.0
+3.0,Graze,1358.0
+3.0,Graze,1359.0
+3.0,Head Up,1359.0
+7.0,Out of Focus,1360.0
+7.0,Walk,1360.0
+23.0,Running,1360.0
+3.0,Graze,1360.0
+3.0,Head Up,1361.0
+3.0,Graze,1361.0
+5.0,Graze,1361.0
+3.0,Head Up,1362.0
+7.0,Walk,1363.0
+3.0,Graze,1363.0
+3.0,Head Up,1363.0
+3.0,Head Up,1364.0
+3.0,Graze,1364.0
+18.0,Head Up,1364.0
+1.0,Walk,1365.0
+3.0,Graze,1365.0
+3.0,Head Up,1366.0
+15.0,Out of Frame,1366.0
+3.0,Head Up,1367.0
+3.0,Graze,1367.0
+7.0,Out of Focus,1367.0
+2.0,Walk,1368.0
+3.0,Graze,1368.0
+3.0,Head Up,1368.0
+3.0,Graze,1369.0
+3.0,Head Up,1369.0
+3.0,Head Up,1370.0
+3.0,Graze,1370.0
+7.0,Walk,1370.0
+3.0,Graze,1371.0
+4.0,Out of Focus,1371.0
+3.0,Head Up,1371.0
+3.0,Graze,1372.0
+3.0,Head Up,1373.0
+3.0,Graze,1374.0
+4.0,Defecating,1374.0
+3.0,Head Up,1374.0
+3.0,Head Up,1375.0
+3.0,Graze,1375.0
+22.0,Walk,1376.0
+13.0,Out of Focus,1376.0
+3.0,Graze,1376.0
+3.0,Head Up,1377.0
+3.0,Graze,1378.0
+3.0,Head Up,1378.0
+3.0,Graze,1379.0
+3.0,Head Up,1379.0
+12.0,Auto-Groom,1379.0
+11.0,Out of Frame,1380.0
+3.0,Graze,1380.0
+4.0,Head Up,1381.0
+3.0,Head Up,1381.0
+14.0,Walk,1381.0
+15.0,Walk,1382.0
+3.0,Head Up,1382.0
+3.0,Graze,1382.0
+3.0,Graze,1383.0
+3.0,Head Up,1383.0
+3.0,Graze,1384.0
+3.0,Head Up,1385.0
+3.0,Head Up,1386.0
+3.0,Graze,1386.0
+1.0,Walk,1387.0
+3.0,Graze,1387.0
+3.0,Head Up,1388.0
+3.0,Graze,1389.0
+3.0,Head Up,1389.0
+3.0,Head Up,1390.0
+3.0,Graze,1390.0
+3.0,Graze,1391.0
+3.0,Head Up,1392.0
+13.0,Graze,1392.0
+1.0,Head Up,1392.0
+3.0,Head Up,1393.0
+3.0,Graze,1393.0
+1.0,Walk,1394.0
+3.0,Head Up,1394.0
+3.0,Graze,1394.0
+3.0,Graze,1395.0
+3.0,Head Up,1396.0
+13.0,Out of Focus,1396.0
+3.0,Graze,1397.0
+3.0,Head Up,1397.0
+3.0,Head Up,1398.0
+3.0,Graze,1398.0
+1.0,Head Up,1399.0
+3.0,Head Up,1399.0
+3.0,Graze,1399.0
+3.0,Head Up,1400.0
+3.0,Graze,1400.0
+3.0,Head Up,1401.0
+3.0,Graze,1401.0
+3.0,Graze,1402.0
+3.0,Head Up,1403.0
+3.0,Head Up,1404.0
+3.0,Graze,1404.0
+3.0,Graze,1405.0
+3.0,Head Up,1405.0
+3.0,Graze,1406.0
+8.0,Out of Frame,1407.0
+10.0,Out of Focus,1409.0
+16.0,Walk,1411.0
+17.0,Out of Frame,1411.0
+23.0,Graze,1412.0
+25.0,Graze,1412.0
+24.0,Graze,1412.0
+5.0,Head Up,1413.0
+1.0,Trotting,1417.0
+2.0,Head Up,1418.0
+9.0,Out of Frame,1420.0
+1.0,Walk,1422.0
+7.0,Head Up,1424.0
+7.0,Out of Frame,1434.0
+24.0,Graze,1436.0
+13.0,Walk,1440.0
+6.0,Walk,1443.0
+22.0,Head Up,1445.0
+4.0,Graze,1445.0
+2.0,Running,1447.0
+2.0,Walk,1449.0
+22.0,Out of Focus,1451.0
+5.0,Walk,1451.0
+5.0,Auto-Groom,1451.0
+19.0,Out of Frame,1452.0
+19.0,Walk,1453.0
+22.0,Walk,1453.0
+1.0,Running,1455.0
+2.0,Walk,1462.0
+12.0,Out of Focus,1463.0
+1.0,Trotting,1466.0
+24.0,Running,1469.0
+14.0,Walk,1470.0
+7.0,Walk,1480.0
+7.0,Walk,1482.0
+5.0,Head Up,1487.0
+6.0,Head Up,1488.0
+12.0,Head Up,1488.0
+15.0,Graze,1489.0
+16.0,Out of Focus,1490.0
+6.0,Auto-Groom,1492.0
+6.0,Out of Frame,1493.0
+14.0,Head Up,1499.0
+7.0,Head Up,1502.0
+13.0,Graze,1509.0
+18.0,Out of Focus,1511.0
+5.0,Graze,1512.0
+15.0,Head Up,1519.0
+6.0,Graze,1522.0
+6.0,Out of Frame,1523.0
+15.0,Head Up,1527.0
+10.0,Occluded,1529.0
+7.0,Head Up,1530.0
+15.0,Head Up,1530.0
+6.0,Walk,1533.0
+10.0,Out of Focus,1541.0
+3.0,Head Up,1542.0
+15.0,Head Up,1548.0
+6.0,Head Up,1552.0
+2.0,Graze,1558.0
+15.0,Walk,1560.0
+13.0,Head Up,1562.0
+17.0,Walk,1568.0
+19.0,Walk,1569.0
+2.0,Head Up,1569.0
+6.0,Head Up,1570.0
+1.0,Walk,1571.0
+20.0,Walk,1572.0
+5.0,Auto-Groom,1573.0
+14.0,Walk,1575.0
+30.0,Walk,1577.0
+3.0,Mutual Grooming,1586.0
+14.0,Out of Focus,1593.0
+4.0,Walk,1594.0
+24.0,Auto-Groom,1596.0
+4.0,Walk,1597.0
+3.0,Walk,1601.0
+13.0,Walk,1602.0
+5.0,Walk,1605.0
+7.0,Occluded,1606.0
+23.0,Walk,1613.0
+1.0,Graze,1617.0
+4.0,Graze,1621.0
+4.0,Walk,1622.0
+4.0,Graze,1623.0
+4.0,Walk,1624.0
+4.0,Graze,1624.0
+4.0,Walk,1625.0
+4.0,Graze,1625.0
+4.0,Walk,1626.0
+4.0,Graze,1627.0
+15.0,Walk,1627.0
+4.0,Walk,1628.0
+3.0,Head Up,1629.0
+4.0,Graze,1629.0
+4.0,Walk,1630.0
+14.0,Sniff,1630.0
+4.0,Graze,1630.0
+4.0,Walk,1631.0
+4.0,Graze,1631.0
+4.0,Walk,1632.0
+4.0,Graze,1632.0
+4.0,Walk,1633.0
+4.0,Graze,1634.0
+4.0,Walk,1634.0
+4.0,Graze,1635.0
+4.0,Walk,1635.0
+4.0,Graze,1636.0
+9.0,Head Up,1637.0
+4.0,Walk,1637.0
+2.0,Out of Focus,1637.0
+0.0,Out of Focus,1637.0
+1.0,Out of Focus,1637.0
+4.0,Graze,1638.0
+5.0,Walk,1639.0
+12.0,Graze,1639.0
+4.0,Graze,1639.0
+4.0,Walk,1639.0
+4.0,Walk,1640.0
+4.0,Graze,1641.0
+3.0,Occluded,1641.0
+4.0,Walk,1641.0
+4.0,Auto-Groom,1642.0
+3.0,Head Up,1644.0
+7.0,Out of Focus,1644.0
+16.0,Walk,1646.0
+6.0,Out of Focus,1650.0
+4.0,Head Up,1655.0
+24.0,Walk,1661.0
+4.0,Head Up,1662.0
+2.0,Trotting,1670.0
+5.0,Auto-Groom,1671.0
+1.0,Walk,1673.0
+14.0,Head Up,1677.0
+5.0,Head Up,1679.0
+17.0,Out of Focus,1680.0
+17.0,Walk,1684.0
+3.0,Walk,1685.0
+5.0,Walk,1686.0
+1.0,Head Up,1686.0
+12.0,Walk,1688.0
+3.0,Head Up,1689.0
+7.0,Graze,1689.0
+3.0,Graze,1690.0
+3.0,Head Up,1690.0
+5.0,Walk,1691.0
+3.0,Graze,1691.0
+6.0,Head Up,1691.0
+30.0,Graze,1692.0
+3.0,Head Up,1692.0
+3.0,Head Up,1693.0
+3.0,Graze,1693.0
+3.0,Graze,1694.0
+3.0,Head Up,1694.0
+3.0,Graze,1695.0
+3.0,Head Up,1695.0
+3.0,Graze,1696.0
+3.0,Head Up,1696.0
+3.0,Head Up,1697.0
+3.0,Graze,1697.0
+3.0,Graze,1698.0
+3.0,Head Up,1699.0
+3.0,Head Up,1700.0
+3.0,Graze,1700.0
+6.0,Out of Focus,1700.0
+3.0,Graze,1701.0
+3.0,Head Up,1701.0
+2.0,Head Up,1701.0
+3.0,Graze,1702.0
+2.0,Walk,1702.0
+3.0,Head Up,1703.0
+3.0,Graze,1704.0
+3.0,Head Up,1704.0
+3.0,Graze,1705.0
+3.0,Head Up,1705.0
+1.0,Graze,1706.0
+3.0,Graze,1706.0
+3.0,Head Up,1707.0
+3.0,Head Up,1708.0
+3.0,Graze,1708.0
+24.0,Graze,1709.0
+3.0,Graze,1709.0
+3.0,Head Up,1709.0
+3.0,Graze,1710.0
+3.0,Head Up,1710.0
+3.0,Head Up,1711.0
+3.0,Graze,1711.0
+3.0,Head Up,1712.0
+3.0,Graze,1712.0
+1.0,Trotting,1712.0
+7.0,Walk,1712.0
+3.0,Graze,1713.0
+3.0,Head Up,1714.0
+20.0,Trotting,1714.0
+11.0,Sniff,1715.0
+3.0,Head Up,1715.0
+3.0,Graze,1715.0
+3.0,Head Up,1716.0
+3.0,Graze,1716.0
+3.0,Graze,1717.0
+2.0,Head Up,1717.0
+3.0,Head Up,1717.0
+3.0,Head Up,1718.0
+3.0,Graze,1718.0
+7.0,Occluded,1718.0
+15.0,Walk,1719.0
+3.0,Head Up,1719.0
+6.0,Graze,1719.0
+3.0,Graze,1719.0
+3.0,Graze,1720.0
+3.0,Head Up,1721.0
+3.0,Head Up,1722.0
+3.0,Graze,1722.0
+3.0,Head Up,1723.0
+3.0,Graze,1723.0
+3.0,Graze,1724.0
+25.0,Walk,1724.0
+3.0,Head Up,1724.0
+3.0,Graze,1725.0
+3.0,Head Up,1725.0
+3.0,Graze,1726.0
+3.0,Head Up,1726.0
+2.0,Walk,1726.0
+3.0,Graze,1727.0
+3.0,Head Up,1728.0
+3.0,Graze,1729.0
+3.0,Head Up,1729.0
+3.0,Graze,1730.0
+3.0,Head Up,1730.0
+3.0,Graze,1731.0
+3.0,Mutual Grooming,1731.0
+3.0,Head Up,1732.0
+3.0,Graze,1733.0
+3.0,Head Up,1733.0
+3.0,Walk,1733.0
+3.0,Graze,1734.0
+3.0,Head Up,1734.0
+3.0,Graze,1735.0
+3.0,Head Up,1736.0
+5.0,Graze,1736.0
+3.0,Head Up,1737.0
+3.0,Graze,1737.0
+12.0,Out of Focus,1738.0
+2.0,Graze,1738.0
+3.0,Graze,1738.0
+3.0,Head Up,1738.0
+3.0,Graze,1739.0
+3.0,Walk,1740.0
+3.0,Graze,1741.0
+3.0,Walk,1741.0
+3.0,Graze,1742.0
+3.0,Walk,1743.0
+3.0,Graze,1744.0
+3.0,Walk,1744.0
+3.0,Walk,1745.0
+3.0,Graze,1745.0
+12.0,Walk,1746.0
+3.0,Graze,1746.0
+3.0,Walk,1747.0
+3.0,Graze,1748.0
+3.0,Walk,1748.0
+3.0,Graze,1749.0
+3.0,Walk,1749.0
+3.0,Graze,1750.0
+3.0,Trotting,1751.0
+3.0,Walk,1751.0
+3.0,Walk,1752.0
+3.0,Graze,1752.0
+3.0,Graze,1753.0
+3.0,Walk,1753.0
+3.0,Graze,1754.0
+3.0,Walk,1754.0
+3.0,Graze,1755.0
+3.0,Head Up,1755.0
+6.0,Head Up,1755.0
+3.0,Head Up,1756.0
+3.0,Graze,1756.0
+3.0,Graze,1757.0
+5.0,Running,1757.0
+3.0,Head Up,1758.0
+3.0,Head Up,1759.0
+3.0,Graze,1759.0
+15.0,Walk,1760.0
+3.0,Head Up,1760.0
+3.0,Graze,1760.0
+11.0,Head Up,1760.0
+3.0,Graze,1761.0
+3.0,Head Up,1762.0
+4.0,Graze,1762.0
+9.0,Walk,1763.0
+3.0,Head Up,1763.0
+3.0,Graze,1763.0
+4.0,Auto-Groom,1763.0
+4.0,Graze,1763.0
+4.0,Auto-Groom,1764.0
+3.0,Head Up,1764.0
+3.0,Graze,1764.0
+3.0,Graze,1765.0
+4.0,Graze,1765.0
+4.0,Auto-Groom,1765.0
+4.0,Walk,1765.0
+1.0,Head Up,1766.0
+3.0,Head Up,1766.0
+4.0,Graze,1766.0
+3.0,Graze,1767.0
+4.0,Auto-Groom,1767.0
+4.0,Graze,1767.0
+3.0,Head Up,1767.0
+3.0,Head Up,1768.0
+4.0,Auto-Groom,1768.0
+3.0,Graze,1768.0
+3.0,Graze,1769.0
+4.0,Graze,1769.0
+4.0,Auto-Groom,1769.0
+3.0,Head Up,1769.0
+3.0,Graze,1770.0
+3.0,Head Up,1770.0
+4.0,Graze,1770.0
+3.0,Head Up,1771.0
+4.0,Auto-Groom,1771.0
+3.0,Graze,1771.0
+4.0,Graze,1772.0
+4.0,Auto-Groom,1772.0
+3.0,Graze,1772.0
+34.0,Graze,1773.0
+4.0,Graze,1773.0
+3.0,Head Up,1773.0
+3.0,Head Up,1774.0
+3.0,Graze,1774.0
+4.0,Auto-Groom,1774.0
+4.0,Graze,1774.0
+4.0,Auto-Groom,1775.0
+3.0,Graze,1775.0
+3.0,Head Up,1775.0
+4.0,Graze,1775.0
+3.0,Graze,1776.0
+3.0,Head Up,1776.0
+4.0,Auto-Groom,1776.0
+3.0,Graze,1777.0
+14.0,Walk,1777.0
+4.0,Graze,1777.0
+3.0,Head Up,1777.0
+3.0,Head Up,1778.0
+4.0,Auto-Groom,1778.0
+3.0,Graze,1778.0
+3.0,Graze,1779.0
+4.0,Graze,1779.0
+4.0,Auto-Groom,1779.0
+3.0,Head Up,1780.0
+4.0,Graze,1780.0
+4.0,Graze,1781.0
+3.0,Graze,1781.0
+4.0,Auto-Groom,1781.0
+3.0,Head Up,1781.0
+3.0,Head Up,1782.0
+4.0,Auto-Groom,1782.0
+3.0,Graze,1782.0
+7.0,Running,1782.0
+4.0,Graze,1783.0
+3.0,Head Up,1783.0
+3.0,Graze,1783.0
+4.0,Auto-Groom,1783.0
+3.0,Head Up,1784.0
+3.0,Graze,1784.0
+4.0,Graze,1784.0
+3.0,Head Up,1785.0
+3.0,Graze,1785.0
+4.0,Auto-Groom,1785.0
+3.0,Graze,1786.0
+4.0,Graze,1786.0
+4.0,Auto-Groom,1786.0
+4.0,Graze,1787.0
+3.0,Head Up,1787.0
+4.0,Auto-Groom,1788.0
+3.0,Graze,1788.0
+4.0,Graze,1788.0
+3.0,Head Up,1788.0
+7.0,Graze,1789.0
+3.0,Head Up,1789.0
+4.0,Auto-Groom,1789.0
+3.0,Graze,1789.0
+3.0,Graze,1790.0
+11.0,Graze,1790.0
+4.0,Auto-Groom,1790.0
+4.0,Graze,1790.0
+3.0,Head Up,1791.0
+4.0,Graze,1791.0
+3.0,Head Up,1792.0
+3.0,Graze,1792.0
+4.0,Auto-Groom,1792.0
+4.0,Graze,1792.0
+3.0,Graze,1793.0
+3.0,Head Up,1793.0
+4.0,Auto-Groom,1793.0
+3.0,Graze,1794.0
+4.0,Auto-Groom,1794.0
+4.0,Graze,1794.0
+6.0,Auto-Groom,1794.0
+3.0,Head Up,1795.0
+4.0,Graze,1795.0
+4.0,Graze,1795.0
+1.0,Running,1795.0
+3.0,Head Up,1796.0
+3.0,Graze,1796.0
+4.0,Auto-Groom,1796.0
+4.0,Graze,1796.0
+4.0,Auto-Groom,1797.0
+3.0,Graze,1797.0
+3.0,Head Up,1797.0
+3.0,Graze,1798.0
+4.0,Graze,1798.0
+4.0,Auto-Groom,1798.0
+3.0,Head Up,1799.0
+4.0,Graze,1799.0
+3.0,Graze,1800.0
+4.0,Auto-Groom,1800.0
+3.0,Head Up,1800.0
+9.0,Out of Frame,1801.0
+4.0,Graze,1801.0
+3.0,Graze,1801.0
+4.0,Auto-Groom,1801.0
+4.0,Auto-Groom,1802.0
+4.0,Graze,1802.0
+3.0,Head Up,1802.0
+3.0,Head Up,1803.0
+3.0,Graze,1803.0
+4.0,Graze,1803.0
+4.0,Auto-Groom,1804.0
+3.0,Graze,1804.0
+3.0,Head Up,1804.0
+4.0,Graze,1805.0
+3.0,Graze,1805.0
+3.0,Head Up,1806.0
+6.0,Head Up,1806.0
+4.0,Auto-Groom,1806.0
+4.0,Graze,1807.0
+3.0,Graze,1807.0
+3.0,Head Up,1807.0
+3.0,Graze,1808.0
+3.0,Head Up,1808.0
+4.0,Auto-Groom,1808.0
+4.0,Graze,1809.0
+4.0,Auto-Groom,1809.0
+3.0,Graze,1809.0
+4.0,Graze,1810.0
+3.0,Head Up,1810.0
+4.0,Graze,1811.0
+14.0,Head Up,1811.0
+3.0,Running,1811.0
+4.0,Auto-Groom,1811.0
+3.0,Graze,1811.0
+3.0,Head Up,1811.0
+4.0,Auto-Groom,1812.0
+3.0,Graze,1812.0
+3.0,Head Up,1812.0
+3.0,Graze,1813.0
+3.0,Head Up,1813.0
+4.0,Auto-Groom,1813.0
+4.0,Graze,1813.0
+3.0,Graze,1814.0
+3.0,Head Up,1814.0
+4.0,Graze,1814.0
+4.0,Walk,1815.0
+4.0,Auto-Groom,1815.0
+3.0,Head Up,1815.0
+3.0,Graze,1815.0
+4.0,Graze,1816.0
+4.0,Auto-Groom,1816.0
+3.0,Graze,1816.0
+3.0,Head Up,1817.0
+4.0,Graze,1817.0
+3.0,Graze,1818.0
+4.0,Auto-Groom,1818.0
+4.0,Graze,1818.0
+4.0,Auto-Groom,1819.0
+4.0,Graze,1820.0
+4.0,Auto-Groom,1820.0
+4.0,Graze,1821.0
+4.0,Graze,1822.0
+4.0,Auto-Groom,1822.0
+7.0,Occluded,1822.0
+4.0,Auto-Groom,1823.0
+4.0,Auto-Groom,1824.0
+4.0,Graze,1824.0
+4.0,Graze,1825.0
+4.0,Auto-Groom,1826.0
+4.0,Graze,1826.0
+4.0,Auto-Groom,1827.0
+4.0,Graze,1828.0
+4.0,Auto-Groom,1828.0
+4.0,Graze,1829.0
+4.0,Auto-Groom,1830.0
+26.0,Walk,1830.0
+4.0,Auto-Groom,1831.0
+4.0,Graze,1831.0
+4.0,Graze,1832.0
+4.0,Graze,1833.0
+4.0,Auto-Groom,1833.0
+4.0,Auto-Groom,1834.0
+4.0,Graze,1834.0
+2.0,Head Up,1834.0
+4.0,Head Up,1835.0
+4.0,Graze,1836.0
+4.0,Head Up,1836.0
+4.0,Graze,1837.0
+4.0,Head Up,1838.0
+4.0,Head Up,1839.0
+4.0,Graze,1839.0
+4.0,Graze,1840.0
+4.0,Head Up,1841.0
+4.0,Graze,1841.0
+4.0,Head Up,1842.0
+4.0,Graze,1842.0
+2.0,Walk,1842.0
+4.0,Head Up,1843.0
+4.0,Graze,1844.0
+4.0,Head Up,1845.0
+4.0,Head Up,1846.0
+4.0,Graze,1846.0
+4.0,Graze,1847.0
+4.0,Head Up,1848.0
+4.0,Graze,1848.0
+6.0,Head Up,1849.0
+4.0,Head Up,1849.0
+4.0,Head Up,1850.0
+4.0,Graze,1850.0
+4.0,Graze,1851.0
+4.0,Head Up,1852.0
+4.0,Graze,1852.0
+1.0,Head Up,1853.0
+3.0,Walk,1853.0
+4.0,Head Up,1853.0
+4.0,Graze,1854.0
+4.0,Head Up,1854.0
+4.0,Head Up,1855.0
+4.0,Graze,1855.0
+4.0,Graze,1856.0
+4.0,Head Up,1856.0
+4.0,Head Up,1857.0
+4.0,Head Up,1858.0
+4.0,Graze,1858.0
+3.0,Head Up,1859.0
+4.0,Graze,1859.0
+30.0,Graze,1859.0
+4.0,Head Up,1860.0
+4.0,Graze,1861.0
+4.0,Head Up,1861.0
+2.0,Walk,1861.0
+5.0,Auto-Groom,1862.0
+4.0,Head Up,1862.0
+4.0,Graze,1862.0
+4.0,Graze,1863.0
+4.0,Head Up,1864.0
+3.0,Head Up,1865.0
+4.0,Graze,1865.0
+3.0,Graze,1865.0
+3.0,Head Up,1866.0
+4.0,Head Up,1866.0
+3.0,Graze,1867.0
+4.0,Graze,1867.0
+3.0,Head Up,1867.0
+3.0,Head Up,1868.0
+14.0,Head Up,1868.0
+3.0,Graze,1868.0
+4.0,Head Up,1868.0
+3.0,Graze,1869.0
+4.0,Graze,1869.0
+4.0,Head Up,1869.0
+3.0,Head Up,1870.0
+4.0,Graze,1870.0
+3.0,Head Up,1871.0
+3.0,Graze,1871.0
+4.0,Graze,1871.0
+4.0,Head Up,1871.0
+3.0,Head Up,1872.0
+4.0,Head Up,1872.0
+3.0,Graze,1872.0
+4.0,Graze,1873.0
+4.0,Head Up,1873.0
+3.0,Head Up,1873.0
+3.0,Graze,1873.0
+3.0,Head Up,1874.0
+3.0,Graze,1874.0
+4.0,Graze,1874.0
+3.0,Head Up,1875.0
+3.0,Graze,1875.0
+4.0,Head Up,1875.0
+3.0,Graze,1876.0
+3.0,Head Up,1877.0
+3.0,Head Up,1878.0
+3.0,Graze,1878.0
+3.0,Graze,1879.0
+3.0,Head Up,1879.0
+3.0,Graze,1880.0
+3.0,Head Up,1881.0
+5.0,Walk,1881.0
+3.0,Graze,1882.0
+3.0,Auto-Groom,1882.0
+3.0,Graze,1883.0
+3.0,Auto-Groom,1883.0
+3.0,Graze,1884.0
+3.0,Auto-Groom,1885.0
+3.0,Graze,1886.0
+3.0,Auto-Groom,1886.0
+3.0,Auto-Groom,1887.0
+3.0,Graze,1887.0
+3.0,Graze,1888.0
+3.0,Auto-Groom,1889.0
+3.0,Graze,1890.0
+3.0,Auto-Groom,1890.0
+3.0,Graze,1891.0
+3.0,Auto-Groom,1891.0
+3.0,Auto-Groom,1892.0
+3.0,Graze,1892.0
+3.0,Graze,1893.0
+3.0,Auto-Groom,1893.0
+2.0,Graze,1893.0
+3.0,Head Up,1893.0
+3.0,Graze,1894.0
+3.0,Auto-Groom,1895.0
+4.0,Graze,1895.0
+3.0,Graze,1895.0
+3.0,Auto-Groom,1896.0
+3.0,Graze,1897.0
+3.0,Auto-Groom,1897.0
+3.0,Auto-Groom,1898.0
+3.0,Graze,1898.0
+3.0,Graze,1899.0
+3.0,Auto-Groom,1900.0
+2.0,Walk,1900.0
+3.0,Graze,1901.0
+3.0,Auto-Groom,1901.0
+3.0,Auto-Groom,1902.0
+3.0,Graze,1902.0
+3.0,Graze,1903.0
+3.0,Auto-Groom,1903.0
+1.0,Walk,1904.0
+3.0,Graze,1904.0
+6.0,Head Up,1905.0
+3.0,Auto-Groom,1905.0
+6.0,Walk,1906.0
+6.0,Out of Frame,1906.0
+3.0,Graze,1906.0
+3.0,Graze,1907.0
+3.0,Auto-Groom,1907.0
+3.0,Auto-Groom,1908.0
+3.0,Graze,1908.0
+3.0,Auto-Groom,1909.0
+3.0,Graze,1910.0
+3.0,Auto-Groom,1911.0
+3.0,Auto-Groom,1912.0
+1.0,Auto-Groom,1912.0
+3.0,Graze,1912.0
+3.0,Graze,1913.0
+3.0,Auto-Groom,1914.0
+3.0,Graze,1915.0
+3.0,Graze,1916.0
+3.0,Auto-Groom,1916.0
+3.0,Auto-Groom,1917.0
+14.0,Graze,1917.0
+6.0,Head Up,1918.0
+3.0,Graze,1918.0
+3.0,Auto-Groom,1918.0
+3.0,Auto-Groom,1919.0
+3.0,Graze,1919.0
+14.0,Out of Focus,1919.0
+3.0,Auto-Groom,1920.0
+6.0,Head Up,1920.0
+3.0,Graze,1920.0
+3.0,Graze,1921.0
+3.0,Auto-Groom,1921.0
+3.0,Auto-Groom,1922.0
+3.0,Graze,1922.0
+6.0,Out of Frame,1922.0
+3.0,Auto-Groom,1923.0
+3.0,Graze,1923.0
+3.0,Auto-Groom,1924.0
+3.0,Graze,1924.0
+3.0,Graze,1925.0
+3.0,Head Up,1926.0
+3.0,Head Up,1927.0
+3.0,Graze,1927.0
+20.0,Head Up,1928.0
+3.0,Graze,1928.0
+3.0,Head Up,1928.0
+3.0,Graze,1929.0
+3.0,Head Up,1930.0
+3.0,Graze,1931.0
+3.0,Head Up,1932.0
+3.0,Head Up,1933.0
+3.0,Graze,1933.0
+3.0,Head Up,1934.0
+3.0,Graze,1934.0
+3.0,Head Up,1935.0
+3.0,Graze,1935.0
+3.0,Graze,1936.0
+3.0,Head Up,1937.0
+13.0,Head Up,1937.0
+7.0,Graze,1937.0
+3.0,Graze,1938.0
+3.0,Head Up,1939.0
+3.0,Graze,1940.0
+3.0,Head Up,1940.0
+1.0,Graze,1940.0
+3.0,Graze,1941.0
+3.0,Head Up,1941.0
+2.0,Walk,1941.0
+3.0,Graze,1942.0
+3.0,Head Up,1942.0
+3.0,Graze,1943.0
+3.0,Head Up,1944.0
+3.0,Graze,1945.0
+3.0,Head Up,1945.0
+3.0,Graze,1946.0
+3.0,Auto-Groom,1946.0
+3.0,Graze,1947.0
+17.0,Walk,1947.0
+3.0,Auto-Groom,1948.0
+3.0,Graze,1949.0
+3.0,Auto-Groom,1949.0
+3.0,Graze,1950.0
+14.0,Graze,1950.0
+3.0,Auto-Groom,1950.0
+3.0,Graze,1951.0
+3.0,Auto-Groom,1952.0
+34.0,Urinating,1953.0
+3.0,Graze,1953.0
+3.0,Auto-Groom,1953.0
+3.0,Auto-Groom,1954.0
+3.0,Graze,1954.0
+3.0,Auto-Groom,1955.0
+3.0,Graze,1955.0
+14.0,Out of Focus,1955.0
+3.0,Auto-Groom,1956.0
+14.0,Graze,1956.0
+3.0,Graze,1956.0
+3.0,Auto-Groom,1957.0
+3.0,Graze,1957.0
+3.0,Graze,1958.0
+3.0,Auto-Groom,1959.0
+14.0,Out of Focus,1959.0
+3.0,Auto-Groom,1960.0
+3.0,Graze,1960.0
+16.0,Out of Focus,1960.0
+3.0,Auto-Groom,1961.0
+6.0,Out of Focus,1961.0
+3.0,Graze,1961.0
+3.0,Graze,1962.0
+3.0,Head Up,1962.0
+1.0,Walk,1962.0
+1.0,Walk,1962.0
+3.0,Graze,1963.0
+3.0,Head Up,1963.0
+3.0,Graze,1964.0
+3.0,Head Up,1964.0
+3.0,Graze,1965.0
+3.0,Head Up,1966.0
+3.0,Head Up,1967.0
+3.0,Graze,1967.0
+3.0,Graze,1968.0
+3.0,Head Up,1968.0
+3.0,Graze,1969.0
+3.0,Head Up,1970.0
+3.0,Head Up,1971.0
+3.0,Graze,1971.0
+3.0,Graze,1972.0
+3.0,Head Up,1972.0
+3.0,Graze,1972.0
+3.0,Graze,1973.0
+3.0,Graze,1974.0
+3.0,Head Up,1974.0
+3.0,Head Up,1975.0
+3.0,Graze,1975.0
+3.0,Graze,1976.0
+3.0,Head Up,1976.0
+3.0,Graze,1977.0
+2.0,Graze,1977.0
+9.0,Walk,1978.0
+3.0,Head Up,1978.0
+3.0,Graze,1979.0
+3.0,Head Up,1979.0
+3.0,Graze,1980.0
+3.0,Head Up,1981.0
+3.0,Graze,1982.0
+3.0,Head Up,1982.0
+3.0,Graze,1983.0
+3.0,Head Up,1983.0
+3.0,Graze,1984.0
+3.0,Head Up,1985.0
+3.0,Head Up,1986.0
+3.0,Graze,1986.0
+3.0,Head Up,1987.0
+3.0,Graze,1987.0
+3.0,Graze,1988.0
+3.0,Head Up,1989.0
+3.0,Graze,1990.0
+3.0,Head Up,1990.0
+3.0,Graze,1991.0
+6.0,Running,1991.0
+3.0,Head Up,1991.0
+1.0,Walk,1991.0
+3.0,Graze,1992.0
+3.0,Head Up,1992.0
+1.0,Trotting,1992.0
+3.0,Graze,1993.0
+3.0,Head Up,1993.0
+3.0,Graze,1994.0
+3.0,Head Up,1994.0
+3.0,Graze,1995.0
+3.0,Head Up,1996.0
+3.0,Head Up,1997.0
+3.0,Graze,1997.0
+3.0,Head Up,1998.0
+3.0,Graze,1998.0
+3.0,Graze,1999.0
+3.0,Head Up,2000.0
+3.0,Graze,2001.0
+3.0,Head Up,2001.0
+3.0,Graze,2002.0
+3.0,Head Up,2002.0
+3.0,Graze,2003.0
+3.0,Head Up,2004.0
+4.0,Graze,2004.0
+7.0,Walk,2004.0
+3.0,Graze,2005.0
+3.0,Head Up,2005.0
+9.0,Walk,2006.0
+3.0,Graze,2006.0
+3.0,Head Up,2007.0
+3.0,Graze,2007.0
+3.0,Head Up,2008.0
+3.0,Head Up,2009.0
+3.0,Graze,2009.0
+3.0,Graze,2010.0
+3.0,Head Up,2010.0
+3.0,Graze,2011.0
+3.0,Head Up,2011.0
+3.0,Graze,2012.0
+1.0,Walk,2012.0
+3.0,Head Up,2012.0
+3.0,Graze,2013.0
+3.0,Head Up,2014.0
+3.0,Graze,2014.0
+3.0,Head Up,2015.0
+3.0,Graze,2016.0
+3.0,Head Up,2016.0
+3.0,Head Up,2017.0
+3.0,Graze,2017.0
+3.0,Graze,2018.0
+3.0,Head Up,2019.0
+3.0,Graze,2020.0
+3.0,Head Up,2020.0
+3.0,Graze,2021.0
+2.0,Walk,2021.0
+3.0,Head Up,2022.0
+3.0,Graze,2022.0
+3.0,Head Up,2023.0
+3.0,Graze,2023.0
+3.0,Head Up,2024.0
+3.0,Graze,2025.0
+2.0,Auto-Groom,2025.0
+3.0,Head Up,2026.0
+3.0,Graze,2027.0
+30.0,Walk,2027.0
+4.0,Walk,2028.0
+3.0,Head Up,2028.0
+4.0,Running,2029.0
+3.0,Graze,2029.0
+3.0,Head Up,2029.0
+3.0,Graze,2030.0
+3.0,Head Up,2030.0
+3.0,Graze,2031.0
+3.0,Head Up,2031.0
+3.0,Graze,2032.0
+3.0,Head Up,2033.0
+3.0,Graze,2034.0
+3.0,Head Up,2034.0
+3.0,Head Up,2035.0
+3.0,Graze,2035.0
+3.0,Graze,2036.0
+3.0,Head Up,2037.0
+3.0,Head Up,2038.0
+3.0,Graze,2038.0
+3.0,Graze,2039.0
+3.0,Head Up,2039.0
+3.0,Graze,2040.0
+3.0,Head Up,2041.0
+29.0,Walk,2041.0
+3.0,Graze,2042.0
+3.0,Head Up,2042.0
+5.0,Head Up,2042.0
+3.0,Graze,2043.0
+35.0,Walk,2044.0
+3.0,Head Up,2044.0
+3.0,Graze,2045.0
+3.0,Head Up,2046.0
+3.0,Graze,2047.0
+3.0,Head Up,2047.0
+13.0,Graze,2047.0
+3.0,Graze,2048.0
+3.0,Head Up,2049.0
+3.0,Graze,2049.0
+3.0,Head Up,2050.0
+3.0,Graze,2051.0
+1.0,Out of Focus,2051.0
+3.0,Head Up,2051.0
+3.0,Graze,2052.0
+3.0,Head Up,2052.0
+3.0,Head Up,2053.0
+3.0,Graze,2053.0
+7.0,Walk,2054.0
+3.0,Graze,2054.0
+3.0,Head Up,2055.0
+3.0,Graze,2056.0
+3.0,Head Up,2056.0
+3.0,Graze,2057.0
+3.0,Head Up,2057.0
+1.0,Graze,2057.0
+3.0,Graze,2058.0
+3.0,Head Up,2059.0
+3.0,Head Up,2060.0
+3.0,Graze,2060.0
+3.0,Graze,2061.0
+3.0,Head Up,2061.0
+29.0,Occluded,2061.0
+16.0,Out of Frame,2062.0
+3.0,Graze,2062.0
+3.0,Head Up,2063.0
+3.0,Head Up,2064.0
+20.0,Walk,2064.0
+3.0,Graze,2064.0
+3.0,Graze,2065.0
+3.0,Head Up,2065.0
+3.0,Graze,2066.0
+3.0,Head Up,2066.0
+2.0,Head Up,2067.0
+3.0,Head Up,2067.0
+3.0,Graze,2067.0
+3.0,Graze,2068.0
+3.0,Head Up,2068.0
+3.0,Graze,2069.0
+3.0,Head Up,2070.0
+3.0,Graze,2071.0
+3.0,Head Up,2071.0
+3.0,Graze,2072.0
+3.0,Head Up,2072.0
+37.0,Walk,2073.0
+5.0,Trotting,2073.0
+3.0,Head Up,2073.0
+3.0,Graze,2073.0
+3.0,Head Up,2074.0
+3.0,Graze,2074.0
+3.0,Head Up,2075.0
+3.0,Graze,2075.0
+3.0,Graze,2076.0
+3.0,Head Up,2077.0
+29.0,Out of Focus,2078.0
+3.0,Walk,2078.0
+3.0,Graze,2078.0
+3.0,Head Up,2078.0
+18.0,Out of Focus,2078.0
+3.0,Head Up,2079.0
+3.0,Graze,2079.0
+3.0,Graze,2080.0
+3.0,Head Up,2080.0
+4.0,Graze,2081.0
+3.0,Head Up,2081.0
+3.0,Graze,2081.0
+3.0,Head Up,2082.0
+3.0,Graze,2082.0
+3.0,Graze,2083.0
+3.0,Head Up,2084.0
+3.0,Graze,2085.0
+3.0,Head Up,2085.0
+3.0,Graze,2086.0
+3.0,Head Up,2086.0
+3.0,Graze,2087.0
+3.0,Head Up,2088.0
+3.0,Graze,2089.0
+3.0,Head Up,2089.0
+6.0,Walk,2090.0
+11.0,Graze,2090.0
+3.0,Graze,2090.0
+3.0,Head Up,2090.0
+3.0,Graze,2091.0
+3.0,Head Up,2092.0
+3.0,Head Up,2093.0
+3.0,Graze,2093.0
+3.0,Head Up,2094.0
+3.0,Graze,2094.0
+3.0,Graze,2095.0
+21.0,Walk,2096.0
+3.0,Head Up,2096.0
+21.0,Out of Focus,2097.0
+3.0,Head Up,2097.0
+3.0,Graze,2097.0
+3.0,Graze,2098.0
+29.0,Out of Frame,2099.0
+3.0,Head Up,2099.0
+3.0,Head Up,2100.0
+3.0,Graze,2100.0
+3.0,Head Up,2101.0
+3.0,Graze,2101.0
+3.0,Graze,2102.0
+3.0,Head Up,2103.0
+29.0,Out of Focus,2103.0
+3.0,Graze,2104.0
+3.0,Head Up,2104.0
+3.0,Head Up,2105.0
+3.0,Graze,2105.0
+3.0,Graze,2106.0
+3.0,Head Up,2107.0
+3.0,Graze,2108.0
+3.0,Head Up,2108.0
+3.0,Head Up,2109.0
+3.0,Graze,2109.0
+19.0,Out of Focus,2110.0
+3.0,Head Up,2110.0
+3.0,Graze,2110.0
+3.0,Graze,2111.0
+3.0,Head Up,2111.0
+3.0,Graze,2112.0
+3.0,Out of Focus,2114.0
+17.0,Graze,2116.0
+9.0,Head Up,2118.0
+27.0,Occluded,2120.0
+29.0,Walk,2130.0
+17.0,Walk,2130.0
+19.0,Graze,2130.0
+21.0,Walk,2135.0
+41.0,Graze,2136.0
+13.0,Head Up,2137.0
+3.0,Head Up,2138.0
+8.0,Out of Focus,2142.0
+22.0,Walk,2145.0
+13.0,Graze,2146.0
+13.0,Walk,2147.0
+7.0,Graze,2148.0
+11.0,Out of Focus,2148.0
+11.0,Head Up,2153.0
+16.0,Out of Focus,2154.0
+6.0,Head Up,2156.0
+16.0,Graze,2160.0
+21.0,Out of Focus,2161.0
+37.0,Out of Focus,2163.0
+13.0,Trotting,2163.0
+3.0,Head Up,2169.0
+7.0,Occluded,2170.0
+1.0,Head Up,2170.0
+6.0,Graze,2172.0
+37.0,Walk,2176.0
+4.0,Walk,2178.0
+2.0,Head Up,2178.0
+7.0,Walk,2180.0
+4.0,Walk,2180.0
+4.0,Head Up,2181.0
+4.0,Walk,2181.0
+4.0,Head Up,2182.0
+4.0,Walk,2183.0
+4.0,Head Up,2183.0
+4.0,Walk,2184.0
+4.0,Head Up,2184.0
+4.0,Walk,2185.0
+4.0,Head Up,2186.0
+4.0,Walk,2187.0
+4.0,Head Up,2188.0
+4.0,Walk,2188.0
+18.0,Walk,2189.0
+4.0,Head Up,2189.0
+4.0,Walk,2190.0
+4.0,Head Up,2190.0
+13.0,Head Up,2191.0
+4.0,Head Up,2191.0
+4.0,Walk,2191.0
+17.0,Head Up,2192.0
+4.0,Walk,2192.0
+4.0,Head Up,2193.0
+4.0,Walk,2194.0
+1.0,Head Up,2195.0
+4.0,Head Up,2195.0
+4.0,Walk,2195.0
+4.0,Head Up,2196.0
+4.0,Walk,2197.0
+4.0,Head Up,2197.0
+4.0,Walk,2198.0
+4.0,Walk,2199.0
+4.0,Head Up,2199.0
+4.0,Head Up,2200.0
+4.0,Walk,2201.0
+20.0,Walk,2202.0
+4.0,Head Up,2205.0
+15.0,Out of Focus,2207.0
+15.0,Walk,2209.0
+14.0,Walk,2209.0
+9.0,Walk,2211.0
+12.0,Graze,2213.0
+9.0,Graze,2219.0
+18.0,Walk,2220.0
+17.0,Trotting,2226.0
+2.0,Graze,2228.0
+6.0,Graze,2230.0
+6.0,Walk,2234.0
+2.0,Walk,2238.0
+1.0,Occluded,2238.0
+37.0,Out of Focus,2240.0
+16.0,Out of Frame,2242.0
+38.0,Out of Focus,2249.0
+17.0,Graze,2252.0
+1.0,Head Up,2255.0
+37.0,Walk,2256.0
+35.0,Out of Focus,2256.0
+13.0,Walk,2257.0
+4.0,Occluded,2259.0
+4.0,Walk,2260.0
+4.0,Occluded,2261.0
+38.0,Walk,2262.0
+4.0,Walk,2262.0
+4.0,Occluded,2263.0
+4.0,Walk,2264.0
+4.0,Occluded,2265.0
+4.0,Walk,2265.0
+4.0,Occluded,2266.0
+23.0,Head Up,2267.0
+4.0,Walk,2267.0
+1.0,Head Up,2268.0
+4.0,Occluded,2268.0
+4.0,Walk,2269.0
+4.0,Occluded,2269.0
+36.0,Walk,2270.0
+4.0,Walk,2270.0
+4.0,Walk,2271.0
+4.0,Occluded,2271.0
+4.0,Occluded,2272.0
+4.0,Walk,2273.0
+4.0,Occluded,2274.0
+29.0,Graze,2274.0
+4.0,Walk,2275.0
+4.0,Occluded,2276.0
+4.0,Walk,2277.0
+4.0,Occluded,2277.0
+4.0,Walk,2278.0
+4.0,Occluded,2279.0
+18.0,Walk,2279.0
+4.0,Walk,2279.0
+3.0,Head Up,2280.0
+4.0,Walk,2280.0
+4.0,Occluded,2280.0
+4.0,Occluded,2281.0
+4.0,Walk,2282.0
+17.0,Walk,2282.0
+1.0,Trotting,2282.0
+17.0,Head Up,2283.0
+4.0,Occluded,2283.0
+4.0,Occluded,2284.0
+4.0,Walk,2284.0
+4.0,Walk,2285.0
+4.0,Trotting,2285.0
+4.0,Walk,2286.0
+4.0,Occluded,2286.0
+4.0,Occluded,2287.0
+34.0,Graze,2288.0
+16.0,Walk,2288.0
+4.0,Walk,2288.0
+4.0,Occluded,2288.0
+4.0,Walk,2289.0
+4.0,Occluded,2290.0
+4.0,Walk,2291.0
+4.0,Occluded,2291.0
+15.0,Trotting,2291.0
+4.0,Walk,2292.0
+6.0,Trotting,2292.0
+25.0,Walk,2292.0
+4.0,Occluded,2293.0
+4.0,Walk,2293.0
+4.0,Occluded,2294.0
+4.0,Occluded,2295.0
+4.0,Walk,2295.0
+4.0,Walk,2296.0
+4.0,Walk,2297.0
+4.0,Occluded,2297.0
+4.0,Occluded,2298.0
+4.0,Walk,2299.0
+4.0,Occluded,2299.0
+7.0,Graze,2299.0
+4.0,Walk,2300.0
+4.0,Occluded,2301.0
+4.0,Walk,2301.0
+4.0,Occluded,2302.0
+4.0,Occluded,2303.0
+4.0,Walk,2303.0
+4.0,Walk,2304.0
+4.0,Occluded,2305.0
+4.0,Walk,2306.0
+4.0,Occluded,2306.0
+4.0,Walk,2307.0
+6.0,Walk,2307.0
+4.0,Occluded,2308.0
+4.0,Walk,2308.0
+4.0,Occluded,2309.0
+4.0,Walk,2309.0
+4.0,Occluded,2310.0
+4.0,Walk,2311.0
+4.0,Occluded,2312.0
+4.0,Walk,2313.0
+4.0,Occluded,2313.0
+4.0,Walk,2314.0
+4.0,Walk,2315.0
+4.0,Occluded,2315.0
+4.0,Occluded,2316.0
+4.0,Running,2316.0
+4.0,Occluded,2317.0
+4.0,Walk,2317.0
+19.0,Graze,2318.0
+4.0,Walk,2318.0
+4.0,Occluded,2319.0
+4.0,Occluded,2320.0
+4.0,Walk,2320.0
+4.0,Walk,2321.0
+4.0,Walk,2322.0
+4.0,Occluded,2322.0
+15.0,Graze,2322.0
+4.0,Occluded,2323.0
+4.0,Walk,2324.0
+4.0,Occluded,2324.0
+4.0,Walk,2325.0
+4.0,Walk,2326.0
+4.0,Occluded,2326.0
+4.0,Occluded,2327.0
+4.0,Walk,2328.0
+4.0,Occluded,2328.0
+15.0,Out of Focus,2329.0
+4.0,Walk,2329.0
+4.0,Occluded,2330.0
+4.0,Walk,2330.0
+4.0,Occluded,2331.0
+4.0,Walk,2332.0
+4.0,Occluded,2332.0
+4.0,Walk,2333.0
+4.0,Occluded,2334.0
+2.0,Occluded,2334.0
+4.0,Walk,2335.0
+4.0,Occluded,2335.0
+4.0,Occluded,2336.0
+4.0,Walk,2336.0
+4.0,Walk,2337.0
+17.0,Head Up,2337.0
+20.0,Walk,2339.0
+23.0,Out of Frame,2340.0
+23.0,Walk,2345.0
+2.0,Out of Focus,2346.0
+15.0,Out of Frame,2348.0
+6.0,Head Up,2354.0
+14.0,Head Up,2355.0
+4.0,Walk,2356.0
+2.0,Walk,2356.0
+6.0,Walk,2358.0
+3.0,Auto-Groom,2358.0
+3.0,Graze,2359.0
+3.0,Auto-Groom,2360.0
+3.0,Graze,2360.0
+3.0,Graze,2361.0
+3.0,Auto-Groom,2361.0
+3.0,Auto-Groom,2362.0
+3.0,Auto-Groom,2363.0
+3.0,Graze,2363.0
+3.0,Graze,2364.0
+37.0,Trotting,2364.0
+3.0,Auto-Groom,2365.0
+3.0,Graze,2365.0
+3.0,Auto-Groom,2366.0
+3.0,Graze,2366.0
+3.0,Graze,2367.0
+3.0,Auto-Groom,2367.0
+3.0,Auto-Groom,2368.0
+3.0,Graze,2368.0
+3.0,Auto-Groom,2369.0
+3.0,Auto-Groom,2370.0
+3.0,Graze,2370.0
+3.0,Graze,2371.0
+3.0,Graze,2372.0
+3.0,Auto-Groom,2372.0
+3.0,Graze,2373.0
+3.0,Auto-Groom,2373.0
+19.0,Out of Frame,2373.0
+11.0,Walk,2373.0
+3.0,Auto-Groom,2374.0
+3.0,Graze,2375.0
+19.0,Walk,2377.0
+14.0,Walk,2378.0
+4.0,Graze,2379.0
+4.0,Walk,2380.0
+4.0,Graze,2381.0
+4.0,Walk,2382.0
+4.0,Graze,2383.0
+4.0,Walk,2384.0
+9.0,Auto-Groom,2385.0
+4.0,Graze,2385.0
+4.0,Graze,2386.0
+4.0,Walk,2386.0
+4.0,Walk,2387.0
+1.0,Walk,2388.0
+4.0,Walk,2388.0
+4.0,Graze,2388.0
+4.0,Walk,2389.0
+4.0,Graze,2389.0
+4.0,Walk,2390.0
+1.0,Walk,2390.0
+4.0,Graze,2390.0
+4.0,Graze,2391.0
+4.0,Walk,2391.0
+12.0,Head Up,2392.0
+4.0,Graze,2392.0
+4.0,Graze,2393.0
+4.0,Walk,2393.0
+4.0,Walk,2394.0
+4.0,Graze,2395.0
+36.0,Walk,2395.0
+4.0,Graze,2396.0
+4.0,Walk,2396.0
+4.0,Walk,2397.0
+4.0,Walk,2398.0
+4.0,Graze,2398.0
+13.0,Auto-Groom,2398.0
+4.0,Walk,2399.0
+4.0,Graze,2399.0
+4.0,Graze,2400.0
+4.0,Walk,2401.0
+13.0,Walk,2401.0
+20.0,Auto-Groom,2401.0
+4.0,Graze,2402.0
+12.0,Head Up,2402.0
+2.0,Head Up,2403.0
+4.0,Walk,2403.0
+4.0,Graze,2403.0
+4.0,Walk,2404.0
+4.0,Walk,2405.0
+4.0,Graze,2405.0
+4.0,Graze,2406.0
+4.0,Walk,2407.0
+4.0,Graze,2407.0
+4.0,Walk,2408.0
+4.0,Graze,2409.0
+4.0,Walk,2410.0
+4.0,Graze,2410.0
+4.0,Walk,2411.0
+4.0,Walk,2412.0
+4.0,Graze,2412.0
+4.0,Graze,2413.0
+4.0,Walk,2414.0
+4.0,Graze,2414.0
+4.0,Walk,2415.0
+5.0,Head Up,2415.0
+4.0,Graze,2416.0
+4.0,Walk,2416.0
+4.0,Graze,2417.0
+4.0,Graze,2418.0
+4.0,Walk,2418.0
+4.0,Walk,2419.0
+4.0,Walk,2420.0
+4.0,Graze,2420.0
+4.0,Graze,2421.0
+4.0,Walk,2421.0
+4.0,Graze,2422.0
+4.0,Walk,2422.0
+3.0,Graze,2422.0
+3.0,Auto-Groom,2422.0
+4.0,Graze,2423.0
+3.0,Graze,2423.0
+3.0,Auto-Groom,2423.0
+4.0,Walk,2424.0
+3.0,Auto-Groom,2424.0
+15.0,Walk,2424.0
+4.0,Graze,2425.0
+20.0,Walk,2425.0
+3.0,Graze,2425.0
+3.0,Auto-Groom,2425.0
+3.0,Graze,2426.0
+4.0,Walk,2426.0
+4.0,Graze,2426.0
+3.0,Auto-Groom,2427.0
+4.0,Walk,2427.0
+4.0,Graze,2427.0
+3.0,Auto-Groom,2428.0
+3.0,Graze,2428.0
+4.0,Walk,2428.0
+4.0,Walk,2429.0
+3.0,Auto-Groom,2429.0
+3.0,Graze,2429.0
+4.0,Graze,2429.0
+4.0,Walk,2430.0
+3.0,Graze,2430.0
+4.0,Graze,2430.0
+3.0,Graze,2431.0
+3.0,Auto-Groom,2431.0
+4.0,Walk,2431.0
+4.0,Graze,2431.0
+4.0,Graze,2432.0
+4.0,Walk,2432.0
+3.0,Graze,2432.0
+3.0,Auto-Groom,2432.0
+6.0,Occluded,2433.0
+4.0,Graze,2433.0
+8.0,Walk,2433.0
+3.0,Auto-Groom,2433.0
+3.0,Graze,2434.0
+3.0,Auto-Groom,2434.0
+4.0,Graze,2434.0
+4.0,Walk,2434.0
+4.0,Walk,2435.0
+3.0,Auto-Groom,2435.0
+3.0,Graze,2435.0
+3.0,Auto-Groom,2436.0
+3.0,Graze,2436.0
+4.0,Graze,2436.0
+4.0,Walk,2437.0
+3.0,Graze,2437.0
+3.0,Auto-Groom,2438.0
+3.0,Graze,2438.0
+4.0,Graze,2438.0
+3.0,Graze,2439.0
+15.0,Walk,2439.0
+3.0,Auto-Groom,2439.0
+4.0,Walk,2439.0
+14.0,Walk,2440.0
+4.0,Graze,2440.0
+13.0,Walk,2440.0
+3.0,Auto-Groom,2440.0
+4.0,Walk,2441.0
+3.0,Graze,2441.0
+4.0,Graze,2442.0
+3.0,Auto-Groom,2442.0
+3.0,Auto-Groom,2443.0
+3.0,Graze,2443.0
+20.0,Walk,2443.0
+4.0,Walk,2443.0
+3.0,Graze,2444.0
+4.0,Graze,2444.0
+3.0,Auto-Groom,2444.0
+3.0,Auto-Groom,2445.0
+4.0,Walk,2445.0
+4.0,Graze,2445.0
+3.0,Graze,2445.0
+3.0,Auto-Groom,2446.0
+3.0,Graze,2446.0
+4.0,Walk,2446.0
+3.0,Auto-Groom,2447.0
+4.0,Graze,2447.0
+7.0,Graze,2447.0
+3.0,Graze,2447.0
+3.0,Graze,2448.0
+4.0,Walk,2448.0
+4.0,Graze,2448.0
+5.0,Walk,2449.0
+3.0,Auto-Groom,2449.0
+4.0,Walk,2449.0
+3.0,Auto-Groom,2450.0
+4.0,Walk,2450.0
+4.0,Graze,2450.0
+3.0,Graze,2450.0
+4.0,Graze,2451.0
+3.0,Auto-Groom,2451.0
+9.0,Head Up,2451.0
+3.0,Graze,2451.0
+4.0,Walk,2452.0
+4.0,Graze,2452.0
+3.0,Graze,2452.0
+3.0,Auto-Groom,2452.0
+4.0,Walk,2453.0
+3.0,Auto-Groom,2453.0
+3.0,Graze,2453.0
+4.0,Graze,2454.0
+3.0,Auto-Groom,2454.0
+3.0,Graze,2454.0
+15.0,Head Up,2455.0
+3.0,Graze,2455.0
+4.0,Walk,2455.0
+4.0,Graze,2455.0
+4.0,Walk,2456.0
+3.0,Auto-Groom,2456.0
+3.0,Auto-Groom,2457.0
+3.0,Graze,2457.0
+1.0,Head Up,2457.0
+4.0,Graze,2457.0
+4.0,Walk,2457.0
+4.0,Graze,2458.0
+3.0,Auto-Groom,2458.0
+4.0,Walk,2458.0
+3.0,Graze,2458.0
+3.0,Graze,2459.0
+4.0,Graze,2459.0
+3.0,Auto-Groom,2459.0
+4.0,Walk,2460.0
+3.0,Graze,2460.0
+38.0,Out of Focus,2460.0
+37.0,Out of Focus,2460.0
+4.0,Graze,2461.0
+4.0,Walk,2462.0
+4.0,Graze,2462.0
+40.0,Out of Focus,2463.0
+4.0,Walk,2463.0
+1.0,Walk,2463.0
+4.0,Graze,2464.0
+4.0,Walk,2464.0
+4.0,Graze,2465.0
+38.0,Walk,2465.0
+4.0,Graze,2466.0
+4.0,Walk,2466.0
+4.0,Walk,2467.0
+4.0,Graze,2468.0
+4.0,Graze,2469.0
+4.0,Walk,2469.0
+4.0,Walk,2470.0
+40.0,Graze,2470.0
+14.0,Out of Frame,2470.0
+4.0,Graze,2471.0
+4.0,Walk,2471.0
+4.0,Graze,2472.0
+4.0,Graze,2473.0
+4.0,Walk,2473.0
+4.0,Walk,2474.0
+4.0,Graze,2475.0
+4.0,Walk,2475.0
+4.0,Graze,2476.0
+15.0,Walk,2479.0
+12.0,Graze,2483.0
+3.0,Walk,2483.0
+13.0,Graze,2486.0
+6.0,Walk,2486.0
+14.0,Graze,2489.0
+2.0,Head Up,2499.0
+27.0,Graze,2503.0
+5.0,Graze,2506.0
+13.0,Walk,2509.0
+3.0,Auto-Groom,2518.0
+3.0,Graze,2519.0
+3.0,Auto-Groom,2519.0
+3.0,Graze,2520.0
+3.0,Auto-Groom,2520.0
+3.0,Graze,2521.0
+3.0,Auto-Groom,2521.0
+3.0,Graze,2522.0
+3.0,Auto-Groom,2523.0
+3.0,Auto-Groom,2524.0
+3.0,Graze,2524.0
+3.0,Auto-Groom,2525.0
+3.0,Graze,2525.0
+3.0,Graze,2526.0
+3.0,Auto-Groom,2526.0
+3.0,Graze,2527.0
+3.0,Auto-Groom,2527.0
+3.0,Auto-Groom,2528.0
+3.0,Graze,2528.0
+3.0,Graze,2529.0
+3.0,Auto-Groom,2530.0
+3.0,Auto-Groom,2531.0
+3.0,Graze,2531.0
+3.0,Graze,2532.0
+3.0,Auto-Groom,2532.0
+3.0,Graze,2533.0
+3.0,Auto-Groom,2534.0
+3.0,Auto-Groom,2535.0
+3.0,Graze,2535.0
+3.0,Graze,2536.0
+3.0,Auto-Groom,2536.0
+3.0,Graze,2537.0
+3.0,Auto-Groom,2538.0
+3.0,Graze,2539.0
+3.0,Auto-Groom,2539.0
+3.0,Auto-Groom,2540.0
+3.0,Graze,2540.0
+3.0,Auto-Groom,2541.0
+3.0,Graze,2541.0
+3.0,Graze,2542.0
+3.0,Auto-Groom,2542.0
+3.0,Graze,2543.0
+3.0,Auto-Groom,2543.0
+3.0,Graze,2544.0
+3.0,Auto-Groom,2545.0
+13.0,Out of Focus,2546.0
+3.0,Graze,2546.0
+3.0,Auto-Groom,2546.0
+3.0,Auto-Groom,2547.0
+3.0,Graze,2547.0
+3.0,Auto-Groom,2548.0
+3.0,Graze,2548.0
+3.0,Graze,2549.0
+3.0,Auto-Groom,2549.0
+3.0,Auto-Groom,2550.0
+3.0,Graze,2550.0
+14.0,Head Up,2550.0
+3.0,Graze,2551.0
+3.0,Auto-Groom,2552.0
+3.0,Graze,2553.0
+3.0,Auto-Groom,2553.0
+3.0,Auto-Groom,2554.0
+3.0,Graze,2554.0
+3.0,Graze,2555.0
+3.0,Auto-Groom,2555.0
+3.0,Auto-Groom,2556.0
+3.0,Graze,2556.0
+3.0,Graze,2557.0
+22.0,Graze,2559.0
+5.0,Walk,2562.0
+15.0,Auto-Groom,2566.0
+5.0,Trotting,2568.0
+2.0,Out of Focus,2572.0
+3.0,Graze,2572.0
+17.0,Out of Frame,2574.0
+2.0,Walk,2575.0
+13.0,Auto-Groom,2575.0
+38.0,Out of Focus,2575.0
+15.0,Auto-Groom,2576.0
+41.0,Walk,2577.0
+48.0,Graze,2580.0
+14.0,Walk,2582.0
+15.0,Head Up,2588.0
+1.0,Walk,2593.0
+8.0,Graze,2594.0
+15.0,Head Up,2594.0
+13.0,Walk,2596.0
+20.0,Out of Frame,2599.0
+40.0,Walk,2601.0
+20.0,Graze,2603.0
+5.0,Walk,2605.0
+2.0,Walk,2607.0
+21.0,Out of Frame,2609.0
+3.0,Walk,2611.0
+21.0,Graze,2612.0
+4.0,Graze,2612.0
+19.0,Out of Frame,2614.0
+20.0,Auto-Groom,2615.0
+21.0,Walk,2619.0
+25.0,Graze,2627.0
+5.0,Head Up,2633.0
+20.0,Head Up,2636.0
+15.0,Walk,2638.0
+22.0,Out of Frame,2643.0
+21.0,Head Up,2643.0
+15.0,Walk,2647.0
+11.0,Graze,2650.0
+5.0,Walk,2656.0
+19.0,Walk,2663.0
+14.0,Walk,2664.0
+36.0,Trotting,2666.0
+17.0,Walk,2669.0
+3.0,Head Up,2669.0
+21.0,Walk,2675.0
+41.0,Out of Frame,2675.0
+6.0,Graze,2676.0
+4.0,Running,2678.0
+6.0,Running,2682.0
+39.0,Out of Frame,2686.0
+20.0,Walk,2687.0
+17.0,Head Up,2701.0
+15.0,Out of Focus,2702.0
+23.0,Walk,2704.0
+2.0,Graze,2708.0
+1.0,Trotting,2717.0
+5.0,Head Up,2721.0
+17.0,Graze,2722.0
+41.0,Graze,2724.0
+15.0,Out of Frame,2734.0
+1.0,Defecating,2737.0
+1.0,Running,2739.0
+2.0,Walk,2742.0
+21.0,Graze,2742.0
+6.0,Head Up,2745.0
+3.0,Auto-Groom,2748.0
+9.0,Auto-Groom,2750.0
+22.0,Walk,2750.0
+22.0,Head Up,2752.0
+5.0,Graze,2753.0
+20.0,Graze,2754.0
+13.0,Head Up,2762.0
+43.0,Walk,2765.0
+14.0,Graze,2766.0
+2.0,Graze,2770.0
+3.0,Walk,2772.0
+11.0,Walk,2776.0
+27.0,Occluded,2778.0
+6.0,Walk,2782.0
+20.0,Walk,2782.0
+6.0,Out of Focus,2785.0
+6.0,Graze,2786.0
+1.0,Walk,2787.0
+13.0,Walk,2787.0
+3.0,Defecating,2787.0
+23.0,Head Up,2790.0
+1.0,Graze,2797.0
+3.0,Walk,2800.0
+4.0,Trotting,2801.0
+23.0,Out of Focus,2812.0
+23.0,Walk,2813.0
+26.0,Walk,2813.0
+14.0,Occluded,2817.0
+7.0,Head Up,2826.0
+15.0,Trotting,2833.0
+22.0,Walk,2838.0
+17.0,Walk,2840.0
+41.0,Walk,2842.0
+7.0,Walk,2846.0
+24.0,Out of Frame,2850.0
+2.0,Graze,2854.0
+44.0,Graze,2855.0
+44.0,Out of Focus,2856.0
+24.0,Head Up,2863.0
+23.0,Out of Focus,2866.0
+4.0,Occluded,2868.0
+9.0,Graze,2874.0
+6.0,Graze,2875.0
+4.0,Walk,2882.0
+6.0,Head Up,2889.0
+4.0,Head Up,2892.0
+44.0,Head Up,2893.0
+15.0,Graze,2897.0
+11.0,Out of Focus,2901.0
+1.0,Head Up,2903.0
+21.0,Head Up,2911.0
+13.0,Trotting,2912.0
+3.0,Walk,2914.0
+27.0,Walk,2923.0
+19.0,Head Up,2925.0
+4.0,Graze,2935.0
+4.0,Head Up,2935.0
+4.0,Graze,2936.0
+4.0,Head Up,2936.0
+4.0,Head Up,2937.0
+27.0,Graze,2937.0
+4.0,Head Up,2938.0
+4.0,Graze,2938.0
+4.0,Graze,2939.0
+9.0,Auto-Groom,2939.0
+4.0,Head Up,2940.0
+23.0,Head Up,2940.0
+4.0,Graze,2940.0
+4.0,Head Up,2941.0
+4.0,Graze,2942.0
+4.0,Head Up,2943.0
+4.0,Graze,2943.0
+3.0,Walk,2943.0
+3.0,Graze,2943.0
+4.0,Head Up,2944.0
+3.0,Walk,2944.0
+1.0,Walk,2945.0
+4.0,Graze,2945.0
+4.0,Head Up,2945.0
+41.0,Running,2945.0
+3.0,Walk,2945.0
+3.0,Graze,2945.0
+4.0,Graze,2946.0
+3.0,Walk,2946.0
+3.0,Graze,2946.0
+20.0,Head Up,2947.0
+4.0,Graze,2947.0
+4.0,Head Up,2947.0
+3.0,Graze,2947.0
+4.0,Head Up,2948.0
+3.0,Walk,2948.0
+4.0,Graze,2949.0
+1.0,Walk,2949.0
+3.0,Graze,2949.0
+3.0,Walk,2949.0
+4.0,Head Up,2949.0
+3.0,Walk,2950.0
+28.0,Occluded,2950.0
+4.0,Graze,2950.0
+3.0,Graze,2950.0
+17.0,Out of Focus,2951.0
+4.0,Graze,2951.0
+4.0,Head Up,2951.0
+3.0,Graze,2951.0
+3.0,Walk,2952.0
+4.0,Head Up,2952.0
+3.0,Walk,2953.0
+3.0,Graze,2953.0
+4.0,Graze,2953.0
+4.0,Head Up,2953.0
+3.0,Walk,2954.0
+3.0,Graze,2954.0
+6.0,Auto-Groom,2954.0
+4.0,Graze,2954.0
+3.0,Graze,2955.0
+4.0,Head Up,2955.0
+4.0,Graze,2955.0
+40.0,Occluded,2955.0
+3.0,Walk,2955.0
+3.0,Graze,2956.0
+4.0,Head Up,2956.0
+3.0,Walk,2956.0
+3.0,Graze,2957.0
+3.0,Walk,2957.0
+4.0,Graze,2957.0
+4.0,Head Up,2958.0
+4.0,Graze,2958.0
+3.0,Graze,2958.0
+4.0,Head Up,2959.0
+3.0,Walk,2959.0
+3.0,Walk,2960.0
+4.0,Graze,2960.0
+4.0,Head Up,2960.0
+3.0,Graze,2960.0
+3.0,Graze,2961.0
+4.0,Graze,2961.0
+4.0,Head Up,2961.0
+3.0,Walk,2961.0
+3.0,Graze,2962.0
+3.0,Walk,2962.0
+4.0,Graze,2962.0
+3.0,Graze,2963.0
+4.0,Head Up,2963.0
+3.0,Walk,2963.0
+3.0,Graze,2964.0
+3.0,Walk,2964.0
+4.0,Graze,2964.0
+3.0,Graze,2965.0
+4.0,Head Up,2965.0
+4.0,Graze,2965.0
+3.0,Walk,2966.0
+21.0,Graze,2966.0
+4.0,Head Up,2966.0
+4.0,Graze,2967.0
+3.0,Graze,2967.0
+3.0,Walk,2967.0
+4.0,Head Up,2967.0
+3.0,Walk,2968.0
+4.0,Graze,2968.0
+3.0,Graze,2968.0
+3.0,Graze,2969.0
+3.0,Walk,2969.0
+4.0,Head Up,2969.0
+4.0,Graze,2969.0
+4.0,Head Up,2970.0
+21.0,Out of Focus,2970.0
+42.0,Out of Focus,2970.0
+3.0,Graze,2970.0
+3.0,Walk,2970.0
+3.0,Graze,2971.0
+3.0,Walk,2971.0
+4.0,Graze,2971.0
+4.0,Head Up,2972.0
+4.0,Graze,2972.0
+3.0,Graze,2972.0
+4.0,Head Up,2973.0
+4.0,Walk,2973.0
+3.0,Walk,2973.0
+3.0,Graze,2974.0
+4.0,Graze,2974.0
+4.0,Head Up,2974.0
+3.0,Walk,2974.0
+3.0,Graze,2975.0
+3.0,Walk,2975.0
+4.0,Graze,2975.0
+6.0,Head Up,2975.0
+3.0,Graze,2976.0
+24.0,Graze,2976.0
+4.0,Head Up,2976.0
+4.0,Graze,2976.0
+4.0,Head Up,2977.0
+3.0,Walk,2977.0
+3.0,Graze,2978.0
+3.0,Walk,2978.0
+4.0,Head Up,2978.0
+4.0,Graze,2978.0
+3.0,Graze,2979.0
+3.0,Walk,2979.0
+4.0,Graze,2979.0
+4.0,Head Up,2980.0
+4.0,Graze,2980.0
+3.0,Graze,2980.0
+4.0,Head Up,2981.0
+3.0,Walk,2981.0
+3.0,Graze,2982.0
+4.0,Graze,2982.0
+3.0,Walk,2982.0
+4.0,Head Up,2982.0
+24.0,Head Up,2983.0
+4.0,Graze,2983.0
+3.0,Graze,2983.0
+3.0,Walk,2983.0
+5.0,Head Up,2984.0
+3.0,Graze,2984.0
+4.0,Head Up,2984.0
+4.0,Graze,2984.0
+26.0,Walk,2985.0
+9.0,Graze,2985.0
+4.0,Head Up,2985.0
+3.0,Walk,2985.0
+15.0,Auto-Groom,2985.0
+4.0,Graze,2986.0
+3.0,Walk,2986.0
+3.0,Graze,2986.0
+4.0,Head Up,2987.0
+4.0,Graze,2987.0
+3.0,Graze,2987.0
+4.0,Graze,2988.0
+4.0,Head Up,2988.0
+3.0,Walk,2988.0
+4.0,Head Up,2989.0
+3.0,Graze,2989.0
+3.0,Walk,2989.0
+3.0,Walk,2990.0
+3.0,Graze,2990.0
+4.0,Graze,2990.0
+3.0,Graze,2991.0
+4.0,Head Up,2991.0
+3.0,Walk,2992.0
+4.0,Graze,2992.0
+3.0,Graze,2993.0
+4.0,Head Up,2993.0
+3.0,Walk,2993.0
+3.0,Graze,2994.0
+4.0,Graze,2994.0
+3.0,Walk,2994.0
+4.0,Graze,2995.0
+3.0,Graze,2995.0
+4.0,Head Up,2995.0
+6.0,Graze,2996.0
+4.0,Head Up,2996.0
+24.0,Graze,2996.0
+3.0,Walk,2996.0
+3.0,Graze,2997.0
+3.0,Walk,2997.0
+4.0,Graze,2997.0
+4.0,Head Up,2997.0
+3.0,Walk,2998.0
+4.0,Graze,2998.0
+3.0,Graze,2998.0
+4.0,Graze,2999.0
+3.0,Walk,2999.0
+3.0,Graze,2999.0
+4.0,Head Up,2999.0
+3.0,Walk,3000.0
+4.0,Head Up,3000.0
+3.0,Graze,3000.0
+4.0,Graze,3001.0
+4.0,Head Up,3002.0
+4.0,Graze,3002.0
+4.0,Head Up,3003.0
+4.0,Head Up,3004.0
+4.0,Graze,3004.0
+4.0,Graze,3005.0
+4.0,Graze,3006.0
+4.0,Head Up,3006.0
+4.0,Head Up,3007.0
+21.0,Graze,3007.0
+15.0,Trotting,3007.0
+4.0,Head Up,3008.0
+4.0,Graze,3008.0
+25.0,Out of Focus,3008.0
+4.0,Graze,3009.0
+4.0,Head Up,3010.0
+4.0,Graze,3010.0
+3.0,Occluded,3010.0
+41.0,Fighting,3010.0
+4.0,Head Up,3011.0
+4.0,Head Up,3012.0
+4.0,Graze,3012.0
+19.0,Out of Focus,3012.0
+4.0,Graze,3013.0
+40.0,Out of Focus,3013.0
+39.0,Out of Focus,3013.0
+4.0,Head Up,3014.0
+4.0,Graze,3014.0
+4.0,Head Up,3015.0
+19.0,Out of Frame,3016.0
+4.0,Graze,3016.0
+4.0,Head Up,3017.0
+4.0,Graze,3017.0
+4.0,Head Up,3018.0
+4.0,Head Up,3019.0
+4.0,Graze,3019.0
+4.0,Head Up,3020.0
+4.0,Graze,3020.0
+4.0,Graze,3021.0
+4.0,Head Up,3022.0
+4.0,Graze,3022.0
+19.0,Walk,3022.0
+4.0,Head Up,3023.0
+21.0,Out of Focus,3023.0
+41.0,Out of Focus,3023.0
+4.0,Graze,3024.0
+41.0,Walk,3024.0
+21.0,Graze,3024.0
+4.0,Graze,3025.0
+4.0,Head Up,3025.0
+4.0,Head Up,3026.0
+19.0,Out of Frame,3026.0
+4.0,Graze,3027.0
+4.0,Head Up,3027.0
+4.0,Graze,3028.0
+4.0,Head Up,3028.0
+41.0,Running,3028.0
+4.0,Graze,3029.0
+4.0,Head Up,3030.0
+4.0,Graze,3031.0
+4.0,Graze,3032.0
+4.0,Head Up,3032.0
+27.0,Graze,3033.0
+4.0,Head Up,3033.0
+4.0,Graze,3034.0
+4.0,Head Up,3034.0
+2.0,Walk,3034.0
+39.0,Walk,3035.0
+4.0,Graze,3035.0
+4.0,Graze,3036.0
+4.0,Head Up,3036.0
+28.0,Graze,3037.0
+42.0,Trotting,3037.0
+4.0,Head Up,3037.0
+7.0,Graze,3038.0
+4.0,Head Up,3038.0
+4.0,Graze,3038.0
+4.0,Graze,3039.0
+3.0,Graze,3039.0
+4.0,Head Up,3040.0
+4.0,Graze,3040.0
+4.0,Head Up,3041.0
+15.0,Walk,3042.0
+4.0,Graze,3042.0
+4.0,Head Up,3042.0
+4.0,Graze,3043.0
+4.0,Graze,3044.0
+4.0,Head Up,3044.0
+4.0,Head Up,3045.0
+4.0,Graze,3046.0
+4.0,Head Up,3047.0
+4.0,Graze,3047.0
+4.0,Head Up,3048.0
+4.0,Graze,3048.0
+5.0,Auto-Groom,3048.0
+42.0,Walk,3048.0
+4.0,Head Up,3049.0
+15.0,Trotting,3049.0
+4.0,Graze,3050.0
+4.0,Head Up,3051.0
+4.0,Graze,3052.0
+19.0,Out of Frame,3053.0
+4.0,Head Up,3053.0
+4.0,Graze,3054.0
+4.0,Head Up,3055.0
+4.0,Graze,3055.0
+4.0,Head Up,3056.0
+22.0,Head Up,3056.0
+4.0,Graze,3057.0
+4.0,Head Up,3057.0
+13.0,Walk,3057.0
+4.0,Graze,3058.0
+3.0,Graze,3059.0
+4.0,Graze,3059.0
+4.0,Head Up,3059.0
+26.0,Graze,3060.0
+4.0,Head Up,3060.0
+4.0,Graze,3061.0
+3.0,Graze,3061.0
+4.0,Graze,3062.0
+4.0,Head Up,3062.0
+20.0,Out of Frame,3063.0
+4.0,Head Up,3063.0
+4.0,Graze,3064.0
+4.0,Head Up,3064.0
+4.0,Graze,3065.0
+4.0,Graze,3066.0
+4.0,Head Up,3066.0
+4.0,Head Up,3067.0
+4.0,Graze,3068.0
+4.0,Head Up,3068.0
+4.0,Graze,3069.0
+4.0,Graze,3070.0
+4.0,Head Up,3070.0
+4.0,Head Up,3071.0
+4.0,Head Up,3072.0
+15.0,Walk,3072.0
+4.0,Graze,3072.0
+4.0,Graze,3073.0
+4.0,Head Up,3073.0
+30.0,Head Up,3073.0
+4.0,Graze,3074.0
+4.0,Head Up,3075.0
+5.0,Walk,3076.0
+4.0,Graze,3076.0
+4.0,Graze,3077.0
+4.0,Head Up,3077.0
+4.0,Head Up,3078.0
+4.0,Head Up,3079.0
+4.0,Graze,3079.0
+4.0,Head Up,3080.0
+4.0,Graze,3080.0
+4.0,Graze,3081.0
+4.0,Head Up,3082.0
+4.0,Graze,3083.0
+18.0,Graze,3083.0
+4.0,Graze,3084.0
+4.0,Head Up,3084.0
+5.0,Head Up,3085.0
+4.0,Head Up,3085.0
+4.0,Graze,3086.0
+4.0,Head Up,3086.0
+2.0,Head Up,3087.0
+38.0,Head Up,3087.0
+4.0,Graze,3087.0
+4.0,Head Up,3088.0
+4.0,Graze,3088.0
+4.0,Head Up,3089.0
+45.0,Walk,3090.0
+4.0,Graze,3090.0
+4.0,Graze,3091.0
+4.0,Head Up,3091.0
+15.0,Auto-Groom,3091.0
+4.0,Head Up,3092.0
+4.0,Head Up,3093.0
+4.0,Graze,3093.0
+4.0,Graze,3094.0
+4.0,Graze,3095.0
+5.0,Occluded,3095.0
+4.0,Head Up,3095.0
+4.0,Head Up,3096.0
+15.0,Walk,3097.0
+4.0,Head Up,3097.0
+4.0,Graze,3097.0
+12.0,Head Up,3098.0
+4.0,Graze,3098.0
+4.0,Graze,3099.0
+4.0,Head Up,3099.0
+4.0,Head Up,3100.0
+4.0,Head Up,3101.0
+4.0,Graze,3101.0
+4.0,Graze,3102.0
+4.0,Head Up,3103.0
+4.0,Graze,3103.0
+4.0,Head Up,3104.0
+4.0,Graze,3105.0
+4.0,Graze,3106.0
+4.0,Head Up,3106.0
+4.0,Head Up,3107.0
+4.0,Graze,3107.0
+4.0,Head Up,3108.0
+4.0,Graze,3109.0
+4.0,Head Up,3110.0
+4.0,Graze,3111.0
+13.0,Sniff,3111.0
+4.0,Head Up,3112.0
+4.0,Graze,3113.0
+4.0,Graze,3114.0
+4.0,Head Up,3114.0
+17.0,Out of Frame,3115.0
+4.0,Head Up,3115.0
+4.0,Graze,3116.0
+19.0,Out of Frame,3118.0
+3.0,Walk,3120.0
+3.0,Graze,3120.0
+3.0,Graze,3121.0
+3.0,Walk,3122.0
+3.0,Graze,3123.0
+19.0,Graze,3123.0
+3.0,Walk,3123.0
+4.0,Graze,3123.0
+6.0,Out of Focus,3124.0
+3.0,Graze,3124.0
+3.0,Walk,3124.0
+3.0,Graze,3125.0
+3.0,Walk,3126.0
+3.0,Walk,3127.0
+3.0,Graze,3127.0
+3.0,Walk,3128.0
+3.0,Graze,3128.0
+2.0,Head Up,3128.0
+15.0,Walk,3128.0
+17.0,Graze,3129.0
+3.0,Graze,3129.0
+3.0,Walk,3130.0
+3.0,Graze,3131.0
+3.0,Walk,3131.0
+3.0,Walk,3132.0
+3.0,Graze,3132.0
+3.0,Walk,3133.0
+3.0,Graze,3133.0
+3.0,Graze,3134.0
+14.0,Head Up,3134.0
+3.0,Walk,3134.0
+3.0,Graze,3135.0
+3.0,Walk,3135.0
+3.0,Graze,3136.0
+3.0,Walk,3137.0
+30.0,Walk,3138.0
+3.0,Graze,3138.0
+3.0,Walk,3138.0
+3.0,Graze,3139.0
+3.0,Walk,3139.0
+3.0,Graze,3140.0
+22.0,Out of Frame,3141.0
+7.0,Walk,3143.0
+9.0,Occluded,3144.0
+17.0,Out of Frame,3151.0
+2.0,Graze,3157.0
+48.0,Walk,3158.0
+28.0,Occluded,3159.0
+5.0,Walk,3160.0
+3.0,Walk,3165.0
+3.0,Graze,3165.0
+45.0,Walk,3165.0
+3.0,Head Up,3165.0
+3.0,Walk,3166.0
+3.0,Graze,3167.0
+3.0,Walk,3167.0
+3.0,Graze,3168.0
+3.0,Walk,3168.0
+3.0,Graze,3169.0
+15.0,Out of Frame,3170.0
+3.0,Walk,3170.0
+3.0,Graze,3171.0
+3.0,Walk,3171.0
+3.0,Graze,3172.0
+3.0,Walk,3172.0
+3.0,Graze,3173.0
+3.0,Walk,3174.0
+3.0,Walk,3175.0
+3.0,Graze,3175.0
+3.0,Walk,3176.0
+3.0,Graze,3176.0
+3.0,Walk,3177.0
+3.0,Graze,3177.0
+3.0,Walk,3178.0
+3.0,Graze,3178.0
+3.0,Walk,3179.0
+3.0,Graze,3179.0
+3.0,Graze,3180.0
+3.0,Walk,3181.0
+3.0,Walk,3182.0
+19.0,Graze,3182.0
+3.0,Graze,3182.0
+3.0,Graze,3183.0
+3.0,Walk,3183.0
+3.0,Graze,3184.0
+3.0,Walk,3185.0
+3.0,Walk,3186.0
+19.0,Out of Frame,3186.0
+3.0,Graze,3186.0
+3.0,Graze,3187.0
+23.0,Out of Frame,3187.0
+3.0,Walk,3187.0
+3.0,Graze,3188.0
+3.0,Walk,3189.0
+3.0,Walk,3190.0
+13.0,Walk,3190.0
+3.0,Graze,3190.0
+3.0,Graze,3191.0
+3.0,Walk,3191.0
+3.0,Graze,3192.0
+3.0,Walk,3192.0
+3.0,Graze,3193.0
+3.0,Walk,3193.0
+3.0,Walk,3194.0
+3.0,Graze,3194.0
+17.0,Graze,3195.0
+3.0,Graze,3195.0
+3.0,Walk,3196.0
+3.0,Graze,3197.0
+3.0,Walk,3197.0
+3.0,Graze,3198.0
+3.0,Walk,3198.0
+26.0,Graze,3199.0
+3.0,Graze,3199.0
+21.0,Out of Focus,3199.0
+3.0,Walk,3199.0
+3.0,Graze,3200.0
+3.0,Walk,3200.0
+3.0,Graze,3201.0
+3.0,Walk,3201.0
+3.0,Graze,3202.0
+13.0,Head Up,3203.0
+3.0,Walk,3203.0
+3.0,Walk,3204.0
+3.0,Graze,3204.0
+3.0,Graze,3205.0
+3.0,Walk,3205.0
+3.0,Graze,3206.0
+3.0,Walk,3206.0
+3.0,Graze,3207.0
+3.0,Walk,3207.0
+3.0,Graze,3208.0
+4.0,Walk,3208.0
+3.0,Walk,3208.0
+3.0,Graze,3209.0
+3.0,Walk,3210.0
+3.0,Walk,3211.0
+3.0,Graze,3211.0
+3.0,Graze,3212.0
+3.0,Walk,3212.0
+3.0,Graze,3213.0
+3.0,Walk,3214.0
+3.0,Walk,3215.0
+3.0,Graze,3215.0
+3.0,Graze,3216.0
+3.0,Walk,3216.0
+3.0,Graze,3217.0
+3.0,Walk,3218.0
+9.0,Fighting,3219.0
+3.0,Graze,3219.0
+3.0,Walk,3219.0
+6.0,Head Up,3220.0
+3.0,Graze,3220.0
+3.0,Walk,3220.0
+3.0,Graze,3221.0
+3.0,Walk,3222.0
+3.0,Walk,3223.0
+3.0,Graze,3223.0
+3.0,Graze,3224.0
+3.0,Walk,3225.0
+3.0,Graze,3226.0
+24.0,Out of Frame,3226.0
+3.0,Walk,3226.0
+3.0,Walk,3227.0
+5.0,Graze,3227.0
+3.0,Graze,3227.0
+3.0,Graze,3228.0
+19.0,Walk,3229.0
+3.0,Walk,3229.0
+9.0,Head Up,3230.0
+3.0,Walk,3230.0
+3.0,Graze,3230.0
+3.0,Walk,3231.0
+3.0,Graze,3231.0
+18.0,Out of Focus,3232.0
+23.0,Walk,3232.0
+3.0,Graze,3232.0
+2.0,Head Up,3233.0
+3.0,Walk,3233.0
+22.0,Out of Focus,3234.0
+3.0,Walk,3234.0
+3.0,Graze,3234.0
+3.0,Graze,3235.0
+24.0,Out of Focus,3235.0
+3.0,Walk,3235.0
+3.0,Graze,3236.0
+3.0,Walk,3236.0
+3.0,Walk,3237.0
+9.0,Walk,3237.0
+19.0,Out of Frame,3237.0
+3.0,Graze,3237.0
+3.0,Walk,3238.0
+3.0,Graze,3238.0
+15.0,Graze,3238.0
+44.0,Graze,3239.0
+3.0,Graze,3239.0
+24.0,Graze,3240.0
+26.0,Out of Focus,3240.0
+3.0,Walk,3240.0
+25.0,Out of Focus,3240.0
+48.0,Head Up,3240.0
+3.0,Graze,3241.0
+3.0,Walk,3241.0
+38.0,Walk,3242.0
+3.0,Walk,3242.0
+3.0,Graze,3242.0
+3.0,Graze,3243.0
+3.0,Walk,3244.0
+3.0,Walk,3245.0
+3.0,Graze,3245.0
+3.0,Graze,3246.0
+3.0,Walk,3246.0
+3.0,Graze,3247.0
+5.0,Graze,3247.0
+8.0,Walk,3252.0
+1.0,Auto-Groom,3252.0
+25.0,Graze,3254.0
+17.0,Head Up,3256.0
+21.0,Graze,3257.0
+14.0,Graze,3257.0
+3.0,Walk,3259.0
+12.0,Walk,3264.0
+22.0,Head Up,3272.0
+6.0,Head Up,3280.0
+3.0,Head Up,3280.0
+45.0,Graze,3284.0
+9.0,Auto-Groom,3286.0
+49.0,Graze,3288.0
+5.0,Walk,3289.0
+16.0,Out of Frame,3292.0
+26.0,Graze,3297.0
+1.0,Graze,3297.0
+26.0,Occluded,3298.0
+20.0,Out of Focus,3299.0
+16.0,Graze,3301.0
+3.0,Head Up,3306.0
+30.0,Graze,3307.0
+22.0,Walk,3313.0
+20.0,Walk,3320.0
+22.0,Head Up,3327.0
+2.0,Graze,3332.0
+28.0,Graze,3342.0
+6.0,Graze,3351.0
+17.0,Head Up,3352.0
+1.0,Head Up,3356.0
+9.0,Occluded,3357.0
+48.0,Graze,3370.0
+23.0,Head Up,3376.0
+27.0,Out of Focus,3389.0
+4.0,Trotting,3390.0
+27.0,Walk,3391.0
+2.0,Head Up,3397.0
+3.0,Walk,3398.0
+6.0,Head Up,3405.0
+3.0,Graze,3405.0
+2.0,Walk,3416.0
+6.0,Graze,3419.0
+26.0,Walk,3424.0
+9.0,Graze,3428.0
+20.0,Head Up,3431.0
+40.0,Out of Focus,3431.0
+6.0,Head Up,3436.0
+3.0,Occluded,3439.0
+4.0,Walk,3441.0
+43.0,Out of Focus,3442.0
+4.0,Graze,3447.0
+4.0,Occluded,3447.0
+4.0,Walk,3448.0
+4.0,Occluded,3448.0
+4.0,Graze,3448.0
+4.0,Occluded,3449.0
+4.0,Occluded,3450.0
+4.0,Graze,3450.0
+4.0,Graze,3451.0
+4.0,Occluded,3452.0
+4.0,Graze,3452.0
+4.0,Occluded,3453.0
+4.0,Graze,3454.0
+4.0,Occluded,3454.0
+43.0,Occluded,3455.0
+4.0,Graze,3455.0
+4.0,Graze,3456.0
+4.0,Occluded,3456.0
+4.0,Occluded,3457.0
+4.0,Occluded,3458.0
+20.0,Walk,3458.0
+4.0,Graze,3458.0
+4.0,Graze,3459.0
+4.0,Occluded,3460.0
+44.0,Out of Focus,3461.0
+4.0,Graze,3461.0
+4.0,Occluded,3461.0
+13.0,Head Up,3462.0
+4.0,Occluded,3462.0
+4.0,Graze,3462.0
+22.0,Graze,3463.0
+4.0,Graze,3463.0
+4.0,Occluded,3464.0
+4.0,Graze,3465.0
+4.0,Occluded,3466.0
+4.0,Graze,3467.0
+4.0,Occluded,3468.0
+4.0,Graze,3469.0
+4.0,Occluded,3469.0
+4.0,Graze,3470.0
+4.0,Occluded,3471.0
+4.0,Graze,3471.0
+4.0,Occluded,3472.0
+23.0,Walk,3473.0
+4.0,Occluded,3473.0
+4.0,Graze,3473.0
+4.0,Graze,3474.0
+4.0,Occluded,3475.0
+4.0,Graze,3476.0
+4.0,Occluded,3476.0
+24.0,Occluded,3476.0
+4.0,Graze,3477.0
+4.0,Occluded,3478.0
+4.0,Graze,3478.0
+3.0,Walk,3478.0
+4.0,Occluded,3479.0
+18.0,Head Up,3480.0
+4.0,Graze,3480.0
+4.0,Occluded,3480.0
+17.0,Head Up,3480.0
+4.0,Graze,3481.0
+4.0,Occluded,3482.0
+4.0,Graze,3482.0
+4.0,Occluded,3483.0
+8.0,Graze,3483.0
+4.0,Occluded,3484.0
+4.0,Graze,3484.0
+4.0,Graze,3485.0
+4.0,Graze,3486.0
+4.0,Occluded,3486.0
+43.0,Walk,3487.0
+4.0,Occluded,3487.0
+26.0,Occluded,3488.0
+4.0,Graze,3488.0
+4.0,Occluded,3488.0
+4.0,Graze,3489.0
+4.0,Occluded,3490.0
+4.0,Occluded,3491.0
+4.0,Graze,3491.0
+4.0,Graze,3492.0
+4.0,Occluded,3493.0
+4.0,Graze,3493.0
+4.0,Walk,3494.0
+4.0,Occluded,3494.0
+4.0,Occluded,3495.0
+4.0,Walk,3496.0
+4.0,Occluded,3496.0
+11.0,Graze,3497.0
+4.0,Walk,3497.0
+4.0,Occluded,3498.0
+4.0,Occluded,3499.0
+4.0,Walk,3499.0
+17.0,Graze,3499.0
+4.0,Walk,3500.0
+4.0,Occluded,3501.0
+4.0,Walk,3501.0
+4.0,Occluded,3502.0
+4.0,Walk,3502.0
+4.0,Head Up,3502.0
+4.0,Occluded,3503.0
+4.0,Walk,3504.0
+30.0,Walk,3505.0
+25.0,Walk,3505.0
+4.0,Occluded,3505.0
+4.0,Walk,3506.0
+4.0,Occluded,3506.0
+2.0,Graze,3507.0
+4.0,Walk,3507.0
+4.0,Occluded,3508.0
+4.0,Walk,3508.0
+4.0,Occluded,3509.0
+4.0,Walk,3510.0
+4.0,Occluded,3510.0
+4.0,Walk,3511.0
+4.0,Occluded,3512.0
+4.0,Walk,3512.0
+4.0,Occluded,3513.0
+4.0,Walk,3514.0
+4.0,Occluded,3514.0
+4.0,Walk,3515.0
+4.0,Walk,3516.0
+4.0,Occluded,3516.0
+4.0,Occluded,3517.0
+4.0,Walk,3518.0
+4.0,Occluded,3518.0
+4.0,Walk,3519.0
+4.0,Occluded,3520.0
+4.0,Occluded,3521.0
+4.0,Walk,3521.0
+4.0,Walk,3522.0
+4.0,Occluded,3522.0
+4.0,Walk,3523.0
+4.0,Occluded,3524.0
+4.0,Walk,3525.0
+4.0,Occluded,3526.0
+4.0,Graze,3527.0
+4.0,Walk,3527.0
+4.0,Occluded,3528.0
+4.0,Walk,3529.0
+29.0,Out of Focus,3529.0
+4.0,Occluded,3529.0
+4.0,Walk,3530.0
+4.0,Occluded,3531.0
+4.0,Walk,3531.0
+4.0,Occluded,3532.0
+4.0,Walk,3533.0
+4.0,Occluded,3533.0
+4.0,Walk,3534.0
+4.0,Occluded,3535.0
+4.0,Walk,3536.0
+4.0,Occluded,3536.0
+4.0,Walk,3537.0
+29.0,Graze,3537.0
+4.0,Occluded,3538.0
+4.0,Walk,3538.0
+4.0,Occluded,3539.0
+4.0,Walk,3540.0
+4.0,Occluded,3540.0
+4.0,Walk,3541.0
+30.0,Head Up,3542.0
+4.0,Occluded,3542.0
+4.0,Walk,3542.0
+4.0,Occluded,3543.0
+6.0,Graze,3543.0
+4.0,Walk,3544.0
+4.0,Occluded,3544.0
+4.0,Walk,3545.0
+4.0,Occluded,3546.0
+4.0,Walk,3546.0
+3.0,Walk,3546.0
+4.0,Occluded,3547.0
+3.0,Walk,3547.0
+3.0,Graze,3547.0
+4.0,Walk,3548.0
+4.0,Occluded,3548.0
+3.0,Graze,3548.0
+3.0,Walk,3549.0
+4.0,Walk,3549.0
+4.0,Occluded,3550.0
+3.0,Walk,3550.0
+3.0,Graze,3550.0
+3.0,Walk,3551.0
+3.0,Graze,3551.0
+4.0,Occluded,3551.0
+4.0,Walk,3551.0
+3.0,Walk,3552.0
+3.0,Graze,3552.0
+4.0,Walk,3552.0
+3.0,Graze,3553.0
+3.0,Walk,3553.0
+4.0,Walk,3553.0
+4.0,Occluded,3553.0
+4.0,Occluded,3554.0
+3.0,Graze,3554.0
+4.0,Walk,3554.0
+3.0,Walk,3555.0
+3.0,Graze,3555.0
+4.0,Occluded,3555.0
+4.0,Walk,3556.0
+4.0,Occluded,3556.0
+3.0,Walk,3556.0
+3.0,Walk,3557.0
+3.0,Graze,3557.0
+4.0,Walk,3557.0
+3.0,Graze,3558.0
+3.0,Walk,3558.0
+4.0,Occluded,3558.0
+4.0,Walk,3559.0
+22.0,Walk,3559.0
+3.0,Graze,3559.0
+4.0,Occluded,3559.0
+3.0,Walk,3560.0
+4.0,Walk,3560.0
+4.0,Graze,3561.0
+4.0,Walk,3561.0
+8.0,Walk,3561.0
+3.0,Walk,3561.0
+3.0,Graze,3561.0
+4.0,Walk,3562.0
+4.0,Graze,3562.0
+3.0,Graze,3562.0
+3.0,Walk,3562.0
+3.0,Walk,3563.0
+3.0,Graze,3563.0
+4.0,Graze,3563.0
+4.0,Graze,3564.0
+4.0,Walk,3564.0
+3.0,Graze,3564.0
+3.0,Walk,3565.0
+4.0,Walk,3565.0
+3.0,Graze,3566.0
+41.0,Out of Focus,3566.0
+4.0,Graze,3566.0
+3.0,Graze,3567.0
+3.0,Walk,3567.0
+4.0,Walk,3567.0
+4.0,Graze,3568.0
+3.0,Walk,3568.0
+3.0,Graze,3568.0
+3.0,Walk,3569.0
+4.0,Walk,3569.0
+3.0,Graze,3570.0
+4.0,Graze,3570.0
+4.0,Walk,3571.0
+3.0,Walk,3571.0
+36.0,Out of Focus,3571.0
+4.0,Graze,3571.0
+49.0,Trotting,3572.0
+3.0,Walk,3572.0
+3.0,Graze,3572.0
+4.0,Walk,3572.0
+3.0,Graze,3573.0
+4.0,Walk,3573.0
+4.0,Graze,3573.0
+4.0,Walk,3574.0
+4.0,Graze,3574.0
+3.0,Walk,3574.0
+3.0,Graze,3575.0
+4.0,Graze,3575.0
+4.0,Walk,3575.0
+4.0,Walk,3576.0
+4.0,Graze,3576.0
+3.0,Walk,3576.0
+3.0,Graze,3576.0
+3.0,Walk,3577.0
+3.0,Graze,3577.0
+4.0,Graze,3577.0
+4.0,Graze,3578.0
+3.0,Walk,3578.0
+4.0,Walk,3578.0
+4.0,Walk,3579.0
+3.0,Walk,3579.0
+3.0,Graze,3579.0
+4.0,Graze,3580.0
+3.0,Walk,3580.0
+3.0,Graze,3580.0
+4.0,Walk,3581.0
+3.0,Graze,3581.0
+4.0,Graze,3581.0
+4.0,Walk,3582.0
+38.0,Occluded,3582.0
+3.0,Walk,3582.0
+3.0,Graze,3583.0
+4.0,Graze,3583.0
+4.0,Walk,3583.0
+3.0,Walk,3583.0
+3.0,Graze,3584.0
+3.0,Walk,3584.0
+4.0,Graze,3584.0
+4.0,Walk,3584.0
+15.0,Head Up,3585.0
+3.0,Walk,3585.0
+3.0,Graze,3585.0
+4.0,Graze,3585.0
+3.0,Walk,3586.0
+3.0,Graze,3586.0
+4.0,Walk,3586.0
+4.0,Graze,3587.0
+3.0,Walk,3587.0
+3.0,Graze,3587.0
+4.0,Graze,3588.0
+4.0,Walk,3588.0
+23.0,Walk,3588.0
+3.0,Graze,3588.0
+3.0,Walk,3589.0
+4.0,Walk,3589.0
+3.0,Graze,3590.0
+4.0,Walk,3590.0
+4.0,Graze,3590.0
+3.0,Walk,3590.0
+2.0,Graze,3590.0
+3.0,Graze,3591.0
+3.0,Walk,3591.0
+26.0,Out of Focus,3591.0
+4.0,Graze,3591.0
+4.0,Walk,3592.0
+4.0,Graze,3592.0
+3.0,Walk,3592.0
+3.0,Graze,3592.0
+4.0,Walk,3593.0
+3.0,Graze,3593.0
+3.0,Walk,3593.0
+3.0,Walk,3594.0
+3.0,Graze,3594.0
+4.0,Graze,3594.0
+3.0,Graze,3595.0
+4.0,Graze,3595.0
+4.0,Walk,3595.0
+4.0,Walk,3596.0
+3.0,Walk,3596.0
+49.0,Out of Frame,3597.0
+3.0,Graze,3597.0
+3.0,Walk,3597.0
+4.0,Walk,3597.0
+4.0,Graze,3597.0
+4.0,Graze,3598.0
+3.0,Graze,3598.0
+3.0,Walk,3598.0
+4.0,Walk,3599.0
+3.0,Graze,3599.0
+4.0,Graze,3599.0
+4.0,Walk,3600.0
+3.0,Walk,3600.0
+4.0,Walk,3601.0
+4.0,Graze,3601.0
+3.0,Graze,3601.0
+3.0,Walk,3601.0
+29.0,Graze,3602.0
+4.0,Graze,3602.0
+3.0,Walk,3602.0
+3.0,Auto-Groom,3602.0
+4.0,Walk,3603.0
+4.0,Graze,3603.0
+3.0,Auto-Groom,3603.0
+3.0,Walk,3604.0
+4.0,Walk,3604.0
+3.0,Walk,3605.0
+4.0,Walk,3605.0
+4.0,Graze,3605.0
+3.0,Auto-Groom,3605.0
+4.0,Graze,3606.0
+3.0,Auto-Groom,3606.0
+3.0,Walk,3606.0
+3.0,Auto-Groom,3607.0
+4.0,Walk,3607.0
+4.0,Graze,3608.0
+3.0,Walk,3608.0
+3.0,Auto-Groom,3609.0
+4.0,Walk,3609.0
+1.0,Walk,3609.0
+3.0,Walk,3609.0
+4.0,Graze,3610.0
+3.0,Walk,3610.0
+3.0,Auto-Groom,3610.0
+4.0,Graze,3611.0
+4.0,Walk,3611.0
+3.0,Auto-Groom,3611.0
+3.0,Walk,3612.0
+4.0,Walk,3612.0
+11.0,Out of Focus,3613.0
+3.0,Walk,3613.0
+3.0,Auto-Groom,3613.0
+4.0,Graze,3613.0
+4.0,Walk,3613.0
+3.0,Walk,3614.0
+3.0,Auto-Groom,3614.0
+4.0,Graze,3614.0
+4.0,Walk,3614.0
+4.0,Graze,3615.0
+30.0,Graze,3615.0
+3.0,Auto-Groom,3615.0
+3.0,Walk,3615.0
+4.0,Walk,3616.0
+3.0,Walk,3616.0
+3.0,Auto-Groom,3616.0
+11.0,Head Up,3617.0
+4.0,Graze,3617.0
+4.0,Graze,3618.0
+4.0,Walk,3618.0
+4.0,Walk,3619.0
+4.0,Graze,3620.0
+4.0,Walk,3620.0
+4.0,Graze,3621.0
+4.0,Walk,3622.0
+4.0,Graze,3622.0
+4.0,Walk,3623.0
+4.0,Graze,3624.0
+4.0,Walk,3625.0
+4.0,Graze,3625.0
+4.0,Walk,3626.0
+4.0,Graze,3627.0
+4.0,Walk,3627.0
+4.0,Graze,3628.0
+43.0,Out of Focus,3628.0
+44.0,Walk,3628.0
+4.0,Walk,3629.0
+4.0,Graze,3629.0
+4.0,Walk,3630.0
+45.0,Walk,3630.0
+4.0,Graze,3631.0
+4.0,Walk,3631.0
+17.0,Graze,3631.0
+4.0,Graze,3632.0
+4.0,Graze,3633.0
+4.0,Walk,3633.0
+4.0,Walk,3634.0
+4.0,Graze,3635.0
+4.0,Walk,3635.0
+8.0,Head Up,3636.0
+4.0,Graze,3636.0
+4.0,Walk,3637.0
+4.0,Graze,3637.0
+4.0,Walk,3638.0
+4.0,Graze,3639.0
+4.0,Graze,3640.0
+4.0,Walk,3640.0
+4.0,Graze,3641.0
+4.0,Walk,3641.0
+27.0,Head Up,3642.0
+4.0,Walk,3642.0
+4.0,Graze,3643.0
+4.0,Walk,3644.0
+4.0,Graze,3645.0
+3.0,Head Up,3646.0
+4.0,Walk,3646.0
+4.0,Graze,3647.0
+4.0,Walk,3648.0
+11.0,Out of Frame,3648.0
+24.0,Walk,3648.0
+4.0,Graze,3648.0
+2.0,Walk,3649.0
+27.0,Walk,3649.0
+4.0,Walk,3649.0
+4.0,Walk,3650.0
+4.0,Graze,3650.0
+4.0,Graze,3651.0
+4.0,Graze,3652.0
+4.0,Walk,3652.0
+4.0,Walk,3653.0
+4.0,Graze,3654.0
+8.0,Auto-Groom,3654.0
+4.0,Walk,3655.0
+4.0,Graze,3655.0
+4.0,Walk,3656.0
+4.0,Graze,3657.0
+4.0,Walk,3657.0
+34.0,Out of Frame,3658.0
+4.0,Graze,3658.0
+4.0,Walk,3659.0
+4.0,Graze,3659.0
+4.0,Walk,3660.0
+4.0,Graze,3661.0
+4.0,Walk,3661.0
+4.0,Graze,3662.0
+4.0,Walk,3663.0
+4.0,Graze,3663.0
+4.0,Walk,3664.0
+4.0,Graze,3665.0
+4.0,Walk,3665.0
+4.0,Graze,3666.0
+4.0,Walk,3667.0
+4.0,Graze,3667.0
+4.0,Walk,3668.0
+4.0,Graze,3669.0
+4.0,Walk,3670.0
+4.0,Graze,3670.0
+4.0,Walk,3671.0
+4.0,Graze,3672.0
+4.0,Walk,3672.0
+42.0,Graze,3673.0
+4.0,Graze,3673.0
+4.0,Walk,3673.0
+34.0,Out of Focus,3674.0
+4.0,Graze,3674.0
+4.0,Walk,3675.0
+4.0,Graze,3676.0
+4.0,Graze,3677.0
+4.0,Walk,3677.0
+4.0,Walk,3678.0
+4.0,Graze,3679.0
+6.0,Walk,3679.0
+4.0,Walk,3679.0
+4.0,Graze,3680.0
+4.0,Walk,3681.0
+4.0,Graze,3681.0
+4.0,Walk,3682.0
+4.0,Graze,3683.0
+4.0,Graze,3684.0
+4.0,Walk,3684.0
+4.0,Walk,3685.0
+4.0,Graze,3686.0
+4.0,Walk,3686.0
+4.0,Graze,3687.0
+4.0,Graze,3688.0
+4.0,Walk,3688.0
+4.0,Walk,3689.0
+4.0,Walk,3690.0
+4.0,Graze,3690.0
+18.0,Graze,3690.0
+4.0,Graze,3691.0
+34.0,Graze,3691.0
+4.0,Graze,3692.0
+4.0,Walk,3692.0
+4.0,Walk,3693.0
+4.0,Walk,3694.0
+4.0,Graze,3694.0
+4.0,Graze,3695.0
+4.0,Graze,3696.0
+4.0,Walk,3696.0
+4.0,Walk,3697.0
+4.0,Graze,3698.0
+54.0,Graze,3699.0
+4.0,Graze,3699.0
+4.0,Walk,3699.0
+59.0,Graze,3699.0
+56.0,Graze,3699.0
+58.0,Graze,3699.0
+55.0,Graze,3699.0
+4.0,Graze,3700.0
+4.0,Walk,3700.0
+20.0,Graze,3700.0
+4.0,Walk,3701.0
+4.0,Graze,3702.0
+4.0,Walk,3703.0
+4.0,Graze,3704.0
+4.0,Walk,3705.0
+4.0,Graze,3706.0
+4.0,Graze,3707.0
+4.0,Walk,3707.0
+4.0,Walk,3708.0
+4.0,Walk,3709.0
+4.0,Graze,3709.0
+4.0,Graze,3710.0
+4.0,Walk,3711.0
+4.0,Graze,3711.0
+4.0,Walk,3712.0
+4.0,Graze,3713.0
+4.0,Graze,3714.0
+4.0,Walk,3714.0
+4.0,Walk,3715.0
+4.0,Graze,3716.0
+4.0,Walk,3716.0
+4.0,Graze,3717.0
+4.0,Walk,3718.0
+4.0,Graze,3718.0
+3.0,Walk,3718.0
+4.0,Walk,3719.0
+4.0,Graze,3720.0
+4.0,Walk,3720.0
+4.0,Graze,3721.0
+4.0,Walk,3722.0
+4.0,Graze,3722.0
+6.0,Head Up,3723.0
+4.0,Walk,3723.0
+61.0,Graze,3724.0
+60.0,Walk,3724.0
+4.0,Graze,3724.0
+4.0,Walk,3724.0
+4.0,Graze,3725.0
+4.0,Walk,3726.0
+4.0,Graze,3726.0
+4.0,Occluded,3727.0
+4.0,Walk,3727.0
+4.0,Occluded,3728.0
+4.0,Occluded,3729.0
+4.0,Walk,3729.0
+4.0,Walk,3730.0
+6.0,Trotting,3731.0
+4.0,Occluded,3731.0
+4.0,Walk,3731.0
+4.0,Occluded,3732.0
+4.0,Walk,3732.0
+4.0,Occluded,3733.0
+4.0,Walk,3734.0
+4.0,Occluded,3734.0
+49.0,Running,3735.0
+4.0,Walk,3735.0
+50.0,Running,3735.0
+4.0,Occluded,3736.0
+2.0,Walk,3736.0
+4.0,Walk,3736.0
+23.0,Out of Focus,3736.0
+4.0,Walk,3737.0
+4.0,Occluded,3737.0
+4.0,Walk,3738.0
+4.0,Walk,3739.0
+4.0,Occluded,3739.0
+4.0,Walk,3740.0
+4.0,Occluded,3740.0
+4.0,Occluded,3741.0
+4.0,Walk,3742.0
+8.0,Head Up,3742.0
+4.0,Occluded,3743.0
+4.0,Walk,3744.0
+4.0,Occluded,3744.0
+4.0,Walk,3745.0
+60.0,Graze,3745.0
+4.0,Walk,3746.0
+4.0,Occluded,3746.0
+4.0,Occluded,3747.0
+4.0,Walk,3748.0
+4.0,Occluded,3748.0
+4.0,Walk,3749.0
+4.0,Walk,3750.0
+51.0,Running,3750.0
+4.0,Occluded,3750.0
+4.0,Occluded,3751.0
+52.0,Running,3751.0
+53.0,Running,3751.0
+4.0,Occluded,3752.0
+4.0,Walk,3752.0
+4.0,Walk,3753.0
+4.0,Occluded,3754.0
+4.0,Walk,3754.0
+4.0,Occluded,3755.0
+60.0,Walk,3756.0
+4.0,Occluded,3756.0
+4.0,Walk,3756.0
+4.0,Walk,3757.0
+4.0,Occluded,3758.0
+4.0,Walk,3759.0
+4.0,Occluded,3759.0
+4.0,Walk,3760.0
+4.0,Occluded,3760.0
+4.0,Walk,3761.0
+4.0,Occluded,3762.0
+4.0,Walk,3763.0
+4.0,Occluded,3764.0
+3.0,Walk,3764.0
+4.0,Walk,3765.0
+4.0,Occluded,3766.0
+4.0,Occluded,3767.0
+4.0,Walk,3767.0
+4.0,Walk,3768.0
+30.0,Out of Focus,3769.0
+4.0,Walk,3769.0
+4.0,Occluded,3769.0
+4.0,Occluded,3770.0
+4.0,Walk,3771.0
+4.0,Occluded,3771.0
+4.0,Walk,3772.0
+44.0,Walk,3772.0
+4.0,Occluded,3773.0
+4.0,Walk,3774.0
+4.0,Occluded,3774.0
+4.0,Walk,3775.0
+4.0,Walk,3776.0
+4.0,Occluded,3776.0
+4.0,Occluded,3777.0
+4.0,Walk,3778.0
+4.0,Occluded,3778.0
+4.0,Walk,3779.0
+4.0,Occluded,3780.0
+4.0,Walk,3780.0
+4.0,Occluded,3781.0
+4.0,Walk,3782.0
+4.0,Occluded,3782.0
+4.0,Walk,3783.0
+4.0,Occluded,3784.0
+4.0,Walk,3784.0
+4.0,Walk,3785.0
+4.0,Occluded,3785.0
+4.0,Occluded,3786.0
+4.0,Walk,3787.0
+4.0,Graze,3788.0
+4.0,Walk,3789.0
+4.0,Graze,3789.0
+4.0,Walk,3790.0
+4.0,Graze,3791.0
+4.0,Walk,3791.0
+4.0,Walk,3792.0
+4.0,Graze,3792.0
+4.0,Graze,3793.0
+4.0,Walk,3794.0
+9.0,Walk,3794.0
+4.0,Graze,3795.0
+30.0,Graze,3796.0
+4.0,Walk,3796.0
+4.0,Graze,3796.0
+4.0,Walk,3797.0
+4.0,Walk,3798.0
+28.0,Head Up,3798.0
+4.0,Graze,3798.0
+4.0,Graze,3799.0
+4.0,Walk,3800.0
+4.0,Graze,3800.0
+4.0,Walk,3801.0
+4.0,Graze,3802.0
+4.0,Graze,3803.0
+4.0,Walk,3803.0
+4.0,Walk,3804.0
+4.0,Walk,3805.0
+4.0,Graze,3805.0
+4.0,Graze,3806.0
+4.0,Walk,3807.0
+4.0,Graze,3807.0
+5.0,Head Up,3808.0
+4.0,Walk,3808.0
+4.0,Walk,3809.0
+29.0,Walk,3809.0
+4.0,Graze,3809.0
+4.0,Graze,3810.0
+4.0,Walk,3811.0
+4.0,Graze,3811.0
+4.0,Walk,3812.0
+4.0,Walk,3813.0
+4.0,Graze,3813.0
+4.0,Graze,3814.0
+4.0,Graze,3815.0
+4.0,Walk,3815.0
+19.0,Walk,3816.0
+4.0,Walk,3816.0
+4.0,Graze,3817.0
+4.0,Walk,3818.0
+4.0,Graze,3818.0
+4.0,Walk,3819.0
+4.0,Graze,3819.0
+4.0,Walk,3820.0
+29.0,Graze,3821.0
+4.0,Graze,3821.0
+4.0,Walk,3822.0
+4.0,Graze,3823.0
+4.0,Walk,3824.0
+19.0,Out of Frame,3825.0
+4.0,Graze,3825.0
+43.0,Walk,3825.0
+4.0,Walk,3826.0
+4.0,Graze,3826.0
+4.0,Walk,3827.0
+4.0,Graze,3828.0
+4.0,Walk,3828.0
+4.0,Graze,3829.0
+4.0,Walk,3830.0
+4.0,Graze,3830.0
+4.0,Walk,3831.0
+60.0,Graze,3832.0
+4.0,Graze,3832.0
+4.0,Graze,3833.0
+4.0,Walk,3833.0
+4.0,Walk,3834.0
+4.0,Walk,3835.0
+44.0,Graze,3835.0
+4.0,Graze,3835.0
+4.0,Graze,3836.0
+4.0,Graze,3837.0
+4.0,Walk,3837.0
+16.0,Head Up,3837.0
+4.0,Walk,3838.0
+4.0,Graze,3839.0
+4.0,Walk,3839.0
+4.0,Graze,3840.0
+11.0,Occluded,3841.0
+45.0,Walk,3842.0
+43.0,Out of Focus,3846.0
+15.0,Head Up,3853.0
+6.0,Walk,3856.0
+3.0,Graze,3857.0
+1.0,Head Up,3858.0
+4.0,Auto-Groom,3868.0
+61.0,Walk,3888.0
+6.0,Head Up,3889.0
+6.0,Head Up,3889.0
+12.0,Occluded,3890.0
+4.0,Occluded,3896.0
+4.0,Graze,3897.0
+4.0,Occluded,3898.0
+4.0,Graze,3898.0
+4.0,Occluded,3899.0
+4.0,Graze,3900.0
+4.0,Occluded,3900.0
+4.0,Graze,3901.0
+4.0,Occluded,3902.0
+4.0,Graze,3902.0
+4.0,Occluded,3903.0
+16.0,Graze,3904.0
+4.0,Graze,3904.0
+4.0,Occluded,3904.0
+4.0,Graze,3905.0
+4.0,Occluded,3906.0
+4.0,Occluded,3907.0
+4.0,Graze,3907.0
+4.0,Graze,3908.0
+4.0,Occluded,3909.0
+4.0,Graze,3909.0
+4.0,Occluded,3910.0
+4.0,Graze,3910.0
+4.0,Occluded,3911.0
+4.0,Graze,3912.0
+4.0,Occluded,3913.0
+4.0,Graze,3914.0
+4.0,Occluded,3914.0
+17.0,Occluded,3914.0
+2.0,Graze,3914.0
+4.0,Graze,3915.0
+8.0,Walk,3916.0
+4.0,Occluded,3916.0
+4.0,Graze,3916.0
+33.0,Out of Focus,3917.0
+4.0,Occluded,3917.0
+28.0,Walk,3918.0
+4.0,Graze,3918.0
+4.0,Occluded,3918.0
+4.0,Graze,3919.0
+4.0,Occluded,3920.0
+4.0,Graze,3921.0
+4.0,Occluded,3921.0
+4.0,Graze,3922.0
+19.0,Out of Focus,3922.0
+4.0,Graze,3923.0
+4.0,Occluded,3923.0
+4.0,Occluded,3924.0
+45.0,Occluded,3925.0
+4.0,Graze,3925.0
+4.0,Occluded,3925.0
+4.0,Graze,3926.0
+4.0,Occluded,3927.0
+4.0,Graze,3927.0
+4.0,Occluded,3928.0
+4.0,Graze,3929.0
+4.0,Occluded,3929.0
+4.0,Graze,3930.0
+7.0,Graze,3931.0
+4.0,Occluded,3931.0
+4.0,Graze,3931.0
+4.0,Occluded,3932.0
+4.0,Occluded,3933.0
+4.0,Graze,3933.0
+33.0,Walk,3933.0
+4.0,Graze,3934.0
+4.0,Occluded,3935.0
+47.0,Walk,3935.0
+9.0,Walk,3936.0
+4.0,Occluded,3936.0
+4.0,Graze,3936.0
+4.0,Occluded,3937.0
+4.0,Graze,3937.0
+4.0,Graze,3938.0
+4.0,Occluded,3939.0
+4.0,Graze,3940.0
+4.0,Occluded,3941.0
+4.0,Graze,3942.0
+17.0,Graze,3942.0
+4.0,Occluded,3943.0
+4.0,Graze,3944.0
+4.0,Occluded,3944.0
+19.0,Out of Focus,3944.0
+4.0,Graze,3945.0
+30.0,Walk,3946.0
+4.0,Occluded,3946.0
+4.0,Graze,3946.0
+4.0,Head Up,3946.0
+4.0,Occluded,3947.0
+4.0,Graze,3948.0
+4.0,Occluded,3948.0
+30.0,Walk,3949.0
+4.0,Graze,3949.0
+4.0,Occluded,3950.0
+4.0,Graze,3951.0
+4.0,Occluded,3951.0
+4.0,Graze,3952.0
+19.0,Walk,3952.0
+4.0,Occluded,3953.0
+4.0,Graze,3953.0
+4.0,Occluded,3954.0
+4.0,Occluded,3955.0
+4.0,Graze,3955.0
+4.0,Graze,3956.0
+4.0,Occluded,3957.0
+4.0,Graze,3957.0
+4.0,Occluded,3958.0
+4.0,Graze,3959.0
+4.0,Occluded,3959.0
+4.0,Graze,3960.0
+4.0,Graze,3961.0
+4.0,Occluded,3961.0
+4.0,Occluded,3962.0
+19.0,Graze,3962.0
+30.0,Out of Focus,3962.0
+19.0,Out of Focus,3962.0
+19.0,Walk,3963.0
+4.0,Graze,3963.0
+4.0,Occluded,3963.0
+4.0,Graze,3964.0
+30.0,Graze,3964.0
+4.0,Occluded,3965.0
+6.0,Walk,3965.0
+4.0,Graze,3966.0
+4.0,Occluded,3966.0
+17.0,Occluded,3967.0
+4.0,Graze,3967.0
+4.0,Graze,3968.0
+4.0,Occluded,3968.0
+33.0,Walk,3969.0
+4.0,Graze,3969.0
+4.0,Occluded,3969.0
+4.0,Occluded,3970.0
+4.0,Graze,3971.0
+4.0,Occluded,3971.0
+4.0,Graze,3972.0
+4.0,Occluded,3973.0
+4.0,Occluded,3974.0
+4.0,Graze,3974.0
+4.0,Graze,3975.0
+4.0,Graze,3976.0
+4.0,Occluded,3976.0
+4.0,Graze,3977.0
+4.0,Occluded,3977.0
+4.0,Occluded,3978.0
+4.0,Graze,3979.0
+4.0,Occluded,3980.0
+4.0,Occluded,3981.0
+4.0,Graze,3981.0
+1.0,Out of Frame,3982.0
+4.0,Graze,3982.0
+4.0,Graze,3983.0
+4.0,Occluded,3983.0
+4.0,Occluded,3984.0
+4.0,Graze,3985.0
+3.0,Graze,3985.0
+4.0,Occluded,3985.0
+21.0,Head Up,3985.0
+4.0,Graze,3986.0
+4.0,Graze,3987.0
+4.0,Occluded,3987.0
+4.0,Occluded,3988.0
+4.0,Occluded,3989.0
+4.0,Graze,3989.0
+4.0,Graze,3990.0
+6.0,Walk,3990.0
+4.0,Graze,3991.0
+4.0,Occluded,3991.0
+4.0,Occluded,3992.0
+4.0,Graze,3993.0
+4.0,Occluded,3993.0
+4.0,Graze,3994.0
+4.0,Occluded,3995.0
+4.0,Occluded,3996.0
+4.0,Graze,3996.0
+33.0,Out of Focus,3997.0
+19.0,Walk,3997.0
+4.0,Occluded,3997.0
+4.0,Graze,3997.0
+4.0,Graze,3998.0
+4.0,Occluded,3999.0
+4.0,Graze,4000.0
+4.0,Occluded,4001.0
+4.0,Graze,4002.0
+4.0,Occluded,4003.0
+23.0,Walk,4003.0
+4.0,Occluded,4004.0
+4.0,Graze,4004.0
+4.0,Graze,4005.0
+4.0,Graze,4006.0
+4.0,Occluded,4006.0
+4.0,Occluded,4007.0
+4.0,Graze,4008.0
+4.0,Occluded,4008.0
+4.0,Graze,4009.0
+60.0,Occluded,4009.0
+4.0,Occluded,4010.0
+4.0,Head Up,4010.0
+4.0,Graze,4011.0
+4.0,Occluded,4011.0
+4.0,Graze,4012.0
+17.0,Auto-Groom,4012.0
+4.0,Occluded,4013.0
+4.0,Graze,4013.0
+4.0,Occluded,4014.0
+4.0,Graze,4015.0
+4.0,Occluded,4015.0
+9.0,Head Up,4015.0
+4.0,Graze,4016.0
+4.0,Graze,4017.0
+4.0,Occluded,4017.0
+4.0,Occluded,4018.0
+4.0,Graze,4019.0
+4.0,Occluded,4019.0
+4.0,Graze,4020.0
+2.0,Walk,4020.0
+4.0,Occluded,4021.0
+4.0,Graze,4021.0
+4.0,Occluded,4022.0
+4.0,Graze,4022.0
+4.0,Occluded,4023.0
+4.0,Graze,4024.0
+4.0,Occluded,4025.0
+4.0,Graze,4026.0
+4.0,Occluded,4026.0
+4.0,Graze,4027.0
+4.0,Occluded,4028.0
+4.0,Graze,4028.0
+4.0,Occluded,4029.0
+4.0,Graze,4029.0
+4.0,Occluded,4030.0
+4.0,Graze,4031.0
+4.0,Occluded,4032.0
+4.0,Occluded,4033.0
+32.0,Walk,4033.0
+4.0,Graze,4033.0
+4.0,Graze,4034.0
+4.0,Occluded,4035.0
+4.0,Graze,4035.0
+4.0,Occluded,4036.0
+4.0,Graze,4037.0
+3.0,Head Up,4037.0
+4.0,Occluded,4037.0
+29.0,Walk,4038.0
+4.0,Graze,4038.0
+4.0,Occluded,4039.0
+4.0,Graze,4040.0
+4.0,Occluded,4040.0
+9.0,Walk,4040.0
+4.0,Graze,4041.0
+4.0,Graze,4042.0
+4.0,Occluded,4042.0
+4.0,Occluded,4043.0
+4.0,Graze,4044.0
+4.0,Occluded,4044.0
+4.0,Graze,4045.0
+4.0,Occluded,4046.0
+4.0,Graze,4046.0
+4.0,Occluded,4047.0
+4.0,Graze,4048.0
+4.0,Occluded,4048.0
+29.0,Out of Focus,4049.0
+4.0,Graze,4049.0
+4.0,Graze,4050.0
+4.0,Occluded,4050.0
+4.0,Occluded,4051.0
+4.0,Occluded,4052.0
+4.0,Graze,4052.0
+4.0,Graze,4053.0
+4.0,Occluded,4054.0
+4.0,Graze,4055.0
+4.0,Occluded,4055.0
+19.0,Graze,4056.0
+4.0,Graze,4056.0
+4.0,Occluded,4056.0
+4.0,Graze,4057.0
+4.0,Occluded,4058.0
+3.0,Graze,4059.0
+4.0,Graze,4059.0
+4.0,Occluded,4060.0
+3.0,Walk,4060.0
+3.0,Graze,4061.0
+4.0,Graze,4061.0
+16.0,Walk,4061.0
+3.0,Walk,4061.0
+3.0,Graze,4062.0
+4.0,Occluded,4062.0
+3.0,Walk,4062.0
+48.0,Walk,4062.0
+29.0,Graze,4063.0
+4.0,Occluded,4063.0
+4.0,Graze,4063.0
+21.0,Graze,4063.0
+3.0,Graze,4063.0
+3.0,Walk,4064.0
+4.0,Graze,4064.0
+4.0,Occluded,4065.0
+3.0,Graze,4065.0
+4.0,Graze,4065.0
+17.0,Graze,4065.0
+4.0,Occluded,4066.0
+1.0,Walk,4067.0
+60.0,Walk,4067.0
+4.0,Graze,4067.0
+4.0,Occluded,4067.0
+4.0,Graze,4068.0
+34.0,Walk,4068.0
+33.0,Occluded,4069.0
+4.0,Occluded,4069.0
+4.0,Occluded,4070.0
+4.0,Graze,4070.0
+4.0,Graze,4071.0
+4.0,Occluded,4072.0
+4.0,Graze,4072.0
+4.0,Occluded,4073.0
+19.0,Graze,4073.0
+4.0,Graze,4074.0
+4.0,Occluded,4074.0
+1.0,Graze,4074.0
+4.0,Graze,4075.0
+17.0,Out of Focus,4076.0
+4.0,Graze,4076.0
+4.0,Occluded,4076.0
+4.0,Occluded,4077.0
+4.0,Occluded,4078.0
+4.0,Graze,4078.0
+30.0,Out of Focus,4079.0
+29.0,Out of Focus,4079.0
+4.0,Graze,4079.0
+4.0,Occluded,4080.0
+1.0,Walk,4080.0
+4.0,Graze,4080.0
+4.0,Graze,4081.0
+4.0,Occluded,4081.0
+29.0,Graze,4082.0
+4.0,Occluded,4082.0
+30.0,Graze,4082.0
+4.0,Graze,4083.0
+4.0,Occluded,4084.0
+4.0,Graze,4085.0
+4.0,Occluded,4085.0
+4.0,Graze,4086.0
+4.0,Occluded,4087.0
+4.0,Graze,4087.0
+4.0,Occluded,4088.0
+4.0,Graze,4088.0
+6.0,Walk,4088.0
+4.0,Occluded,4089.0
+4.0,Graze,4090.0
+4.0,Occluded,4091.0
+12.0,Graze,4092.0
+4.0,Occluded,4092.0
+4.0,Graze,4092.0
+4.0,Graze,4093.0
+2.0,Graze,4093.0
+4.0,Graze,4094.0
+4.0,Occluded,4094.0
+4.0,Occluded,4095.0
+4.0,Graze,4096.0
+4.0,Occluded,4096.0
+4.0,Graze,4097.0
+4.0,Occluded,4098.0
+4.0,Occluded,4099.0
+4.0,Graze,4099.0
+4.0,Graze,4100.0
+1.0,Graze,4100.0
+60.0,Out of Focus,4100.0
+4.0,Occluded,4101.0
+4.0,Graze,4101.0
+4.0,Occluded,4102.0
+4.0,Occluded,4103.0
+4.0,Graze,4103.0
+4.0,Graze,4104.0
+4.0,Graze,4105.0
+4.0,Occluded,4105.0
+4.0,Occluded,4106.0
+4.0,Graze,4107.0
+4.0,Occluded,4107.0
+4.0,Graze,4108.0
+4.0,Graze,4109.0
+4.0,Occluded,4109.0
+4.0,Occluded,4110.0
+4.0,Occluded,4111.0
+4.0,Graze,4111.0
+4.0,Graze,4112.0
+4.0,Occluded,4113.0
+4.0,Occluded,4114.0
+4.0,Graze,4114.0
+60.0,Walk,4114.0
+4.0,Occluded,4115.0
+9.0,Walk,4115.0
+4.0,Graze,4115.0
+4.0,Graze,4116.0
+4.0,Occluded,4117.0
+4.0,Graze,4118.0
+4.0,Occluded,4119.0
+4.0,Graze,4120.0
+4.0,Occluded,4121.0
+4.0,Graze,4122.0
+4.0,Occluded,4122.0
+4.0,Graze,4123.0
+4.0,Occluded,4124.0
+4.0,Graze,4124.0
+4.0,Occluded,4125.0
+4.0,Occluded,4126.0
+4.0,Graze,4126.0
+4.0,Graze,4127.0
+4.0,Occluded,4128.0
+4.0,Occluded,4129.0
+4.0,Graze,4129.0
+4.0,Graze,4130.0
+14.0,Walk,4131.0
+4.0,Graze,4131.0
+4.0,Occluded,4131.0
+4.0,Occluded,4132.0
+4.0,Occluded,4133.0
+39.0,Out of Focus,4133.0
+4.0,Graze,4133.0
+4.0,Graze,4134.0
+1.0,Walk,4134.0
+4.0,Graze,4135.0
+4.0,Occluded,4135.0
+4.0,Occluded,4136.0
+34.0,Out of Focus,4136.0
+34.0,Walk,4137.0
+4.0,Graze,4137.0
+4.0,Occluded,4137.0
+4.0,Graze,4138.0
+4.0,Occluded,4139.0
+4.0,Graze,4139.0
+4.0,Occluded,4140.0
+4.0,Graze,4141.0
+4.0,Occluded,4141.0
+4.0,Graze,4142.0
+4.0,Occluded,4143.0
+11.0,Walk,4144.0
+4.0,Occluded,4144.0
+4.0,Graze,4144.0
+4.0,Graze,4145.0
+4.0,Graze,4146.0
+4.0,Occluded,4146.0
+4.0,Graze,4147.0
+4.0,Occluded,4147.0
+4.0,Occluded,4148.0
+4.0,Graze,4149.0
+4.0,Occluded,4150.0
+29.0,Head Up,4151.0
+4.0,Occluded,4151.0
+4.0,Graze,4151.0
+4.0,Graze,4152.0
+4.0,Graze,4153.0
+4.0,Occluded,4153.0
+4.0,Occluded,4154.0
+4.0,Graze,4155.0
+4.0,Occluded,4155.0
+4.0,Graze,4156.0
+18.0,Auto-Groom,4156.0
+4.0,Occluded,4157.0
+4.0,Graze,4158.0
+4.0,Occluded,4158.0
+4.0,Graze,4159.0
+4.0,Graze,4160.0
+29.0,Out of Focus,4160.0
+6.0,Graze,4160.0
+4.0,Occluded,4160.0
+4.0,Occluded,4161.0
+4.0,Occluded,4162.0
+4.0,Graze,4162.0
+4.0,Graze,4163.0
+4.0,Occluded,4164.0
+4.0,Graze,4164.0
+4.0,Occluded,4165.0
+4.0,Graze,4166.0
+2.0,Walk,4166.0
+4.0,Occluded,4166.0
+4.0,Graze,4167.0
+4.0,Occluded,4168.0
+4.0,Graze,4168.0
+4.0,Occluded,4169.0
+61.0,Graze,4169.0
+4.0,Graze,4170.0
+4.0,Occluded,4170.0
+4.0,Graze,4171.0
+4.0,Occluded,4172.0
+4.0,Occluded,4173.0
+4.0,Graze,4173.0
+4.0,Occluded,4174.0
+4.0,Graze,4174.0
+4.0,Graze,4175.0
+4.0,Occluded,4176.0
+4.0,Graze,4177.0
+6.0,Graze,4178.0
+4.0,Occluded,4178.0
+60.0,Sniff,4179.0
+4.0,Graze,4179.0
+4.0,Occluded,4180.0
+4.0,Graze,4181.0
+4.0,Occluded,4181.0
+7.0,Head Up,4181.0
+4.0,Graze,4182.0
+4.0,Occluded,4183.0
+4.0,Graze,4183.0
+4.0,Occluded,4184.0
+4.0,Graze,4185.0
+4.0,Occluded,4185.0
+4.0,Graze,4186.0
+4.0,Occluded,4187.0
+4.0,Occluded,4188.0
+4.0,Graze,4188.0
+4.0,Graze,4189.0
+4.0,Graze,4190.0
+4.0,Occluded,4190.0
+4.0,Occluded,4191.0
+4.0,Graze,4192.0
+4.0,Occluded,4192.0
+4.0,Graze,4193.0
+4.0,Occluded,4194.0
+4.0,Graze,4194.0
+4.0,Occluded,4195.0
+4.0,Occluded,4196.0
+4.0,Graze,4196.0
+60.0,Walk,4197.0
+13.0,Walk,4197.0
+4.0,Graze,4197.0
+4.0,Graze,4198.0
+4.0,Occluded,4198.0
+29.0,Graze,4199.0
+4.0,Occluded,4199.0
+4.0,Graze,4200.0
+4.0,Occluded,4200.0
+4.0,Graze,4201.0
+4.0,Occluded,4202.0
+4.0,Graze,4203.0
+4.0,Occluded,4203.0
+4.0,Graze,4204.0
+4.0,Occluded,4205.0
+4.0,Graze,4205.0
+4.0,Occluded,4206.0
+4.0,Graze,4206.0
+4.0,Occluded,4207.0
+4.0,Graze,4208.0
+4.0,Occluded,4208.0
+4.0,Graze,4209.0
+4.0,Occluded,4210.0
+4.0,Graze,4211.0
+4.0,Occluded,4211.0
+4.0,Graze,4212.0
+4.0,Graze,4213.0
+4.0,Occluded,4213.0
+4.0,Graze,4214.0
+36.0,Out of Focus,4214.0
+4.0,Occluded,4214.0
+4.0,Occluded,4215.0
+18.0,Head Up,4215.0
+4.0,Graze,4216.0
+4.0,Occluded,4217.0
+4.0,Graze,4218.0
+4.0,Occluded,4218.0
+4.0,Graze,4219.0
+4.0,Occluded,4220.0
+4.0,Graze,4220.0
+4.0,Occluded,4221.0
+4.0,Occluded,4222.0
+4.0,Graze,4222.0
+4.0,Graze,4223.0
+5.0,Walk,4223.0
+4.0,Graze,4224.0
+4.0,Occluded,4224.0
+4.0,Occluded,4225.0
+4.0,Graze,4226.0
+4.0,Occluded,4226.0
+4.0,Graze,4227.0
+4.0,Occluded,4228.0
+4.0,Graze,4228.0
+4.0,Occluded,4229.0
+4.0,Graze,4230.0
+4.0,Occluded,4230.0
+4.0,Graze,4231.0
+60.0,Out of Frame,4232.0
+41.0,Out of Focus,4232.0
+42.0,Out of Frame,4232.0
+5.0,Occluded,4232.0
+4.0,Occluded,4232.0
+4.0,Occluded,4233.0
+4.0,Graze,4233.0
+4.0,Graze,4234.0
+4.0,Occluded,4234.0
+4.0,Graze,4235.0
+4.0,Occluded,4236.0
+3.0,Graze,4237.0
+4.0,Graze,4237.0
+39.0,Walk,4238.0
+4.0,Occluded,4238.0
+2.0,Graze,4238.0
+4.0,Graze,4239.0
+4.0,Occluded,4240.0
+4.0,Graze,4241.0
+4.0,Occluded,4241.0
+4.0,Graze,4242.0
+4.0,Occluded,4243.0
+4.0,Graze,4243.0
+4.0,Occluded,4244.0
+4.0,Occluded,4245.0
+4.0,Graze,4245.0
+4.0,Graze,4246.0
+4.0,Occluded,4247.0
+4.0,Occluded,4248.0
+4.0,Graze,4248.0
+4.0,Graze,4249.0
+4.0,Occluded,4250.0
+4.0,Graze,4250.0
+4.0,Occluded,4251.0
+4.0,Occluded,4252.0
+4.0,Graze,4252.0
+4.0,Graze,4253.0
+4.0,Graze,4254.0
+4.0,Occluded,4254.0
+61.0,Out of Focus,4254.0
+4.0,Occluded,4255.0
+5.0,Head Up,4255.0
+1.0,Walk,4256.0
+4.0,Graze,4256.0
+4.0,Occluded,4256.0
+4.0,Graze,4257.0
+4.0,Graze,4258.0
+4.0,Occluded,4258.0
+4.0,Occluded,4259.0
+4.0,Graze,4260.0
+4.0,Occluded,4260.0
+4.0,Graze,4261.0
+4.0,Occluded,4262.0
+4.0,Occluded,4263.0
+4.0,Graze,4263.0
+4.0,Graze,4264.0
+4.0,Occluded,4265.0
+45.0,Occluded,4265.0
+4.0,Graze,4265.0
+4.0,Occluded,4266.0
+4.0,Graze,4266.0
+4.0,Occluded,4267.0
+4.0,Graze,4268.0
+4.0,Occluded,4269.0
+42.0,Walk,4269.0
+4.0,Occluded,4270.0
+4.0,Graze,4270.0
+4.0,Graze,4271.0
+4.0,Occluded,4272.0
+4.0,Graze,4272.0
+4.0,Occluded,4273.0
+29.0,Occluded,4274.0
+4.0,Graze,4274.0
+4.0,Occluded,4274.0
+4.0,Graze,4275.0
+4.0,Occluded,4276.0
+4.0,Occluded,4277.0
+4.0,Graze,4277.0
+4.0,Graze,4278.0
+19.0,Graze,4278.0
+4.0,Occluded,4279.0
+4.0,Graze,4279.0
+4.0,Occluded,4280.0
+4.0,Graze,4281.0
+4.0,Occluded,4281.0
+4.0,Graze,4282.0
+4.0,Graze,4283.0
+4.0,Occluded,4283.0
+4.0,Occluded,4284.0
+4.0,Graze,4285.0
+4.0,Occluded,4285.0
+4.0,Graze,4286.0
+1.0,Walk,4286.0
+4.0,Occluded,4287.0
+4.0,Graze,4287.0
+4.0,Occluded,4288.0
+4.0,Graze,4289.0
+4.0,Occluded,4289.0
+33.0,Walk,4290.0
+4.0,Graze,4290.0
+4.0,Occluded,4291.0
+4.0,Graze,4292.0
+4.0,Occluded,4292.0
+4.0,Graze,4293.0
+4.0,Occluded,4293.0
+4.0,Graze,4294.0
+4.0,Occluded,4295.0
+18.0,Head Up,4295.0
+4.0,Graze,4296.0
+4.0,Occluded,4297.0
+4.0,Graze,4298.0
+4.0,Occluded,4299.0
+41.0,Walk,4300.0
+4.0,Graze,4300.0
+4.0,Occluded,4300.0
+4.0,Graze,4301.0
+4.0,Occluded,4302.0
+4.0,Graze,4302.0
+4.0,Occluded,4303.0
+4.0,Occluded,4304.0
+4.0,Graze,4304.0
+58.0,Running,4304.0
+4.0,Graze,4305.0
+43.0,Graze,4305.0
+4.0,Occluded,4306.0
+4.0,Graze,4307.0
+4.0,Occluded,4307.0
+4.0,Graze,4308.0
+4.0,Occluded,4309.0
+4.0,Graze,4309.0
+4.0,Occluded,4310.0
+4.0,Graze,4311.0
+4.0,Occluded,4311.0
+59.0,Running,4311.0
+4.0,Graze,4312.0
+4.0,Graze,4313.0
+4.0,Occluded,4313.0
+4.0,Occluded,4314.0
+4.0,Graze,4315.0
+4.0,Occluded,4315.0
+4.0,Graze,4316.0
+4.0,Occluded,4317.0
+4.0,Graze,4317.0
+4.0,Occluded,4318.0
+4.0,Graze,4318.0
+4.0,Occluded,4319.0
+4.0,Graze,4320.0
+4.0,Occluded,4321.0
+4.0,Occluded,4322.0
+4.0,Graze,4322.0
+4.0,Graze,4323.0
+4.0,Occluded,4324.0
+4.0,Graze,4324.0
+4.0,Occluded,4325.0
+4.0,Graze,4325.0
+4.0,Occluded,4326.0
+4.0,Graze,4327.0
+4.0,Occluded,4328.0
+4.0,Graze,4329.0
+4.0,Occluded,4329.0
+4.0,Graze,4330.0
+4.0,Graze,4331.0
+4.0,Occluded,4331.0
+4.0,Occluded,4332.0
+4.0,Occluded,4333.0
+4.0,Graze,4333.0
+4.0,Graze,4334.0
+4.0,Occluded,4335.0
+4.0,Occluded,4336.0
+4.0,Graze,4336.0
+4.0,Graze,4337.0
+15.0,Walk,4338.0
+4.0,Occluded,4338.0
+4.0,Graze,4338.0
+4.0,Occluded,4339.0
+6.0,Walk,4340.0
+4.0,Graze,4340.0
+4.0,Occluded,4340.0
+4.0,Graze,4341.0
+4.0,Graze,4342.0
+4.0,Occluded,4342.0
+4.0,Occluded,4343.0
+4.0,Graze,4344.0
+4.0,Occluded,4344.0
+4.0,Head Up,4345.0
+4.0,Graze,4345.0
+48.0,Out of Focus,4346.0
+4.0,Graze,4346.0
+4.0,Occluded,4346.0
+4.0,Occluded,4347.0
+4.0,Graze,4348.0
+4.0,Occluded,4348.0
+4.0,Graze,4349.0
+4.0,Occluded,4350.0
+44.0,Graze,4350.0
+4.0,Walk,4350.0
+4.0,Graze,4351.0
+4.0,Occluded,4351.0
+4.0,Graze,4352.0
+4.0,Occluded,4352.0
+4.0,Graze,4353.0
+4.0,Occluded,4354.0
+4.0,Graze,4355.0
+4.0,Occluded,4356.0
+4.0,Graze,4357.0
+4.0,Occluded,4358.0
+30.0,Head Up,4358.0
+4.0,Occluded,4359.0
+4.0,Graze,4359.0
+4.0,Graze,4360.0
+1.0,Head Up,4361.0
+4.0,Graze,4361.0
+4.0,Occluded,4361.0
+4.0,Occluded,4362.0
+4.0,Graze,4363.0
+4.0,Occluded,4363.0
+4.0,Graze,4364.0
+12.0,Occluded,4365.0
+4.0,Occluded,4365.0
+4.0,Graze,4366.0
+4.0,Occluded,4366.0
+4.0,Graze,4367.0
+58.0,Trotting,4367.0
+4.0,Occluded,4368.0
+4.0,Graze,4368.0
+4.0,Occluded,4369.0
+4.0,Occluded,4370.0
+4.0,Graze,4370.0
+4.0,Graze,4371.0
+4.0,Graze,4372.0
+4.0,Occluded,4372.0
+4.0,Occluded,4373.0
+4.0,Occluded,4374.0
+4.0,Graze,4374.0
+60.0,Trotting,4374.0
+4.0,Graze,4375.0
+4.0,Occluded,4376.0
+4.0,Graze,4376.0
+4.0,Occluded,4377.0
+4.0,Occluded,4378.0
+4.0,Graze,4378.0
+7.0,Graze,4378.0
+4.0,Graze,4379.0
+4.0,Occluded,4380.0
+4.0,Occluded,4381.0
+4.0,Graze,4381.0
+4.0,Graze,4382.0
+16.0,Graze,4382.0
+4.0,Graze,4383.0
+4.0,Occluded,4383.0
+4.0,Graze,4384.0
+4.0,Occluded,4384.0
+3.0,Graze,4385.0
+15.0,Head Up,4385.0
+4.0,Occluded,4385.0
+4.0,Graze,4386.0
+4.0,Occluded,4387.0
+4.0,Occluded,4388.0
+4.0,Graze,4388.0
+4.0,Graze,4389.0
+4.0,Graze,4390.0
+4.0,Occluded,4390.0
+4.0,Occluded,4391.0
+4.0,Occluded,4392.0
+4.0,Graze,4392.0
+17.0,Out of Frame,4393.0
+4.0,Graze,4393.0
+4.0,Walk,4393.0
+4.0,Walk,4394.0
+4.0,Graze,4395.0
+1.0,Head Up,4395.0
+4.0,Walk,4395.0
+4.0,Graze,4396.0
+4.0,Graze,4397.0
+43.0,Occluded,4397.0
+4.0,Walk,4397.0
+31.0,Head Up,4398.0
+4.0,Walk,4398.0
+11.0,Graze,4407.0
+43.0,Walk,4410.0
+39.0,Graze,4420.0
+59.0,Trotting,4422.0
+9.0,Graze,4422.0
+45.0,Out of Focus,4431.0
+45.0,Graze,4437.0
+35.0,Graze,4440.0
+36.0,Graze,4440.0
+11.0,Walk,4446.0
+15.0,Trotting,4447.0
+45.0,Out of Focus,4457.0
+60.0,Walk,4467.0
+18.0,Graze,4469.0
+39.0,Head Up,4469.0
+23.0,Walk,4469.0
+47.0,Graze,4470.0
+45.0,Graze,4476.0
+24.0,Occluded,4476.0
+58.0,Head Up,4483.0
+7.0,Walk,4483.0
+26.0,Head Up,4489.0
+12.0,Head Up,4491.0
+59.0,Head Up,4493.0
+45.0,Out of Focus,4499.0
+45.0,Graze,4500.0
+30.0,Out of Focus,4502.0
+39.0,Walk,4504.0
+4.0,Walk,4507.0
+45.0,Out of Focus,4510.0
+60.0,Head Up,4512.0
+8.0,Auto-Groom,4513.0
+45.0,Graze,4513.0
+32.0,Head Up,4514.0
+3.0,Head Up,4519.0
+19.0,Out of Focus,4520.0
+30.0,Out of Focus,4521.0
+19.0,Graze,4522.0
+30.0,Graze,4524.0
+13.0,Walk,4529.0
+35.0,Walk,4531.0
+36.0,Walk,4537.0
+16.0,Walk,4538.0
+3.0,Auto-Groom,4542.0
+1.0,Head Up,4543.0
+8.0,Walk,4545.0
+1.0,Graze,4546.0
+23.0,Graze,4560.0
+17.0,Graze,4565.0
+6.0,Graze,4571.0
+3.0,Head Up,4574.0
+24.0,Graze,4574.0
+28.0,Graze,4581.0
+14.0,Head Up,4586.0
+18.0,Head Up,4586.0
+57.0,Walk,4588.0
+19.0,Head Up,4592.0
+45.0,Auto-Groom,4592.0
+43.0,Head Up,4598.0
+4.0,Graze,4600.0
+30.0,Head Up,4606.0
+4.0,Walk,4616.0
+15.0,Walk,4617.0
+44.0,Occluded,4622.0
+3.0,Head Up,4624.0
+23.0,Graze,4624.0
+3.0,Graze,4625.0
+3.0,Head Up,4625.0
+3.0,Graze,4626.0
+1.0,Sniff,4627.0
+3.0,Head Up,4627.0
+3.0,Head Up,4628.0
+3.0,Graze,4628.0
+3.0,Head Up,4629.0
+3.0,Graze,4629.0
+44.0,Out of Focus,4629.0
+3.0,Graze,4630.0
+3.0,Head Up,4630.0
+3.0,Head Up,4631.0
+3.0,Graze,4631.0
+3.0,Head Up,4632.0
+3.0,Graze,4632.0
+3.0,Graze,4633.0
+6.0,Out of Focus,4634.0
+3.0,Head Up,4634.0
+3.0,Graze,4635.0
+3.0,Head Up,4635.0
+3.0,Head Up,4636.0
+3.0,Graze,4636.0
+3.0,Graze,4637.0
+12.0,Graze,4638.0
+28.0,Walk,4638.0
+3.0,Head Up,4638.0
+3.0,Graze,4639.0
+3.0,Head Up,4639.0
+60.0,Out of Focus,4640.0
+3.0,Head Up,4640.0
+3.0,Graze,4640.0
+3.0,Graze,4641.0
+15.0,Graze,4641.0
+3.0,Head Up,4642.0
+3.0,Head Up,4643.0
+3.0,Graze,4643.0
+9.0,Head Up,4644.0
+3.0,Graze,4644.0
+3.0,Head Up,4644.0
+3.0,Graze,4645.0
+1.0,Auto-Groom,4645.0
+3.0,Head Up,4646.0
+3.0,Graze,4647.0
+3.0,Head Up,4647.0
+44.0,Occluded,4647.0
+3.0,Graze,4648.0
+3.0,Head Up,4649.0
+58.0,Walk,4650.0
+3.0,Graze,4650.0
+3.0,Head Up,4650.0
+3.0,Head Up,4651.0
+3.0,Graze,4651.0
+30.0,Out of Focus,4652.0
+3.0,Graze,4652.0
+3.0,Head Up,4653.0
+3.0,Head Up,4654.0
+3.0,Graze,4654.0
+3.0,Head Up,4655.0
+3.0,Graze,4655.0
+3.0,Graze,4656.0
+3.0,Head Up,4657.0
+3.0,Graze,4658.0
+3.0,Head Up,4658.0
+11.0,Graze,4658.0
+3.0,Graze,4659.0
+3.0,Head Up,4659.0
+3.0,Graze,4660.0
+3.0,Head Up,4660.0
+57.0,Out of Focus,4661.0
+3.0,Graze,4661.0
+3.0,Head Up,4661.0
+60.0,Head Up,4661.0
+3.0,Head Up,4662.0
+3.0,Graze,4662.0
+3.0,Graze,4663.0
+3.0,Head Up,4664.0
+3.0,Head Up,4665.0
+3.0,Graze,4665.0
+3.0,Head Up,4666.0
+3.0,Graze,4666.0
+3.0,Graze,4667.0
+3.0,Head Up,4668.0
+3.0,Head Up,4669.0
+3.0,Graze,4669.0
+3.0,Head Up,4670.0
+3.0,Graze,4670.0
+3.0,Graze,4671.0
+24.0,Running,4671.0
+1.0,Out of Focus,4672.0
+3.0,Head Up,4672.0
+11.0,Occluded,4672.0
+3.0,Head Up,4673.0
+3.0,Graze,4673.0
+19.0,Graze,4674.0
+3.0,Head Up,4674.0
+3.0,Graze,4674.0
+3.0,Graze,4675.0
+3.0,Head Up,4676.0
+3.0,Graze,4677.0
+3.0,Head Up,4677.0
+3.0,Head Up,4678.0
+3.0,Graze,4678.0
+6.0,Graze,4678.0
+3.0,Head Up,4679.0
+3.0,Graze,4679.0
+3.0,Head Up,4680.0
+3.0,Graze,4680.0
+3.0,Graze,4681.0
+3.0,Head Up,4682.0
+3.0,Graze,4682.0
+3.0,Head Up,4683.0
+3.0,Graze,4684.0
+3.0,Head Up,4684.0
+3.0,Graze,4685.0
+3.0,Head Up,4685.0
+4.0,Graze,4685.0
+3.0,Graze,4686.0
+3.0,Head Up,4687.0
+3.0,Graze,4688.0
+3.0,Head Up,4688.0
+3.0,Head Up,4688.0
+3.0,Head Up,4689.0
+60.0,Running,4689.0
+3.0,Graze,4689.0
+3.0,Graze,4690.0
+3.0,Head Up,4690.0
+12.0,Graze,4691.0
+3.0,Head Up,4691.0
+3.0,Graze,4691.0
+3.0,Head Up,4692.0
+3.0,Graze,4692.0
+3.0,Graze,4693.0
+3.0,Head Up,4694.0
+3.0,Head Up,4695.0
+3.0,Graze,4695.0
+58.0,Running,4696.0
+3.0,Graze,4696.0
+3.0,Head Up,4696.0
+59.0,Out of Focus,4697.0
+3.0,Graze,4697.0
+3.0,Head Up,4698.0
+3.0,Head Up,4698.0
+3.0,Graze,4699.0
+3.0,Head Up,4699.0
+43.0,Running,4699.0
+3.0,Head Up,4700.0
+3.0,Graze,4700.0
+3.0,Graze,4701.0
+3.0,Head Up,4702.0
+3.0,Graze,4703.0
+3.0,Head Up,4703.0
+3.0,Graze,4704.0
+3.0,Head Up,4704.0
+3.0,Graze,4705.0
+3.0,Head Up,4706.0
+3.0,Graze,4707.0
+3.0,Head Up,4707.0
+3.0,Graze,4708.0
+6.0,Graze,4708.0
+3.0,Head Up,4709.0
+4.0,Walk,4710.0
+3.0,Head Up,4710.0
+3.0,Graze,4710.0
+3.0,Head Up,4711.0
+3.0,Graze,4711.0
+3.0,Graze,4712.0
+6.0,Head Up,4713.0
+3.0,Head Up,4713.0
+3.0,Graze,4714.0
+3.0,Head Up,4714.0
+45.0,Graze,4715.0
+3.0,Graze,4715.0
+3.0,Head Up,4715.0
+3.0,Graze,4716.0
+3.0,Head Up,4717.0
+3.0,Head Up,4718.0
+3.0,Graze,4718.0
+3.0,Head Up,4719.0
+3.0,Graze,4719.0
+3.0,Graze,4720.0
+3.0,Head Up,4720.0
+7.0,Graze,4720.0
+3.0,Graze,4721.0
+3.0,Head Up,4721.0
+3.0,Graze,4722.0
+3.0,Head Up,4722.0
+1.0,Walk,4722.0
+3.0,Graze,4723.0
+3.0,Head Up,4724.0
+3.0,Graze,4725.0
+3.0,Head Up,4725.0
+3.0,Graze,4726.0
+3.0,Head Up,4726.0
+3.0,Graze,4727.0
+3.0,Graze,4728.0
+3.0,Head Up,4728.0
+3.0,Graze,4729.0
+3.0,Head Up,4729.0
+9.0,Walk,4729.0
+3.0,Graze,4730.0
+3.0,Head Up,4730.0
+3.0,Graze,4731.0
+25.0,Running,4731.0
+3.0,Head Up,4732.0
+3.0,Head Up,4733.0
+3.0,Graze,4733.0
+3.0,Graze,4734.0
+3.0,Head Up,4735.0
+43.0,Trotting,4736.0
+9.0,Auto-Groom,4736.0
+3.0,Head Up,4736.0
+3.0,Graze,4736.0
+3.0,Head Up,4737.0
+3.0,Graze,4737.0
+18.0,Graze,4738.0
+3.0,Graze,4738.0
+3.0,Head Up,4739.0
+6.0,Walk,4739.0
+3.0,Graze,4740.0
+3.0,Head Up,4740.0
+3.0,Graze,4741.0
+3.0,Head Up,4741.0
+3.0,Head Up,4742.0
+3.0,Graze,4742.0
+3.0,Graze,4743.0
+3.0,Head Up,4743.0
+3.0,Graze,4744.0
+3.0,Head Up,4744.0
+3.0,Graze,4745.0
+3.0,Head Up,4746.0
+2.0,Walk,4747.0
+41.0,Head Up,4753.0
+1.0,Graze,4757.0
+35.0,Walk,4757.0
+35.0,Head Up,4757.0
+9.0,Graze,4762.0
+41.0,Walk,4778.0
+24.0,Walk,4779.0
+2.0,Walk,4780.0
+6.0,Out of Frame,4780.0
+60.0,Out of Focus,4780.0
+1.0,Head Up,4784.0
+4.0,Head Up,4786.0
+3.0,Head Up,4790.0
+9.0,Auto-Groom,4790.0
+13.0,Head Up,4794.0
+13.0,Graze,4797.0
+1.0,Graze,4800.0
+4.0,Graze,4802.0
+16.0,Graze,4805.0
+41.0,Head Up,4807.0
+1.0,Out of Frame,4818.0
+9.0,Walk,4822.0
+59.0,Out of Focus,4832.0
+30.0,Head Up,4835.0
+43.0,Walk,4838.0
+15.0,Sniff,4839.0
+43.0,Trotting,4850.0
+3.0,Graze,4850.0
+6.0,Graze,4854.0
+15.0,Head Up,4863.0
+25.0,Out of Focus,4870.0
+15.0,Walk,4874.0
+2.0,Walk,4876.0
+2.0,Head Up,4876.0
+37.0,Walk,4877.0
+59.0,Walk,4891.0
+24.0,Out of Focus,4896.0
+44.0,Graze,4897.0
+41.0,Trotting,4898.0
+24.0,Head Up,4899.0
+11.0,Head Up,4903.0
+26.0,Graze,4907.0
+3.0,Walk,4910.0
+3.0,Head Up,4910.0
+3.0,Head Up,4911.0
+4.0,Walk,4911.0
+3.0,Walk,4911.0
+3.0,Walk,4912.0
+3.0,Head Up,4913.0
+3.0,Head Up,4914.0
+3.0,Walk,4914.0
+3.0,Head Up,4915.0
+3.0,Walk,4915.0
+3.0,Head Up,4916.0
+3.0,Walk,4916.0
+3.0,Walk,4917.0
+3.0,Head Up,4917.0
+3.0,Walk,4918.0
+13.0,Out of Focus,4918.0
+3.0,Head Up,4919.0
+3.0,Walk,4919.0
+3.0,Head Up,4920.0
+3.0,Head Up,4921.0
+3.0,Walk,4921.0
+3.0,Head Up,4922.0
+15.0,Out of Focus,4922.0
+3.0,Walk,4922.0
+3.0,Walk,4923.0
+3.0,Head Up,4924.0
+3.0,Walk,4925.0
+3.0,Head Up,4925.0
+3.0,Walk,4926.0
+3.0,Head Up,4926.0
+3.0,Head Up,4927.0
+3.0,Walk,4927.0
+3.0,Walk,4928.0
+3.0,Head Up,4928.0
+3.0,Walk,4929.0
+3.0,Head Up,4929.0
+3.0,Walk,4930.0
+3.0,Head Up,4931.0
+3.0,Walk,4932.0
+3.0,Walk,4932.0
+9.0,Walk,4967.0
+41.0,Walk,4971.0
+3.0,Head Up,4975.0
+36.0,Head Up,4982.0
+39.0,Head Up,4989.0
+10.0,Head Up,4993.0
+15.0,Graze,4994.0
+3.0,Head Up,4996.0
+9.0,Head Up,5002.0
+43.0,Head Up,5004.0
+59.0,Out of Focus,5006.0
+6.0,Head Up,5012.0
+59.0,Walk,5020.0
+11.0,Graze,5020.0
+3.0,Walk,5024.0
+4.0,Occluded,5038.0
+4.0,Walk,5039.0
+4.0,Occluded,5039.0
+4.0,Walk,5040.0
+4.0,Occluded,5041.0
+43.0,Walk,5041.0
+4.0,Walk,5042.0
+4.0,Occluded,5042.0
+4.0,Walk,5043.0
+4.0,Occluded,5044.0
+4.0,Walk,5044.0
+4.0,Occluded,5045.0
+4.0,Walk,5045.0
+4.0,Occluded,5046.0
+4.0,Walk,5047.0
+4.0,Occluded,5048.0
+4.0,Walk,5049.0
+60.0,Out of Frame,5049.0
+4.0,Occluded,5049.0
+4.0,Walk,5050.0
+61.0,Walk,5050.0
+4.0,Occluded,5051.0
+4.0,Walk,5051.0
+4.0,Occluded,5052.0
+4.0,Walk,5053.0
+4.0,Occluded,5053.0
+4.0,Walk,5054.0
+4.0,Occluded,5055.0
+4.0,Walk,5055.0
+4.0,Occluded,5056.0
+4.0,Walk,5057.0
+4.0,Occluded,5057.0
+4.0,Walk,5058.0
+4.0,Walk,5059.0
+4.0,Occluded,5059.0
+4.0,Occluded,5060.0
+4.0,Walk,5061.0
+4.0,Occluded,5061.0
+30.0,Graze,5062.0
+4.0,Walk,5062.0
+4.0,Occluded,5063.0
+4.0,Occluded,5064.0
+4.0,Walk,5064.0
+4.0,Occluded,5065.0
+4.0,Walk,5065.0
+11.0,Head Up,5065.0
+4.0,Walk,5066.0
+35.0,Walk,5066.0
+4.0,Occluded,5067.0
+4.0,Walk,5068.0
+4.0,Occluded,5069.0
+4.0,Walk,5070.0
+4.0,Occluded,5071.0
+4.0,Occluded,5072.0
+4.0,Walk,5072.0
+4.0,Walk,5073.0
+4.0,Occluded,5074.0
+4.0,Walk,5074.0
+4.0,Occluded,5075.0
+4.0,Walk,5076.0
+4.0,Occluded,5076.0
+4.0,Walk,5077.0
+4.0,Occluded,5078.0
+4.0,Walk,5079.0
+4.0,Occluded,5079.0
+4.0,Walk,5080.0
+4.0,Occluded,5081.0
+4.0,Walk,5081.0
+4.0,Occluded,5082.0
+4.0,Walk,5083.0
+4.0,Occluded,5083.0
+4.0,Walk,5084.0
+4.0,Occluded,5085.0
+4.0,Walk,5085.0
+42.0,Head Up,5086.0
+4.0,Occluded,5086.0
+4.0,Occluded,5087.0
+4.0,Walk,5087.0
+4.0,Walk,5088.0
+4.0,Occluded,5089.0
+44.0,Out of Focus,5102.0
+3.0,Walk,5102.0
+18.0,Head Up,5102.0
+11.0,Graze,5112.0
+9.0,Auto-Groom,5122.0
+14.0,Graze,5130.0
+15.0,Graze,5130.0
+27.0,Head Up,5133.0
+5.0,Head Up,5142.0
+6.0,Graze,5142.0
+9.0,Walk,5143.0
+41.0,Head Up,5146.0
+43.0,Head Up,5151.0
+59.0,Out of Focus,5153.0
+15.0,Walk,5155.0
+9.0,Graze,5161.0
+43.0,Out of Frame,5164.0
+47.0,Head Up,5165.0
+46.0,Graze,5166.0
+61.0,Out of Focus,5166.0
+7.0,Walk,5184.0
+4.0,Graze,5192.0
+60.0,Walk,5198.0
+12.0,Occluded,5198.0
+5.0,Walk,5204.0
+27.0,Out of Focus,5206.0
+12.0,Walk,5208.0
+12.0,Head Up,5208.0
+15.0,Head Up,5208.0
+1.0,Walk,5209.0
+30.0,Out of Focus,5209.0
+18.0,Graze,5211.0
+41.0,Walk,5221.0
+9.0,Graze,5237.0
+3.0,Graze,5244.0
+3.0,Walk,5245.0
+3.0,Graze,5246.0
+3.0,Walk,5246.0
+3.0,Graze,5247.0
+3.0,Walk,5248.0
+3.0,Graze,5249.0
+3.0,Walk,5250.0
+3.0,Graze,5251.0
+3.0,Walk,5251.0
+3.0,Graze,5252.0
+3.0,Walk,5253.0
+3.0,Graze,5254.0
+3.0,Walk,5255.0
+3.0,Graze,5255.0
+3.0,Walk,5256.0
+3.0,Graze,5257.0
+13.0,Occluded,5258.0
+3.0,Walk,5258.0
+3.0,Graze,5259.0
+44.0,Graze,5259.0
+3.0,Walk,5260.0
+3.0,Graze,5261.0
+3.0,Walk,5262.0
+3.0,Graze,5263.0
+51.0,Graze,5263.0
+3.0,Walk,5264.0
+3.0,Graze,5265.0
+3.0,Graze,5266.0
+3.0,Walk,5266.0
+47.0,Graze,5267.0
+3.0,Graze,5267.0
+3.0,Walk,5267.0
+3.0,Walk,5268.0
+3.0,Graze,5269.0
+3.0,Walk,5270.0
+3.0,Graze,5270.0
+3.0,Walk,5271.0
+3.0,Graze,5271.0
+9.0,Sniff,5271.0
+3.0,Walk,5272.0
+41.0,Walk,5273.0
+3.0,Graze,5273.0
+3.0,Graze,5274.0
+3.0,Walk,5274.0
+3.0,Graze,5275.0
+3.0,Walk,5275.0
+3.0,Walk,5276.0
+3.0,Graze,5277.0
+3.0,Walk,5278.0
+3.0,Graze,5279.0
+3.0,Walk,5280.0
+3.0,Graze,5280.0
+4.0,Walk,5281.0
+3.0,Walk,5281.0
+3.0,Graze,5282.0
+3.0,Walk,5283.0
+3.0,Graze,5284.0
+24.0,Graze,5285.0
+14.0,Walk,5301.0
+4.0,Head Up,5310.0
+26.0,Head Up,5314.0
+7.0,Occluded,5319.0
+14.0,Occluded,5321.0
+41.0,Walk,5327.0
+47.0,Graze,5328.0
+43.0,Walk,5330.0
+18.0,Graze,5332.0
+42.0,Walk,5349.0
+39.0,Walk,5353.0
+3.0,Auto-Groom,5354.0
+11.0,Walk,5368.0
+14.0,Walk,5372.0
+4.0,Head Up,5374.0
+6.0,Walk,5374.0
+7.0,Graze,5374.0
+41.0,Trotting,5391.0
+42.0,Trotting,5394.0
+13.0,Auto-Groom,5396.0
+23.0,Out of Frame,5400.0
+39.0,Head Up,5404.0
+3.0,Walk,5411.0
+43.0,Trotting,5422.0
+4.0,Walk,5422.0
+9.0,Graze,5435.0
+3.0,Walk,5436.0
+66.0,Walk,5458.0
+9.0,Head Up,5471.0
+38.0,Walk,5477.0
+44.0,Walk,5480.0
+14.0,Graze,5496.0
+1.0,Graze,5511.0
+18.0,Head Up,5511.0
+42.0,Walk,5514.0
+6.0,Head Up,5518.0
+1.0,Walk,5518.0
+4.0,Graze,5519.0
+39.0,Trotting,5521.0
+6.0,Sniff,5524.0
+5.0,Walk,5525.0
+26.0,Graze,5526.0
+14.0,Walk,5527.0
+3.0,Running,5527.0
+12.0,Occluded,5528.0
+1.0,Graze,5528.0
+8.0,Auto-Groom,5532.0
+29.0,Head Up,5533.0
+24.0,Head Up,5539.0
+6.0,Walk,5545.0
+5.0,Graze,5558.0
+22.0,Walk,5560.0
+41.0,Walk,5564.0
+12.0,Walk,5566.0
+8.0,Walk,5569.0
+12.0,Graze,5570.0
+1.0,Walk,5571.0
+13.0,Walk,5579.0
+43.0,Walk,5583.0
+4.0,Out of Focus,5583.0
+5.0,Out of Focus,5587.0
+9.0,Running,5589.0
+39.0,Walk,5590.0
+5.0,Walk,5595.0
+38.0,Walk,5604.0
+16.0,Walk,5607.0
+20.0,Graze,5612.0
+12.0,Occluded,5613.0
+9.0,Walk,5622.0
+6.0,Auto-Groom,5642.0
+3.0,Head Up,5649.0
+6.0,Walk,5651.0
+16.0,Graze,5654.0
+67.0,Trotting,5656.0
+15.0,Out of Frame,5656.0
+20.0,Walk,5663.0
+1.0,Head Up,5664.0
+5.0,Graze,5668.0
+6.0,Auto-Groom,5671.0
+22.0,Walk,5675.0
+19.0,Out of Frame,5682.0
+6.0,Walk,5685.0
+51.0,Auto-Groom,5687.0
+17.0,Head Up,5702.0
+46.0,Walk,5707.0
+22.0,Graze,5712.0
+16.0,Head Up,5712.0
+1.0,Graze,5726.0
+19.0,Graze,5730.0
+5.0,Head Up,5749.0
+63.0,Trotting,5758.0
+6.0,Graze,5759.0
+51.0,Walk,5760.0
+13.0,Head Up,5765.0
+47.0,Head Up,5769.0
+6.0,Walk,5783.0
+6.0,Graze,5788.0
+1.0,Occluded,5799.0
+9.0,Mutual Grooming,5803.0
+49.0,Graze,5803.0
+43.0,Head Up,5813.0
+63.0,Walk,5824.0
+14.0,Running,5824.0
+15.0,Graze,5824.0
+7.0,Walk,5825.0
+9.0,Walk,5836.0
+41.0,Head Up,5838.0
+6.0,Head Up,5838.0
+7.0,Graze,5839.0
+19.0,Head Up,5846.0
+3.0,Graze,5853.0
+35.0,Head Up,5858.0
+18.0,Graze,5862.0
+43.0,Head Up,5863.0
+6.0,Auto-Groom,5867.0
+6.0,Walk,5878.0
+20.0,Graze,5879.0
+3.0,Walk,5894.0
+22.0,Graze,5897.0
+13.0,Head Up,5904.0
+47.0,Graze,5905.0
+6.0,Graze,5905.0
+5.0,Walk,5909.0
+42.0,Head Up,5924.0
+14.0,Walk,5929.0
+9.0,Occluded,5932.0
+12.0,Graze,5933.0
+50.0,Out of Focus,5941.0
+12.0,Occluded,5942.0
+9.0,Walk,5975.0
+11.0,Occluded,5977.0
+5.0,Graze,5983.0
+31.0,Walk,5990.0
+24.0,Walk,5992.0
+3.0,Graze,6000.0
+3.0,Head Up,6015.0
+3.0,Graze,6015.0
+3.0,Head Up,6016.0
+3.0,Graze,6017.0
+3.0,Head Up,6018.0
+19.0,Graze,6019.0
+3.0,Graze,6019.0
+19.0,Head Up,6020.0
+3.0,Head Up,6020.0
+3.0,Graze,6021.0
+3.0,Graze,6021.0
+3.0,Walk,6022.0
+3.0,Head Up,6022.0
+3.0,Walk,6023.0
+3.0,Head Up,6023.0
+3.0,Walk,6024.0
+3.0,Head Up,6025.0
+3.0,Walk,6026.0
+3.0,Head Up,6027.0
+3.0,Walk,6028.0
+3.0,Head Up,6029.0
+3.0,Walk,6030.0
+19.0,Graze,6030.0
+3.0,Head Up,6031.0
+3.0,Walk,6032.0
+3.0,Head Up,6032.0
+3.0,Walk,6033.0
+3.0,Head Up,6034.0
+3.0,Walk,6034.0
+3.0,Walk,6035.0
+3.0,Head Up,6035.0
+26.0,Walk,6036.0
+25.0,Out of Frame,6036.0
+3.0,Head Up,6036.0
+3.0,Walk,6037.0
+3.0,Head Up,6037.0
+27.0,Head Up,6037.0
+50.0,Graze,6037.0
+3.0,Walk,6038.0
+12.0,Graze,6039.0
+3.0,Head Up,6039.0
+3.0,Walk,6039.0
+3.0,Walk,6040.0
+19.0,Walk,6040.0
+3.0,Head Up,6040.0
+3.0,Head Up,6041.0
+3.0,Walk,6042.0
+14.0,Out of Focus,6046.0
+19.0,Graze,6047.0
+42.0,Occluded,6049.0
+6.0,Graze,6054.0
+24.0,Head Up,6059.0
+19.0,Out of Frame,6064.0
+63.0,Out of Focus,6073.0
+19.0,Graze,6077.0
+7.0,Occluded,6078.0
+26.0,Out of Frame,6087.0
+62.0,Walk,6090.0
+27.0,Out of Frame,6091.0
+12.0,Occluded,6093.0
+47.0,Walk,6095.0
+6.0,Out of Focus,6095.0
+6.0,Walk,6098.0
+11.0,Graze,6114.0
+48.0,Trotting,6120.0
+18.0,Head Up,6120.0
+7.0,Occluded,6129.0
+27.0,Walk,6133.0
+11.0,Occluded,6147.0
+61.0,Head Up,6160.0
+18.0,Graze,6170.0
+25.0,Walk,6174.0
+35.0,Walk,6177.0
+28.0,Walk,6177.0
+8.0,Graze,6178.0
+22.0,Walk,6187.0
+20.0,Head Up,6207.0
+5.0,Head Up,6213.0
+66.0,Out of Focus,6219.0
+17.0,Walk,6224.0
+62.0,Head Up,6237.0
+22.0,Graze,6250.0
+47.0,Head Up,6254.0
+48.0,Walk,6258.0
+27.0,Graze,6273.0
+11.0,Graze,6277.0
+15.0,Walk,6278.0
+12.0,Head Up,6281.0
+43.0,Walk,6291.0
+39.0,Head Up,6291.0
+27.0,Head Up,6298.0
+60.0,Out of Focus,6302.0
+51.0,Sniff,6304.0
+30.0,Head Up,6308.0
+12.0,Defecating,6322.0
+18.0,Head Up,6323.0
+2.0,Occluded,6326.0
+16.0,Walk,6330.0
+51.0,Out of Focus,6341.0
+60.0,Walk,6341.0
+41.0,Walk,6345.0
+30.0,Graze,6350.0
+43.0,Walk,6352.0
+51.0,Sniff,6352.0
+3.0,Head Up,6354.0
+24.0,Out of Focus,6371.0
+47.0,Graze,6371.0
+3.0,Graze,6373.0
+7.0,Graze,6377.0
+48.0,Running,6380.0
+51.0,Walk,6385.0
+30.0,Graze,6389.0
+51.0,Auto-Groom,6412.0
+2.0,Walk,6419.0
+45.0,Trotting,6431.0
+60.0,Out of Focus,6453.0
+42.0,Walk,6454.0
+39.0,Walk,6462.0
+48.0,Trotting,6464.0
+43.0,Head Up,6470.0
+26.0,Walk,6496.0
+44.0,Walk,6505.0
+18.0,Auto-Groom,6509.0
+20.0,Walk,6519.0
+41.0,Head Up,6519.0
+21.0,Walk,6527.0
+53.0,Graze,6540.0
+3.0,Walk,6543.0
+3.0,Auto-Groom,6543.0
+3.0,Auto-Groom,6544.0
+3.0,Auto-Groom,6545.0
+3.0,Walk,6545.0
+51.0,Walk,6546.0
+3.0,Walk,6546.0
+3.0,Auto-Groom,6546.0
+3.0,Walk,6547.0
+3.0,Auto-Groom,6548.0
+3.0,Walk,6549.0
+3.0,Walk,6550.0
+3.0,Auto-Groom,6550.0
+3.0,Auto-Groom,6551.0
+3.0,Walk,6551.0
+3.0,Auto-Groom,6552.0
+3.0,Walk,6553.0
+3.0,Auto-Groom,6553.0
+3.0,Walk,6554.0
+3.0,Auto-Groom,6555.0
+3.0,Walk,6556.0
+3.0,Auto-Groom,6557.0
+1.0,Head Up,6557.0
+3.0,Walk,6558.0
+3.0,Auto-Groom,6559.0
+3.0,Walk,6560.0
+3.0,Auto-Groom,6561.0
+3.0,Walk,6562.0
+3.0,Auto-Groom,6563.0
+3.0,Walk,6564.0
+44.0,Graze,6564.0
+3.0,Auto-Groom,6565.0
+3.0,Walk,6566.0
+3.0,Auto-Groom,6566.0
+3.0,Auto-Groom,6567.0
+3.0,Walk,6567.0
+3.0,Walk,6568.0
+3.0,Auto-Groom,6569.0
+3.0,Walk,6570.0
+3.0,Auto-Groom,6571.0
+3.0,Walk,6572.0
+35.0,Graze,6581.0
+36.0,Graze,6582.0
+18.0,Walk,6592.0
+26.0,Head Up,6594.0
+44.0,Out of Focus,6620.0
+20.0,Graze,6622.0
+47.0,Out of Focus,6625.0
+47.0,Walk,6630.0
+22.0,Walk,6632.0
+47.0,Out of Focus,6636.0
+47.0,Walk,6637.0
+31.0,Out of Focus,6641.0
+31.0,Walk,6646.0
+59.0,Out of Focus,6648.0
+51.0,Auto-Groom,6655.0
+49.0,Walk,6657.0
+51.0,Graze,6664.0
+36.0,Walk,6664.0
+30.0,Running,6666.0
+18.0,Head Up,6685.0
+47.0,Walk,6686.0
+1.0,Walk,6709.0
+4.0,Head Up,6715.0
+25.0,Trotting,6716.0
+17.0,Out of Focus,6722.0
+47.0,Out of Focus,6724.0
+6.0,Out of Focus,6725.0
+6.0,Walk,6726.0
+3.0,Graze,6726.0
+3.0,Walk,6727.0
+35.0,Out of Focus,6727.0
+3.0,Graze,6728.0
+4.0,Walk,6729.0
+3.0,Walk,6729.0
+9.0,Out of Focus,6729.0
+6.0,Out of Focus,6729.0
+9.0,Graze,6730.0
+3.0,Graze,6730.0
+3.0,Walk,6730.0
+3.0,Graze,6731.0
+3.0,Walk,6732.0
+28.0,Trotting,6733.0
+21.0,Graze,6733.0
+3.0,Graze,6733.0
+3.0,Walk,6733.0
+3.0,Graze,6734.0
+3.0,Walk,6735.0
+3.0,Graze,6736.0
+5.0,Head Up,6736.0
+3.0,Graze,6737.0
+3.0,Walk,6737.0
+3.0,Graze,6738.0
+3.0,Walk,6738.0
+3.0,Graze,6739.0
+3.0,Walk,6739.0
+3.0,Walk,6740.0
+3.0,Graze,6741.0
+3.0,Walk,6741.0
+47.0,Walk,6741.0
+3.0,Graze,6742.0
+3.0,Walk,6743.0
+3.0,Walk,6744.0
+3.0,Graze,6744.0
+3.0,Graze,6745.0
+3.0,Walk,6746.0
+3.0,Graze,6747.0
+12.0,Graze,6748.0
+3.0,Graze,6748.0
+3.0,Walk,6748.0
+3.0,Walk,6749.0
+3.0,Graze,6749.0
+44.0,Walk,6749.0
+3.0,Walk,6750.0
+3.0,Graze,6750.0
+3.0,Walk,6751.0
+3.0,Graze,6751.0
+3.0,Walk,6752.0
+3.0,Graze,6752.0
+3.0,Walk,6753.0
+3.0,Graze,6753.0
+3.0,Walk,6754.0
+3.0,Walk,6755.0
+3.0,Graze,6755.0
+3.0,Graze,6756.0
+3.0,Walk,6757.0
+3.0,Graze,6758.0
+3.0,Graze,6759.0
+3.0,Walk,6759.0
+3.0,Graze,6760.0
+3.0,Walk,6760.0
+3.0,Walk,6761.0
+3.0,Graze,6761.0
+3.0,Walk,6762.0
+3.0,Graze,6762.0
+3.0,Walk,6763.0
+3.0,Graze,6763.0
+3.0,Graze,6764.0
+3.0,Walk,6764.0
+3.0,Graze,6765.0
+3.0,Walk,6765.0
+3.0,Walk,6766.0
+3.0,Graze,6766.0
+36.0,Graze,6767.0
+19.0,Walk,6770.0
+12.0,Graze,6775.0
+30.0,Head Up,6779.0
+47.0,Out of Focus,6781.0
+11.0,Occluded,6785.0
+43.0,Walk,6787.0
+47.0,Walk,6789.0
+2.0,Walk,6794.0
+35.0,Out of Focus,6800.0
+60.0,Running,6803.0
+10.0,Head Up,6806.0
+50.0,Running,6806.0
+52.0,Running,6812.0
+58.0,Head Up,6820.0
+10.0,Graze,6823.0
+4.0,Graze,6824.0
+22.0,Graze,6833.0
+51.0,Head Up,6837.0
+57.0,Head Up,6847.0
+9.0,Out of Frame,6853.0
+4.0,Graze,6857.0
+41.0,Walk,6859.0
+47.0,Graze,6863.0
+44.0,Graze,6868.0
+60.0,Trotting,6870.0
+50.0,Out of Frame,6877.0
+2.0,Out of Frame,6887.0
+12.0,Occluded,6895.0
+18.0,Walk,6895.0
+4.0,Walk,6899.0
+22.0,Walk,6900.0
+3.0,Out of Frame,6901.0
+50.0,Walk,6902.0
+26.0,Out of Frame,6908.0
+19.0,Graze,6908.0
+1.0,Out of Frame,6911.0
+5.0,Graze,6912.0
+12.0,Graze,6914.0
+36.0,Out of Focus,6914.0
+1.0,Head Up,6919.0
+20.0,Walk,6920.0
+12.0,Occluded,6930.0
+45.0,Walk,6930.0
+11.0,Graze,6942.0
+54.0,Walk,6948.0
+53.0,Walk,6948.0
+22.0,Graze,6959.0
+5.0,Graze,6961.0
+1.0,Walk,6962.0
+50.0,Graze,6964.0
+3.0,Walk,6964.0
+29.0,Walk,6967.0
+52.0,Trotting,6968.0
+25.0,Walk,6969.0
+30.0,Graze,6982.0
+58.0,Walk,6986.0
+26.0,Graze,6987.0
+2.0,Walk,6994.0
+28.0,Walk,6999.0
+57.0,Auto-Groom,7001.0
+30.0,Walk,7002.0
+24.0,Out of Frame,7005.0
+26.0,Walk,7016.0
+31.0,Out of Frame,7020.0
+57.0,Walk,7022.0
+22.0,Head Up,7042.0
+21.0,Graze,7059.0
+58.0,Trotting,7075.0
+89.0,Out of Focus,7075.0
+26.0,Out of Frame,7078.0
+2.0,Out of Frame,7079.0
+11.0,Out of Focus,7084.0
+11.0,Graze,7085.0
+57.0,Trotting,7085.0
+52.0,Out of Frame,7085.0
+17.0,Walk,7087.0
+57.0,Auto-Groom,7092.0
+41.0,Occluded,7104.0
+57.0,Walk,7107.0
+26.0,Graze,7108.0
+24.0,Walk,7112.0
+13.0,Out of Frame,7113.0
+43.0,Occluded,7118.0
+56.0,Head Up,7122.0
+57.0,Graze,7122.0
+57.0,Trotting,7123.0
+9.0,Out of Focus,7125.0
+1.0,Graze,7125.0
+52.0,Trotting,7137.0
+3.0,Out of Frame,7140.0
+39.0,Graze,7143.0
+78.0,Walk,7158.0
+52.0,Walk,7162.0
+5.0,Head Up,7164.0
+63.0,Walk,7168.0
+43.0,Walk,7172.0
+57.0,Occluded,7175.0
+30.0,Walk,7181.0
+18.0,Walk,7187.0
+54.0,Out of Frame,7189.0
+41.0,Walk,7190.0
+29.0,Head Up,7194.0
+57.0,Walk,7197.0
+1.0,Out of Frame,7199.0
+14.0,Graze,7200.0
+2.0,Occluded,7201.0
+47.0,Head Up,7208.0
+27.0,Walk,7211.0
+57.0,Trotting,7211.0
+54.0,Graze,7214.0
+57.0,Walk,7217.0
+22.0,Graze,7218.0
+30.0,Trotting,7221.0
+3.0,Out of Focus,7225.0
+19.0,Walk,7227.0
+43.0,Out of Focus,7229.0
+58.0,Walk,7229.0
+47.0,Out of Focus,7229.0
+5.0,Graze,7230.0
+58.0,Walk,7234.0
+47.0,Walk,7236.0
+39.0,Out of Focus,7236.0
+40.0,Graze,7239.0
+56.0,Walk,7239.0
+1.0,Walk,7245.0
+9.0,Out of Frame,7255.0
+60.0,Walk,7259.0
+3.0,Walk,7259.0
+3.0,Graze,7260.0
+35.0,Graze,7260.0
+2.0,Graze,7266.0
+6.0,Out of Frame,7272.0
+4.0,Occluded,7290.0
+45.0,Out of Focus,7293.0
+57.0,Walk,7298.0
+20.0,Graze,7301.0
+7.0,Occluded,7310.0
+42.0,Out of Focus,7312.0
+27.0,Trotting,7313.0
+3.0,Head Up,7319.0
+24.0,Graze,7321.0
+47.0,Walk,7323.0
+43.0,Head Up,7323.0
+4.0,Graze,7325.0
+30.0,Running,7352.0
+11.0,Head Up,7368.0
+59.0,Walk,7373.0
+19.0,Walk,7374.0
+72.0,Occluded,7375.0
+42.0,Graze,7376.0
+30.0,Trotting,7385.0
+27.0,Running,7386.0
+72.0,Out of Focus,7388.0
+42.0,Head Up,7395.0
+30.0,Out of Focus,7396.0
+72.0,Walk,7404.0
+7.0,Walk,7416.0
+29.0,Walk,7417.0
+16.0,Graze,7417.0
+30.0,Walk,7422.0
+57.0,Auto-Groom,7428.0
+60.0,Trotting,7441.0
+29.0,Head Up,7444.0
+29.0,Trotting,7447.0
+4.0,Out of Focus,7459.0
+43.0,Graze,7463.0
+50.0,Head Up,7465.0
+63.0,Head Up,7478.0
+60.0,Walk,7479.0
+8.0,Out of Focus,7483.0
+8.0,Out of Frame,7489.0
+8.0,Out of Focus,7491.0
+57.0,Walk,7492.0
+8.0,Graze,7493.0
+6.0,Occluded,7504.0
+7.0,Head Up,7507.0
+56.0,Sniff,7517.0
+16.0,Graze,7520.0
+6.0,Graze,7524.0
+23.0,Walk,7535.0
+48.0,Walk,7536.0
+30.0,Out of Focus,7536.0
+41.0,Out of Focus,7540.0
+1.0,Walk,7541.0
+35.0,Walk,7543.0
+56.0,Walk,7554.0
+1.0,Head Up,7558.0
+10.0,Occluded,7561.0
+8.0,Head Up,7561.0
+43.0,Out of Frame,7563.0
+2.0,Occluded,7566.0
+6.0,Out of Focus,7566.0
+7.0,Out of Focus,7568.0
+41.0,Head Up,7569.0
+96.0,Walk,7571.0
+8.0,Walk,7577.0
+50.0,Auto-Groom,7579.0
+43.0,Out of Focus,7585.0
+22.0,Walk,7587.0
+43.0,Head Up,7588.0
+31.0,Running,7595.0
+22.0,Occluded,7600.0
+8.0,Occluded,7606.0
+15.0,Graze,7613.0
+29.0,Running,7622.0
+51.0,Walk,7625.0
+63.0,Walk,7630.0
+50.0,Graze,7636.0
+44.0,Graze,7637.0
+45.0,Walk,7670.0
+22.0,Graze,7671.0
+3.0,Graze,7671.0
+25.0,Graze,7690.0
+8.0,Graze,7693.0
+95.0,Head Up,7712.0
+54.0,Head Up,7739.0
+48.0,Head Up,7750.0
+26.0,Graze,7758.0
+41.0,Walk,7759.0
+16.0,Graze,7775.0
+10.0,Walk,7776.0
+35.0,Graze,7783.0
+94.0,Occluded,7808.0
+41.0,Head Up,7817.0
+7.0,Graze,7826.0
+59.0,Out of Focus,7846.0
+11.0,Occluded,7851.0
+65.0,Head Up,7853.0
+21.0,Walk,7859.0
+10.0,Out of Focus,7861.0
+95.0,Walk,7862.0
+58.0,Mutual Grooming,7863.0
+96.0,Graze,7867.0
+65.0,Running,7870.0
+45.0,Graze,7876.0
+31.0,Trotting,7882.0
+27.0,Occluded,7884.0
+4.0,Head Up,7889.0
+65.0,Trotting,7895.0
+8.0,Head Up,7896.0
+56.0,Trotting,7896.0
+58.0,Walk,7899.0
+5.0,Head Up,7899.0
+54.0,Walk,7902.0
+57.0,Graze,7904.0
+5.0,Out of Frame,7907.0
+27.0,Trotting,7911.0
+5.0,Head Up,7913.0
+27.0,Walk,7914.0
+17.0,Graze,7915.0
+24.0,Walk,7919.0
+12.0,Graze,7925.0
+44.0,Walk,7926.0
+65.0,Walk,7935.0
+66.0,Walk,7941.0
+11.0,Auto-Groom,7943.0
+5.0,Auto-Groom,7944.0
+65.0,Head Up,7945.0
+56.0,Mutual Grooming,7947.0
+41.0,Walk,7954.0
+57.0,Walk,7956.0
+72.0,Mutual Grooming,7957.0
+11.0,Head Up,7964.0
+54.0,Graze,7969.0
+12.0,Walk,7974.0
+96.0,Walk,7975.0
+24.0,Occluded,7980.0
+56.0,Trotting,7989.0
+50.0,Walk,8000.0
+27.0,Graze,8003.0
+59.0,Head Up,8003.0
+72.0,Walk,8006.0
+95.0,Graze,8008.0
+72.0,Mutual Grooming,8024.0
+31.0,Out of Frame,8024.0
+94.0,Graze,8025.0
+12.0,Occluded,8027.0
+41.0,Head Up,8028.0
+9.0,Head Up,8032.0
+45.0,Walk,8037.0
+72.0,Walk,8047.0
+56.0,Sniff,8048.0
+12.0,Graze,8050.0
+5.0,Head Up,8054.0
+56.0,Walk,8062.0
+13.0,Walk,8063.0
+60.0,Trotting,8068.0
+29.0,Trotting,8071.0
+11.0,Graze,8073.0
+32.0,Walk,8079.0
+4.0,Head Up,8084.0
+45.0,Head Up,8088.0
+67.0,Walk,8092.0
+45.0,Walk,8098.0
+21.0,Graze,8099.0
+17.0,Trotting,8111.0
+66.0,Head Up,8114.0
+32.0,Head Up,8116.0
+65.0,Walk,8127.0
+11.0,Occluded,8129.0
+1.0,Occluded,8137.0
+53.0,Graze,8144.0
+1.0,Graze,8145.0
+1.0,Occluded,8147.0
+65.0,Trotting,8148.0
+1.0,Graze,8155.0
+45.0,Graze,8157.0
+60.0,Walk,8161.0
+14.0,Occluded,8166.0
+96.0,Graze,8170.0
+16.0,Head Up,8176.0
+29.0,Out of Frame,8185.0
+18.0,Trotting,8189.0
+32.0,Walk,8193.0
+6.0,Walk,8201.0
+25.0,Out of Frame,8201.0
+28.0,Out of Frame,8212.0
+53.0,Walk,8227.0
+5.0,Graze,8245.0
+66.0,Out of Focus,8246.0
+51.0,Head Up,8250.0
+27.0,Walk,8252.0
+32.0,Trotting,8262.0
+38.0,Head Up,8266.0
+18.0,Running,8268.0
+17.0,Running,8269.0
+50.0,Graze,8273.0
+45.0,Out of Focus,8282.0
+25.0,Out of Focus,8287.0
+8.0,Graze,8292.0
+5.0,Auto-Groom,8299.0
+53.0,Out of Focus,8302.0
+53.0,Occluded,8306.0
+68.0,Out of Focus,8310.0
+53.0,Walk,8314.0
+4.0,Walk,8316.0
+21.0,Occluded,8322.0
+59.0,Walk,8335.0
+5.0,Head Up,8338.0
+2.0,Out of Focus,8341.0
+53.0,Walk,8341.0
+58.0,Trotting,8341.0
+12.0,Head Up,8342.0
+65.0,Walk,8346.0
+5.0,Walk,8353.0
+38.0,Graze,8354.0
+67.0,Trotting,8357.0
+15.0,Walk,8358.0
+12.0,Out of Focus,8366.0
+94.0,Walk,8375.0
+42.0,Walk,8377.0
+58.0,Walk,8395.0
+50.0,Head Up,8398.0
+5.0,Head Up,8399.0
+54.0,Head Up,8399.0
+47.0,Head Up,8401.0
+50.0,Walk,8401.0
+53.0,Walk,8405.0
+68.0,Walk,8405.0
+43.0,Walk,8410.0
+16.0,Walk,8415.0
+59.0,Running,8418.0
+24.0,Walk,8418.0
+16.0,Walk,8425.0
+18.0,Walk,8426.0
+67.0,Out of Focus,8428.0
+11.0,Head Up,8434.0
+67.0,Walk,8455.0
+22.0,Graze,8462.0
+5.0,Walk,8467.0
+54.0,Graze,8469.0
+4.0,Head Up,8471.0
+16.0,Walk,8480.0
+4.0,Walk,8484.0
+42.0,Graze,8487.0
+67.0,Out of Focus,8489.0
+21.0,Graze,8493.0
+18.0,Head Up,8497.0
+3.0,Head Up,8507.0
+47.0,Graze,8512.0
+18.0,Trotting,8520.0
+50.0,Head Up,8520.0
+54.0,Graze,8520.0
+9.0,Walk,8522.0
+41.0,Walk,8522.0
+53.0,Head Up,8528.0
+34.0,Trotting,8528.0
+34.0,Out of Focus,8530.0
+55.0,Out of Focus,8536.0
+42.0,Head Up,8538.0
+58.0,Running,8538.0
+34.0,Trotting,8544.0
+16.0,Graze,8545.0
+57.0,Running,8554.0
+57.0,Walk,8555.0
+62.0,Defecating,8556.0
+12.0,Graze,8557.0
+68.0,Auto-Groom,8561.0
+58.0,Walk,8566.0
+4.0,Graze,8569.0
+41.0,Head Up,8575.0
+56.0,Running,8577.0
+57.0,Running,8586.0
+72.0,Trotting,8593.0
+58.0,Running,8593.0
+16.0,Head Up,8599.0
+16.0,Graze,8599.0
+68.0,Walk,8601.0
+54.0,Out of Focus,8603.0
+54.0,Graze,8604.0
+69.0,Head Up,8605.0
+54.0,Out of Focus,8607.0
+11.0,Graze,8609.0
+55.0,Graze,8610.0
+72.0,Walk,8625.0
+5.0,Head Up,8629.0
+1.0,Walk,8641.0
+18.0,Running,8644.0
+17.0,Walk,8647.0
+94.0,Graze,8655.0
+8.0,Out of Focus,8657.0
+43.0,Out of Focus,8671.0
+21.0,Walk,8677.0
+95.0,Head Up,8680.0
+18.0,Walk,8689.0
+72.0,Head Up,8690.0
+89.0,Walk,8695.0
+3.0,Graze,8697.0
+1.0,Head Up,8704.0

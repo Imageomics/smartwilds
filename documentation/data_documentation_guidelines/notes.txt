@@ -1,0 +1,4 @@
+Use the FAIR-Drones guidelines to capture all relevant metadata
+
+Guidelines sourced from here:
+https://github.com/Imageomics/fair_drones/tree/main 

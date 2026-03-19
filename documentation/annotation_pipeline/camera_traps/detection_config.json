@@ -1,0 +1,363 @@
+{
+  "metadata": {
+    "description": "Camera trap detection configuration for The Wilds 2025 survey",
+    "created": "2026-03-17",
+    "yolo_model": "yolov8x.pt",
+    "bioclip_labels": ["white-tailed deer", "deer", "bird"],
+    "note": "Parameters extracted from deployment metadata and field notes"
+  },
+
+  "global_config": {
+    "yolo_weights": "yolov8x.pt",
+    "device": "cuda:0",
+    "confidence_threshold": 0.25,
+    "slice_height": 512,
+    "slice_width": 512,
+    "overlap_height": 0.2,
+    "overlap_width": 0.2,
+    "postprocess_type": "NMS",
+    "max_images": 0,
+    "max_det_print": -1
+  },
+
+  "campaigns": {
+    "20250630_20250703": {
+      "name": "June-July 2025 Campaign",
+      "base_path": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250630_20250703/camera_traps",
+      "total_cameras": 4
+    },
+    "20250804_20250828": {
+      "name": "August 2025 Campaign",
+      "base_path": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps",
+      "total_cameras": 9
+    }
+  },
+
+  "cameras": {
+    "TW01-CT02_20250630_20250703": {
+      "site_name": "TW01 (Nomad Ridge Shelter, east side)",
+      "camera_id": "TW01-CT02",
+      "campaign": "20250630_20250703",
+      "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250630_20250703/camera_traps/TW01-CT02",
+      "geometry": {
+        "hfov_deg": 52,
+        "target_height_m": 1.0,
+        "camera_model": "Unknown (June campaign)"
+      },
+      "location": {
+        "latitude": null,
+        "longitude": null,
+        "bearing_deg": null,
+        "note": "GPS and bearing unavailable for June deployment"
+      },
+      "expected_images": 5000,
+      "notes": "Deployment: 2025-06-30 to 2025-07-03"
+    },
+
+    "TW02-CT03_20250630_20250703": {
+      "site_name": "TW02 (Nomad Ridge Shelter, west side)",
+      "camera_id": "TW02-CT03",
+      "campaign": "20250630_20250703",
+      "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250630_20250703/camera_traps/TW02-CT03",
+      "geometry": {
+        "hfov_deg": 52,
+        "target_height_m": 1.0,
+        "camera_model": "Unknown (June campaign)"
+      },
+      "location": {
+        "latitude": null,
+        "longitude": null,
+        "bearing_deg": null,
+        "note": "GPS and bearing unavailable for June deployment"
+      },
+      "expected_images": 5000,
+      "notes": "Deployment: 2025-06-30 to 2025-07-03"
+    },
+
+    "TW03-CT01_20250630_20250703": {
+      "site_name": "TW03",
+      "camera_id": "TW03-CT01",
+      "campaign": "20250630_20250703",
+      "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250630_20250703/camera_traps/TW03-CT01",
+      "geometry": {
+        "hfov_deg": 52,
+        "target_height_m": 1.0,
+        "camera_model": "Unknown (June campaign)"
+      },
+      "location": {
+        "latitude": null,
+        "longitude": null,
+        "bearing_deg": null
+      },
+      "expected_images": 5000,
+      "notes": "Deployment: 2025-06-30 to 2025-07-03"
+    },
+
+    "TW04-CT04_20250630_20250703": {
+      "site_name": "TW04",
+      "camera_id": "TW04-CT04",
+      "campaign": "20250630_20250703",
+      "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250630_20250703/camera_traps/TW04-CT04",
+      "geometry": {
+        "hfov_deg": 52,
+        "target_height_m": 1.0,
+        "camera_model": "Unknown (June campaign)"
+      },
+      "location": {
+        "latitude": null,
+        "longitude": null,
+        "bearing_deg": null
+      },
+      "expected_images": 5000,
+      "notes": "Deployment: 2025-06-30 to 2025-07-03"
+    },
+
+    "TW01-CT02_20250804_20250828": {
+      "site_name": "TW01 (Nomad Ridge Shelter, east side, facing lake)",
+      "camera_id": "TW01-CT02",
+      "campaign": "20250804_20250828",
+      "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW01-CT02",
+      "camera_model": "Garde Pro T5NG",
+      "geometry": {
+        "hfov_deg": 52,
+        "target_height_m": 1.0
+      },
+      "location": {
+        "latitude": 39.498459,
+        "longitude": -81.442737,
+        "bearing_deg": 180,
+        "note": "Camera facing southeast/lake"
+      },
+      "expected_images": 30000,
+      "deployment": {
+        "deploy_date": "2025-08-04 09:00",
+        "retrieve_date": "2025-08-11 09:00"
+      },
+      "notes": "Captured 30.22 GB. Installed facing lake to capture deer activity."
+    },
+
+    "TW02-CT01_20250804_20250828": {
+      "site_name": "TW02 (Nomad Ridge Shelter, west side)",
+      "camera_id": "TW02-CT01",
+      "campaign": "20250804_20250828",
+      "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW02-CT01",
+      "camera_model": "Garde Pro T5NG",
+      "geometry": {
+        "hfov_deg": 52,
+        "target_height_m": 1.0
+      },
+      "location": {
+        "latitude": 39.498394,
+        "longitude": -81.442751,
+        "bearing_deg": 225,
+        "note": "Camera facing southwest"
+      },
+      "expected_images": 90000,
+      "deployment": {
+        "deploy_date": "2025-08-04 09:00",
+        "retrieve_date": "2025-08-28 23:59"
+      },
+      "known_issues": {
+        "timestamp_correction": true,
+        "description": "Camera clock set incorrectly: Oct 31 2023 → Aug 4 2025, Sept 2023 → Aug 2025",
+        "sd_card_replacements": ["2025-08-11", "2025-08-18", "2025-08-28"]
+      },
+      "notes": "22.06 GB used at 8/25. SD card and battery replaced multiple times."
+    },
+
+    "TW04-CT03_20250804_20250828": {
+      "site_name": "TW04 (Lake Trail, northwest facing)",
+      "camera_id": "TW04-CT03",
+      "campaign": "20250804_20250828",
+      "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW04-CT03",
+      "camera_model": "Garde Pro A3 (video capable)",
+      "geometry": {
+        "hfov_deg": 52,
+        "target_height_m": 1.0
+      },
+      "location": {
+        "latitude": 39.500572,
+        "longitude": -81.443604,
+        "bearing_deg": 315,
+        "note": "Camera facing northwest"
+      },
+      "expected_images": 5000,
+      "deployment": {
+        "deploy_date": "2025-08-11 09:00",
+        "retrieve_date": "2025-08-28 23:59",
+        "data_cutoff": "2025-08-25",
+        "cutoff_reason": "No data collected after 2025-08-25 (equipment failure)"
+      },
+      "notes": "More advanced model with video capability. Equipment failure after 8/25."
+    },
+
+    "TW06-CT04_20250804_20250828": {
+      "site_name": "TW06 (Zebra Shelter)",
+      "camera_id": "TW06-CT04",
+      "campaign": "20250804_20250828",
+      "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW06-CT04",
+      "camera_model": "Trail Camera G600",
+      "geometry": {
+        "hfov_deg": 52,
+        "target_height_m": 1.0
+      },
+      "location": {
+        "latitude": null,
+        "longitude": null,
+        "bearing_deg": null
+      },
+      "expected_images": 31840,
+      "deployment": {
+        "deploy_date": "2025-08-04 09:50",
+        "retrieve_date": "2025-08-11 23:59"
+      },
+      "notes": "Trail Camera G600 model. 31.84 GB on disk. Battery at 100% (unusual)."
+    },
+
+    "TW06-CT05_20250804_20250828": {
+      "site_name": "TW06 (Zebra Shelter) - Second deployment",
+      "camera_id": "TW06-CT05",
+      "campaign": "20250804_20250828",
+      "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW06-CT05",
+      "camera_model": "Garde Pro T5NG",
+      "geometry": {
+        "hfov_deg": 52,
+        "target_height_m": 1.0
+      },
+      "location": {
+        "latitude": null,
+        "longitude": null,
+        "bearing_deg": null
+      },
+      "expected_images": 5000,
+      "deployment": {
+        "deploy_date": "2025-08-25",
+        "retrieve_date": "2025-08-28"
+      },
+      "notes": "Later deployment at same site."
+    },
+
+    "TW07-CT05_20250804_20250828": {
+      "site_name": "TW07",
+      "camera_id": "TW07-CT05",
+      "campaign": "20250804_20250828",
+      "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW07-CT05",
+      "camera_model": "Garde Pro T5NG",
+      "geometry": {
+        "hfov_deg": 52,
+        "target_height_m": 1.0
+      },
+      "location": {
+        "latitude": null,
+        "longitude": null,
+        "bearing_deg": null
+      },
+      "expected_images": 10000,
+      "deployment": {
+        "deploy_date": "2025-08-04",
+        "retrieve_date": "2025-08-12"
+      },
+      "notes": "Early August deployment."
+    },
+
+    "TW09_CT02_20250804_20250828": {
+      "site_name": "TW09 (Dock overlooking lake)",
+      "camera_id": "TW09_CT02",
+      "campaign": "20250804_20250828",
+      "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW09_CT02",
+      "camera_model": "Garde Pro T5NG",
+      "geometry": {
+        "hfov_deg": 52,
+        "target_height_m": 1.0
+      },
+      "location": {
+        "latitude": null,
+        "longitude": null,
+        "bearing_deg": null
+      },
+      "expected_images": 60000,
+      "deployment": {
+        "deploy_date": "2025-08-04",
+        "retrieve_date": "2025-08-28"
+      },
+      "known_issues": {
+        "battery_failure": true,
+        "data_gap": {
+          "start": "2025-08-18",
+          "end": "2025-08-25",
+          "reason": "Battery died"
+        }
+      },
+      "notes": "Moved to dock for better activity capture. Data gap 8/18-8/25 due to battery failure."
+    },
+
+    "TW09-CT05_20250804_20250828": {
+      "site_name": "TW09",
+      "camera_id": "TW09-CT05",
+      "campaign": "20250804_20250828",
+      "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW09-CT05",
+      "camera_model": "Garde Pro T5NG",
+      "geometry": {
+        "hfov_deg": 52,
+        "target_height_m": 1.0
+      },
+      "location": {
+        "latitude": null,
+        "longitude": null,
+        "bearing_deg": null
+      },
+      "expected_images": 50000,
+      "deployment": {
+        "deploy_date": "2025-08-04",
+        "retrieve_date": "2025-08-28"
+      },
+      "notes": "Full deployment duration."
+    },
+
+    "TW11-CT06_20250804_20250828": {
+      "site_name": "TW11",
+      "camera_id": "TW11-CT06",
+      "campaign": "20250804_20250828",
+      "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW11-CT06",
+      "camera_model": "Garde Pro T5NG",
+      "geometry": {
+        "hfov_deg": 52,
+        "target_height_m": 1.0
+      },
+      "location": {
+        "latitude": null,
+        "longitude": null,
+        "bearing_deg": null
+      },
+      "expected_images": 20000,
+      "deployment": {
+        "deploy_date": "2025-08-18",
+        "retrieve_date": "2025-08-28"
+      },
+      "notes": "Later deployment window."
+    }
+  },
+
+  "processing_parameters": {
+    "note": "Default values; override per-camera in 'cameras' section",
+    "geometry": {
+      "hfov_deg": 52,
+      "target_height_m": 1.0,
+      "note": "HFOV ~ 55° is typical for trail cameras. Target height assumes upright white-tailed deer."
+    },
+    "required_fields": ["latitude", "longitude", "bearing_deg"],
+    "missing_coordinates": {
+      "cameras_affected": [
+        "TW03-CT01_20250630_20250703",
+        "TW04-CT04_20250630_20250703",
+        "TW06-CT04_20250804_20250828",
+        "TW06-CT05_20250804_20250828",
+        "TW07-CT05_20250804_20250828",
+        "TW09_CT02_20250804_20250828",
+        "TW09-CT05_20250804_20250828",
+        "TW11-CT06_20250804_20250828"
+      ],
+      "action_required": "Fill in GPS coordinates and bearing from field notes or deployment metadata"
+    }
+  }
+}

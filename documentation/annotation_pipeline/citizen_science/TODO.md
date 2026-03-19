@@ -1,0 +1,3 @@
+Manually annotate the citizen science images with tags about the species present, the location, and the time of day. This will help to create a training dataset for the AI models and also provide a baseline for evaluating their performance.
+
+need to code a quick annotation tool that allows us to easily label the images with the relevant information. This could be a simple web-based interface that allows us to upload the images and then click on the relevant tags to annotate them.

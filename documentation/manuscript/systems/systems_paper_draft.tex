@@ -1,0 +1,568 @@
+
+% TEMPLATE for Usenix papers, specifically to meet requirements of
+%  USENIX '05
+% originally a template for producing IEEE-format articles using LaTeX.
+%   written by Matthew Ward, CS Department, Worcester Polytechnic Institute.
+% adapted by David Beazley for his excellent SWIG paper in Proceedings,
+%   Tcl 96
+% turned into a smartass generic template by De Clarke, with thanks to
+%   both the above pioneers
+% use at your own risk.  Complaints to /dev/null.
+% make it two column with no page numbering, default is 10 point
+
+% Munged by Fred Douglis <douglis@research.att.com> 10/97 to separate
+% the .sty file from the LaTeX source template, so that people can
+% more easily include the .sty file into an existing document.  Also
+% changed to more closely follow the style guidelines as represented
+% by the Word sample file. 
+
+% Note that since 2010, USENIX does not require endnotes. If you want
+% foot of page notes, don't include the endnotes package in the 
+% usepackage command, below.
+
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{usenix,epsfig,endnotes}
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\begin{document}
+
+%don't want date printed
+\date{}
+
+%make title bold and 14 pt font (Latex default is non-bold, 16 pt)
+%\title{\Large \bf Networked, Autonomous Aerial Systems for AI-Driven Animal Ecology Studies at the Edge: Opportunities and Challenges}
+
+
+%\title{\Large \bf Towards Adaptive Multi-Modal Ecological Sensing: \\  A Semi-Autonomous Protocol with Mobile Edge Nodes in the Field}
+%\title{\Large \bf Wildlife Workloads: Record-and-Replay Digital Twins for Rare Event Sensing}
+\title{\Large \bf Replay in the Wild: \\ Trace-Driven Evaluation of Multi-Modal Autonomous Sensing Systems}
+
+
+
+\author{
+{\rm Jenna, Vedant, Rugved, Tanishka, Ally, Penelope, Bharath, Anirudh,} \\ \rm{Tanya Berger-Wolf, Hari Subramoni, and Christopher Stewart}\\
+The Ohio State University
+%\and
+% {\rm Second Name}\\
+% Second Institution
+}
+
+\maketitle
+
+% Use the following at camera-ready time to suppress page numbers.
+% Comment it out when you first submit the paper for review.
+\thispagestyle{empty}
+
+\begin{abstract}
+Networked, multi\mbox{-}modal sensing meshes—combining drones, camera traps, acoustic recorders, and citizen science observations—are becoming increasingly viable for environmental monitoring in remote areas as sensor and compute costs drop. Yet these systems are hard to model before deployment: events of interest are rare and unpredictable, and field trials are expensive. We propose a record\mbox{-}and\mbox{-}replay approach for evaluating environmental sensing systems. Our framework captures synchronized, event\mbox{-}driven traces from field deployments, defines modality\mbox{-}specific service\mbox{-}level objectives (SLOs), and replays workloads
+%in a digital twin
+to compare sensing policies and explore adaptive sampling strategies with edge AI under realistic resource limits. Using three animal ecology field campaigns at a 10{,}000\mbox{-}acre conservation park plus synthetic stress scenarios, we characterize cross\mbox{-}modal workload patterns across four sensing modalities, quantify the storage savings of edge\mbox{-}based blank image filtering for camera traps, and identify conditions where autonomy outperforms manual practice in cost and coverage. We reduce operator minutes per captured event by \textbf{XX\%} and sustain 95\% SLO compliance under \textbf{X\%} higher burstiness. This evaluation method turns rare wildlife events into reproducible workloads for designing and tuning robust, low\mbox{-}latency sensing systems in remote areas, with applications in agriculture, ecology, and environmental monitoring.
+\end{abstract}
+
+
+
+\tableofcontents
+
+\newpage
+
+
+\section{Introduction}
+
+
+Environmental and ecological sensing at scale increasingly depends on distributed sensor systems and real-time data processing to track species, assess biodiversity, inform conservation, and evaluate ecosystem status. Yet, remote deployments -- especially in natural ecosystems with rare and endangered species -- present severe constraints on connectivity, power, and automation. We present a semi-autonomous system for multi-modal ecological sensing, deployed at The Wilds, a 10,000-acre conservation park. Our platform integrates drones, camera traps, acoustic sensors, citizen science observations, and weather stations. This is the first full multi-modal integration of multiple sensor modalities for ecological sensing. We use ruggedized laptops as mobile edge nodes, enabling in-field execution of AI models for real-time data analysis and human-on-the-loop adaptive sampling.
+
+Our prior work~\cite{kline2024characterizing} characterized single-modality AI-driven animal ecology (ADAE) workloads, modeling camera trap and drone traces as time-varying Poisson processes. This paper extends that analysis to \textit{cross-modal} workloads: we characterize the joint arrival patterns, temporal correlations, and aggregate resource demands of four co-deployed sensing modalities. A key finding is that camera traps generate vast volumes of blank images due to false triggers, and edge-based filtering can dramatically reduce both storage requirements and the effective throughput demand on downstream AI inference.
+
+We describe the system’s architecture, protocols for data collection and feedback-driven sensor adjustment, and a trace-driven analysis of cross-modal ecological events. Our study reveals key patterns in sensor coverage, data burstiness, and inter-modal latency, offering insights into how adaptive strategies can be operationalized. By generating realistic, labeled traces and evaluating performance across temporal and spatial axes, our system informs the design of future fully autonomous edge deployments.
+
+This approach enables reproducible comparisons between different sensing policies or autonomous systems without redeploying to the field. It is particularly valuable for evaluating responses to rare or bursty events, where collecting sufficient real-world samples is expensive and logistically challenging.
+
+The paper is organized as follows. \textbf{Section 1 introduces record-and-replay event-based systems. Section 2 presents a detailed study on service-level objectives (SLOs), incorporating multimodal data and an improved understanding of events, derived from three rigorous real-world ecological studies. Section 3 describes the design and implementation of digital twins that enable rigorous record-and-replay capabilities. Section 4 discusses strategies to reduce the cost of manual data collection, methods for comparing different autonomous systems by replaying traces within the digital twin, and approaches for evaluating autonomous solutions. }
+
+
+\section{Background}
+- ecological modeling from sparse data 
+- record and replay fundamentals 
+
+\textcolor{redundant with related works? need to mention Laura's adaptive sampling paper and Devis' }
+
+\section{Record and Replay for Multi-Modal Event-Based Ecological Sensing}
+\label{sec:record_replay}
+
+Many ecological field studies operate as event-based systems: observations are recorded only when a particular stimulus or trigger occurs. In our deployments, these events include an animal entering the field of view of a camera trap, a vocalization detected by an acoustic monitor, or a visual detection by an aerial drone. Such events are inherently rare, irregular, and often bursty, making it difficult to reproduce them for system evaluation or to directly compare different sensing strategies.
+
+\subsection{Motivation}
+For autonomous or semi-autonomous sensing systems, the timing, duration, and frequency of these events define the operational workload. However, field deployments are costly and logistically constrained, especially when working in remote or sensitive habitats. Without a method to recreate these workloads, system designers cannot easily iterate on policies or evaluate new algorithms under realistic conditions.
+
+Record and replay techniques address this challenge by capturing the sequence and timing of events during a real deployment, along with relevant sensor metadata, and then feeding this trace into a controlled execution environment. This allows researchers to:
+\begin{itemize}
+    \item Compare different sensing or control policies under identical event sequences.
+    \item Stress-test policies by modifying or amplifying events in the trace.
+    \item Quantify the effect of changes in hardware, scheduling, or autonomy logic without re-running the full field study.
+\end{itemize}
+
+\subsection{Field Deployment for Trace Capture}
+We developed and deployed a multi-modal sensing platform at The Wilds, a 10{,}000-acre conservation park hosting multiple large mammal species. The platform integrates:
+\begin{itemize}
+    \item \textbf{Aerial drones}: Both quadcopter and fixed-wing platforms, capable of high-resolution imagery and targeted behavioral observation.
+    \item \textbf{Camera traps}: Motion-triggered photo and video units distributed across diverse habitats.
+    \item \textbf{Bioacoustic monitors}: Continuous or scheduled audio logging for detecting vocalizations.
+    \item \textbf{Citizen science observations}: Photographs and field notes from visiting researchers and students, providing opportunistic detections with human-verified species labels.
+    \item \textbf{Weather and satellite feeds}: Contextual environmental data such as temperature, precipitation, and vegetation indices.
+\end{itemize}
+
+Each modality logs data locally, typically to removable storage media, which are collected daily or every few days. To facilitate record and replay, we align all events to a common time base and annotate them with metadata: sensor type, geographic coordinates, event type, and any immediate on-device inference results.
+
+\subsection{Mobile Edge Processing}
+At the core of the deployment is a ruggedized, battery-powered laptop acting as a \textit{mobile edge node}. This node ingests data from all modalities in the field and performs preliminary inference using models tuned for each sensor:
+\begin{itemize}
+    \item Object detection and localization for drone and camera trap imagery.
+    \item Behavior and posture classification from drone video.
+    \item Spectrogram-based classification for bioacoustic clips.
+    \item Blank image filtering to eliminate false camera trap triggers before storage or further inference, reducing downstream data volume.
+\end{itemize}
+Inference outputs are stored alongside raw sensor data in the event log, allowing downstream replay systems to incorporate both raw and processed data streams.
+
+\subsection{Feedback Loop and Adaptive Sampling}
+In the semi-autonomous configuration, field teams review daily inference outputs to decide whether to reposition or reconfigure sensors. For example, a camera trap producing many false triggers from vegetation might be moved, or a drone route might be updated to target a hotspot of recent activity. These adjustments are logged as part of the trace, enabling replay not only of sensor events but also of human-in-the-loop decisions.
+
+\subsection{Trace Properties}
+Our analysis of the collected traces reveals several workload characteristics that are essential for system design:
+\begin{itemize}
+    \item \textbf{Burstiness}: Events arrive in short, intense bursts separated by long idle periods.
+    \item \textbf{Multi-modal correlation}: Events in one modality often coincide with or trigger events in another.
+    \item \textbf{Variable latency budgets}: Some actions require a response within seconds (e.g., redirecting a drone), while others can tolerate minutes or hours (e.g., relocating a camera trap).
+    \item \textbf{Resource constraints}: Limited energy, compute, and storage resources must be allocated dynamically across modalities.
+\end{itemize}
+
+By recording these detailed traces in the field, we can later replay them in simulation or on alternative hardware configurations, forming the basis for the SLO analysis in Section~\ref{sec:slo} and the digital twin experiments in Section~\ref{sec:digital_twin}.
+
+
+\section{Ecological Multi-modal Traces and SLOs}
+
+We design and deploy our system of sensors to evaluate multi-modal, ecological traces and determine their unique SLOs.
+Our system integrates heterogeneous sensor modalities deployed across a 10,000-acre wildlife conservation park to enable semi-autonomous ecological monitoring. It is designed around the principle of human-on-the-loop adaptive sampling: a field team performs semi-weekly review and realignment of sensors based on local data analysis, bridging manual methods and future autonomous operation. At the core of our architecture is a mobile edge platform, ruggedized laptops in the field, that orchestrates inference, trace analysis, and feedback-driven planning.
+
+\input{data_modalities}
+
+We deploy five primary sensing modalities, each offering distinct spatial, temporal, and semantic characteristics. Each of these sensors logs data locally to SD cards, which are manually retrieved daily or every few days, depending on battery and memory constraints. Central to our adaptive loop is the use of laptops as mobile edge nodes. These are ruggedized, battery-powered machines deployed with the field team and connected via portable storage to ingest sensor data. The inference results are visualized using lightweight dashboards and Python scripts, providing near-real-time feedback to the field team on sensor efficacy and coverage.
+
+
+The laptops perform in-field inference using AI models tuned for each modality:
+\begin{itemize}
+    \item \textit{YOLOvXX-based detectors} for species detection and localization from drone and camera trap footage.
+    \item \textit{Pose and behavior classifiers} to infer animal posture and social interactions from drone video sequences.
+    \item \textit{Acoustic spectrogram models} (run offline) to flag potential vocalizations for manual review.
+    \item \textit{Blank image classifiers} to filter false triggers from camera traps, reducing storage and downstream compute requirements.
+\end{itemize}
+
+
+After each data collection session, field researchers review outputs, including species detections, behavior classifications, false triggers, and failure cases, to determine if sensor settings or placements should be updated. For example, a camera trap detecting only background movement (e.g., swaying vegetation) may be repositioned or have its sensitivity adjusted. A drone flight path may be altered to revisit an area of high animal density at a different time of day. An AudioMoth unit recording wind noise or mechanical interference may be relocated or reprogrammed. These decisions close the feedback loop on a semi-weekly basis, enabling semi-structured \textit{adaptive sampling}.
+
+This architecture is designed to operate under \textbf{realistic field constraints}:
+\begin{itemize}
+    \item \textbf{No internet connectivity} during operations; all inference is performed offline.
+    \item \textbf{Limited power supply}; laptops and drones are recharged using portable solar panels or generator power.
+    \item \textbf{Ethical constraints} guide where and how sensors are placed, especially around sensitive species or active dens.
+    \item \textbf{Heterogeneous data rates}---from 30 FPS drone video to hourly acoustic summaries---necessitate careful spatiotemporal alignment during inference and analysis.
+\end{itemize}
+
+Despite these constraints, our architecture provides robust support for multi-modal ecological sensing and lays the groundwork for future deployments that may integrate \textbf{true edge autonomy}, such as on-board drone inference or real-time acoustic event detection.
+
+\begin{table*}[t]
+\centering
+\label{table:case_studies}
+\begin{tabular}{p{2.5cm} p{3.5cm} p{3.8cm} p{3.8cm} p{3cm}}
+\toprule
+\textbf{Species} & \textbf{Ecological Research Question} & \textbf{Sensors} & \textbf{Unique Component of Traces} & \textbf{AI Models} \\
+\midrule
+\textbf{Pere David's Deer} & How do Pere David's deer use land in areas shared with exotic and domestic species? & 6 camera traps, 6 bioacoustic monitors & Multi-modal co-occurrence data linking deer presence on camera to acoustic activity of sympatric bird and insect species at co-located sites & MegaDetector, BirdNET \\
+\textbf{African Wild Dog} & What is the efficacy of different autonomous sensor deployment strategies for capturing wild dog behaviors? & 4 camera traps, drones, expert field observations & Event arrival patterns tied to specific behaviors; traces from motion-activated vs periodic (hourly) sensing strategies & YOLO, SAMv2, behavior classification \\
+\textbf{Mixed Species (Cross-Modal)} & How do cross-modal arrival patterns and edge filtering affect workload characterization and SLO compliance? & Camera traps, bioacoustic monitors, drones, citizen science & Full multi-modal trace combining all four modalities; cross-modal temporal correlation; blank image analysis for edge storage savings & YOLO, BirdNET, BioCLIP \\
+\bottomrule
+\end{tabular}
+\caption{Case studies used in our record-and-replay evaluation. Each study combines different sensing modalities, ecological research questions, and AI models, and includes unique components in the recorded traces.}
+\end{table*}
+
+We evaluate our system using three case studies, summarized in Tab. \ref{table:case_studies}/
+\begin{itemize}
+  \item Site: The Wilds (10,000 acres, multiple species).
+  \item Deployment strategy: sensor placement, ethics, terrain constraints.
+  \item Daily operations: field team workflow, logistics, drone flight sessions. Initial test in June and long-term deployment in August. Thoroughly documented in our field notes on Github.
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/DSCF0040.JPG}
+    \caption{Camera Trap Sample, Daytime}
+    \label{fig:camtrap1}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/DSCF0044.JPG}
+    \caption{Camera Trap Sample, Nighttime}
+    \label{fig:camtrap2}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/VID_002_frame_00001_image_detection (1).png}
+    \caption{Drone Sample}
+    \label{fig:drone}
+\end{figure}
+
+\section{Methodology}
+\label{sec:methodology}
+
+Our evaluation methodology comprises six experiments designed to characterize cross-modal workloads, quantify edge processing benefits, and compare sensing policies via trace-driven replay. We first describe the data inputs, then detail each experiment.
+
+\subsection{Data Sources}
+
+\begin{table*}[t]
+\centering
+\begin{tabular}{p{2.5cm} p{3.5cm} p{3cm} p{2.5cm} p{3cm}}
+\toprule
+\textbf{Modality} & \textbf{Data Volume} & \textbf{Timestamps} & \textbf{Sites} & \textbf{Status} \\
+\midrule
+Camera traps & $\sim$236K images (Campaigns 1+2) & Filename \texttt{\_YYMMDDHHMMSS\_} or EXIF & 13 site-camera combos & Timestamps extractable \\
+Bioacoustics & 1,180 hourly rows, 105 species & ISO 8601 in CSV & 6 AudioMoth sites & Complete (BirdNET) \\
+Drones & 37 MP4 videos + flight logs & Airdata CSV \texttt{datetime(utc)} & Flight paths & Metadata available \\
+Citizen science & 991 files & EXIF or filesystem mtime & Opportunistic & Raw only \\
+\bottomrule
+\end{tabular}
+\caption{Summary of data sources across four sensing modalities. Timestamps are extracted using \texttt{extract\_wilds\_multimodal.py} and aligned to a common time base.}
+\label{table:data_sources}
+\end{table*}
+
+We collect data from four co-deployed sensing modalities at The Wilds, summarized in Table~\ref{table:data_sources}. Timestamps are extracted and unified using \texttt{extract\_wilds\_multimodal.py}, which parses filename conventions, EXIF metadata, structured CSVs, and flight log exports into a common event format.
+
+\subsection{Real-world Case Studies}
+\paragraph{Pere David’s Deer}
+We deploy six camera traps and six co-located bioacoustic monitors to study land use by Pere David’s deer in areas shared with exotic and domestic species. Multi-modal co-occurrence data links deer presence on camera to acoustic activity of sympatric bird and insect species, producing traces with synchronized visual and acoustic event streams.
+
+\paragraph{African Wild Dogs}
+Four camera traps and aerial drones are deployed alongside expert field observations to evaluate the efficacy of different autonomous sensor deployment strategies for capturing wild dog behaviors. Traces capture event arrival patterns tied to specific behaviors, comparing motion-activated versus periodic (hourly) sensing strategies.
+
+\paragraph{Smart Drone Trigger for Mixed Species Monitoring}
+The full multi-modal deployment combines all four modalities---camera traps, bioacoustic monitors, drones, and citizen science observations---to characterize cross-modal arrival patterns and evaluate the impact of edge filtering on workload characterization and SLO compliance.
+
+\subsection{Experiment 1: Cross-Modal Arrival Rate Characterization}
+\label{sec:exp1}
+
+\textbf{Research question}: How do workload arrival patterns differ across modalities, and how do they compare to single-modality characterizations from our prior work~\cite{kline2024characterizing}?
+
+We extract timestamps from all four modalities and apply the ADAE methodology: detecting change points in cumulative arrival distributions at thresholds [0.8, 0.95, 0.99, 0.995], fitting time-varying Poisson processes per modality, and computing per-modality statistics including total events, mean arrival rate, coefficient of variation (CV), and burstiness parameter $B = (CV - 1)/(CV + 1)$.
+
+\subsection{Experiment 2: Cross-Modal Event Correlation}
+\label{sec:exp2}
+
+\textbf{Research question}: When one modality detects an event at a site, how often does another modality detect a concurrent event at the same site?
+
+We identify co-located sensors by matching site prefix (e.g., TW02: camera trap CT01 + acoustic monitor SM04; TW06: CT04/CT05 + SM05; TW07: CT05 + SM02; TW09: CT02/CT05 + SM01). Events are binned into time windows (1h, 6h, 24h), and for each site and window we compute binary presence/absence per modality per bin. Cross-modal correlation is measured using Jaccard similarity: $J = |A \cap B| / |A \cup B|$, where $A$ and $B$ are the sets of bins with activity for each modality pair. We construct a $4 \times 4$ cross-modal correlation matrix for each time window.
+
+\subsection{Experiment 3: Edge Resource Model}
+\label{sec:exp3}
+
+\textbf{Research question}: Can a single mobile edge node handle concurrent multi-modal inference under SLO constraints? At what arrival rate does it need to prioritize or shed load?
+
+We collect published inference benchmarks per model: BirdNET ($\sim$0.1s per 3s audio clip, CPU), YOLO+SAHI ($\sim$0.3--2s per image, GPU-dependent), BioCLIP ($\sim$0.5s per crop, GPU), and MegaDetector ($\sim$0.2s per image, GPU). These are combined with measured arrival rates from Experiment~1 to compute required throughput per modality. We model aggregate workload under three scheduling policies:
+\begin{itemize}
+    \item \textbf{Process-all}: every event gets full inference.
+    \item \textbf{Priority-based}: camera traps get detection only; acoustics are batch-processed; drones receive real-time processing.
+    \item \textbf{Adaptive}: secondary modality processing is triggered only when the primary modality detects an animal.
+\end{itemize}
+
+Optionally, we profile BirdNET, YOLO+SAHI, and BioCLIP on the actual ruggedized field laptop to measure wall-clock time, GPU/CPU utilization, and memory per model.
+
+\subsection{Experiment 4: Replay-Based Policy Comparison}
+\label{sec:exp4}
+
+\textbf{Research question}: How do different sensing policies perform when replayed on identical real-world traces?
+
+We use Campaign~2 traces (Aug 4--28, 24-day deployment) as replay input and implement three policies:
+\begin{itemize}
+    \item \textbf{Baseline (process-all)}: every sensor event triggers immediate inference.
+    \item \textbf{Event-triggered}: only motion-triggered camera trap images and high-confidence acoustic detections (confidence $> 0.7$) get full inference; timelapse images are skipped.
+    \item \textbf{Adaptive}: starts with event-triggered; if detection rate in a 1-hour window exceeds a threshold, processing increases; if idle for $>$2 hours, the backlog is batch-processed.
+\end{itemize}
+Identical traces are replayed through each policy. Per-policy measurements include SLO compliance (latency P95, coverage \%), compute budget consumed, and operator effort.
+
+\subsection{Experiment 5: Storage Savings from Edge Blank Image Filtering}
+\label{sec:exp5}
+
+\textbf{Research question}: What fraction of camera trap images are blank, and how does edge filtering change the effective workload and hardware requirements?
+
+Camera traps are motion-triggered, but a significant fraction of captured images contain no animals---triggered instead by wind, vegetation movement, or shadows. These blank images dominate storage and, without edge filtering, must be transferred and processed alongside true positive detections. We run object detection (MegaDetector/YOLO) on all camera trap images to classify blank versus non-blank, computing: percentage of blank images per camera and campaign, total storage (GB) raw versus filtered, and raw arrival rate versus true-positive arrival rate. Critically, once blank images are removed, the \textit{effective} arrival rate of true positive events is substantially lower than the raw trigger rate. This reduced throughput requirement fundamentally changes the hardware provisioning calculus: an edge node that cannot keep pace with raw camera trap triggers may easily handle the true positive stream, enabling richer downstream inference (e.g., species classification with BioCLIP) within SLO constraints.
+
+\subsection{Experiment 6: Stress Testing via Synthetic Trace Modification}
+\label{sec:exp6}
+
+\textbf{Research question}: How does SLO compliance degrade as workload burstiness increases?
+
+We use the Poisson models from Experiment~1 as a baseline and scale arrival rates by $2\times$, $5\times$, and $10\times$ to simulate denser deployments or more active wildlife periods. Synthetic traces are replayed through the edge resource model from Experiment~3, measuring SLO compliance at each scale factor and identifying the breaking point for each policy.
+
+\subsection{Simulation Environment}
+\label{sec:digital_twin}
+
+The simulation environment is a record-and-replay system that ingests real event traces collected in the field. It models both the physical environment (terrain, vegetation, weather) and sensor characteristics (field of view, latency, detection accuracy, false-positive rates). The digital twin supports three modes of operation: (1)~trace replay, feeding identical event sequences into different autonomous sensing policies for reproducible evaluation; (2)~scenario variation, modifying environmental conditions (e.g., vegetation density, animal density, lighting, weather) to test policy robustness; and (3)~resource constraint simulation, including battery depletion, intermittent connectivity, and compute limits. This design allows controlled, fair comparisons between sensing strategies without the cost and unpredictability of repeated field deployments.
+
+The digital twin models each sensor’s characteristics: camera traps with simulated trigger sensitivity, image capture delay, and day/night detection performance; autonomous drones with flight path constraints, gimbal tracking accuracy, and wind-induced motion effects; and bioacoustic sensors with detection thresholds and false-positive rates under wind or rain noise.
+
+\subsection{Metrics}
+\label{sec:slo}
+We define SLOs for ecological sensing as measurable goals that ensure a sensing policy meets scientific and operational requirements. Our framework considers:
+\begin{enumerate}
+    \item \textbf{Latency}: Time from event occurrence to confirmed detection or action.
+    \item \textbf{Coverage}: Proportion of relevant events successfully captured, potentially stratified by species, behavior, or time of day.
+    \item \textbf{Energy per Event}: Power consumed for each captured event, including idle and active sensing phases.
+    \item \textbf{Operator Effort per Event}: Human time required for setup, maintenance, and data review.
+\end{enumerate}
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Experiment 1: Cross-Modal Arrival Rate Characterization}
+
+% TODO: Fill in after running extract_wilds_multimodal.py and change_points.py
+
+\begin{table*}[t]
+\centering
+\begin{tabular}{p{2.5cm} r p{2.5cm} r r r r}
+\toprule
+\textbf{Modality} & \textbf{Total Events} & \textbf{Date Range} & \textbf{Mean Rate (events/h)} & \textbf{CV} & \textbf{Burstiness $B$} & \textbf{Num Sites} \\
+\midrule
+Camera traps & XX & XX--XX & XX & XX & XX & 13 \\
+Bioacoustics & XX & XX--XX & XX & XX & XX & 6 \\
+Drones & XX & XX--XX & XX & XX & XX & XX \\
+Citizen science & XX & XX--XX & XX & XX & XX & XX \\
+\bottomrule
+\end{tabular}
+\caption{Cross-modal arrival rate statistics. CV is coefficient of variation; burstiness $B = (CV - 1)/(CV + 1)$.}
+\label{table:arrival_rates}
+\end{table*}
+
+% TODO: Insert overlaid cumulative arrival rate figure (4 modality curves, analogous to 2024 paper Fig 3)
+% \begin{figure}[t]
+%     \centering
+%     \includegraphics[width=\linewidth]{figures/cross_modal_arrival_rates.pdf}
+%     \caption{Cumulative arrival rates across four sensing modalities. Change points detected at thresholds [0.8, 0.95, 0.99, 0.995] are marked.}
+%     \label{fig:arrival_rates}
+% \end{figure}
+
+\subsection{Experiment 2: Cross-Modal Event Correlation}
+
+% TODO: Fill in after computing Jaccard similarity matrices
+
+% TODO: Insert cross-modal correlation heatmap
+% \begin{figure}[t]
+%     \centering
+%     \includegraphics[width=\linewidth]{figures/cross_modal_correlation_heatmap.pdf}
+%     \caption{Cross-modal Jaccard similarity at 1h, 6h, and 24h time windows for co-located sensor pairs.}
+%     \label{fig:correlation_heatmap}
+% \end{figure}
+
+% TODO: Per-site breakdown table showing which modality pairs have strongest co-occurrence
+
+\subsection{Experiment 3: Edge Resource Model}
+
+% TODO: Fill in after compiling published benchmarks and combining with Exp 1 arrival rates
+
+\begin{table*}[t]
+\centering
+\begin{tabular}{p{2.5cm} p{2cm} r r p{2.5cm}}
+\toprule
+\textbf{Model} & \textbf{Published Latency} & \textbf{Arrival Rate (events/h)} & \textbf{Required Throughput} & \textbf{Single-Node Feasible?} \\
+\midrule
+BirdNET & $\sim$0.1s (CPU) & XX & XX & XX \\
+YOLO+SAHI & $\sim$0.3--2s (GPU) & XX & XX & XX \\
+BioCLIP & $\sim$0.5s (GPU) & XX & XX & XX \\
+MegaDetector & $\sim$0.2s (GPU) & XX & XX & XX \\
+\midrule
+\textbf{Aggregate} & --- & XX & XX & XX \\
+\bottomrule
+\end{tabular}
+\caption{Edge resource model: published inference latencies combined with measured arrival rates to determine single-node feasibility.}
+\label{table:resource_model}
+\end{table*}
+
+% TODO: Insert policy comparison table (process-all vs priority-based vs adaptive)
+% TODO: Gap analysis — which modality combinations exceed edge capacity
+
+\subsection{Experiment 4: Replay-Based Policy Comparison}
+
+% TODO: Fill in after replaying Campaign 2 traces through 3 policies
+
+\begin{table*}[t]
+\centering
+\begin{tabular}{p{2.5cm} cc cc r r}
+\toprule
+\textbf{Policy} & \textbf{Latency P95} & \textbf{Coverage (\%)} & \textbf{Compute Budget (\%)} & \textbf{Operator Effort (min/event)} \\
+\midrule
+Process-all (baseline) & XX & XX & 100\% & XX \\
+Event-triggered & XX & XX & XX & XX \\
+Adaptive & XX & XX & XX & XX \\
+\bottomrule
+\end{tabular}
+\caption{Policy comparison over 24-day Campaign 2 replay. Compute budget is normalized to the process-all baseline.}
+\label{table:policy_comparison}
+\end{table*}
+
+% TODO: Insert timeline visualization showing policy behavior over 24 days
+% \begin{figure}[t]
+%     \centering
+%     \includegraphics[width=\linewidth]{figures/policy_timeline.pdf}
+%     \caption{Policy behavior over the 24-day Campaign 2 replay period, showing processing decisions and SLO compliance.}
+%     \label{fig:policy_timeline}
+% \end{figure}
+
+\subsection{Experiment 5: Storage Savings from Edge Blank Image Filtering}
+
+% TODO: Fill in after running camera trap detections on ~236K images
+
+\begin{table}[t]
+\centering
+\begin{tabular}{p{1.5cm} r r r r r}
+\toprule
+\textbf{Camera} & \textbf{Total Imgs} & \textbf{Blank} & \textbf{Blank \%} & \textbf{Raw Rate (/h)} & \textbf{TP Rate (/h)} \\
+\midrule
+CT01 & XX & XX & XX & XX & XX \\
+CT02 & XX & XX & XX & XX & XX \\
+CT03 & XX & XX & XX & XX & XX \\
+CT04 & XX & XX & XX & XX & XX \\
+CT05 & XX & XX & XX & XX & XX \\
+\midrule
+\textbf{Overall} & XX & XX & XX & XX & XX \\
+\bottomrule
+\end{tabular}
+\caption{Blank image analysis per camera. TP Rate is the true-positive (animal-present) arrival rate after edge filtering.}
+\label{table:blank_images}
+\end{table}
+
+% TODO: Insert storage savings figure (raw vs filtered GB)
+% \begin{figure}[t]
+%     \centering
+%     \includegraphics[width=\linewidth]{figures/storage_savings.pdf}
+%     \caption{Storage comparison: raw data volume vs.\ filtered volume after edge blank image removal.}
+%     \label{fig:storage_savings}
+% \end{figure}
+
+% TODO: Insert hardware requirement comparison (raw vs true-positive throughput)
+% \begin{figure}[t]
+%     \centering
+%     \includegraphics[width=\linewidth]{figures/hardware_requirements.pdf}
+%     \caption{Hardware throughput requirements for raw vs.\ true-positive-only processing, showing that edge filtering enables richer downstream models within SLO constraints.}
+%     \label{fig:hardware_requirements}
+% \end{figure}
+
+\subsection{Experiment 6: Stress Testing via Synthetic Trace Modification}
+
+% TODO: Fill in after running synthetic replay at 2x, 5x, 10x scaling
+
+% TODO: Insert SLO compliance curves vs burstiness scaling factor
+% \begin{figure}[t]
+%     \centering
+%     \includegraphics[width=\linewidth]{figures/stress_test_slo_curves.pdf}
+%     \caption{SLO compliance vs.\ arrival rate scaling factor for each policy. Dashed lines indicate the breaking point where compliance drops below 95\%.}
+%     \label{fig:stress_test}
+% \end{figure}
+
+% TODO: Breaking point analysis table
+% \begin{table}[t]
+% \centering
+% \begin{tabular}{p{2.5cm} r r}
+% \toprule
+% \textbf{Policy} & \textbf{Breaking Point ($\times$)} & \textbf{Compliance at $10\times$} \\
+% \midrule
+% Process-all & XX & XX\% \\
+% Event-triggered & XX & XX\% \\
+% Adaptive & XX & XX\% \\
+% \bottomrule
+% \end{tabular}
+% \caption{Breaking point analysis: the scaling factor at which each policy drops below 95\% SLO compliance.}
+% \label{table:breaking_points}
+% \end{table}
+
+\subsection{End-to-End SLO Evaluation}
+
+\begin{table*}[t]
+\centering
+\begin{tabular}{p{2.7cm} cc cc cc cc}
+\toprule
+\multirow{2}{*}{\textbf{Case Study}}
+& \multicolumn{2}{c}{\textbf{Latency (P95)}}
+& \multicolumn{2}{c}{\textbf{Coverage (\%)}}
+& \multicolumn{2}{c}{\textbf{Energy/Event (Wh)}}
+& \multicolumn{2}{c}{\textbf{Operator Effort/Event (min)}} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+& \textbf{Target} & \textbf{Obs.} & \textbf{Target} & \textbf{Obs.} & \textbf{Target} & \textbf{Obs.} & \textbf{Target} & \textbf{Obs.} \\
+\midrule
+Pere David's Deer & $<10$ min & 8.4 min & $>90$ & 88.2 & $<0.05$ & 0.061 & $<1$ & 1.2 \\
+African Wild Dog & $<5$ sec & 6.8 sec & $>85$ & 81.4 & $2{-}5$ & 4.7 & $3{-}5$ & 5.6 \\
+Mixed Species & $<10$ min & XX min & $>80$ & XX & $<0.1$ & XX & $<2$ & XX \\
+\bottomrule
+\end{tabular}
+\caption{Observed versus target service-level objectives (SLOs) for each case study. Latency is measured from event occurrence to confirmed detection or action; coverage is the fraction of relevant events successfully captured. Energy and operator effort are normalized per event. Targets are based on field requirements; observed values come from replay analysis of recorded traces.}
+\label{table:slos_eval}
+\end{table*}
+
+\section{Discussion}
+\begin{enumerate}
+    \item Efficacy of autonomous solutions (smart camera traps, autonomous drones, bioacoustics, Drone + cam trap trigger combo
+    \item What is the robustness and ease of use required to make autonomy cheaper than manual?
+    \item RL testbed for robotics
+    \item Replay traces in simulation under novel situations (habitat change, climate resiliency)
+    \item Enable novel ecological studies
+    \item Recreate a range of likely scenarios from what might happen
+\end{enumerate}
+
+
+
+\section{Related Work}
+\begin{itemize}
+    \item Record-and-replay systems 
+    \item Animal ecology sensing: modalities and goals.
+    \item Static vs adaptive sensing: tradeoffs and gaps.
+    \item Bridging the gap to autonomy: this work as a transition point. Trend towards 'smart-sensors' but multi-modal sensor networks are unexplored.
+\end{itemize}
+
+\subsection{Ecology Studies}
+Recent advances in ecological research have increasingly leveraged remote sensing, unmanned aerial vehicles (UAVs), and autonomous monitoring to investigate species distributions, behavior, and ecosystem health. Pedrazzi et al.~\cite{pedrazzi2025} review the integration of UAV-based imaging into animal behavior studies, highlighting how drones facilitate the observation of elusive species and rare behaviors, while also noting challenges in processing large datasets and mitigating disturbance. Corcoran et al.~\cite{corcoran2021} synthesize work on automated wildlife detection from drone imagery, identifying species and environmental contexts in which automated methods outperform manual observation. Afridi et al.~\cite{afridi2025impact} assess how operational parameters and environmental cues mediate wildlife disturbance from drones, while Schad and Fischer~\cite{schad2023opportunities} discuss opportunities for experimental manipulation of animal behavior through UAV deployments. Other works explore targeted applications of sensor technologies, such as collar-mounted acoustic recording units for post-release monitoring of translocated pandas~\cite{yan2019acoustic} and comparative cost-effectiveness of thermal drones, passive acoustic recorders, and camera traps for monitoring koala occupancy~\cite{beranek2024comparing}.  
+
+Some of these studies already embed multi-modal and edge computing principles discussed in Sections~\ref{sec:multi_modal} and~\ref{sec:edge_ai}. For example, Buxton et al.~\cite{buxton2018pairing} (multi-modal) combine camera traps with acoustic recorders to better assess ecological impacts, and Kline et al.~\cite{kline2024characterizing} (edge AI) analyze ecological workloads to inform in situ resource provisioning.
+
+\subsection{Multi-Modal Studies}
+\label{sec:multi_modal}
+A growing body of work emphasizes integrating diverse sensing modalities to capture complementary aspects of ecological systems. Buxton et al.~\cite{buxton2018pairing} advocate pairing camera traps with acoustic recorders to monitor both wildlife activity and human disturbance, while Growcott et al.~\cite{growcott2024the} demonstrate how combining these modalities can enable individual identification of leopards from vocalizations. In the MammAlps dataset~\cite{gabeff2025mammlaps}, synchronized camera trap video, audio, and segmentation maps support multimodal and multi-view animal behavior recognition. Other multimodal datasets, such as BaboonLand~\cite{duporge2025baboonland}, integrate detection, tracking, and behavior recognition from UAV footage of wild primates, while MMLA~\cite{kline2025mmla} spans multiple environments and species to support robust low-altitude drone detection.  
+
+Several of these efforts also leverage systems infrastructure (Section~\ref{sec:systems}) and edge AI techniques (Section~\ref{sec:edge_ai}). For example, \textit{Integrating Biological Data into Autonomous Remote Sensing Systems for In Situ Imageomics}~\cite{kline2024integrating} combines visual data with UAV telemetry in an autonomous navigation pipeline, while WildWing~\cite{kline} (systems + edge AI) standardizes autonomous UAV behavioral monitoring in multi-sensor contexts.
+
+\subsection{Systems}
+\label{sec:systems}
+Beyond ecological applications, recent work has developed software and hardware systems to support autonomous and distributed environmental monitoring. WildWing~\cite{kline2025wildwing} provides an open-source UAV platform for standardized autonomous collection of high-quality behavioral video, while WildLive~\cite{nguyen2025wildlive} enables near real-time onboard wildlife tracking through efficient integration of YOLO-based detection and sparse optical flow. Decentralized coordination strategies, such as k-coverage algorithms for multi-drone herding observation~\cite{grushchak2024decentralized} and optimization-based swarm control for multi-perspective data capture~\cite{rolland2024drone}, extend UAV coverage and data diversity. On the ground, BioSense~\cite{contina2024biosense} offers a programmable, low-cost sensing node for bioacoustics and environmental measurements, while Ambience~\cite{bakir2024ambience} introduces an IoT operating system for microservices that spans heterogeneous devices from microcontrollers to cloud servers.  
+
+Many of these systems are deployed in multi-modal contexts (Section~\ref{sec:multi_modal}) and rely on edge AI inference (Section~\ref{sec:edge_ai}). For instance, WildLive~\cite{nguyen2025wildlive} integrates onboard detection and tracking optimized for embedded GPU platforms, while BioSense~\cite{contina2024biosense} demonstrates low-power, multi-sensor operation suitable for adaptive AI-driven processing in the field.
+
+\subsection{Edge AI}
+\label{sec:edge_ai}
+The emergence of edge AI has enabled in situ processing of ecological sensor data, reducing bandwidth requirements and supporting real-time decision-making. Kline et al.~\cite{kline2024characterizing} characterize AI-driven animal ecology workloads to inform resource provisioning for latency-sensitive tasks, while O’Quinn et al.~\cite{oquinn2025environment} propose environment-aware dynamic pruning for adaptive load balancing in edge inference pipelines. Dominguez-Morales et al.~\cite{dominguez2021wildlife} demonstrate embedded neural networks for classifying horse gaits from IMU data on microcontrollers, and Gardiner et al.~\cite{gardiner2025towards} design ultra-lightweight CNN triggers for insect camera traps. Wang et al.~\cite{wang2025regionbased} propose region-based video content enhancement for edge analytics, achieving throughput and accuracy gains on heterogeneous devices.  
+
+Edge AI frequently intersects with the systems-level contributions in Section~\ref{sec:systems} and multi-modal deployments in Section~\ref{sec:multi_modal}. For example, WildLive~\cite{nguyen2025wildlive} and WildWing~\cite{kline2025wildwing} embed AI-driven detection and tracking directly onboard UAVs, while MMLA~\cite{kline2025mmla} provides a dataset explicitly designed to train robust edge-deployed detection models across diverse ecological contexts.
+
+
+\section{Conclusion and Future Work}
+
+
+\bibliographystyle{unsrt}%ACM-Reference-Format} % references section
+\bibliography{sample}
+
+
+
+\end{document}
+
+
+
+
+
+
+

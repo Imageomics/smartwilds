@@ -1,0 +1,46 @@
+abstract: ""
+authors:
+- family-names: "Kline"
+  given-names: "Jenna"
+  orcid: "https://orcid.org/0009-0006-7301-5774"
+cff-version: 1.2.0
+date-released: "2024-12-04"
+identifiers:
+- description: "The Github release URL of tag v1.0.0"
+  type: "url"
+  value: "https://github.com/jennamk14/adae_model"
+keywords:
+- "drone"
+- "UAV"
+- "ADAE"
+- "camera trap"
+- "wildlife"
+- "animal ecology"
+- "machine learning"
+- "distributed edge inference"
+- "imageomics"
+license: "MIT"
+message: "If you use this software, please cite it as below."
+repository-code: "https://github.com/jennamk14/adae_model"
+title: "Modeling ADAE Workloads"
+version: 1.0.0
+doi: 
+type: software
+preferred-citation:
+  type: conference-paper
+  authors:
+  - family-names: "Kline"
+    given-names: "Jenna"
+    orcid: "https://orcid.org/0009-0006-7301-5774"
+  - family-names: "O'Quinn"
+    given-names: "Austin"
+  - family-names: "Berger-Wolf"
+    given-names: Tanya
+    orcid: "https://orcid.org/0000-0001-7610-1412"
+  - family-names: "Stewart"
+    given-names: "Christopher"
+  title: "Characterizing and Modeling AI-Driven Animal Ecology Studies at the Edge"
+  year: 2024
+  collection-title: "Proceedings of the 2024 ACM/IEEE Symposium on Edge Computing"
+
+  

@@ -1,0 +1,443 @@
+{
+  "metadata": {
+    "description": "Unified multi-modal configuration for The Wilds 2025 biodiversity survey",
+    "version": "2.0-multimodal",
+    "last_updated": "2026-03-17",
+    "author": "Claude Code",
+    "documentation": "See MULTI_MODAL_ARCHITECTURE.md for detailed hierarchy"
+  },
+
+  "study": {
+    "name": "The Wilds 2025 Biodiversity Survey",
+    "studyID": "TheWilds_2025",
+    "description": "Multi-modal biodiversity survey combining camera traps, bioacoustic recordings, drone surveys, and citizen science observations",
+    "location": {
+      "name": "The Wilds Conservation Center",
+      "latitude": 39.50,
+      "longitude": -81.44,
+      "region": "Southeastern Ohio",
+      "country": "USA",
+      "coordinate_uncertainty_m": 1000
+    },
+    "temporal_extent": {
+      "start_date": "2025-06-30",
+      "end_date": "2025-08-28",
+      "note": "June campaign (TW01-CT02, TW02-CT03, TW03-CT01, TW04-CT04) + August campaign (all modalities)"
+    },
+    "principal_investigator": "The Wilds",
+    "contact_email": "contact@thewilds.org"
+  },
+
+  "modalities": {
+    "camera_traps": {
+      "enabled": true,
+      "modality_id": "TheWilds_2025_camera_traps",
+      "sampling_protocol": "Passive infrared camera trap survey (PIR-triggered + hourly timelapse)",
+      "total_deployments": 13,
+      "total_campaigns": 2,
+      "deployment_breakdown": {
+        "June_2025": {
+          "campaign": "20250630_20250703",
+          "dates": "2025-06-30 to 2025-07-03",
+          "cameras": 4,
+          "total_images": "~20,000"
+        },
+        "August_2025": {
+          "campaign": "20250804_20250828",
+          "dates": "2025-08-04 to 2025-08-28",
+          "cameras": 9,
+          "total_images": "~225,000"
+        }
+      },
+      "detection_models": {
+        "object_detection": "YOLOv8X",
+        "species_classification": "BioCLIP",
+        "depth_estimation": true
+      },
+      "species_labels": [
+        "white-tailed deer",
+        "deer",
+        "bird",
+        "horses",
+        "takin"
+      ],
+      "output_fields": [
+        "bbox_coordinates",
+        "yolo_confidence",
+        "species_name",
+        "bioclip_confidence",
+        "distance_m",
+        "angle_deg",
+        "animal_lat",
+        "animal_lon",
+        "image_path",
+        "timestamp"
+      ],
+      "data_location": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250630_20250703/camera_traps/ and /fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/",
+      "config_reference": "detection_config.json",
+      "processing_status": "READY"
+    },
+
+    "bioacoustics": {
+      "enabled": true,
+      "modality_id": "TheWilds_2025_bioacoustics",
+      "sampling_protocol": "Continuous acoustic monitoring (stationary Song Meter recorders)",
+      "total_deployments": 6,
+      "deployment_locations": [
+        "TW02-SM04: Nomad Ridge Shelter, right side (39.82957, -81.73295)",
+        "TW05-SM06: Lake Trail Gate O (39.82866, -81.73758)",
+        "TW06-SM05: Zebra Shelter (39.82870, -81.73756)",
+        "TW07-SM02: Zipline Tower (39.82891, -81.74392)",
+        "TW08-SM03: Fence with Vegetation (39.82892, -81.74392)",
+        "TW09-SM01: Dock, left side (39.83418, -81.73783)"
+      ],
+      "total_recordings": 2142,
+      "total_data_gb": 196,
+      "recording_parameters": {
+        "sample_rate_hz": 48000,
+        "bit_depth": 16,
+        "file_format": "WAV",
+        "frequency_response_hz": [200, 12000]
+      },
+      "recording_schedules": {
+        "TW02-SM04": "5 minutes every hour",
+        "TW05-SM06": "Sunrise to sunset",
+        "TW06-SM05": "15 minutes every hour",
+        "TW07-SM02": "Sunrise to sunset",
+        "TW08-SM03": "Sunrise to sunset",
+        "TW09-SM01": "Sunrise to sunset"
+      },
+      "detection_models": {
+        "species_classification": "BirdCLIP",
+        "automated": true
+      },
+      "output_fields": [
+        "species_name",
+        "detection_confidence",
+        "frequency_hz",
+        "temporal_location_sec",
+        "wav_file_path",
+        "timestamp_start"
+      ],
+      "data_location": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/bioacoustics/",
+      "deployment_dates": {
+        "start": "2025-08-04",
+        "end": "2025-08-28"
+      },
+      "processing_status": "READY (BirdCLIP model confirmed)"
+    },
+
+    "drones": {
+      "enabled": true,
+      "modality_id": "TheWilds_2025_drones",
+      "sampling_protocol": "Aerial video survey (periodic flight missions)",
+      "total_deployments": 8,
+      "flights_with_video": 5,
+      "flights_with_metadata": 7,
+      "data_loss_note": "3 flights have metadata JSON but no video files uploaded (20250825_parrot_02, 03, 04)",
+      "flyable_flights": 5,
+      "platforms": [
+        {
+          "platform_type": "DJI",
+          "model": "Mavic (model TBD)",
+          "flights": [
+            {
+              "flight_id": "20250811_DJI_01",
+              "date": "2025-08-11",
+              "location": "39.834171, -81.737820",
+              "video_count": 2,
+              "metadata_format": "CSV (GPS + battery at 10Hz)",
+              "status": "READY"
+            }
+          ]
+        },
+        {
+          "platform_type": "Parrot",
+          "model": "Anafi 4K",
+          "flights": [
+            {
+              "flight_id": "20250811_parrot_01",
+              "date": "2025-08-11",
+              "video_count": 3,
+              "metadata_status": "MISSING (videos present but no metadata file)",
+              "status": "INCOMPLETE"
+            },
+            {
+              "flight_id": "20250818_parrot_01",
+              "date": "2025-08-18",
+              "video_count": 3,
+              "metadata_format": "JSON (proprietary Parrot telemetry)",
+              "status": "READY"
+            },
+            {
+              "flight_id": "20250818_parrot_02",
+              "date": "2025-08-18",
+              "video_count": 3,
+              "metadata_format": "JSON (proprietary Parrot telemetry)",
+              "status": "READY"
+            },
+            {
+              "flight_id": "20250825_parrot_01",
+              "date": "2025-08-25",
+              "video_count": 2,
+              "metadata_format": "JSON (GUTMA DX standard format)",
+              "aircraft_sn": "PI040416BA8H083200",
+              "status": "READY"
+            },
+            {
+              "flight_id": "20250825_parrot_02",
+              "date": "2025-08-25",
+              "video_status": "NO VIDEOS (metadata only)",
+              "status": "BLOCKED"
+            },
+            {
+              "flight_id": "20250825_parrot_03",
+              "date": "2025-08-25",
+              "video_status": "NO VIDEOS (metadata only)",
+              "status": "BLOCKED"
+            },
+            {
+              "flight_id": "20250825_parrot_04",
+              "date": "2025-08-25",
+              "video_status": "NO VIDEOS (metadata only)",
+              "status": "BLOCKED"
+            }
+          ]
+        }
+      ],
+      "detection_models": {
+        "object_detection": "YOLOv11 Large",
+        "species_classification": "BioCLIP",
+        "annotation_mode": "automated_detection_plus_manual_review"
+      },
+      "video_processing": {
+        "frame_extraction_strategy": "TBD (1 fps, 0.5 fps, or every Nth frame)",
+        "gps_interpolation": "From flight telemetry to matched frame timestamps"
+      },
+      "output_fields": [
+        "video_file",
+        "frame_number",
+        "timestamp_sec",
+        "species_name",
+        "behavior",
+        "bbox_coordinates",
+        "gps_latitude",
+        "gps_longitude",
+        "detection_confidence",
+        "annotation_status",
+        "annotator_id"
+      ],
+      "data_location": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/drones/",
+      "annotation_workflow": "Automated YOLOv11 detection → manual curator review → confidence assessment",
+      "processing_status": "READY (model specified: YOLOv11 Large) | Awaiting frame-by-frame annotation",
+      "critical_notes": "Manual annotation required after automated detection for validation"
+    },
+
+    "citizen_science": {
+      "enabled": true,
+      "modality_id": "TheWilds_2025_citizen_science",
+      "sampling_protocol": "Opportunistic mobile phone photography (non-systematic)",
+      "total_submissions": 991,
+      "file_breakdown": {
+        "photographs": {
+          "jpeg": 395,
+          "JPG": 340,
+          "jpg": 6,
+          "HEIC": 88,
+          "heic": 24,
+          "total_images": 853
+        },
+        "videos": {
+          "MOV": 90,
+          "mov": 1,
+          "MP4": 47,
+          "total_videos": 138
+        }
+      },
+      "total_files": 991,
+      "total_data_gb": 8.9,
+      "metadata_status": "MISSING - No JotForm access",
+      "submission_index": "USER_PROVIDED (citizen_science_index.csv expected columns: file_uuid, submission_id, submitter_name, date_taken, location_coords, observation_notes)",
+      "annotation_requirement": "Manual curation and species identification",
+      "output_fields": [
+        "file_uuid",
+        "submission_id",
+        "submitter_name",
+        "species_name",
+        "behavior",
+        "observation_date",
+        "observation_time",
+        "location_description",
+        "location_coordinates",
+        "file_path",
+        "file_type",
+        "annotation_date",
+        "annotator_id",
+        "curation_notes"
+      ],
+      "data_location": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/citizen_science/",
+      "file_naming_patterns": [
+        "UUID-based: [UUID]_[NUMBER]_[NUMBER][LETTER].[EXT] (e.g., 00113818-3AD3-4270-ADC0-F9D8105FB5B3_1_105_c.jpeg)",
+        "iOS photos: IMG_XXXX.[JPEG|HEIC|MOV]",
+        "Camera: DSC/other device patterns"
+      ],
+      "processing_status": "BLOCKED: Awaiting citizen_science_index.csv from user",
+      "critical_gaps": [
+        "No submission metadata file",
+        "Cannot link files to observers without index",
+        "No timestamps (only upload date available)",
+        "No GPS coordinates for most submissions",
+        "Requires manual annotation for all occurrences"
+      ]
+    }
+  },
+
+  "event_hierarchy": {
+    "description": "4-level Darwin Core Event hierarchy for multi-modal dataset",
+    "level_1_study": {
+      "type": "Study Event",
+      "eventID": "TheWilds_2025",
+      "samplingProtocol": "Multi-modal biodiversity survey",
+      "coverage": "All modalities across all dates",
+      "temporal_extent": "2025-06-30 to 2025-08-28"
+    },
+    "level_2_modality": {
+      "type": "Modality Event",
+      "examples": [
+        "TheWilds_2025_camera_traps",
+        "TheWilds_2025_bioacoustics",
+        "TheWilds_2025_drones",
+        "TheWilds_2025_citizen_science"
+      ],
+      "parent_eventID": "TheWilds_2025",
+      "coverage": "All deployments within one modality"
+    },
+    "level_3_deployment": {
+      "type": "Deployment/Session Event",
+      "examples": [
+        "TW01-CT02_20250804_20250811 (camera deployment)",
+        "TW02-SM04_20250804_20250828 (recording session)",
+        "20250818_Parrot_01_flight (drone flight)",
+        "TheWilds_2025_citizen_science_submission_001 (submission)"
+      ],
+      "parent_eventID": "Modality Event ID",
+      "coverage": "Single physical deployment/session"
+    },
+    "level_4_occurrences": {
+      "type": "Occurrence Records",
+      "eventID_foreign_key": "Links to parent Level 3 deployment event",
+      "coverage": "Individual detections/observations within deployment"
+    }
+  },
+
+  "platform_specifications": {
+    "reference": "See platform_specifications_all_modalities.json for detailed hardware specs"
+  },
+
+  "detection_models": {
+    "camera_traps": {
+      "object_detection": {
+        "model": "YOLOv8X",
+        "weights": "yolov8x.pt",
+        "input_resolution": "1280x960 (depends on input image)",
+        "confidence_threshold": 0.25,
+        "nms_threshold": 0.45
+      },
+      "species_classification": {
+        "model": "BioCLIP",
+        "labels": "white-tailed deer, deer, bird, horses, takin",
+        "output": "species name + confidence score"
+      },
+      "depth_estimation": {
+        "enabled": true,
+        "method": "Bounding box height + horizontal angle estimation",
+        "parameters": {
+          "hfov_deg": 52,
+          "target_height_m": 1.0
+        },
+        "outputs": ["distance_m", "angle_deg", "animal_lat", "animal_lon"]
+      }
+    },
+    "bioacoustics": {
+      "species_classification": {
+        "model": "BirdCLIP",
+        "input_format": "WAV (48 kHz, 16-bit)",
+        "output": "species name + confidence score + frequency/time location",
+        "note": "User to confirm BirdCLIP compatibility and preprocessing requirements"
+      }
+    },
+    "drones": {
+      "object_detection": {
+        "model": "YOLOv11 Large",
+        "input_format": "Video frames extracted at regular intervals",
+        "confidence_threshold": 0.40,
+        "output": "bbox coordinates + detection confidence"
+      },
+      "species_classification": {
+        "model": "BioCLIP",
+        "labels": "white-tailed deer, deer, bird, horses, takin",
+        "annotation_mode": "Manual review required after automated detection"
+      }
+    },
+    "citizen_science": {
+      "species_identification": {
+        "method": "Manual curation",
+        "required_fields": "species_name, behavior, location_coordinates",
+        "annotation_status": "pending user-provided index"
+      }
+    }
+  },
+
+  "species_vocabulary": {
+    "common_names": [
+      "white-tailed deer",
+      "deer",
+      "bird",
+      "horses",
+      "takin",
+      "ungulates"
+    ],
+    "note": "Expanded from camera-trap-only labels to support all modalities",
+    "taxonomic_authority": "GBIF Taxonomic Backbone",
+    "expansion_rationale": "Horses and takin observed in multiple modalities; deer is primary target species"
+  },
+
+  "output_configuration": {
+    "base_output_directory": "/fs/ess/PAS2136/TheWilds2025/processing_output",
+    "subdirectories": {
+      "darwin_core_metadata": "FAIR² compliant Events and Occurrences CSV files",
+      "detections_automated": "Automated detection results per modality",
+      "detections_manual": "Manual annotations (drones, citizen science)",
+      "validation_reports": "Quality control and integrity checks",
+      "platform_specs": "Hardware specifications JSON"
+    },
+    "naming_convention": {
+      "study_events": "darwin_core_events_multi_modal.csv",
+      "all_occurrences": "darwin_core_occurrences_multi_modal.csv",
+      "camera_trap_detections": "camera_detections_[campaign].csv",
+      "bioacoustic_detections": "bioacoustics_detections_[site_id].csv",
+      "drone_detections": "drone_detections_[flight_id].csv",
+      "citizen_science_occurrences": "citizen_science_observations.csv"
+    }
+  },
+
+  "processing_notes": {
+    "priority_order": [
+      "Camera traps (existing pipeline - no changes needed)",
+      "Bioacoustics (BirdCLIP ready to integrate)",
+      "Drones (YOLOv11 detection + manual review workflow)",
+      "Citizen science (awaiting user metadata index)"
+    ],
+    "blocking_items": [
+      "Citizen science: Awaiting citizen_science_index.csv from user",
+      "Drone annotation: Manual review workflow not yet defined",
+      "BirdCLIP: Confirm compatibility with 48 kHz WAV preprocessing"
+    ],
+    "gpu_requirements": {
+      "camera_traps": "1x A100 or V100 for batch processing (45-60 min)",
+      "bioacoustics": "1x A100 or T4 for BirdCLIP inference (variable, depends on model)",
+      "drones": "1x A100 for YOLOv11 video frame processing (compute-intensive)",
+      "citizen_science": "No GPU required (manual curation)"
+    }
+  }
+}
