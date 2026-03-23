@@ -214,7 +214,7 @@ Experiment 3 can run in parallel (uses published benchmarks)
 Experiment 5 requires camera trap detection runs (can start early, parallelizable)
 ```
 
-## Master's Student Onboarding Path
+## Yuanyang Onboarding Path
 
 1. **Week 1**: Run BirdNET, YOLO+SAHI, BioCLIP on small subset (~100 images, ~10 audio clips). Measure wall-clock time, GPU/CPU utilization, memory.
 2. **Week 2**: Profile systematically on ruggedized laptop — vary batch size, measure throughput and latency per model.
@@ -229,4 +229,4 @@ Experiment 5 requires camera trap detection runs (can start early, parallelizabl
 | TW02-CT01 timestamp corrections incomplete | Bad arrival rate data | Corrections in `camera_deployment_metadata.py` cover known bad dates; flag any remaining outliers |
 | Citizen science timestamps unreliable (mtime vs capture time) | Weak Exp 2 correlation | Try EXIF from JPEG/HEIC first; note limitation in paper |
 | Camera trap detections not run in time for Exp 5 | Missing storage analysis | Run on Campaign 1 first (15K images, fast); use as proof of concept; extrapolate to full dataset |
-| Master's student not onboarded in time for profiling | No measured benchmarks | Use published benchmarks; clearly state in paper |
+| Yuanyang not onboarded in time for profiling | No measured benchmarks | Use published benchmarks; clearly state in paper |

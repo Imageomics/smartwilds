@@ -29,7 +29,7 @@
 
 {\LARGE \bfseries Multi-Sensor Fusion for Biodiversity Assessment:\\
 Accuracy, Complementarity, and Cost-Effectiveness\\
-Across Five Sensing Modalities\par}
+Across Six Sensing Modalities\par}
 
 \vspace{2cm}
 
@@ -86,21 +86,21 @@ Running headline: Multi-sensor fusion for biodiversity assessment
 \section*{Abstract}
 
 \begin{enumerate}
-    \item Wildlife monitoring programmes increasingly deploy multiple sensor modalities---camera traps, autonomous recording units (ARUs), drones, GPS collars, and citizen science observations---yet no standardised framework exists for evaluating how these modalities complement one another in capturing biodiversity. We present a multi-sensor fusion methodology for comparing and integrating five co-deployed sensing modalities at a single site, providing ecologists and monitoring programme designers with quantitative guidance on sensor selection.
+    \item Wildlife monitoring programmes increasingly deploy multiple sensor modalities---camera traps, autonomous recording units (ARUs), drones, citizen science observations, and unstructured text data (field notes, metadata, observation logs)---yet no standardised framework exists for evaluating how these modalities complement one another in capturing biodiversity, or for guiding sensor selection given a particular research question and budget. We present a multi-sensor fusion methodology that organises ecological monitoring around four fundamental questions---\textit{Who} (species or individual identity), \textit{Where} (spatial distribution), \textit{When} (temporal patterns), and \textit{What} (behaviour, presence, habitat use, inter-individual interactions)---each at varying resolution, and maps six co-deployed sensing modalities onto this framework.
 
-    \item We deployed all five modalities simultaneously at The Wilds, a 10,000-acre conservation park in southeastern Ohio, USA, across multiple field campaigns. For each modality we measured species richness, relative abundance, and land-use detection using a unified observation schema (species, location, time, sensor). We quantified per-modality detection performance using AI-assisted annotation pipelines (MegaDetector, BirdNET, YOLO, BioCLIP) validated against expert ground truth. We computed complementarity via species accumulation curves, cross-modal overlap matrices, and joint species distribution models (JSDMs).
+    \item We deployed all six modalities simultaneously at The Wilds, a 10,000-acre conservation park in southeastern Ohio, USA, across multiple field campaigns. For each modality we measured species richness, relative abundance, and land-use detection using a unified observation schema (species, location, time, sensor). We quantified per-modality detection performance using AI-assisted annotation pipelines (MegaDetector, BirdNET, YOLO, BioCLIP) and LLM-based text extraction, validated against expert ground truth. We computed complementarity via species accumulation curves, cross-modal overlap matrices, and joint species distribution models (JSDMs). We evaluated both deployment costs (equipment, labour, power) and analysis costs (compute, AI inference, human review) per modality.
 
     \item % TODO: Fill in key results
-    Citizen science captured the highest species richness (XX species) but with sparse spatiotemporal coverage. ARUs detected XX species across XX sites with continuous temporal coverage, outperforming camera traps (XX species) for cryptic and vocal taxa. Camera traps provided the highest detection rates for large mammals (XX events/trap-night). Drones provided fine-grained spatial data (sub-metre resolution) but limited temporal coverage (XX flight-hours). GPS collars offered continuous movement data for XX collared individuals. Multi-sensor fusion increased total detected species richness by XX\% over the best single modality, and the JSDM revealed that XX\% of habitat-use patterns were only detectable through cross-modal integration.
+    Citizen science captured the highest species richness (XX species) but with sparse spatiotemporal coverage. ARUs detected XX species across XX sites with continuous temporal coverage, outperforming camera traps (XX species) for cryptic and vocal taxa. Camera traps provided the highest detection rates for large mammals (XX events/trap-night), with arrival rates strongly influenced by sensor configuration (PIR sensitivity, burst mode, field of view). Drones provided fine-grained spatial data (sub-metre resolution) but limited temporal coverage (XX flight-hours). LLM-extracted text data provided contextual enrichment---habitat conditions, observer-noted behaviours, and deployment anomalies---that improved interpretation of sensor detections. Multi-sensor fusion increased total detected species richness by XX\% over the best single modality, and the JSDM revealed that XX\% of habitat-use patterns were only detectable through cross-modal integration. The sensor$\times$research-question matrix revealed clear Pareto-optimal sensor combinations at different budget tiers.
 
-    \item Our results demonstrate that no single modality is sufficient for comprehensive biodiversity assessment. We provide a practical framework---including composite metrics (Coverage Efficiency, Data Resolution Index, Species Coverage Score), radar-chart visualisations, and cost-effectiveness comparisons---that enables monitoring programme designers to select optimal sensor combinations for their target taxa, spatial scale, and budget. The methodology generalises across taxa and ecosystems, requiring only co-deployed sensors and a unified observation format.
+    \item Our results demonstrate that no single modality is sufficient for comprehensive biodiversity assessment. We provide a practical decision framework---a sensor$\times$research-question matrix with associated deployment and analysis costs, composite metrics, radar-chart visualisations, and cost-effectiveness comparisons---that enables monitoring programme designers to answer: \textit{given a particular budget and a particular ecological goal, which sensors should I deploy, which AI tools should I use, and what accuracy trade-offs should I expect?} The methodology generalises across taxa and ecosystems, requiring only co-deployed sensors and a unified observation format.
 \end{enumerate}
 
 % --- Data/Code for Peer Review ---
 \noindent\textbf{Data/Code for peer review:} All code and processed data are available at [private repository URL for review]. Raw sensor data are archived on HuggingFace (SmartWilds).
 
 % --- Keywords ---
-\noindent\textbf{Keywords:} biodiversity monitoring, camera traps, acoustic monitoring, citizen science, drones, multi-sensor fusion, species richness, joint species distribution model
+\noindent\textbf{Keywords:} biodiversity monitoring, camera traps, acoustic monitoring, citizen science, drones, multi-sensor fusion, species richness, joint species distribution model, sensor selection, cost-effectiveness
 
 \newpage
 
@@ -111,21 +111,32 @@ Running headline: Multi-sensor fusion for biodiversity assessment
 \section{Introduction}
 
 % WHY: The problem
-Accurate biodiversity assessment is fundamental to conservation planning, yet individual sensing modalities capture only a partial view of the species and ecological processes present at a site. Camera traps excel at detecting large mammals but miss arboreal, volant, and cryptic taxa; autonomous recording units (ARUs) detect vocalising species across broad areas but cannot identify non-vocal animals; drones provide high-resolution spatial snapshots but are temporally limited by flight duration and weather; GPS collars yield continuous movement trajectories for individual animals but require capture and handling; and citizen science observations offer taxonomic breadth but are spatially and temporally opportunistic.
+Accurate biodiversity assessment is fundamental to conservation planning, yet individual sensing modalities capture only a partial view of the species and ecological processes present at a site. Camera traps excel at detecting large mammals but miss arboreal, volant, and cryptic taxa; autonomous recording units (ARUs) detect vocalising species across broad areas but cannot identify non-vocal animals; drones provide high-resolution spatial snapshots but are temporally limited by flight duration and weather; citizen science observations offer taxonomic breadth but are spatially and temporally opportunistic; and unstructured text data---field notes, deployment metadata, and observer logs---provide rich contextual information that is rarely integrated into quantitative analyses.
 
 % WHAT: The gap
-Despite the growing availability of these technologies, most biodiversity studies rely on one or two modalities, and cross-modal comparisons are hampered by differences in data format, spatial footprint, temporal resolution, and detection probability. There is no standardised framework for (a) quantifying how well each modality captures key biodiversity metrics (species richness, abundance, land use), (b) measuring the complementarity and redundancy across modalities at a shared site, or (c) recommending cost-effective sensor combinations tailored to specific monitoring goals.
+Despite the growing availability of these technologies, most biodiversity studies rely on one or two modalities, and cross-modal comparisons are hampered by differences in data format, spatial footprint, temporal resolution, and detection probability. There is no standardised framework for (a) quantifying how well each modality captures key biodiversity metrics (species richness, abundance, land use), (b) measuring the complementarity and redundancy across modalities at a shared site, or (c) recommending cost-effective sensor combinations tailored to specific monitoring goals. More fundamentally, ecologists planning a monitoring programme face a practical question: \textit{given my budget and my research question, which sensors should I buy, which AI tools should I use, and what trade-offs in accuracy should I expect?}
+
+% FRAMING: Who, Where, When, What
+We argue that answering this question requires organising monitoring capabilities around the four fundamental dimensions of behavioural ecology research:
+\begin{itemize}
+    \item \textbf{Who:} Identity at varying resolution---species-level classification, multi-species community composition, or individual identification.
+    \item \textbf{Where:} Spatial distribution at varying resolution---site-level presence, habitat-level occupancy, or fine-grained localisation (sub-metre).
+    \item \textbf{When:} Temporal patterns at varying resolution---seasonal trends, diel activity patterns, or instantaneous events.
+    \item \textbf{What:} Ecological process---presence/absence, behaviour, habitat interactions, or inter-individual interactions.
+\end{itemize}
+Different modalities excel along different dimensions: camera traps provide strong \textit{who} and \textit{when} for large mammals but coarse \textit{where}; drones provide precise \textit{where} and \textit{what} (behaviour, posture) but sparse \textit{when}; ARUs provide continuous \textit{when} for vocal taxa but limited \textit{who} resolution below species level; citizen science provides broad \textit{who} but uncontrolled \textit{where} and \textit{when}; and text data provides contextual \textit{what} (habitat conditions, observer notes on behaviour) that enriches the interpretation of sensor data.
 
 % HOW: What we do
-We address this gap by deploying all five modalities simultaneously at The Wilds, a 10,000-acre conservation park hosting diverse large-mammal, avian, and invertebrate communities. Using AI-assisted annotation pipelines validated against expert ground truth, we convert heterogeneous sensor outputs into a unified observation format and evaluate each modality along spatial, temporal, and taxonomic axes.
+We address this gap by deploying six modalities simultaneously at The Wilds, a 10,000-acre conservation park hosting diverse large-mammal, avian, and invertebrate communities. Using AI-assisted annotation pipelines and LLM-based text extraction validated against expert ground truth, we convert heterogeneous sensor outputs into a unified observation format and evaluate each modality along the Who/Where/When/What dimensions. We quantify both deployment costs (equipment, labour, power, logistics) and analysis costs (compute time, AI inference, human review hours) to provide end-to-end cost-effectiveness guidance.
 
 % CONTRIBUTIONS
 Our contributions are:
 \begin{enumerate}
-    \item A standardised multi-modal observation schema and AI-assisted annotation pipeline that enables direct cross-modal comparison of biodiversity metrics.
-    \item An empirical evaluation of five co-deployed sensing modalities for species richness, abundance estimation, and land-use detection at a single site.
+    \item A Who/Where/When/What framework for organising and comparing sensing modalities by their resolution along each ecological dimension, paired with a sensor$\times$research-question matrix that maps modalities to the ecological tasks they can address.
+    \item A standardised multi-modal observation schema and AI-assisted annotation pipeline (including LLM-based text extraction) that enables direct cross-modal comparison of biodiversity metrics across six modalities.
+    \item An empirical evaluation of six co-deployed sensing modalities for species richness, abundance estimation, and land-use detection at a single site.
     \item A complementarity analysis using species accumulation curves, cross-modal overlap, and joint species distribution models (JSDMs) that quantifies the marginal value of each additional modality.
-    \item Composite performance metrics and cost-effectiveness comparisons that provide actionable guidance for monitoring programme design.
+    \item A cost model encompassing both deployment and analysis costs, with Pareto-optimal sensor combinations for different budgets and monitoring objectives.
 \end{enumerate}
 
 % SCOPE: Broad applicability per MEE requirement
@@ -144,21 +155,21 @@ The Wilds is a 10,000-acre (4,047 ha) conservation park in Muskingum County, Ohi
 
 \subsection{Sensor deployment}
 
-We conducted three field campaigns: a pilot deployment (Campaign~0, June 2024), a short-term deployment (Campaign~1, early August 2024), and a long-term deployment (Campaign~2, August 4--28, 2024). Five sensing modalities were deployed across overlapping spatial footprints:
+We conducted three field campaigns: a pilot deployment (Campaign~1, June~30--July~3, 2025), a long-term deployment (Campaign~2, August~4--28, 2025), and a supplementary drone campaign (Campaign~3, September~8, 2025). Six sensing modalities were deployed across overlapping spatial footprints:
 
 \begin{itemize}
-    \item \textbf{Camera traps:} XX Reconyx/Browning units at 13 site-camera combinations, programmed for motion-triggered capture and hourly time-lapse. Approximately 236,000 images across Campaigns 1 and 2.
-    \item \textbf{Autonomous recording units (ARUs):} Six AudioMoth devices at co-located sites, recording XX minutes per hour. Approximately 1,180 hourly aggregated detection rows across six sites.
-    \item \textbf{Drones:} Both quadcopter (DJI Mavic 3) and fixed-wing platforms. 37 flights totalling XX flight-hours, capturing 4K video over target pastures and corridors.
-    \item \textbf{GPS collars:} Lotek/Vectronic collars deployed on XX Pere David's deer, recording fixes at XX-minute intervals over XX months.
-    \item \textbf{Citizen science:} 991 photographs and field notes from visiting researchers and students during field campaigns, providing opportunistic detections with human-verified species labels.
+    \item \textbf{Camera traps:} Four camera models (GardePro T5NG, GardePro A3, Trail Camera G600, Reveal Pro 3.0) at 13 site-camera combinations across Campaigns~1 and~2, with varying configurations: photo-only (4MP, 3-burst) to photo+video (4K photo, FHD video), PIR sensitivity levels from standard to level~9, and horizontal fields of view from 55\textdegree{} (Reveal Pro) to 120\textdegree{} (G600 wide-angle). Approximately 236,000 images total. Sensor configurations directly impact data arrival rates, blank image proportions, and edge compute requirements (see Section~\ref{sec:sensor_matrix}).
+    \item \textbf{Autonomous recording units (ARUs):} Six Wildlife Acoustics Song Meter Micro~2 units at co-located sites, with recording schedules ranging from 5~min/hr (8.3\% duty cycle) to continuous sunrise-to-sunset ($\sim$50--60\% duty cycle). 2,453 WAV files totalling 202~GB across both campaigns.
+    \item \textbf{Drones:} Parrot Anafi 4K (Campaigns~1, 2) and DJI Air~2 (Campaigns~2, 3). 16 flight sessions capturing 4K video over target pastures, lake corridors, and ungulate shelters.
+    \item \textbf{Citizen science:} 991 photographs and videos from visiting researchers and students during field campaigns, providing opportunistic detections with \textit{manually annotated} species labels.
+    \item \textbf{Text data:} $\sim$72 files including deployment metadata (25 files), field notes and observer logs (5~files), drone mission notes (10~files), JotForm deployment logs (12~CSV files), bioacoustic recorder summaries (8~files), and data reports (4~files). These unstructured and semi-structured text sources capture deployment context, habitat descriptions, species observations, and equipment configurations that are not encoded in sensor data streams.
 \end{itemize}
 
 Camera traps and ARUs were co-located at four site pairs (TW02, TW06, TW07, TW09) to enable direct cross-modal comparison. Drone flight paths overlapped with ground-sensor coverage areas. % TODO: include site map figure
 
 \subsection{Unified observation schema}
 
-To enable cross-modal comparison, we converted all modality outputs into a common tabular format with fields: \texttt{datetime} (ISO 8601), \texttt{latitude}, \texttt{longitude}, \texttt{site\_id}, \texttt{modality}, \texttt{species}, \texttt{count}, and \texttt{confidence}. GPS collar data were joined by spatiotemporal proximity to enable cross-referencing with other modalities. The schema is extensible to additional observation details (sex, age, behaviour) as annotation matures.
+To enable cross-modal comparison, we converted all modality outputs into a common tabular format with fields: \texttt{datetime} (ISO 8601), \texttt{latitude}, \texttt{longitude}, \texttt{site\_id}, \texttt{modality}, \texttt{species}, \texttt{count}, and \texttt{confidence}. Text data records were parsed using LLM-based extraction to identify species mentions, habitat descriptions, and temporal references, and linked to sensor observations by site ID and date. The schema is extensible to additional observation details (sex, age, behaviour) as annotation matures.
 
 \subsection{AI-assisted annotation pipelines}
 
@@ -170,14 +181,14 @@ Each modality was processed using domain-specific AI models, with outputs valida
 \toprule
 \textbf{Modality} & \textbf{Annotator} & \textbf{AI Tools} & \textbf{Task} \\
 \midrule
-Camera traps & Bharath & MegaDetector, SAMv2 & Detection, segmentation \\
+Camera traps & Bharath & MegaDetector, YOLO+SAHI, BioCLIP v2 & Detection, classification \\
 Drone video & Anirudh, Vedant, Rugved & YOLO + SAHI, OWL & Detection, localisation \\
 Bioacoustics & Tanishka & BirdNET, Perch & Species classification \\
-GPS collars & Ally & TBD & Movement analysis \\
-Citizen science & Jenna & MegaDetector, BioCLIP & Detection, classification \\
+Citizen science & Jenna & Manual annotation & Species identification \\
+Text data & Jenna & LLM extraction & Structured summary extraction \\
 \bottomrule
 \end{tabular}
-\caption{AI-assisted annotation pipeline by modality. All model outputs are validated against expert ground truth on a held-out subset per modality.}
+\caption{Annotation pipeline by modality. Camera trap, drone, and bioacoustic outputs are AI-assisted and validated against expert ground truth. Citizen science data are manually annotated. Text data are processed via LLM extraction into structured records.}
 \label{table:annotation_tools}
 \end{table}
 
@@ -220,14 +231,14 @@ Beyond biodiversity metrics, we evaluated each modality on operational character
 \toprule
 \textbf{Metric} & \textbf{Description} & \textbf{Examples} \\
 \midrule
-Spatial range & Maximum area covered without relocation & GPS: entire home range; camera traps: fixed FOV; drones: flight radius \\
-Spatial resolution & Finest localisation of animal presence & GPS: 1--10 m; drones: sub-metre; camera traps: within frame \\
-Temporal range & Unattended deployment duration & GPS: months--years; camera traps: weeks--months; drones: hours/flight \\
-Temporal resolution & Sampling frequency & GPS: hourly; camera traps: event-triggered; drones: 30--60 fps; ARUs: continuous \\
-Species detectability & Which taxa are reliably detected & Cryptic (ARUs), large ungulates (camera traps, drones), wide-ranging (GPS) \\
-Behavioural detail & Level of behavioural information & Drones: posture, interactions; camera traps: limited; ARUs: vocalisations; GPS: movement \\
-Operator effort & Human time for deployment and review & Drones: high; camera traps: low--medium; GPS: low; ARUs: low--medium \\
-Data volume & Storage requirements & Drones: high; camera traps: moderate; GPS: low; ARUs: moderate--high \\
+Spatial range & Maximum area covered without relocation & Camera traps: fixed FOV; drones: flight radius; ARUs: acoustic range; text: site-wide context \\
+Spatial resolution & Finest localisation of animal presence & Drones: sub-metre; camera traps: within frame; ARUs: site-level; text: site-level \\
+Temporal range & Unattended deployment duration & Camera traps: weeks--months; ARUs: weeks--months; drones: hours/flight; text: N/A \\
+Temporal resolution & Sampling frequency & Camera traps: event-triggered; drones: 30--60 fps; ARUs: continuous; citizen sci: opportunistic \\
+Species detectability & Which taxa are reliably detected & Cryptic/vocal (ARUs), large ungulates (camera traps, drones), broad (citizen science) \\
+Behavioural detail & Level of behavioural information & Drones: posture, interactions; camera traps: limited; ARUs: vocalisations; text: observer narratives \\
+Operator effort & Human time for deployment and review & Drones: high; camera traps: low--medium; ARUs: low--medium; text: low (LLM-assisted) \\
+Data volume & Storage requirements & Drones: high; camera traps: moderate; ARUs: moderate--high; text: negligible \\
 \bottomrule
 \end{tabular}
 \caption{Operational performance metrics for each sensing modality.}
@@ -243,14 +254,61 @@ We defined three composite metrics for cross-modal comparison:
 
 These composite metrics were visualised as radar charts to provide an intuitive comparison across modalities.
 
+\subsection{Sensor $\times$ research question matrix}
+\label{sec:sensor_matrix}
+
+To provide actionable guidance for monitoring programme design, we constructed a sensor matrix that maps each modality to the ecological research questions it can address, organised by the Who/Where/When/What framework at varying resolution. For each cell, we assessed (a) the modality's capability (none, partial, strong), (b) the AI tools available for automated analysis, and (c) the accuracy trade-offs at different deployment scales.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+\toprule
+\textbf{Dimension} & \textbf{Camera traps} & \textbf{ARUs} & \textbf{Drones} & \textbf{Citizen sci.} & \textbf{Text data} \\
+\midrule
+\multicolumn{6}{l}{\textit{Who: Identity resolution}} \\
+\quad Species & Strong & Strong & Partial & Strong & Partial \\
+\quad Individual & Partial & None & Partial & Partial & None \\
+\quad Multi-species & Strong & Strong & Strong & Strong & Partial \\
+\midrule
+\multicolumn{6}{l}{\textit{Where: Spatial resolution}} \\
+\quad Site-level & Strong & Strong & Strong & Partial & Strong \\
+\quad Habitat-level & Partial & Partial & Strong & Partial & Strong \\
+\quad Fine-grained & None & None & Strong & None & None \\
+\midrule
+\multicolumn{6}{l}{\textit{When: Temporal resolution}} \\
+\quad Seasonal & Strong & Strong & Partial & Partial & None \\
+\quad Diel patterns & Strong & Strong & None & None & None \\
+\quad Instantaneous & Strong & Strong & Strong & Partial & None \\
+\midrule
+\multicolumn{6}{l}{\textit{What: Ecological process}} \\
+\quad Presence & Strong & Strong & Strong & Strong & Partial \\
+\quad Behaviour & Partial & Partial & Strong & Partial & Partial \\
+\quad Habitat use & Partial & None & Strong & Partial & Strong \\
+\quad Interactions & Partial & Partial & Strong & Partial & Partial \\
+\bottomrule
+\end{tabular}
+\caption{Sensor$\times$research-question matrix. Each cell indicates the modality's capability for addressing the ecological dimension at the specified resolution. Text data provides contextual enrichment (habitat descriptions, observer notes) rather than direct detection.}
+\label{table:sensor_matrix}
+\end{table}
+
+% TODO: Convert to radar chart or bubble plot for visual comparison
+
 \subsection{Cost-effectiveness analysis}
 
-% TODO: Define cost model (equipment, deployment, battery, personnel time, data processing)
-We estimated the total cost per modality (equipment, deployment labour, battery/power, data processing time) normalised per detected species and per unit spatial-temporal coverage. This enables programme designers to identify the most cost-effective modality combination for a given budget and monitoring objective.
+We decomposed total cost per modality into two components:
+
+\begin{itemize}
+    \item \textbf{Deployment costs:} Equipment purchase/rental, batteries/power, SD cards/storage media, field labour (installation, check-ins, retrieval), travel, and logistics.
+    \item \textbf{Analysis costs:} Compute time (GPU-hours for AI inference), cloud/HPC costs, human review time (expert validation, manual annotation), and software licensing.
+\end{itemize}
+
+% TODO: Fill in actual cost figures per modality
+We normalised total cost per detected species, per unit spatial-temporal coverage, and per research question addressed (from the sensor matrix, Table~\ref{table:sensor_matrix}). This enables programme designers to answer: \textit{given a budget of \$X and a need to answer research question Y, which sensor combination is Pareto-optimal?} We identified Pareto-optimal modality combinations at multiple budget levels and monitoring objectives.
 
 \subsection{Ablation study}
 
-To quantify the marginal contribution of each modality, we performed an ablation study: we computed species richness, abundance estimates, and JSDM model performance when systematically removing one modality at a time from the full five-modality fusion, and when adding modalities incrementally in order of cost.
+To quantify the marginal contribution of each modality, we performed an ablation study: we computed species richness, abundance estimates, and JSDM model performance when systematically removing one modality at a time from the full six-modality fusion, and when adding modalities incrementally in order of cost.
 
 
 % =============================================================================
@@ -272,8 +330,8 @@ To quantify the marginal contribution of each modality, we performed an ablation
 Camera traps & XX & XX & XX trap-nights \\
 ARUs (bioacoustics) & XX & XX & XX recorder-hours \\
 Drones & XX & XX & XX flight-hours \\
-GPS collars & XX & XX & XX collar-days \\
 Citizen science & XX & XX & XX observer-hours \\
+Text data & XX & XX & XX documents \\
 \midrule
 \textbf{All modalities fused} & XX & --- & --- \\
 \bottomrule
@@ -335,7 +393,7 @@ Citizen science & XX & XX & XX observer-hours \\
 % \begin{figure}[h]
 %     \centering
 %     \includegraphics[width=\textwidth]{figures/radar_charts.pdf}
-%     \caption{Radar charts comparing five sensing modalities across eight operational performance metrics (Table~\ref{table:sensor_metrics}).}
+%     \caption{Radar charts comparing six sensing modalities across eight operational performance metrics (Table~\ref{table:sensor_metrics}).}
 %     \label{fig:radar}
 % \end{figure}
 
@@ -349,7 +407,7 @@ Citizen science & XX & XX & XX observer-hours \\
 % Camera traps & XX & XX & XX \\
 % ARUs & XX & XX & XX \\
 % Drones & XX & XX & XX \\
-% GPS collars & XX & XX & XX \\
+% Text data & XX & XX & XX \\
 % Citizen science & XX & XX & XX \\
 % \bottomrule
 % \end{tabular}
@@ -398,12 +456,37 @@ Citizen science & XX & XX & XX observer-hours \\
 
 \subsection{Practical recommendations for monitoring programme design}
 
-% TODO: Decision framework
-% - Budget-constrained: camera traps + ARUs offer best coverage-to-cost ratio
-% - Species-rich assessment: add citizen science for taxonomic breadth
-% - Fine-grained spatial analysis: add drones
-% - Individual-level movement: GPS collars are irreplaceable but expensive
-% - Radar charts and composite metrics as decision-support tools
+% TODO: Decision framework structured around Who/Where/When/What
+% Core question: Given a particular budget and a particular goal, which sensors to buy? Which AI tools? What trade-offs in accuracy?
+% Use the sensor$\times$research-question matrix (Table~\ref{table:sensor_matrix}) as the decision entry point:
+%
+% For WHO questions (species ID, individual ID, community composition):
+%   - Species-level: camera traps + ARUs are most cost-effective; citizen science adds breadth
+%   - Individual-level: camera traps + drones (re-ID models); text data provides context
+%   - Multi-species community: ARUs + camera traps for broadest taxonomic coverage
+%
+% For WHERE questions (spatial distribution at varying resolution):
+%   - Site-level occupancy: camera traps are cheapest
+%   - Habitat-level: drones provide sub-metre resolution; text data (field notes) adds habitat context
+%   - Fine-grained: drones are irreplaceable
+%
+% For WHEN questions (temporal patterns):
+%   - Diel activity: ARUs (continuous) + camera traps (event-triggered) are complementary
+%   - Seasonal trends: long deployments of camera traps + ARUs; text data tracks phenological notes
+%
+% For WHAT questions (behaviour, interactions):
+%   - Presence/absence: any modality; camera traps + ARUs are cheapest per detection
+%   - Behaviour: drones (posture, movement, interactions visible from above)
+%   - Habitat use: drones + text data (field notes on habitat conditions)
+%   - Inter-individual interactions: drones + camera traps at high-traffic locations
+%
+% Budget tiers:
+% - Minimal (\$500): camera traps only → strong Who + When for large mammals
+% - Moderate (\$2000): camera traps + ARUs → adds vocal/cryptic taxa, continuous temporal coverage
+% - Comprehensive (\$5000+): add drones for Where resolution + citizen science for taxonomic breadth
+% - Premium: add text data extraction pipeline for contextual enrichment
+%
+% Present as Pareto frontier plot: budget vs. species richness captured, with optimal modality combinations annotated
 
 \subsection{Role of AI-assisted annotation}
 
@@ -423,10 +506,13 @@ Citizen science & XX & XX & XX observer-hours \\
 
 % TODO:
 % - Detection probability varies by species, season, and habitat — not fully controlled
-% - GPS collars limited to collared individuals (not community-level)
+% - Camera trap configs vary (PIR sensitivity, burst mode, HFOV 55-120°) — affects arrival rates and comparability
 % - Citizen science effort is uncontrolled and observer-dependent
 % - AI model accuracy varies by modality and is not perfect
+% - LLM extraction from text data may miss or hallucinate species mentions — requires validation
+% - Text data is inherently observer-biased (records what humans noticed, not what was present)
 % - Single site — generalisability tested by methodology, not replication
+% - Cost model is site-specific; deployment costs vary significantly by terrain, accessibility, and labour market
 
 
 % =============================================================================

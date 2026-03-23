@@ -17,6 +17,13 @@ Drone
 GPS
 Citizen science
 
+# ground truth 
+As for species numbers, in mid-July we had:
+- 9 (1 male and 8 female) P horses
+- 101 (44 male and 57 female) Pere David's deer
+- 40 (19 male and 21 female) takin
+ 
+
 ## ideas for AI analysis 
 - ablation study of accuracy of each modality alone vs combined
 - use fine-tuned yolo for detections w/ ablations

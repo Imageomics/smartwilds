@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """
-Consolidate detection results from all 4 modalities into unified occurrences CSV.
+Consolidate Darwin Core occurrences from all 5 modalities into unified table.
 
-Input:
-  - camera_detections.csv (from camera trap pipeline)
-  - bioacoustics_detections.csv (or rectified BirdNET annotations)
-  - drone_detections.csv (from drone pipeline)
-  - citizen_science_observations.csv (from citizen science pipeline)
+Input (from processing_output/darwin_core/):
+  - bioacoustics/darwin_core_occurrences_bioacoustics.csv
+  - camera_traps/darwin_core_occurrences_camera_traps.csv
+  - citizen_science/darwin_core_occurrences_citizen_science.csv
+  - drones/darwin_core_occurrences_drones.csv
+  - text_data/darwin_core_occurrences_text.csv
 
 Output:
   - occurrences_all_modalities.csv (unified with modality_type column)
+  - events_all_modalities.csv (unified event hierarchy)
 """
 
 import csv
@@ -58,13 +60,9 @@ def merge_all_modalities(
     output_directory: Path
 ) -> None:
     """
-    Consolidate detections from all 4 modalities.
+    Consolidate Darwin Core occurrences from all 5 modalities.
 
-    Expects modality CSV files in data_directory:
-    - camera_detections.csv
-    - bioacoustics_detections.csv
-    - drone_detections.csv
-    - citizen_science_observations_stub.csv
+    Expects modality-specific Darwin Core CSVs under data_directory/
     """
 
     output_directory.mkdir(parents=True, exist_ok=True)
@@ -78,12 +76,13 @@ def merge_all_modalities(
     all_rows = []
     all_fieldnames = set()
 
-    # Load detections from each modality
+    # Load Darwin Core occurrences from each modality
     modalities = [
-        ("camera_traps", "camera_detections.csv"),
-        ("bioacoustics", "bioacoustics_detections.csv"),
-        ("drones", "drone_detections.csv"),
-        ("citizen_science", "citizen_science_observations_stub.csv"),
+        ("bioacoustics", "bioacoustics/darwin_core_occurrences_bioacoustics.csv"),
+        ("camera_traps", "camera_traps/darwin_core_occurrences_camera_traps.csv"),
+        ("citizen_science", "citizen_science/darwin_core_occurrences_citizen_science.csv"),
+        ("drones", "drones/darwin_core_occurrences_drones.csv"),
+        ("text_data", "text_data/darwin_core_occurrences_text.csv"),
     ]
 
     modality_counts = {}
@@ -142,12 +141,78 @@ def merge_all_modalities(
     logger.info(f"{'='*70}\n")
 
 
+def merge_all_events(data_directory: Path, output_directory: Path) -> None:
+    """Merge all modality event CSVs into unified event hierarchy."""
+    output_directory.mkdir(parents=True, exist_ok=True)
+
+    logger.info("\n" + "=" * 70)
+    logger.info("MERGING EVENT HIERARCHIES")
+    logger.info("=" * 70)
+
+    # Study-level event
+    study_event = {
+        "eventID": "TheWilds_2025",
+        "parentEventID": "",
+        "eventType": "Study",
+        "eventDate": "2025-06-30/2025-09-08",
+        "samplingProtocol": "Multi-modal biodiversity survey (camera traps, bioacoustics, drones, citizen science, text observations)",
+        "locality": "The Wilds Conservation Center, Muskingum County, Ohio, USA",
+        "decimalLatitude": "39.83",
+        "decimalLongitude": "-81.74",
+        "coordinateUncertaintyInMeters": "5000",
+        "geodeticDatum": "WGS84",
+        "country": "United States",
+        "stateProvince": "Ohio",
+        "county": "Muskingum",
+        "datasetID": "TheWilds_2025",
+        "datasetName": "The Wilds 2025 Multi-Modal Biodiversity Survey",
+    }
+
+    all_events = [study_event]
+    all_fieldnames = set(study_event.keys())
+
+    event_files = [
+        ("bioacoustics", "bioacoustics/darwin_core_events_bioacoustics.csv"),
+        ("camera_traps", "camera_traps/darwin_core_events_camera_traps.csv"),
+        ("citizen_science", "citizen_science/darwin_core_events_citizen_science.csv"),
+        ("drones", "drones/darwin_core_events_drones.csv"),
+        ("text_data", "text_data/darwin_core_events_text.csv"),
+    ]
+
+    for modality, filename in event_files:
+        csv_path = data_directory / filename
+        rows, fieldnames = load_detections_csv(csv_path)
+        if rows:
+            all_events.extend(rows)
+            all_fieldnames.update(fieldnames)
+
+    # Write unified events
+    fieldnames_list = sorted(all_fieldnames)
+    # Put key fields first
+    priority = ["eventID", "parentEventID", "eventType", "eventDate", "samplingProtocol"]
+    fieldnames_list = [f for f in priority if f in all_fieldnames] + \
+                      [f for f in fieldnames_list if f not in priority]
+
+    output_file = output_directory / "events_all_modalities.csv"
+    with open(output_file, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames_list, extrasaction='ignore')
+        writer.writeheader()
+        for event in all_events:
+            for field in fieldnames_list:
+                if field not in event:
+                    event[field] = ''
+            writer.writerow(event)
+
+    logger.info(f"✓ Unified events written: {output_file}")
+    logger.info(f"  Total events: {len(all_events)} (1 study + {len(all_events)-1} modality/deployment)")
+
+
 def main():
-    # Define paths
-    data_dir = Path("/fs/ess/PAS2136/TheWilds2025/processing_output/detections_automated")
-    output_dir = Path("/fs/ess/PAS2136/TheWilds2025/processing_output/darwin_core_metadata")
+    data_dir = Path("/fs/ess/PAS2136/TheWilds2025/processing_output/darwin_core")
+    output_dir = Path("/fs/ess/PAS2136/TheWilds2025/processing_output/darwin_core")
 
     merge_all_modalities(data_dir, output_dir)
+    merge_all_events(data_dir, output_dir)
 
 
 if __name__ == "__main__":

@@ -3,12 +3,74 @@
     "description": "Camera trap detection configuration for The Wilds 2025 survey",
     "created": "2026-03-17",
     "yolo_model": "yolov8x.pt",
-    "bioclip_labels": ["white-tailed deer", "deer", "bird"],
-    "note": "Parameters extracted from deployment metadata and field notes"
+    "bioclip_labels": [
+      "Pere David's deer",
+      "Milu deer",
+      "Elaphurus",
+      "white-tailed deer",
+      "Odocoileus",
+      "deer",
+      "Cervus",
+      "elk",
+      "banteng",
+      "Bos",
+      "cow",
+      "cattle",
+      "bison",
+      "Bison",
+      "Przewalski's horse",
+      "Equus",
+      "horse",
+      "donkey",
+      "Sichuan takin",
+      "Budorcas",
+      "goat",
+      "muskox",
+      "Grevy's zebra",
+      "zebra",
+      "oryx",
+      "Oryx",
+      "antelope",
+      "eland",
+      "Taurotragus",
+      "giraffe",
+      "Giraffa",
+      "rhinoceros",
+      "Rhinoceros",
+      "Ceratotherium",
+      "camel",
+      "Camelus",
+      "ostrich",
+      "Struthio",
+      "wild dog",
+      "Lycaon",
+      "coyote",
+      "Canis",
+      "fox",
+      "bird",
+      "raptor",
+      "heron",
+      "hawk",
+      "songbird",
+      "waterfowl",
+      "fish",
+      "human",
+      "person",
+      "vehicle",
+      "background",
+      "vegetation",
+      "tree",
+      "grass",
+      "rock",
+      "water",
+      "sky"
+    ],
+    "bioclip_filter_labels": ["background", "vegetation", "tree", "grass", "rock", "water", "sky", "vehicle"],
+    "note": "Labels include all Wilds species, similar-looking species, and background classes for filtering. Updated 2026-03-20."
   },
 
   "global_config": {
-    "yolo_weights": "yolov8x.pt",
+    "yolo_weights": "/fs/ess/PAS2136/TheWilds2025/documentation/annotation_pipeline/camera_traps/yolov8x.pt",
     "device": "cuda:0",
     "confidence_threshold": 0.25,
     "slice_height": 512,
@@ -40,18 +102,30 @@
       "campaign": "20250630_20250703",
       "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250630_20250703/camera_traps/TW01-CT02",
       "geometry": {
-        "hfov_deg": 52,
+        "hfov_deg": 56.5,
         "target_height_m": 1.0,
-        "camera_model": "Unknown (June campaign)"
+        "camera_model": "GardePro T5NG"
       },
       "location": {
-        "latitude": null,
-        "longitude": null,
-        "bearing_deg": null,
-        "note": "GPS and bearing unavailable for June deployment"
+        "latitude": 39.83077,
+        "longitude": -81.73789,
+        "bearing_deg": 135,
+        "note": "Converted from Garmin DD°MM.MMMM' (39.49.8459, 081.44.2737). Facing SE/left towards lake."
       },
-      "expected_images": 5000,
-      "notes": "Deployment: 2025-06-30 to 2025-07-03"
+      "capture_config": {
+        "mode": "hybrid",
+        "photo_resolution": "4MP",
+        "photo_burst": 3,
+        "video_resolution": "1080p",
+        "video_length_sec": 10,
+        "video_format": "MP4",
+        "video_audio": true,
+        "pir_sensitivity": "high",
+        "timelapse": "hourly",
+        "info_strip": true
+      },
+      "expected_images": 10408,
+      "notes": "Deployment: 2025-06-30 to 2025-07-03. ~10,408 files (JPG+MP4) in 4 chunks."
     },
 
     "TW02-CT03_20250630_20250703": {
@@ -60,99 +134,138 @@
       "campaign": "20250630_20250703",
       "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250630_20250703/camera_traps/TW02-CT03",
       "geometry": {
-        "hfov_deg": 52,
+        "hfov_deg": 63,
         "target_height_m": 1.0,
-        "camera_model": "Unknown (June campaign)"
+        "camera_model": "GardePro A3"
       },
       "location": {
-        "latitude": null,
-        "longitude": null,
-        "bearing_deg": null,
-        "note": "GPS and bearing unavailable for June deployment"
+        "latitude": 39.83066,
+        "longitude": -81.73792,
+        "bearing_deg": 225,
+        "note": "Converted from Garmin DD°MM.MMMM' (39.49.8394, 081.44.2751). Facing SW/right towards lake."
       },
-      "expected_images": 5000,
-      "notes": "Deployment: 2025-06-30 to 2025-07-03"
+      "capture_config": {
+        "mode": "photo+video",
+        "photo_resolution": "8MP",
+        "photo_burst": 3,
+        "video_resolution": "1080p",
+        "video_length_sec": 10,
+        "video_format": "AVI",
+        "video_audio": true,
+        "pir_sensitivity": "high",
+        "shot_lag_sec": 10
+      },
+      "expected_images": 55,
+      "notes": "Deployment: 2025-06-30 to 2025-07-03. Only 55 files (early battery death)."
     },
 
     "TW03-CT01_20250630_20250703": {
-      "site_name": "TW03",
+      "site_name": "TW03 (Old Giraffe Feeder, Pasture D)",
       "camera_id": "TW03-CT01",
       "campaign": "20250630_20250703",
       "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250630_20250703/camera_traps/TW03-CT01",
       "geometry": {
-        "hfov_deg": 52,
+        "hfov_deg": 56.5,
         "target_height_m": 1.0,
-        "camera_model": "Unknown (June campaign)"
+        "camera_model": "GardePro T5NG"
       },
       "location": {
-        "latitude": null,
-        "longitude": null,
-        "bearing_deg": null
+        "latitude": 39.83670,
+        "longitude": -81.73607,
+        "bearing_deg": 180,
+        "note": "Converted from Garmin DD°MM.MMMM' (39.50.2021, 081.44.1644). Facing S."
       },
-      "expected_images": 5000,
-      "notes": "Deployment: 2025-06-30 to 2025-07-03"
+      "capture_config": {
+        "mode": "unknown",
+        "note": "Config not documented in metadata; 8,867 files captured"
+      },
+      "expected_images": 8867,
+      "notes": "Deployment: 2025-06-30 to 2025-07-03. Near salt lick. 8,867 files across 9 folders."
     },
 
     "TW04-CT04_20250630_20250703": {
-      "site_name": "TW04",
+      "site_name": "TW04 (Lake Trail, northwest facing)",
       "camera_id": "TW04-CT04",
       "campaign": "20250630_20250703",
       "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250630_20250703/camera_traps/TW04-CT04",
       "geometry": {
-        "hfov_deg": 52,
+        "hfov_deg": 120,
         "target_height_m": 1.0,
-        "camera_model": "Unknown (June campaign)"
+        "camera_model": "Trail Camera G600"
       },
       "location": {
-        "latitude": null,
-        "longitude": null,
-        "bearing_deg": null
+        "latitude": 39.83429,
+        "longitude": -81.73934,
+        "bearing_deg": 315,
+        "note": "Converted from Garmin DD°MM.MMMM' (39.50.0572, 081.44.3604). Facing NW."
       },
-      "expected_images": 5000,
-      "notes": "Deployment: 2025-06-30 to 2025-07-03"
+      "capture_config": {
+        "mode": "photo+video",
+        "photo_resolution": "8MP",
+        "photo_burst": 5,
+        "video_resolution": "1080p",
+        "video_length_sec": 10,
+        "video_format": "MP4",
+        "video_audio": true,
+        "pir_sensitivity": "high"
+      },
+      "expected_images": 684,
+      "notes": "Deployment: 2025-06-30 to 2025-07-03. 684 files in 101MEDIA. Images may be upside-down (mount orientation)."
     },
 
     "TW01-CT02_20250804_20250828": {
-      "site_name": "TW01 (Nomad Ridge Shelter, east side, facing lake)",
+      "site_name": "TW01 (Nomad Ridge Shelter, east side, facing SE towards lake)",
       "camera_id": "TW01-CT02",
       "campaign": "20250804_20250828",
       "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW01-CT02",
-      "camera_model": "Garde Pro T5NG",
+      "camera_model": "GardePro T5NG",
       "geometry": {
-        "hfov_deg": 52,
+        "hfov_deg": 56.5,
         "target_height_m": 1.0
       },
       "location": {
-        "latitude": 39.498459,
-        "longitude": -81.442737,
-        "bearing_deg": 180,
-        "note": "Camera facing southeast/lake"
+        "latitude": 39.83077,
+        "longitude": -81.73789,
+        "bearing_deg": 135,
+        "note": "Converted from Garmin DD°MM.MMMM' (39.49.8459, 081.44.2737). Facing SE towards lake."
       },
-      "expected_images": 30000,
+      "capture_config": {
+        "mode": "photo_only",
+        "photo_resolution": "4MP",
+        "photo_burst": 3,
+        "pir_sensitivity": "high"
+      },
+      "expected_images": 26573,
       "deployment": {
         "deploy_date": "2025-08-04 09:00",
         "retrieve_date": "2025-08-11 09:00"
       },
-      "notes": "Captured 30.22 GB. Installed facing lake to capture deer activity."
+      "notes": "26,573 JPG. 30.22 GB. Installed facing lake to capture deer activity."
     },
 
     "TW02-CT01_20250804_20250828": {
-      "site_name": "TW02 (Nomad Ridge Shelter, west side)",
+      "site_name": "TW02 (Nomad Ridge Shelter, west side, facing SW)",
       "camera_id": "TW02-CT01",
       "campaign": "20250804_20250828",
       "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW02-CT01",
-      "camera_model": "Garde Pro T5NG",
+      "camera_model": "GardePro T5NG",
       "geometry": {
-        "hfov_deg": 52,
+        "hfov_deg": 56.5,
         "target_height_m": 1.0
       },
       "location": {
-        "latitude": 39.498394,
-        "longitude": -81.442751,
+        "latitude": 39.83066,
+        "longitude": -81.73792,
         "bearing_deg": 225,
-        "note": "Camera facing southwest"
+        "note": "Converted from Garmin DD°MM.MMMM' (39.49.8394, 081.44.2751). Facing SW."
       },
-      "expected_images": 90000,
+      "capture_config": {
+        "mode": "photo_only",
+        "photo_resolution": "4MP",
+        "photo_burst": 3,
+        "pir_sensitivity": "high"
+      },
+      "expected_images": 61217,
       "deployment": {
         "deploy_date": "2025-08-04 09:00",
         "retrieve_date": "2025-08-28 23:59"
@@ -162,122 +275,152 @@
         "description": "Camera clock set incorrectly: Oct 31 2023 → Aug 4 2025, Sept 2023 → Aug 2025",
         "sd_card_replacements": ["2025-08-11", "2025-08-18", "2025-08-28"]
       },
-      "notes": "22.06 GB used at 8/25. SD card and battery replaced multiple times."
+      "notes": "61,217 JPG. 22.06 GB used at 8/25. SD card and battery replaced multiple times."
     },
 
     "TW04-CT03_20250804_20250828": {
-      "site_name": "TW04 (Lake Trail, northwest facing)",
+      "site_name": "TW04 (Lake Trail, facing NW)",
       "camera_id": "TW04-CT03",
       "campaign": "20250804_20250828",
       "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW04-CT03",
-      "camera_model": "Garde Pro A3 (video capable)",
+      "camera_model": "GardePro A3 (video capable)",
       "geometry": {
-        "hfov_deg": 52,
+        "hfov_deg": 63,
         "target_height_m": 1.0
       },
       "location": {
-        "latitude": 39.500572,
-        "longitude": -81.443604,
+        "latitude": 39.83429,
+        "longitude": -81.73934,
         "bearing_deg": 315,
-        "note": "Camera facing northwest"
+        "note": "Converted from Garmin DD°MM.MMMM' (39.50.0572, 081.44.3604). Facing NW."
       },
-      "expected_images": 5000,
+      "capture_config": {
+        "mode": "photo+video",
+        "photo_resolution": "8MP",
+        "photo_burst": 3,
+        "video_resolution": "1080p",
+        "video_length_sec": 10
+      },
+      "expected_images": 984,
       "deployment": {
         "deploy_date": "2025-08-11 09:00",
         "retrieve_date": "2025-08-28 23:59",
         "data_cutoff": "2025-08-25",
         "cutoff_reason": "No data collected after 2025-08-25 (equipment failure)"
       },
-      "notes": "More advanced model with video capability. Equipment failure after 8/25."
+      "notes": "984 JPG + 67 AVI. Equipment failure after 8/25."
     },
 
     "TW06-CT04_20250804_20250828": {
-      "site_name": "TW06 (Zebra Shelter)",
+      "site_name": "TW06 (Zebra Shelter, facing NW)",
       "camera_id": "TW06-CT04",
       "campaign": "20250804_20250828",
       "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW06-CT04",
       "camera_model": "Trail Camera G600",
       "geometry": {
-        "hfov_deg": 52,
+        "hfov_deg": 120,
         "target_height_m": 1.0
       },
       "location": {
-        "latitude": null,
-        "longitude": null,
-        "bearing_deg": null
+        "latitude": 39.83537,
+        "longitude": -81.73842,
+        "bearing_deg": 315,
+        "note": "Converted from Garmin DD°MM.MMMM' (39.50.1224, 081.44.3053). Facing NW per data report."
       },
-      "expected_images": 31840,
+      "capture_config": {
+        "mode": "photo+video",
+        "photo_resolution": "8MP",
+        "photo_burst": 5,
+        "video_resolution": "1080p",
+        "video_length_sec": 10,
+        "pir_sensitivity": "motion_detection"
+      },
+      "expected_images": 40907,
       "deployment": {
         "deploy_date": "2025-08-04 09:50",
         "retrieve_date": "2025-08-11 23:59"
       },
-      "notes": "Trail Camera G600 model. 31.84 GB on disk. Battery at 100% (unusual)."
+      "notes": "40,907 JPG. 31.84 GB on disk. Battery at 100% (unusual). Wide-angle 120° FOV."
     },
 
     "TW06-CT05_20250804_20250828": {
-      "site_name": "TW06 (Zebra Shelter) - Second deployment",
+      "site_name": "TW06 (Zebra Shelter) - Inside shelter, facing N",
       "camera_id": "TW06-CT05",
       "campaign": "20250804_20250828",
       "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW06-CT05",
-      "camera_model": "Garde Pro T5NG",
+      "camera_model": "Reveal Pro 3.0",
       "geometry": {
-        "hfov_deg": 52,
+        "hfov_deg": 55,
         "target_height_m": 1.0
       },
       "location": {
-        "latitude": null,
-        "longitude": null,
-        "bearing_deg": null
+        "latitude": 39.83537,
+        "longitude": -81.73842,
+        "bearing_deg": 0,
+        "note": "Same site as TW06-CT04. Camera inside Zebra Shelter facing N per data report."
       },
-      "expected_images": 5000,
+      "capture_config": {
+        "mode": "photo+video",
+        "photo_resolution": "4K",
+        "video_resolution": "720p",
+        "video_length_sec": 10
+      },
+      "expected_images": 168,
       "deployment": {
         "deploy_date": "2025-08-25",
         "retrieve_date": "2025-08-28"
       },
-      "notes": "Later deployment at same site."
+      "notes": "84 jpg + 84 mp4. Late deployment looking into shelter to capture ungulate activity inside."
     },
 
     "TW07-CT05_20250804_20250828": {
-      "site_name": "TW07",
+      "site_name": "TW07 (Zipline Tower, facing N)",
       "camera_id": "TW07-CT05",
       "campaign": "20250804_20250828",
       "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW07-CT05",
-      "camera_model": "Garde Pro T5NG",
+      "camera_model": "Reveal Pro 3.0",
       "geometry": {
-        "hfov_deg": 52,
+        "hfov_deg": 55,
         "target_height_m": 1.0
       },
       "location": {
-        "latitude": null,
-        "longitude": null,
-        "bearing_deg": null
+        "latitude": 39.83288,
+        "longitude": -81.73455,
+        "bearing_deg": 0,
+        "note": "Converted from Garmin DD°MM.MMMM' (39.49.9727, 081.44.0732). Facing N per data report. All photos were people (tour buses); no images uploaded."
       },
-      "expected_images": 10000,
+      "expected_images": 0,
       "deployment": {
-        "deploy_date": "2025-08-04",
-        "retrieve_date": "2025-08-12"
+        "deploy_date": "2025-08-07",
+        "retrieve_date": "2025-08-11"
       },
-      "notes": "Early August deployment."
+      "notes": "All photos captured people (triggered by tour buses). No images uploaded. Camera subsequently relocated to dock."
     },
 
     "TW09_CT02_20250804_20250828": {
-      "site_name": "TW09 (Dock overlooking lake)",
+      "site_name": "TW09 (Dock overlooking lake, left side, facing S)",
       "camera_id": "TW09_CT02",
       "campaign": "20250804_20250828",
       "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW09_CT02",
-      "camera_model": "Garde Pro T5NG",
+      "camera_model": "GardePro T5NG",
       "geometry": {
-        "hfov_deg": 52,
+        "hfov_deg": 56.5,
         "target_height_m": 1.0
       },
       "location": {
-        "latitude": null,
-        "longitude": null,
-        "bearing_deg": null
+        "latitude": 39.82798,
+        "longitude": -81.74167,
+        "bearing_deg": 180,
+        "note": "Converted from Garmin DD°MM.MMMM' (39.49.6789, 081.44.5000). Left-side of dock, overlooking lake, facing S per data report."
       },
-      "expected_images": 60000,
+      "capture_config": {
+        "mode": "photo_only",
+        "photo_resolution": "4MP",
+        "photo_burst": 3
+      },
+      "expected_images": 90834,
       "deployment": {
-        "deploy_date": "2025-08-04",
+        "deploy_date": "2025-08-11",
         "retrieve_date": "2025-08-28"
       },
       "known_issues": {
@@ -288,76 +431,95 @@
           "reason": "Battery died"
         }
       },
-      "notes": "Moved to dock for better activity capture. Data gap 8/18-8/25 due to battery failure."
+      "notes": "90,834 JPG (largest dataset). Data gap 8/18-8/25 due to battery failure."
     },
 
     "TW09-CT05_20250804_20250828": {
-      "site_name": "TW09",
+      "site_name": "TW09 (Dock overlooking lake, right side, facing SE)",
       "camera_id": "TW09-CT05",
       "campaign": "20250804_20250828",
       "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW09-CT05",
-      "camera_model": "Garde Pro T5NG",
+      "camera_model": "Reveal Pro 3.0",
       "geometry": {
-        "hfov_deg": 52,
+        "hfov_deg": 55,
         "target_height_m": 1.0
       },
       "location": {
-        "latitude": null,
-        "longitude": null,
-        "bearing_deg": null
+        "latitude": 39.82798,
+        "longitude": -81.74167,
+        "bearing_deg": 135,
+        "note": "Same site as TW09-CT02. Right-side of dock, overlooking lake, facing SE per data report."
       },
-      "expected_images": 50000,
+      "capture_config": {
+        "mode": "photo+video",
+        "photo_resolution": "4K",
+        "video_resolution": "720p",
+        "video_length_sec": 10
+      },
+      "expected_images": 15,
       "deployment": {
-        "deploy_date": "2025-08-04",
-        "retrieve_date": "2025-08-28"
+        "deploy_date": "2025-08-11",
+        "retrieve_date": "2025-08-14"
       },
-      "notes": "Full deployment duration."
+      "notes": "9 jpg + 6 mp4. Issues with image detection reported."
     },
 
     "TW11-CT06_20250804_20250828": {
-      "site_name": "TW11",
+      "site_name": "TW11 (Fence overlooking lake, dock-right, facing NE)",
       "camera_id": "TW11-CT06",
       "campaign": "20250804_20250828",
       "image_dir": "/fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps/TW11-CT06",
-      "camera_model": "Garde Pro T5NG",
+      "camera_model": "Reveal Pro 3.0",
       "geometry": {
-        "hfov_deg": 52,
+        "hfov_deg": 55,
         "target_height_m": 1.0
       },
       "location": {
-        "latitude": null,
-        "longitude": null,
-        "bearing_deg": null
+        "latitude": 39.83438,
+        "longitude": -81.73930,
+        "bearing_deg": 45,
+        "note": "Decimal degrees from camera GPS. Overlooking end of lake, facing NE per data report."
       },
-      "expected_images": 20000,
+      "capture_config": {
+        "mode": "photo+video",
+        "photo_resolution": "4K",
+        "photo_burst_note": "multi-shot interval 1sec",
+        "video_resolution": "FHD_1080p",
+        "video_length_sec": 15,
+        "pir_sensitivity": "level_9",
+        "delay_sec": 20,
+        "flash_power": "high",
+        "night_mode": "minimum_blur",
+        "cellular": true
+      },
+      "expected_images": 112,
       "deployment": {
         "deploy_date": "2025-08-18",
         "retrieve_date": "2025-08-28"
       },
-      "notes": "Later deployment window."
+      "notes": "89 jpg + 23 mp4. Battery issues; no data from initial Aug 11 deployment. Only collected data after re-deployment Aug 18. 1 bar cell service."
     }
   },
 
   "processing_parameters": {
     "note": "Default values; override per-camera in 'cameras' section",
     "geometry": {
-      "hfov_deg": 52,
+      "hfov_deg": null,
       "target_height_m": 1.0,
-      "note": "HFOV ~ 55° is typical for trail cameras. Target height assumes upright white-tailed deer."
+      "note": "HFOV set per camera model: GardePro T5NG=56.5°, Trail Camera G600=120° (wide-angle), GardePro A3=63°, Reveal Pro 3.0=55°. Target height assumes upright white-tailed deer."
     },
     "required_fields": ["latitude", "longitude", "bearing_deg"],
-    "missing_coordinates": {
-      "cameras_affected": [
-        "TW03-CT01_20250630_20250703",
-        "TW04-CT04_20250630_20250703",
-        "TW06-CT04_20250804_20250828",
-        "TW06-CT05_20250804_20250828",
-        "TW07-CT05_20250804_20250828",
-        "TW09_CT02_20250804_20250828",
-        "TW09-CT05_20250804_20250828",
-        "TW11-CT06_20250804_20250828"
-      ],
-      "action_required": "Fill in GPS coordinates and bearing from field notes or deployment metadata"
+    "coordinate_conversion": {
+      "note": "Field notes from Garmin GPS used DD°MM.MMMM' format written as DD.MM.MMMM. Converted to decimal degrees: DD + MM.MMMM/60. All longitudes are West (negative). Updated 2026-03-19.",
+      "sources": [
+        "thewilds_20250630_20250703/field_notes/site_descriptions.md",
+        "Individual camera metadata.txt files",
+        "thewilds_20250804_20250828/thewilds_20250804_20250828_data_report.md"
+      ]
+    },
+    "missing_bearings": {
+      "cameras_affected": [],
+      "note": "Updated 2026-03-20: all bearings filled. TW03-CT01 facing S confirmed by user."
     }
   }
 }
