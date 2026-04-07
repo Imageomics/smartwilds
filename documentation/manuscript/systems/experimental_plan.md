@@ -5,7 +5,7 @@
 **Abstract registration**: April 24, 2026
 **Paper submission**: May 1, 2026
 **Lead**: Jenna Kline
-**Support**: Master's student (onboarding)
+**Support**: Yuanyang, Anirudh, Chris, Tanya
 **Coauthors**: Bharath, Chris, Anirudh, Tanya, others? 
 
 ---
@@ -74,7 +74,7 @@
 - Heatmap visualization
 - Per-site breakdown showing which modality pairs have strongest co-occurrence
 
-**Owner**: Jenna
+**Owner**: Anirudh
 **Timeline**: Weeks 2–3
 
 ---
@@ -108,7 +108,7 @@
 - Gap analysis: which modality combinations exceed edge capacity
 - Policy comparison table
 
-**Owner**: Jenna (modeling with published numbers), Master's student (optional profiling)
+**Owner**: Anirudh and Yuanguang (profiling)
 **Timeline**: Weeks 3–4
 
 ---
@@ -132,7 +132,7 @@
 - Comparison table (3 policies × 4 SLO metrics)
 - Timeline visualization showing policy behavior over 24 days
 
-**Owner**: Jenna
+**Owner**: Anirudh, Yuanyang
 **Timeline**: Weeks 4–5
 
 ---
@@ -162,10 +162,11 @@
 - Storage savings figure (raw vs filtered GB)
 - Hardware requirement comparison (raw vs true-positive throughput)
 
-**Owner**: Jenna + Master's student (running detections)
+**Owner**: Anirudh (running detections and analysis)
 **Timeline**: Weeks 3–5 (detection runs can be parallelized on cluster)
 
 **Dependency**: Requires running the camera trap detection pipeline on ~236K images. The pipeline exists at `documentation/annotation_pipeline/camera_traps/imageomicsthewilds_cameratraps/src/` (YOLO+SAHI+BioCLIP). Can use Campaign 1 (~15K images) as proof of concept first.
+
 
 ---
 

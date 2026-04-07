@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartWilds Methods &mdash; Working Draft</title>
+<style>
+  :root {
+    --bg: #fdfdfd;
+    --fg: #1a1a2e;
+    --accent: #2d6a4f;
+    --accent-light: #d8f3dc;
+    --border: #dee2e6;
+    --table-stripe: #f8f9fa;
+    --placeholder: #d4380d;
+    --sidebar-w: 260px;
+    --header-h: 64px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 16px); }
+
+  body {
+    margin: 0;
+    font-family: 'Charter', 'Georgia', serif;
+    color: var(--fg);
+    background: var(--bg);
+    line-height: 1.7;
+  }
+
+  /* ── Top bar ──────────────────────────────────────────────── */
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    height: var(--header-h);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 32px;
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; margin: 0; letter-spacing: .02em; }
+  header .badge {
+    font-size: .75rem;
+    background: rgba(255,255,255,.2);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-family: system-ui, sans-serif;
+  }
+  .header-controls { display: flex; gap: 10px; align-items: center; }
+  .header-controls button {
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.3);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: .8rem;
+    cursor: pointer;
+    font-family: system-ui, sans-serif;
+    transition: background .15s;
+  }
+  .header-controls button:hover { background: rgba(255,255,255,.25); }
+  .header-controls button.active { background: rgba(255,255,255,.35); }
+
+  /* ── Sidebar / TOC ────────────────────────────────────────── */
+  nav.toc {
+    position: fixed; top: var(--header-h); left: 0; bottom: 0;
+    width: var(--sidebar-w);
+    overflow-y: auto;
+    padding: 24px 16px;
+    border-right: 1px solid var(--border);
+    background: #f7f7f8;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: .82rem;
+    z-index: 50;
+    transition: transform .25s;
+  }
+  nav.toc.hidden { transform: translateX(-100%); }
+  nav.toc h2 { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: #888; margin: 0 0 12px; }
+  nav.toc ul { list-style: none; margin: 0; padding: 0; }
+  nav.toc li { margin-bottom: 6px; }
+  nav.toc a {
+    text-decoration: none; color: #444;
+    display: block; padding: 4px 8px; border-radius: 4px;
+    transition: background .15s, color .15s;
+  }
+  nav.toc a:hover, nav.toc a.active { background: var(--accent-light); color: var(--accent); }
+  nav.toc .toc-divider { border-top: 1px solid var(--border); margin: 10px 0; }
+
+  /* ── Main content ─────────────────────────────────────────── */
+  main {
+    margin-left: var(--sidebar-w);
+    margin-top: var(--header-h);
+    padding: 40px 48px 120px;
+    transition: margin-left .25s;
+  }
+  main.full { margin-left: 0; }
+
+  .prose { max-width: 860px; }
+
+  h2 {
+    font-size: 1.45rem;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent-light);
+    padding-bottom: 6px;
+    margin-top: 48px;
+  }
+  h3 { font-size: 1.1rem; margin-top: 32px; }
+  p, li { font-size: .97rem; }
+
+  .placeholder { color: var(--placeholder); font-weight: 700; background: #fff3e0; padding: 0 3px; border-radius: 3px; }
+
+  /* ── Tables (full-width) ──────────────────────────────────── */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 24px 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    width: 100%;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: .85rem;
+  }
+  caption {
+    text-align: left; font-weight: 700;
+    padding: 12px 16px; font-size: .92rem;
+    background: var(--accent-light); color: var(--accent);
+    border-bottom: 1px solid var(--border);
+  }
+  thead th {
+    background: #eef5f0; text-align: left;
+    padding: 10px 14px; white-space: nowrap;
+    border-bottom: 2px solid var(--accent);
+    font-weight: 600; position: sticky; top: 0;
+  }
+  tbody td {
+    padding: 8px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  tbody tr:hover { background: #e8f5e9; }
+
+  /* ── Capability chips ─────────────────────────────────────── */
+  .cap-strong { font-weight: 700; color: #1b5e20; }
+  .cap-partial { font-style: italic; color: #e65100; }
+  .cap-none { color: #aaa; text-align: center; }
+  .cap-context { font-style: italic; color: #5c6bc0; }
+
+  /* ── Effort chips ─────────────────────────────────────────── */
+  .effort-high { color: #c62828; font-weight: 600; }
+  .effort-med  { color: #ef6c00; }
+  .effort-low  { color: #2e7d32; font-weight: 600; }
+
+  .footnote {
+    font-size: .82rem; color: #666; margin-top: 8px;
+    padding-left: 8px; border-left: 3px solid var(--accent-light);
+    max-width: 860px;
+  }
+
+  .watermark {
+    position: fixed; bottom: 16px; right: 24px;
+    font-family: system-ui, sans-serif; font-size: .7rem;
+    color: #bbb; pointer-events: none; z-index: 200;
+  }
+
+  /* ── Editable ─────────────────────────────────────────────── */
+  [contenteditable="true"]:focus { outline: 2px dashed var(--accent); outline-offset: 4px; border-radius: 4px; }
+  body.editing [contenteditable="true"] { background: rgba(45,106,79,.04); border-radius: 4px; }
+  body.editing [contenteditable="true"]:hover { background: rgba(45,106,79,.08); cursor: text; }
+
+  .edit-hint {
+    display: none; font-family: system-ui, sans-serif; font-size: .78rem;
+    color: var(--accent); background: var(--accent-light);
+    padding: 8px 16px; border-radius: 6px; margin-bottom: 24px;
+  }
+  body.editing .edit-hint { display: block; }
+
+  .callout {
+    background: #fff8e1; border-left: 4px solid #ffc107;
+    padding: 12px 16px; border-radius: 0 6px 6px 0;
+    font-size: .88rem; margin: 24px 0; max-width: 860px;
+  }
+
+  @media print {
+    header, nav.toc, .watermark, .edit-hint, .header-controls, #planner { display: none !important; }
+    main { margin: 0; padding: 24px; }
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     CAMPAIGN PLANNER
+     ═══════════════════════════════════════════════════════════ */
+  #planner {
+    margin-top: 48px;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  #planner h2 {
+    font-size: 1.5rem;
+    border-bottom: 3px solid var(--accent);
+  }
+
+  .planner-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 24px;
+    margin-top: 20px;
+  }
+  @media (max-width: 900px) { .planner-grid { grid-template-columns: 1fr; } }
+
+  /* Left panel: goal selectors */
+  .planner-controls {
+    background: #f7f7f8;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    position: sticky;
+    top: calc(var(--header-h) + 16px);
+    max-height: calc(100vh - var(--header-h) - 32px);
+    overflow-y: auto;
+  }
+  .planner-controls h3 { margin: 0 0 12px; font-size: .95rem; color: var(--accent); }
+  .planner-controls h4 { margin: 16px 0 8px; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: #888; }
+
+  .goal-group { margin-bottom: 12px; }
+  .goal-group label {
+    display: flex; align-items: flex-start; gap: 8px;
+    padding: 6px 8px; border-radius: 6px; cursor: pointer;
+    font-size: .85rem; line-height: 1.4;
+    transition: background .1s;
+  }
+  .goal-group label:hover { background: var(--accent-light); }
+  .goal-group input[type="checkbox"] {
+    margin-top: 3px; accent-color: var(--accent);
+    width: 16px; height: 16px; flex-shrink: 0;
+  }
+  .goal-desc { color: #666; font-size: .78rem; display: block; }
+
+  .budget-row {
+    display: flex; align-items: center; gap: 10px;
+    margin: 12px 0 4px; font-size: .85rem;
+  }
+  .budget-row select, .budget-row input {
+    padding: 4px 8px; border: 1px solid var(--border); border-radius: 6px;
+    font-size: .85rem; font-family: inherit;
+  }
+
+  .btn-recommend {
+    display: block; width: 100%; margin-top: 16px;
+    padding: 10px; border: none; border-radius: 8px;
+    background: var(--accent); color: #fff;
+    font-size: .9rem; font-weight: 600; cursor: pointer;
+    transition: background .15s;
+  }
+  .btn-recommend:hover { background: #1b4d3e; }
+
+  /* Right panel: results */
+  .planner-results { min-height: 200px; }
+
+  .rec-card {
+    border: 1px solid var(--border); border-radius: 10px;
+    margin-bottom: 16px; overflow: hidden;
+    transition: box-shadow .15s;
+  }
+  .rec-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+  .rec-card-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 18px;
+    background: linear-gradient(135deg, #eef5f0, #f7f7f8);
+    border-bottom: 1px solid var(--border);
+  }
+  .rec-card-header h4 { margin: 0; font-size: .95rem; color: var(--accent); }
+  .rec-rank {
+    background: var(--accent); color: #fff; font-size: .7rem;
+    padding: 3px 10px; border-radius: 999px; font-weight: 700;
+  }
+  .rec-card-body { padding: 14px 18px; font-size: .85rem; }
+  .rec-card-body .rec-row {
+    display: flex; justify-content: space-between;
+    padding: 4px 0; border-bottom: 1px solid #f0f0f0;
+  }
+  .rec-card-body .rec-row:last-child { border-bottom: none; }
+  .rec-label { color: #666; }
+  .rec-value { font-weight: 600; }
+
+  .sensor-pills { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  .sensor-pill {
+    display: inline-block; padding: 3px 10px; border-radius: 999px;
+    font-size: .78rem; font-weight: 600;
+  }
+  .sensor-pill.selected { background: var(--accent); color: #fff; }
+  .sensor-pill.optional { background: #fff3e0; color: #e65100; border: 1px solid #ffcc02; }
+
+  .goal-match { margin-top: 10px; }
+  .goal-match-item {
+    display: flex; align-items: center; gap: 6px;
+    font-size: .82rem; padding: 2px 0;
+  }
+  .match-icon { width: 16px; text-align: center; flex-shrink: 0; }
+
+  .planner-empty {
+    text-align: center; padding: 60px 20px; color: #999;
+    font-size: .9rem;
+  }
+
+  /* Coverage matrix in planner */
+  .coverage-table { margin-top: 20px; }
+  .coverage-table table { font-size: .8rem; }
+  .coverage-table td, .coverage-table th { padding: 6px 10px; text-align: center; }
+  .coverage-table td:first-child, .coverage-table th:first-child { text-align: left; }
+  .cov-full { background: #c8e6c9; color: #1b5e20; font-weight: 700; }
+  .cov-partial { background: #fff3e0; color: #e65100; }
+  .cov-none { background: #f5f5f5; color: #ccc; }
+  .cov-selected th { background: #e8f5e9 !important; }
+</style>
+</head>
+<body>
+
+<header>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <h1>SmartWilds &mdash; Methods Draft</h1>
+    <span class="badge">WORKING DRAFT</span>
+  </div>
+  <div class="header-controls">
+    <button onclick="toggleToc()">TOC</button>
+    <button onclick="toggleEdit()" id="editBtn">Edit Mode</button>
+    <button onclick="exportHTML()">Export</button>
+  </div>
+</header>
+
+<nav class="toc" id="toc">
+  <h2>Contents</h2>
+  <ul>
+    <li><a href="#sec-2-4">2.4 AI annotation pipeline</a></li>
+    <li><a href="#table-1">Table 1 &mdash; Pipeline by modality</a></li>
+    <li><a href="#sec-2-5">2.5 Biodiversity metrics</a></li>
+    <li><a href="#sec-2-6">2.6 Detection probability</a></li>
+    <li><a href="#sec-2-7">2.7 Cross-modal complementarity</a></li>
+    <li><a href="#sec-2-8">2.8 Sensor &times; RQ matrix</a></li>
+    <li><a href="#table-2">Table 2 &mdash; Sensor &times; RQ</a></li>
+    <li><a href="#sec-2-9">2.9 Deployment &amp; effort</a></li>
+    <li><a href="#table-3">Table 3 &mdash; Effort &amp; AI maturity</a></li>
+    <li><a href="#results">Results (placeholders)</a></li>
+    <li><a href="#table-4">Table 4 &mdash; Species richness</a></li>
+    <li><a href="#table-5">Table 5 &mdash; Detection prob.</a></li>
+    <li><a href="#table-6">Table 6 &mdash; Operational perf.</a></li>
+    <li class="toc-divider"></li>
+    <li><a href="#planner" style="font-weight:600;color:var(--accent);">Campaign Planner Tool</a></li>
+    <li><a href="#coverage-matrix">Sensor &times; Goal Coverage</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+  <div class="edit-hint">Editing is enabled &mdash; click any text block to edit in place. Changes persist until you reload.</div>
+
+  <!-- ═══ 2.4 ═══ -->
+  <section id="sec-2-4">
+    <h2>2.4 AI-assisted annotation pipeline</h2>
+    <div class="prose" contenteditable="false">
+      <p>Each modality was processed using a domain-specific AI annotation pipeline (Table 1). All pipelines convert raw sensor output into the unified observation schema (Section 2.3); the comparison across modalities therefore rests on a common representation rather than on modality-specific formats. The pipeline is model-agnostic: each stage accepts any detection or classification backend that produces bounding boxes, species labels, and confidence scores, enabling straightforward replacement of individual models as the state of the art advances.</p>
+
+      <h3>Camera traps</h3>
+      <p>Images were first passed through MegaDetector v5 to separate animal detections from blank frames and to produce bounding-box crops. Crops were then classified to species using BioCLIP v2, a vision-language model trained on biological imagery. Detections below a confidence threshold of <span class="placeholder">[XX]</span> were flagged for manual review by the annotator (Bharath). SAM3 was used for instance segmentation on a subset of images to support morphological trait extraction and individual re-identification via coat-pattern comparison.</p>
+
+      <h3>Depth estimation and GPS association</h3>
+      <p>To move camera trap detections from site-level to local (metre-scale) spatial resolution, we applied monocular depth estimation to each annotated image. The detection bounding-box centroid was projected to an estimated ground distance using camera mounting height and tilt angle as calibration parameters. This estimated position was then associated with the nearest GPS collar fix within a <span class="placeholder">[XX]</span>-minute temporal window, assigning the detection a candidate individual identity and a georeferenced location. Depth estimation accuracy was evaluated against <span class="placeholder">[XX]</span> detections with known positions <span class="placeholder">[from drone orthophoto / GPS ground truth]</span>, yielding a median positional error of <span class="placeholder">[XX]</span> m (IQR <span class="placeholder">[XX]</span>&ndash;<span class="placeholder">[XX]</span> m). Although imperfect, this precision is sufficient to assign detections to habitat patches at the spatial grain used in the occupancy analysis (Section 2.6). The pipeline accepts alternative depth estimation backends; we used <span class="placeholder">[current SOTA model]</span> for all results reported here.</p>
+
+      <h3>ARUs</h3>
+      <p>Audio files were processed with BirdNET (v2.4) to classify bird vocalizations in 3-second windows across each recording. Detections with confidence &ge; <span class="placeholder">[XX]</span> were retained. A subset of detections was also processed with Perch for cross-model comparison. Tanishka validated a stratified random sample of <span class="placeholder">[XX]</span> detections against spectrograms and, where available, concurrent observer logs.</p>
+
+      <h3>Drone video</h3>
+      <p>Frames were extracted at <span class="placeholder">[XX]</span> fps and passed through YOLO with SAHI (sliced inference) to detect animals at typical flight altitudes of <span class="placeholder">[XX]</span>&ndash;<span class="placeholder">[XX]</span> m. OWL-ViT was used for open-vocabulary detection of target species. Species classification of drone detections is more uncertain than camera trap classification owing to the overhead perspective and variable resolution; detections were assigned to species where confidence exceeded <span class="placeholder">[XX]</span> and otherwise retained at genus or functional-group level.</p>
+
+      <h3>Citizen science</h3>
+      <p>Photographs and videos collected by visiting researchers and students during field campaigns were manually annotated by Jenna to species level. All observations were georeferenced from device metadata or from deployment site coordinates where GPS was unavailable.</p>
+
+      <h3>Text data</h3>
+      <p>Unstructured and semi-structured text files (field notes, deployment logs, drone mission notes, JotForm CSVs, bioacoustic summaries) were processed using an LLM-based extraction pipeline to identify species mentions, habitat descriptions, and temporal references. Extracted records were linked to the unified schema by site ID and date. LLM extraction outputs were manually reviewed for false positives (hallucinated species) and false negatives (missed mentions) on a random sample of <span class="placeholder">[XX]</span> documents, achieving a precision of <span class="placeholder">[XX]</span> and recall of <span class="placeholder">[XX]</span>.</p>
+
+      <div class="callout">
+        <strong>MEE LLM disclosure:</strong> Large language models (Claude <span class="placeholder">[version]</span>, Anthropic) were used in the text-data extraction pipeline described above and to assist with code generation during data processing. All AI-generated code was reviewed, tested, and validated by the authors. The corresponding author takes responsibility for all outputs.
+      </div>
+    </div>
+  </section>
+
+  <!-- Table 1 -->
+  <section id="table-1">
+    <div class="table-wrap">
+      <table>
+        <caption>Table 1. AI-assisted annotation pipeline by modality</caption>
+        <thead>
+          <tr><th>Modality</th><th>Lead annotator</th><th>AI tools</th><th>Primary task</th></tr>
+        </thead>
+        <tbody contenteditable="false">
+          <tr><td>Camera traps</td><td>Anirudh</td><td>TBD</td><td>Animal detection, species classification, depth-based GPS association</td></tr>
+          <tr><td>Drone video</td><td>Anirudh</td><td>TBD</td><td>Animal detection, species classification</td></tr>
+          <tr><td>Bioacoustics (ARU)</td><td>Tanishka</td><td>BirdNET v2.4</td><td>Species classification from vocalisations</td></tr>
+          <tr><td>Citizen science</td><td>Jenna</td><td>Manual annotation</td><td>Species identification, georeferencing</td></tr>
+          <tr><td>Text data</td><td>Jenna</td><td>LLM extraction</td><td>Structured record extraction from field notes and logs</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="footnote" contenteditable="false">Camera trap and bioacoustic pipelines are AI-assisted and validated against expert-annotated subsets. Citizen science data are manually annotated. Text data extraction is LLM-assisted with manual validation.</p>
+  </section>
+
+  <!-- ═══ 2.5 ═══ -->
+  <section id="sec-2-5">
+    <h2>2.5 Biodiversity metrics</h2>
+    <div class="prose" contenteditable="false">
+      <p>For each modality and for multi-modal fusion, we computed three biodiversity metrics.</p>
+      <p><strong>Species richness</strong> is the count of distinct species detected per modality, standardised using <span class="placeholder">XX</span> to account for differences in sampling effort.</p>
+      <p><strong>Relative abundance</strong> is the count of individuals per species per unit effort (trap-nights for camera traps, recorder-hours for ARUs, flight-hours for drones, observer-hours for citizen science, and document-count for text data).</p>
+      <p><strong>Land-use detection</strong> is the binary presence or absence of each species at each site aggregated over the deployment period.</p>
+    </div>
+  </section>
+
+  <!-- ═══ 2.6 ═══ -->
+  <section id="sec-2-6">
+    <h2>2.6 Detection probability and recall against ground truth</h2>
+    <div class="prose" contenteditable="false">
+      <p>The managed setting at The Wilds provides unusually strong ground truth for evaluating sensor recall. During the summer 2025 campaign, there were <strong>101 Milu deer</strong> (44 males and 57 females), <strong>40 Sichuan takin</strong> (19 males and 21 females), and <strong>9 Przewalski's horses</strong> (1 male and 8 females) on site in the two pastured enclosures. These census counts were obtained from the park's animal management team and represent the total number of individuals of each species present during the deployment period.</p>
+
+      <p>We used these counts to estimate per-modality detection probability for managed ungulate species as:</p>
+
+      <p style="text-align:center; font-size:1.15rem; margin:24px 0;">
+        <em>p&#x0302;<sub>m</sub></em> &nbsp;=&nbsp;
+        <span style="display:inline-block; text-align:center; vertical-align:middle; line-height:1.3;">
+          <span style="display:block; border-bottom:1px solid #333; padding:0 6px 2px;">N<sub>detected,<em>m</em></sub></span>
+          <span style="display:block; padding:2px 6px 0;">N<sub>census</sub></span>
+        </span>
+      </p>
+
+      <p>where <em>N</em><sub>detected,<em>m</em></sub> is the number of distinct individuals detected by modality <em>m</em> (using depth-estimated GPS association for camera traps, visual re-identification for drones, and group count for ARUs and citizen science) and <em>N</em><sub>census</sub> is the census count for that species.</p>
+
+      <p>Note that <em>p&#x0302;<sub>m</sub></em> is a lower bound on true detection probability because (a) not all individuals have equal probability of appearing in sensor coverage areas and (b) individual re-identification from camera traps and drones is imperfect. We report <em>p&#x0302;<sub>m</sub></em> with this caveat and compare it across modalities to quantify the marginal gain from fusion. For the fused estimate we use the union of individuals detected across all modalities. We do not apply this analysis to bird species detected by ARUs or to species detected only in text data, where individual-level ground truth is unavailable.</p>
+    </div>
+  </section>
+
+  <!-- ═══ 2.7 ═══ -->
+  <section id="sec-2-7">
+    <h2>2.7 Cross-modal complementarity analysis</h2>
+    <div class="prose" contenteditable="false">
+      <h3>Species overlap matrix</h3>
+      <p>We constructed a modality &times; modality overlap matrix using the Jaccard similarity <em>J</em>(<em>A</em>,<em>B</em>) = |<em>S<sub>A</sub></em> &cap; <em>S<sub>B</sub></em>| / |<em>S<sub>A</sub></em> &cup; <em>S<sub>B</sub></em>| of detected species sets <em>S<sub>A</sub></em> and <em>S<sub>B</sub></em> for each pair of modalities. Low Jaccard values indicate high complementarity (each modality detects taxa the other misses). The matrix is visualised as a heatmap.</p>
+
+      <h3>Species &times; modality detection matrix</h3>
+      <p>A binary detection matrix (species &times; modality) was constructed for all species detected across the deployment. Rows are clustered by taxonomic group (mammals, birds, other); columns are ordered by modality. Taxa detected by only one modality are highlighted as uniquely detected species. This matrix is the primary empirical output of the study and directly populates the sensor &times; research-question framework.</p>
+
+      <h3>Ablation analysis</h3>
+      <p>To quantify the marginal contribution of each modality to total detected species richness, we performed an additive ablation: starting from the lowest-cost modality, we computed cumulative species richness as modalities are added in order of deployment cost. We also report the loss in richness when each modality is removed from the full six-modality set. This produces a diminishing-returns curve that is the empirical basis for the Pareto-optimal sensor recommendations in the Discussion.</p>
+    </div>
+  </section>
+
+  <!-- ═══ 2.8 + Table 2 ═══ -->
+  <section id="sec-2-8">
+    <h2>2.8 Sensor &times; research-question matrix</h2>
+  </section>
+  <section id="table-2">
+    <p class="prose" contenteditable="false">Capability ratings: <span class="cap-strong">Strong</span> = primary use case, quantitative output achievable with existing AI tools; <span class="cap-partial">Partial</span> = detectable but with meaningful uncertainty, taxon-limited coverage, or dependence on model performance; <span class="cap-none">&mdash;</span> = sensor not suited to this dimension; <span class="cap-context">Context</span> = enriches interpretation but does not provide direct detection.</p>
+    <div class="table-wrap">
+      <table>
+        <caption>Table 2. Sensor &times; research-question matrix</caption>
+        <thead>
+          <tr><th>Dimension</th><th>Scale</th><th>Camera trap</th><th>ARU</th><th>Drone</th><th>GPS collar</th><th>Citizen sci.</th><th>Text / notes</th></tr>
+        </thead>
+        <tbody contenteditable="false">
+          <tr><td rowspan="5"><strong>WHO</strong></td><td>Morphological parts</td><td class="cap-partial">Partial</td><td class="cap-none">&mdash;</td><td class="cap-partial">Partial</td><td class="cap-none">&mdash;</td><td class="cap-partial">Partial</td><td class="cap-none">&mdash;</td></tr>
+          <tr><td>Individual identity</td><td class="cap-partial">Partial</td><td class="cap-partial">Partial <sup>a</sup></td><td class="cap-partial">Partial</td><td class="cap-strong">Strong</td><td class="cap-partial">Partial</td><td class="cap-context">Context</td></tr>
+          <tr><td>Species</td><td class="cap-strong">Strong</td><td class="cap-strong">Strong</td><td class="cap-partial">Partial</td><td class="cap-strong">Strong</td><td class="cap-strong">Strong</td><td class="cap-partial">Partial</td></tr>
+          <tr><td>Functional group</td><td class="cap-strong">Strong</td><td class="cap-strong">Strong</td><td class="cap-partial">Partial</td><td class="cap-partial">Partial</td><td class="cap-strong">Strong</td><td class="cap-strong">Strong</td></tr>
+          <tr><td>Community composition</td><td class="cap-strong">Strong</td><td class="cap-strong">Strong</td><td class="cap-partial">Partial</td><td class="cap-partial">Partial</td><td class="cap-strong">Strong</td><td class="cap-context">Context</td></tr>
+          <tr><td rowspan="5"><strong>WHERE</strong></td><td>Fine-grained (&lt;1 m)</td><td class="cap-none">&mdash;</td><td class="cap-none">&mdash;</td><td class="cap-strong">Strong</td><td class="cap-none">&mdash;</td><td class="cap-none">&mdash;</td><td class="cap-none">&mdash;</td></tr>
+          <tr><td>Local (1&ndash;100 m)</td><td class="cap-strong">Strong <sup>b</sup></td><td class="cap-partial">Partial</td><td class="cap-strong">Strong</td><td class="cap-strong">Strong</td><td class="cap-partial">Partial</td><td class="cap-none">&mdash;</td></tr>
+          <tr><td>Habitat / site (100 m&ndash;1 km)</td><td class="cap-strong">Strong</td><td class="cap-strong">Strong</td><td class="cap-strong">Strong</td><td class="cap-strong">Strong</td><td class="cap-strong">Strong</td><td class="cap-strong">Strong</td></tr>
+          <tr><td>Landscape (1&ndash;100 km)</td><td class="cap-none">&mdash;</td><td class="cap-partial">Partial</td><td class="cap-partial">Partial</td><td class="cap-strong">Strong</td><td class="cap-partial">Partial</td><td class="cap-none">&mdash;</td></tr>
+          <tr><td>Regional / planetary</td><td class="cap-none">&mdash;</td><td class="cap-none">&mdash;</td><td class="cap-none">&mdash;</td><td class="cap-strong">Strong</td><td class="cap-partial">Partial</td><td class="cap-context">Context</td></tr>
+          <tr><td rowspan="5"><strong>WHEN</strong></td><td>Instantaneous (&lt;1 s)</td><td class="cap-strong">Strong</td><td class="cap-strong">Strong</td><td class="cap-strong">Strong</td><td class="cap-partial">Partial</td><td class="cap-partial">Partial</td><td class="cap-none">&mdash;</td></tr>
+          <tr><td>Event / diel (s&ndash;h)</td><td class="cap-strong">Strong</td><td class="cap-strong">Strong</td><td class="cap-partial">Partial</td><td class="cap-strong">Strong</td><td class="cap-none">&mdash;</td><td class="cap-none">&mdash;</td></tr>
+          <tr><td>Campaign (days&ndash;weeks)</td><td class="cap-strong">Strong</td><td class="cap-strong">Strong</td><td class="cap-partial">Partial</td><td class="cap-strong">Strong</td><td class="cap-partial">Partial</td><td class="cap-strong">Strong</td></tr>
+          <tr><td>Seasonal (months&ndash;years)</td><td class="cap-strong">Strong</td><td class="cap-strong">Strong</td><td class="cap-none">&mdash;</td><td class="cap-strong">Strong</td><td class="cap-partial">Partial</td><td class="cap-context">Context</td></tr>
+          <tr><td>Cadence / burstiness</td><td class="cap-partial">Partial<br><small>(event-triggered)</small></td><td class="cap-strong">Strong<br><small>(continuous)</small></td><td class="cap-partial">Partial<br><small>(bursty flights)</small></td><td class="cap-strong">Strong<br><small>(continuous)</small></td><td class="cap-partial">Partial<br><small>(directable)</small></td><td class="cap-none">&mdash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footnote" contenteditable="false">
+      <p><sup>a</sup> Acoustic individual identification (AIID) is achievable in principle for vocal taxa with individual signatures, but remains an emerging capability requiring deep learning methods and species-specific training data (Knight et al. 2024, <em>Trends Ecol. Evol.</em>; verify citation).</p>
+      <p><sup>b</sup> Local spatial resolution for camera traps is enabled by the monocular depth estimation pipeline described in Section 2.4, which projects bounding-box centroids to estimated ground positions. Without depth estimation, camera trap spatial resolution is site-level only.</p>
+    </div>
+  </section>
+
+  <!-- ═══ 2.9 + Table 3 ═══ -->
+  <section id="sec-2-9">
+    <h2>2.9 Deployment and annotation effort</h2>
+  </section>
+  <section id="table-3">
+    <p class="prose" contenteditable="false">Effort ratings: <span class="effort-high">High</span> = substantial specialist skill, time, or equipment required; <span class="effort-med">Medium</span> = moderate effort, partially automatable; <span class="effort-low">Low</span> = minimal effort, routine deployment or fully automated.</p>
+    <div class="table-wrap">
+      <table>
+        <caption>Table 3. Deployment effort, annotation effort, and AI tool maturity by modality</caption>
+        <thead>
+          <tr><th>Dimension</th><th>Camera trap</th><th>ARU</th><th>Drone</th><th>GPS collar</th><th>Citizen sci.</th><th>Text / notes</th></tr>
+        </thead>
+        <tbody contenteditable="false">
+          <tr><td><strong>Deployment effort</strong></td>
+            <td><span class="effort-low">Low</span><br><small>Strap to tree; weeks unattended</small></td>
+            <td><span class="effort-low">Low</span><br><small>Easy to scale; autonomous recording</small></td>
+            <td><span class="effort-high">High</span><br><small>Pilot required; per-flight setup; bursty coverage</small></td>
+            <td><span class="effort-high">High</span><br><small>Animal capture and collaring</small></td>
+            <td><span class="effort-low">Low</span><br><small>Directable via BioBlitz / targeted event</small></td>
+            <td><span class="effort-low">Low</span><br><small>Passive; generated alongside other modalities</small></td>
+          </tr>
+          <tr><td><strong>Annotation effort</strong></td>
+            <td><span class="effort-med">Medium</span><br><small>MegaDetector reduces blanks; BioCLIP classifies; human review of low-confidence</small></td>
+            <td><span class="effort-med">Medium</span><br><small>BirdNET automates species ID; human validation of uncertain calls</small></td>
+            <td><span class="effort-high">High</span><br><small>Frame extraction; manual or semi-automated species ID from altitude</small></td>
+            <td><span class="effort-low">Low</span><br><small>GPS tracks auto-logged; individual ID pre-assigned</small></td>
+            <td><span class="effort-med">Medium</span><br><small>Community ID on iNaturalist; expert validation</small></td>
+            <td><span class="effort-low">Low</span><br><small>LLM extraction automated; manual spot-check</small></td>
+          </tr>
+          <tr><td><strong>AI tools available</strong></td>
+            <td><span class="cap-strong">Mature</span><br><small>MegaDetector, BioCLIP, SAM3, species classifiers</small></td>
+            <td><span class="cap-strong">Mature</span><br><small>BirdNET, Perch; strong for birds</small></td>
+            <td><span class="cap-partial">Developing</span><br><small>YOLO+SAHI, OWL-ViT; accuracy degrades with altitude</small></td>
+            <td><span class="cap-strong">Mature</span><br><small>Auto-logged; Movebank ecosystem</small></td>
+            <td><span class="cap-partial">Developing</span><br><small>iNaturalist AI ID; accuracy varies by taxon</small></td>
+            <td><span class="cap-partial">Developing</span><br><small>LLM extraction; hallucination risk</small></td>
+          </tr>
+          <tr><td><strong>Key AI gaps</strong></td>
+            <td>Individual re-ID at scale; night-image classification</td>
+            <td>Individual AIID nascent; non-vocal taxa undetectable</td>
+            <td>Species ID from altitude; small/occluded animals</td>
+            <td>Few gaps for GPS track data itself</td>
+            <td>ID validation; observer-effort bias</td>
+            <td>Hallucination; completeness of species mentions</td>
+          </tr>
+          <tr><td><strong>Value for AI training</strong></td>
+            <td><span class="cap-strong">High</span><br><small>Large labelled image datasets; broad taxonomic coverage</small></td>
+            <td><span class="cap-strong">High</span><br><small>Large audio corpora; BirdNET training data</small></td>
+            <td><span class="effort-med">Medium</span><br><small>High-resolution imagery; labelled data scarce</small></td>
+            <td><span class="effort-med">Medium</span><br><small>Movement trajectories; limited species scope</small></td>
+            <td><span class="cap-strong">High</span><br><small>Georeferenced, community-validated observations</small></td>
+            <td><span class="effort-low">Low&ndash;medium</span><br><small>Contextual labels; not primary training signal</small></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ═══ Results placeholders ═══ -->
+  <section id="results">
+    <h2>Results tables (placeholders)</h2>
+    <p class="prose" contenteditable="false"><em>To be filled from SmartWilds annotation pipeline output.</em></p>
+  </section>
+
+  <section id="table-4">
+    <div class="table-wrap">
+      <table>
+        <caption>Table 4. Species richness by modality</caption>
+        <thead><tr><th>Modality</th><th>Species detected</th><th>Unique species <sup>a</sup></th><th>Sampling effort</th></tr></thead>
+        <tbody contenteditable="false">
+          <tr><td>Camera traps</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td><span class="placeholder">XX</span> trap-nights</td></tr>
+          <tr><td>ARUs (bioacoustics)</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td><span class="placeholder">XX</span> recorder-hours</td></tr>
+          <tr><td>Drones</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td><span class="placeholder">XX</span> flight-hours</td></tr>
+          <tr><td>Citizen science</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td><span class="placeholder">XX</span> observer-hours</td></tr>
+          <tr><td>Text data</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td><span class="placeholder">XX</span> documents</td></tr>
+          <tr style="font-weight:700;"><td>All modalities fused</td><td class="placeholder">XX</td><td>&mdash;</td><td>&mdash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="footnote"><sup>a</sup> Taxa detected by this modality only.</p>
+  </section>
+
+  <section id="table-5">
+    <div class="table-wrap">
+      <table>
+        <caption>Table 5. Per-modality detection probability for managed ungulate species</caption>
+        <thead><tr><th>Species</th><th>Census <em>N</em></th><th>Camera traps <em>p&#x0302;</em></th><th>ARUs <em>p&#x0302;</em></th><th>Drones <em>p&#x0302;</em></th><th>Citizen sci. <em>p&#x0302;</em></th><th>Fused <em>p&#x0302;</em></th></tr></thead>
+        <tbody contenteditable="false">
+          <tr><td>P&egrave;re David's deer (<em>Elaphurus davidianus</em>)</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td class="placeholder">XX</td></tr>
+          <tr><td>Takin (<em>Budorcas taxicolor</em>)</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td class="placeholder">XX</td></tr>
+          <tr><td>Przewalski's horse (<em>Equus ferus przewalskii</em>)</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td class="placeholder">XX</td><td class="placeholder">XX</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="footnote" contenteditable="false"><em>p&#x0302;</em> = proportion of census individuals detected by each modality over the deployment period. Fused <em>p&#x0302;</em> uses the union of individuals detected across all modalities. See Section 2.6 for caveats on individual re-identification.</p>
+  </section>
+
+  <section id="table-6">
+    <div class="table-wrap">
+      <table>
+        <caption>Table 6. Operational performance metrics by modality</caption>
+        <thead><tr><th>Metric</th><th>Camera trap</th><th>ARU</th><th>Drone</th><th>GPS collar</th><th>Citizen sci.</th><th>Text / notes</th></tr></thead>
+        <tbody contenteditable="false">
+          <tr><td>Spatial range</td><td>Fixed FOV (~10 m&sup2;)</td><td>Acoustic radius (~50&ndash;100 m)</td><td>Flight radius (~500 m per session)</td><td>Entire home range</td><td>Site-wide (directed event)</td><td>Site-wide context</td></tr>
+          <tr><td>Spatial resolution</td><td>Within frame; ~1&ndash;10 m with depth est.</td><td>Site-level (~50 m)</td><td>Sub-metre</td><td>~3&ndash;10 m (GPS fix)</td><td>Variable (device GPS)</td><td>Site-level</td></tr>
+          <tr><td>Temporal range</td><td>Weeks&ndash;months (unattended)</td><td>Weeks&ndash;months (unattended)</td><td>Hours per flight</td><td>Months&ndash;years</td><td>Event-concentrated (bursty)</td><td>Campaign duration</td></tr>
+          <tr><td>Temporal resolution</td><td>Event-triggered (PIR)</td><td>Continuous or duty-cycled</td><td>30&ndash;60 fps video</td><td>Hourly to sub-hourly</td><td>Opportunistic / directed</td><td>Static record</td></tr>
+          <tr><td>Primary taxa</td><td>Large&ndash;medium mammals</td><td>Vocalising birds, bats</td><td>Large mammals, ungulates</td><td>Collared individual</td><td>Broad (observer-dependent)</td><td>All (observer-noted)</td></tr>
+          <tr><td>Behavioural detail</td><td>Limited (frame capture)</td><td>Vocalisations</td><td>Posture, group behaviour</td><td>Movement, activity patterns</td><td>Variable</td><td>Observer narrative</td></tr>
+          <tr><td>Deployment effort</td><td>Low</td><td>Low</td><td>High</td><td>High</td><td>Low</td><td>Low</td></tr>
+          <tr><td>Data volume</td><td>Moderate<br><small>(~236k images, C1&ndash;2)</small></td><td>Moderate&ndash;high<br><small>(2,453 WAV, 202 GB)</small></td><td>High<br><small>(4K video, 16 sessions)</small></td><td>Low<br><small>(coordinate logs)</small></td><td>Low&ndash;moderate<br><small>(991 files)</small></td><td>Negligible<br><small>(~72 files)</small></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr style="margin-top:48px;">
+  <p class="prose" style="font-size:.82rem;color:#999;" contenteditable="false"><em>Document generated as working draft for internal review. All <span class="placeholder">XX</span> placeholders to be filled from SmartWilds annotation pipeline output. Citations marked &ldquo;verify&rdquo; must be checked against Zotero collection before submission.</em></p>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CAMPAIGN PLANNER TOOL
+       ═══════════════════════════════════════════════════════════ -->
+  <section id="planner">
+    <h2>Campaign Planner Tool</h2>
+    <p class="prose" style="font-size:.9rem;color:#555;">Select your ecological monitoring goals and constraints below. The planner recommends sensor packages ranked by coverage, cost, and annotation effort based on the SmartWilds capability matrix.</p>
+
+    <div class="planner-grid">
+      <!-- ── Left: Controls ── -->
+      <div class="planner-controls">
+        <h3>Monitoring goals</h3>
+
+        <h4>What to measure</h4>
+        <div class="goal-group" id="what-goals">
+          <label><input type="checkbox" value="species_richness"> Species richness
+            <span class="goal-desc">How many species are present?</span></label>
+          <label><input type="checkbox" value="abundance"> Relative abundance
+            <span class="goal-desc">How many individuals per species?</span></label>
+          <label><input type="checkbox" value="occupancy"> Occupancy / land-use detection
+            <span class="goal-desc">Where is each species present/absent?</span></label>
+          <label><input type="checkbox" value="individual_id"> Individual identification
+            <span class="goal-desc">Track specific individuals over time</span></label>
+          <label><input type="checkbox" value="behaviour"> Behavioural observation
+            <span class="goal-desc">Activity patterns, movement, interactions</span></label>
+          <label><input type="checkbox" value="community"> Community composition
+            <span class="goal-desc">Full assemblage structure across taxa</span></label>
+        </div>
+
+        <h4>Target taxa</h4>
+        <div class="goal-group" id="taxa-goals">
+          <label><input type="checkbox" value="large_mammals"> Large mammals
+            <span class="goal-desc">Ungulates, carnivores, megafauna</span></label>
+          <label><input type="checkbox" value="small_mammals"> Small / cryptic mammals
+            <span class="goal-desc">Rodents, bats, mustelids</span></label>
+          <label><input type="checkbox" value="birds"> Birds
+            <span class="goal-desc">Passerines, raptors, waterfowl</span></label>
+          <label><input type="checkbox" value="herps"> Herps / invertebrates
+            <span class="goal-desc">Amphibians, reptiles, insects</span></label>
+        </div>
+
+        <h4>Spatial &amp; temporal needs</h4>
+        <div class="goal-group" id="scale-goals">
+          <label><input type="checkbox" value="fine_spatial"> Fine spatial resolution (&lt;10 m)
+            <span class="goal-desc">Microhabitat use, individual locations</span></label>
+          <label><input type="checkbox" value="landscape"> Landscape coverage (1&ndash;100 km)
+            <span class="goal-desc">Cross-site comparisons, connectivity</span></label>
+          <label><input type="checkbox" value="continuous"> Continuous temporal monitoring
+            <span class="goal-desc">24/7 over weeks or months</span></label>
+          <label><input type="checkbox" value="seasonal"> Multi-season / long-term
+            <span class="goal-desc">Phenology, population trends</span></label>
+        </div>
+
+        <h4>Constraints</h4>
+        <div class="budget-row">
+          <span>Budget:</span>
+          <select id="budget-select">
+            <option value="any">No constraint</option>
+            <option value="low">Low (minimal equipment)</option>
+            <option value="medium">Medium (standard field budget)</option>
+            <option value="high">High (well-funded project)</option>
+          </select>
+        </div>
+        <div class="budget-row">
+          <span>Personnel:</span>
+          <select id="personnel-select">
+            <option value="any">No constraint</option>
+            <option value="solo">1&ndash;2 people</option>
+            <option value="small">Small team (3&ndash;5)</option>
+            <option value="large">Large team (6+)</option>
+          </select>
+        </div>
+        <div class="budget-row">
+          <span>Campaign length:</span>
+          <select id="duration-select">
+            <option value="any">No constraint</option>
+            <option value="short">Days (rapid assessment)</option>
+            <option value="medium">Weeks (standard campaign)</option>
+            <option value="long">Months+ (long-term monitoring)</option>
+          </select>
+        </div>
+
+        <button class="btn-recommend" onclick="runPlanner()">Recommend sensor packages</button>
+      </div>
+
+      <!-- ── Right: Results ── -->
+      <div class="planner-results" id="planner-results">
+        <div class="planner-empty">
+          Select your monitoring goals and click <strong>Recommend</strong> to see sensor packages ranked by coverage, effort, and cost.
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Sensor x Goal Coverage Matrix ── -->
+    <section id="coverage-matrix" class="coverage-table">
+      <h3 style="margin-top:40px;">Sensor &times; Ecological Goal Coverage Matrix</h3>
+      <p style="font-size:.85rem;color:#666;max-width:860px;">This table summarises what each sensor or sensor combination delivers for common ecological monitoring goals, along with the annotation effort required. Use this to identify which sensors address your specific questions.</p>
+      <div class="table-wrap">
+        <table id="coverage-table">
+          <caption>Sensor &times; Ecological Goal &times; Annotation Effort</caption>
+          <thead>
+            <tr>
+              <th>Sensor / combo</th>
+              <th>Species richness</th>
+              <th>Abundance</th>
+              <th>Occupancy</th>
+              <th>Individual ID</th>
+              <th>Behaviour</th>
+              <th>Community comp.</th>
+              <th>Large mammals</th>
+              <th>Birds</th>
+              <th>Small / cryptic</th>
+              <th>Deploy effort</th>
+              <th>Annotation effort</th>
+              <th>Est. cost tier</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Single sensors -->
+            <tr>
+              <td><strong>Camera trap</strong></td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-partial">Partial</td>
+              <td class="cov-partial">Limited</td>
+              <td class="cov-partial">Mammals only</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-none">&mdash;</td>
+              <td class="cov-partial">Partial</td>
+              <td><span class="effort-low">Low</span></td>
+              <td><span class="effort-med">Medium</span><br><small>MegaDetector + BioCLIP; human review ~15%</small></td>
+              <td>$</td>
+            </tr>
+            <tr>
+              <td><strong>ARU (bioacoustics)</strong></td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-partial">Relative</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-none">Nascent</td>
+              <td class="cov-partial">Vocal only</td>
+              <td class="cov-partial">Vocal taxa</td>
+              <td class="cov-none">&mdash;</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-partial">Bats</td>
+              <td><span class="effort-low">Low</span></td>
+              <td><span class="effort-med">Medium</span><br><small>BirdNET automated; human validation ~10%</small></td>
+              <td>$</td>
+            </tr>
+            <tr>
+              <td><strong>Drone</strong></td>
+              <td class="cov-partial">Partial</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-partial">Snapshot</td>
+              <td class="cov-partial">Partial</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-partial">Large spp.</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-none">&mdash;</td>
+              <td class="cov-none">&mdash;</td>
+              <td><span class="effort-high">High</span></td>
+              <td><span class="effort-high">High</span><br><small>Frame extraction; manual species ID from altitude</small></td>
+              <td>$$</td>
+            </tr>
+            <tr>
+              <td><strong>GPS collar</strong></td>
+              <td class="cov-none">&mdash;</td>
+              <td class="cov-none">&mdash;</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-none">&mdash;</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-none">&mdash;</td>
+              <td class="cov-none">&mdash;</td>
+              <td><span class="effort-high">High</span></td>
+              <td><span class="effort-low">Low</span><br><small>Auto-logged; pre-assigned IDs</small></td>
+              <td>$$$</td>
+            </tr>
+            <tr>
+              <td><strong>Citizen science</strong></td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-partial">Biased</td>
+              <td class="cov-partial">Partial</td>
+              <td class="cov-partial">Partial</td>
+              <td class="cov-partial">Variable</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-partial">Variable</td>
+              <td><span class="effort-low">Low</span></td>
+              <td><span class="effort-med">Medium</span><br><small>iNaturalist AI + expert validation</small></td>
+              <td>$</td>
+            </tr>
+            <tr>
+              <td><strong>Text / field notes</strong></td>
+              <td class="cov-partial">Partial</td>
+              <td class="cov-none">&mdash;</td>
+              <td class="cov-partial">Context</td>
+              <td class="cov-none">Context</td>
+              <td class="cov-partial">Narrative</td>
+              <td class="cov-partial">Context</td>
+              <td class="cov-partial">Context</td>
+              <td class="cov-partial">Context</td>
+              <td class="cov-partial">Context</td>
+              <td><span class="effort-low">Low</span></td>
+              <td><span class="effort-low">Low</span><br><small>LLM extraction; spot-check only</small></td>
+              <td>Free</td>
+            </tr>
+            <!-- Key combos -->
+            <tr style="background:#e8f5e9;">
+              <td><strong>Camera trap + ARU</strong><br><small>Best value combo</small></td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-partial">Partial</td>
+              <td class="cov-partial">Partial</td>
+              <td class="cov-full">Mammals + birds</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-partial">Partial</td>
+              <td><span class="effort-low">Low</span></td>
+              <td><span class="effort-med">Medium</span><br><small>Both AI-assisted; co-located deployment</small></td>
+              <td>$$</td>
+            </tr>
+            <tr style="background:#e8f5e9;">
+              <td><strong>Camera + ARU + Citizen sci.</strong><br><small>Broad coverage, low cost</small></td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-partial">Partial</td>
+              <td class="cov-partial">Partial</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-partial">Partial</td>
+              <td><span class="effort-low">Low</span></td>
+              <td><span class="effort-med">Medium</span><br><small>Citizen sci. adds opportunistic coverage</small></td>
+              <td>$$</td>
+            </tr>
+            <tr style="background:#e8f5e9;">
+              <td><strong>Camera + ARU + Drone</strong><br><small>High spatial resolution</small></td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-partial">Partial</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Mammals + birds</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-partial">Partial</td>
+              <td><span class="effort-med">Medium</span></td>
+              <td><span class="effort-high">High</span><br><small>Drone annotation is labour-intensive</small></td>
+              <td>$$$</td>
+            </tr>
+            <tr style="background:#e8f5e9;">
+              <td><strong>Camera + ARU + GPS collar</strong><br><small>Individual-level tracking</small></td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Mammals + birds</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-partial">Partial</td>
+              <td><span class="effort-med">Medium</span></td>
+              <td><span class="effort-med">Medium</span><br><small>GPS auto-logged offsets collar capture effort</small></td>
+              <td>$$$$</td>
+            </tr>
+            <tr style="background:#e8f5e9;">
+              <td><strong>All six modalities</strong><br><small>Maximum coverage (SmartWilds)</small></td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-full">Strong</td>
+              <td class="cov-partial">Partial</td>
+              <td><span class="effort-high">High</span></td>
+              <td><span class="effort-high">High</span><br><small>Full pipeline; requires dedicated annotation team</small></td>
+              <td>$$$$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </section><!-- end #planner -->
+
+</main>
+
+<div class="watermark">SmartWilds &bull; Working Draft &bull; 2025</div>
+
+<script>
+// ── Toggle helpers ──
+function toggleEdit() {
+  document.body.classList.toggle('editing');
+  const on = document.body.classList.contains('editing');
+  document.getElementById('editBtn').classList.toggle('active', on);
+  document.querySelectorAll('[contenteditable]').forEach(el => {
+    el.contentEditable = on ? 'true' : 'false';
+  });
+}
+function toggleToc() {
+  document.getElementById('toc').classList.toggle('hidden');
+  document.getElementById('main').classList.toggle('full');
+}
+function exportHTML() {
+  const blob = new Blob(['<!DOCTYPE html>' + document.documentElement.outerHTML], {type:'text/html'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'smartwilds_methods_draft.html';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+// ── TOC scroll highlight ──
+const sections = document.querySelectorAll('section[id]');
+const tocLinks = document.querySelectorAll('nav.toc a');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const link = document.querySelector('nav.toc a[href="#' + e.target.id + '"]');
+      if (link) link.classList.add('active');
+    }
+  });
+}, { rootMargin: '-80px 0px -60% 0px' });
+sections.forEach(s => obs.observe(s));
+
+
+// ═══════════════════════════════════════════════════════════
+// CAMPAIGN PLANNER ENGINE
+// ═══════════════════════════════════════════════════════════
+
+const SENSORS = {
+  camera:  { name: 'Camera trap',    deployCost: 1, annotCost: 2, equipCost: 1, personnelNeed: 1 },
+  aru:     { name: 'ARU',            deployCost: 1, annotCost: 2, equipCost: 1, personnelNeed: 1 },
+  drone:   { name: 'Drone',          deployCost: 3, annotCost: 3, equipCost: 2, personnelNeed: 2 },
+  gps:     { name: 'GPS collar',     deployCost: 3, annotCost: 1, equipCost: 3, personnelNeed: 2 },
+  citizen: { name: 'Citizen sci.',   deployCost: 1, annotCost: 2, equipCost: 1, personnelNeed: 1 },
+  text:    { name: 'Text / notes',   deployCost: 1, annotCost: 1, equipCost: 0, personnelNeed: 1 }
+};
+
+// Goal coverage: 0 = none, 1 = partial/context, 2 = strong
+const COVERAGE = {
+  camera:  { species_richness:2, abundance:2, occupancy:2, individual_id:1, behaviour:1, community:1, large_mammals:2, small_mammals:1, birds:0, herps:0, fine_spatial:1, landscape:0, continuous:2, seasonal:2 },
+  aru:     { species_richness:2, abundance:1, occupancy:2, individual_id:0, behaviour:1, community:1, large_mammals:0, small_mammals:1, birds:2, herps:0, fine_spatial:0, landscape:1, continuous:2, seasonal:2 },
+  drone:   { species_richness:1, abundance:2, occupancy:1, individual_id:1, behaviour:2, community:1, large_mammals:2, small_mammals:0, birds:0, herps:0, fine_spatial:2, landscape:1, continuous:0, seasonal:0 },
+  gps:     { species_richness:0, abundance:0, occupancy:2, individual_id:2, behaviour:2, community:0, large_mammals:2, small_mammals:0, birds:0, herps:0, fine_spatial:1, landscape:2, continuous:2, seasonal:2 },
+  citizen: { species_richness:2, abundance:1, occupancy:1, individual_id:1, behaviour:1, community:2, large_mammals:2, small_mammals:1, birds:2, herps:1, fine_spatial:0, landscape:1, continuous:0, seasonal:1 },
+  text:    { species_richness:1, abundance:0, occupancy:1, individual_id:0, behaviour:1, community:1, large_mammals:1, small_mammals:1, birds:1, herps:1, fine_spatial:0, landscape:0, continuous:0, seasonal:1 }
+};
+
+const PACKAGES = [
+  { id:'cam',         sensors:['camera'],                       label:'Camera trap only' },
+  { id:'aru',         sensors:['aru'],                          label:'ARU only' },
+  { id:'drone',       sensors:['drone'],                        label:'Drone only' },
+  { id:'gps',         sensors:['gps'],                          label:'GPS collar only' },
+  { id:'citsci',      sensors:['citizen'],                      label:'Citizen science only' },
+  { id:'cam_aru',     sensors:['camera','aru'],                 label:'Camera trap + ARU' },
+  { id:'cam_cit',     sensors:['camera','citizen'],             label:'Camera + Citizen sci.' },
+  { id:'aru_cit',     sensors:['aru','citizen'],                label:'ARU + Citizen sci.' },
+  { id:'cam_aru_cit', sensors:['camera','aru','citizen'],       label:'Camera + ARU + Citizen sci.' },
+  { id:'cam_aru_dr',  sensors:['camera','aru','drone'],         label:'Camera + ARU + Drone' },
+  { id:'cam_aru_gps', sensors:['camera','aru','gps'],           label:'Camera + ARU + GPS collar' },
+  { id:'cam_dr_gps',  sensors:['camera','drone','gps'],         label:'Camera + Drone + GPS' },
+  { id:'full_nogps',  sensors:['camera','aru','drone','citizen','text'], label:'All except GPS collar' },
+  { id:'full',        sensors:['camera','aru','drone','gps','citizen','text'], label:'All six modalities' }
+];
+
+function getSelectedGoals() {
+  const goals = [];
+  document.querySelectorAll('#planner .goal-group input:checked').forEach(cb => goals.push(cb.value));
+  return goals;
+}
+
+function packageScore(pkg, goals) {
+  if (goals.length === 0) return { coverage: 0, met: [], partial: [], unmet: [] };
+  const met = [], partial = [], unmet = [];
+  let total = 0;
+  goals.forEach(g => {
+    let best = 0;
+    pkg.sensors.forEach(s => { best = Math.max(best, COVERAGE[s][g] || 0); });
+    total += best;
+    if (best === 2) met.push(g);
+    else if (best === 1) partial.push(g);
+    else unmet.push(g);
+  });
+  return { coverage: total / (goals.length * 2), met, partial, unmet };
+}
+
+function packageCost(pkg) {
+  let deploy = 0, annot = 0, equip = 0, pers = 0;
+  pkg.sensors.forEach(s => {
+    deploy = Math.max(deploy, SENSORS[s].deployCost);
+    annot  = Math.max(annot, SENSORS[s].annotCost);
+    equip += SENSORS[s].equipCost;
+    pers   = Math.max(pers, SENSORS[s].personnelNeed);
+  });
+  return { deploy, annot, equip, personnel: pers, total: deploy + annot + equip };
+}
+
+function passesConstraints(pkg, budget, personnel, duration) {
+  const cost = packageCost(pkg);
+  if (budget === 'low'    && cost.equip > 2) return false;
+  if (budget === 'medium' && cost.equip > 5) return false;
+  if (personnel === 'solo'  && cost.personnel > 1) return false;
+  if (personnel === 'small' && pkg.sensors.length > 4) return false;
+  if (duration === 'short') {
+    if (pkg.sensors.includes('gps')) return false; // capture too slow
+  }
+  return true;
+}
+
+function goalLabel(g) {
+  const map = {
+    species_richness:'Species richness', abundance:'Abundance', occupancy:'Occupancy',
+    individual_id:'Individual ID', behaviour:'Behaviour', community:'Community comp.',
+    large_mammals:'Large mammals', small_mammals:'Small/cryptic mammals', birds:'Birds',
+    herps:'Herps/invertebrates', fine_spatial:'Fine spatial', landscape:'Landscape scale',
+    continuous:'Continuous monitoring', seasonal:'Multi-season'
+  };
+  return map[g] || g;
+}
+
+function effortLabel(n) {
+  if (n <= 1) return '<span class="effort-low">Low</span>';
+  if (n <= 2) return '<span class="effort-med">Medium</span>';
+  return '<span class="effort-high">High</span>';
+}
+
+function costTier(equip) {
+  if (equip <= 1) return '$';
+  if (equip <= 2) return '$$';
+  if (equip <= 4) return '$$$';
+  if (equip <= 6) return '$$$$';
+  return '$$$$$';
+}
+
+function runPlanner() {
+  const goals = getSelectedGoals();
+  const budget = document.getElementById('budget-select').value;
+  const personnel = document.getElementById('personnel-select').value;
+  const duration = document.getElementById('duration-select').value;
+  const resultsEl = document.getElementById('planner-results');
+
+  if (goals.length === 0) {
+    resultsEl.innerHTML = '<div class="planner-empty">Please select at least one monitoring goal.</div>';
+    return;
+  }
+
+  // Score & filter
+  let ranked = PACKAGES
+    .filter(p => passesConstraints(p, budget, personnel, duration))
+    .map(p => {
+      const score = packageScore(p, goals);
+      const cost = packageCost(p);
+      // Composite: coverage weighted heavily, penalise cost
+      const composite = score.coverage * 100 - cost.total * 3;
+      return { ...p, score, cost, composite };
+    })
+    .filter(p => p.score.coverage > 0)
+    .sort((a, b) => {
+      // Primary: coverage, secondary: lower cost
+      if (Math.abs(b.score.coverage - a.score.coverage) > 0.05)
+        return b.score.coverage - a.score.coverage;
+      return a.cost.total - b.cost.total;
+    });
+
+  // Remove dominated packages (same or worse coverage AND higher cost)
+  const filtered = [];
+  ranked.forEach(p => {
+    const dominated = filtered.some(f =>
+      f.score.coverage >= p.score.coverage && f.cost.total <= p.cost.total
+    );
+    if (!dominated) filtered.push(p);
+  });
+
+  const top = filtered.slice(0, 5);
+
+  if (top.length === 0) {
+    resultsEl.innerHTML = '<div class="planner-empty">No sensor packages match your constraints. Try relaxing budget or personnel limits.</div>';
+    return;
+  }
+
+  let html = '<h3 style="margin-top:0;font-size:1rem;">Recommended packages</h3>';
+
+  top.forEach((p, i) => {
+    const pct = Math.round(p.score.coverage * 100);
+    html += '<div class="rec-card">';
+    html += '<div class="rec-card-header">';
+    html += '<h4>' + p.label + '</h4>';
+    html += '<span class="rec-rank">#' + (i+1) + ' &mdash; ' + pct + '% coverage</span>';
+    html += '</div>';
+    html += '<div class="rec-card-body">';
+
+    // Sensor pills
+    html += '<div class="sensor-pills">';
+    p.sensors.forEach(s => {
+      html += '<span class="sensor-pill selected">' + SENSORS[s].name + '</span>';
+    });
+    html += '</div>';
+
+    // Cost summary
+    html += '<div class="rec-row"><span class="rec-label">Equipment cost</span><span class="rec-value">' + costTier(p.cost.equip) + '</span></div>';
+    html += '<div class="rec-row"><span class="rec-label">Deploy effort</span><span class="rec-value">' + effortLabel(p.cost.deploy) + '</span></div>';
+    html += '<div class="rec-row"><span class="rec-label">Annotation effort</span><span class="rec-value">' + effortLabel(p.cost.annot) + '</span></div>';
+    html += '<div class="rec-row"><span class="rec-label">Min. team size</span><span class="rec-value">' + (p.cost.personnel <= 1 ? '1&ndash;2' : p.cost.personnel <= 2 ? '3&ndash;5' : '6+') + ' people</span></div>';
+
+    // Goal match breakdown
+    html += '<div class="goal-match">';
+    p.score.met.forEach(g => {
+      html += '<div class="goal-match-item"><span class="match-icon" style="color:#1b5e20;">&#10004;</span> ' + goalLabel(g) + '</div>';
+    });
+    p.score.partial.forEach(g => {
+      html += '<div class="goal-match-item"><span class="match-icon" style="color:#e65100;">&#9679;</span> ' + goalLabel(g) + ' <small style="color:#888;">(partial)</small></div>';
+    });
+    p.score.unmet.forEach(g => {
+      html += '<div class="goal-match-item"><span class="match-icon" style="color:#ccc;">&#10006;</span> ' + goalLabel(g) + ' <small style="color:#888;">(not covered)</small></div>';
+    });
+    html += '</div>';
+
+    html += '</div></div>';
+  });
+
+  resultsEl.innerHTML = html;
+}
+</script>
+
+</body>
+</html>

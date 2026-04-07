@@ -1,0 +1,19 @@
+# This repo only tracks documentation/ from the TheWilds2025 working directory.
+# Everything else at the top level is local-only data and should NOT be committed.
+
+# Ignore all top-level entries except the ones we want
+/*
+!/.gitignore
+!/LICENSE
+!/README.md
+!/documentation/
+
+# Within documentation/, exclude generated artifacts, logs, model weights,
+# and nested git repositories that are versioned separately.
+documentation/annotation_pipeline/camera_traps/detection_results
+documentation/annotation_pipeline/camera_traps/logs/
+documentation/annotation_pipeline/camera_traps/yolov8x.pt
+documentation/annotation_pipeline/camera_traps/imageomicsthewilds_cameratraps/
+documentation/annotation_pipeline/drones/logs/
+documentation/**/__pycache__/
+documentation/**/*.pyc
