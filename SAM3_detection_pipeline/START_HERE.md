@@ -18,6 +18,7 @@ It covers:
 - optional BioCLIP enrichment
 - chunk creation for large grouped runs
 - batch submission helpers
+- performance benchmarking and edge-capacity analysis for Experiment 3 style studies
 
 It does not focus on `submit_all_predict_sam3_text.sh`.
 
@@ -35,11 +36,20 @@ Inside the packaged `SAM3_detection_pipeline` copy:
 - docs stay in the package root
 - core scripts live in `src/`
 - supporting utilities live in `misc/`
+- benchmarking tools live in `performance/`
 
 Packaged utility scripts:
 
 - `misc/export_drone_detection_csv.py`
 - `misc/vid_to_frame_coco.py`
+
+Packaged performance scripts:
+
+- `performance/benchmark_sam3_folder.py`
+- `performance/run_sam3_benchmark.sh`
+- `performance/analyze_sam3_edge_capacity.py`
+- `performance/sam3_edge_scenario_template.csv`
+- `performance/README_PERFORMANCE.md`
 
 ## Pipeline Summary
 
@@ -87,6 +97,14 @@ In the packaged copy, these live under `src/`.
 
 In the packaged copy, these also live under `src/`.
 
+### Performance and experiment-analysis scripts
+
+- `benchmark_sam3_folder.py`: measures initialization time, latency, throughput, and resource usage for one drone folder
+- `run_sam3_benchmark.sh`: launches the benchmark on Slurm
+- `analyze_sam3_edge_capacity.py`: turns benchmark summaries plus scenario CSV inputs into a feasibility table
+
+In the packaged copy, these live under `performance/`.
+
 ## Quick Start
 
 ### Single image
@@ -111,4 +129,4 @@ sbatch /fs/ess/PAS2136/TheWilds2025/documentation/annotation_pipeline/drones/SAM
 - The default launcher paths point to `smartwilds_drones`.
 - The expected output root under `smartwilds_drones/outputs/sam3_hf_outputs` may need to be created on first use.
 - The batch helper scripts still use `camera_trap` in their names because they were adapted from a grouped image-list workflow, but they call the same SAM3 inference entry point.
-- The packaged TheWilds2025 copy is organized as docs in the root, pipeline scripts in `src/`, and extra utilities in `misc/`.
+- The packaged TheWilds2025 copy is organized as docs in the root, pipeline scripts in `src/`, extra utilities in `misc/`, and benchmarking tools in `performance/`.
