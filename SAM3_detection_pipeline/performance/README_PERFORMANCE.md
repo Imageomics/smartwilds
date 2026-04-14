@@ -44,6 +44,9 @@ So the intended flow is:
 - `sam3_edge_scenario_template.csv`
   Starter scenario file for process-all, priority-based, and adaptive policies.
 
+- `results/vid005_bs1_100img/`
+  Example benchmark output snapshot for a `100` image, `batch-size 1` SAM3 run on `20250703_parrotanafi_5_VID_005_frames`.
+
 ## What `benchmark_sam3_folder.py` Actually Does
 
 The benchmark script is meant to answer a simple question: if you point SAM3 at one drone folder, how expensive is inference on a real machine?
@@ -149,6 +152,26 @@ This is a flattened per-image view. For batched runs, the latency numbers are ap
 - merging with image metadata
 - inspecting detection counts per frame
 - building quick tables or plots in R, pandas, or Excel
+
+## Included Example Results
+
+This packaged copy now includes one benchmark result snapshot under:
+
+`performance/results/vid005_bs1_100img`
+
+That folder contains:
+
+- `summary.json`
+- `batch_records.jsonl`
+- `per_image_latency.csv`
+
+These files are useful as:
+
+- a concrete example of the benchmark output format
+- a baseline reference point for the first SAM3 profiling run
+- a lightweight result snapshot that can be shared with collaborators through the repo
+
+Treat those files as one measured example, not as the final or only benchmark you would cite for the experiment. For the paper-facing analysis, you would still want to run the same scripts across additional folders, hardware settings, and batch sizes.
 
 ## Resource Metrics
 
