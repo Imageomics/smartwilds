@@ -19,6 +19,7 @@ It covers:
 - chunk creation for large grouped runs
 - batch submission helpers
 - performance benchmarking and edge-capacity analysis for Experiment 3 style studies
+- camera-trap storage/workload analysis for Experiment 5 style edge filtering studies
 
 It does not focus on `submit_all_predict_sam3_text.sh`.
 
@@ -50,6 +51,13 @@ Packaged performance scripts:
 - `performance/analyze_sam3_edge_capacity.py`
 - `performance/sam3_edge_scenario_template.csv`
 - `performance/README_PERFORMANCE.md`
+
+Packaged experiment-analysis bundle:
+
+- `performance/camera_trap_storage_analysis/README.md`
+- `performance/camera_trap_storage_analysis/run_storage_analysis.sh`
+- `performance/camera_trap_storage_analysis/src/storage_analysis/`
+- `performance/camera_trap_storage_analysis/results/`
 
 ## Pipeline Summary
 

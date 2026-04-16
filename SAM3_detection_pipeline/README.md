@@ -9,6 +9,8 @@ This directory contains the Hugging Face SAM3 text-prompted detection pipeline u
 - `ORGANIZED_OUTPUT_QUICKSTART.md`: practical commands for single runs and batch submission
 - `OUTPUT_DIRECTORY_STRUCTURE.md`: expected input/output layout
 - `COMPUTATIONAL_NODE_REQUIREMENTS.md`: Slurm and hardware guidance
+- `performance/README_PERFORMANCE.md`: SAM3 drone benchmarking and edge-capacity analysis
+- `performance/camera_trap_storage_analysis/README.md`: camera-trap storage and throughput savings analysis for edge blank-image filtering
 
 ## Packaged Copy Layout
 
@@ -21,7 +23,7 @@ In that packaged copy:
 - markdown documentation stays in the package root
 - runnable pipeline scripts live under `src/`
 - supporting utilities live under `misc/`
-- benchmarking and edge-capacity analysis tools live under `performance/`
+- benchmarking, capacity analysis, and experiment-analysis bundles live under `performance/`
 
 ## Core Execution Files
 
@@ -44,14 +46,34 @@ These helper names still reference `camera_trap`, but they launch the same Huggi
 - `misc/export_drone_detection_csv.py`: copied from `export_drone_detection_simple_csv.py` and renamed for the package
 - `misc/vid_to_frame_coco.py`: helper for building frame directories and COCO image-list inputs from video
 
-## Performance Experiment Bundle
+## Performance And Experiment Analysis Bundles
 
-The packaged copy now also includes a `performance/` directory for Experiment 3 style profiling and edge-feasibility analysis.
+The packaged copy now includes a `performance/` directory for both:
+
+- SAM3 drone benchmarking and Experiment 3 style edge-feasibility analysis
+- camera-trap Experiment 5 style storage/workload analysis bundles
+
+### SAM3 drone benchmarking tools
 
 - `performance/benchmark_sam3_folder.py`: benchmarks SAM3 on a drone frame folder and records latency, throughput, and resource metrics
 - `performance/run_sam3_benchmark.sh`: Slurm launcher for the benchmark script
 - `performance/analyze_sam3_edge_capacity.py`: combines benchmark summaries with scenario assumptions to estimate single-node feasibility
 - `performance/sam3_edge_scenario_template.csv`: starter scenario file for process-all, priority-based, and adaptive policy analysis
 - `performance/README_PERFORMANCE.md`: detailed walkthrough of what is measured and how to interpret the outputs
+
+### Camera-trap storage-analysis bundle
+
+- `performance/camera_trap_storage_analysis/run_storage_analysis.sh`: launcher for the Experiment 5 storage-analysis workflow
+- `performance/camera_trap_storage_analysis/analyze_blank_image_filtering.py`: thin compatibility wrapper that preserves the original entrypoint name
+- `performance/camera_trap_storage_analysis/src/storage_analysis/`: modular Python package for inventory building, metrics, reporting, and figures
+- `performance/camera_trap_storage_analysis/results/`: generated tables, figures, report, and diagnostics
+- `performance/camera_trap_storage_analysis/README.md`: detailed experiment description, inputs, methodology, and rerun instructions
+
+This bundle is intended for detector-based camera-trap filtering analysis:
+
+- raw image volume and storage
+- retained-image volume after the current detection pipeline
+- downstream throughput reduction when only detector-positive images are kept
+- publication-friendly tables and figures for Experiment 5
 
 `submit_all_predict_sam3_text.sh` exists in this directory but is intentionally not part of the main documentation package.
