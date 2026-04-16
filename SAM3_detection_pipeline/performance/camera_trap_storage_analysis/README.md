@@ -45,16 +45,48 @@ All outputs are written to:
 
 - [`results/`](./results)
 
-## Files in This Directory
+## Directory Structure
 
-- [`analyze_blank_image_filtering.py`](./analyze_blank_image_filtering.py)
-  Main analysis script. Scans raw camera-trap images, joins them with retained detections, computes storage and throughput metrics, and writes tables/figures.
+This experiment now follows a conventional Python layout:
 
-- [`run_storage_analysis.sh`](./run_storage_analysis.sh)
-  Convenience launcher for rerunning the full analysis from the project root.
+- `run_storage_analysis.sh`
+  Shell launcher for rerunning the experiment from the repository root.
 
-- [`results/`](./results)
+- `analyze_blank_image_filtering.py`
+  Thin compatibility wrapper. This preserves the original entrypoint name, but
+  the real implementation lives in the package below.
+
+- `src/storage_analysis/`
+  Main Python package for the experiment.
+
+- `results/`
   Generated outputs. Safe to regenerate.
+
+## Python Package Layout
+
+- [`src/storage_analysis/paths.py`](./src/storage_analysis/paths.py)
+  Path resolution and immutable experiment configuration.
+
+- [`src/storage_analysis/deployment_metadata.py`](./src/storage_analysis/deployment_metadata.py)
+  Deployment metadata loading and normalization helpers.
+
+- [`src/storage_analysis/inventory.py`](./src/storage_analysis/inventory.py)
+  Raw image and retained-detection inventory builders.
+
+- [`src/storage_analysis/metrics.py`](./src/storage_analysis/metrics.py)
+  Deployment metrics, rollups, and diagnostics.
+
+- [`src/storage_analysis/reporting.py`](./src/storage_analysis/reporting.py)
+  CSV and Markdown output writers.
+
+- [`src/storage_analysis/visualization.py`](./src/storage_analysis/visualization.py)
+  Figure generation.
+
+- [`src/storage_analysis/pipeline.py`](./src/storage_analysis/pipeline.py)
+  Top-level orchestration.
+
+- [`src/storage_analysis/cli.py`](./src/storage_analysis/cli.py)
+  CLI entrypoint used by the launcher.
 
 ## Inputs and Data Sources
 
@@ -114,12 +146,13 @@ From the repository root:
 bash processing_output/experimental_results/storage_analysis/run_storage_analysis.sh
 ```
 
-### Option 2: Run the Python analysis directly
+### Option 2: Run the packaged module directly
 
 From the repository root:
 
 ```bash
-python processing_output/experimental_results/storage_analysis/analyze_blank_image_filtering.py
+PYTHONPATH=processing_output/experimental_results/storage_analysis/src \
+python -m storage_analysis
 ```
 
 ## Expected Runtime and Resource Use
