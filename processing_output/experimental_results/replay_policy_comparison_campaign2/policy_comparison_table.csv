@@ -1,0 +1,4 @@
+policy,description,latency_p95_seconds,latency_slo_pct,coverage_pct,compute_budget_units,operator_effort_events,processed_positive_events,processed_total_events,dropped_events,backlogged_events
+baseline_process_all,Process every camera event and every acoustic file immediately.,60.0,100.0,100.0,155414.0,40828,1863,40828,0,0
+event_triggered,Process only motion-like camera events and acoustic files whose raw BirdNET max confidence exceeds the configured threshold.,60.0,100.0,25.76489533011272,21680.0,3796,480,3796,37032,0
+adaptive,"Start in event-triggered mode, process all arrivals during high-activity windows, and batch low-priority backlog after long idle gaps.",759445.7999999999,87.97638217928073,100.0,155414.0,40828,1863,40828,0,6725

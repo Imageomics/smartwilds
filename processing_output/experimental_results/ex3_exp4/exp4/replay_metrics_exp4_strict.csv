@@ -1,0 +1,4 @@
+policy,total_events,processed_events,skipped_events,coverage,mean_latency_ms,p95_latency_ms,max_latency_ms,compute_cost_sec,slo_ms,slo_compliance,operator_effort_estimate
+adaptive,39742,39742,0,1.0,111.77800312012484,198.8,198.8,3945.977200000001,5000.0,1.0,39670
+baseline,39742,39742,0,1.0,111.88815359065978,198.8,198.8,3950.354800000001,5000.0,1.0,39742
+event_triggered,39742,39742,0,1.0,57.13419052891149,138.0,138.0,2017.3404000000007,5000.0,1.0,7949

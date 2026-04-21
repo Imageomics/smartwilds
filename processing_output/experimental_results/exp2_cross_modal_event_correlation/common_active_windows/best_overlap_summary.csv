@@ -1,0 +1,4 @@
+window,best_combo_size,best_modalities,site_id,common_bin_count,first_bin,last_bin,note
+1h,0,,,0,,,No exact common active bins found.
+6h,0,,,0,,,No exact common active bins found.
+24h,2,camera_traps + text_observations,TW01,1,2025-06-30,2025-06-30,Best exact overlap found.

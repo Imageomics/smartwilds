@@ -1,0 +1,13 @@
+site_id,modality_a,modality_b,intersection_bins,union_bins,jaccard
+TW06,camera_traps,acoustics,0,100,0.0
+TW01,camera_traps,drones,0,10,0.0
+TW02,camera_traps,drones,0,6,0.0
+TW04,camera_traps,drones,0,3,0.0
+TW09,camera_traps,drones,0,3,0.0
+TW11,camera_traps,drones,0,2,0.0
+TW06,acoustics,camera_traps,0,100,0.0
+TW01,drones,camera_traps,0,10,0.0
+TW02,drones,camera_traps,0,6,0.0
+TW04,drones,camera_traps,0,3,0.0
+TW09,drones,camera_traps,0,3,0.0
+TW11,drones,camera_traps,0,2,0.0

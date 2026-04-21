@@ -7,6 +7,14 @@
 !/LICENSE
 !/README.md
 !/documentation/
+!/processing_output/
+
+# Within processing_output/, only track experimental_results/.
+/processing_output/*
+!/processing_output/experimental_results/
+
+# Exclude files too large for GitHub (>50MB).
+/processing_output/experimental_results/exp1_cross_modal_arrival_rates/results/timestamps_combined.csv
 
 # Within documentation/, exclude generated artifacts, logs, model weights,
 # and nested git repositories that are versioned separately.
@@ -17,3 +25,8 @@ documentation/annotation_pipeline/camera_traps/imageomicsthewilds_cameratraps/
 documentation/annotation_pipeline/drones/logs/
 documentation/**/__pycache__/
 documentation/**/*.pyc
+
+# Junk files anywhere in the repo.
+**/.DS_Store
+**/__pycache__/
+**/*.pyc

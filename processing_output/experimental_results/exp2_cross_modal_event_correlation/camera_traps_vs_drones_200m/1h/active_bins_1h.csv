@@ -1,0 +1,15 @@
+site_id,modality,bin_start
+TW01,camera_traps,2025-08-11 19:00:00
+TW01,camera_traps,2025-08-11 20:00:00
+TW01,drones,2025-07-03 15:00:00
+TW01,drones,2025-07-03 17:00:00
+TW02,camera_traps,2025-07-08 10:00:00
+TW02,camera_traps,2025-08-11 19:00:00
+TW04,camera_traps,2025-07-04 20:00:00
+TW04,camera_traps,2025-07-04 21:00:00
+TW04,drones,2025-09-08 10:00:00
+TW06,drones,2025-09-08 10:00:00
+TW09,camera_traps,2025-09-07 22:00:00
+TW09,camera_traps,2025-09-07 23:00:00
+TW09,camera_traps,2025-09-08 00:00:00
+TW11,camera_traps,2025-09-07 21:00:00

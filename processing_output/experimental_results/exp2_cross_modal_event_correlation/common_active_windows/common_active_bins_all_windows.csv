@@ -1,0 +1,2 @@
+window,combo_size,modalities,site_id,common_bin_count,first_bin,last_bin,common_bins
+24h,2,camera_traps + text_observations,TW01,1,2025-06-30,2025-06-30,2025-06-30T00:00:00

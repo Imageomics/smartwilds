@@ -1,0 +1,5 @@
+,camera_traps,acoustics,drones,text_observations
+camera_traps,1.0,0.0,0.0,0.1111111111111111
+acoustics,0.0,1.0,,0.0
+drones,0.0,,1.0,0.125
+text_observations,0.1111111111111111,0.0,0.125,1.0

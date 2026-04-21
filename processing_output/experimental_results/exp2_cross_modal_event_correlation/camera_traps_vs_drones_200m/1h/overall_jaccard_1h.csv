@@ -1,0 +1,2 @@
+modality_a,modality_b,site_count,intersection_bins,union_bins,jaccard
+camera_traps,drones,6,0,14,0.0

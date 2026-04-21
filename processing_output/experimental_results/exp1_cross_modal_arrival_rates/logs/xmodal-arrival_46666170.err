@@ -1,0 +1,18 @@
+13:44:55 INFO Reading bioacoustic data from /fs/ess/PAS2136/TheWilds2025/BioacousticAnalysis/WildsBird_Every_Hour.csv
+13:44:56 INFO Bioacoustics: 1180 hourly events extracted
+13:44:56 INFO Saved /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/cross_modal_arrival_rates/results/timestamps_bioacoustic.csv (1180 rows)
+13:44:56 INFO Combined: 1180 total events across 1 modalities
+13:44:57 INFO Saved /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/cross_modal_arrival_rates/results/timestamps_combined.csv (1180 rows)
+13:44:57 INFO Running ADAE analysis...
+13:44:57 INFO ADAE analysis for bioacoustic (1180 events)
+13:44:57 INFO   bioacoustic threshold=0.8: 12 change points, 2656 simulated events
+13:44:57 INFO   bioacoustic threshold=0.95: 12 change points, 2513 simulated events
+13:44:57 INFO   bioacoustic threshold=0.99: 12 change points, 2621 simulated events
+13:44:57 INFO   bioacoustic threshold=0.995: 12 change points, 2489 simulated events
+13:44:57 INFO Summary saved to /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/cross_modal_arrival_rates/results/summary_table.csv
+13:44:57 INFO Computing cross-modal correlation...
+13:44:57 WARNING No co-located multi-modal sites found
+13:44:57 INFO Generating plots...
+13:44:57 INFO Saved /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/cross_modal_arrival_rates/results/overlaid_arrival_rates.png
+13:44:59 INFO Saved /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/cross_modal_arrival_rates/results/overlaid_arrival_rates.pdf
+13:44:59 INFO Done.

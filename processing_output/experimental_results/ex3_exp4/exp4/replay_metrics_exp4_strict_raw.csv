@@ -1,0 +1,5 @@
+policy,total_events,processed_events,skipped_events,coverage,mean_latency_ms,p95_latency_ms,max_latency_ms,compute_cost_ms,compute_cost_sec,slo_ms,slo_compliance,classification_trigger_rate,classification_trigger_count,detection_positive_count,operator_effort_estimate,dominant_policy_state
+adaptive,39742,39742,0,1.0,111.77800312012484,198.8,198.8,3945977.200000001,3945.977200000001,5000.0,1.0,0.9981883146293594,39670,39670,39670,high_activity
+detection_only,39742,39742,0,1.0,43.44952443259022,77.2,77.2,1534041.2000000004,1534.0412000000003,5000.0,1.0,0.0,0,0,0,detection_only
+process_all,39742,39742,0,1.0,111.88815359065978,198.8,198.8,3950354.8000000007,3950.3548000000005,5000.0,1.0,1.0,39742,39742,39742,full_pipeline
+selective_classification,39742,39742,0,1.0,57.13419052891149,138.0,138.0,2017340.400000001,2017.3404000000012,5000.0,1.0,0.20001509737808867,7949,7949,7949,selective_classification

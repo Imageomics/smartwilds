@@ -1,0 +1,4 @@
+trap_name,cluster_count,dominant_cadence_sec,dominant_cadence_count,timelapse_cluster_count,motion_cluster_count
+TW01-CT02,8350,60,6078,7126,1224
+TW02-CT01,5759,60,5469,5737,22
+TW09_CT02,25633,60,22201,23521,2112

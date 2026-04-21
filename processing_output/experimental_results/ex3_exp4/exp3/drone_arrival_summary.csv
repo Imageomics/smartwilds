@@ -1,0 +1,2 @@
+sensor_group,total_events,campaign_start,campaign_end,total_hours,active_days,avg_rate_per_hour,p95_rate_per_hour,peak_rate_per_hour,avg_rate_per_sec,p95_rate_per_sec,peak_rate_per_sec
+drone_campaign2,8,2025-08-04,2025-08-28 23:59:59,599.9997222222222,4,0.013333339506175698,0.125,0.125,3.7037054183821382e-06,3.472222222222222e-05,3.472222222222222e-05

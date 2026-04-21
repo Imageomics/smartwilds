@@ -1,0 +1,7 @@
+site_id,intersection_bins,union_bins,jaccard,camera_active_bins,drone_active_bins
+TW01,0,2,0.0,1,1
+TW02,0,2,0.0,2,0
+TW04,0,2,0.0,1,1
+TW06,0,1,0.0,0,1
+TW09,0,2,0.0,2,0
+TW11,0,1,0.0,1,0

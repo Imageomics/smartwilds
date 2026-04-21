@@ -1,0 +1,5 @@
+modality,modeling_assumption,reference_model,reference_latency_ms,avg_rate_per_hour,p95_rate_per_hour,peak_rate_per_hour,required_util_avg_percent,required_util_p95_percent,required_util_peak_percent,single_node_feasibility_peak
+camera_traps,"YOLO detection only, per image event",YOLO,38.6407,103.04454745443118,181.40754242614707,181.65116279069767,0.11060315124506775,0.19471428957294504,0.19497578016795866,safe
+bioacoustics,BirdNET per audio clip,BirdNET,19057.4863,100.0,100.0,100.0,52.93746194444445,52.93746194444445,52.93746194444445,safe
+drone,Session-level drone event using observed weak replay service time,drone_session_empirical,78000.0,0.0133333395061756,0.125,0.125,0.028888902263380468,0.2708333333333333,0.2708333333333333,safe
+camera_classification_reference,BioCLIP reference for secondary image classification,BioCLIP,60.8514,103.04454745443118,181.40754242614707,181.65116279069767,0.17417791597134927,0.30663619242195683,0.3070479879844961,safe

@@ -1,0 +1,35 @@
+============================================
+Cross-Modal Arrival Rates Analysis
+Node: p0013.ten.osc.edu
+Modality: bioacoustic
+Campaign: all
+Analyze: true
+Plot: true
+Output: /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/cross_modal_arrival_rates/results
+Start: Fri Apr 10 01:44:47 PM EDT 2026
+============================================
+Python: /users/PAS2136/kline377/miniconda3/envs/cv_processing_env/bin/python
+Python 3.9.21
+
+Running: /users/PAS2136/kline377/miniconda3/envs/cv_processing_env/bin/python /fs/ess/PAS2136/TheWilds2025/documentation/adae_model/extract_wilds_multimodal.py --modality bioacoustic --campaign all --output-dir /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/cross_modal_arrival_rates/results --analyze --plot
+
+
+=== Summary ===
+   modality  total_events                                 date_range  mean_arrival_rate_per_hour      cv  burstiness  num_sites
+bioacoustic          1180 2025-06-30 12:00:00 to 2025-08-28 09:00:00                        0.46 13.7081       0.864          2
+
+============================================
+Finished: Fri Apr 10 01:44:59 PM EDT 2026
+============================================
+
+Results in: /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/cross_modal_arrival_rates/results
+total 2.5K
+-rw-rw----+ 1 kline377 PAS2136 432 Apr 10 13:44 change_points_bioacoustic_0.8.csv
+-rw-rw----+ 1 kline377 PAS2136 432 Apr 10 13:44 change_points_bioacoustic_0.95.csv
+-rw-rw----+ 1 kline377 PAS2136 432 Apr 10 13:44 change_points_bioacoustic_0.995.csv
+-rw-rw----+ 1 kline377 PAS2136 432 Apr 10 13:44 change_points_bioacoustic_0.99.csv
+-rw-rw----+ 1 kline377 PAS2136 23K Apr 10 13:44 overlaid_arrival_rates.pdf
+-rw-rw----+ 1 kline377 PAS2136 60K Apr 10 13:44 overlaid_arrival_rates.png
+-rw-rw----+ 1 kline377 PAS2136 165 Apr 10 13:44 summary_table.csv
+-rw-rw----+ 1 kline377 PAS2136 73K Apr 10 13:44 timestamps_bioacoustic.csv
+-rw-rw----+ 1 kline377 PAS2136 76K Apr 10 13:44 timestamps_combined.csv

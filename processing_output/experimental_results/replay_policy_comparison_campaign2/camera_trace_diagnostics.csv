@@ -1,0 +1,10 @@
+trap_name,total_images,parseable_images,usable_in_window_images,included_in_trace
+TW01-CT02,26573,26573,25559,True
+TW02-CT01,61217,61217,17301,True
+TW04-CT03,984,0,0,False
+TW06-CT04,40907,0,0,False
+TW06-CT05,84,0,0,False
+TW07-CT05,0,0,0,False
+TW09-CT05,9,0,0,False
+TW09_CT02,90834,90834,90834,True
+TW11-CT06,89,0,0,False

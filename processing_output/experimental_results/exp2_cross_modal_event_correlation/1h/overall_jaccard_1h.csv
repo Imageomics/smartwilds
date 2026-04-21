@@ -1,0 +1,10 @@
+modality_a,modality_b,comparable_site_count,intersection_bins,union_bins,jaccard
+camera_traps,camera_traps,7,,,1.0
+camera_traps,acoustics,1,0.0,552.0,0.0
+camera_traps,drones,5,0.0,58.0,0.0
+acoustics,camera_traps,1,0.0,552.0,0.0
+acoustics,acoustics,2,,,1.0
+acoustics,drones,0,,,
+drones,camera_traps,5,0.0,58.0,0.0
+drones,acoustics,0,,,
+drones,drones,5,,,1.0
