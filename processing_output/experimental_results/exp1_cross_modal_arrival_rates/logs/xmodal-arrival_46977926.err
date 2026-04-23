@@ -1,0 +1,118 @@
+20:57:20 INFO Scanning camera traps in /fs/ess/PAS2136/TheWilds2025/thewilds_20250630_20250703/camera_traps
+20:57:24 INFO   Processed 5000 images (4983 with timestamps, 16 missing)
+20:57:36 INFO   Processed 10000 images (9983 with timestamps, 16 missing)
+20:57:37 INFO   Processed 15000 images (14983 with timestamps, 16 missing)
+20:57:37 INFO Scanning camera traps in /fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/camera_traps
+20:57:42 INFO   Processed 20000 images (19810 with timestamps, 189 missing)
+20:57:43 INFO   Processed 25000 images (24810 with timestamps, 189 missing)
+20:57:44 INFO   Processed 30000 images (29810 with timestamps, 189 missing)
+20:57:45 INFO   Processed 35000 images (34810 with timestamps, 189 missing)
+20:57:47 INFO   Processed 40000 images (39810 with timestamps, 189 missing)
+20:57:48 INFO   Processed 45000 images (44810 with timestamps, 189 missing)
+20:57:49 INFO   Processed 50000 images (49810 with timestamps, 189 missing)
+20:57:50 INFO   Processed 55000 images (54810 with timestamps, 189 missing)
+20:57:51 INFO   Processed 60000 images (59810 with timestamps, 189 missing)
+20:57:52 INFO   Processed 65000 images (64810 with timestamps, 189 missing)
+20:57:53 INFO   Processed 70000 images (69810 with timestamps, 189 missing)
+20:57:54 INFO   Processed 75000 images (74810 with timestamps, 189 missing)
+20:57:56 INFO   Processed 80000 images (79810 with timestamps, 189 missing)
+20:57:57 INFO   Processed 85000 images (84810 with timestamps, 189 missing)
+20:57:58 INFO   Processed 90000 images (89810 with timestamps, 189 missing)
+20:57:59 INFO   Processed 95000 images (94810 with timestamps, 189 missing)
+20:58:00 INFO   Processed 100000 images (99810 with timestamps, 189 missing)
+20:58:01 INFO   Processed 105000 images (104810 with timestamps, 189 missing)
+20:58:28 INFO   Processed 110000 images (109743 with timestamps, 256 missing)
+20:58:29 INFO   Processed 115000 images (114743 with timestamps, 256 missing)
+20:58:30 INFO   Processed 120000 images (119743 with timestamps, 256 missing)
+20:58:31 INFO   Processed 125000 images (124743 with timestamps, 256 missing)
+20:58:33 INFO   Processed 130000 images (129743 with timestamps, 256 missing)
+20:58:34 INFO   Processed 135000 images (134743 with timestamps, 256 missing)
+20:58:35 INFO   Processed 140000 images (139743 with timestamps, 256 missing)
+20:58:36 INFO   Processed 145000 images (144743 with timestamps, 256 missing)
+20:58:38 INFO   Processed 150000 images (149743 with timestamps, 256 missing)
+20:58:39 INFO   Processed 155000 images (154743 with timestamps, 256 missing)
+20:58:40 INFO   Processed 160000 images (159743 with timestamps, 256 missing)
+20:58:41 INFO   Processed 165000 images (164743 with timestamps, 256 missing)
+20:58:42 INFO   Processed 170000 images (169734 with timestamps, 265 missing)
+20:58:43 INFO   Processed 175000 images (174734 with timestamps, 265 missing)
+20:58:44 INFO   Processed 180000 images (179734 with timestamps, 265 missing)
+20:58:46 INFO   Processed 185000 images (184734 with timestamps, 265 missing)
+20:58:47 INFO   Processed 190000 images (189734 with timestamps, 265 missing)
+20:58:49 INFO   Processed 195000 images (194734 with timestamps, 265 missing)
+21:00:45 INFO   Processed 200000 images (199734 with timestamps, 265 missing)
+21:02:39 INFO   Processed 205000 images (204734 with timestamps, 265 missing)
+21:04:33 INFO   Processed 210000 images (209734 with timestamps, 265 missing)
+21:06:26 INFO   Processed 215000 images (214734 with timestamps, 265 missing)
+21:08:14 INFO   Processed 220000 images (219734 with timestamps, 265 missing)
+21:10:09 INFO   Processed 225000 images (224734 with timestamps, 265 missing)
+21:12:03 INFO   Processed 230000 images (229734 with timestamps, 265 missing)
+21:13:57 INFO   Processed 235000 images (234734 with timestamps, 265 missing)
+21:14:17 WARNING Camera trap directory not found: /fs/ess/PAS2136/TheWilds2025/thewilds_20250908_20250908/camera_traps
+21:14:17 INFO Camera traps: 235596 events extracted, 265 missing timestamps, 42500 from EXIF
+21:14:19 INFO Saved /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/exp1_cross_modal_arrival_rates/results/timestamps_camera_trap.csv (235596 rows)
+21:14:19 INFO Reading bioacoustic data from /fs/ess/PAS2136/TheWilds2025/BioacousticAnalysis/WildsBird_Every_Hour.csv
+21:14:20 INFO Reading bioacoustic data from /fs/ess/PAS2136/TheWilds2025/BioacousticAnalysis/WildsBird_Sunrise_Sunset.csv
+21:14:21 INFO Bioacoustics: 1714 events extracted
+21:14:21 INFO Saved /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/exp1_cross_modal_arrival_rates/results/timestamps_bioacoustic.csv (1714 rows)
+21:14:21 INFO Mission 20250811_djiair_1: reconstructed 17133 timestamps at 30 fps from start 2025-08-11T10:29:13
+21:14:22 INFO Mission 20250811_parrot_01: reconstructed 25806 timestamps at 30 fps from start 2025-08-11T10:00:00
+21:14:22 INFO Drones: 328700 detections from 15 missions (2 with reconstructed timestamps: ['20250811_djiair_1', '20250811_parrot_01'])
+21:14:24 INFO Saved /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/exp1_cross_modal_arrival_rates/results/timestamps_drone.csv (328700 rows)
+21:14:24 INFO Scanning citizen science in /fs/ess/PAS2136/TheWilds2025/thewilds_20250804_20250828/citizen_science
+21:14:41 INFO Citizen science: 991 files (627 EXIF, 364 mtime)
+21:14:41 INFO Saved /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/exp1_cross_modal_arrival_rates/results/timestamps_citizen_science.csv (991 rows)
+21:14:41 INFO Combined: 567001 total events across 4 modalities
+21:14:45 INFO Saved /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/exp1_cross_modal_arrival_rates/results/timestamps_combined.csv (567001 rows)
+21:14:45 INFO Running ADAE analysis...
+21:14:45 INFO ADAE analysis for citizen_science (991 events)
+21:14:45 INFO   citizen_science threshold=0.8: 0 change points, 975 simulated events
+21:14:45 INFO   citizen_science threshold=0.95: 0 change points, 1023 simulated events
+21:14:45 INFO   citizen_science threshold=0.99: 0 change points, 985 simulated events
+21:14:45 INFO   citizen_science threshold=0.995: 0 change points, 917 simulated events
+21:14:45 INFO ADAE analysis for bioacoustic (1714 events)
+21:14:45 INFO   bioacoustic threshold=0.8: 91 change points, 4286 simulated events
+21:14:45 INFO   bioacoustic threshold=0.95: 91 change points, 4404 simulated events
+21:14:45 INFO   bioacoustic threshold=0.99: 91 change points, 4062 simulated events
+21:14:45 INFO   bioacoustic threshold=0.995: 91 change points, 4213 simulated events
+21:14:45 INFO ADAE analysis for camera_trap (235596 events)
+/fs/ess/PAS2136/TheWilds2025/documentation/adae_model/change_points.py:61: RuntimeWarning: invalid value encountered in double_scalars
+  return len(df[(df['time'] >= start) & (df['time'] < end)]) / (end - start)
+21:15:01 WARNING   Change point analysis failed for camera_trap threshold=0.8: lam < 0 or lam is NaN
+/fs/ess/PAS2136/TheWilds2025/documentation/adae_model/change_points.py:61: RuntimeWarning: invalid value encountered in double_scalars
+  return len(df[(df['time'] >= start) & (df['time'] < end)]) / (end - start)
+21:15:16 WARNING   Change point analysis failed for camera_trap threshold=0.95: lam < 0 or lam is NaN
+/fs/ess/PAS2136/TheWilds2025/documentation/adae_model/change_points.py:61: RuntimeWarning: invalid value encountered in double_scalars
+  return len(df[(df['time'] >= start) & (df['time'] < end)]) / (end - start)
+21:15:31 WARNING   Change point analysis failed for camera_trap threshold=0.99: lam < 0 or lam is NaN
+/fs/ess/PAS2136/TheWilds2025/documentation/adae_model/change_points.py:61: RuntimeWarning: invalid value encountered in double_scalars
+  return len(df[(df['time'] >= start) & (df['time'] < end)]) / (end - start)
+21:15:47 WARNING   Change point analysis failed for camera_trap threshold=0.995: lam < 0 or lam is NaN
+21:15:47 INFO ADAE analysis for drone (328700 events)
+/fs/ess/PAS2136/TheWilds2025/documentation/adae_model/change_points.py:61: RuntimeWarning: invalid value encountered in double_scalars
+  return len(df[(df['time'] >= start) & (df['time'] < end)]) / (end - start)
+21:15:56 WARNING   Change point analysis failed for drone threshold=0.8: lam < 0 or lam is NaN
+/fs/ess/PAS2136/TheWilds2025/documentation/adae_model/change_points.py:61: RuntimeWarning: invalid value encountered in double_scalars
+  return len(df[(df['time'] >= start) & (df['time'] < end)]) / (end - start)
+21:16:04 WARNING   Change point analysis failed for drone threshold=0.95: lam < 0 or lam is NaN
+/fs/ess/PAS2136/TheWilds2025/documentation/adae_model/change_points.py:61: RuntimeWarning: invalid value encountered in double_scalars
+  return len(df[(df['time'] >= start) & (df['time'] < end)]) / (end - start)
+21:16:13 WARNING   Change point analysis failed for drone threshold=0.99: lam < 0 or lam is NaN
+/fs/ess/PAS2136/TheWilds2025/documentation/adae_model/change_points.py:61: RuntimeWarning: invalid value encountered in double_scalars
+  return len(df[(df['time'] >= start) & (df['time'] < end)]) / (end - start)
+21:16:22 WARNING   Change point analysis failed for drone threshold=0.995: lam < 0 or lam is NaN
+21:16:22 INFO Summary saved to /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/exp1_cross_modal_arrival_rates/results/summary_table.csv
+21:16:22 INFO Computing cross-modal correlation...
+21:16:23 INFO Co-located sites with multiple modalities: {'TW06': {'camera_trap', 'bioacoustic'}}
+21:16:23 INFO Computing cross-modal correlation (window=1h)
+21:16:23 INFO   Saved /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/exp1_cross_modal_arrival_rates/results/cross_modal_correlation_1h.csv
+21:16:23 INFO Computing cross-modal correlation (window=6h)
+21:16:23 INFO   Saved /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/exp1_cross_modal_arrival_rates/results/cross_modal_correlation_6h.csv
+21:16:23 INFO Computing cross-modal correlation (window=24h)
+21:16:23 INFO   Saved /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/exp1_cross_modal_arrival_rates/results/cross_modal_correlation_24h.csv
+21:16:24 INFO Saved correlation heatmap for 1h window
+21:16:25 INFO Saved correlation heatmap for 6h window
+21:16:25 INFO Saved correlation heatmap for 24h window
+21:16:25 INFO Generating plots...
+21:16:26 INFO Saved /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/exp1_cross_modal_arrival_rates/results/overlaid_arrival_rates.png
+21:16:26 INFO Saved /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/exp1_cross_modal_arrival_rates/results/overlaid_arrival_rates.pdf
+21:16:26 INFO Done.

@@ -3,6 +3,8 @@
 **SEC 2026 — 12 pages + references**
 *Companion to `mosaic_framing_v4.tex` and `mosaic_execution_plan_v2.md`.*
 
+**v2.1 scope pivot (2026-04-23).** Synthesis methodology is the primary contribution; hardware is illustrative (predicted grid from published benchmarks, one tier measured on a field laptop as calibration anchor). §VII becomes a concrete SmartWilds v2 Bill of Materials with "(predicted)" qualifiers. Drone LOSO is dropped from the fidelity table with per-mission heterogeneity as the reason. See `mosaic_execution_plan_v2.md` "Key changes in v2.1" for the full diff.
+
 ---
 
 ## Structure at a glance
@@ -205,11 +207,10 @@ Exp 2.A results. Jaccard matrices at 1h, 6h, 24h windows.
 
 ### §V.C Sensor marginal value (~0.45 page)
 Exp 2.B results. The non-redundancy hypothesis test.
-Three dimensions:
-- Temporal unique coverage per modality (hour-of-day bins)
-- Spatial unique coverage per modality (sites)
-- Event-context unique coverage per modality (confidence tiers — if included)
-**So-what:** every modality contributes uniquely covered workload regions; no modality is redundant. First systems-level evidence for the "greater than the sum" hypothesis.
+Two dimensions reported (event-context dropped in triage):
+- Temporal unique coverage per modality (hour-of-day bins): CT 22.4%, BA 4.0%, drone 0.0%, citsci 3.3% [populate final]
+- Spatial unique coverage per modality (sites, 24h window): CT 78%, BA 75%, drone 0%, citsci 0% [populate final]
+**So-what:** every workload-relevant modality contributes uniquely covered regions; no modality is redundant at the workload level. First systems-level evidence for the "greater than the sum" hypothesis.
 **Scoping language:** "at the workload level" — per-taxon biodiversity analysis stays in the companion paper.
 
 ### §V.D Edge filtering (~0.50 page)
@@ -240,6 +241,8 @@ Exp 6.2.A variance envelope results. Paired plot: natural site-to-site variance 
 #### §VI.A.2 Leave-one-site-out (secondary)
 Exp 6.2.A leave-one-out fold. Pass/fail table across five fidelity metrics.
 
+**Drone excluded** from the LOSO table (v2.1). 37 flights span different dates, aircraft configs, and flight paths; per-mission heterogeneity dominates, making each held-out fold effectively a different modality. Variance envelope (§VI.A.1) is the applicable defense for drone. One-sentence footnote in the table. *Optional expansion in §VIII:* if the drone-video processing overhead (SAM3 on full video) is the root cause of high per-mission variance, this finding motivates a constructive recommendation for future drone data collection — oblique + nadir high-res stills instead of video-first, capturing species ID, counts, spatial distribution, and coarse behavior cues without the processing tax.
+
 #### §VI.A.3 Replay-level fidelity
 Exp 6.2.B results. Queue distribution, latency distribution, policy ranking invariance.
 **Headline number:** Kendall's tau across policies.
@@ -249,6 +252,8 @@ Exp 6.2 generalization sweep. Fidelity (y) vs. generalization level (x) curve.
 **This is the systems tradeoff figure committed to in the framing.**
 
 ### §VI.B Case study evaluation (~1.25 pages) — STRUCTURE TBD
+
+**v2.1 framing note.** All feasibility results in §VI.B are *predicted* from published benchmarks except the laptop-tier cell (Exp 3.5), which is measured. Tables and text carry "(predicted)" qualifiers consistently; §VI.B.3 reports the prediction-to-measurement calibration gap at the laptop tier.
 
 #### Option B1: Per case study (4 subsections)
 One subsection per case study. Each reports hardware feasibility (Exp 3), policy comparison (Exp 4), scaling (Exp 6.4) for that case study.
@@ -283,9 +288,9 @@ One subsection per case study. Each reports hardware feasibility (Exp 3), policy
 
 Exactly as drafted in v4 framing. Six paragraphs with backward pointers.
 
-### §VII.A Hardware tier
-From Exp 3 (§VI.B). Jetson Orin Nano + Pi combination specified per modality.
-Backward: "hardware feasibility from §VI.B.2, Table V."
+### §VII.A Hardware tier *(predicted, one tier measured)*
+From Exp 3 (§VI.B) — predicted grid; Exp 3.5 — field-laptop anchor. SmartWilds v2 BoM specifies **predicted** Jetson Orin Nano + Pi combinations per modality, with calibration error from the laptop-tier anchor reported as the prediction-uncertainty band. Every hardware claim in §VII carries the "(predicted)" qualifier; the laptop tier is the only measured cell.
+Backward: "predicted feasibility from §VI.B.2, Table V; calibration anchor from §VI.B.3."
 
 ### §VII.B Provisioning headroom
 From Exp 1 (§V.A). Per-modality headroom factors.
@@ -304,12 +309,13 @@ From Exp 2.B marginal value. All six modalities retained; siting per coverage ga
 Backward: "marginal value from §V.C, Figure 7."
 
 ### §VII.F Open questions for the next deployment
-Three questions that exceed what one recorded deployment can answer:
+Four questions that exceed what one recorded deployment can answer:
 1. Variance across similar deployments
-2. Weaker-node feasibility under real contention
+2. **Edge-tier validation** — Jetson-class and Pi-class predictions are hypotheses. Priority SmartWilds v2 investment: procure one Jetson Orin Nano + one Pi 5 + Coral and run CS1/CS2 under the adaptive policy; close the prediction-to-measurement gap currently anchored only at laptop tier.
 3. Coordination overhead under real radio and power conditions
+4. Drone collection modality tradeoff — whether oblique + nadir high-res stills close the biodiversity-information gap against video-first collection at a fraction of the processing cost. Motivated by the per-mission heterogeneity observed in §VI.A.2.
 
-**Closing:** the framework plus this blueprint provides the empirical foundation for the next deployment; the next deployment closes the loop and feeds a second characterization cycle.
+**Closing:** the framework plus this blueprint provides the empirical foundation *and a prioritized measurement plan* for SmartWilds v2; the next deployment closes the loop and feeds a second characterization cycle.
 
 ### Figures/tables in §VII
 - Optional **Figure 12:** Blueprint schematic — the specified deployment with hardware, modalities, coordination links. Stretch if space allows.
@@ -322,7 +328,7 @@ Three questions that exceed what one recorded deployment can answer:
 One sentence per domain (agriculture, SAR, wildfire). What transfers (metadata contract, framework, independence analysis). What requires re-specification (SLO definitions, combinators for domain-specific coordination patterns).
 
 ### §VIII.B Limitations (~0.15 page)
-Within-modality variance argument bounds; independence measured at specific scales; single-deployment empirical basis; no real-hardware contention measurement (or calibration acknowledged if Exp 3.5 was run).
+Within-modality variance argument bounds; independence measured at specific scales; single-deployment empirical basis; **hardware feasibility is predicted for edge tiers (Jetson, Pi) and calibrated only at the laptop tier** — prediction error on edge tiers is flagged as future validation work; drone fidelity defense rests on the variance envelope since LOSO is inapplicable to this modality's per-mission data structure.
 
 ### §VIII.C Toward the next deployment (~0.15 page)
 **Opening:** *To sense a system, you need a system.*
@@ -362,10 +368,10 @@ Two paragraphs.
 | Table II | §IV.D | SLO configurations | Existing |
 | Table III | §IV.C | Data sources summary | Existing |
 | Table IV | §V.A | Arrival rate statistics | Existing, populate |
-| Table V | §VI.B | Edge resource feasibility | Existing, populate |
+| Table V | §VI.B | Edge resource feasibility *(predicted; laptop tier measured)* | Existing, populate |
 | Table VI | §VI.B | Policy comparison | Existing, populate + add energy |
 | Table VII | §V.D | Blank image analysis | Existing, populated |
-| Table VIII | §VII | Blueprint spec summary | New, optional |
+| Table VIII | §VII | **SmartWilds v2 BoM** — per-tier node counts, predicted cost, measured-vs-predicted flag per cell | New, recommended |
 
 **Figure count:** 10–12 depending on stretch items. This is at the upper end of what fits in 12 pages — may need to drop Fig 11 or Fig 12.
 

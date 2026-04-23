@@ -1,0 +1,5 @@
+modality,cells_active,cells_unique,pct_unique,window_hours
+camera_trap,91,71,78.02,24
+bioacoustic,80,60,75.0,24
+drone,0,0,0.0,24
+citizen_science,0,0,0.0,24

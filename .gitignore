@@ -9,12 +9,16 @@
 !/documentation/
 !/processing_output/
 
-# Within processing_output/, only track experimental_results/.
+# Within processing_output/, only track experimental_results/ and experimental_resultsv2/.
 /processing_output/*
 !/processing_output/experimental_results/
+!/processing_output/experimental_resultsv2/
 
-# Exclude files too large for GitHub (>50MB).
+# Exclude files too large for GitHub (>50MB). Regenerable from code; team reads
+# authoritative copies directly on the shared OSC node.
 /processing_output/experimental_results/exp1_cross_modal_arrival_rates/results/timestamps_combined.csv
+/processing_output/experimental_results/exp1_cross_modal_arrival_rates/results/timestamps_drone.csv
+/processing_output/experimental_resultsv2/exp6_3_case_studies/traces/*.events.csv
 
 # Within documentation/, exclude generated artifacts, logs, model weights,
 # and nested git repositories that are versioned separately.

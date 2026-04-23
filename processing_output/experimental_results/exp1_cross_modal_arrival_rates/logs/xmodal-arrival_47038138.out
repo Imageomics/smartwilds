@@ -1,0 +1,62 @@
+============================================
+Cross-Modal Arrival Rates Analysis
+Node: p0015.ten.osc.edu
+Modality: all
+Campaign: all
+Analyze: true
+Plot: true
+Output: /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/exp1_cross_modal_arrival_rates/results
+Start: Wed Apr 22 11:23:58 AM EDT 2026
+============================================
+Python: /users/PAS2136/kline377/miniconda3/envs/cv_processing_env/bin/python
+Python 3.9.21
+
+Running: /users/PAS2136/kline377/miniconda3/envs/cv_processing_env/bin/python /fs/ess/PAS2136/TheWilds2025/documentation/adae_model/extract_wilds_multimodal.py --modality all --campaign all --output-dir /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/exp1_cross_modal_arrival_rates/results --analyze --plot
+
+
+=== Summary ===
+       modality  total_events                                        date_range  mean_arrival_rate_per_hour       cv  burstiness  num_sites
+citizen_science           991 2025-06-30 11:28:20 to 2025-09-08 20:12:59.226884                        0.58  16.9409      0.8885          1
+    bioacoustic          1714        2025-06-30 12:00:00 to 2025-08-28 09:00:00                        0.76  17.5768      0.8923          3
+    camera_trap        235596        2025-06-30 12:18:02 to 2025-09-14 19:43:11                       62.79 144.5084      0.9863          6
+          drone        328700        2025-07-01 08:34:38 to 2025-09-08 10:45:01                        5.52  58.6298      0.9665         15
+
+============================================
+Finished: Wed Apr 22 11:43:15 AM EDT 2026
+============================================
+
+Results in: /fs/ess/PAS2136/TheWilds2025/processing_output/experimental_results/exp1_cross_modal_arrival_rates/results
+total 198M
+-rw-rw----+ 1 kline377 PAS2136 2.9K Apr 22 11:41 change_points_bioacoustic_0.8.csv
+-rw-rw----+ 1 kline377 PAS2136 2.9K Apr 22 11:41 change_points_bioacoustic_0.95.csv
+-rw-rw----+ 1 kline377 PAS2136 2.9K Apr 22 11:41 change_points_bioacoustic_0.995.csv
+-rw-rw----+ 1 kline377 PAS2136 2.9K Apr 22 11:41 change_points_bioacoustic_0.99.csv
+-rw-rw----+ 1 kline377 PAS2136 428K Apr 22 11:41 change_points_camera_trap_0.8.csv
+-rw-rw----+ 1 kline377 PAS2136 428K Apr 22 11:42 change_points_camera_trap_0.95.csv
+-rw-rw----+ 1 kline377 PAS2136 428K Apr 22 11:42 change_points_camera_trap_0.995.csv
+-rw-rw----+ 1 kline377 PAS2136 428K Apr 22 11:42 change_points_camera_trap_0.99.csv
+-rw-rw----+ 1 kline377 PAS2136   51 Apr 22 11:41 change_points_citizen_science_0.8.csv
+-rw-rw----+ 1 kline377 PAS2136   51 Apr 22 11:41 change_points_citizen_science_0.95.csv
+-rw-rw----+ 1 kline377 PAS2136   51 Apr 22 11:41 change_points_citizen_science_0.995.csv
+-rw-rw----+ 1 kline377 PAS2136   51 Apr 22 11:41 change_points_citizen_science_0.99.csv
+-rw-rw----+ 1 kline377 PAS2136  71K Apr 22 11:42 change_points_drone_0.8.csv
+-rw-rw----+ 1 kline377 PAS2136  71K Apr 22 11:42 change_points_drone_0.95.csv
+-rw-rw----+ 1 kline377 PAS2136  71K Apr 22 11:43 change_points_drone_0.995.csv
+-rw-rw----+ 1 kline377 PAS2136  71K Apr 22 11:42 change_points_drone_0.99.csv
+-rw-rw----+ 1 kline377 PAS2136   95 Apr 22 11:43 cross_modal_correlation_1h.csv
+-rw-rw----+ 1 kline377 PAS2136   95 Apr 22 11:43 cross_modal_correlation_24h.csv
+-rw-rw----+ 1 kline377 PAS2136   95 Apr 22 11:43 cross_modal_correlation_6h.csv
+-rw-rw----+ 1 kline377 PAS2136  18K Apr 22 11:43 cross_modal_heatmap_1h.pdf
+-rw-rw----+ 1 kline377 PAS2136  52K Apr 22 11:43 cross_modal_heatmap_1h.png
+-rw-rw----+ 1 kline377 PAS2136  17K Apr 22 11:43 cross_modal_heatmap_24h.pdf
+-rw-rw----+ 1 kline377 PAS2136  52K Apr 22 11:43 cross_modal_heatmap_24h.png
+-rw-rw----+ 1 kline377 PAS2136  17K Apr 22 11:43 cross_modal_heatmap_6h.pdf
+-rw-rw----+ 1 kline377 PAS2136  52K Apr 22 11:43 cross_modal_heatmap_6h.png
+-rw-rw----+ 1 kline377 PAS2136  33K Apr 22 11:43 overlaid_arrival_rates.pdf
+-rw-rw----+ 1 kline377 PAS2136  79K Apr 22 11:43 overlaid_arrival_rates.png
+-rw-rw----+ 1 kline377 PAS2136  423 Apr 22 11:43 summary_table.csv
+-rw-rw----+ 1 kline377 PAS2136 122K Apr 22 11:41 timestamps_bioacoustic.csv
+-rw-rw----+ 1 kline377 PAS2136  39M Apr 22 11:41 timestamps_camera_trap.csv
+-rw-rw----+ 1 kline377 PAS2136 133K Apr 22 11:41 timestamps_citizen_science.csv
+-rw-rw----+ 1 kline377 PAS2136 101M Apr 22 11:41 timestamps_combined.csv
+-rw-rw----+ 1 kline377 PAS2136  58M Apr 22 11:41 timestamps_drone.csv

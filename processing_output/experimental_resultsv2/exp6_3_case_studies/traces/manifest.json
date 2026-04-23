@@ -1,0 +1,63 @@
+[
+  {
+    "case_study": "CS1",
+    "name": "CS1_ct_to_drone",
+    "description": "Camera trap motion trigger \u2192 drone dispatch within 5s. Burst response under cross-modal trigger.",
+    "intensity_multiplier": 1.0,
+    "slo_compliance_seconds": 5.0,
+    "duration_seconds": 6912000.0,
+    "seed": 1,
+    "n_events": 799314,
+    "modality_counts": {
+      "drone": 564094,
+      "camera_trap": 235220
+    },
+    "trace_path": "traces/CS1_ct_to_drone_1x.events.csv"
+  },
+  {
+    "case_study": "CS2",
+    "name": "CS2_acoustic_to_ct",
+    "description": "Acoustic high-confidence detection raises CT sensitivity (2x rate) for 60s; SLO for the trigger transition is 2s.",
+    "intensity_multiplier": 1.0,
+    "slo_compliance_seconds": 2.0,
+    "duration_seconds": 6912000.0,
+    "seed": 2,
+    "n_events": 491964,
+    "modality_counts": {
+      "camera_trap": 489670,
+      "bioacoustic": 2294
+    },
+    "trace_path": "traces/CS2_acoustic_to_ct_1x.events.csv"
+  },
+  {
+    "case_study": "CS3",
+    "name": "CS3_focal_ct_network",
+    "description": "Focal CT detection \u2192 adjacent CT activation in 10s. Multi-node coordination under corridor-movement assumption (adjacency stub: per-modality scaling pending site-aware combinator).",
+    "intensity_multiplier": 1.0,
+    "slo_compliance_seconds": 10.0,
+    "duration_seconds": 6912000.0,
+    "seed": 3,
+    "n_events": 527673,
+    "modality_counts": {
+      "camera_trap": 527673
+    },
+    "trace_path": "traces/CS3_focal_ct_network_1x.events.csv"
+  },
+  {
+    "case_study": "CS4",
+    "name": "CS4_citsci_system",
+    "description": "Citsci event \u2192 60s prior window scaling sampling priority on all sensor modalities. System-wide adaptive response.",
+    "intensity_multiplier": 1.0,
+    "slo_compliance_seconds": 60.0,
+    "duration_seconds": 6912000.0,
+    "seed": 4,
+    "n_events": 709018,
+    "modality_counts": {
+      "drone": 410575,
+      "camera_trap": 294348,
+      "bioacoustic": 2898,
+      "citizen_science": 1197
+    },
+    "trace_path": "traces/CS4_citsci_system_1x.events.csv"
+  }
+]

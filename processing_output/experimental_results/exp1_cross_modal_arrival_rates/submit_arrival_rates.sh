@@ -35,7 +35,7 @@ set -euo pipefail
 # Paths
 # ---------------------------------------------------------------------------
 PROJECT_DIR="/fs/ess/PAS2136/TheWilds2025"
-SCRIPT_DIR="${PROJECT_DIR}/processing_output/experimental_results/cross_modal_arrival_rates"
+SCRIPT_DIR="${PROJECT_DIR}/processing_output/experimental_results/exp1_cross_modal_arrival_rates"
 ADAE_DIR="${PROJECT_DIR}/documentation/adae_model"
 EXTRACT_SCRIPT="${ADAE_DIR}/extract_wilds_multimodal.py"
 OUTPUT_DIR="${SCRIPT_DIR}/results"

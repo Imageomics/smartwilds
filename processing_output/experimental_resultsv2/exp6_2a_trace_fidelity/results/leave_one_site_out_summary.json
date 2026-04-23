@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-04-23T04:24:50.908963+00:00",
+  "duration_days": 80,
+  "seed_base": 2026,
+  "thresholds": {
+    "burstiness_B": 0.05,
+    "cv_relative": 0.15,
+    "diurnal_ks": 0.15,
+    "independence_delta": 0.05,
+    "post_filter_rate_rel": 0.2
+  },
+  "high_burst_B_cv_gate": 0.85,
+  "modality_pass_rates": {
+    "bioacoustic": {
+      "n_folds": 4,
+      "n_pass": 2,
+      "pass_rate": 0.5
+    },
+    "camera_trap": {
+      "n_folds": 6,
+      "n_pass": 2,
+      "pass_rate": 0.3333333333333333
+    },
+    "drone": {
+      "n_folds": 9,
+      "n_pass": 0,
+      "pass_rate": 0.0
+    }
+  },
+  "n_total_folds": 19,
+  "n_total_pass": 4
+}
