@@ -7,10 +7,10 @@
     "slo_compliance_seconds": 5.0,
     "duration_seconds": 6912000.0,
     "seed": 1,
-    "n_events": 799314,
+    "n_events": 477197,
     "modality_counts": {
-      "drone": 564094,
-      "camera_trap": 235220
+      "drone": 287641,
+      "camera_trap": 189556
     },
     "trace_path": "traces/CS1_ct_to_drone_1x.events.csv"
   },
@@ -22,9 +22,9 @@
     "slo_compliance_seconds": 2.0,
     "duration_seconds": 6912000.0,
     "seed": 2,
-    "n_events": 491964,
+    "n_events": 383814,
     "modality_counts": {
-      "camera_trap": 489670,
+      "camera_trap": 381520,
       "bioacoustic": 2294
     },
     "trace_path": "traces/CS2_acoustic_to_ct_1x.events.csv"
@@ -37,9 +37,9 @@
     "slo_compliance_seconds": 10.0,
     "duration_seconds": 6912000.0,
     "seed": 3,
-    "n_events": 527673,
+    "n_events": 425477,
     "modality_counts": {
-      "camera_trap": 527673
+      "camera_trap": 425477
     },
     "trace_path": "traces/CS3_focal_ct_network_1x.events.csv"
   },
@@ -51,11 +51,11 @@
     "slo_compliance_seconds": 60.0,
     "duration_seconds": 6912000.0,
     "seed": 4,
-    "n_events": 709018,
+    "n_events": 364049,
     "modality_counts": {
-      "drone": 410575,
-      "camera_trap": 294348,
-      "bioacoustic": 2898,
+      "camera_trap": 237179,
+      "drone": 122806,
+      "bioacoustic": 2867,
       "citizen_science": 1197
     },
     "trace_path": "traces/CS4_citsci_system_1x.events.csv"
