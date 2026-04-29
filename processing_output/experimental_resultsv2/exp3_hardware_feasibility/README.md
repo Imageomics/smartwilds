@@ -37,7 +37,9 @@ No device access required for Exp 3. Exp 3.5 runs on Jenna's laptop — coordina
 
 ### 3.1 Benchmark table (Day 4–5)
 
-File: `benchmark_table.py` (generator) → `benchmark_table.csv` (data).
+Directory: `3.1/`
+
+File: `3.1/benchmark_table.py` (generator) → `3.1/benchmark_table.csv` (data).
 
 One row per (model, tier). Columns:
 - `model` — one of `birdnet`, `yolo_sahi`, `sam3`, `bioclip`, `megadetector`
@@ -54,7 +56,9 @@ One row per (model, tier). Columns:
 
 ### 3.2 Prediction model (Day 6–7)
 
-File: `prediction_model.py`.
+Directory: `3.2/`
+
+File: `3.2/prediction_model.py`.
 
 Function signature:
 ```python
@@ -77,17 +81,17 @@ Implementation sketch:
 6. Bottleneck = modality × stage with highest utilization.
 7. Verdict: `feasible` if util < 70% and p95 ≤ SLO; `degraded` if 70–100% or p95 near SLO; `infeasible` if util > 100% or p95 > SLO.
 
-Output: `results/predicted_feasibility_grid.csv` with one row per (case_study × tier × policy).
+Output: `3.2/results/predicted_feasibility_grid.csv` with one row per (case_study × tier × policy).
 
 ### 3.3 Heatmap (Day 7)
 
-File: `plot_predicted_grid.py` → `results/predicted_feasibility_heatmap.pdf`.
+File: `3.2/plot_predicted_grid.py` → `3.2/results/predicted_feasibility_heatmap.pdf`.
 
 Axis: case study × policy on y; tier on x. Cell color by verdict. This is Figure 10 input.
 
 ### 3.4 Orchestration script
 
-File: `run_predictions.sh` — runs `prediction_model.py` over all (case × tier × policy) cells. No device required.
+File: `3.2/run_predictions.sh` — regenerates `3.1/benchmark_table.csv`, then runs `3.2/prediction_model.py` and `3.2/plot_predicted_grid.py` over all (case × tier × policy) cells. No device required.
 
 ### 3.5 Field-laptop anchor (Exp 3.5, Day 8 — joint with Jenna)
 

@@ -6,25 +6,28 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import sys
+from functools import lru_cache
 from pathlib import Path
 
 import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parent
-V2_ROOT = ROOT.parent
+EXP3_ROOT = ROOT.parent
+V2_ROOT = EXP3_ROOT.parent
 TRACE_DIR = V2_ROOT / "exp6_3_case_studies" / "traces"
 MANIFEST = TRACE_DIR / "manifest.json"
-BENCHMARK = ROOT / "benchmark_table.csv"
+BENCHMARK = EXP3_ROOT / "3.1" / "benchmark_table.csv"
 RESULTS = ROOT / "results"
+POLICY_DIR = ROOT
+
+if str(POLICY_DIR) not in sys.path:
+    sys.path.insert(0, str(POLICY_DIR))
+
+from policies import get_policy  # noqa: E402
 
 POLICIES = ("process_all", "event_triggered", "adaptive", "control_theoretic")
-POLICY_PROCESS_FRACTION = {
-    "process_all": {"camera_trap": 1.0, "bioacoustic": 1.0, "drone": 1.0, "citizen_science": 1.0},
-    "event_triggered": {"camera_trap": 0.45, "bioacoustic": 0.30, "drone": 0.35, "citizen_science": 1.0},
-    "adaptive": {"camera_trap": 0.65, "bioacoustic": 0.50, "drone": 0.55, "citizen_science": 1.0},
-    "control_theoretic": {"camera_trap": 0.55, "bioacoustic": 0.45, "drone": 0.45, "citizen_science": 1.0},
-}
 
 MODALITY_MODEL = {
     "camera_trap": "megadetector",
@@ -39,19 +42,56 @@ def load_manifest() -> list[dict]:
         return json.load(f)
 
 
-def hourly_rates(trace_path: Path) -> pd.DataFrame:
-    df = pd.read_csv(trace_path, usecols=["timestamp", "modality"])
+@lru_cache(maxsize=None)
+def policy_hourly_rates(trace_path: str, policy_name: str) -> tuple[pd.DataFrame, dict[str, int]]:
+    policy = get_policy(policy_name)
+    state = {
+        "queue_depth": 0,
+        "current_rate": 0.0,
+        "x": 0.0,
+    }
+    action_counts = {"process": 0, "drop": 0, "defer": 0}
+
+    events = pd.read_csv(trace_path)
+    events = events.dropna(subset=["timestamp", "modality"])
+    columns = list(events.columns)
+    processed_records = []
+
+    for idx, values in enumerate(events.itertuples(index=False, name=None)):
+        event = dict(zip(columns, values))
+        state["current_rate"] = idx + 1
+        action = policy.decide(event, state)
+        action_counts[action] = action_counts.get(action, 0) + 1
+        if action == "defer":
+            state["queue_depth"] = state.get("queue_depth", 0) + 1
+            continue
+        if action == "drop":
+            continue
+
+        state["queue_depth"] = max(0, state.get("queue_depth", 0) - 1)
+        processed_records.append(
+            {
+                "timestamp": event["timestamp"],
+                "modality": event["modality"],
+            }
+        )
+
+    if not processed_records:
+        return pd.DataFrame(columns=["modality", "p95_rate_per_hour", "mean_rate_per_hour"]), action_counts
+
+    df = pd.DataFrame(processed_records)
     df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce")
     df = df.dropna(subset=["timestamp", "modality"])
     if df.empty:
-        return pd.DataFrame(columns=["modality", "p95_rate_per_hour", "mean_rate_per_hour"])
+        return pd.DataFrame(columns=["modality", "p95_rate_per_hour", "mean_rate_per_hour"]), action_counts
     df["hour"] = df["timestamp"].dt.floor("h")
     hourly = df.groupby(["modality", "hour"]).size().rename("count").reset_index()
-    return (
+    rates = (
         hourly.groupby("modality")["count"]
         .agg(p95_rate_per_hour=lambda s: float(s.quantile(0.95)), mean_rate_per_hour="mean")
         .reset_index()
     )
+    return rates, action_counts
 
 
 def mm1_p95_ms(arrival_rate_per_hour: float, service_ms: float) -> tuple[float, float]:
@@ -72,11 +112,11 @@ def predict_cell(
     benchmark_table: pd.DataFrame,
     slo_chain: list[dict] | None = None,
 ) -> dict:
-    if policy not in POLICY_PROCESS_FRACTION:
+    if policy not in POLICIES:
         raise ValueError(f"unknown policy {policy!r}")
 
     slo_target_ms = float((slo_chain or [{}])[0].get("latency_budget_seconds", 0.0)) * 1000.0
-    rates = hourly_rates(trace_path)
+    rates, action_counts = policy_hourly_rates(str(trace_path), policy)
     bench = benchmark_table[benchmark_table["tier"] == tier].set_index("model")
 
     total_util = 0.0
@@ -84,15 +124,19 @@ def predict_cell(
     bottleneck = "none"
     bottleneck_util = -1.0
     modality_details = []
+    unsupported = []
 
     for _, row in rates.iterrows():
         modality = str(row["modality"])
         model = MODALITY_MODEL.get(modality)
         if model is None or model not in bench.index:
             continue
-        fraction = POLICY_PROCESS_FRACTION[policy].get(modality, 1.0)
-        rate = float(row["p95_rate_per_hour"]) * fraction
-        service_ms = float(bench.loc[model, "latency_ms"])
+        rate = float(row["p95_rate_per_hour"])
+        service_ms = pd.to_numeric(bench.loc[model, "latency_ms"], errors="coerce")
+        if pd.isna(service_ms):
+            unsupported.append(f"{modality}:{model}")
+            continue
+        service_ms = float(service_ms)
         util, p95 = mm1_p95_ms(rate, service_ms)
         total_util += util
         if util > bottleneck_util:
@@ -101,13 +145,20 @@ def predict_cell(
         worst_p95 = max(worst_p95, p95)
         modality_details.append(f"{modality}:{model}:rate={rate:.2f}/h,util={util:.2f}%")
 
-    slo_met = worst_p95 <= slo_target_ms if slo_target_ms > 0 else False
-    if total_util < 70.0 and slo_met:
-        verdict = "feasible"
-    elif total_util < 100.0 and (slo_target_ms <= 0 or worst_p95 <= 1.25 * slo_target_ms):
-        verdict = "degraded"
-    else:
+    if unsupported:
+        worst_p95 = math.inf
+        bottleneck = "unsupported:" + "+".join(unsupported)
+        slo_met = False
         verdict = "infeasible"
+        modality_details.append("unsupported=" + ",".join(unsupported))
+    else:
+        slo_met = worst_p95 <= slo_target_ms if slo_target_ms > 0 else False
+        if total_util < 70.0 and slo_met:
+            verdict = "feasible"
+        elif total_util < 100.0 and (slo_target_ms <= 0 or worst_p95 <= 1.25 * slo_target_ms):
+            verdict = "degraded"
+        else:
+            verdict = "infeasible"
 
     return {
         "utilization_pct": total_util,
@@ -115,7 +166,13 @@ def predict_cell(
         "bottleneck_modality": bottleneck,
         "verdict": verdict,
         "slo_met": bool(slo_met),
-        "details": "; ".join(modality_details),
+        "details": "; ".join(
+            [
+                f"policy_actions=process:{action_counts.get('process', 0)},"
+                f"drop:{action_counts.get('drop', 0)},defer:{action_counts.get('defer', 0)}",
+                *modality_details,
+            ]
+        ),
     }
 
 
