@@ -1,0 +1,514 @@
+\documentclass[manuscript]{acmart}
+
+% For anonymous review, use the options required by the current TOSN call:
+% \documentclass[manuscript,review,anonymous]{acmart}
+
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xspace}
+
+\newcommand{\smartwilds}{\textsc{SmartWilds}\xspace}
+
+\begin{document}
+
+\title{\smartwilds: A Systems Dataset and Metadata Foundation for
+Cross-Modal Ecological Sensing}
+
+% Alternative titles:
+% \title{\smartwilds: Traces, Benchmarks, and Metadata for
+% Cross-Modal Ecological Sensing}
+%
+% \title{From Environmental Sensors to Coordinated Sensing Systems:
+% The \smartwilds Dataset and Benchmark}
+
+% Claim: environmental monitoring established the infrastructure → ecological monitoring specialized it around living systems → smart sensors make coordination possible → SmartWilds exposes the systems and data foundations that coordination requires.
+
+\begin{abstract}
+Recent advances in environmental sensing have made it possible to
+observe ecosystems using increasingly capable networks of camera
+traps, acoustic recorders, drones, animal-borne sensors, and edge
+computers. These technologies build on decades of environmental
+sensing research, but their combination creates a new systems
+opportunity: coordinating heterogeneous sensors so that observations
+from one modality can inform when, where, and how other sensors
+collect and process data.
+
+Studying such systems requires datasets that preserve more than sensor
+observations and ecological labels. Systems researchers also need the
+timing, configuration, spatial coverage, provenance, missingness, and
+operational context through which observations were produced. Existing
+ecological and computer-vision datasets rarely retain this information.
+
+We present \smartwilds, a synchronized, cross-modal dataset collected
+during a field deployment at The Wilds conservation center. The release
+includes drone imagery, camera-trap observations, bioacoustic
+recordings, location and environmental context, deployment records, and
+systems-oriented traces. We characterize the resulting workloads,
+including their burstiness, temporal and spatial overlap, data demand,
+and opportunities for cross-modal coordination. We further introduce a
+benchmark suite for trace-driven systems evaluation and a comprehensive
+dataset card that documents the metadata required to interpret, replay,
+and extend cross-modal field deployments. Together, these contributions
+provide an empirical foundation for designing adaptive ecological
+sensing systems and a starting point for interoperable dataset
+standards that preserve both ecological meaning and systems provenance.
+\end{abstract}
+
+\keywords{environmental sensing, ecological monitoring, sensor
+networks, edge computing, multimodal sensing, cross-modal coordination,
+datasets, benchmarks, metadata, record and replay}
+
+\maketitle
+
+% ============================================================
+% ============================================================
+\section{Introduction}
+\label{sec:introduction}
+
+% Environmental sensing has laid the groundwork for distributed,
+% long-term observation under field constraints.
+%
+% Recent advances in low-cost sensors, embedded computing, and AI now
+% make it practical to combine stationary, mobile, and
+% animal-associated sensing modalities.
+%
+% These modalities provide complementary views, but collecting them
+% together does not automatically produce an integrated systems
+% dataset. They differ in spatial support, temporal cadence, timestamp
+% semantics, data format, sampling policy, uncertainty, and provenance.
+%
+% Core question:
+% What systems and data infrastructure is required to construct a
+% reusable mesoscale sensing dataset from heterogeneous ecological
+% sensors?
+%
+% Introduce SmartWilds as:
+% 1. a coordinated multimodal field campaign;
+% 2. an implemented cross-modal data infrastructure;
+% 3. a complete, systems-ready dataset release;
+% 4. a source of generalizable design requirements.
+
+\subsection{Research Questions}
+
+\begin{description}
+    \item[RQ1:] What information must be preserved to cross-reference
+    observations from heterogeneous ecological sensors?
+
+    \item[RQ2:] How can a shared data model integrate these
+    observations without discarding their modality-specific spatial,
+    temporal, and semantic properties?
+
+    \item[RQ3:] Can the resulting infrastructure support provenance
+    reconstruction, cross-modal queries, workload characterization,
+    and trace-driven systems evaluation?
+
+    \item[RQ4:] What lessons from SmartWilds generalize to future
+    mesoscale environmental sensing deployments?
+\end{description}
+
+\subsection{Contributions}
+
+\begin{itemize}
+    \item \textbf{A systems framing of cross-modal ecological sensing.}
+    We situate cross-modal ecological sensing within the broader
+    environmental sensing literature and identify the additional
+    infrastructure required to relate complementary biological
+    observations across modalities and scales.
+
+    \item \textbf{A cross-modal data infrastructure.}
+    We design an entity and relationship model, identifier scheme,
+    provenance representation, and processing pipeline for preserving
+    and cross-referencing heterogeneous field observations.
+
+    \item \textbf{The complete SmartWilds systems dataset.}
+    We release multimodal observations, collection protocols, device
+    configurations, deployment records, annotations, systems traces,
+    provenance, and known limitations from a coordinated field
+    campaign.
+
+    \item \textbf{An empirical systems evaluation.}
+    We evaluate the infrastructure through metadata completeness,
+    provenance reconstruction, representative cross-modal queries,
+    workload characterization, and generation of replayable traces.
+
+    \item \textbf{Documentation and design guidance.}
+    We provide a comprehensive dataset card and derive recommendations
+    for constructing future interoperable mesoscale sensing datasets.
+\end{itemize}
+
+\newpage
+% ============================================================
+\section{From Environmental Sensing to Cross-Modal Ecological Sensing}
+\label{sec:context}
+
+\subsection{Environmental Sensing Laid the Groundwork}
+
+% Distributed sensing, wireless sensor networks, long-term
+% environmental observatories, mobile sensing, remote instrumentation,
+% edge computing, data collection under field constraints.
+
+\subsection{Ecological Sensing Builds on This Foundation}
+
+% Organisms, behavior, communities, interactions, ecosystem processes.
+% Mobile subjects, rare events, observer effects, semantic uncertainty.
+
+\subsection{Complementary Sensors for Mesoscale Observation}
+
+% Camera traps, acoustics, drones, GPS, environmental measurements.
+% Complementarity across coverage, cadence, mobility, and semantics.
+%
+% Do not present the ecological results from the MEE paper.
+% The point here is the systems consequence of complementarity.
+
+\subsection{Why Multimodal Collection Is Not Yet Cross-Modal Sensing}
+
+% Multiple datasets can coexist without being interoperable.
+% Explain mismatched:
+% - timestamps;
+% - spatial footprints;
+% - sampling effort;
+% - identifiers;
+% - file structures;
+% - uncertainty;
+% - transformations;
+% - provenance.
+
+\subsection{Requirements for a Systems-Ready Dataset}
+
+% Joint discovery and querying.
+% Modality-specific semantics.
+% Provenance and uncertainty.
+% Missingness and failures.
+% Human and computational processes.
+% Trace construction and future coordination studies.
+
+
+\newpage
+% ============================================================
+\section{Related Work}
+\label{sec:related}
+
+\subsection{Environmental Sensor Networks and Field Deployments}
+
+\subsection{Multimodal Ecological Sensing and Datasets}
+
+\subsection{Sensor Data Management and Semantic Querying}
+
+\subsection{Metadata, Provenance, and Ecological Standards}
+
+% Darwin Core, FAIR, FAIR4AI, FAIR^2 Drones,
+% dataset cards, modality-specific standards.
+
+\subsection{Systems Traces, Replay, and Digital Twins}
+
+% Position replay as an established systems methodology.
+% SmartWilds provides field-derived workloads for its application to
+% emerging cross-modal sensing systems.
+
+\newpage
+% ============================================================
+\section{SmartWilds Study Design and Data Collection}
+\label{sec:collection}
+
+% This section establishes what produced the dataset.
+% Keep ecological results out.
+
+\subsection{Study Site and Observation Objectives}
+
+\subsection{Spatial and Temporal Sampling Design}
+
+\subsection{Sensing Modalities}
+
+\subsubsection{Drone Imagery and Telemetry}
+\subsubsection{Camera-Trap Images and Video}
+\subsubsection{Bioacoustic Recordings}
+\subsubsection{GPS and Location Data}
+\subsubsection{Weather and Environmental Context}
+
+\subsection{Device Configuration and Field Protocols}
+
+\subsection{Human Roles and Operational Workflow}
+
+\subsection{Clock Synchronization and Timestamp Semantics}
+
+\subsection{Spatial Referencing and Sensor Coverage}
+
+\subsection{Ethics, Permissions, and Sensitive Information}
+
+% ============================================================
+\newpage
+\section{Cross-Modal Data Infrastructure}
+\label{sec:infrastructure}
+
+
+% This should be one of the paper's central technical sections.
+
+\subsection{Design Requirements}
+
+% Heterogeneity, uncertainty, traceability, extensibility,
+% machine-readability, compatibility with ecological standards.
+
+\subsection{Architecture and Data Flow}
+
+% From devices and field records through ingestion, validation,
+% processing, indexing, manifests, and release.
+
+\begin{figure}[t]
+    \centering
+    % \includegraphics[width=\linewidth]{figures/data-infrastructure.pdf}
+    \caption{SmartWilds data infrastructure from heterogeneous field
+    collection through ingestion, provenance-preserving processing,
+    cross-modal indexing, and dataset release.}
+    \label{fig:data-infrastructure}
+\end{figure}
+
+\subsection{Core Entity Model}
+
+% Site, campaign, deployment, device, session, observation, asset,
+% annotation, ecological entity, relationship, transformation,
+% system event, human action.
+
+\subsection{Identifiers and Cross-Modal Relationships}
+
+% Stable IDs.
+% Relationships do not presume exact ecological co-occurrence.
+% Temporal relation, spatial relation, common context,
+% derived-from, annotated-by, processed-by, and triggered-by.
+
+\subsection{Temporal and Spatial Representation}
+
+% Timestamp meaning, interval, clock source, uncertainty.
+% Point, trajectory, field of view, acoustic region, aerial footprint,
+% coordinate reference system, spatial uncertainty.
+
+\subsection{Provenance Model}
+
+% Raw -> transformed -> inferred -> annotated -> associated.
+% Software, model, parameters, person, time, and source assets.
+
+\subsection{QA/QC: Missingness, Failure, and Sampling Effort}
+
+% Distinguish:
+% - no ecological observation;
+% - sensor inactive;
+% - sensor active but no trigger;
+% - lost/corrupted data;
+% - metadata unavailable;
+% - observation excluded during quality control.
+
+\subsection{Implementation}
+
+% Storage formats, manifests, indexes, APIs/loaders, validation tools,
+% checksums, versioning, and repository organization.
+%
+% This subsection is essential for TOSN: describe what was actually
+% built, not only what a future schema should contain.
+
+\newpage
+% ============================================================
+\section{The SmartWilds Dataset Release}
+\label{sec:dataset}
+
+\subsection{Dataset Composition}
+
+% Counts, duration, data volume, modalities, sessions, formats.
+
+\subsection{Released Data Products}
+
+% Raw observations, processed products, annotations, deployment
+% metadata, field logs, configurations, traces, documentation, code.
+
+\subsection{Machine-Readable Metadata}
+
+% Example record and data dictionary.
+% Place the complete field dictionary in the artifact/supplement.
+
+\subsection{Dataset Organization and Versioning}
+
+\subsection{Access, Licensing, Maintenance, and Citation}
+
+\subsection{Known Limitations}
+
+% State explicitly that ecological analysis and interpretation are
+% reported separately.
+
+\newpage
+% ============================================================
+\section{Systems-Oriented Dataset Characterization}
+\label{sec:characterization}
+
+% Characterize the workload without duplicating the ecological study.
+
+\subsection{Data Volume and Composition}
+
+\subsection{Arrival Patterns and Burstiness}
+
+\subsection{Sensor Operating Schedules}
+
+\subsection{Spatial and Temporal Coverage}
+
+% Coverage as a property of the sensing system.
+% Do not reproduce ecological co-occurrence findings.
+
+\subsection{Missingness and Operational Failures}
+
+\subsection{Storage, Processing, and Data-Movement Requirements}
+
+\subsection{Human Effort}
+% Setup, collection, transfer, validation, annotation, and repair.
+
+\newpage
+% ============================================================
+\section{Evaluation}
+\label{sec:evaluation}
+
+% Organize explicitly around the research questions.
+
+\subsection{Metadata Coverage and Validation}
+
+% Questions:
+% - What proportion of released assets resolve to a device, session,
+%   time reference, spatial reference, and provenance record?
+% - Which fields were recorded, reconstructed, inferred, or missing?
+% - Does the validator detect broken references and invalid records?
+
+\subsection{Cross-Modal Query Support}
+
+% Representative systems queries:
+% - Retrieve all active sensors and observations for a site/time range.
+% - Retrieve data products spatially related to a drone trajectory.
+% - Retrieve source observations underlying a derived record.
+% - Distinguish absent observations from inactive or failed sensors.
+%
+% Evaluate correctness and, where useful, latency/scalability.
+
+\subsection{Provenance Reconstruction}
+
+% Select representative derived products.
+% Demonstrate reconstruction back to raw assets, device configuration,
+% processing software/model, parameters, and human annotations.
+
+\subsection{Trace Generation and Replay}
+
+% Show that machine-readable dataset records can generate ordered,
+% modality-specific workloads.
+% Replay one representative interval or workload.
+% Report reproducibility and resource metrics.
+
+\subsection{Comparison with Existing Metadata Standards}
+
+% Map required fields to existing standards.
+% Identify:
+% - reused fields;
+% - specialized fields;
+% - systems extensions.
+%
+% Compare expressiveness, not merely the number of fields.
+
+\subsection{Summary of Findings}
+
+% Answer RQ1--RQ4 directly.
+
+\newpage
+% ============================================================
+\section{Dataset Documentation and Standards Alignment}
+\label{sec:documentation}
+
+% This section summarizes the dataset-card contribution.
+% The complete dataset card should accompany the release.
+
+\subsection{Dataset Card Structure}
+
+\subsection{Alignment with Darwin Core, FAIR, and FAIR$^2$ Drones}
+
+\subsection{Systems Metadata Not Captured Consistently Elsewhere}
+
+\subsection{Human- and Machine-Readable Documentation}
+% Avoid claiming a finished universal standard.
+% Present this as a requirements analysis, reference implementation,
+% and foundation for further community development.
+
+\newpage
+% ============================================================
+\section{Lessons for Future Proximal (Mesoscale?) Sensing Datasets}
+\label{sec:lessons}
+
+\subsection{Plan Identifiers and Relationships Before Deployment}
+
+\subsection{Record Timestamp Meaning and Uncertainty}
+
+\subsection{Represent Coverage and Sampling Effort}
+
+\subsection{Preserve Modality-Specific Semantics}
+
+\subsection{Make Missingness and Failure First-Class Data}
+
+\subsection{Track Human and Computational Provenance}
+
+\subsection{Design Data Infrastructure as Part of the Sensing System}
+
+% ============================================================
+\newpage
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Supporting Future Adaptive Coordination}
+
+% SmartWilds enables future coordination and replay research;
+% do not claim the original deployment was fully closed-loop.
+
+\subsection{Generalization Beyond Wildlife Monitoring}
+
+% Coastal monitoring and other environmental applications.
+% Keep concise and systems-focused.
+
+\subsection{Relationship to the Ecological Analysis}
+
+% A short boundary statement:
+% The companion ecological work analyzes what the modalities reveal.
+% This paper addresses how those observations were collected,
+% documented, related, and made reusable.
+
+% ============================================================
+\section{Limitations}
+\label{sec:limitations}
+
+% Single site and bounded deployment.
+% Some metadata reconstructed retrospectively.
+% Incomplete systems telemetry.
+% No claim of universal schema.
+% No claim that replay substitutes for field deployment.
+% Restrictions on sensitive ecological information.
+
+% ============================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+
+
+
+\begin{acks}
+% Add field partners, ecological collaborators, data annotators,
+% funding sources, and institutional support.
+\end{acks}
+\\
+
+\section*{Supplemental}
+
+% To keep the main paper from becoming a very long data manual, move these into the released artifact or appendix:
+
+% complete dataset card;
+% full field-level metadata dictionary;
+% complete hardware and configuration tables;
+% directory listings;
+% detailed collection checklists;
+% examples for every record type;
+% standards crosswalk;
+% extended query examples;
+% full failure inventory.
+\\
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\end{document}

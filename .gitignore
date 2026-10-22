@@ -8,6 +8,7 @@
 !/README.md
 !/documentation/
 !/processing_output/
+!/release/
 
 # Within processing_output/, only track experimental_results/ and experimental_resultsv2/.
 /processing_output/*
@@ -34,3 +35,22 @@ documentation/**/*.pyc
 **/.DS_Store
 **/__pycache__/
 **/*.pyc
+
+# release/: track card sources, scripts, screening code, and rendered card PDFs.
+# Staged HF repos, scrubbed media, model weights, the venv, and screening
+# outputs are large or regenerable and stay local.
+/release/hf_smartwilds_*/
+/release/media_scrubbed/
+/release/screening/.venv/
+/release/screening/*.pt
+/release/screening/results/
+/release/screening/logs/
+/release/screening/images_shard*.txt
+/release/screening/videos.txt
+/release/screening/smoke.txt
+
+# Manuscript build outputs (regenerable with build.sh).
+documentation/manuscript/sys_dataset/build_review/
+documentation/manuscript/sys_dataset/build_submit/
+documentation/manuscript/sys_dataset/*_review.pdf
+documentation/manuscript/sys_dataset/*_submit.pdf
