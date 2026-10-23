@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+*.pt
+results/
+logs/
+data/
+media/
+drone_frame.jpg

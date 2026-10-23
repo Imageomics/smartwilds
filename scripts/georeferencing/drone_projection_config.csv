@@ -1,0 +1,5 @@
+enabled,pattern,hfov_deg,vfov_deg,fallback_pitch_deg,use_fallback_when_pitch_abs_lt,notes
+1,parrotanafi,69.0,42.5,-45.0,35.0,"Parrot Anafi approximate 4K FOV; processed gimbal_pitch often resembles body pitch, so near-level values use -45 deg fallback."
+1,parrot,69.0,42.5,-45.0,35.0,"Parrot Anafi approximate 4K FOV; processed gimbal_pitch often resembles body pitch, so near-level values use -45 deg fallback."
+1,djiair,84.0,53.1,-45.0,2.0,"DJI Air approximate wide video FOV; use gimbal_pitch unless effectively zero."
+1,DJI_01,84.0,53.1,-45.0,2.0,"DJI August flight approximate video FOV; projection will fail if pose metadata is absent."

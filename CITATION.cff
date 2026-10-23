@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use SmartWilds, please cite the paper and the datasets you use."
+title: "SmartWilds: integration, alignment, and release code"
+authors:
+  - family-names: Kline
+    given-names: Jenna M.
+    affiliation: The Ohio State University
+  - family-names: Potlapally
+    given-names: Anirudh
+    affiliation: The Ohio State University
+  - family-names: Campolongo
+    given-names: Elizabeth G.
+    affiliation: The Ohio State University
+license: MIT
+repository-code: "https://github.com/Imageomics/smartwilds"  # TODO: confirm repo name
+preferred-citation:
+  type: article
+  title: "SmartWilds: Integrating, Aligning, and Documenting Multi-Modal Field Sensing Data"
+  authors:
+    - family-names: Kline
+      given-names: Jenna M.
+    - family-names: Potlapally
+      given-names: Anirudh
+    - family-names: Campolongo
+      given-names: Elizabeth G.
+  notes: "Under review. TODO: add middle authors, venue, year, DOI."

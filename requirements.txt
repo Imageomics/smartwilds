@@ -1,0 +1,9 @@
+pandas>=2.0
+numpy
+pillow
+opencv-python-headless   # frame extraction (examples, privacy screening)
+huggingface_hub          # downloading the datasets
+# privacy screening only:
+# megadetector
+# av
+# imageio-ffmpeg
