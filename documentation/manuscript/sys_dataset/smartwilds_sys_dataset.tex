@@ -11,6 +11,23 @@
 %     2005 (TinyDB), Deshpande 2004, Jeffery 2006, Jensen & Snodgrass 1999;
 %     new Related Work paragraphs on data integration/lakes/quality and
 %     sensor data management.
+%   - 2026-10-23: map + cross-modal preview combined as subfigures (a)/(b)
+%     in one full-width figure (fig:overview; subfigure labels kept).
+%   - 2026-10-23 TRIM (body 13+ -> 11 pp): cut "Beyond Ecology" (one
+%     sentence moved to Conclusion); compressed R1-R7 to a list; merged
+%     Diurnal/Coverage/Storage/Human Effort into one subsection and dropped
+%     the empty diurnal-figure placeholder; merged Semi-Automated Analysis +
+%     Model Identity; glossary table -> supplement S1; Table 3 eventType
+%     block removed (schema figure shows it); RQ box, map, and cross-modal
+%     preview made column-width. Pre-trim copy:
+%     smartwilds_sys_dataset.before_trim_20261023.tex
+%   - 2026-10-23: added release-schema figure (figures/schema.tex, TikZ)
+%     in the empty fig:hierarchy slot.
+%   - 2026-10-23: dropped Section 7 "The SmartWilds Release" (composition,
+%     versioning, scope now live in the dataset cards); Standards Alignment
+%     (six information classes, sec:crosswalk) moved into the Data Model
+%     section; two-sentence access note added to the Discussion.
+%     Pre-drop copy: smartwilds_sys_dataset.before_drop_sec7_20261023.tex
 %   - Full defect table moved to the release (metadata/DEFECT_INVENTORY.md)
 %     and SUPPLEMENTAL.md S16; paper keeps a compact by-detection-source
 %     table (same label tab:defects).
@@ -66,6 +83,9 @@
 \usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage{tabularx}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes.multipart,calc}
 % weighted full-width columns: weights must sum to the column count
 \newcolumntype{R}[1]{>{\raggedright\arraybackslash\hsize=#1\hsize}X}
 % numbered callout box (so \ref{box:...} resolves)
@@ -249,13 +269,13 @@ A practioner deciding how many cameras and recorders a site needs, how much infe
 These systems questions are typically answerable from trace datasets.
 However, system traces in these applications are scarce. 
 
-\begin{figure*}[t]
-\setlength{\fboxsep}{8pt}%
+\begin{figure}[t]
+\setlength{\fboxsep}{5pt}%
 \noindent\fbox{%
-\begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}\small
 \refstepcounter{rqbox}\label{box:rqs}%
 \textbf{Box~\therqbox. Research questions.}
-\begin{description}[leftmargin=2.6em,itemsep=2pt,topsep=4pt,parsep=0pt]
+\begin{description}[leftmargin=2.2em,itemsep=1pt,topsep=2pt,parsep=0pt]
     \item[RQ1:] What must a field deployment release in order to serve
     as a baseline for cross-modal sensing systems research --- that is,
     to let a practitioner answer what-if questions about sensor count,
@@ -271,7 +291,7 @@ However, system traces in these applications are scarce.
     detectable and the baseline is trustworthy?
 \end{description}
 \end{minipage}}
-\end{figure*}
+\end{figure}
 
 A growing class of applications makes this gap in cross-modal sensing particularly urgent: observation of dynamic, remote, and resource-constrained environments.
 Domains including climate resilience, coastal monitoring disaster response, digital agriculture, ecology and biodiversity, conservation, and security and defense all need to sense the environment in order to make timely decisions.
@@ -309,7 +329,7 @@ A Darwin Core Event is a sampling act, an Occurrence an organism record.
 Neither means what ``event'' means in systems work, where it denotes an arrival in a stream. 
 We therefore reserve the capitalized terms for the Darwin Core
 record types and say \emph{arrival} for the systems sense.
-We provide a full glossary of overloaded terms in the supplement, and summarize the key terms in Table~\ref{tab:glossary}.
+We provide a full glossary of overloaded terms in the supplement, and define each term precisely in supplement S1.
 We provide the steps required to reconcile the device records against field records, distinguishing six kinds of ``no data,'', and uncertainty in timestamps, locations, and labels.
 In addition to the raw data and traces, we provide the operational metadata to ensure the deployment is reproducible, and the protocols used for data quality control, timestamp reconstruction, and cross-modal reconciliation.
 %
@@ -362,7 +382,7 @@ We make four contributions, answering our research questions (Box~\ref{box:rqs})
 
     \item \textbf{A metadata standard for documenting and reusing
     multi-modal datasets} (RQ1; \S\ref{sec:crosswalk},
-    \S\ref{sec:release}): a Darwin Core and Humboldt profile extended
+    \S\ref{sec:using}): a Darwin Core and Humboldt profile extended
     with six information classes no standard we found expresses ---
     per-device duty cycle, trigger semantics, timestamp confidence and
     repair method, coordinate provenance, typed missingness, and model
@@ -386,7 +406,7 @@ We make four contributions, answering our research questions (Box~\ref{box:rqs})
 
     \item \textbf{The \smartwilds dataset and workload traces}
     (RQ3; \S\ref{sec:campaign}, \S\ref{sec:characterization},
-    \S\ref{sec:release}): 561\,GB of raw observations harmonized into
+    \S\ref{sec:using}): 561\,GB of raw observations harmonized into
     552{,}964 Occurrences and 2{,}470 Events, with the operational
     metadata that makes the deployment reconstructible, versioned
     two-layer arrival traces, and a practitioner's guide to reuse
@@ -545,16 +565,31 @@ one camera reporting a single bar.
 
 \begin{figure*}[t]
     \centering
-    \includegraphics[width=0.84\textwidth]{figures/smartwildsmap.pdf}
-    \caption{\smartwilds sensor deployment across the study area. Camera
-    traps are shown with their viewing angles, Song Meter recorders at
-    their fixed positions, drone flight tracks in red, and
-    citizen-science records at locality level. The four modalities
-    differ in spatial support as well as cadence: cameras and recorders
-    sample fixed points, drone tracks sweep the pastures and lake
-    margin, and citizen-science records resolve only to a locality.
-    Satellite imagery \copyright\ Google.}
-    \label{fig:map}
+    \begin{subfigure}[b]{0.465\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/smartwildsmap.pdf}
+        \caption{Sensor deployment across the study area: camera traps
+        with viewing angles, Song Meter recorders, citizen-science
+        localities, and drone flight tracks (red). Satellite imagery
+        \copyright\ Google.}
+        \label{fig:map}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.51\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/datapreview.pdf}
+        \caption{The same three managed focal species (Sichuan takin,
+        Milu deer, Przewalski's horse) seen by camera trap, drone, and
+        citizen science, with SAM3 detections. Camera overlays show the
+        raw device clock (the takin frame reads 2025/09/13 for an August
+        image; \S\ref{sec:timestamps}).}
+        \label{fig:preview}
+    \end{subfigure}
+    \caption{The \smartwilds modalities differ in spatial support as
+    well as cadence: cameras and recorders sample fixed points, drones
+    sweep the pastures and lake margin, and citizen-science records
+    resolve only to a locality (a); and they differ in viewpoint, scale,
+    and resolution for the same animals (b).}
+    \label{fig:overview}
 \end{figure*}
 
 \subsection{Data Collection Campaign}
@@ -603,19 +638,6 @@ configuration diversity is the largest single source of downstream
 metadata work, and it is why the configuration tables are part of the
 release.
 
-\begin{figure*}[t]
-    \centering
-    \includegraphics[width=0.88\textwidth]{figures/datapreview.pdf}
-    \caption{The same three managed focal species --- Sichuan takin,
-    Milu (P\`ere David's) deer, and Przewalski's horse --- as observed by
-    camera trap, drone, and citizen-science photography, with SAM3
-    detections. The modalities differ in viewpoint, scale, and
-    resolution as much as in cadence. Camera-trap overlays show the
-    device's raw clock, not the corrected timestamp: the takin frame's
-    overlay reads 2025/09/13 for an image captured in August
-    (\S\ref{sec:timestamps}).}
-    \label{fig:preview}
-\end{figure*}
 
 \subsubsection{Camera traps}
 Thirteen deployments used four camera models with horizontal fields of
@@ -714,7 +736,7 @@ in precision via Darwin Core \texttt{informationWithheld} and
 
 Ecology, computer vision, and sensing systems overload the same small
 set of words, and in a cross-modal release that ambiguity is a direct
-source of analysis error. Table~\ref{tab:glossary} fixes our vocabulary.
+source of analysis error; supplement S1 fixes our full vocabulary.
 The entry that matters most is \emph{Event}: in Darwin Core a sampling
 act with a location, date, and
 protocol~\cite{wieczorek2012darwincore,tdwgDarwinCore}; in sensing
@@ -726,26 +748,6 @@ conventions for effort and platform
 metadata~\cite{pierrat2025proximal}, and say \emph{arrival} for the
 systems sense.
 
-\begin{table*}[t]
-\caption{Terms this release overloads, with the sense used here. The
-full glossary, including \texttt{eventType}, \texttt{basisOfRecord},
-duty cycle, detection, identification, and coverage, is in the
-supplement.}
-\label{tab:glossary}
-\footnotesize
-\begin{tabular}{p{0.13\textwidth}p{0.07\textwidth}p{0.38\textwidth}p{0.34\textwidth}}
-\toprule
-\textbf{Term} & \textbf{Source} & \textbf{Definition} & \textbf{Note} \\
-\midrule
-\textbf{Event} & DwC & A sampling act: a camera deployment, one WAV recording, one flight session, one drone video, one observation session. Has a date, location, protocol, and \texttt{parentEventID}. & Not an arrival in a stream, and not a detection. One Event can contain $10^5$ arrivals. \\
-\textbf{Occurrence} & DwC & One organism record at a place and time, linked to an Event by \texttt{eventID}. Usually one detection crop. & Not an individual animal: adjacent drone frames yield many Occurrences of the same animal. \\
-\textbf{Arrival} & systems & One item entering a processing stream. Two layers measured: \emph{acquisition} (an image capture, a WAV file) and \emph{detection} (an Occurrence emitted by the detector). & Not a DwC Event. \\
-\textbf{Sampling effort} & Humboldt & Acquisition actually expended: camera observation-days, recorder-hours, flight-minutes, visitor sessions. Reported per modality, never summed. & Not comparable across modalities, and not a detection count. \\
-\textbf{\texttt{locationID}} & DwC & Stable identifier for a \emph{fixed} sensor position or a drone session origin; null for locality-only records. & Not a comparable spatial sampling unit across modalities (\S\ref{sec:identifiers}). \\
-\textbf{Verification status} & DwC & Per-record: \texttt{unverified} (550{,}722), \texttt{validated} (1{,}590), \texttt{verified by expert} (652). & Not a confidence score; \texttt{validated} means a person reviewed it. \\
-\bottomrule
-\end{tabular}
-\end{table*}
 
 \subsection{Design Requirements}
 
@@ -819,25 +821,23 @@ Citizen science & 14 & 622 & 13 & 28 \\
 Text data & 5 & 30 & 4 & 4 \\
 \midrule
 \textbf{Total} & \textbf{2{,}470} & \textbf{552{,}964} & & \\
-\midrule
-\multicolumn{5}{l}{\emph{By \texttt{eventType}}} \\
-\texttt{Project} & 6 & & & \\
-\texttt{SensorDeployment} & 37 & & & \\
-\texttt{AudioRecording} & 2{,}371 & & & \\
-\texttt{MediaEvent} & 39 & & & \\
-\texttt{ObservationSession} & 17 & & & \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{figure}[t]
     \centering
-    % \includegraphics[width=\linewidth]{figures/event-hierarchy.pdf}
-    \caption{Four-level event hierarchy. Fixed sensors
-    (\texttt{SensorDeployment}) and moving platforms (flight sessions
-    with nested \texttt{MediaEvent} videos) are both represented at the
-    deployment level, so a cross-modal query over a time window returns
-    both without special-casing.}
+    \resizebox{\linewidth}{!}{\input{figures/schema.tex}}
+    \caption{Release schema. Darwin Core core tables (dark) and
+    \smartwilds extension tables (light); arrows run from foreign key to
+    primary key. The Event table is self-referencing and encodes the
+    four-level hierarchy (study $\supset$ modality project $\supset$
+    deployment or session $\supset$ capture), so fixed sensors and moving
+    platforms both sit at the deployment level and a cross-modal query
+    over a time window returns both without special-casing. Extension
+    tables carry what Darwin Core cannot: sensor settings, timestamp
+    provenance, media inclusion and privacy status, frame-level drone
+    detections, per-file acoustic disposition, and versioned arrivals.}
     \label{fig:hierarchy}
 \end{figure}
 
@@ -865,85 +865,40 @@ for citizen science; every Occurrence carries
 \texttt{coordinateUncertaintyInMeters} and a
 \texttt{dataGeneralizations} string saying which it is.
 
-\subsection{Semi-Automated Analysis}
+\subsection{Semi-Automated Labels and Model Provenance}
 \label{sec:provenance}
-
-A sensor network of this size forecloses manual annotation. The release
-holds 235{,}778 images, 5{,}113 video clips, 2{,}453 acoustic
-recordings, and 39 drone videos; our human-reviewed subsets are 0.4\% of
-it and consumed the review capacity we had. Scaling that to the full
-release is a structural limit rather than a funding one, and it tightens
-with every deployment: data volume grows with devices and duty cycle
-while expert review capacity does not.
-
-We therefore treat semi-automated analysis as the operating condition
-for sensor-network data rather than as a compromise, and instrument it
-accordingly, using current state-of-the-art models ---
-SAM3~\cite{carion2026sam}, BioCLIP
-Tree-of-Life~\cite{stevens2024bioclip,gu2025bioclip,treeoflife_200m},
-and BirdNET~\cite{kahl2021birdnet} --- so that reported quality reflects
-what a practitioner adopting today's best tooling would obtain. A weaker
-detector would understate what is achievable; hand-curated labels would
-overstate it, and would describe a workflow that does not scale.
-
-Every visual Occurrence is accordingly a three-stage output: SAM3
-produces a box, BioCLIP Tree-of-Life a top-1 taxon with full rank
-hierarchy, and a projection script an estimated coordinate
-(\S\ref{sec:scope}). Acoustic Occurrences come from BirdNET detections
-with frequency bounds and an offset into the source WAV. Following
-scientific-workflow provenance practice~\cite{simmhan2005provenance}, the chain is
-recorded per record in \texttt{identificationRemarks} and
-\texttt{occurrenceRemarks}, with scripts and configurations copied into
-the release beside the data.
-
-\subsection{Model Identity, Uncertainty, and Reproducibility}
 \label{sec:modelprov}
 
-If a dataset's labels are model outputs then the model is part of the
-data, and omitting it is comparable to omitting the sensor
-specification. Current practice in both ecological and computer-vision
-releases often publishes none of it. Four reasons to do so follow.
+A sensor network of this size forecloses manual annotation: our
+human-reviewed subsets are 0.4\% of the release and consumed the review
+capacity we had, and data volume grows with devices and duty cycle while
+expert capacity does not. We therefore label with current
+state-of-the-art models --- SAM3~\cite{carion2026sam}, BioCLIP
+Tree-of-Life~\cite{stevens2024bioclip,gu2025bioclip,treeoflife_200m},
+and BirdNET~\cite{kahl2021birdnet} --- so reported quality reflects what
+a practitioner adopting today's tooling would obtain. Every visual
+Occurrence is a three-stage output: a SAM3 box, a top-1 BioCLIP taxon
+with full rank hierarchy, and a projected coordinate (\S\ref{sec:scope});
+acoustic Occurrences come from BirdNET detections with an offset into
+the source WAV. Following scientific-workflow provenance
+practice~\cite{simmhan2005provenance}, the chain is recorded per record,
+with scripts and configurations released beside the data.
 
-\emph{A taxon label is not reproducible without its model.} Two versions
-of the same classifier yield different taxa from the same image, so a
-release stating ``\emph{Elaphurus davidianus}'' without stating what
-produced the string gives a reader no experiment that should recover the
-table. Model identity, version, weights provenance, and inference
-parameters are the minimum for reproducing or auditing the labels.
-
-\emph{Published uncertainty is what makes labels re-derivable.} Machine
-labels are a snapshot of a model, not ground truth, and will be
-superseded. A release keeping source media, detection geometry, model
-identity, and per-rank accuracy can be \emph{re-labeled} when better
-models arrive, with old and new sets compared meaningfully; one shipping
-only final taxon strings cannot. This is the main practical reason to
-publish the chain.
-
-\emph{Aggregate accuracy obscures the rank-dependent failure mode.}
-Accuracy does not degrade uniformly with rank. On our human-annotated
-camera-trap subsets, localization is strong (precision 0.866, recall
-0.845, F1 0.856 at IoU $\geq 0.50$, $n{=}1{,}125$) while taxonomic
-assignment collapses ($n{=}951$): 0.845 at class, 0.660 at order,
-0.463 at family, 0.322 at genus, 0.271 at species. A single headline number in that range would
-not be informative. The usable statement is structural ---
-class-rank labels support screening, species-rank labels require
-curation, and aggregating across ranks is uninterpretable. The taxonomy
-crosswalk agrees from the other direction: of 12{,}577 label keys only 4
-consist entirely of expert-verified records.
-
-\emph{Verification status must be per record.} A README caveat cannot be
-filtered on, so \texttt{identification\allowbreak Verification\allowbreak Status} is carried on
-every row: 550{,}722 (99.6\%) \texttt{unverified} machine predictions,
-1{,}590 \texttt{validated} by human review (946 camera-trap and 644
-drone bird records from a targeted review set), and 652
-\texttt{verified by expert} (all citizen-science and text records).
-\texttt{basisOfRecord} separates 552{,}312 \texttt{MachineObservation}
-rows from 652 \texttt{HumanObservation} rows. A user wanting only
-human-verified data gets it with one predicate; a user training on
-machine labels and evaluating on verified ones can build that split
-correctly instead of accidentally mixing them. In our own use, disagreements about
-results most often traced back to two people assuming different
-verification floors.
+If labels are model outputs, the model is part of the data. A taxon
+string is not reproducible without the model identity, version, and
+inference parameters that produced it, and a release that keeps source
+media, detection geometry, and per-rank accuracy can be \emph{re-labeled}
+when better models arrive. Accuracy also degrades by rank, so no single
+number describes it: on human-annotated camera-trap subsets,
+localization is strong (F1 0.856 at IoU $\geq 0.50$, $n{=}1{,}125$) while
+taxonomic accuracy falls from 0.845 at class to 0.271 at species
+($n{=}951$). Class-rank labels support screening; species-rank labels
+require curation. Finally, verification status is carried per record ---
+550{,}722 (99.6\%) \texttt{unverified}, 1{,}590 \texttt{validated}, and
+652 \texttt{verified by expert} --- so a verification floor is one
+predicate rather than a README caveat. In our own use, disagreements
+about results most often traced back to two people assuming different
+floors.
 
 \subsection{Missingness as Data}
 
@@ -982,6 +937,29 @@ Occurrences for the same reason.
 States (1) and (2) have opposite implications for a coordination policy,
 which is why the schedule field is required rather than descriptive.
 
+\subsection{Standards Alignment}
+\label{sec:crosswalk}
+
+Darwin Core and its Humboldt extension~\cite{tdwgHumboldt} cover
+taxonomic and Event structure well, and we reuse them directly for
+taxon, date, coordinate, uncertainty, verification status, and effort
+terms. We adopt the FAIR\textsuperscript{2} Drones card as the
+documentation template~\cite{pierrat2025proximal}, express device
+specifications in the spirit of SensorML~\cite{ogcSensorML} and
+derivation in the spirit of PROV-DM~\cite{w3cProvDM} without encoding
+either, and follow FAIR, CARE, and TRUST for
+release~\cite{wilkinson2016fair,carroll2020care,lin2020trust}.
+
+Six classes of information required for cross-modal reuse are
+expressed by no standard we found in a machine-readable way: per-device
+duty cycle and acquisition schedule; trigger semantics such as PIR
+sensitivity, burst length, and inter-trigger delay; timestamp confidence
+and repair method; per-detection coordinate provenance status; typed
+missingness; and model identity with per-rank accuracy. We have named
+these, used them consistently, and documented them, and we offer them as
+a starting point for community work rather than a finished
+specification. The full crosswalk is in the supplement.
+
 % ============================================================
 \section{Quality Control}
 \label{sec:qc}
@@ -1006,7 +984,7 @@ with scope, repair, and residual risk, are inventoried in the release
 (\texttt{metadata/DEFECT\_INVENTORY.md}) and supplement~S16.}
 \label{tab:defects}
 \small
-\begin{tabular}{p{0.38\linewidth}rp{0.40\linewidth}}
+\begin{tabular}{p{0.36\linewidth}rp{0.38\linewidth}}
 \toprule
 \textbf{Detected by} & \textbf{Classes} & \textbf{Example} \\
 \midrule
@@ -1269,7 +1247,7 @@ and replay --- is the subject of the companion workload
 paper~\cite{smartwilds_workload}, and we do not duplicate it here.
 
 Throughout, \emph{arrival} has its systems sense: one item entering a
-processing stream (Table~\ref{tab:glossary}). All figures use Campaign~2
+processing stream (\S\ref{sec:glossary}). All figures use Campaign~2
 (2025-08-04 to 2025-08-28, 600 hours), the only window in which all four
 modalities were simultaneously active, on the
 \texttt{darwin\_core\_\allowbreak latest\_\allowbreak 20261008} snapshot. Every stream is released as a
@@ -1349,278 +1327,70 @@ traps generate the most arrivals and are not the burstiest --- so a
 scheduler optimizing throughput and one optimizing tail latency would
 prioritize different modalities.
 
-\subsection{Diurnal Structure}
-
-Figure~\ref{fig:diurnal} shows hourly profiles at both layers, and the
-layer distinction reappears. Camera \emph{captures} swing only
-2.1$\times$ across the day (286 arrivals/hour at 23:00 to 612 at 13:00)
-because the sensors stay on; camera \emph{detections} swing
-12.5$\times$ (54 to 674). Acoustic acquisition is nearly flat at
-4.3 recordings/hour, while acoustic detections peak at 41.6/hour at
-06:00 against a 3.0 nocturnal floor, with a secondary dusk rise to 36.2
-at 19:00. Citizen science is concentrated in 09:00--12:00; drone
-detections are zero for 23 hours.
-
-The profiles show the coordination opportunity directly: the modalities
-with persistent coverage are active when those with high information
-density per unit time are not, so a trigger from a
-persistent sensor to a scarce one has more than 20 hours a day in which
-it could do useful work.
-
-\begin{figure}[t]
-    \centering
-    % \includegraphics[width=\linewidth]{figures/diurnal-profiles.pdf}
-    \caption{Campaign-2 diurnal arrival profiles (log scale),
-    acquisition layer dashed and detection layer solid. Detection
-    profiles are sharper than the acquisition profiles that feed them in
-    every modality where both are measurable.}
-    \label{fig:diurnal}
-\end{figure}
-
-\subsection{Coverage}
-
-Temporal and spatial coverage diverge sharply (Table~\ref{tab:schema}).
-Over the full study extent, camera traps contribute Occurrences in
-624 distinct hourly bins and acoustics in 650, against 8 for drones and
-28 for citizen science --- roughly an 80$\times$ difference in temporal reach.
-Spatially the ordering inverts: drones cover the pastures across
-15 session origins, while camera traps observe from 7 fixed positions
-through 55--120$^\circ$ apertures and recorders from 6. Persistent
-modalities are active precisely when episodic, information-dense ones
-are not, which is the structural basis for trigger-style coordination.
-
-We deliberately do not reduce these to a single coverage number. Camera
-observation-days, recorder-hours, flight-minutes, and visitor sessions
-are different acquisition processes, and the denominators that would
-make them comparable were never captured. A practitioner should treat
-per-modality effort as the unit and normalize explicitly if they must
---- see requirement R6 in \S\ref{sec:lessons}.
-
-\subsection{Storage and Data Movement}
-
-Volume matters for reuse planning, so we state it here; the companion
-workload paper treats the resulting service demand in
-detail~\cite{smartwilds_workload}. Raw volume is dominated by two
-modalities for different reasons (Table~\ref{tab:campaigns}). Camera
-traps produce 260\,GB from 240{,}925 small files, so their cost is in
-file count and per-file inference as much as in bytes, and they would
-benefit from on-device filtering. Acoustics produce 202\,GB from
-2{,}453 large files driven purely by duty cycle, making the duty cycle
-the primary control knob. Drones produce 90\,GB from 39 videos, the
-highest bytes-per-file by three orders of magnitude, arriving as a burst
-with no chance of incremental processing unless the processing moves onto
-the aircraft. All three were moved by physically carrying SD cards,
-which is the deployment's dominant data-movement mechanism and its
-dominant latency: days, not seconds.
-
-\subsection{Human Effort}
+\subsection{Diurnal Structure, Coverage, and Cost}
 \label{sec:effort}
 
-Human effort is part of the baseline: a practitioner planning a
-comparable deployment needs to budget for it, and no sensor
-specification predicts it.
+The layer distinction reappears across the day. Camera \emph{captures}
+swing 2.1$\times$ between hours because the sensors stay on, while
+camera \emph{detections} swing 12.5$\times$; acoustic acquisition is
+nearly flat at 4.3 recordings/hour, while acoustic detections peak at
+41.6/hour at 06:00. Temporal and spatial coverage then invert: camera
+traps and recorders contribute Occurrences in 624 and 650 distinct
+hourly bins against 8 for drones, while drones sweep the pastures from
+15 session origins against 7 fixed camera positions. Persistent
+modalities are active when episodic, information-dense ones are not ---
+the structural basis for trigger-style coordination. We do not reduce
+these to one coverage number, because the denominators that would make
+camera-days, recorder-hours, and flight-minutes comparable were never
+captured (R6, \S\ref{sec:lessons}).
 
-Field servicing is measured, because the Campaign-2 logs timestamp every
-visit. Across three logged service trips (Aug 4, 7, and 11) the team
-recorded 23 sensor servicing actions --- 11 deployments, 6 retrievals,
-5 status checks, and 1 combined visit, split 12 acoustic and 11 camera
---- in 245 minutes of elapsed field time, or 4.1 hours. Per-trip elapsed
-time was 103, 66, and 76 minutes, and the median interval between
-consecutive sensor actions was 16 minutes on the first trip and
-3 minutes on the later two. The logs also carry a 1--3 access-difficulty
-rating, recorded for 15 of the 23 actions, plus battery and SD-card
-status at each check. Servicing a mesoscale deployment of this size is
-therefore a few hours of field time per trip, which is the figure to use
-when sizing a comparable campaign. These logs cover the three
-mid-campaign trips only: Campaign-1 field notes are narrative and carry
-no clock times, and the Aug 28 retrieval visits are absent from the
-exported forms.
+Volume and effort are reported for reuse planning; profiles, volumes,
+and the service logs are in the supplement. Camera traps produce 260\,GB
+in 240{,}925 small files, acoustics 202\,GB in 2{,}453 large files set
+by duty cycle, and drones 90\,GB in 39 videos; all moved by carried SD
+cards, with latency in days. Campaign-2 field servicing is measured ---
+23 sensor actions in 4.1 hours over three logged trips --- but
+post-deployment effort (timestamp reconstruction, telemetry
+reconciliation, taxonomic review) was not logged by stage, so we report
+it only as activities (R7).
 
-Post-deployment effort is recorded only descriptively, and it
-concentrated in three places a hardware budget would not anticipate:
-timestamp reconstruction, which required developing 18
-deployment-specific repair methods including manual reads of burned-in
-overlays; telemetry reconciliation across three platform schemas; and
-taxonomic review, which produced a 12{,}577-key crosswalk of which only
-4 keys consist entirely of expert-verified records, with a 500-record
-priority review queue still outstanding. Field visits were logged with
-timestamps; processing stages were not, so this side is reported as
-activities rather than hours. No retrospective analyst-hour estimate is
-reported. Requirement R7 in \S\ref{sec:lessons} is to log both the same way.
-
-% ============================================================
-\section{The \smartwilds Release}
-\label{sec:release}
-
-\subsection{Composition}
-
-The release comprises raw observations (561\,GB across three
-campaigns); per-modality and merged Darwin Core Event and Occurrence
-tables (2{,}470 Events, 552{,}964 Occurrences, 44 columns); device
-configuration tables; the camera timestamp map (235{,}778 rows with
-per-image provenance and confidence); the raw-WAV reconciliation table
-(one row per file path); georeferencing outputs with per-detection
-status; the versioned arrival traces of \S\ref{sec:characterization};
-the field logs; processing scripts, the generator, and the release
-audit; per-mutation repair audits; SHA-256 manifests; and a
-FAIR$^2$ Drones dataset card.
-
-Each modality is published as its own dataset with its own DOI ---
-camera traps, bioacoustics, drones, and citizen science --- carrying
-that modality's raw media, Darwin Core tables, per-deployment sensor
-settings, annotation method, data dictionary, and provenance, so a user
-can retrieve, cite, and version one modality without the others. A
-fifth, study-level dataset holds the study root and merged Event table,
-the text records, and the arrival traces, and the \smartwilds
-collection joins all five. Every \texttt{associatedMedia} value is a
-release-relative path that resolves within the modality dataset holding
-it, and a per-file media manifest records every raw file with its
-inclusion status and, where excluded, the reason.
-
-\subsection{Versioning and Access}
-
-Snapshots are dated directories; the current release is
-\texttt{darwin\_core\_\allowbreak latest\_\allowbreak 20261008}, which supersedes
-\texttt{darwin\_core\_\allowbreak latest\_\allowbreak 20260724} (curated-bird update of
-2026-09-20) by repairing the defects in \S\ref{sec:nulldefect}. Every
-mutation retains a before-copy and a JSON audit record. The datasets and
-collection are hosted on Hugging Face; each dataset version is tagged
-with the snapshot it was built from, and citation should name both the
-DOI and the snapshot.
-\TODO{Fill in: Hugging Face collection URL and the per-modality DOIs,
-license (CC BY 4.0 assumed), maintenance commitment, and contact.}
-
-\subsection{Standards Alignment}
-\label{sec:crosswalk}
-
-Darwin Core and its Humboldt extension~\cite{tdwgHumboldt} cover
-taxonomic and Event structure well, and we reuse them directly for
-taxon, date, coordinate, uncertainty, verification status, and effort
-terms. We adopt the FAIR\textsuperscript{2} Drones card as the
-documentation template~\cite{pierrat2025proximal}, express device
-specifications in the spirit of SensorML~\cite{ogcSensorML} and
-derivation in the spirit of PROV-DM~\cite{w3cProvDM} without encoding
-either, and follow FAIR, CARE, and TRUST for
-release~\cite{wilkinson2016fair,carroll2020care,lin2020trust}.
-
-Six classes of information required for coordination research are
-expressed by no standard we found in a machine-readable way: per-device
-duty cycle and acquisition schedule; trigger semantics such as PIR
-sensitivity, burst length, and inter-trigger delay; timestamp confidence
-and repair method; per-detection coordinate provenance status; typed
-missingness; and model identity with per-rank accuracy. We have named
-these, used them consistently, and documented them, and we offer them as
-a starting point for community work rather than a finished
-specification. The full crosswalk is in the supplement.
-
-\subsection{Scope of the Release}
-
-\smartwilds covers one site and three campaigns on a managed landscape,
-where focal population sizes are known from husbandry census. That
-census reference is why the site supports recovery comparisons a wild
-site could not, and it is also why animal densities here are not those
-of a wild population.
-
-Four properties govern what the records support, each carried per record
-so a user can act on it. 99.6\% of Occurrences are machine predictions
-with species-rank accuracy 0.271 and class-rank accuracy 0.845, marked
-\texttt{unverified}. 55.3\% of camera-trap timestamps are
-medium-confidence reconstructions, marked as such in the timestamp map.
-Detection counts are crop-level, so adjacent drone frames repeat the
-same animal and counts are evidence volume rather than abundance.
-Camera-days and drone surveyed area are reported as corrected
-observation-dates and trajectory proxies respectively, because the
-deployment-metadata and per-frame-footprint records those quantities
-would need contain known errors. Ecological interpretation is in the
-companion paper~\cite{smartwilds_ecology}.
-
-% ============================================================
-% ============================================================
 % ============================================================
 \section{Instrumentation Requirements for Future Deployments}
 \label{sec:lessons}
 
-Each requirement below is written so a future deployment can verify it
-has done it, and each comes from a specific defect in
-Table~\ref{tab:defects}: either one we repaired, because the fact the
-device got wrong had been written down a second time, or one we could
-not repair, because it had not.
+Each requirement is verifiable by a future deployment and traces to a
+defect class (Table~\ref{tab:defects}): one we repaired because the fact
+had been recorded twice, or one we could not because it had not.
 
-\paragraph{R1. Record every deployment fact twice.}
-This subsumes the rest and is the paper's main recommendation.
-Eighteen of our twenty defect classes were repairable, and every one
-of them was repairable because the fact the device got wrong had been
-recorded a second time somewhere else (\S\ref{sec:redundancy}).
-The two we could not repair are exactly those with no second record.
-Concretely: for every service visit, write down the device identifier,
-the site, the wall-clock time from a phone or GPS, the effective
-configuration, and the storage medium identifier --- in a structured log
-as well as on the device, so that either copy can check the other. Treat a field log not as paperwork but as the
-error-correcting code for the deployment. The remaining requirements are
-specific instances.
+\begin{description}[leftmargin=0pt,itemsep=2pt,topsep=3pt]
+\item[R1. Record every deployment fact twice.] The main
+recommendation; the rest are instances. All 18 repairable defect classes
+were repairable through a second record (\S\ref{sec:redundancy}). Log
+device, site, wall-clock time, effective configuration, and storage
+medium at every visit, in a structured log as well as on the device.
+\item[R2. Two time anchors per storage medium,] at insertion and
+retrieval. With one, 55.3\% of camera timestamps stay medium-confidence
+because drift is unmeasurable; with two, 18 bespoke repair methods
+become one offset-and-rate fit per card.
+\item[R3. Record the schedule the device ran,] not the intended one:
+dump the effective configuration at deployment and retrieval.
+\item[R4. Encode identifying facts in identifiers.] The date embedded
+in each Event identifier was the only surviving record of the 2025-08-11
+drone session (\S\ref{sec:nulldefect}).
+\item[R5. Type identifiers; validate domains, not presence.] Four
+presence checks passed 552{,}964 records while 13.1\% of one modality
+had \texttt{nan} as a date.
+\item[R6. Record effort denominators and a heartbeat,] so ``sensor on,
+nothing seen'' is a lookup rather than a reconstruction.
+\item[R7. Log processing effort like field effort:] per-stage time,
+model versions, parameters, and review effort, in the release.
+\end{description}
 
-\paragraph{R2. Write two external time anchors per storage medium, at
-insertion and at retrieval.}
-93.9\% of our camera images needed timestamp repair, and 55.3\% remain
-medium confidence because we have exactly one anchor per card and
-therefore cannot measure drift. Two anchors reduce 18 bespoke repair
-methods to one offset-and-rate computation per card and bound the
-residual error.
-
-\paragraph{R3. Record the schedule the device actually ran, not the one
-you intended.}
-One recorder ran 5-minute hourly clips when configured for sunrise and
-sunset hours, and we learned this only from the resulting file
-inventory. Dump the device's effective configuration to a file at
-deployment and again at retrieval, so intended and actual sampling
-effort are both recoverable.
-
-\paragraph{R4. Encode identifying facts redundantly in identifiers.}
-Our \texttt{eventID} convention embeds the acquisition date, which is
-the only reason the 2025-08-11 drone session could be placed in time
-after its \texttt{eventDate} column was written as the string
-\texttt{nan} (\S\ref{sec:nulldefect}). The intra-day time, encoded
-nowhere else, is gone. Redundancy in a naming scheme costs nothing and
-is the cheapest backup in a pipeline.
-
-\paragraph{R5. Give identifiers types, and never coerce them; validate
-domains, not just presence.}
-Fixed sensor positions, mobile mission origins, and broad localities are
-different kinds of thing; our \texttt{locationID} is populated only for
-the first two, and locality-only rows are visibly null rather than
-coerced. And validate by parsing: four structural checks certified
-552{,}964 records as clean while 13.1\% of one modality carried
-\texttt{nan} as a date. Sentinel strings are the normal output of
-dataframe toolchains and will reach a release unless something rejects
-them.
-
-\paragraph{R6. Record effort denominators, not just effort, and make
-missingness first-class.}
-We can report camera observation-days, recorder-hours, and
-flight-minutes but cannot normalize them, because the denominators were
-never captured. Decide the normalization you will want \emph{before}
-deployment. Likewise, a deployment-side heartbeat --- a periodic record
-that a device is alive regardless of whether it triggered --- turns our
-six reconstructed missingness states into a lookup and distinguishes
-``sensor on, nothing seen'' from ``sensor off'' directly.
-
-\paragraph{R7. Log processing time the way you log field time.}
-Our field logs timestamp every service visit, so we can report that
-Campaign-2 servicing took 4.1 hours of field time across 23 sensor
-actions. Nothing equivalent exists for the processing side, so the
-timestamp and taxonomy repair --- which took considerably longer --- can
-only be described, not measured. Record per-stage processing time, model
-versions, parameters, and human review effort in the same release as the
-observations, with the same discipline already applied in the field.
-
-Two cross-cutting lessons sit above these. \emph{Data infrastructure
-must be designed as part of the sensing system, not after it} --- every
-requirement above costs bytes or minutes at deployment, against
-post-deployment repair that outlasted the field campaign itself. And \emph{carrying a provenance field is necessary but not
-sufficient}: our coordinate-status field existed, was correct, and was
-still ignored by an analysis script, while our validators passed on data
-with no usable timestamps. Ship validators with the data, report their
-coverage, and make the default code path the correct one.
+Above these sits one cross-cutting lesson: data infrastructure must be
+designed as part of the sensing system. A provenance field is necessary
+but not sufficient --- ours was correct and still ignored by an analysis
+script --- so ship validators with the data, report their coverage, and
+make the default code path the correct one.
 
 \section{Discussion}
 \label{sec:discussion}
@@ -1643,6 +1413,16 @@ The rest of this section sets out what the release supports, how to
 start using it, and where it transfers outside ecology.
 
 \subsection{What the Release Supports}
+
+Each modality is published as its own Hugging Face dataset with its own
+DOI, and a study-level dataset holds the study root, the merged Event
+table, the text records, the arrival traces, and the supplement; one
+collection joins all five. Each dataset card documents the release's
+composition, per-deployment sensor settings, annotation method, data
+dictionary, media manifest, versioning, and known defects, so we do not
+repeat them here.
+\TODO{Collection URL, per-modality DOIs, license, maintenance
+commitment.}
 
 The supplement maps each question below to the file that answers it and
 states what those records support without further work. Three classes
@@ -1729,41 +1509,6 @@ record: model identity and per-rank accuracy, verification status,
 timestamp confidence, and the per-device sampling settings. A release
 that ships only final taxon strings forecloses all of them.
 
-\subsection{Beyond Ecology}
-\label{sec:beyond}
-
-Wildlife monitoring is our instance, not our claim. The reusable part of
-\smartwilds is a characterized, defect-documented multi-modal workload
-from a remote dynamic setting, and the structure that makes it useful
-recurs across domains that do not share a subject matter:
-
-In \emph{climate resilience and environmental change}, fixed low-power
-sensors on programmable duty cycles plus periodic mobile survey is the
-standard instrument mix, so the duty-cycle-versus-coverage trade-off and
-the acquisition-versus-detection layer distinction transfer directly.
-In \emph{disaster response}, the defining workload shape --- a long
-quiet baseline punctuated by extreme bursts from a mobile platform
-deployed on human decision --- is structurally our drone-plus-fixed-sensor
-pattern at $B{=}+0.99$ against $B{=}+0.10$, so burst admission and
-prioritization policies can be evaluated against this trace before they
-are needed. In \emph{digital agriculture}, fixed in-field sensing plus
-scheduled aerial survey over a bounded mapped area is almost our
-geometry, and the spatial lesson transfers wholesale: field-level
-attribution from platform GPS answers most questions, and per-object
-monocular localization from a moving platform is not worth its error
-budget (\S\ref{sec:scope}). In \emph{security, defense, and
-infrastructure inspection}, episodic mobile sensing triggered by
-persistent fixed sensing is the canonical architecture, and the
-asymmetry we measure --- persistent modalities active in 624--650 hourly bins
-against 8 for the mobile one --- is what makes the trigger pattern pay.
-
-The taxonomy is what transfers least. The operational conditions are
-what transfer most: in each of these settings the sensors are
-unattended, the clocks are unreliable, the configurations drift from
-what was intended, and no one is watching when a device fails. The
-redundancy argument of \S\ref{sec:redundancy} and the requirements of
-\S\ref{sec:lessons} are domain-independent.
-
 % ============================================================
 \section{Conclusion}
 \label{sec:conclusion}
@@ -1790,7 +1535,11 @@ The two that were not are those with no second record, and their
 uncertainty is permanent. Since metadata defects are effectively
 certain in the field, the thing to engineer is not a more reliable
 device but a deliberately redundant record of what each device was
-doing --- and a release format that carries that record forward.
+doing --- and a release format that carries that record forward. These
+conditions --- unattended sensors, unreliable clocks, configurations
+that drift from intent --- recur in climate, agricultural, disaster, and
+infrastructure sensing, so the lessons transfer even where the taxonomy
+does not.
 
 The integrated release also supports data-systems research. The
 modalities share no provisioning regime --- arrival rates spanning three

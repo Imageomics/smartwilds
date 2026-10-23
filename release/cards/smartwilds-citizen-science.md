@@ -34,9 +34,6 @@ configs:
 ![Citizen-science photos of three managed focal species](images/preview.png)
 *Visitor photographs of Przewalski's horse, Sichuan takin, and Milu (Père David's) deer, with annotation boxes.*
 
-> **Status: staging incomplete.** The source Darwin Core tables for this modality
-> are owner-only on the cluster. Rebuild with `release/scripts/build_hf_release.py`
-> once they are readable.
 
 This is the citizen-science dataset of the **SmartWilds** collection. Each
 modality has its own dataset and DOI. They share one Darwin Core Event hierarchy
@@ -57,9 +54,11 @@ release distinguishes four counts, each a different unit:
 | Curated wildlife photos | 564 |
 | Darwin Core Occurrences (some photos contain several taxa) | 622 |
 
-Fifty of the curated photos, all from September 8, come from a Google Photos
-album export rather than the raw folder. `associatedMedia` and
-`occurrenceRemarks` say so for each of them.
+Fifty of the curated photos, all from September 8, came from a Google Photos
+album export that is not part of the project archive. Their 50 Occurrences are
+released, but the photos are not: `associatedMedia` is blank for these rows,
+and `occurrenceRemarks` gives the original album path and the reason
+(`media_not_distributed`).
 
 The Event table has 14 rows: 1 `Project` and 13 `ObservationSession`.
 

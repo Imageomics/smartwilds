@@ -1,0 +1,73 @@
+% SmartWilds release schema (ER-style). Darwin Core core tables: dark headers.
+% SmartWilds extension tables: light headers. Arrows point from FK to PK.
+\begin{tikzpicture}[
+  font=\scriptsize,
+  tbl/.style={draw, rectangle split, rectangle split parts=2,
+              rectangle split part fill={#1,white}, inner sep=2pt,
+              align=left, rounded corners=1pt},
+  core/.style={tbl=black!75, text width=3.75cm},
+  ext/.style={tbl=black!15, text width=3.45cm},
+  fk/.style={-{Latex[length=1.5mm]}, semithick},
+  lbl/.style={font=\tiny\itshape, inner sep=0.8pt},
+]
+\newcommand{\pk}[1]{\underline{#1}}
+% ---------------- Darwin Core core (left column) ----------------
+\node[core] (ev) at (0,0) {\textcolor{white}{\textbf{Event}\hfill 2{,}470 rows}
+  \nodepart{two}\raggedright
+  \pk{eventID}\\
+  parentEventID $\rightarrow$ Event\\
+  eventType (4 levels)\\
+  eventDate, eventTime\\
+  lat, lon, uncertainty\\
+  samplingProtocol, sampleSize\\
+  fieldNotes (provenance)};
+\node[core, below=4mm of ev] (oc) {\textcolor{white}{\textbf{Occurrence}\hfill 552{,}964 rows}
+  \nodepart{two}\raggedright
+  \pk{occurrenceID}\\
+  eventID $\rightarrow$ Event\\
+  taxon ranks, basisOfRecord\\
+  identifiedBy (model, version)\\
+  verificationStatus\\
+  remarks: score, box, status\\
+  coordinates + generalization\\
+  associatedMedia $\rightarrow$ Media};
+\node[ext, below=4mm of oc] (arr) {\textbf{Arrival traces}
+  \nodepart{two}\raggedright
+  sourceID $\rightarrow$ Occ. $|$ Event\\
+  layer, timestamp, eligibility};
+% ---------------- SmartWilds extensions (right column) ----------------
+\node[ext, anchor=north west] (dep) at ([xshift=6mm]ev.north east) {\textbf{Deployment settings}
+  \nodepart{two}\raggedright
+  deploymentID $\rightarrow$ Event\\
+  model, HFOV, bearing\\
+  schedule, trigger, burst};
+\node[ext, below=2.5mm of dep] (rec) {\textbf{WAV reconciliation}
+  \nodepart{two}\raggedright
+  eventID $\rightarrow$ Event\\
+  path, status, disposition};
+\node[ext, anchor=north west] (det) at ([xshift=6mm, yshift=-1mm]oc.north east) {\textbf{Drone detections}
+  \nodepart{two}\raggedright
+  occurrenceID $\rightarrow$ Occ.\\
+  video, frame\_index, box};
+\node[ext, below=2.5mm of det] (med) {\textbf{Media manifest}
+  \nodepart{two}\raggedright
+  \pk{release\_path}\\
+  bytes, include flag\\
+  exclusion reason\\
+  has\_human\_detection};
+\node[ext, below=2.5mm of med] (img) {\textbf{Image timestamps}
+  \nodepart{two}\raggedright
+  release\_path $\rightarrow$ Media\\
+  raw ts + source\\
+  corrected ts, method\\
+  confidence};
+% ---------------- relationships (FK -> PK) ----------------
+\draw[fk] ([yshift=-1.5mm]ev.two west) -- ++(-3mm,0) |- node[lbl, left, pos=0.25] {self} ([yshift=1.5mm]ev.text west);
+\draw[fk] (oc.north) -- (ev.south);
+\draw[fk] (arr.north) -- (oc.south);
+\draw[fk] (dep.west) -- (dep.west -| ev.east);
+\draw[fk] (rec.west) -- (rec.west -| ev.east);
+\draw[fk] (det.west) -- (det.west -| oc.east);
+\draw[fk] (med.west -| oc.east) -- node[lbl, above] {media} (med.west);
+\draw[fk] (img.north) -- (med.south);
+\end{tikzpicture}

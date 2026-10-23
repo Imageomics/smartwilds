@@ -31,9 +31,6 @@ description: >-
 ![The same three species seen by camera trap, drone, and citizen science](images/cross_modal_preview.png)
 *The same three managed focal species (Sichuan takin, Milu deer, Przewalski's horse) observed by camera trap, drone, and citizen-science photography.*
 
-> **Status: staging incomplete.** The merged Event table is owner-only on the
-> cluster. Rebuild with `release/scripts/build_hf_release.py` once it is
-> readable.
 
 **SmartWilds** is a multi-modal sensing dataset from three 2025 field campaigns
 at The Wilds (Cumberland, Ohio). Each modality has its own dataset and DOI:

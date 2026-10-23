@@ -20,7 +20,7 @@ BUILD="build_${MODE}"
 mkdir -p "$BUILD"
 cp references.bib "$BUILD"/
 # figures (source filenames may contain spaces; copy to safe names)
-mkdir -p "$BUILD/figures" && cp figures/*.pdf "$BUILD/figures/" 2>/dev/null || \
+mkdir -p "$BUILD/figures" && cp figures/*.pdf figures/*.tex "$BUILD/figures/" 2>/dev/null || \
   echo "WARNING: deployment map figure not found"
 
 if [ "$MODE" = "submit" ]; then

@@ -510,9 +510,17 @@ def build_citizen_science(out, tables):
         raise PermissionError(f"unreadable: {evp.name}, {ocp.name} (owner-only permissions)")
     ev, oc = read(evp), read(ocp)
     oc["associatedMedia"] = oc.associatedMedia.map(lambda p: rel_media(p) or p)
+    # The Sep 8 Google Photos album export is not in the project archive, so its
+    # 50 photos cannot be distributed: keep the Occurrences, clear the link, say why.
+    album = oc.associatedMedia.str.startswith("Google Photos Takeout/")
+    oc.loc[album, "occurrenceRemarks"] = oc.loc[album, "occurrenceRemarks"] + \
+        "; media_not_distributed=Google Photos album export not retained in project archive (was " + \
+        oc.loc[album, "associatedMedia"] + ")"
+    oc.loc[album, "associatedMedia"] = ""
     manifest = media_inventory("citizen_science")
     ev, oc = strip_cluster_paths(ev), strip_cluster_paths(oc)
     res = check_tables("citizen_science", ev, oc, manifest, extra_event_ids={"TheWilds_2025"})
+    res["occurrences_media_not_distributed"] = int(album.sum())
     return {"data/events.csv": ev, "data/occurrences.csv": oc, "media_manifest.csv": manifest,
             "metadata/provenance/citizen_science_media_reconciliation_20261008.json":
                 SNAP / "citizen_science_media_reconciliation_20261008.json"}, res
