@@ -37,7 +37,7 @@ at The Wilds (Cumberland, Ohio). Each modality has its own dataset and DOI:
 
 | Dataset | Content |
 |---|---|
-| [smartwilds-camera-traps](https://huggingface.co/datasets/imageomics/smartwilds-camera-traps) | 235,778 images, 5,113 clips, 224,149 Occurrences |
+| [smartwilds-camera-traps](https://huggingface.co/datasets/imageomics/smartwilds-camera-traps) | 235,778 images, 5,113 clips, 72,769 Occurrences, 2,067 reference boxes |
 | [smartwilds-bioacoustics](https://huggingface.co/datasets/imageomics/smartwilds-bioacoustics) | 2,371 WAV recordings, 9,960 Occurrences |
 | [smartwilds-drones](https://huggingface.co/datasets/imageomics/smartwilds-drones) | 39 videos, 15 flight sessions, 318,203 Occurrences |
 | [smartwilds-citizen-science](https://huggingface.co/datasets/imageomics/smartwilds-citizen-science) | 1,103 media files, 622 Occurrences |
@@ -56,6 +56,9 @@ TheWilds_2025 (study, 2025-06-30/2025-09-08)
 
 - `data/events_all_modalities.csv`: all 2,470 Events. A user can join
   Occurrences from any modality dataset to it on `eventID`.
+  <!-- TODO(confirm-stats): 2,470 predates the camera post-triage tables. Camera Occurrences now point to 19,749 new `Image` Events (IDs SmartWilds_CT_image_*) that are not in events_all_modalities.csv, and the camera Project is `SmartWilds_camera_traps_curated` with no parent. Either merge the Image Events and re-parent (total would become 2,470 + 19,749 = 22,219 if nothing else changes) or the eventID join stated here breaks for camera traps. The shared-hierarchy diagram above has the same dependency. -->
+  <!-- TODO(confirm-stats): the camera detection-layer arrival traces in analysis/arrival_traces_v2/ were built from the pre-triage (224,149) Occurrences; regenerate or label them as pre-triage. -->
+  
 - `data/text_*.csv`, `data/site_selection_rationale.csv`: 30 text-derived
   Occurrences, plus the reasoning behind where each sensor was placed.
 - `metadata/sensor_configurations.md`: per-device configurations for every

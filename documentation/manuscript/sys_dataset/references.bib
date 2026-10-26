@@ -4,9 +4,8 @@
 % Starter bibliography for the SmartWilds/TOSN outline.
 % Verify all metadata against the publisher record before final submission.
 %
-% TODO: Add the accepted SEC 2026 paper when its public DOI and author list are
-% available. Cite it in the third person and describe it as releasing normalized
-% workload traces, not the complete SmartWilds dataset or infrastructure.
+% SEC 2026 paper: kline2026blueprint. Cite it in the third person and describe it as releasing
+% normalized workload traces, not the complete SmartWilds dataset or infrastructure.
 % TODO: Add the companion MEE methods manuscript when its citation status allows.
 % TODO: Add the project's FAIR^2 Drones and FAIR4AI outputs when public metadata
 % are stable.
@@ -26,17 +25,6 @@
   year    = {2026},
   note    = {Preprint},
   doi     = {10.32942/X2S94C}
-}
-
-@inproceedings{kline2025smartwilds,
-  author        = {Kline, Jenna and Potlapally, Anirudh and Pillai, Bharath and Wani, Tanishka and Katole, Rugved and Patil, Vedant and Covey, Penelope and Subramoni, Hari and Berger-Wolf, Tanya and Stewart, Christopher},
-  title         = {SmartWilds: Multimodal Wildlife Monitoring Dataset},
-  booktitle     = {Imageomics Workshop at the Conference on Neural Information Processing Systems (NeurIPS)},
-  note          = {arXiv:2509.18894},
-  year          = {2025},
-  eprint        = {2509.18894},
-  archivePrefix = {arXiv},
-  url           = {https://arxiv.org/abs/2509.18894}
 }
 
 @article{pierrat2025proximal,
@@ -763,22 +751,19 @@ url={https://openreview.net/forum?id=r35clVtGzw}
   doi     = {10.1002/rse2.70055},
   url     = {https://zslpublications.onlinelibrary.wiley.com/doi/10.1002/rse2.70055}
 }
-% ------------------------------------------------------------------
-% PLACEHOLDERS -- companion papers. Replace with real citations.
-% ------------------------------------------------------------------
-@misc{smartwilds_workload,
-  author = {Kline, Jenna and others},
-  title  = {{TODO}: companion workload-characterization paper (full title, venue, year)},
-  year   = {2026},
-  note   = {Placeholder; replace with the real citation}
+
+
+@article{goh2008burstiness,
+  author  = {Goh, K.-I. and Barab\'{a}si, A.-L.},
+  title   = {Burstiness and Memory in Complex Systems},
+  journal = {EPL (Europhysics Letters)},
+  volume  = {81},
+  number  = {4},
+  pages   = {48002},
+  year    = {2008},
+  doi     = {10.1209/0295-5075/81/48002}
 }
 
-@misc{smartwilds_ecology,
-  author = {Potlapally, Anirudh and others},
-  title  = {{TODO}: companion ecological-analysis paper (full title, venue, year)},
-  year   = {2026},
-  note   = {Placeholder; replace with the real citation}
-}
 
 % Verify the four statistics references below against publisher records.
 @inproceedings{pillai2026corroboration,
@@ -889,3 +874,660 @@ url={https://openreview.net/forum?id=r35clVtGzw}
   volume  = {11}, number = {1}, pages = {36--44}, year = {1999}
 }
 
+
+
+% my papers
+%=======================================================================
+%  Jenna M. Kline — Consolidated citation database
+%  Single source of truth for publications, preprints, artifacts, and talks.
+%  Standard BibTeX (no formatting markup in fields) so entries can be cited
+%  cleanly from any paper.
+%  Citation keys are stable; do not rename existing keys.
+%=======================================================================
+
+
+%-----------------------------------------------------------------------
+%  JOURNAL ARTICLES (peer-reviewed)
+%-----------------------------------------------------------------------
+
+@article{kline2025wildwing,
+  author  = {Kline, Jenna and Zhong, Alison and Irizarry, Kevyn and Stewart, Charles V and Stewart, Christopher and Rubenstein, Daniel I and Berger-Wolf, Tanya},
+  title   = {{WildWing}: An Open-Source, Autonomous and Affordable {UAS} for Animal Behaviour Video Monitoring},
+  journal = {Methods in Ecology and Evolution},
+  volume  = {17},
+  number  = {2},
+  pages   = {291--300},
+  year    = {2026},
+  doi     = {10.1111/2041-210X.70018},
+  keywords = {firstauthor}
+}
+
+@article{kline2025studying,
+  author={Kline, Jenna and Afridi, Saadia and Rolland, Edouard GA and Maalouf, Guy and Laporte-Devylder, Lucie and Stewart, Christopher and Crofoot, Margaret and Stewart, Charles V and Rubenstein, Daniel I and Berger-Wolf, Tanya},
+  title   = {Studying Collective Animal Behaviour with Drones and Computer Vision},
+  journal = {Methods in Ecology and Evolution},
+  volume  = {16},
+  number  = {10},
+  pages   = {2229--2259},
+  year    = {2025},
+  doi     = {10.1111/2041-210X.70128},
+  keywords = {firstauthor}
+}
+
+@article{maalouf2026sora,
+  author  = {Maalouf, Guy and Richardson, Thomas Stuart and Guerin, David Roy and Watson, Matthew and Lundquist, Ulrik Pagh Schultz and Costelloe, Blair R and Pastucha, Elzbieta and Afridi, Saadia and Rolland, Edouard George Alain and Meier, Kilian and others},
+  title   = {{SORA} 2.5-Guided {BVLOS} {UAS} for Wildlife Conservation in Kenya: Reducing Friction Between Safety and Field Operations},
+  journal = {Drones},
+  volume  = {10},
+  number  = {3},
+  pages   = {178},
+  year    = {2026},
+  publisher = {MDPI}
+}
+
+@article{duporge2024baboonland,
+  author={Duporge, Isla and Kholiavchenko, Maksim and Harel, Roi and Wolf, Scott and Rubenstein, Daniel I and Crofoot, Margaret C and Berger-Wolf, Tanya and Lee, Stephen J and Barreau, Julie and Kline, Jenna and others},
+  title   = {{BaboonLand} Dataset: Tracking Primates in the Wild and Automating Behaviour Recognition from Drone Videos},
+  journal = {International Journal of Computer Vision},
+  volume  = {133},
+  number  = {9},
+  pages   = {6578--6589},
+  year    = {2025},
+  doi     = {10.1007/s11263-025-02493-5},
+  url     = {https://baboonland.xyz/}
+}
+
+@article{kholiavchenko2024deep,
+  author={Kholiavchenko, Maksim and Kline, Jenna and Kukushkin, Maksim and Brookes, Otto and Stevens, Sam and Duporge, Isla and Sheets, Alec and Babu, Reshma R and Banerji, Namrata and Campolongo, Elizabeth and others},
+  title   = {Deep Dive into {KABR}: A Dataset for Understanding Ungulate Behavior from In-Situ Drone Video},
+  journal = {Multimedia Tools and Applications},
+  volume  = {84},
+  number  = {21},
+  pages   = {24563--24582},
+  year    = {2025},
+  doi     = {10.1007/s11042-024-20512-4}
+}
+
+@article{afridi2025impact,
+  author={Afridi, Saadia and Laporte-Devylder, Lucie and Maalouf, Guy and Kline, Jenna and Penny, Samuel G and Hlebowicz, Kasper and Cawthorne, Dylan and Lundquist, Ulrik Pagh Schultz},
+  title   = {Impact of Drone Disturbances on Wildlife: A Review},
+  journal = {Drones},
+  volume  = {9},
+  number  = {4},
+  pages   = {311},
+  year    = {2025},
+  publisher = {MDPI},
+  doi     = {10.3390/drones9040311}
+}
+
+
+%-----------------------------------------------------------------------
+%  PEER-REVIEWED CONFERENCE AND WORKSHOP PUBLICATIONS
+%-----------------------------------------------------------------------
+
+@inproceedings{kline2026blueprint,
+  author    = {Kline, Jenna and Potlapally, Anirudh and Subramoni, Hari and Berger-Wolf, Tanya and Stewart, Christopher},
+  title     = {A Blueprint for Cross-Modal Coordination at the Far Edge},
+  booktitle = {ACM/IEEE Symposium on Edge Computing (SEC)},
+  year      = {2026},
+  note      = {Conference full paper, to appear},
+  keywords  = {firstauthor}
+}
+
+@inproceedings{kline2026shepherd,
+  author    = {Kline, Jenna and Stevens, Samuel and Rubenstein, Daniel I. and Berger-Wolf, Tanya and Stewart, Christopher},
+  title     = {What the Sheep Can Teach the Shepherd: A Vision for Self-Organizing Drone Swarms Informed by Collective Animal Behavior},
+  booktitle = {2026 IEEE International Conference on Autonomic Computing and Self-Organizing Systems (ACSOS)},
+  year      = {2026},
+  note      = {Vision paper, to appear},
+  keywords  = {firstauthor}
+}
+
+@inproceedings{kline2026maneuver,
+  author    = {Kline, Jenna},
+  title     = {A Maneuver-Indexed Testbed for Context-Aware Adaptive Wildlife Drones},
+  booktitle = {2026 IEEE International Conference on Autonomic Computing and Self-Organizing Systems Companion (ACSOS-C)},
+  year      = {2026},
+  note      = {Peer-reviewed artifact paper, to appear. ACSOS 2026 Best Artifact Award},
+  keywords  = {firstauthor}
+}
+
+@inproceedings{kline2025edgenative,
+  author    = {Kline, Jenna and Katole, Rugved and Berger-Wolf, Tanya and Stewart, Christopher},
+  title     = {Edge-Native, Behavior-Adaptive Drone System for Wildlife Monitoring},
+  booktitle = {DroneSys: Workshop on Autonomous Drone Computing Systems and Applications at the ACM/IEEE Symposium on Edge Computing (SEC)},
+  address   = {Arlington, VA, USA},
+  year      = {2025},
+  doi       = {10.1145/3769102.3774245},
+  note      = {Associated work awarded First Place in the SEC 2025 Student Research Competition},
+  keywords  = {firstauthor}
+}
+
+@inproceedings{kline2024characterizing,
+  author    = {Kline, Jenna and O'Quinn, Austin and Berger-Wolf, Tanya and Stewart, Christopher},
+  title     = {Characterizing and Modeling {AI}-Driven Animal Ecology Studies at the Edge},
+  booktitle = {2024 IEEE/ACM Symposium on Edge Computing (SEC)},
+  pages     = {220--233},
+  year      = {2024},
+  doi       = {10.1109/SEC62691.2024.00025},
+  keywords  = {firstauthor}
+}
+
+@inproceedings{pillai2026cross,
+  author    = {Pillai, Bharath and Viswapriyan, Varun and Stewart, Christopher and Berger-Wolf, Tanya and Kline, Jenna},
+  title     = {Cross-Modal Corroboration for Annotation-Free Wildlife Monitoring},
+  booktitle = {CV4Animals Workshop at the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2026},
+  note      = {Workshop paper}
+}
+
+@inproceedings{sun2026autonomous,
+  author    = {Sun, Claire and Berger-Wolf, Tanya and Kline, Jenna},
+  title     = {Autonomous {UAV} Navigation for Individual Wildlife Re-Identification},
+  booktitle = {CV4Animals Workshop at the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2026},
+  note      = {Workshop paper}
+}
+
+@inproceedings{o2025environment,
+  author={O'Quinn, Austin and Snedeker, Conor and Zhang, Siyuan and Kline, Jenna},
+  title     = {Environment-Aware Dynamic Pruning for Pipelined Edge Inference},
+  booktitle = {2025 IEEE International Conference on Edge Computing and Communications (EDGE)},
+  pages     = {83--89},
+  year      = {2025},
+  doi       = {10.1109/EDGE67623.2025.00018},
+  note      = {arXiv:2503.03070}
+}
+
+@inproceedings{kline2025smartwilds,
+  author={Kline, Jenna and Potlapally, Anirudh and Pillai, Bharath and Wani, Tanishka and Katole, Rugved and Patil, Vedant and Covey, Penelope and Subramoni, Hari and Berger-Wolf, Tanya and Stewart, Christopher},
+  title     = {{SmartWilds}: Multimodal Wildlife Monitoring Dataset},
+  booktitle = {Third Workshop on Imageomics at NeurIPS},
+  year      = {2025},
+  doi       = {10.48550/arXiv.2509.18894},
+  note      = {Workshop paper},
+  keywords  = {firstauthor}
+}
+
+@inproceedings{stevens2025mind,
+  author    = {Stevens, Samuel and Rayeed, S. M. and Kline, Jenna},
+  title     = {Mind the (Data) Gap: Evaluating Vision Systems in Small Data Applications},
+  booktitle = {Third Workshop on Imageomics at NeurIPS},
+  year      = {2025},
+  doi       = {10.48550/arXiv.2504.06486},
+  note      = {Workshop paper}
+}
+
+@inproceedings{kline2025mmla,
+  author={Kline, Jenna and Stevens, Samuel and Maalouf, Guy and Saint-Jean, Camille Rondeau and Ngoc, Dat Nguyen and Mirmehdi, Majid and Guerin, David and Burghardt, Tilo and Pastucha, Elzbieta and Costelloe, Blair and others},
+  title     = {{MMLA}: Multi-Environment, Multi-Species, Low-Altitude Aerial Footage Dataset},
+  booktitle = {CV4Animals Workshop at the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2025},
+  doi       = {10.48550/arXiv.2504.07744},
+  note      = {Workshop paper},
+  keywords  = {firstauthor}
+}
+
+@inproceedings{dat2025wildlive,
+  author    = {Dat, Nguyen Ngoc and Richardson, Tom and Watson, Matthew and Meier, Kilian and Kline, Jenna and Reid, Sid and Maalouf, Guy and Hine, Duncan and Mirmehdi, Majid and Burghardt, Tilo},
+  title     = {{WildLive}: Near Real-Time Visual Wildlife Tracking Onboard {UAVs}},
+  booktitle = {CV4Animals Workshop at the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2025},
+  note      = {Workshop paper. arXiv:2504.10165}
+}
+
+@inproceedings{kholiavchenko2024kabr,
+  author    = {Kholiavchenko, Maksim and Kline, Jenna and Ramirez, Michelle and others},
+  title     = {{KABR}: In-Situ Dataset for {Kenyan} Animal Behavior Recognition from Drone Videos},
+  booktitle = {IEEE/CVF Winter Conference on Applications of Computer Vision Workshops (WACVW)},
+  pages     = {31--40},
+  year      = {2024},
+  doi       = {10.1109/WACVW60836.2024.00011}
+}
+
+@inproceedings{kline2024integrating,
+  author    = {Kline, Jenna and Kholiavchenko, Maksim and Brookes, Otto and Berger-Wolf, Tanya and Stewart, Charles V. and Stewart, Christopher},
+  title     = {Integrating Biological Data into Autonomous Remote Sensing Systems for In Situ Imageomics: A Case Study for Kenyan Animal Behavior Sensing with Unmanned Aerial Vehicles},
+  booktitle = {First Workshop on Imageomics at AAAI},
+  year      = {2024},
+  doi       = {10.48550/arXiv.2407.16864},
+  note      = {Workshop paper},
+  keywords  = {firstauthor}
+}
+
+@inproceedings{grushchak2024decentralized,
+  author    = {Grushchak, Denys and Kline, Jenna and Pianini, Danilo and Farabegoli, Nicolas and Aguzzi, Gianluca and Baiardi, Martina and Stewart, Christopher},
+  title     = {Decentralized Multi-Drone Coordination for Wildlife Video Acquisition},
+  booktitle = {2024 IEEE International Conference on Autonomic Computing and Self-Organizing Systems (ACSOS)},
+  pages     = {31--40},
+  year      = {2024},
+  doi       = {10.1109/ACSOS61780.2024.00021},
+  note      = {Best Poster Award}
+}
+
+@inproceedings{grushchak2024agent,
+  author    = {Grushchak, Denys and Kline, Jenna and Pianini, Danilo and Farabegoli, Nicolas},
+  title     = {An Agent-Based Model of Directional Multi-Herds},
+  booktitle = {2024 IEEE International Conference on Autonomic Computing and Self-Organizing Systems Companion (ACSOS-C)},
+  pages     = {15--20},
+  year      = {2024},
+  doi       = {10.1109/ACSOS-C63493.2024.00023}
+}
+
+@inproceedings{rolland2024drone,
+  author={Rolland, Edouard and Gr{\o}ntved, Kasper Andreas R{\o}mer and Laporte-Devylder, Lucie and Kline, Jenna and Lundquist, Ulrik Pagh Schultz and Christensen, Anders},
+  title     = {Drone Swarms for Animal Monitoring: A Method for Collecting High-Quality Multi-Perspective Data},
+  booktitle = {15th International Micro Air Vehicle Conference (IMAV)},
+  address   = {Bristol, UK},
+  pages     = {316--323},
+  year      = {2024}
+}
+
+@inproceedings{kline2023framework,
+  author    = {Kline, Jenna and Stewart, Christopher and Berger-Wolf, Tanya and Ramirez, Michelle and Stevens, Samuel and Babu, Reshma R. and Banerji, Namrata and others},
+  title     = {A Framework for Autonomic Computing for In Situ Imageomics},
+  booktitle = {2023 IEEE International Conference on Autonomic Computing and Self-Organizing Systems (ACSOS)},
+  pages     = {11--16},
+  year      = {2023},
+  doi       = {10.1109/ACSOS58161.2023.00018},
+  keywords  = {firstauthor}
+}
+
+
+%-----------------------------------------------------------------------
+%  PEER-REVIEWED EXTENDED ABSTRACTS AND POSTER PAPERS
+%-----------------------------------------------------------------------
+
+@inproceedings{xiang2026saltmarsh,
+  author    = {Xiang, J. and Lee, E. I. H. and Nepf, Heidi and Kline, Jenna},
+  title     = {Toward an Edge-Native Drone System for Coastal Salt Marsh Monitoring},
+  booktitle = {ACM/IEEE Symposium on Edge Computing (SEC)},
+  year      = {2026},
+  note      = {Refereed extended abstract, presented as poster}
+}
+
+@inproceedings{kline2025edgenativeposter,
+  author    = {Kline, Jenna and Katole, Rugved and Stewart, Christopher},
+  title     = {Poster: An Edge-Native Approach to Behavior-Adaptive Navigation in Drone Systems},
+  booktitle = {Proceedings of the Tenth ACM/IEEE Symposium on Edge Computing (SEC)},
+  address   = {Arlington, VA, USA},
+  pages     = {1--3},
+  year      = {2025},
+  publisher = {ACM},
+  doi       = {10.1145/3769102.3774372},
+  note      = {Poster paper},
+  keywords  = {firstauthor}
+}
+
+@inproceedings{Covey2025EdgeToCloud,
+  author    = {Covey, Penelope and Kline, Jenna and Stewart, Christopher},
+  title     = {Poster: An Edge-to-Cloud Framework for Vigilance-Adaptive Drones},
+  booktitle = {Proceedings of the Tenth ACM/IEEE Symposium on Edge Computing (SEC)},
+  address   = {Arlington, VA, USA},
+  pages     = {1--3},
+  year      = {2025},
+  publisher = {ACM},
+  doi       = {10.1145/3769102.3774384},
+  note      = {Poster paper}
+}
+
+@inproceedings{kline2024phdforum,
+  author    = {Kline, Jenna},
+  title     = {An Adaptive Autonomous Aerial System for Dynamic Field Animal Ecology Studies},
+  booktitle = {2024 IEEE International Conference on Autonomic Computing and Self-Organizing Systems Companion (ACSOS-C)},
+  pages     = {164--166},
+  year      = {2024},
+  doi       = {10.1109/ACSOS-C63493.2024.00051},
+  note      = {PhD Forum extended abstract},
+  keywords  = {firstauthor}
+}
+
+@inproceedings{klinedescribing,
+  author    = {Kline, Jenna and Lee, Jason and Davis, Rusty},
+  title     = {Seeing the Trees for the Forest: Describing HPC Filesystem Trees with the Grand Unified File-Index (GUFI)},
+  booktitle = {ACM Student Research Competition at the International Conference for High Performance Computing, Networking, Storage, and Analysis (SC23)},
+  address   = {Denver, CO},
+  year      = {2023},
+  note      = {Poster paper},
+  keywords  = {firstauthor}
+}
+
+
+%-----------------------------------------------------------------------
+%  PREPRINTS AND MANUSCRIPTS UNDER REVIEW
+%-----------------------------------------------------------------------
+
+@unpublished{meier2026geolocalisation,
+  author = {Meier, Kilian and Rolland, Edouard GA and Iannino, Elena and Simpson, M. and Kline, Jenna and others},
+  title  = {Simulated and Field-Based Error Characterization of Animal Geolocalisation and Relative Positioning via Commercial Drones},
+  year   = {2026},
+  note   = {Manuscript under review}
+}
+
+@unpublished{aguzzi2026simulation,
+  author = {Aguzzi, Gianluca and Baiardi, Martina and Farabegoli, Nicolas and Grushchak, Denys and Kline, Jenna and Pianini, Danilo and Stewart, Christopher and Viroli, Mirko},
+  title  = {Simulation-Grounded Decentralized Multi-UAV Coordination for Scalable In-Situ Imageomics of Wildlife Herds},
+  year   = {2026},
+  note   = {Manuscript under review}
+}
+
+@unpublished{kline2026trust,
+  author = {Kline, Jenna and Braasch, B. and Fischer, B. and Zhong, Alison and Thompson, Matthew and others},
+  title  = {When to Trust Automation for In Situ Animal Behavior Monitoring: An Empirical Evaluation from Drone and Camera-Trap Video},
+  year   = {2026},
+  note   = {Manuscript in preparation},
+  keywords = {firstauthor}
+}
+
+
+@unpublished{kline2026fair,
+  author={Kline, Jenna and Meier, Kilian and Shukla, Vandita and Rolland, Edouard GA and Iannino, Elena and Laporte-Devylder, Lucie and Catricheo, Constanza Andrea Molina and Costelloe, Blair and Campolongo, Elizabeth and Midtiby, Henrik S and others},
+  title   = {{FAIR}$^2$ Drones: An {AI}-Ready Standard for Cross-Domain Wildlife Drone Datasets},
+  year    = {2026},
+  note    = {Manuscript under review. arXiv:2606.00355},
+  keywords = {firstauthor}
+}
+
+@unpublished{pollock2026putting,
+  author    = {Pollock, Laura J. and Braga, Pedro H. P. and Florian, Camille R. and H{\'e}bert, Kevin and Kline, Jenna and Lyon, Reilly P. and Van Stan, John and Beery, Sara and Dillon, Michael E. and Ellis Soto, Diego and Goodman, Benjamin and Hanan, Niall and Jarzyna, Marta A. and Kitzes, Justin and K{\"u}gler, Anna and Mosse, Daniel and Song, Yiwei and Larkin, Jeremy},
+  title     = {Putting the `Adaptive' in Adaptive Monitoring: From Fast Data to Meaningful Ecological Change},
+  year      = {2026},
+  note      = {Manuscript under review},
+  publisher = {EcoEvoRxiv},
+  doi       = {10.32942/X2S94C}
+}
+
+
+@inproceedings{shukla2026wildbox,
+  author={Shukla, Vandita and Meier, Kilian and Laporte-Devylder, Lucie and Saint-Jean, Camille Rondeau and Kline, Jenna and Costelloe, Blair R and Tuia, Devis and Remondino, Fabio and Risse, Benjamin},
+  title   = {{WildBox}: A Dataset and Benchmark for Aerial Monocular 3D Detection of African Savanna Wildlife},
+  booktitle = {Conference on Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track},
+  year    = {2026},
+  note    = {Full dataset paper, to appear. AR 25.8\%. arXiv:2606.21309}
+}
+
+@unpublished{kline2025kabrtools,
+  author={Kline, Jenna and Kholiavchenko, Maksim and Stevens, Samuel and van Tiel, Nina and Zhong, Alison and Banerji, Namrata and Sheets, Alec and Balasubramaniam, Sowbaranika and Duporge, Isla and Thompson, Matthew and others},
+  title   = {{kabr-tools}: Automated Framework for Multi-Species Behavioral Monitoring},
+  year    = {2025},
+  doi     = {10.48550/arXiv.2510.02030},
+  note    = {arXiv:2510.02030},
+  keywords = {firstauthor}
+}
+
+
+%-----------------------------------------------------------------------
+%  DATA AND MODEL COLLECTIONS
+%-----------------------------------------------------------------------
+
+@misc{kabr_collection,
+  author       = {Kline, Jenna and others},
+  title        = {{KABR}: In Situ {Kenyan} Animal Behavior Recognition Data and Model Collection},
+  howpublished = {Imageomics, Hugging Face},
+  year         = {2024},
+  url          = {https://huggingface.co/collections/imageomics/kabr},
+  note         = {2024--2026. Drone videos, behavior annotations, synchronized telemetry, worked examples, and trained behavior-recognition models}
+}
+
+@misc{mmla_collection,
+  author       = {Kline, Jenna and others},
+  title        = {{MMLA}: Multi-Environment, Multi-Species, Low-Altitude Aerial Data and Model Collection},
+  howpublished = {Imageomics, Hugging Face},
+  year         = {2025},
+  url          = {https://huggingface.co/collections/imageomics/mmla},
+  note         = {2025--2026. Multi-site detection datasets, pose annotations, deployment data, and trained detection and pose models}
+}
+
+@misc{smartwilds_collection,
+  author       = {Kline, Jenna and others},
+  title        = {{SmartWilds}: Multimodal Wildlife Monitoring Data Collection},
+  howpublished = {Imageomics, Hugging Face},
+  year         = {2025},
+  url          = {https://huggingface.co/collections/imageomics/smartwilds},
+  note         = {2025--present. Camera-trap, bioacoustic, and drone monitoring resources collected at The Wilds}
+}
+
+
+%-----------------------------------------------------------------------
+%  SOFTWARE AND INTERACTIVE RESEARCH ARTIFACTS
+%-----------------------------------------------------------------------
+
+@misc{fair2drones_artifact,
+  author       = {Kline, Jenna and others},
+  title        = {{FAIR}$^2$ Drones: Data Infrastructure for {AI}-Ready Wildlife Drone Datasets},
+  howpublished = {Open-source software and datasets},
+  year         = {2026},
+  url          = {https://imageomics.github.io/fair_drones/},
+  note         = {2026--present. FAIR, AI-ready, Darwin Core-compliant data infrastructure for multimodal animal ecology datasets. Hugging Face collection: https://huggingface.co/collections/imageomics/fair2-drones}
+}
+
+@misc{kabrtools_software,
+  author       = {Kline, Jenna and others},
+  title        = {{kabr-tools}: Automated Framework for Multi-Species Behavioral Monitoring},
+  howpublished = {Open-source software},
+  year         = {2025},
+  url          = {https://imageomics.github.io/kabr-tools/},
+  note         = {2025--present}
+}
+
+@misc{maneuver_demo,
+  author       = {Kline, Jenna},
+  title        = {A Maneuver-Indexed Evaluation Framework for Context-Aware Adaptive Wildlife Drones},
+  howpublished = {Interactive research demo, Hugging Face Spaces},
+  year         = {2026},
+  url          = {https://huggingface.co/spaces/imageomics/drone-maneuver-demo},
+  note         = {Companion artifact for the ACSOS-C 2026 paper}
+}
+
+@misc{wildwing_software,
+  author       = {Kline, Jenna and others},
+  title        = {{WildWing}: Open-Source Autonomous UAS for Animal Behaviour Monitoring},
+  howpublished = {Open-source hardware and software system},
+  year         = {2025},
+  url          = {https://imageomics.github.io/wildwing/}
+}
+
+
+%-----------------------------------------------------------------------
+%  INVITED TALKS AND PANELS
+%-----------------------------------------------------------------------
+
+@inproceedings{kline2026esa_talk,
+  author    = {Kline, Jenna},
+  title     = {Lessons from {FAIR}$^2$ Drones: Toward {AI}-Ready Multimodal, Multispatial Sensor Data for Ecology},
+  booktitle = {Symposium ``Building an AI-Ready Ecology and Biodiversity Data Infrastructure for Science and Action,'' Ecological Society of America (ESA) Annual Meeting},
+  address   = {Salt Lake City, UT},
+  year      = {2026},
+  note      = {Invited symposium talk}
+}
+
+@inproceedings{kline2026esa_panel,
+  author    = {Kline, Jenna},
+  title     = {AI for Ecology: Accelerating Discoveries, Reducing Uncertainties, and Scaling Solutions},
+  booktitle = {Special Session SS23, Ecological Society of America (ESA) Annual Meeting},
+  address   = {Salt Lake City, UT},
+  year      = {2026},
+  note      = {Invited panelist}
+}
+
+@inproceedings{kline2026gctdf,
+  author    = {Kline, Jenna},
+  title     = {Autonomous Drones for Animal Studies with Edge AI},
+  booktitle = {Global Conservation Tech and Drone Forum (GCTDF)},
+  address   = {Nairobi, Kenya},
+  year      = {2026}
+}
+
+@inproceedings{findlay25,
+  author    = {Kline, Jenna},
+  title     = {Drones and AI in Field Animal Ecology: Integrating Biology, Animal Science, and Technology},
+  booktitle = {Fridays at Findlay, University of Findlay},
+  address   = {Findlay, OH},
+  year      = {2025}
+}
+
+@inproceedings{wilds2025,
+  author    = {Kline, Jenna},
+  title     = {From Ohio to Kenya: Autonomous Drones in Field Ecology and Conservation},
+  booktitle = {Conservation Science Symposium, Muskingum University and The Wilds},
+  address   = {Muskingum, OH},
+  year      = {2025}
+}
+
+@inproceedings{kline2025wilddroneseminar,
+  author    = {Kline, Jenna},
+  title     = {Autonomous Drones for Collective Wildlife Behavior},
+  booktitle = {WildDrone Seminar Series},
+  year      = {2025}
+}
+
+@inproceedings{cesena_2024,
+  author    = {Kline, Jenna},
+  title     = {Adaptive, Autonomous Aerial Systems for Dynamic Field Animal Ecology Studies},
+  booktitle = {University of Bologna},
+  address   = {Cesena, Italy},
+  year      = {2024}
+}
+
+
+%-----------------------------------------------------------------------
+%  RESEARCH PRESENTATIONS AND ACCEPTED ABSTRACTS
+%-----------------------------------------------------------------------
+
+@inproceedings{kline2026fair_tdwg,
+  author    = {Kline, Jenna and others},
+  title     = {{FAIR}$^2$ Drones: An {AI}-Ready Standard for Cross-Domain Wildlife Drone Datasets},
+  booktitle = {Biodiversity Information Standards Annual Conference (TDWG)},
+  address   = {Oslo, Norway},
+  year      = {2026},
+  note      = {Accepted abstract}
+}
+
+@inproceedings{sokol2026fair4ai,
+  author    = {Sokol, Eric and others},
+  title     = {A Metadata-First FAIR4AI Checklist and Automated Evaluation Agent for Biodiversity Datasets},
+  booktitle = {Biodiversity Information Standards Annual Conference (TDWG)},
+  address   = {Oslo, Norway},
+  year      = {2026},
+  note      = {Accepted abstract; Kline presenting author}
+}
+
+@inproceedings{kline2026smartwilds_tdwg,
+  author    = {Kline, Jenna and others},
+  title     = {Cross-Modal Coordination for Biodiversity Monitoring at Scale: Lessons from SmartWilds},
+  booktitle = {Biodiversity Information Standards Annual Conference (TDWG)},
+  address   = {Oslo, Norway},
+  year      = {2026},
+  note      = {Accepted abstract}
+}
+
+@inproceedings{kline2026digitaltwins_tdwg,
+  author    = {Kline, Jenna and others},
+  title     = {Digital Twins as System-Optimization Tools: Provisioning Edge and Cloud Infrastructure for Biodiversity Monitoring at Scale},
+  booktitle = {Biodiversity Information Standards Annual Conference (TDWG)},
+  address   = {Oslo, Norway},
+  year      = {2026},
+  note      = {Accepted abstract}
+}
+
+@inproceedings{kline2026kabrtools_tdwg,
+  author    = {Kline, Jenna and others},
+  title     = {kabr-tools: A Modular Workflow for Automated Video-Based Behavioral Monitoring Across the Autonomy Spectrum},
+  booktitle = {Biodiversity Information Standards Annual Conference (TDWG)},
+  address   = {Oslo, Norway},
+  year      = {2026},
+  note      = {Accepted abstract}
+}
+
+@inproceedings{kline2026fair_farr,
+  author    = {Kline, Jenna and others},
+  title     = {{FAIR}$^2$ Drones: An {AI}-Ready Standard for Cross-Domain Wildlife Drone Datasets},
+  booktitle = {FARR Workshop: FAIR in ML, AI Readiness and Reproducibility},
+  address   = {Washington, DC},
+  year      = {2026},
+  note      = {Poster}
+}
+
+@inproceedings{kline2025risingstars,
+  author    = {Kline, Jenna},
+  title     = {Autonomous AI-Driven Ecological Sensing Systems},
+  booktitle = {MIT and Boston University Rising Stars in EECS Workshop},
+  year      = {2025},
+  note      = {Poster}
+}
+
+@inproceedings{kline2025wilddrone,
+  author    = {Kline, Jenna},
+  title     = {How Do Drones Fit into Multimodal Sensing Networks?},
+  booktitle = {WildDrone Summer School, Max Planck Institute of Animal Behavior},
+  address   = {Konstanz, Germany},
+  year      = {2025},
+  note      = {Poster}
+}
+
+@inproceedings{kline2025hayes,
+  author    = {Kline, Jenna},
+  title     = {Autonomous, Adaptive Vision-Based Remote Sensing System for Dynamic Field Animal Ecology Studies},
+  booktitle = {Edward F. Hayes Advanced Research Forum},
+  year      = {2025},
+  note      = {Oral presentation. First Place, Engineering Oral Presentation}
+}
+
+@inproceedings{kline2024tdai,
+  author    = {Kline, Jenna},
+  title     = {Individual Identification of Zebras with Autonomous UAV Swarms},
+  booktitle = {TDAI Interdisciplinary Research Fall Forum},
+  year      = {2024},
+  note      = {Poster. Best Poster Award}
+}
+
+@inproceedings{kline2023tdai,
+  author    = {Kline, Jenna},
+  title     = {Intelligent Cyberinfrastructure for Remote Sensing with Autonomous Aerial Robotics},
+  booktitle = {TDAI Interdisciplinary Research Fall Forum},
+  year      = {2023}
+}
+
+@inproceedings{kline2023tapia,
+  author    = {Kline, Jenna},
+  title     = {Interdisciplinary Applications of Autonomous Unmanned Aerial Vehicles},
+  booktitle = {STARS Celebration at Tapia and Ohio Celebration of Women in Computing},
+  year      = {2023}
+}
+
+@inproceedings{kline2023mmls,
+  author    = {Kline, Jenna},
+  title     = {Autonomous UAV Missions for Studying Wildlife Behavior: A Case Study for the Individual Identification of Zebras},
+  booktitle = {Midwest Machine Learning Symposium (MMLS)},
+  address   = {Chicago, IL},
+  year      = {2023},
+  note      = {Poster}
+}
+
+@inproceedings{kline2023crawp,
+  author    = {Kline, Jenna},
+  title     = {Individual Identification of Zebras with Autonomous UAV Swarms},
+  booktitle = {CRA-WP Grad Cohort for Women},
+  address   = {San Francisco, CA},
+  year      = {2023},
+  note      = {Poster}
+}
+
+@inproceedings{kline2022phdforum,
+  author    = {Kline, Jenna},
+  title     = {PhD Forum: Edge Computing for Software-Defined Cartography},
+  booktitle = {ACM/IEEE Symposium on Edge Computing (SEC)},
+  address   = {Seattle, WA},
+  year      = {2022}
+}
+
+% ------------------------------------------------------------------
+% PLACEHOLDER -- ecological companion paper. Replace with the real citation.
+% (Workload companion = kline2026blueprint.)
+% ------------------------------------------------------------------
+@misc{smartwilds_ecology,
+  author = {Potlapally, Anirudh and others},
+  title  = {{TODO}: companion ecological-analysis paper (full title, venue, year)},
+  year   = {2026},
+  note   = {Placeholder; replace with the real citation}
+}

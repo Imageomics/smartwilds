@@ -238,6 +238,8 @@ from altitude. <!-- TODO(release): decide on blurring/withholding policy for fra
   animal, so the counts measure evidence volume, not abundance.
 - **Species-rank labels need curation.** The class-rank accuracy reported for
   the camera-trap subset (0.845) is the better guide to these labels.
+  <!-- TODO(confirm-stats): the camera-trap card no longer reports this BioCLIP class accuracy (its labels are now triage-based). Keep the figure here only if the BioCLIP evaluation is reported elsewhere, e.g. SUPPLEMENTAL.md. -->
+
 - **The DJI airframe for Aug 11 was not recorded.**
 
 ## Supplemental Material
