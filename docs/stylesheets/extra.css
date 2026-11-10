@@ -1,0 +1,21 @@
+/* Adapted from https://github.com/Imageomics/Imageomics-guide/blob/main/docs/stylesheets/extra.css */
+
+/* Light mode: mossy green header with dark text */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        #9DAE94;
+  --md-primary-bg-color:        #1F2128;
+}
+
+/* "question" admonitions in acacia-leaf green */
+.md-typeset .admonition.question, .md-typeset details.question {
+    border-color: #8A9A5B;
+}
+.md-typeset .admonition.question > .admonition-title::before {
+    background-color: #8A9A5B;
+}
+.md-typeset .question>.admonition-title,.md-typeset .question>summary {
+    background-color: #8A9A5B1a;
+}
+
+/* Wide tables scroll instead of overflowing */
+.md-typeset table:not([class]) { display: block; overflow-x: auto; }

@@ -1,10 +1,17 @@
 # SmartWilds: integration, alignment, and release code
 
-This repository holds the code and documentation that turn the SmartWilds field
-campaigns into the released datasets. SmartWilds is a multi-modal sensing
-dataset recorded with camera traps, acoustic recorders, drones, and visitor
-photographs at [The Wilds](https://thewilds.columbuszoo.org/) (Cumberland,
-Ohio) in summer 2025.
+[![Documentation](https://img.shields.io/badge/docs-imageomics.github.io%2Fsmartwilds-9DAE94)](https://imageomics.github.io/smartwilds/)
+
+SmartWilds is a multi-modal sensing dataset recorded with camera traps, acoustic
+recorders, drones, and visitor photographs at [The Wilds](https://thewilds.columbuszoo.org/)
+(Cumberland, Ohio) in summer 2025. This repository is about the **metadata**:
+how four independently collected sensor streams were integrated into one Darwin
+Core release, how their clocks and coordinates were repaired so the modalities
+can be joined in space and time, what was found wrong with the data and how it
+was fixed, and how LLM coding agents did much of that documentation work. The
+raw images and recordings, and their labeling, are out of scope.
+
+**Documentation site:** <https://imageomics.github.io/smartwilds/>
 
 ![Sensor deployment across The Wilds](metadata/images/smartwilds/deployment_map.png)
 *Sensor deployment across The Wilds: camera traps with viewing angles, Song Meter recorders, citizen-science photo locations, and drone flight tracks. Satellite imagery © Google.*
@@ -48,6 +55,7 @@ annotation method and provenance.
 | `scripts/arrival_traces/` | Versioned acquisition- and detection-layer arrival traces |
 | `scripts/privacy_screening/` | MegaDetector person screening, triage by identifiability, and a review-first drone launch/landing trim plan |
 | `examples/quickstart.py` | Load the tables, apply a verification floor, walk the Event hierarchy, and extract a drone frame |
+| `examples/join_camera_acoustic_by_site_hour.py` | Join camera-trap and acoustic Occurrences by site and hour across campaigns |
 
 ## Quickstart
 
