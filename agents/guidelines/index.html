@@ -15,7 +15,7 @@
         <link rel="prev" href="../../AGENT_ASSISTED_DOCUMENTATION/">
       
       
-        <link rel="next" href="../../acknowledgements/">
+        <link rel="next" href="../../legacy/">
       
       
         
@@ -304,6 +304,25 @@
         </a>
       </li>
     
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../legacy/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Legacy branches
+
+      </a>
+    </li>
   
 
       
@@ -1122,21 +1141,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#packaging-as-a-skill" class="md-nav__link">
+  <a href="#local-copies" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Packaging as a skill
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        References
+        Local copies
       
     </span>
   </a>
@@ -1155,6 +1163,33 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../legacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Legacy branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1213,21 +1248,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#packaging-as-a-skill" class="md-nav__link">
+  <a href="#local-copies" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Packaging as a skill
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        References
+        Local copies
       
     </span>
   </a>
@@ -1293,6 +1317,305 @@ reusable skill) for every documentation task.</p>
 </tr>
 </tbody>
 </table>
+<h2 id="local-copies">Local copies<a class="headerlink" href="#local-copies" title="Permanent link">¶</a></h2>
+<p>The FAIR² Drones files are in the repository under <code>guidelines/</code>, ready to
+hand to an agent:</p>
+<ul>
+<li><a href="https://github.com/Imageomics/smartwilds/blob/main/guidelines/FAIR2_DRONES_README.md"><code>guidelines/FAIR2_DRONES_README.md</code></a></li>
+<li><a href="https://github.com/Imageomics/smartwilds/blob/main/guidelines/FAIR2_DRONES_QUICKSTART_GUIDE.md"><code>guidelines/FAIR2_DRONES_QUICKSTART_GUIDE.md</code></a></li>
+<li><a href="https://github.com/Imageomics/smartwilds/blob/main/guidelines/FAIR2_DRONES_TEMPLATE.md"><code>guidelines/FAIR2_DRONES_TEMPLATE.md</code></a></li>
+</ul>
+<details class="note">
+<summary>FAIR² Drones quick-start checklist</summary>
+<h1 id="fair2-drone-dataset-card-quick-start-guide">FAIR² Drone Dataset Card: Quick-Start Guide<a class="headerlink" href="#fair2-drone-dataset-card-quick-start-guide" title="Permanent link">¶</a></h1>
+<p><strong>For researchers creating or documenting drone-based wildlife datasets</strong></p>
+<p>Below is a streamlined checklist for creating a WildFAIRx compliant drone dataset card. Review the full <a href="TEMPLATE.md">dataset card template</a> for detailed guidance.</p>
+<h2 id="before-you-start">Before You Start<a class="headerlink" href="#before-you-start" title="Permanent link">¶</a></h2>
+<ul>
+<li>[ ] Gather image/video files and annotation files (if applicable)</li>
+<li>[ ] Collect drone/sensor specifications (model numbers)</li>
+<li>[ ] Locate flight logs or mission notes</li>
+<li>[ ] Find research permits and approval numbers</li>
+<li>[ ] Create species list with scientific names (use <a href="https://www.gbif.org/species/search">GBIF</a>)</li>
+<li>[ ] Set aside 2-3 hours for completion</li>
+</ul>
+<hr>
+<h2 id="choose-your-template">Choose Your Template<a class="headerlink" href="#choose-your-template" title="Permanent link">¶</a></h2>
+<p>Select the appropriate template based on your primary use case:</p>
+<ul>
+<li><strong>Object Detection</strong>: Detection Template (~2 hours) - Core + Darwin Core + COCO annotations</li>
+<li><strong>Multi-Object Tracking</strong>: Tracking Template (~2.5 hours) - Detection + MOT format + ID protocols</li>
+<li><strong>Behavior Recognition</strong>: Behavior Template (~3 hours) - Detection + Ethogram + temporal labels</li>
+<li><strong>Robotics Benchmarking</strong>: Platform Template (~2.5 hours) - Core + Full telemetry + Minimal annotations</li>
+<li><strong>Multiple Tasks</strong>: Comprehensive Template (~3-4 hours) - All modules</li>
+</ul>
+<hr>
+<h2 id="yaml-front-matter">YAML Front Matter<a class="headerlink" href="#yaml-front-matter" title="Permanent link">¶</a></h2>
+<ul>
+<li>[ ] <strong>License</strong>: Specify license type (e.g., <code>cc-by-4.0</code>)</li>
+<li>[ ] <strong>Pretty Name</strong>: Provide descriptive dataset name</li>
+<li>[ ] <strong>Task Categories</strong>: List relevant tasks (e.g., <code>object-detection</code>, <code>image-classification</code>)</li>
+<li>[ ] <strong>Tags</strong>: Include relevant tags (e.g., <code>wildlife-monitoring</code>, species names, locations)</li>
+<li>[ ] <strong>Size Categories</strong>: Specify dataset size (e.g., <code>n&lt;1k</code>, <code>1k&lt;n&lt;10k</code>)</li>
+</ul>
+<hr>
+<h2 id="dataset-overview">Dataset Overview<a class="headerlink" href="#dataset-overview" title="Permanent link">¶</a></h2>
+<ul>
+<li>[ ] <strong>Title</strong>: Clear, descriptive title</li>
+<li>[ ] <strong>Description</strong>: 2-3 paragraph summary of dataset purpose and content</li>
+<li>[ ] <strong>Authors</strong>: List curators/authors with affiliations</li>
+<li>[ ] <strong>Contact Information</strong>: Provide contact details or point to discussion forum</li>
+<li>[ ] <strong>Repository</strong>: Link to GitHub repository</li>
+<li>[ ] <strong>Homepage</strong>: Provide link if available</li>
+<li>[ ] <strong>DOI</strong>: Assign or note as pending</li>
+</ul>
+<hr>
+<h2 id="data-structure">Data Structure<a class="headerlink" href="#data-structure" title="Permanent link">¶</a></h2>
+<ul>
+<li>[ ] <strong>Directory Structure</strong>: Document file organization with tree diagram</li>
+<li>[ ] <strong>File Formats</strong>: List formats for images (e.g., JPG, PNG) and annotations (e.g., COCO JSON, YOLO)</li>
+<li>[ ] <strong>Naming Convention</strong>: Explain file naming pattern with examples</li>
+<li>[ ] <strong>Data Splits</strong>: Describe train/val/test splits with counts and creation method</li>
+<li>[ ] <strong>Example Files</strong>: Link to at least one representative image</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Consistent Naming Conventions</p>
+<p>Ensure file naming is consistent across videos, telemetry files, and occurrence data:
+- Use the same date format throughout (e.g., <code>YYYY_MM_DD</code> or <code>DD_MM_YY</code>)
+- Match session/flight identifiers exactly between CSV files and data folders
+- Document any naming changes (e.g., <code>session_1</code> → <code>flight_1</code>) to maintain data linkages
+- Test that scripts can locate files using your naming pattern</p>
+</div>
+<hr>
+<h2 id="darwin-core-metadata">Darwin Core Metadata<a class="headerlink" href="#darwin-core-metadata" title="Permanent link">¶</a></h2>
+<h3 id="event-records">Event Records<a class="headerlink" href="#event-records" title="Permanent link">¶</a></h3>
+<p>For each survey location/date, document:</p>
+<ul>
+<li>[ ] <strong>eventID</strong>: Unique identifier per mission</li>
+<li>[ ] <strong>eventDate</strong>: Date in ISO format (YYYY-MM-DD)</li>
+<li>[ ] <strong>eventTime</strong>: Time with timezone</li>
+<li>[ ] <strong>decimalLatitude/Longitude</strong>: Coordinates in WGS84</li>
+<li>[ ] <strong>coordinateUncertaintyInMeters</strong>: GPS accuracy (typically 5-10m)</li>
+<li>[ ] <strong>locality</strong>: Study site description</li>
+<li>[ ] <strong>habitat</strong>: Habitat type</li>
+<li>[ ] <strong>samplingProtocol</strong>: Survey method (e.g., "UAV transect at 60m AGL")</li>
+<li>[ ] <strong>sampleSizeValue/Unit</strong>: Coverage area and units</li>
+<li>[ ] <strong>samplingEffort</strong>: Duration or effort metric</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Extracting GPS Data from Telemetry</p>
+<p>If your videos have embedded telemetry (SRT files, EXIF data, or flight logs), you can extract GPS coordinates programmatically:
+- Use <code>exiftool</code> for EXIF GPS data from images
+- Parse DJI <code>.SRT</code> files for frame-level GPS coordinates
+- Extract launch points, min/max bounds, and altitude ranges
+- Aggregate video-level data to session/mission-level events
+- See <a href="https://github.com/Imageomics/kabr-behavior-telemetry/tree/main/scripts">KABR scripts</a> for Python examples</p>
+</div>
+<h3 id="occurrence-records">Occurrence Records<a class="headerlink" href="#occurrence-records" title="Permanent link">¶</a></h3>
+<ul>
+<li>[ ] <strong>Scientific Names</strong>: Verify all species names with authority via <a href="https://www.gbif.org/species/search">GBIF</a></li>
+<li>[ ] <strong>Taxonomic Hierarchy</strong>: Complete Kingdom, Phylum, Class, Order, Family, Genus, Species for each taxon</li>
+<li>[ ] <strong>Occurrence Table</strong>: Create table linking events to species observations</li>
+</ul>
+<hr>
+<h2 id="platform-specifications">Platform Specifications<a class="headerlink" href="#platform-specifications" title="Permanent link">¶</a></h2>
+<ul>
+<li>[ ] <strong>Platform Type</strong>: Drone type (multirotor, fixed-wing, hybrid)</li>
+<li>[ ] <strong>Manufacturer and Model</strong>: Full platform identification</li>
+<li>[ ] <strong>Physical Specs</strong>: Weight, dimensions, flight time, max speed, wind resistance</li>
+<li>[ ] <strong>Sensor Details</strong>: Camera manufacturer, model, resolution, sensor size, focal length, field of view</li>
+<li>[ ] <strong>Additional Sensors</strong>: List any thermal, LiDAR, multispectral sensors</li>
+<li>[ ] <strong>Gimbal</strong>: Type and axes of stabilization</li>
+<li>[ ] <strong>Autonomy Mode</strong>: Manual, waypoint, or fully autonomous</li>
+<li>[ ] <strong>Flight Features Used</strong>: Grid, orbit, follow, terrain-following, etc.</li>
+</ul>
+<hr>
+<h2 id="mission-parameters">Mission Parameters<a class="headerlink" href="#mission-parameters" title="Permanent link">¶</a></h2>
+<ul>
+<li>[ ] <strong>Flight Altitude</strong>: Range in meters AGL</li>
+<li>[ ] <strong>Flight Speed</strong>: Speed in m/s</li>
+<li>[ ] <strong>Flight Pattern</strong>: Description (grid, transect, adaptive)</li>
+<li>[ ] <strong>Coverage</strong>: Area covered per mission</li>
+<li>[ ] <strong>Image Overlap</strong>: Forward/side overlap percentages</li>
+<li>[ ] <strong>Environmental Conditions</strong>: Weather, temperature, wind, visibility</li>
+<li>[ ] <strong>Telemetry Data</strong>: Available flight logs and formats (GPS, IMU, battery, etc.)</li>
+<li>[ ] <strong>Permits</strong>: Research permits, IRB/IACUC approvals, aviation regulations followed</li>
+<li>[ ] <strong>Animal Welfare</strong>: Minimum altitudes, disturbance protocols</li>
+</ul>
+<hr>
+<h2 id="annotations">Annotations<a class="headerlink" href="#annotations" title="Permanent link">¶</a></h2>
+<h3 id="format-and-coverage">Format and Coverage<a class="headerlink" href="#format-and-coverage" title="Permanent link">¶</a></h3>
+<ul>
+<li>[ ] <strong>Supported Tasks</strong>: Detection, tracking, segmentation, behavior, re-ID, keypoints</li>
+<li>[ ] <strong>Annotation Format</strong>: Specify format for each task (COCO, MOT, etc.)</li>
+<li>[ ] <strong>Label Set</strong>: List all classes/species, behaviors, attributes</li>
+<li>[ ] <strong>Total Counts</strong>: Images, annotations, annotations per image (min/max/avg)</li>
+<li>[ ] <strong>Per-Class Distribution</strong>: Count per class/species</li>
+</ul>
+<h3 id="quality-metrics">Quality Metrics<a class="headerlink" href="#quality-metrics" title="Permanent link">¶</a></h3>
+<ul>
+<li>[ ] <strong>Creation Method</strong>: Manual, semi-automatic, or automatic</li>
+<li>[ ] <strong>Annotation Tool</strong>: Software used (CVAT, Label Studio, etc.)</li>
+<li>[ ] <strong>Annotators</strong>: Who created annotations (experts, students, crowd workers)</li>
+<li>[ ] <strong>Quality Assurance</strong>: Number of annotators, inter-annotator agreement, review process</li>
+<li>[ ] <strong>Confidence Scores</strong>: Whether included in annotation files</li>
+<li>[ ] <strong>Known Issues</strong>: Annotation gaps, difficult cases, systematic biases</li>
+</ul>
+<h3 id="annotation-difficulty">Annotation Difficulty<a class="headerlink" href="#annotation-difficulty" title="Permanent link">¶</a></h3>
+<ul>
+<li>[ ] <strong>Occlusion</strong>: Percentage of instances with none/partial/heavy occlusion</li>
+<li>[ ] <strong>Crowd Density</strong>: Distribution across sparse/moderate/dense scenarios</li>
+<li>[ ] <strong>Scale Variation</strong>: Range of object sizes</li>
+<li>[ ] <strong>Environmental Challenges</strong>: Glare, shadows, motion blur, etc.</li>
+</ul>
+<hr>
+<h2 id="dataset-statistics">Dataset Statistics<a class="headerlink" href="#dataset-statistics" title="Permanent link">¶</a></h2>
+<ul>
+<li>[ ] <strong>Temporal Coverage</strong>: Date range, seasons represented</li>
+<li>[ ] <strong>Spatial Coverage</strong>: Number of locations, total area surveyed</li>
+<li>[ ] <strong>Class Balance</strong>: Distribution across classes/species</li>
+<li>[ ] <strong>Baseline Results</strong>: Performance metrics if available</li>
+</ul>
+<hr>
+<h2 id="limitations-and-considerations">Limitations and Considerations<a class="headerlink" href="#limitations-and-considerations" title="Permanent link">¶</a></h2>
+<ul>
+<li>[ ] <strong>Known Biases</strong>: Geographic, temporal, species, environmental</li>
+<li>[ ] <strong>Limitations</strong>: Technical constraints, coverage gaps, quality issues</li>
+<li>[ ] <strong>Recommendations</strong>: Guidance for appropriate dataset use</li>
+<li>[ ] <strong>Ethical Considerations</strong>: Privacy, animal welfare, cultural sensitivities</li>
+<li>[ ] <strong>Reporting Issues</strong>: Link to issue tracker or community forum</li>
+</ul>
+<hr>
+<h2 id="licensing">Licensing<a class="headerlink" href="#licensing" title="Permanent link">¶</a></h2>
+<ul>
+<li>[ ] <strong>License Details</strong>: Confirm license choice and any special conditions</li>
+<li>[ ] <strong>Component Licenses</strong>: Note if images, annotations, or code have different licenses</li>
+<li>[ ] <strong>Attribution Requirements</strong>: Specify how to cite the dataset</li>
+</ul>
+<hr>
+<h2 id="citation">Citation<a class="headerlink" href="#citation" title="Permanent link">¶</a></h2>
+<ul>
+<li>[ ] <strong>Dataset Citation</strong>: Provide BibTeX entry for the dataset</li>
+<li>[ ] <strong>Associated Paper</strong>: Include citation for related publications</li>
+</ul>
+<hr>
+<h2 id="acknowledgements">Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permanent link">¶</a></h2>
+<ul>
+<li>[ ] <strong>Funding Sources</strong>: List grants and funding agencies</li>
+<li>[ ] <strong>Contributors</strong>: Acknowledge field teams, annotators, collaborators</li>
+<li>[ ] <strong>Institutional Support</strong>: Note supporting organizations</li>
+</ul>
+<hr>
+<h2 id="optional-sections">Optional Sections<a class="headerlink" href="#optional-sections" title="Permanent link">¶</a></h2>
+<ul>
+<li>[ ] <strong>Glossary</strong>: Define technical terms or specialized calculations</li>
+<li>[ ] <strong>Additional Information</strong>: Any other relevant context</li>
+<li>[ ] <strong>Related Datasets</strong>: Links to complementary datasets</li>
+<li>[ ] <strong>Multimodal Linkages</strong>: Connections to other sensor data</li>
+</ul>
+<hr>
+<h2 id="validation-checklist">Validation Checklist<a class="headerlink" href="#validation-checklist" title="Permanent link">¶</a></h2>
+<h3 id="wildfairx-compliance">WildFAIRx Compliance<a class="headerlink" href="#wildfairx-compliance" title="Permanent link">¶</a></h3>
+<ul>
+<li>[ ] DOI assigned or pending</li>
+<li>[ ] License clearly stated</li>
+<li>[ ] All required (*) fields completed in template</li>
+<li>[ ] Machine-readable YAML front matter filled</li>
+<li>[ ] Contact information provided</li>
+</ul>
+<h3 id="darwin-core-compliance">Darwin Core Compliance<a class="headerlink" href="#darwin-core-compliance" title="Permanent link">¶</a></h3>
+<ul>
+<li>[ ] Event records complete (dates, locations, protocol)</li>
+<li>[ ] Occurrence records have scientific names with authorities</li>
+<li>[ ] Taxonomic hierarchy filled (minimum to family level)</li>
+<li>[ ] Sampling effort quantified</li>
+<li>[ ] Coordinates in WGS84 with uncertainty</li>
+</ul>
+<h3 id="practical-completeness">Practical Completeness<a class="headerlink" href="#practical-completeness" title="Permanent link">¶</a></h3>
+<ul>
+<li>[ ] Directory structure documented</li>
+<li>[ ] File naming convention explained</li>
+<li>[ ] Data splits clearly defined</li>
+<li>[ ] Annotation format specified</li>
+<li>[ ] At least one example image linked</li>
+<li>[ ] Known limitations acknowledged</li>
+</ul>
+<hr>
+<h2 id="common-mistakes-to-avoid">Common Mistakes to Avoid<a class="headerlink" href="#common-mistakes-to-avoid" title="Permanent link">¶</a></h2>
+<p><strong>Vague Descriptions</strong>
+❌ "We used a drone to collect wildlife images"
+✓ "DJI Matrice 300 RTK with Zenmuse H20T camera flew grid patterns at 60m AGL"</p>
+<p><strong>Missing Geographic Precision</strong>
+❌ "Collected in Tanzania"
+✓ "Serengeti National Park, Mara Region (-2.3456, 34.8123 ±5m)"</p>
+<p><strong>Unclear Sampling Effort</strong>
+❌ "Multiple flights"
+✓ "45 missions totaling 30 flight hours, covering 2,500 hectares"</p>
+<p><strong>Incomplete Species Names</strong>
+❌ "elephants, zebras, giraffes"
+✓ "Loxodonta africana, Equus quagga, Giraffa camelopardalis"</p>
+<p><strong>Undocumented Splits</strong>
+❌ "Split into train/val/test"
+✓ "Stratified by location and season: missions 1-300 (train), 301-350 (val), 351-400 (test)"</p>
+<p><strong>Hidden Biases</strong>
+❌ "Representative wildlife dataset"
+✓ "Dry season only; large-bodied species overrepresented; morning flights bias against nocturnal species"</p>
+<hr>
+<h2 id="time-saving-tips">Time-Saving Tips<a class="headerlink" href="#time-saving-tips" title="Permanent link">¶</a></h2>
+<p><strong>Before Starting:</strong>
+- Gather all information before opening the template
+- Copy from existing paper methods sections
+- Look up drone/camera specs online from manufacturer sites</p>
+<p><strong>While Completing:</strong>
+- Start with easy sections (Overview, Structure) to build momentum
+- Mark sections to revisit with TODO notes
+- Use EXIF data from images for missing camera/GPS information
+- Estimate reasonably if exact values unavailable (note as approximations)</p>
+<p><strong>Automation Opportunities:</strong>
+- Write scripts to extract GPS/altitude from telemetry files (SRT, EXIF, flight logs)
+- Generate occurrence records from detection annotations
+- Calculate statistics (image counts, annotation distributions) programmatically
+- Aggregate frame-level or video-level data to session-level events
+- Validate Darwin Core format compliance automatically</p>
+<p><strong>For Missing Information:</strong>
+- Document what's unavailable rather than leaving blank
+- Contact original research team if retrofitting dataset
+- Use "not available" or "not recorded" explicitly</p>
+<hr>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">¶</a></h2>
+<h3 id="validation-tools">Validation Tools<a class="headerlink" href="#validation-tools" title="Permanent link">¶</a></h3>
+<ul>
+<li>Python scripts for template generation and validation (coming soon)</li>
+<li>Darwin Core export tools for GBIF submission</li>
+<li>HuggingFace conversion utilities</li>
+</ul>
+<h3 id="external-resources">External Resources<a class="headerlink" href="#external-resources" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="https://dwc.tdwg.org/terms/">Darwin Core Quick Reference</a></li>
+<li><a href="https://www.gbif.org/species/search">GBIF Species Search</a></li>
+<li><a href="https://doi.org/10.1038/s41597-023-02298-6">FAIR² Principles Paper</a></li>
+<li><a href="https://doi.org/10.1139/juvs-2019-0011">UAV Best Practices (Barnas et al.)</a></li>
+</ul>
+<hr>
+<h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">¶</a></h2>
+<div class="admonition question">
+<p class="admonition-title"><a href="https://github.com/Imageomics/fair_drones/issues">Questions, Comments, or Concerns?</a></p>
+</div>
+<p>For assistance:
+- Report issues or unclear sections via GitHub Issues
+- Contribute example cards or improvements
+- Share feedback on the template</p>
+<hr>
+<p><strong>Ready to start?</strong></p>
+<ol>
+<li>Download the appropriate template for your task</li>
+<li>Gather your information using the checklist above</li>
+<li>Set aside 2-3 hours to complete the card</li>
+<li>Follow the template section by section</li>
+<li>Validate your completed card</li>
+<li>Publish your WildFAIRx compliant dataset!</li>
+</ol>
+</details>
 <h2 id="packaging-as-a-skill">Packaging as a skill<a class="headerlink" href="#packaging-as-a-skill" title="Permanent link">¶</a></h2>
 <p>The guidelines are small enough to include verbatim. A minimal skill directory
 for a coding agent:</p>
