@@ -13,8 +13,10 @@ published; their sources are kept here.
 | [`smartwilds-citizen-science.md`](https://github.com/Imageomics/smartwilds/blob/main/metadata/smartwilds-citizen-science.md) | Citizen science |
 
 Alongside the cards: [`DEFECT_INVENTORY.md`](../DEFECT_INVENTORY.md) and its
-machine-readable twin `defect_inventory.csv`, and the card images under
-`metadata/images/`.
+machine-readable twin `defect_inventory.csv`, the per-device
+[`sensor_configurations.md`](https://github.com/Imageomics/smartwilds/blob/main/metadata/sensor_configurations.md)
+(camera models and settings, recorder schedules, drone platforms, and which
+sensors were co-located), and the card images under `metadata/images/`.
 
 ## How the cards were written
 

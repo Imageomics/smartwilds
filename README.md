@@ -46,7 +46,8 @@ annotation method and provenance.
 | `docs/DEFECT_INVENTORY.md` | All 22 defect classes found during integration: scope, what detected each, the repair, and the residual risk |
 | `docs/CAMERA_TRAP_RELEASE.md` | Scope and label provenance of the 2026-11-08 camera-trap release |
 | `docs/AGENT_ASSISTED_DOCUMENTATION.md` | How LLM coding agents were used to inventory, document, and quality-check the data, and the guidelines they were given |
-| `metadata/` | The dataset cards of the five SmartWilds datasets, the defect inventory, and the card images |
+| `metadata/` | The dataset cards of the five SmartWilds datasets, the defect inventory, the per-device sensor configurations, and the card images |
+| `guidelines/` | Local copies of the FAIR² Drones documentation standard the cards follow, for use as agent context |
 | `field_campaigns/` | Field notes, data summaries, and per-campaign data reports |
 | `darwin_core/` | Interim copy of the current Darwin Core tables (those under 100 MB) until the datasets are published |
 | `scripts/README.md` | What each script does, its inputs and outputs, and the environment variables it reads |
@@ -110,6 +111,13 @@ project's internal release staging and is not part of this repository.
 
 Person screening needs a GPU and MegaDetector v5a (`pip install megadetector`).
 `scripts/privacy_screening/run_screening.sh` is the SLURM job we used.
+
+## Earlier repository
+
+This repository subsumes `Imageomics/wilds_multimodal_data`. All of its
+branches are preserved here with history under `legacy/wilds_multimodal_data/`;
+see the [legacy branches](https://imageomics.github.io/smartwilds/legacy/) page
+for what each holds.
 
 ## Citation
 

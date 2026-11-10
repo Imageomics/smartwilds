@@ -14,6 +14,18 @@ reusable skill) for every documentation task.
 | [KABR behavior telemetry dataset](https://huggingface.co/datasets/imageomics/kabr-behavior-telemetry) | A completed FAIR² Drones card and processing scripts to imitate |
 | The project's own field notes, sensor configuration tables, and processing logs | The facts |
 
+## Local copies
+
+The FAIR² Drones files are in the repository under `guidelines/`, ready to
+hand to an agent:
+
+- [`guidelines/FAIR2_DRONES_README.md`](https://github.com/Imageomics/smartwilds/blob/main/guidelines/FAIR2_DRONES_README.md)
+- [`guidelines/FAIR2_DRONES_QUICKSTART_GUIDE.md`](https://github.com/Imageomics/smartwilds/blob/main/guidelines/FAIR2_DRONES_QUICKSTART_GUIDE.md)
+- [`guidelines/FAIR2_DRONES_TEMPLATE.md`](https://github.com/Imageomics/smartwilds/blob/main/guidelines/FAIR2_DRONES_TEMPLATE.md)
+
+??? note "FAIR² Drones quick-start checklist"
+    --8<-- "guidelines/FAIR2_DRONES_QUICKSTART_GUIDE.md"
+
 ## Packaging as a skill
 
 The guidelines are small enough to include verbatim. A minimal skill directory
