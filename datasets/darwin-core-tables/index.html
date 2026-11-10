@@ -572,6 +572,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Darwin Core tables
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -588,6 +606,36 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#column-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Column definitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1300,6 +1348,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#column-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Column definitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1319,13 +1386,12 @@
 
 
 <h1 id="darwin-core-tables">Darwin Core tables<a class="headerlink" href="#darwin-core-tables" title="Permanent link">¶</a></h1>
-<h1 id="darwin-core-tables-interim-copy">Darwin Core tables (interim copy)<a class="headerlink" href="#darwin-core-tables-interim-copy" title="Permanent link">¶</a></h1>
-<p>Temporary home for the current SmartWilds Darwin Core tables while the datasets
-are being prepared for Hugging Face. These are copies of the <code>data/</code> directory
-of each staged dataset (release build 2026-10-22; camera and merged tables
-updated 2026-11-08). The datasets themselves, with media manifests, metadata,
-provenance records, and checksums, are the release of record; this directory
-will be removed once they are published.</p>
+<p>The Darwin Core Event and Occurrence tables of the SmartWilds release (build
+2026-10-22; camera and merged tables updated 2026-11-08), one folder per
+dataset. These are the tables of record. Column definitions are in each
+dataset card under <code>metadata/</code>, and the verification-status vocabulary differs
+by table (see the supplemental material, S9.3). All tables share one Event
+hierarchy rooted at <code>TheWilds_2025</code>.</p>
 <table>
 <thead>
 <tr>
@@ -1343,7 +1409,7 @@ will be removed once they are published.</p>
 <tr>
 <td><code>smartwilds/occurrences_all_modalities.csv</code></td>
 <td style="text-align: right;">521.6 MB</td>
-<td>too large for GitHub</td>
+<td>not in this folder (over 100 MB)</td>
 </tr>
 <tr>
 <td><code>smartwilds/text_events.csv</code></td>
@@ -1373,7 +1439,7 @@ will be removed once they are published.</p>
 <tr>
 <td><code>smartwilds-camera-traps/images.csv</code></td>
 <td style="text-align: right;">139.2 MB</td>
-<td>too large for GitHub</td>
+<td>not in this folder (over 100 MB)</td>
 </tr>
 <tr>
 <td><code>smartwilds-bioacoustics/events.csv</code></td>
@@ -1398,7 +1464,7 @@ will be removed once they are published.</p>
 <tr>
 <td><code>smartwilds-drones/occurrences.csv</code></td>
 <td style="text-align: right;">431.5 MB</td>
-<td>too large for GitHub</td>
+<td>not in this folder (over 100 MB)</td>
 </tr>
 <tr>
 <td><code>smartwilds-drones/detections.csv</code></td>
@@ -1417,12 +1483,11 @@ will be removed once they are published.</p>
 </tr>
 </tbody>
 </table>
-<p>GitHub rejects files over 100 MB, so the three large tables are not here. They
-are in the staged datasets and will be published with them.</p>
-<p>The tables share one Event hierarchy rooted at <code>TheWilds_2025</code>. Column
-definitions are in each dataset's <code>metadata/DATA_DICTIONARY.md</code>; the
-verification-status vocabulary differs by table (see <code>docs/SUPPLEMENTAL.md</code>,
-S9.3).</p>
+<p>Three tables exceed GitHub's 100 MB file limit and are not in this folder:
+the merged Occurrence table, the camera image inventory, and the drone
+Occurrence table. They are available from the authors on request, and their
+row counts and checksums are recorded in the dataset cards and the
+supplemental material.</p>
 <h2 id="column-definitions">Column definitions<a class="headerlink" href="#column-definitions" title="Permanent link">¶</a></h2>
 <p>Each dataset card and data dictionary defines the columns. The Darwin Core
 terms follow <a href="https://dwc.tdwg.org/terms/">https://dwc.tdwg.org/terms/</a>; SmartWilds-specific columns
