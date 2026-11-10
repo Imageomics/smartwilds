@@ -34,6 +34,21 @@ annotation method and provenance.
   [Imageomics/naturelab](https://github.com/Imageomics/naturelab)
 - **Papers:** see [Papers](#papers) below
 
+## What the metadata enables
+
+- **Planning cross-modal sensing systems.** Workload characterization,
+  synthesis, and hardware feasibility prediction from aligned timestamps,
+  sensor configurations, and detection confidences
+  (`analysis/cross_modal_coordination/`).
+- **Comparing modalities for ecological findings.** Camera and acoustic
+  activity patterns recovered independently and corroborated against each
+  other, as in the Milu deer studies.
+- **Benchmarking computer-vision pipelines.** Label provenance and
+  human-annotated reference sets make labeling methods evaluable, as in the
+  triage method that produced the camera-trap labels.
+
+See [What it enables](https://imageomics.github.io/smartwilds/analysis/) for the papers behind each.
+
 ## What is here
 
 | Path | Contents |
@@ -133,6 +148,7 @@ none of them is "the" SmartWilds paper.
 | [*SmartWilds: Multimodal Wildlife Monitoring Dataset*](https://arxiv.org/abs/2509.18894) (2025) | The four-day pilot deployment and its first data release |
 | *A Blueprint for Cross-Modal Coordination at the Far Edge* (to appear) | Workload characterization and synthesis for planning cross-modal sensing systems; code in `analysis/cross_modal_coordination/` |
 | [*Cross-Modal Corroboration for Annotation-Free Wildlife Monitoring*](https://arxiv.org/abs/2606.21613) (2026) | Annotation-free verification of Milu deer activity from camera traps and acoustics |
+| [*Resolve, Clear, or Defer: Training-Free Active Prototype Triage for Ecological Detection Pipelines*](https://arxiv.org/abs/2611.01466) (2026) | The semi-automated labeling method, evaluated on SmartWilds, that produced the current camera-trap labels |
 
 ```bibtex
 @article{kline2026smartwilds,
@@ -156,6 +172,14 @@ none of them is "the" SmartWilds paper.
   booktitle = {ACM/IEEE Symposium on Edge Computing (SEC)},
   year      = {2026},
   note      = {To appear}
+}
+
+@misc{potlapally2026resolve,
+  author        = {Potlapally, Anirudh and Yogananda, Brijesh Nanda Brunda and Gu, Jianyang and Jajodia, Maanav and Meyers, Luke and Chao, Wei-Lun and Subramoni, Hari},
+  title         = {Resolve, Clear, or Defer: Training-Free Active Prototype Triage for Ecological Detection Pipelines},
+  year          = {2026},
+  eprint        = {2611.01466},
+  archivePrefix = {arXiv}
 }
 
 @inproceedings{pillai2026cross,

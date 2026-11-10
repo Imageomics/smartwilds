@@ -39,7 +39,7 @@ already in the [SmartWilds collection](https://huggingface.co/collections/imageo
 | Supplemental material, defect inventory, camera-trap release note | [`docs/`](SUPPLEMENTAL.md) |
 | Data summaries and campaign data reports | [`field_campaigns/`](datasets/field-campaigns.md) |
 | Generation, validation, georeferencing, screening scripts | [`scripts/`](scripts/index.md) |
-| What the metadata enables: cross-modal coordination planning | [`analysis/`](analysis/cross-modal-coordination.md) |
+| What the metadata enables: systems planning, cross-modal ecology, CV benchmarking | [What it enables](analysis/index.md) |
 | How the agents were used, and how to use them on your data | [Agents](agents/index.md) |
 
 ## Getting started
@@ -70,6 +70,10 @@ Several papers build on SmartWilds; each describes one part of the project.
   (to appear): planning cross-modal sensing systems from the metadata.
 - [Cross-Modal Corroboration for Annotation-Free Wildlife Monitoring](https://arxiv.org/abs/2606.21613)
   (2026): annotation-free verification of Milu deer activity.
+- [Resolve, Clear, or Defer: Training-Free Active Prototype Triage for
+  Ecological Detection Pipelines](https://arxiv.org/abs/2611.01466) (2026): the
+  semi-automated labeling evaluated on SmartWilds that produced the camera-trap
+  labels.
 
 ## Citation
 
