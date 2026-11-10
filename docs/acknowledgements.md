@@ -1,29 +1,15 @@
 # Acknowledgements
 
-This work is supported by the [Imageomics Institute](https://imageomics.org),
-funded by the US National Science Foundation's Harnessing the Data Revolution
-(HDR) program under [Award #2118240](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2118240)
-(*Imageomics: A New Frontier of Biological Information Powered by
-Knowledge-Guided Machine Learning*); by the [AI Institute for Intelligent
-Cyberinfrastructure with Computational Learning in the Environment
-(ICICLE)](https://icicle.osu.edu/), funded by the US National Science
-Foundation under [Award #2112606](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2112606);
-and by the AI and Biodiversity Change (ABC) Global Center, funded by the US
-National Science Foundation under [Award #2330423](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2330423)
-and the Natural Sciences and Engineering Research Council of Canada under
-[Award #585136](https://www.nserc-crsng.gc.ca/ase-oro/Details-Detailles_eng.asp?id=782440).
+This project is supported by the [Imageomics Institute](https://imageomics.org), which is funded by the US National Science Foundation's Harnessing the Data Revolution (HDR) program under [Award #2118240](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2118240) (Imageomics: A New Frontier of Biological Information Powered by Knowledge-Guided Machine Learning), and by the [AI Institute for Intelligent Cyberinfrastructure with Computational Learning in the Environment (ICICLE)](https://icicle.osu.edu/), which is funded by the US National Science Foundation under [Award #2112606](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2112606).
 
-Any opinions, findings, and conclusions or recommendations expressed in this
-material are those of the authors and do not necessarily reflect the views of
-the funders.
+This work is also supported by the AI and Biodiversity Change (ABC) Global Center. The ABC Global Center is funded by the US National Science Foundation under [Award No. 2330423](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2330423&HistoricalAwards=false) and the Natural Sciences and Engineering Research Council of Canada under [Award No. 585136](https://www.nserc-crsng.gc.ca/ase-oro/Details-Detailles_eng.asp?id=782440). This dataset draws on research supported by the Social Sciences and Humanities Research Council.
 
-We thank Dan Beetem and [The Wilds](https://thewilds.columbuszoo.org/) for
-access to deployment sites and support of this research, and the Columbus Zoo
-and Aquarium for facilitating the project. All data collection, including
-drone flights, was conducted under the supervision of the Director of Animal
-Management, with permission from The Wilds Animal Care and Use Committee.
+Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation, Natural Sciences and Engineering Research Council of Canada, or Social Sciences and Humanities Research Council.
 
-Compute resources were provided by the [Ohio Supercomputer Center](https://www.osc.edu/).
+Special thanks to Dan Beetem and [The Wilds](https://www.thewilds.org/) in Ohio for providing access to deployment sites and supporting this wildlife monitoring research. We thank the Columbus Zoo and Aquarium for their support in facilitating this project. All data collection, including drone flights, was conducted under the supervision of the Director of Animal Management, with permission from The Wilds Animal Care and Use Committee.
+
+This work used the [Ohio Supercomputer Center](https://www.osc.edu/) (Ohio Supercomputer Center, 1987, <http://osc.edu/ark:/19495/f5s1ph73>). The canonical wording of these statements is kept in
+[`guidelines/ACKNOWLEDGEMENTS.md`](https://github.com/Imageomics/smartwilds/blob/main/guidelines/ACKNOWLEDGEMENTS.md).
 
 ## Contact
 

@@ -101,6 +101,9 @@ Agent output is a draft until a person has checked it. What we check:
   missing and why (see S8 of the supplement), not be filled in plausibly.
 - **Repairs are proposed, not applied.** The author chooses the repair; the
   agent implements it with a before-copy and an audit record.
+- **Grant language is verbatim.** Funder acknowledgements, award numbers,
+  and the disclaimer are copied exactly from `guidelines/ACKNOWLEDGEMENTS.md`,
+  never paraphrased.
 - **Tone and spelling.** Direct statements, American English, no venue names
   in dataset documentation while a paper is under review.
 - **Paths and identifiers.** No cluster paths or internal snapshot names in

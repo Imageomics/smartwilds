@@ -21,7 +21,7 @@ Last updated: 2026-11-10.
 Release: SmartWilds release build 2026-10-22, camera tables updated 2026-11-08.
 It supersedes the 2026-07-24 integration pass. Paths such as
 `processing_output/...` are relative to the project archive; the released files
-are in the per-modality datasets of the SmartWilds collection.
+are in the per-modality datasets of the [SmartWilds collection](https://huggingface.co/collections/imageomics/smartwilds).
 
 ---
 
@@ -265,8 +265,11 @@ holding animals from geese to Père David's deer.
 projected animal positions and platform-telemetry positions together without
 distinguishing them: 15.66% of 292,106 plotted drone points were platform
 coordinates. The status field was present and correct; the script did not read
-it. The release ships a validator that fails when an analysis consumes drone
-coordinates without constraining the status column.
+it. The release carries that status on every drone Occurrence
+(`drone_georef_status` in `occurrenceRemarks`, `georef_status` in
+`detections.csv`); any analysis of drone coordinates must filter on it, and
+`examples/quickstart.py` shows the pattern. No automated check of downstream
+analyses ships with the release.
 
 ---
 
@@ -825,7 +828,7 @@ from:
 
 Each modality is published as its own Hugging Face dataset with its own DOI,
 and a study-level dataset holds the merged Event table, the text records, the
-arrival traces, and this supplement. The SmartWilds collection joins all five.
+arrival traces, and this supplement. The [SmartWilds collection](https://huggingface.co/collections/imageomics/smartwilds) joins all five.
 DOIs, the license, and the maintenance commitment will be listed here at
 publication. Contact: Jenna M. Kline (kline.377@osu.edu).
 

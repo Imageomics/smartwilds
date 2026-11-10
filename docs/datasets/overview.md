@@ -36,9 +36,12 @@ defects themselves are in the [defect inventory](../DEFECT_INVENTORY.md).
     (`triage_resolved`, `triage_reviewed`, `triage_forced_1nn`, `human-edit`,
     `human-reviewed`); drone and acoustic labels are `unverified` or
     `validated`; the 12 human-added drone starling boxes are
-    `human-supported; limited-resolution`. For the BioCLIP Tree-of-Life drone
-    labels, species-rank accuracy on human-annotated subsets is 0.271 and
-    class-rank accuracy is 0.845 (supplement, S9).
+    `human-supported; limited-resolution`. The drone labels come from BioCLIP 2
+    (the TreeOfLife-200M model, `imageomics/bioclip-2`) run in its open-world
+    Tree of Life mode, which predicts a taxon with its full rank hierarchy rather
+    than choosing among a fixed label list; species-rank accuracy on
+    human-annotated subsets is 0.271 and class-rank accuracy is 0.845
+    (supplement, S9).
 
 - **Occurrences are detection crops, not individuals.** Bursts and adjacent
   drone frames repeat the same animal.

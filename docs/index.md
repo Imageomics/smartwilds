@@ -43,7 +43,7 @@ already in the [SmartWilds collection](https://huggingface.co/collections/imageo
 | Darwin Core tables (current build) | [`darwin_core/`](datasets/darwin-core-tables.md) |
 | Dataset cards for the five SmartWilds datasets | [`metadata/`](datasets/dataset-cards.md) |
 | Supplemental material, defect inventory, camera-trap release note | [`docs/`](SUPPLEMENTAL.md) |
-| Field notes, data summaries, campaign data reports | [`field_campaigns/`](datasets/field-campaigns.md) |
+| Data summaries and campaign data reports | [`field_campaigns/`](datasets/field-campaigns.md) |
 | Generation, validation, georeferencing, screening scripts | [`scripts/`](scripts/index.md) |
 | What the metadata enables: cross-modal coordination planning | [`analysis/`](analysis/cross-modal-coordination.md) |
 | How the agents were used, and how to use them on your data | [Agents](agents/index.md) |

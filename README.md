@@ -48,7 +48,7 @@ annotation method and provenance.
 | `docs/AGENT_ASSISTED_DOCUMENTATION.md` | How LLM coding agents were used to inventory, document, and quality-check the data, and the guidelines they were given |
 | `metadata/` | The dataset cards of the five SmartWilds datasets, the defect inventory, the per-device sensor configurations, and the card images |
 | `guidelines/` | Local copies of the FAIR² Drones documentation standard the cards follow, for use as agent context |
-| `field_campaigns/` | Field notes, data summaries, and per-campaign data reports |
+| `field_campaigns/` | Data summaries and per-campaign data reports (field logs and protocols live in [Imageomics/naturelab](https://github.com/Imageomics/naturelab)) |
 | `darwin_core/` | Interim copy of the current Darwin Core tables (those under 100 MB) until the datasets are published |
 | `scripts/README.md` | What each script does, its inputs and outputs, and the environment variables it reads |
 | `scripts/darwin_core/` | Darwin Core Event and Occurrence generator, and raw-WAV reconciliation |
@@ -79,9 +79,11 @@ hierarchy, rooted at `TheWilds_2025`.
   `triage_forced_1nn`, 39 `human-edit`, and two `human-reviewed` labels; every
   retained camera box has original SAM3 geometry. Drone and acoustic labels are `unverified`
   or `validated`; the 12 human-added drone starling boxes are
-  `human-supported; limited-resolution`. For the BioCLIP Tree-of-Life drone
-  labels, species-rank accuracy on human-annotated subsets is 0.271 and
-  class-rank accuracy is 0.845. A seven-video human-annotated drone reference
+  `human-supported; limited-resolution`. The drone labels come from BioCLIP 2
+  (the TreeOfLife-200M model, `imageomics/bioclip-2`) run in its open-world
+  Tree of Life mode, which predicts a taxon with its full rank hierarchy rather
+  than choosing among a fixed label list; species-rank accuracy on
+  human-annotated subsets is 0.271 and class-rank accuracy is 0.845. A seven-video human-annotated drone reference
   set (27,159 boxes) is described in `docs/SUPPLEMENTAL.md` S9.
 - **Occurrences are detection crops, not individuals.** Bursts and adjacent
   drone frames repeat the same animal.
@@ -122,7 +124,16 @@ for what each holds.
 
 ## Citation
 
-See `CITATION.cff`. Please cite the paper and each modality dataset you use.
+Please cite the paper and each modality dataset you use (`CITATION.cff`).
+
+```bibtex
+@article{kline2026smartwilds,
+  author  = {Kline, Jenna M. and Potlapally, Anirudh and Campolongo, Elizabeth G.},
+  title   = {SmartWilds: Integrating, Aligning, and Documenting Multi-Modal Field Sensing Data},
+  year    = {2026},
+  note    = {Under review. Supplemental material: https://imageomics.github.io/smartwilds/SUPPLEMENTAL/}
+}
+```
 
 ## Papers using SmartWilds
 
@@ -153,9 +164,15 @@ Code: MIT (see `LICENSE`). Data: see each dataset card.
 
 ## Acknowledgements
 
-Supported by the Imageomics Institute (NSF Award #2118240), ICICLE (NSF Award
-#2112606), and the ABC Global Center (NSF Award #2330423; NSERC Award #585136).
-We thank Dan Beetem, The Wilds, and the Columbus Zoo & Aquarium.
+This project is supported by the [Imageomics Institute](https://imageomics.org), which is funded by the US National Science Foundation's Harnessing the Data Revolution (HDR) program under [Award #2118240](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2118240) (Imageomics: A New Frontier of Biological Information Powered by Knowledge-Guided Machine Learning), and by the [AI Institute for Intelligent Cyberinfrastructure with Computational Learning in the Environment (ICICLE)](https://icicle.osu.edu/), which is funded by the US National Science Foundation under [Award #2112606](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2112606).
+
+This work is also supported by the AI and Biodiversity Change (ABC) Global Center. The ABC Global Center is funded by the US National Science Foundation under [Award No. 2330423](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2330423&HistoricalAwards=false) and the Natural Sciences and Engineering Research Council of Canada under [Award No. 585136](https://www.nserc-crsng.gc.ca/ase-oro/Details-Detailles_eng.asp?id=782440). This dataset draws on research supported by the Social Sciences and Humanities Research Council.
+
+Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation, Natural Sciences and Engineering Research Council of Canada, or Social Sciences and Humanities Research Council.
+
+Special thanks to Dan Beetem and [The Wilds](https://www.thewilds.org/) in Ohio for providing access to deployment sites and supporting this wildlife monitoring research. We thank the Columbus Zoo and Aquarium for their support in facilitating this project. All data collection, including drone flights, was conducted under the supervision of the Director of Animal Management, with permission from The Wilds Animal Care and Use Committee.
+
+This work used the [Ohio Supercomputer Center](https://www.osc.edu/) (Ohio Supercomputer Center, 1987, <http://osc.edu/ark:/19495/f5s1ph73>).
 
 ## Contact
 

@@ -99,6 +99,11 @@ so. Agent-drafted text was edited for accuracy and tone before release, and
 remaining uncertainties are marked in the documents rather than resolved by
 guesswork.
 
+One class of text is never drafted: funder acknowledgements. Grant support
+language, award numbers, and the funders' disclaimer are copied exactly from
+`guidelines/ACKNOWLEDGEMENTS.md`; an agent that paraphrases or shortens them
+produces a wrong acknowledgement, and the review checks for it.
+
 ## References
 
 - Wilkinson, M. D. et al. (2016). The FAIR Guiding Principles for scientific
@@ -112,5 +117,6 @@ guesswork.
 - Barnas, A. F. et al. (2020). A standardized protocol for reporting methods
   when using drones for wildlife research. *Journal of Unmanned Vehicle
   Systems* 8(2), 89–98. <https://doi.org/10.1139/juvs-2019-0011>
-- Imageomics Institute. Hugging Face dataset card template.
-  <https://imageomics.github.io/Imageomics-guide/wiki-guide/HF_DatasetCard_Template_Imageomics/>
+- Campolongo, E. G., Thompson, M. J., Zhang, N., Duan, Y., Bradley, J., & Lapp, H.
+  (2026). Imageomics Guide (Version 2.3.1) [Computer software].
+  <https://doi.org/10.5281/zenodo.17817610>

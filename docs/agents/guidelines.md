@@ -8,7 +8,8 @@ reusable skill) for every documentation task.
 | Resource | Use |
 |---|---|
 | [FAIR² Drones Data Standard](https://github.com/Imageomics/fair_drones): `TEMPLATE.md`, `QUICKSTART_GUIDE.md` | Dataset card structure and required metadata for drone and multi-sensor wildlife datasets: Darwin Core Event and Occurrence fields, platform and sensor metadata, annotation and quality fields |
-| [Imageomics dataset card template](https://imageomics.github.io/Imageomics-guide/wiki-guide/HF_DatasetCard_Template_Imageomics/) | Base card template for biodiversity and computer-vision datasets, which the FAIR² template extends |
+| [Imageomics dataset card template](https://imageomics.github.io/Imageomics-guide/wiki-guide/HF_DatasetCard_Template_Imageomics/), part of the Imageomics Guide (Campolongo et al., 2026) | Base card template for biodiversity and computer-vision datasets, which the FAIR² template extends |
+| [`guidelines/ACKNOWLEDGEMENTS.md`](https://github.com/Imageomics/smartwilds/blob/main/guidelines/ACKNOWLEDGEMENTS.md) | The funder acknowledgements and disclaimer, to be copied verbatim, never paraphrased |
 | [Hugging Face dataset cards](https://huggingface.co/docs/hub/datasets-cards) | YAML front matter and card conventions |
 | [Darwin Core terms](https://dwc.tdwg.org/terms/) | Term definitions for Events and Occurrences, so column names, event types, and the verification-status vocabulary follow the standard |
 | [KABR behavior telemetry dataset](https://huggingface.co/datasets/imageomics/kabr-behavior-telemetry) | A completed FAIR² Drones card and processing scripts to imitate |
@@ -36,6 +37,7 @@ skills/dataset-documentation/
 ├── SKILL.md            # when to use, the steps, the review checklist
 ├── TEMPLATE.md         # FAIR² Drones dataset card template
 ├── QUICKSTART_GUIDE.md # FAIR² Drones checklist
+├── ACKNOWLEDGEMENTS.md # funder language, copied exactly
 └── dwc_terms.md        # the Darwin Core terms the project uses, with definitions
 ```
 
@@ -53,6 +55,9 @@ copied, and the rule that missing information is recorded as missing.
   <https://doi.org/10.1371/journal.pone.0029715>
 - Kline, J. and Campolongo, E. G. (2026). FAIR² Drones Data Standard for
   Wildlife Datasets. <https://github.com/Imageomics/fair_drones>
+- Campolongo, E. G., Thompson, M. J., Zhang, N., Duan, Y., Bradley, J., & Lapp, H.
+  (2026). Imageomics Guide (Version 2.3.1) [Computer software].
+  <https://doi.org/10.5281/zenodo.17817610>
 - Barnas, A. F. et al. (2020). A standardized protocol for reporting methods
   when using drones for wildlife research. *Journal of Unmanned Vehicle
   Systems* 8(2), 89–98. <https://doi.org/10.1139/juvs-2019-0011>

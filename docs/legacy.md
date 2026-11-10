@@ -1,4 +1,10 @@
-# Legacy branches
+# Legacy repositories and branches
+
+Two earlier repositories preceded this one. [`Imageomics/naturelab`](https://github.com/Imageomics/naturelab)
+remains the public home of the field logs, the field collection protocols,
+the Google Earth site files, and the data-storage protocol; this repository
+links to it rather than duplicating them. `Imageomics/wilds_multimodal_data`
+was the internal working repository and is subsumed here as described below.
 
 This repository subsumes the project's earlier working repository,
 `Imageomics/wilds_multimodal_data`. Every branch of that repository was
@@ -21,8 +27,10 @@ prefix, so nothing was lost, and `main` stays the curated metadata release.
 
 The camera-trap and acoustic analysis on `smartwilds-analysis` and the
 `deer_vocalizations` classifier belong to a separate project by Bharath Pillai
-and Varun Viswapriyan on Milu (Père David's) deer activity patterns, published
-as [Cross-Modal Corroboration for Annotation-Free Wildlife Monitoring](https://arxiv.org/abs/2606.21613).
+and Varun Viswapriyan on annotation-free verification of Milu (Père David's)
+deer activity, using deer calls and distance estimation. It has a workshop
+paper, [Cross-Modal Corroboration for Annotation-Free Wildlife Monitoring](https://arxiv.org/abs/2606.21613),
+and a journal paper under review.
 That work uses its own labels and its own acoustic model; the holistic dataset
 documented here uses a substantially updated labeling protocol (see the
 [camera-trap release note](CAMERA_TRAP_RELEASE.md)). The two are kept

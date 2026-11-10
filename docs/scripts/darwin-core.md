@@ -15,6 +15,13 @@ Builds the Darwin Core tables for every modality and merges them into
 | Drones | Labelled detection CSVs with telemetry | One `SensorDeployment` per flight, one `MediaEvent` per video, one Occurrence per detection crop |
 | Citizen science, text | Their Darwin Core exports | Copied into the table set |
 
+The "Tree-of-Life prediction CSVs" are the per-box outputs of BioCLIP 2
+(`imageomics/bioclip-2`, trained on TreeOfLife-200M) in open-world Tree of
+Life mode: for each SAM3 box, the top-1 taxon with its rank hierarchy (kingdom
+to species) and the top-5 candidates, as recorded in `identificationRemarks`
+(`Tree-of-Life rank`, `top1 score`). They were produced in the external
+detection workspace; the code that wrote them is not in this repository.
+
 ```bash
 export SMARTWILDS_ARCHIVE=/path/to/TheWilds2025
 export SMARTWILDS_DWC_OUT=$SMARTWILDS_ARCHIVE/processing_output/darwin_core_release
