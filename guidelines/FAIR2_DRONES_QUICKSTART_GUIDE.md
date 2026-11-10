@@ -2,7 +2,7 @@
 
 **For researchers creating or documenting drone-based wildlife datasets**
 
-Below is a streamlined checklist for creating a WildFAIRx compliant drone dataset card. Review the full [dataset card template](TEMPLATE.md) for detailed guidance.
+Below is a streamlined checklist for creating a WildFAIRx compliant drone dataset card. Review the full [dataset card template](https://github.com/Imageomics/smartwilds/blob/main/guidelines/FAIR2_DRONES_TEMPLATE.md) for detailed guidance.
 
 
 ## Before You Start
