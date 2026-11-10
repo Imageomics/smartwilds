@@ -4,14 +4,15 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 import re
 import wave
 from collections import Counter
 from datetime import date
 from pathlib import Path
 
-BASE_DIR = Path('/fs/ess/PAS2136/TheWilds2025')
-SNAPSHOT_DIR = BASE_DIR / 'processing_output/darwin_core_latest_20261008'
+BASE_DIR = Path(os.environ.get('SMARTWILDS_ARCHIVE', '.')).resolve()
+SNAPSHOT_DIR = Path(os.environ.get('SMARTWILDS_DWC_OUT', BASE_DIR / 'processing_output/darwin_core_release'))
 OUT_DIR = SNAPSHOT_DIR / 'bioacoustics_complete'
 OUT_CSV = OUT_DIR / 'RAW_WAV_RECONCILIATION_20261008.csv'
 OUT_NOTE = OUT_DIR / 'RAW_WAV_RECONCILIATION_20261008.md'

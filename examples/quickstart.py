@@ -28,10 +28,13 @@ def main(roots):
     print(f"{len(ev):,} Events, {len(oc):,} Occurrences")
 
     # 1. Pick a verification floor BEFORE analysis: most labels are machine
-    #    predictions (see the dataset card for per-rank accuracy).
+    #    predictions (see the dataset card and SUPPLEMENTAL.md S9). The status
+    #    vocabulary differs by table: camera traps use "machine-resolved" /
+    #    "human-reviewed"; drones and acoustics use "unverified" / "validated".
+    MACHINE = {"unverified", "machine-resolved"}
     print(oc.identificationVerificationStatus.value_counts().to_string(), "\n")
-    verified = oc[oc.identificationVerificationStatus != "unverified"]
-    print(f"human-verified Occurrences: {len(verified):,}")
+    verified = oc[~oc.identificationVerificationStatus.isin(MACHINE)]
+    print(f"human-reviewed Occurrences: {len(verified):,}")
 
     # 2. Join each Occurrence to its Event, then walk up to the deployment.
     parent = ev.set_index("eventID").parentEventID

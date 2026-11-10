@@ -1,9 +1,22 @@
-pandas>=2.0
-numpy
-pillow
-opencv-python-headless   # frame extraction (examples, privacy screening)
-huggingface_hub          # downloading the datasets
-# privacy screening only:
-# megadetector
-# av
-# imageio-ffmpeg
+# Core: load the released Darwin Core tables (examples/quickstart.py).
+pandas>=2.0,<3
+numpy>=1.24,<3
+huggingface_hub>=0.25        # download the datasets
+
+# Media: drone frame extraction (examples/quickstart.py), review crops
+# (scripts/privacy_screening/triage.py).
+opencv-python-headless>=4.9
+pillow>=10
+
+# Optional: progress bars in scripts/georeferencing/.
+tqdm>=4.66
+
+# Optional, person screening only (scripts/privacy_screening/). Needs a GPU.
+# Versions are the ones used for the release screening run.
+# megadetector==10.0.28
+# av==15.1.0
+# imageio-ffmpeg==0.6.0
+
+# scripts/georeferencing/geolocate_camera_trap_treeoflife_predictions.py also
+# needs the Imageomics camera-trap-geolocation package; point
+# CAMERA_TRAP_GEOLOCATION_SRC at a checkout of its src/ directory.

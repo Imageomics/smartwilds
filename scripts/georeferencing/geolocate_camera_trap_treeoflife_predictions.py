@@ -12,6 +12,7 @@ import argparse
 import csv
 import json
 import math
+import os
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -23,18 +24,17 @@ except ImportError:  # pragma: no cover
     tqdm = None
 
 
-EXTERNAL_REPO = Path(
-    "/fs/ess/PAS2699/object_detection_datasets/smartwilds/external/camera-trap-geolocation/src"
-)
-if EXTERNAL_REPO.exists():
+# Optional: a checkout of Imageomics/camera-trap-geolocation (its src/ dir).
+EXTERNAL_REPO = Path(os.environ.get("CAMERA_TRAP_GEOLOCATION_SRC", ""))
+if EXTERNAL_REPO.name and EXTERNAL_REPO.exists():
     sys.path.insert(0, str(EXTERNAL_REPO))
 
 try:
     from camera_trap_geolocation.geometry import estimate_distance_and_angle, project_gps
 except ImportError as exc:  # pragma: no cover
     raise SystemExit(
-        "Could not import Imageomics camera-trap-geolocation geometry module. "
-        f"Expected it under {EXTERNAL_REPO}."
+        "Could not import the Imageomics camera-trap-geolocation geometry module. "
+        "Install it, or set CAMERA_TRAP_GEOLOCATION_SRC to the src/ directory of a checkout."
     ) from exc
 
 

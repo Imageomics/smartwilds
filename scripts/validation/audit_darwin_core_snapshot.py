@@ -216,7 +216,7 @@ def main():
     issues = dict(sorted((event_counts + occurrence_counts).items()))
     for code, count in issues.items():
         add(findings, "ERROR", code, "Scalar validation failed.", {"count": count})
-    generator = root / "scripts/generate_darwin_core_latest_20261008.py"
+    generator = root / "scripts/generate_darwin_core.py"
     expected_root_date = None
     if generator.is_file():
         match = re.search(r'STUDY_ROOT_EVENT\s*=\s*\{.*?"eventDate"\s*:\s*"([^"]*)"', generator.read_text(), re.S)

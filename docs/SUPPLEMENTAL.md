@@ -1,30 +1,40 @@
 # SmartWilds — supplemental material
 
-Supplemental material for the SmartWilds paper, published with the SmartWilds
-datasets so users of the data can read it alongside them. It holds the detail
-that does not fit in the paper: full inventories, the timestamp-repair methods,
+> **Camera-trap update (2026-11-08).** The legacy camera counts,
+> Event hierarchy, first-generation Tree-of-Life method statements, and
+> camera detection-arrival rows in this historical supplement do not describe
+> the current camera release. The canonical camera release has 72,775
+> original-SAM3-geometry Occurrences, 19,785 camera Events, a 235,778-image
+> inventory, and 70,466 Campaign-2 operational-inference arrivals. Its
+> combined multimodal table has 401,602 Occurrences and 22,242 Events. See
+> [`CAMERA_TRAP_RELEASE.md`](CAMERA_TRAP_RELEASE.md) for the
+> release-facing scope and provenance. The historical sections remain for
+> auditability and must not be used as current camera-release statistics.
+
+Supplemental material for the SmartWilds
+datasets.
+This contains the full data inventories details, the timestamp-repair methods,
 the standards crosswalk, the field dictionary, the arrival statistics, and the
 complete defect inventory.
 
-Last updated: 2026-10-22.
-Snapshot: `darwin_core_latest_20261008` (supersedes `darwin_core_latest_20260724`).
-Paths such as `processing_output/...` are relative to the project archive; the
-released files are in the per-modality datasets of the SmartWilds collection.
+Last updated: 2026-11-10.
+Release: SmartWilds release build 2026-10-22, camera tables updated 2026-11-08.
+It supersedes the 2026-07-24 integration pass. Paths such as
+`processing_output/...` are relative to the project archive; the released files
+are in the per-modality datasets of the SmartWilds collection.
 
 ---
 
 ## S1. Extended glossary
 
-The paper carries a condensed version of this table. Terms are grouped by the
-community that owns them.
 
 | Term | Source | Meaning in this release | What it is *not* |
 |:--|:--|:--|:--|
 | Event | Darwin Core | A sampling act with a date, location, protocol, and `parentEventID`. Five levels in use: `Project`, `SensorDeployment`, `AudioRecording`, `MediaEvent`, `ObservationSession`. | Not an arrival in a stream. One Event can contain 10⁵ arrivals. |
 | Occurrence | Darwin Core | One organism record at a place and time, linked by `eventID`. Usually one detection crop. | Not an individual animal. Adjacent drone frames yield many Occurrences of the same animal. |
 | `eventType` | Darwin Core | The level of the hierarchy a row occupies. | Not the modality; modality is carried by `parentEventID` and `modality_type`. |
-| `basisOfRecord` | Darwin Core | `MachineObservation` (552,312 rows) or `HumanObservation` (652 rows). | Not a quality statement. See `identificationVerificationStatus`. |
-| `identificationVerificationStatus` | Darwin Core | `unverified` (550,722), `validated` (1,590), `verified by expert` (652). | Not a confidence score. A `validated` record was reviewed by a person. |
+| `basisOfRecord` | Darwin Core | `MachineObservation` for every detector-derived row; `HumanObservation` for citizen-science and text records and for the 12 human-added drone starling boxes. | Not a quality statement. See `identificationVerificationStatus`. |
+| `identificationVerificationStatus` | Darwin Core | Vocabulary differs by table. Post-triage camera traps: `human-reviewed`, `machine-resolved`. Drones and bioacoustics: `unverified`, `validated`, plus `human-supported; limited-resolution` for the drone starling supplement. Citizen science and text: `verified by expert`. Counts in S9.3. | Not a confidence score. `machine-resolved` and `unverified` are both machine labels; a `validated` or `human-reviewed` record was reviewed by a person. |
 | `dataGeneralizations` | Darwin Core | States whether a coordinate is an observed position, a sensor position, a projected estimate, or a platform-telemetry fallback. | Not a precision estimate; see `coordinateUncertaintyInMeters`. |
 | `informationWithheld` | Darwin Core | Records where locality precision was reduced for sensitive taxa. | — |
 | Sampling effort | Humboldt ext. | Acquisition quantity actually expended, per modality: camera observation-days, recorder-hours, flight-minutes, visitor sessions. | Not comparable across modalities. Not a detection count. |
@@ -239,11 +249,11 @@ unreliable and is not established practice in aerial wildlife survey.
 | `horizon_ray` (camera near level) | 18,324 | 5.8% |
 | `out_of_range` | 122 | 0.04% |
 
-Method: convert the bbox bottom-centre pixel to a camera ray, rotate by
+Method: convert the bbox bottom-center pixel to a camera ray, rotate by
 heading/pitch, intersect with a flat ground plane, project the offset from
 platform GPS. Dominant error sources: gimbal-pitch convention, terrain relief,
 altitude source, video stabilisation, FOV assumption, and whether bbox
-bottom-centre is the animal's ground-contact point.
+bottom-center is the animal's ground-contact point.
 
 Camera-trap coordinates use the pinhole method from
 <https://github.com/Imageomics/camera-trap-geolocation>: bbox height → range,
@@ -289,9 +299,9 @@ have standardized them.
 
 ---
 
-## S8. Typed missingness
+## S8. Missing data, broken down by type.
 
-Six states a naive release would collapse into one absence.
+
 
 | # | State | How it is computable | Example |
 |--:|:--|:--|:--|
@@ -309,24 +319,74 @@ why the schedule field is load-bearing and not documentation.
 
 ## S9. Models, parameters, and measured accuracy
 
-Manual annotation does not scale to sensor-network volume: our human-reviewed
-records are **0.4%** of the release and consumed the review capacity available.
+Manual annotation does not scale to sensor-network volume: human-reviewed
+labels are under 1% of the release and consumed the review capacity available.
 Semi-automated analysis is therefore the realistic condition, and we use
 current state-of-the-art models so that reported quality reflects what a
 practitioner adopting today's best tooling would obtain.
 
+Labels were produced in two generations, and the released tables carry both.
+The **first generation** labeled every SAM3 box with a BioCLIP Tree-of-Life
+taxon; it still describes the operational drone table and the merged
+cross-modal snapshot. The **second generation** (October–November 2026)
+replaced the camera-trap labels with embedding-based triage plus targeted
+human review (S9.1), and added a seven-video human-annotated drone reference
+set with a manual starling supplement (S9.2).
+
 | Stage | Model | Role |
 |:--|:--|:--|
 | Visual segmentation | SAM 3 | bounding boxes on camera-trap images and drone frames |
-| Visual classification | BioCLIP Tree-of-Life (TreeOfLife-200M) | top-1 taxon with full rank hierarchy, top-5 retained |
+| Visual classification, first generation | BioCLIP Tree-of-Life (TreeOfLife-200M) | top-1 taxon with full rank hierarchy, top-5 retained; operational drone labels |
+| Label triage, second generation | Resolve–Clear–Defer prototype triage over proposal embeddings | routes proposals to human review and resolves the rest by similarity to reviewed examples; operational camera-trap labels |
 | Acoustic detection | BirdNET | detections with frequency bounds and offset into the WAV |
 | Water/lake masking | SAM 3 | lake/water masks for habitat-association analysis |
 
-### S9.1 Measured accuracy
+### S9.1 Camera-trap labels (post-triage)
+
+Operational camera-trap Occurrences are SAM3 animal proposals labeled by
+Resolve–Clear–Defer triage. The triage selects proposals for human review and
+resolves the remainder by similarity to reviewed examples; `labelProvenance`
+records the outcome on every row, with the triage round where recovered.
+
+| `labelProvenance` | `identificationVerificationStatus` | Occurrences |
+|:--|:--|--:|
+| `triage_reviewed` | `human-reviewed` | 1,760 |
+| `triage_resolved` | `machine-resolved` | 70,808 |
+| `triage_forced_1nn` | `machine-resolved` | 201 |
+| **Total** | | **72,769** |
+
+Forced nearest-neighbour labels did not meet the triage confidence rules and
+may be wrong; exclude them unless label noise is tolerable. Box geometry is
+never edited (`geometryProvenance = SAM3`), even when the label was human
+reviewed. The table keeps only reviewed or resolved animal proposals: cleared
+and background proposals, boxes with a shorter side below 32 px, boxes
+overlapping the per-resolution ROI mask, and frames on the privacy exclusion
+manifest are excluded, so **an image without an Occurrence is not evidence
+that no animal was present.** Twelve taxa occur: milu (Père David's) deer,
+Przewalski's horse, Canada goose, Sichuan takin, trumpeter swan, killdeer,
+European starling, barn swallow, and the broad labels bird, butterfly,
+dragonfly, and insect.
+
+A separate **human-reviewed reference set** of 2,067 boxes on 198 selected
+ungulate and waterfowl images (881 Canada goose, 627 milu deer, 349
+Przewalski's horse, 149 Sichuan takin, 61 trumpeter swan) is released beside,
+not inside, the Occurrence table. Taxonomy and geometry were both reviewed;
+1,552 boxes share a SAM3 proposal's geometry and 515 are human edits or
+additions, and the set is not filtered by the 32 px or ROI rules. The images
+were selected for review, so the set is not a random or exhaustive test split.
+Triage label accuracy against this reference set has not yet been reported.
+<!-- TODO(confirm-stats): add triage label accuracy vs. the 2,067-box reference set, or cite the Resolve–Clear–Defer paper's figures. -->
+
+### S9.2 Drone labels: operational table and seven-video reference set
+
+**Operational table.** The 318,203 machine drone Occurrences remain
+first-generation labels: a SAM3 box on every 15th frame with a top-1 BioCLIP
+Tree-of-Life taxon. The only measured accuracy for that labeler comes from
+human-annotated camera-trap subsets:
 
 | Analysis | Level | n | Precision | Recall | F1 / accuracy |
 |:--|:--|--:|--:|--:|--:|
-| Camera-trap animal localization | IoU ≥ 0.50 | 1,125 | 0.866 | 0.845 | 0.856 |
+| SAM3 animal localization, camera traps | IoU ≥ 0.50 | 1,125 | 0.866 | 0.845 | 0.856 |
 | Tree-of-Life taxonomic assignment | class | 951 | | | 0.845 |
 | | order | 951 | | | 0.660 |
 | | family | 951 | | | 0.463 |
@@ -336,25 +396,114 @@ practitioner adopting today's best tooling would obtain.
 Usable statement: **class-rank labels support screening and triage; species-rank
 labels require curation; anything aggregating across ranks is uninterpretable.**
 A single headline accuracy anywhere in the 0.27–0.85 range would mislead.
-
 Corroborating evidence: the taxonomy crosswalk holds **12,577 label keys**, of
 which only **4** consist entirely of expert-verified records and 16 contain
-accepted names with mixed verification evidence. A 500-record balanced priority
-review queue remains outstanding.
+accepted names with mixed verification evidence.
 
-### S9.2 Verification status distribution
+**Seven-video reference set.** Seven drone videos were human-annotated on
+1,089 sampled frames for four focal classes, with onager observations
+excluded: `20250703_parrotanafi_1`, `_2`, `_5` (C1), `20250811_DJI_01`,
+`20250818_parrot_01`, `_02`, and `20250825_parrot_01` (C2). The corrected
+reference holds **27,159** four-class boxes (the localization audit below was
+run against 27,180 before the final manual review): Père David's deer 21,177,
+Sichuan takin 3,293, Przewalski's horse 2,066, Canada goose 644. It is
+delivered as COCO JSON with provenance, a frame-to-proposal mapping, and the
+audit files. <!-- TODO(release): confirm the path of the seven-video reference set in the drone dataset. -->
+
+SAM3 localization against the reference (35,312 proposals, one-to-one
+matching):
+
+| IoU | Precision | Recall | F1 |
+|:--|--:|--:|--:|
+| 0.25 | 0.758 | 0.985 | 0.856 |
+| 0.50 | 0.749 | 0.973 | 0.847 |
+| 0.75 | 0.740 | 0.961 | 0.836 |
+
+Per-class recall at IoU 0.25: Przewalski's horse 0.961, Père David's deer
+0.985, Sichuan takin 0.993, Canada goose 1.000. Per-video recall at IoU 0.25
+ranges from 0.958 (`20250818_parrot_02`) to 0.999 (`20250825_parrot_01`).
+
+Resolve–Clear–Defer prototype triage was then run over the full proposal pool
+(seed 3, density-moderated k-center acquisition, calibrated rule k = 5,
+τ_fg = 4, τ_bg = 4). It spent 100 proposals on calibration and 1,610 on
+expert review (4.6% of the 35,212-proposal evaluation pool), handled the
+remaining 33,602 automatically, and got 28,040 of those right: 79.6% of the
+evaluation pool, or 83.5% of the automatic decisions. Zero proposals were left
+deferred.
+
+Four-species classification on the 25,897 matched, unreviewed foreground
+instances (78.4% Père David's deer, so always-deer scores 0.784 accuracy):
+
+| Method | Precision | Recall | F1 | Accuracy | Macro-F1 |
+|:--|--:|--:|--:|--:|--:|
+| Prototype triage, automatic decisions only | 0.913 | 0.850 | 0.880 | 0.850 | 0.789 |
+| BioCLIP 2 zero-shot, four prompts | 0.167 | 0.167 | 0.167 | 0.167 | 0.230 |
+| Tree-of-Life, open-world, exact focal-taxon match | 0.947 | 0.037 | 0.071 | 0.037 | 0.188 |
+
+Species-wise recall for triage: Père David's deer 0.918, Przewalski's horse
+0.687, Canada goose 0.590, Sichuan takin 0.551. The dominant automatic errors
+are wrong-species resolves into Père David's deer (takin 1,287, horse 595,
+goose 100) and 1,584 deer cleared as background. Read the table carefully:
+Tree-of-Life is evaluated open-world, so its 0.037 recall is exact top-1
+recognition of a focal taxon under an unconstrained vocabulary, not animal
+recognition accuracy; BioCLIP 2 zero-shot always answers one of four prompts
+and has no background option; triage abstentions count as no prediction. All
+figures are proposal-level repeated observations from seven videos, not
+independent animals.
+
+**Manual European starling supplement.** Twelve human-added *Sturnus vulgaris*
+boxes on one frame (`20250703_parrotanafi_2` / `VID_002`, frame 1320) were
+appended to the drone Occurrence table on 2026-11-01 with
+`basisOfRecord = HumanObservation`,
+`identificationVerificationStatus = human-supported; limited-resolution`, and
+remarks stating that no SAM3 proposal, embedding, or triage decision was
+involved.
+The identification rests on limited pixels in a single frame and should be
+interpreted cautiously. These records are excluded from the 27,159-box
+reference, the localization audit, the triage calibration and evaluation, and
+the species-classification comparison; none of the numbers above change if
+they are dropped. The 12 rows were appended twice (24 rows, 12 distinct
+`occurrenceID`s) in both the drone and merged tables (defect 21, repaired in the release build).
+
+### S9.3 Verification status distribution
+
+Counts are per table, because the vocabularies differ. The merged table below
+is the pre-update state (2026-11-01), before the camera rows were regenerated
+from the post-triage tables (defect 22, resolved 2026-11-08).
+
+Merged `occurrences_all_modalities.csv` as of 2026-11-01:
+
+| Modality | Status | Records |
+|:--|:--|--:|
+| Camera traps (first generation) | `unverified` | 223,203 |
+| | `validated` | 946 |
+| Bioacoustics | `unverified` | 9,960 |
+| Drones | `unverified` | 317,559 |
+| | `validated` | 644 |
+| | `human-supported; limited-resolution` | 24 (12 distinct records; defect 21) |
+| Citizen science | `verified by expert` | 622 |
+| Text data | `verified by expert` | 30 |
+| **Total** | | **552,988** |
+
+Post-triage camera-trap Occurrence table (the released camera dataset):
 
 | Status | Records | Share |
 |:--|--:|--:|
-| `unverified` (machine prediction) | 550,722 | 99.6% |
-| `validated` (human review) | 1,590 | 0.29% |
-| `verified by expert` | 652 | 0.12% |
+| `machine-resolved` | 71,009 | 97.6% |
+| `human-reviewed` | 1,760 | 2.4% |
 
 `validated` = 946 camera-trap + 644 drone bird records from the curated
-goose/swan review set (added 2026-09-20). `verified by expert` = all 622
-citizen-science + 30 text-data records.
+goose/swan review set (added 2026-09-20). The 946 camera records belong to the
+first-generation camera table and are not carried into the post-triage
+Occurrence table; the 2,067-box reference set takes their role.
+`verified by expert` = all 622 citizen-science + 30 text-data records.
 
-### S9.3 Why this must be published
+A verification floor is one predicate: treat `unverified` and
+`machine-resolved` as machine labels; `human-reviewed`, `validated`, and
+`verified by expert` as person-reviewed; and `human-supported;
+limited-resolution` as person-reviewed but low confidence.
+
+### S9.4 Why this must be published
 
 1. A taxon string is not reproducible without the model that produced it. Two
    versions of the same classifier yield different taxa from the same image.
@@ -386,7 +535,7 @@ the check tested for null/empty and `"nan"` is neither.
 | `TheWilds_2025_drone_20250811_DJI_01`, `..._parrot_01` (`SensorDeployment`) | — |
 | **Total** | **41,524** (13.1% of drone Occurrences) |
 
-**Repair (snapshot `darwin_core_latest_20261008`).** `eventDate` was restored to
+**Repair (release build 2026-10-22).** `eventDate` was restored to
 `2025-08-11` from the flight identifier and marked as identifier-derived.
 `eventTime` is left blank: neither the DJI telemetry nor the video containers
 retain a trustworthy capture time, and no time was synthesized from file
@@ -487,6 +636,12 @@ timestamp. Validator coverage should be reported, not assumed.
 \* the 2025-08-11 session has a date but no time of day, so it contributes no
 hourly bin (S10). Camera dates and bins use the corrected timestamps of the
 release build (439 curated records re-timed).
+
+Camera-trap figures here are the first-generation table in the merged
+snapshot. The released post-triage camera dataset has 19,762 Events (1
+`Project`, 12 `SensorDeployment`, 19,749 `Image`) and 72,769 Occurrences, and
+the drone table gained 12 manual starling records on 2026-11-01 (S9, defects
+21–22).
 
 ---
 
@@ -616,47 +771,49 @@ This asymmetry is requirement R7 in the paper.
 
 Darwin Core generation:
 
+The scripts live in the SmartWilds code repository (`scripts/`). Set
+`SMARTWILDS_ARCHIVE` to the root of the field archive before running them; see
+`scripts/README.md`.
+
 ```bash
-python processing_output/darwin_core_latest_20261008/scripts/\
-generate_darwin_core_latest_20261008.py --force
-python processing_output/darwin_core_latest_20261008/scripts/generate_arrival_traces_v2.py
-python release/scripts/build_hf_release.py   # per-modality release packages
+python scripts/darwin_core/generate_darwin_core.py --force
+python scripts/arrival_traces/generate_arrival_traces_v2.py
 ```
 
 Camera-trap georeferencing:
 
 ```bash
-python processing_output/darwin_core_latest_20261008/scripts/georeferencing/\
-geolocate_camera_trap_treeoflife_predictions.py \
-  --input-dir  processing_output/detections/camera_traps/methods_paper/annotations/sam3/treeoflife_sam3/predictions \
-  --config-csv processing_output/darwin_core_latest_20261008/scripts/georeferencing/camera_geolocation_config.csv \
-  --output-dir processing_output/detections/camera_traps/methods_paper/annotations/sam3/treeoflife_sam3/geolocation/geolocated_predictions \
+python scripts/georeferencing/geolocate_camera_trap_treeoflife_predictions.py \
+  --input-dir  <archive>/processing_output/detections/camera_traps/methods_paper/annotations/sam3/treeoflife_sam3/predictions \
+  --config-csv scripts/georeferencing/camera_geolocation_config.csv \
+  --output-dir <archive>/processing_output/detections/camera_traps/methods_paper/annotations/sam3/treeoflife_sam3/geolocation/geolocated_predictions \
   --overwrite
 ```
 
 Drone georeferencing:
 
 ```bash
-python processing_output/darwin_core_latest_20261008/scripts/georeferencing/\
-geolocate_drone_treeoflife_predictions.py \
+python scripts/georeferencing/geolocate_drone_treeoflife_predictions.py \
   --prediction-dir <SAM3 per-video prediction CSVs> \
-  --detection-dir  processing_output/detections/drones \
-  --config-csv     processing_output/darwin_core_latest_20261008/scripts/georeferencing/drone_projection_config.csv \
-  --output-dir     processing_output/detections/drones/geolocation/geolocated_predictions \
+  --detection-dir  <archive>/processing_output/detections/drones \
+  --config-csv     scripts/georeferencing/drone_projection_config.csv \
+  --output-dir     <archive>/processing_output/detections/drones/geolocation/geolocated_predictions \
   --overwrite
 ```
 
-### S14.1 Snapshot discipline
+### S14.1 Release discipline
 
-Snapshots are dated, immutable directories. Every mutation retains a
-before-copy and emits a JSON audit record. Snapshots differ **semantically**,
+Integration passes are dated and immutable. Every mutation retains a
+before-copy and emits a JSON audit record. Passes differ **semantically**,
 not just additively — different visual-label semantics, corrected timestamps —
-so comparing numbers across snapshots is invalid in a way that is not visible in
-the numbers. **Any figure or table must name the snapshot it was computed from.**
+so comparing numbers across passes is invalid in a way that is not visible in
+the numbers. **Any figure or table must name the release build it was computed
+from.**
 
-Snapshot `darwin_core_latest_20261008` supersedes `20260724`; each of its
-repairs (S10, S3, S4, S16) has its own JSON audit record. The 2026-09-20
-curated-bird update is reconstructible from:
+The 2026-10-22 release build supersedes the 2026-07-24 pass; each of its
+repairs (S10, S3, S4, S16) has its own JSON audit record, shipped under
+`metadata/provenance/`. The 2026-09-20 curated-bird update is reconstructible
+from:
 
 - `curated_bird_dwc_update_audit_20260920_015706.json`
 - `curated_bird_event_sync_audit_20260920_020046.json`
@@ -674,12 +831,14 @@ publication. Contact: Jenna M. Kline (kline.377@osu.edu).
 
 ## S16. Defect inventory, in full
 
-Every defect class found while integrating the SmartWilds campaigns (snapshot
-`darwin_core_latest_20261008`, release build 2026-10-22). **Detected by** is
+Every defect class found while integrating the SmartWilds campaigns (release
+build 2026-10-22; camera tables updated 2026-11-08). **Detected by** is
 what made the defect visible, grouped into five families: an external record
 (service log, field note, platform documentation), a redundant encoding inside
 the data, a cross-check between two artifacts, human inspection, or nothing.
 Rows 19-20 had no second record and could be bounded but not repaired.
+Rows 21-22 were found after the 2026-11-01 annotation update and were
+repaired in the release build (row 21) and the 2026-11-08 camera update (row 22).
 
 | # | Defect | Mod. | Scope | Detected by (family) | Repair | Residual risk |
 |---:|---|---|---|---|---|---|
@@ -696,10 +855,12 @@ Rows 19-20 had no second record and could be bounded but not repaired.
 | 11 | Heterogeneous telemetry schemas | Drone | 3 platforms, 3 formats, feet vs. metres | Platform documentation (External record) | Per-platform field mapping with unit conversion | Mapping assumptions per platform |
 | 12 | Drone video not processed | Drone | 1 / 39 raw videos | File inventory vs. event table (Cross-check) | Reviewed (no usable content); retained as a zero-Occurrence `MediaEvent` | --- |
 | 13 | Media references to purged scratch workspace | Drone | 16,069 frame paths, 307,260 Occ. | Resolving every `associatedMedia` path (Cross-check) | Replaced with the retained original video, flagged as a video-level fallback | Frame-level media link lost for those rows |
-| 14 | Unreviewed fine-rank taxon labels | Cam, Drone | 550,722 Occ. (99.6%) | Human-annotated validation subsets (Human inspection) | Status set to `unverified`; accuracy reported per rank | Species-rank labels include implausible taxa |
+| 14 | Unreviewed fine-rank taxon labels | Cam, Drone | Merged snapshot: 550,722 Occ. `unverified` (99.6%); post-triage camera table: 71,009 Occ. `machine-resolved` (97.6%) | Human-annotated validation subsets (Human inspection) | Camera labels replaced by embedding-based triage with human review and a 2,067-box reference set (S9.1); drone labels kept `unverified`, with a seven-video human-annotated reference set (S9.2); accuracy reported per rank and per method | Drone species-rank labels include implausible taxa; triage label accuracy against the camera reference set not yet reported |
 | 15 | Null written as the string `nan` | Drone | 41,524 / 318,203 Occ. (13.1%); 5 Events + 2 deployments | Date redundantly encoded in the `eventID` (Redundant encoding in data) | Date restored from the identifier and flagged as derived; time left blank | 2025-08-11 session absent from intra-day analysis (paper §sentinel values; S10) |
 | 16 | Impossible drone coordinates (`nan`, longitude ≈500) | Drone | 7 Events | Domain check on coordinate pairs (Cross-check) | Valid static video location if inside study area, else blank | Those Events lack a flight-level position |
 | 17 | Curated records bypassed timestamp correction | Cam | 439 / 946 curated Occ. | Occurrence date outside parent deployment interval (Cross-check) | Re-timed from the corrected camera timestamp map (release build 2026-10-22) | --- |
 | 18 | Root Event row absent from Event table | All | 1 dangling `parentEventID` | Referential check over the Event table (Cross-check) | Study root Event added; parent links validated | --- |
 | 19 | Within-card clock drift | Cam | Up to 130,290 images | *none* (None (recorded once)) | Constant clock rate assumed | Unquantifiable timestamp error |
 | 20 | True deployment / retrieval times | Cam | Deployment metadata known to contain errors | *none beyond the erroneous records* (None (recorded once)) | Corrected occurrence dates used instead | True camera-days not reportable |
+| 21 | Manual starling supplement appended twice | Drone | 24 rows / 12 distinct `occurrenceID`s in the drone and merged Occurrence tables (2026-11-01) | Duplicate `occurrenceID` check (Cross-check) | Repaired in the release build: the 12 exact duplicate rows are dropped, leaving every `occurrenceID` unique (318,215 drone Occurrences) | --- |
+| 22 | Merged snapshot and camera release disagree on camera labels | Cam | 224,149 first-generation vs 72,769 post-triage Occ.; 13 vs 19,762 camera Events | Row-count parity between the camera release tables and the merged table (Cross-check) | Not yet repaired; regenerate the merged snapshot and the camera detection-layer arrival traces from the post-triage tables | Cross-modal totals (552,964) and camera detection-layer traces describe the first-generation labels |

@@ -9,7 +9,7 @@ import csv
 import os
 from pathlib import Path
 
-ROOT = Path("/fs/ess/PAS2136/TheWilds2025")
+ROOT = Path(os.environ.get("SMARTWILDS_ARCHIVE", ".")).resolve()  # field archive root
 OUT = Path(__file__).resolve().parent
 CAMPAIGNS = ["thewilds_20250630_20250703", "thewilds_20250804_20250828", "thewilds_20250908_20250908"]
 IMG = {".jpg", ".jpeg"}

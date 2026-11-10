@@ -1,11 +1,13 @@
 # SmartWilds defect inventory
 
-Every defect class found while integrating the SmartWilds campaigns (snapshot
-`darwin_core_latest_20261008`, release build 2026-10-22). **Detected by** is
+Every defect class found while integrating the SmartWilds campaigns (release
+build 2026-10-22; camera tables updated 2026-11-08). **Detected by** is
 what made the defect visible, grouped into five families: an external record
 (service log, field note, platform documentation), a redundant encoding inside
 the data, a cross-check between two artifacts, human inspection, or nothing.
 Rows 19-20 had no second record and could be bounded but not repaired.
+Rows 21-22 were found after the 2026-11-01 annotation update and were
+repaired in the release build (row 21) and the 2026-11-08 camera update (row 22).
 
 | # | Defect | Mod. | Scope | Detected by (family) | Repair | Residual risk |
 |---:|---|---|---|---|---|---|
@@ -22,10 +24,12 @@ Rows 19-20 had no second record and could be bounded but not repaired.
 | 11 | Heterogeneous telemetry schemas | Drone | 3 platforms, 3 formats, feet vs. metres | Platform documentation (External record) | Per-platform field mapping with unit conversion | Mapping assumptions per platform |
 | 12 | Drone video not processed | Drone | 1 / 39 raw videos | File inventory vs. event table (Cross-check) | Reviewed (no usable content); retained as a zero-Occurrence `MediaEvent` | --- |
 | 13 | Media references to purged scratch workspace | Drone | 16,069 frame paths, 307,260 Occ. | Resolving every `associatedMedia` path (Cross-check) | Replaced with the retained original video, flagged as a video-level fallback | Frame-level media link lost for those rows |
-| 14 | Unreviewed fine-rank taxon labels | Cam, Drone | 550,722 Occ. (99.6%) | Human-annotated validation subsets (Human inspection) | Status set to `unverified`; accuracy reported per rank | Species-rank labels include implausible taxa |
+| 14 | Unreviewed fine-rank taxon labels | Cam, Drone | Merged snapshot: 550,722 Occ. `unverified` (99.6%); post-triage camera table: 71,009 Occ. `machine-resolved` (97.6%) | Human-annotated validation subsets (Human inspection) | Camera labels replaced by embedding-based triage with human review and a 2,067-box reference set (S9.1); drone labels kept `unverified`, with a seven-video human-annotated reference set (S9.2); accuracy reported per rank and per method | Drone species-rank labels include implausible taxa; triage label accuracy against the camera reference set not yet reported |
 | 15 | Null written as the string `nan` | Drone | 41,524 / 318,203 Occ. (13.1%); 5 Events + 2 deployments | Date redundantly encoded in the `eventID` (Redundant encoding in data) | Date restored from the identifier and flagged as derived; time left blank | 2025-08-11 session absent from intra-day analysis (paper §sentinel values; S10) |
 | 16 | Impossible drone coordinates (`nan`, longitude ≈500) | Drone | 7 Events | Domain check on coordinate pairs (Cross-check) | Valid static video location if inside study area, else blank | Those Events lack a flight-level position |
 | 17 | Curated records bypassed timestamp correction | Cam | 439 / 946 curated Occ. | Occurrence date outside parent deployment interval (Cross-check) | Re-timed from the corrected camera timestamp map (release build 2026-10-22) | --- |
 | 18 | Root Event row absent from Event table | All | 1 dangling `parentEventID` | Referential check over the Event table (Cross-check) | Study root Event added; parent links validated | --- |
 | 19 | Within-card clock drift | Cam | Up to 130,290 images | *none* (None (recorded once)) | Constant clock rate assumed | Unquantifiable timestamp error |
 | 20 | True deployment / retrieval times | Cam | Deployment metadata known to contain errors | *none beyond the erroneous records* (None (recorded once)) | Corrected occurrence dates used instead | True camera-days not reportable |
+| 21 | Manual starling supplement appended twice | Drone | 24 rows / 12 distinct `occurrenceID`s in the drone and merged Occurrence tables (2026-11-01) | Duplicate `occurrenceID` check (Cross-check) | Repaired in the release build: the 12 exact duplicate rows are dropped, leaving every `occurrenceID` unique (318,215 drone Occurrences) | --- |
+| 22 | Merged snapshot and camera release disagree on camera labels | Cam | 224,149 first-generation vs 72,769 post-triage Occ.; 13 vs 19,762 camera Events | Row-count parity between the camera release tables and the merged table (Cross-check) | Resolved 2026-11-08: merged tables and camera detection-layer arrival traces regenerated from the post-triage camera tables (72,775 camera Occ., 19,785 camera Events; 401,602 merged Occ., 22,242 merged Events). See `CAMERA_TRAP_RELEASE.md` | --- |

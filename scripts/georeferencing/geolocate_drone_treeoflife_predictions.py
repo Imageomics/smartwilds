@@ -46,13 +46,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--prediction-dir",
         type=Path,
-        default=Path("/fs/ess/PAS2699/object_detection_datasets/smartwilds/sam3_output_as_coco/predictions_by_video"),
+        required=True,
         help="Directory containing per-video *.treeoflife_predictions.csv files.",
     )
     parser.add_argument(
         "--detection-dir",
         type=Path,
-        default=Path("/fs/ess/PAS2136/TheWilds2025/processing_output/detections/drones"),
+        required=True,
         help="Directory containing processed *_detections.csv files with pose metadata.",
     )
     parser.add_argument(

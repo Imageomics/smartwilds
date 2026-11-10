@@ -22,7 +22,7 @@ from PIL import Image, ImageDraw, ImageOps
 
 D = Path(__file__).resolve().parent
 RES = D / "results"
-ROOT = "/fs/ess/PAS2136/TheWilds2025/"
+ROOT = os.path.abspath(os.environ.get("SMARTWILDS_ARCHIVE", ".")) + "/"  # field archive root
 CONF = 0.2
 MIN_ID_PX = 80
 

@@ -10,10 +10,13 @@
 #SBATCH --mem=32G
 #SBATCH --time=06:00:00
 #SBATCH --array=0-5
-#SBATCH --output=/fs/ess/PAS2136/TheWilds2025/release/screening/logs/%A_%a.out
+#SBATCH --output=logs/%A_%a.out
 
+# Run from the screening directory: it must hold md_v5a.0.0.pt, the
+# images_shard*.txt / videos.txt lists from make_lists.py, and a .venv with
+# the packages listed in requirements.txt (megadetector, av, imageio-ffmpeg).
 set -euo pipefail
-D=/fs/ess/PAS2136/TheWilds2025/release/screening
+D=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 PY=$D/.venv/bin/python
 cd $D
 mkdir -p results

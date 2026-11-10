@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-Generate the July 2026 Darwin Core snapshot for The Wilds 2025.
+Generate the Darwin Core Event and Occurrence tables for The Wilds 2025.
 
 This script uses the existing modality-specific Darwin Core generators as the
-schema/style reference, but writes a fresh non-destructive snapshot under:
-
-  processing_output/darwin_core_latest_20261008/
+schema/style reference, but writes a fresh non-destructive set of tables under
+``SMARTWILDS_DWC_OUT`` (default ``<archive>/processing_output/darwin_core_release``).
+The field archive root is read from ``SMARTWILDS_ARCHIVE``; the external
+SAM3/BioCLIP detection workspace from ``SMARTWILDS_DETECTIONS``.
 
 Key updates relative to the earlier outputs:
   - camera traps are regenerated from SAM3 + BioCLIP Tree-of-Life prediction
@@ -25,6 +26,7 @@ import argparse
 import csv
 import json
 import math
+import os
 import re
 import shutil
 from collections import Counter, defaultdict
@@ -32,9 +34,9 @@ from datetime import date, datetime
 from pathlib import Path
 
 
-BASE_DIR = Path("/fs/ess/PAS2136/TheWilds2025")
-OUT_DIR = BASE_DIR / "processing_output" / "darwin_core_latest_20261008"
-SMARTWILDS_DIR = Path("/fs/ess/PAS2699/object_detection_datasets/smartwilds")
+BASE_DIR = Path(os.environ.get("SMARTWILDS_ARCHIVE", ".")).resolve()
+OUT_DIR = Path(os.environ.get("SMARTWILDS_DWC_OUT", BASE_DIR / "processing_output" / "darwin_core_release"))
+SMARTWILDS_DIR = Path(os.environ.get("SMARTWILDS_DETECTIONS", BASE_DIR / "detections_external"))
 
 EVENT_FIELDS = [
     "eventID", "parentEventID", "eventType", "eventDate", "samplingProtocol",
@@ -1145,7 +1147,7 @@ def validate_snapshot() -> list[str]:
 
 def write_qc_summary(counts: dict[str, tuple[int, int]], merged: tuple[int, int]) -> None:
     lines = [
-        "# Darwin Core Latest Snapshot - 2026-07-24",
+        "# Darwin Core QC Summary",
         "",
         f"Generated: {datetime.now().isoformat(timespec='seconds')}",
         "",
@@ -1195,7 +1197,7 @@ def main() -> None:
     ])
     merged = merge_outputs()
     write_qc_summary(counts, merged)
-    print(f"Wrote latest Darwin Core snapshot to {OUT_DIR}")
+    print(f"Wrote Darwin Core tables to {OUT_DIR}")
     for modality, (events, occ) in counts.items():
         print(f"  {modality}: events={events}, occurrences={occ}")
     print(f"  merged: events={merged[0]}, occurrences={merged[1]}")

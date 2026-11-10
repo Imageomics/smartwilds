@@ -12,7 +12,7 @@ authors:
     given-names: Elizabeth G.
     affiliation: The Ohio State University
 license: MIT
-repository-code: "https://github.com/Imageomics/smartwilds"  # TODO: confirm repo name
+repository-code: "https://github.com/Imageomics/smartwilds"
 preferred-citation:
   type: article
   title: "SmartWilds: Integrating, Aligning, and Documenting Multi-Modal Field Sensing Data"

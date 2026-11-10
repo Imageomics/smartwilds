@@ -10,6 +10,7 @@ Usage: screen_videos.py videos.txt out.jsonl [--task i --ntasks n]
 """
 import argparse
 import json
+import os
 import sys
 
 import cv2
@@ -23,7 +24,7 @@ PERSON = "2"
 ap = argparse.ArgumentParser()
 ap.add_argument("videos")
 ap.add_argument("out")
-ap.add_argument("--weights", default="/fs/ess/PAS2136/TheWilds2025/release/screening/md_v5a.0.0.pt")
+ap.add_argument("--weights", default=os.environ.get("MEGADETECTOR_WEIGHTS", "md_v5a.0.0.pt"))
 ap.add_argument("--task", type=int, default=0)
 ap.add_argument("--ntasks", type=int, default=1)
 args = ap.parse_args()

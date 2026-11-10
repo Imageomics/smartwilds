@@ -21,6 +21,7 @@ Usage:
   trim_drones.py apply   # trims ONLY rows with approved=yes; writes copies to
                          # release/media_scrubbed/ and results/drone_trims.csv
 """
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -32,8 +33,8 @@ import pandas as pd
 
 D = Path(__file__).resolve().parent
 RES = D / "results"
-ROOT = "/fs/ess/PAS2136/TheWilds2025/"
-OUT_ROOT = Path(ROOT) / "release/media_scrubbed"
+ROOT = os.path.abspath(os.environ.get("SMARTWILDS_ARCHIVE", ".")) + "/"  # field archive root
+OUT_ROOT = Path(os.environ.get("SMARTWILDS_SCRUBBED_MEDIA", Path(ROOT) / "release/media_scrubbed"))
 CONF, EDGE_S, MARGIN_S = 0.2, 120.0, 2.0
 
 
@@ -45,7 +46,8 @@ def keyframes(path):
         return sorted(ks), dur, float(v.average_rate), v.frames
 
 
-STAGED = Path(ROOT) / "release/hf_smartwilds_20261022/smartwilds-drones"
+# The staged drone dataset (data/detections.csv, data/occurrences.csv).
+STAGED = Path(os.environ.get("SMARTWILDS_RELEASE", Path(ROOT) / "release")) / "smartwilds-drones"
 
 
 def screened_drone_frames():
@@ -69,7 +71,7 @@ def screened_drone_frames():
 
 
 def labels_by_video():
-    """Labelled drone detections per source video: frame index, taxon, status.
+    """Labeled drone detections per source video: frame index, taxon, status.
     Machine detections come from data/detections.csv; the 644 curated goose
     records carry their frame only in the lake_json reference."""
     det = pd.read_csv(STAGED / "data/detections.csv", dtype={"frame_index": "Int64"})
