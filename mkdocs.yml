@@ -69,11 +69,11 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Data:
-    - Overview: data/overview.md
-    - Joining in space and time: data/joining.md
-    - Darwin Core tables: data/darwin-core-tables.md
-    - Dataset cards: data/dataset-cards.md
-    - Field campaigns: data/field-campaigns.md
+    - Overview: datasets/overview.md
+    - Joining in space and time: datasets/joining.md
+    - Darwin Core tables: datasets/darwin-core-tables.md
+    - Dataset cards: datasets/dataset-cards.md
+    - Field campaigns: datasets/field-campaigns.md
     - Camera-trap release note: CAMERA_TRAP_RELEASE.md
     - Supplemental material: SUPPLEMENTAL.md
     - Defect inventory: DEFECT_INVENTORY.md

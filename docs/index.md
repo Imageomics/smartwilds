@@ -7,7 +7,7 @@ recorders, drones, and visitor photographs at [The Wilds](https://thewilds.colum
 (Cumberland, Ohio) in summer 2025. This repository is about the **metadata**:
 how four independently collected sensor streams were integrated into one
 Darwin Core release, how their clocks and coordinates were repaired so they can
-be [joined in space and time](data/joining.md), what was found wrong with the
+be [joined in space and time](datasets/joining.md), what was found wrong with the
 data and how it was fixed, and how LLM coding agents did much of that
 documentation work.
 
@@ -39,11 +39,11 @@ the [SmartWilds collection](https://huggingface.co/collections/imageomics/smartw
 
 | Part | Where |
 |---|---|
-| How to join the modalities | [Joining in space and time](data/joining.md) |
-| Darwin Core tables (current build) | [`darwin_core/`](data/darwin-core-tables.md) |
-| Dataset cards for the five SmartWilds datasets | [`metadata/`](data/dataset-cards.md) |
+| How to join the modalities | [Joining in space and time](datasets/joining.md) |
+| Darwin Core tables (current build) | [`darwin_core/`](datasets/darwin-core-tables.md) |
+| Dataset cards for the five SmartWilds datasets | [`metadata/`](datasets/dataset-cards.md) |
 | Supplemental material, defect inventory, camera-trap release note | [`docs/`](SUPPLEMENTAL.md) |
-| Field notes, data summaries, campaign data reports | [`field_campaigns/`](data/field-campaigns.md) |
+| Field notes, data summaries, campaign data reports | [`field_campaigns/`](datasets/field-campaigns.md) |
 | Generation, validation, georeferencing, screening scripts | [`scripts/`](scripts/index.md) |
 | How the agents were used, and how to use them on your data | [Agents](agents/index.md) |
 
@@ -58,7 +58,7 @@ python examples/quickstart.py darwin_core/smartwilds-camera-traps darwin_core/sm
 
 The quickstart loads the tables, applies a verification floor, joins
 Occurrences to their Events, and summarizes them by deployment and by class.
-See [Using the data correctly](data/overview.md#using-the-data-correctly)
+See [Using the data correctly](datasets/overview.md#using-the-data-correctly)
 before computing anything from the Occurrence tables.
 
 ## Papers
