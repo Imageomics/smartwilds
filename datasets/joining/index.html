@@ -299,7 +299,7 @@
           
   
   
-  What the dataset enables
+  Applications
 
         </a>
       </li>
@@ -1118,7 +1118,7 @@
   <span class="md-ellipsis">
     
   
-    What the dataset enables
+    Applications
   
 
     
@@ -1134,7 +1134,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    What the dataset enables
+    Applications
   
 
           </label>
@@ -1539,8 +1539,11 @@ first, as shown in <a href="../darwin-core-tables/">Darwin Core tables</a>).</p>
 <ul>
 <li><strong>Camera clocks were wrong on 93.9% of images</strong> (defect 1). Use the
   corrected values; the burned-in overlay in the image shows the raw clock.</li>
-<li><strong>The 2025-08-11 drone flights have a date but no time</strong> (defect 15):
-  their <code>eventTime</code> is blank and they cannot be placed within the day.</li>
+<li><strong>The 2025-08-11 drone flights had a date but no time</strong> (defect 15). Their
+  times were recovered from the video container creation times, with the
+  clock convention settled against the field log (<code>provenance/drone_time_recovery_20250811.json</code>
+  in the drone dataset); the DJI convention is inferred, so treat those
+  times as minute-level.</li>
 <li><strong>Acoustic Events are recording windows</strong>, not instants: a 5- or
   15-minute WAV. An acoustic Occurrence's time is the recording start.</li>
 </ul>

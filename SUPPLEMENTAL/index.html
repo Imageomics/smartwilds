@@ -299,7 +299,7 @@
           
   
   
-  What the dataset enables
+  Applications
 
         </a>
       </li>
@@ -1490,7 +1490,7 @@
   <span class="md-ellipsis">
     
   
-    What the dataset enables
+    Applications
   
 
     
@@ -1506,7 +1506,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    What the dataset enables
+    Applications
   
 
           </label>
@@ -3371,7 +3371,7 @@ have standardized them.</p>
 <td style="text-align: right;">5</td>
 <td style="text-align: left;">Metadata unusable for a purpose</td>
 <td style="text-align: left;">Status/provenance column</td>
-<td style="text-align: left;">41,524 drone Occurrences with a date but no time of day (S10); 70,219 detections unprojectable (S6)</td>
+<td style="text-align: left;">70,219 drone detections unprojectable (S6); until 2026-11-10, 41,524 drone Occurrences with a date but no time of day (S10, since recovered)</td>
 </tr>
 <tr>
 <td style="text-align: right;">6</td>
@@ -3828,11 +3828,25 @@ the check tested for null/empty and <code>"nan"</code> is neither.</p>
 </table>
 <p><strong>Repair (release build 2026-10-22).</strong> <code>eventDate</code> was restored to
 <code>2025-08-11</code> from the flight identifier and marked as identifier-derived.
-<code>eventTime</code> is left blank: neither the DJI telemetry nor the video containers
-retain a trustworthy capture time, and no time was synthesized from file
-modification times. These records can be placed on a day but not within it,
-and they are excluded from inter-arrival and diurnal analyses. Drones flew on
-6 dates; the old count of 7 included the string <code>nan</code>.</p>
+Drones flew on 6 dates; the old count of 7 included the string <code>nan</code>.</p>
+<p><strong>Time recovery (2026-11-10).</strong> The processed telemetry had no clock, but the
+five video containers carry a creation time. Whether an aircraft writes UTC or
+local time into that field is airframe-specific, so it was settled against
+flights with independently known times: the Parrot Anafi writes UTC (its
+2025-08-18 video agrees with the telemetry file name to within 2 s), and the
+DJI Air 2 writes UTC (its 2025-09-08 video agrees with the telemetry's
+<code>datetime(utc)</code>). The 2025-08-11 Parrot videos therefore started at 09:12:43,
+09:14:19, and 09:19:55 local. The DJI Mavic 3 videos read 10:29:39 and
+10:31:32; read as UTC that would be 06:29, before anyone was on site, so this
+airframe wrote local time, which the telemetry export file name
+(<code>…_[10-29-13]</code>) and the field log also support. The field log places the
+Parrot flight at Stop 1 (Nomad Ridge, lake survey) and the DJI at the dock,
+Stop 5; the JotForm check-ins run 09:32 to 10:48. <code>eventTime</code> is now set for
+the 5 <code>MediaEvent</code>s and 2 flights (start/end intervals) and for all 41,524
+Occurrences (video start + <code>frame_index</code> / fps, to the second). The DJI
+convention is inferred rather than verified, so those times should be read as
+minute-level. The record is <code>metadata/provenance/drone_time_recovery_20250811.json</code>
+in the drone dataset.</p>
 <p>The same audit found impossible coordinates (<code>nan</code>, longitude ≈ 500) on seven
 drone Events, now replaced with a validated static video location or left
 blank, and a missing study-root Event <code>TheWilds_2025</code>, now added.</p>
@@ -3985,7 +3999,7 @@ timestamp. Validator coverage should be reported, not assumed.</p>
 <td style="text-align: right;">55</td>
 <td style="text-align: right;">318,203</td>
 <td style="text-align: right;">6</td>
-<td style="text-align: right;">8*</td>
+<td style="text-align: right;">10*</td>
 <td style="text-align: right;">15</td>
 </tr>
 <tr>
@@ -4014,9 +4028,9 @@ timestamp. Validator coverage should be reported, not assumed.</p>
 </tr>
 </tbody>
 </table>
-<p>* the 2025-08-11 session has a date but no time of day, so it contributes no
-hourly bin (S10). Camera dates and bins use the corrected timestamps of the
-release build (439 curated records re-timed).</p>
+<p>* includes the 2025-08-11 session's bins after its times were recovered on
+2026-11-10 (S10); the integration pass had counted 8. Camera dates and bins use
+the corrected timestamps of the release build (439 curated records re-timed).</p>
 <p>Camera-trap figures here are the first-generation table in the merged
 snapshot. The released post-triage camera dataset has 19,762 Events (1
 <code>Project</code>, 12 <code>SensorDeployment</code>, 19,749 <code>Image</code>) and 72,769 Occurrences, and
@@ -4093,11 +4107,11 @@ inter-arrival times: −1 periodic, 0 Poisson, →1 maximally bursty.</p>
 </tr>
 <tr>
 <td style="text-align: left;">Drones</td>
-<td style="text-align: right;">53,238</td>
-<td style="text-align: right;">88.73</td>
-<td style="text-align: right;">229.61</td>
+<td style="text-align: right;">94,762</td>
+<td style="text-align: right;">157.94</td>
+<td style="text-align: right;">216.25</td>
 <td style="text-align: right;">+0.991</td>
-<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
 </tr>
 <tr>
 <td style="text-align: left;">Citizen science</td>
@@ -4111,8 +4125,9 @@ inter-arrival times: −1 periodic, 0 Poisson, →1 maximally bursty.</p>
 </table>
 <p>Detection streams count machine-derived Occurrences only; curated review
 records are excluded. Acoustic recordings include the 64 zero-detection WAVs.
-Excluded from timed statistics: 41,524 drone Occurrences (date but no time,
-S10). Every stream is released as a versioned trace (<code>analysis/arrival_traces_v2/</code>
+The drone row includes the 41,524 Occurrences of 2025-08-11 since their times
+were recovered (S10); before that recovery the stream had 53,238 Campaign-2
+arrivals at 88.73/hr, CV 229.61, B +0.991 over 2 dates. Every stream is released as a versioned trace (<code>analysis/arrival_traces_v2/</code>
 in the study-level dataset) with a source-record ID per arrival, inclusion rules,
 and input checksums; earlier unversioned arrival summaries are deprecated.
 Acquisition arrivals are not reconstructible for drones (per-frame times are not
@@ -4612,9 +4627,9 @@ repaired in the release build (row 21) and the 2026-11-08 camera update (row 22)
 <td>Null written as the string <code>nan</code></td>
 <td>Drone</td>
 <td>41,524 / 318,203 Occ. (13.1%); 5 Events + 2 deployments</td>
-<td>Date redundantly encoded in the <code>eventID</code> (Redundant encoding in data)</td>
-<td>Date restored from the identifier and flagged as derived; time left blank</td>
-<td>2025-08-11 session absent from intra-day analysis (paper §sentinel values; S10)</td>
+<td>Date redundantly encoded in the <code>eventID</code>; time from the video containers cross-checked against the field log (Redundant encoding in data; External record)</td>
+<td>Date restored from the identifier and flagged as derived (release build 2026-10-22); time of day recovered on 2026-11-10 from the video container creation times, with each aircraft's clock convention settled against reference flights and the field log and JotForm check-ins of the day (<code>provenance/drone_time_recovery_20250811.json</code>)</td>
+<td>DJI clock convention is inferred from the field schedule, not verified on a reference flight; treat those times as minute-level</td>
 </tr>
 <tr>
 <td style="text-align: right;">16</td>

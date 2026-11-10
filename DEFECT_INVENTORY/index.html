@@ -299,7 +299,7 @@
           
   
   
-  What the dataset enables
+  Applications
 
         </a>
       </li>
@@ -1026,7 +1026,7 @@
   <span class="md-ellipsis">
     
   
-    What the dataset enables
+    Applications
   
 
     
@@ -1042,7 +1042,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    What the dataset enables
+    Applications
   
 
           </label>
@@ -1499,9 +1499,9 @@ repaired in the release build (row 21) and the 2026-11-08 camera update (row 22)
 <td>Null written as the string <code>nan</code></td>
 <td>Drone</td>
 <td>41,524 / 318,203 Occ. (13.1%); 5 Events + 2 deployments</td>
-<td>Date redundantly encoded in the <code>eventID</code> (Redundant encoding in data)</td>
-<td>Date restored from the identifier and flagged as derived; time left blank</td>
-<td>2025-08-11 session absent from intra-day analysis (paper §sentinel values; S10)</td>
+<td>Date redundantly encoded in the <code>eventID</code>; time from the video containers cross-checked against the field log (Redundant encoding in data; External record)</td>
+<td>Date restored from the identifier and flagged as derived (release build 2026-10-22); time of day recovered on 2026-11-10 from the video container creation times, with each aircraft's clock convention settled against reference flights and the field log and JotForm check-ins of the day (<code>provenance/drone_time_recovery_20250811.json</code>)</td>
+<td>DJI clock convention is inferred from the field schedule, not verified on a reference flight; treat those times as minute-level</td>
 </tr>
 <tr>
 <td style="text-align: right;">16</td>
