@@ -4,13 +4,11 @@
 
 SmartWilds is a multi-modal sensing dataset recorded with camera traps, acoustic
 recorders, drones, and visitor photographs at [The Wilds](https://thewilds.columbuszoo.org/)
-(Cumberland, Ohio) in summer 2025. This repository is about the **metadata**:
-how four independently collected sensor streams were integrated into one Darwin
-Core release, how their clocks and coordinates were repaired so the modalities
-can be joined in space and time, what was found wrong with the data and how it
-was fixed, and how LLM coding agents did much of that documentation work. The
-raw images and recordings, and their labeling, are out of scope here; the raw
-files will be released in the future.
+(Cumberland, Ohio) in summer 2025. This repository holds the metadata: Darwin
+Core tables for all four modalities on one Event hierarchy, with corrected
+timestamps and coordinates so they can be joined in space and time, the record
+of every defect found and repaired, and the code that did it. Raw images and
+labels will be released soon.
 
 **Documentation site:** <https://imageomics.github.io/smartwilds/>
 
