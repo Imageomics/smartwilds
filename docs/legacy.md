@@ -6,13 +6,14 @@ Two earlier repositories preceded this one.
   public home of the field logs, the field collection protocols, the Google
   Earth site files, and the data-storage protocol. This repository links to it
   rather than duplicating them.
-- `Imageomics/wilds_multimodal_data` was the internal working repository. Its
-  history is preserved here under the `legacy/wilds_multimodal_data/` branch
-  prefix; `main` is the curated metadata release.
+- `Imageomics/wilds_multimodal_data` was the internal working repository. It
+  is preserved here on the [`legacy-wilds_multimodal_data`](https://github.com/Imageomics/smartwilds/tree/legacy-wilds_multimodal_data)
+  branch: one folder per former branch, with the full commit history in the
+  branch's ancestry. `main` is the curated metadata release.
 
 ## The Milu-deer activity project
 
-The camera-trap and acoustic analysis on the legacy branches belongs to a
+The camera-trap and acoustic analysis on the legacy branch belongs to a
 separate project by Bharath Pillai and Varun Viswapriyan on annotation-free
 verification of Milu (Père David's) deer activity, using deer calls and
 distance estimation. It has a workshop paper,
@@ -30,4 +31,4 @@ documentation guidelines (`guidelines/`), the dataset cards, the defect
 inventory, the supplemental material, and the cross-modal coordination
 analysis (`analysis/cross_modal_coordination/`) are in `main`. Labeling
 pipelines, model experiments, and raw experiment outputs stay on the legacy
-branches.
+branch.

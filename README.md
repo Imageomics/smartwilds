@@ -114,7 +114,7 @@ Person screening needs a GPU and MegaDetector v5a (`pip install megadetector`).
 
 Field logs and protocols live in [Imageomics/naturelab](https://github.com/Imageomics/naturelab).
 The earlier working repository, `Imageomics/wilds_multimodal_data`, is
-preserved here under the `legacy/wilds_multimodal_data/` branch prefix; see
+preserved on the `legacy-wilds_multimodal_data` branch; see
 [Related repositories](https://imageomics.github.io/smartwilds/legacy/).
 
 ## Citation
