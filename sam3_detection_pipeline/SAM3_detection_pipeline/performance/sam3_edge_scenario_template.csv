@@ -1,0 +1,5 @@
+scenario_id,policy,arrival_rate_images_per_sec,activation_fraction,burst_factor,slo_seconds,notes
+sam3_process_all_low,process-all,0.25,1.0,1.0,4.0,Edit these values with arrival rates from Experiment 1.
+sam3_process_all_burst,process-all,0.50,1.0,1.5,4.0,Models a burst where all drone events require SAM3.
+sam3_priority_drone,priority-based,0.50,1.0,1.0,2.0,Use for real-time drone detection latency targets.
+sam3_adaptive_secondary_25pct,adaptive,0.50,0.25,1.0,4.0,Only 25 percent of events trigger secondary processing.

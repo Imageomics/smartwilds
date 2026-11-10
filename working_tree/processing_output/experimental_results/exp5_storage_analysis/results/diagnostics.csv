@@ -1,0 +1,4 @@
+severity,artifact,issue
+warning,/fs/ess/PAS2136/TheWilds2025/processing_output/detections/camera_traps/all_images_summary.csv,Excluded from analysis because it repeats every deployment to the same row count and is not a trustworthy denominator for blank-rate estimates.
+info,TW01-CT02_20250630_20250703,Deployment duration came from camera_deployment_metadata.py because darwin_core_events.csv did not provide a matching row.
+info,TW07-CT05_20250804_20250828,"Metadata exists for this deployment, but no raw image files were found."

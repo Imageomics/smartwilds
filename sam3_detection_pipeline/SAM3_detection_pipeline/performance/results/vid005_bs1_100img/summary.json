@@ -1,0 +1,150 @@
+{
+  "benchmark_id": "vid005_bs1_100img",
+  "started_at": "2026-04-14T02:21:14.158433+00:00",
+  "finished_at": "2026-04-14T02:26:36.045690+00:00",
+  "system": {
+    "hostname": "a0321.ten.osc.edu",
+    "platform": "Linux-5.14.0-427.102.1.el9_4.x86_64-x86_64-with-glibc2.34",
+    "python_version": "3.12.12",
+    "torch_version": "2.7.0+cu126",
+    "cuda_available": true,
+    "device": "cuda",
+    "cuda_device_name": "NVIDIA A100-PCIE-40GB"
+  },
+  "config": {
+    "coco_json": "/fs/ess/PAS2699/object_detection_datasets/smartwilds_drones/20250703_parrotanafi_5/20250703_parrotanafi_5_VID_005_frames/VID_005_annotations.json",
+    "image_root": "/fs/ess/PAS2699/object_detection_datasets/smartwilds_drones/20250703_parrotanafi_5/20250703_parrotanafi_5_VID_005_frames",
+    "output_dir": "/fs/ess/PAS2699/object_detection_datasets/smartwilds_drones/outputs/sam3_hf_benchmarks/vid005_bs1_100img",
+    "tag": "vid005_bs1_100img",
+    "max_images": 100,
+    "sample_mode": "first",
+    "sample_stride": 1,
+    "random_seed": 42,
+    "warmup_batches": 1,
+    "batch_size": 1,
+    "model_id": "facebook/sam3",
+    "prompts": [
+      "animal",
+      "person",
+      "vehicle"
+    ],
+    "confidence_threshold": 0.5,
+    "mask_threshold": 0.5,
+    "nms_iou": 0.5,
+    "return_masks": false,
+    "enable_bioclip": false,
+    "bioclip_device": null,
+    "bioclip_batch_size": null
+  },
+  "dataset": {
+    "num_images_in_coco": 242,
+    "num_existing_images": 242,
+    "num_benchmarked_images": 100,
+    "unreadable_images": 0
+  },
+  "timings": {
+    "model_init_s": 85.16403404437006,
+    "bioclip_init_s": 0.0,
+    "warmup_total_s": 6.261718101799488,
+    "benchmark_wall_s": 229.86775373667479,
+    "images_per_second": 0.43503274545656845,
+    "batches_per_second": 0.43503274545656845,
+    "total_image_read_s": 18.85628637485206,
+    "total_sam3_s": 198.0308381281793,
+    "total_bioclip_s": 0.0,
+    "total_prompt_processor_s": 23.719045624136925,
+    "total_prompt_to_device_s": 0.5117942728102207,
+    "total_prompt_model_s": 131.78897034563124,
+    "total_prompt_postprocess_s": 0.14749380387365818,
+    "total_prompt_format_s": 1.4738608673214912,
+    "total_nms_s": 0.00820058025419712
+  },
+  "latency_stats": {
+    "batch_wall_s": {
+      "count": 100,
+      "min": 2.0445262603461742,
+      "mean": 2.168872006367892,
+      "std": 0.08783843567315407,
+      "p50": 2.187525762245059,
+      "p90": 2.2736501809209586,
+      "p95": 2.2955192950554193,
+      "max": 2.3295999579131603
+    },
+    "batch_image_read_s": {
+      "count": 100,
+      "min": 0.16541882045567036,
+      "mean": 0.1885628637485206,
+      "std": 0.006277478095649246,
+      "p50": 0.18756628688424826,
+      "p90": 0.19520383644849063,
+      "p95": 0.19932325966656209,
+      "max": 0.21221171133220196
+    },
+    "batch_sam3_s": {
+      "count": 100,
+      "min": 1.860400639474392,
+      "mean": 1.9803083812817932,
+      "std": 0.08828843403498393,
+      "p50": 1.9983889572322369,
+      "p90": 2.082821783050895,
+      "p95": 2.1130769930779936,
+      "max": 2.1376630794256926
+    },
+    "batch_bioclip_s": {
+      "count": 100,
+      "min": 0.0,
+      "mean": 0.0,
+      "std": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "per_image_total_s": {
+      "count": 100,
+      "min": 2.0445262603461742,
+      "mean": 2.168872006367892,
+      "std": 0.08783843567315407,
+      "p50": 2.187525762245059,
+      "p90": 2.2736501809209586,
+      "p95": 2.2955192950554193,
+      "max": 2.3295999579131603
+    },
+    "per_image_sam3_s": {
+      "count": 100,
+      "min": 1.860400639474392,
+      "mean": 1.9803083812817932,
+      "std": 0.08828843403498393,
+      "p50": 1.9983889572322369,
+      "p90": 2.082821783050895,
+      "p95": 2.1130769930779936,
+      "max": 2.1376630794256926
+    }
+  },
+  "counts": {
+    "num_batches": 100,
+    "num_detections": 115,
+    "num_animal_detections": 113,
+    "mean_detections_per_image": 1.15
+  },
+  "resources": {
+    "process_rss_mb_before_model": 477.07421875,
+    "process_rss_mb_after_model": 861.16796875,
+    "process_rss_mb_final": 1921.19140625,
+    "process_max_rss_mb": 4016.3515625,
+    "torch_cuda_allocated_mb_final": 161.0498046875,
+    "torch_cuda_reserved_mb_final": 288.0,
+    "torch_cuda_peak_allocated_mb": 3922.09521484375,
+    "torch_cuda_peak_reserved_mb": 4234.0,
+    "nvidia_smi": {
+      "sample_count": 308,
+      "gpu_name": "NVIDIA A100-PCIE-40GB",
+      "gpu_count": 1,
+      "avg_utilization_gpu_pct": 42.672077922077925,
+      "peak_utilization_gpu_pct": 100.0,
+      "avg_memory_used_mb": 3433.6428571428573,
+      "peak_memory_used_mb": 4751.0,
+      "memory_total_mb": 40960.0
+    }
+  }
+}

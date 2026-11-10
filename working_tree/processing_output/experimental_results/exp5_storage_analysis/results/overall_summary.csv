@@ -1,0 +1,2 @@
+scope,deployment_days,deployments,total_images,nonblank_images,blank_count,raw_bytes,filtered_bytes,blank_pct,raw_gb,filtered_gb,storage_saved_gb,storage_saved_pct,raw_gb_per_day,filtered_gb_per_day,raw_rate_per_hour,tp_rate_per_hour,raw_rate_per_second,tp_rate_per_second,throughput_reduction_x
+overall,125.0,12,235778,5822,229956,236891722092,7386030295,97.53072805774924,236.891722092,7.386030295,229.505691797,96.88210705305626,1.8951337767360001,0.05908824236,78.59266666666667,1.9406666666666668,0.021831296296296297,0.0005390740740740741,40.49776709034696

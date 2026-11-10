@@ -1,0 +1,76 @@
+# ignore Mac Files
+.DS_Store
+
+# ignore my to do list
+todo.md
+todos.md
+
+# ignore node modules
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Model weights and cache
+*.pt
+*.pth
+*.ckpt
+*.weights
+*.h5
+*.pb
+*.onnx
+.cache/
+**/cache/
+**/.cache/
+
+# MegaDetector and ML models
+md_v5*.pt
+*megadetector*.pt
+yolov5/
+ultralytics_yolov5*/
+
+# Large data files
+*.zip
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# Image directories (uncomment if you don't want to track processed images)
+# annotated_images/
+# **/Google Photos/
+
+# Video files
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+
+# Large CSVs and datasets (keep the output files but ignore raw data)
+# Uncomment specific large files:
+# photo_metadata.csv
+# wildlife_detections.csv
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db
+*.bak
