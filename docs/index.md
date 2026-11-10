@@ -39,7 +39,7 @@ already in the [SmartWilds collection](https://huggingface.co/collections/imageo
 | Supplemental material, defect inventory, camera-trap release note | [`docs/`](SUPPLEMENTAL.md) |
 | Data summaries and campaign data reports | [`field_campaigns/`](datasets/field-campaigns.md) |
 | Generation, validation, georeferencing, screening scripts | [`scripts/`](scripts/index.md) |
-| What the metadata enables: systems planning, cross-modal ecology, CV benchmarking | [What it enables](analysis/index.md) |
+| What the dataset enables: cross-modal ecology, CV benchmarking, systems planning, biodiversity monitoring, deployment design, integration methods | [What the dataset enables](analysis/index.md) |
 | How the agents were used, and how to use them on your data | [Agents](agents/index.md) |
 
 ## Getting started

@@ -34,20 +34,25 @@ annotation method and provenance.
   [Imageomics/naturelab](https://github.com/Imageomics/naturelab)
 - **Papers:** see [Papers](#papers) below
 
-## What the metadata enables
+## What the dataset enables
 
-- **Planning cross-modal sensing systems.** Workload characterization,
-  synthesis, and hardware feasibility prediction from aligned timestamps,
-  sensor configurations, and detection confidences
-  (`analysis/cross_modal_coordination/`).
 - **Comparing modalities for ecological findings.** Camera and acoustic
   activity patterns recovered independently and corroborated against each
   other, as in the Milu deer studies.
-- **Benchmarking computer-vision pipelines.** Label provenance and
-  human-annotated reference sets make labeling methods evaluable, as in the
+- **Benchmarking computer-vision and labeling pipelines.** Label provenance
+  and human-annotated reference sets make labeling methods evaluable, as in the
   triage method that produced the camera-trap labels.
+- **Planning cross-modal sensing systems.** Workload characterization,
+  synthesis, and hardware feasibility prediction
+  (`analysis/cross_modal_coordination/`).
+- **Biodiversity monitoring and detectability.** Species occurrence and
+  activity per site, hour, and sensor configuration, across four modalities.
+- **Designing sensor deployments.** Which sensors uniquely cover which places
+  and hours, and what co-location adds.
+- **Methods for integrating heterogeneous field data.** The defect inventory
+  and repair methods as a documented worked case.
 
-See [What it enables](https://imageomics.github.io/smartwilds/analysis/) for the papers behind each.
+See [What the dataset enables](https://imageomics.github.io/smartwilds/analysis/) for the papers behind each.
 
 ## What is here
 

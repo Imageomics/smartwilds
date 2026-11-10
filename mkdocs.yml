@@ -85,7 +85,7 @@ nav:
     - Georeferencing: scripts/georeferencing.md
     - Privacy screening: scripts/privacy-screening.md
     - Example, quickstart: scripts/examples.md
-  - What it enables:
+  - What the dataset enables:
     - Overview: analysis/index.md
     - Cross-modal coordination: analysis/cross-modal-coordination.md
   - Agents:

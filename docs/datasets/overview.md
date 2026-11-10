@@ -17,8 +17,8 @@ TheWilds_2025 (study, 2025-06-30/2025-09-08)
 
 | Dataset | Content |
 |---|---|
-| smartwilds-camera-traps | 235,778 processed images, 19,785 Events, 72,775 operational Occurrences with original SAM3 geometry |
-| smartwilds-bioacoustics | 2,371 WAV recordings, 9,960 BirdNET Occurrences |
+| smartwilds-camera-traps | 235,778 processed images, 19,785 Events, 72,775 operational Occurrences |
+| smartwilds-bioacoustics | 2,371 WAV recordings, 9,960 Occurrences |
 | smartwilds-drones | 39 videos, 15 flight sessions, 318,215 Occurrences |
 | smartwilds-citizen-science | 1,103 media files, 622 Occurrences |
 | smartwilds (study level) | merged Event table, text records, sensor configurations, arrival traces |
