@@ -5,7 +5,10 @@ published as one Hugging Face dataset,
 [`imageomics/smartwilds_metadata`](https://huggingface.co/datasets/imageomics/smartwilds_metadata),
 part of the [SmartWilds collection](https://huggingface.co/collections/imageomics/smartwilds).
 It holds the five components of the release, each a complete FAIR² package,
-plus the supplemental material:
+plus the supplemental material. Files under 10 MB are on the Hub today; the
+twelve larger tables (1.8 GB uncompressed, about 140 MB zipped) are published
+as one archive on Zenodo with a DOI and will join the Hub repository when
+storage allows. The dataset card lists which files are where.
 
 ```
 smartwilds_metadata/

@@ -160,6 +160,26 @@ This dataset supports cross-modal ecological analysis, data-quality research, an
 - Multi-object tracking on frame-indexed drone detections
 - Bird call classification and sound-event detection against BirdNET outputs
 
+## Where the files are
+
+Files under 10 MB are in this Hugging Face repository: every dataset card,
+data dictionary, provenance record, and Event table, the bioacoustic and
+citizen-science tables, the bioacoustic recording inventory, and the
+supplemental material. The twelve larger tables (the camera-trap and drone
+Occurrence tables, the camera image inventory and media manifest, the drone
+detections, the merged Occurrence table, and the arrival traces; 1.8 GB
+uncompressed) are published as one archive on Zenodo, with a DOI, and will be
+added here when storage allows. Until the Zenodo record is live they are
+available from the authors on request.
+
+| Component | Here | On Zenodo |
+|---|---|---|
+| `smartwilds-camera-traps/` | events, dictionary, deployments, provenance, arrival statistics | occurrences, images, media manifest, arrival traces |
+| `smartwilds-bioacoustics/` | complete | complete |
+| `smartwilds-drones/` | events, flights, platforms, provenance | occurrences, detections |
+| `smartwilds-citizen-science/` | complete | complete |
+| `smartwilds/` (study level) | events, text records, sensor configurations, defect inventory, arrival-trace contract | merged occurrences, arrival traces |
+
 ## Layout
 
 Each component folder is a complete FAIR² dataset package:
