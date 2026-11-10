@@ -113,12 +113,12 @@ project's internal release staging and is not part of this repository.
 Person screening needs a GPU and MegaDetector v5a (`pip install megadetector`).
 `scripts/privacy_screening/run_screening.sh` is the SLURM job we used.
 
-## Earlier repository
+## Related repositories
 
-This repository subsumes `Imageomics/wilds_multimodal_data`. All of its
-branches are preserved here with history under `legacy/wilds_multimodal_data/`;
-see the [legacy branches](https://imageomics.github.io/smartwilds/legacy/) page
-for what each holds.
+Field logs and protocols live in [Imageomics/naturelab](https://github.com/Imageomics/naturelab).
+The earlier working repository, `Imageomics/wilds_multimodal_data`, is
+preserved here under the `legacy/wilds_multimodal_data/` branch prefix; see
+[Related repositories](https://imageomics.github.io/smartwilds/legacy/).
 
 ## Citation
 

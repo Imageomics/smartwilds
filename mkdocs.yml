@@ -91,7 +91,7 @@ nav:
     - Using agents on your own data: agents/index.md
     - How we used them: AGENT_ASSISTED_DOCUMENTATION.md
     - Guidelines to give the agent: agents/guidelines.md
-  - Legacy branches: legacy.md
+  - Related repositories: legacy.md
   - Acknowledgements: acknowledgements.md
 
 extra:
