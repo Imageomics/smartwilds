@@ -32,10 +32,7 @@ annotation method and provenance.
   [SmartWilds collection](https://huggingface.co/collections/imageomics/smartwilds)
 - **Field protocols, forms, and logs:**
   [Imageomics/naturelab](https://github.com/Imageomics/naturelab)
-- **Paper:** *SmartWilds: Integrating, Aligning, and Documenting Multi-Modal
-  Field Sensing Data* (under review)
-- **Earlier release:** the 2025 four-day pilot release,
-  [arXiv:2509.18894](https://arxiv.org/abs/2509.18894)
+- **Papers:** see [Papers](#papers) below
 
 ## What is here
 
@@ -122,22 +119,39 @@ preserved here under the `legacy/wilds_multimodal_data/` branch prefix; see
 
 ## Citation
 
-Please cite the paper and each modality dataset you use (`CITATION.cff`).
+Please cite the dataset (`CITATION.cff`) and the paper that matches your use
+of it, from the list below.
+
+## Papers
+
+Several papers build on SmartWilds. Each describes one part of the project;
+none of them is "the" SmartWilds paper.
+
+| Paper | Scope |
+|---|---|
+| *SmartWilds: Integrating, Aligning, and Documenting Multi-Modal Field Sensing Data* (under review) | The metadata and data engineering: Darwin Core integration, timestamp and coordinate repair, the defect inventory, the dataset cards. Supplemental material: [SUPPLEMENTAL.md](https://imageomics.github.io/smartwilds/SUPPLEMENTAL/) |
+| [*SmartWilds: Multimodal Wildlife Monitoring Dataset*](https://arxiv.org/abs/2509.18894) (2025) | The four-day pilot deployment and its first data release |
+| *A Blueprint for Cross-Modal Coordination at the Far Edge* (to appear) | Workload characterization and synthesis for planning cross-modal sensing systems; code in `analysis/cross_modal_coordination/` |
+| [*Cross-Modal Corroboration for Annotation-Free Wildlife Monitoring*](https://arxiv.org/abs/2606.21613) (2026) | Annotation-free verification of Milu deer activity from camera traps and acoustics |
 
 ```bibtex
 @article{kline2026smartwilds,
   author  = {Kline, Jenna M. and Potlapally, Anirudh and Campolongo, Elizabeth G.},
   title   = {SmartWilds: Integrating, Aligning, and Documenting Multi-Modal Field Sensing Data},
   year    = {2026},
-  note    = {Under review. Supplemental material: https://imageomics.github.io/smartwilds/SUPPLEMENTAL/}
+  note    = {Under review}
 }
-```
 
-## Papers using SmartWilds
+@misc{kline2025smartwilds,
+  author        = {Kline, Jenna and Potlapally, Anirudh and Pillai, Bharath and Wani, Tanishka and Katole, Rugved and Patil, Vedant and Covey, Penelope and Subramoni, Hari and Berger-Wolf, Tanya and Stewart, Christopher},
+  title         = {SmartWilds: Multimodal Wildlife Monitoring Dataset},
+  year          = {2025},
+  eprint        = {2509.18894},
+  archivePrefix = {arXiv}
+}
 
-```bibtex
 @inproceedings{kline2026blueprint,
-  author    = {Kline, Jenna and Potlapally, Anirudh and Subramoni, Hari and Berger-Wolf, Tanya and Stewart, Christopher},
+  author    = {Kline, Jenna and Potlapally, Anirudh and Cheng, Yuanyang and Berger-Wolf, Tanya and Subramoni, Hari and Stewart, Christopher},
   title     = {A Blueprint for Cross-Modal Coordination at the Far Edge},
   booktitle = {ACM/IEEE Symposium on Edge Computing (SEC)},
   year      = {2026},

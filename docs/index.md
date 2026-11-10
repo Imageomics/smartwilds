@@ -59,13 +59,17 @@ before computing anything from the Occurrence tables.
 
 ## Papers
 
+Several papers build on SmartWilds; each describes one part of the project.
+
 - *SmartWilds: Integrating, Aligning, and Documenting Multi-Modal Field Sensing
-  Data* (under review). The supplemental material is [here](SUPPLEMENTAL.md).
-- [SmartWilds: Multimodal Wildlife Monitoring Dataset](https://arxiv.org/abs/2509.18894),
-  the 2025 four-day pilot release.
+  Data* (under review): the metadata and data engineering documented on this
+  site. The supplemental material is [here](SUPPLEMENTAL.md).
+- [SmartWilds: Multimodal Wildlife Monitoring Dataset](https://arxiv.org/abs/2509.18894)
+  (2025): the four-day pilot deployment and its first data release.
 - [A Blueprint for Cross-Modal Coordination at the Far Edge](analysis/cross-modal-coordination.md)
-  (to appear; code and derived data in `analysis/cross_modal_coordination/`) and [Cross-Modal Corroboration for Annotation-Free Wildlife
-  Monitoring](https://arxiv.org/abs/2606.21613) build on the deployment.
+  (to appear): planning cross-modal sensing systems from the metadata.
+- [Cross-Modal Corroboration for Annotation-Free Wildlife Monitoring](https://arxiv.org/abs/2606.21613)
+  (2026): annotation-free verification of Milu deer activity.
 
 ## Citation
 
