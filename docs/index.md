@@ -45,6 +45,7 @@ already in the [SmartWilds collection](https://huggingface.co/collections/imageo
 | Supplemental material, defect inventory, camera-trap release note | [`docs/`](SUPPLEMENTAL.md) |
 | Field notes, data summaries, campaign data reports | [`field_campaigns/`](datasets/field-campaigns.md) |
 | Generation, validation, georeferencing, screening scripts | [`scripts/`](scripts/index.md) |
+| What the metadata enables: cross-modal coordination planning | [`analysis/`](analysis/cross-modal-coordination.md) |
 | How the agents were used, and how to use them on your data | [Agents](agents/index.md) |
 
 ## Getting started
@@ -67,8 +68,8 @@ before computing anything from the Occurrence tables.
   Data* (under review). The supplemental material is [here](SUPPLEMENTAL.md).
 - [SmartWilds: Multimodal Wildlife Monitoring Dataset](https://arxiv.org/abs/2509.18894),
   the 2025 four-day pilot release.
-- [A Blueprint for Cross-Modal Coordination at the Far Edge](https://github.com/Imageomics/smartwilds)
-  (to appear) and [Cross-Modal Corroboration for Annotation-Free Wildlife
+- [A Blueprint for Cross-Modal Coordination at the Far Edge](analysis/cross-modal-coordination.md)
+  (to appear; code and derived data in `analysis/cross_modal_coordination/`) and [Cross-Modal Corroboration for Annotation-Free Wildlife
   Monitoring](https://arxiv.org/abs/2606.21613) build on the deployment.
 
 ## Citation

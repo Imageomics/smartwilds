@@ -1,0 +1,42 @@
+\begin{table*}[b]
+\centering
+\footnotesize
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Symbol} & \textbf{Meaning} \\
+\midrule
+\multicolumn{2}{l}{\textit{Modalities and traces}} \\
+$M$ & Set of recorded modalities \\
+$T_m$ & Normalized per-modality trace, modality $m \in M$ \\
+$\tau_m$ & Observation horizon of trace $T_m$ \\
+\midrule
+\multicolumn{2}{l}{\textit{Arrival behavior}} \\
+$\{t_i\}$ & Change points partitioning $\tau_m$ \\
+$R_{m,i}$ & Arrival rate of modality $m$ in segment $i$ \\
+$\rho_m$ & Arrival process $\{(t_i, R_{m,i})\}_i$ for modality $m$ \\
+$\mathrm{CV}_m$ & Coefficient of variation of $m$'s inter-arrival times \\
+$B_m$ & Burstiness, $(\mathrm{CV}_m{-}1)/(\mathrm{CV}_m{+}1) \in [-1, 1]$ \\
+\midrule
+\multicolumn{2}{l}{\textit{Cross-modal and post-filter}} \\
+$C_{m,m'}$ & Cross-modal co-occurrence (Jaccard) $\in [0, 1]$ \\
+$\phi_m^{\mathrm{raw}}$ & Raw arrival rate of modality $m$ \\
+$\phi_m^{\mathrm{det}}$ & Post-detection rate of modality $m$ \\
+$\phi_m^{\mathrm{thr}}$ & Post-threshold rate of modality $m$ \\
+$\phi_m$ & Throughput tuple $(\phi_m^{\mathrm{raw}}, \phi_m^{\mathrm{det}}, \phi_m^{\mathrm{thr}})$ \\
+\midrule
+\multicolumn{2}{l}{\textit{Workload model and synthesis}} \\
+$\mathcal{W}$ & Workload model $\{\rho_m, B_m, C_{m,m'}, \phi_m\}_{m \in M}$ \\
+$c$ & Configuration  \\
+$c_{\mathrm{id}}$ & Identity recipe (baseline from real traces) \\
+$s$ & Random seed \\
+$T^*$ & Synthetic multimodal trace, $T^* = \mathrm{synth}(\mathcal{W}, c, s)$ \\
+\midrule
+\multicolumn{2}{l}{\textit{Fidelity statistics}} \\
+$\mathrm{KS}_{\mathrm{diurnal}}$ & KS distance between hour-of-day arrival distributions \\
+$\mathrm{spread}_s[\cdot]$ & Bootstrap 95\% interval across seeds \\
+$\mathrm{spread}_{\mathrm{site}}[\cdot]$ & Bootstrap 95\% interval across recorded sites \\
+\bottomrule
+\end{tabular}
+\caption{Framework Notation.}
+\label{tab:notation}
+\end{table*}

@@ -1,0 +1,13 @@
+# Generated outputs — all regenerable via run_all.sh
+results/
+scripts/03_case_studies/traces/
+scripts/figures/*.pdf
+scripts/figures/*.png
+__pycache__/
+*.pyc
+
+# Derived event tables produced by 00_prepare from the field archive.
+# The two bootstrap modalities ARE committed (small, derived, no archive paths);
+# camera_trap/drone tables are large and unnecessary for synthesis.
+data/timestamps/timestamps_camera_trap.csv
+data/timestamps/timestamps_drone.csv

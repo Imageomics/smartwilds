@@ -85,6 +85,8 @@ nav:
     - Georeferencing: scripts/georeferencing.md
     - Privacy screening: scripts/privacy-screening.md
     - Example, quickstart: scripts/examples.md
+  - Analysis:
+    - Cross-modal coordination: analysis/cross-modal-coordination.md
   - Agents:
     - Using agents on your own data: agents/index.md
     - How we used them: AGENT_ASSISTED_DOCUMENTATION.md

@@ -56,6 +56,7 @@ annotation method and provenance.
 | `scripts/validation/` | Release audit: parent links, parsed dates/times/coordinates, sentinel rejection, media resolution |
 | `scripts/arrival_traces/` | Versioned acquisition- and detection-layer arrival traces |
 | `scripts/privacy_screening/` | MegaDetector person screening, triage by identifiability, and a review-first drone launch/landing trim plan |
+| `analysis/cross_modal_coordination/` | Code and derived data of *A Blueprint for Cross-Modal Coordination at the Far Edge*: workload characterization, synthesis, four coordination case studies, fidelity checks, and the hardware feasibility grid. An example of the planning analyses the metadata enables |
 | `examples/quickstart.py` | Load the tables, apply a verification floor, walk the Event hierarchy, and extract a drone frame |
 | `examples/join_camera_acoustic_by_site_hour.py` | Join camera-trap and acoustic Occurrences by site and hour across campaigns |
 

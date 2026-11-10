@@ -1,0 +1,35 @@
+% =============================================================================
+% Table: case-study takeaways
+% =============================================================================
+% One row per case, three substantive columns:
+%   (1) Recipe summary
+%   (2) Feasibility verdict (compact)
+%   (3) Provisioning takeaway (single sentence)
+%
+% Sourced from §VI.B prose. Designed to be the "table you read instead of
+% the section if you only have 30 seconds."
+%
+% Layout: table* (two-column-spanning) since the provisioning takeaways need
+% horizontal space to read. If single-column is required, drop to \small and
+% truncate the takeaways or use \makecell for line breaks within cells.
+% =============================================================================
+
+\begin{table*}[t]
+  \centering
+  \small
+  \begin{tabular}{p{0.04\textwidth} p{0.20\textwidth} p{0.30\textwidth} p{0.36\textwidth}}
+    \toprule
+    \textbf{Case} & \textbf{Configuration} & \textbf{Feasibility verdict} & \textbf{Provisioning takeaway} \\
+    \midrule
+    CS1 & Bioacoustic $\rightarrow$ camera trap; conditional scaling (assumed $2\times$ for $60$\,s post-trigger); 2\,s SLO. & RTX, Jetson feasible. Laptop infeasible (CPU latency). Pi5+TPU structurally unsupported (no Edge TPU path for MegaDetector). Pi4 infeasible (CPU latency). & Jetson is the minimum tier under a 2\,s SLO regardless of bioacoustic schedule. Schedule choice (hourly vs.\ chorus) is a workload-design lever that shapes response-tier sizing. \\
+    \addlinespace
+    CS2 & Camera trap $\rightarrow$ drone; interleave with response delay $\sim \mathcal{U}[0.1, 5.0]$\,s; 5\,s SLO. & RTX, Jetson, Pi5+TPU, Pi4 all feasible. Laptop infeasible; verdict confirmed empirically (\S\ref{sec:fidelity}, $+23.4\%$ measured-vs-predicted gap). & Pi-class hardware is predicted feasible at this SLO; drone-side inference is not the binding constraint. The field laptop is the limiting tier --- not a more capable alternative. \\
+    \addlinespace
+    CS3 & Focal CT $\rightarrow$ CT network; conditional scaling (assumed $1.5\times$ neighbor density for $10$\,s); 10\,s SLO. & RTX, Jetson, Pi5+TPU, Pi4 all feasible. Laptop infeasible (latency overrun + queue overflow). & Gateway-tier capacity must be sized against the two-site worst case, not an asymptotic full-network average --- camera-trap sites share diurnal structure. \\
+    \addlinespace
+    CS4 & Citsci $\rightarrow$ all; prior injection (assumed $1.25\times$ density boost during $60$\,s post-citsci windows); 60\,s SLO. & Feasible on all five tiers. Laptop reaches $43.6\%$ MegaDetector utilization under adaptive policy. & Citsci-as-prior does not stress edge-tier compute at the densities evaluated. Size the gateway-tier ingestion pipeline against the citsci arrival rate, scaled by the prior's spatial granularity. \\
+    \bottomrule
+  \end{tabular}
+  \caption{Case-study takeaways. Configurations, feasibility verdicts, and provisioning takeaways for the four configurations.}
+  \label{tab:case-takeaways}
+\end{table*}

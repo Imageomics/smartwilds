@@ -1,0 +1,6 @@
+# Pinned loosely: the analysis is numerically stable across these ranges.
+numpy>=1.24,<3
+pandas>=2.0,<3
+scipy>=1.10,<2
+matplotlib>=3.7,<4
+PyYAML>=6.0

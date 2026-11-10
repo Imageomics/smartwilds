@@ -1,0 +1,156 @@
+% =============================================================================
+% Supplementary material for
+%   "A Blueprint for Cross-Modal Coordination at the Far Edge"
+%
+% Contains the artifacts that appeared in the submitted draft but were cut from
+% the camera-ready for space. Referenced by the project-page footnote in §IV-A.
+%
+% Build:  tectonic -X compile supplement.tex     (or pdflatex twice)
+% Shares figures/ with the main paper -- no files are duplicated.
+% =============================================================================
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{url}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+
+% The shared fragments are written for the main paper and reference its
+% sections. Resolve those to the printed section numbers of the paper rather
+% than to anything in this document.
+\newlabel{sec:fidelity}{{VI-A}{--}}
+\newlabel{sec:6_synthesis-results}{{VI}{--}}
+\newlabel{sec:case-study-results}{{VI-B}{--}}
+\newlabel{sec:char-topology}{{V-D}{--}}
+\newlabel{sec:limitations}{{VII-B}{--}}
+
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+
+\title{\Large \bf Supplementary Material for\\
+``A Blueprint for Cross-Modal Coordination at the Far Edge''}
+
+\author{\IEEEauthorblockN{Jenna Kline\textsuperscript{1,2}, Anirudh Potlapally\textsuperscript{1},
+Yuanyang Cheng\textsuperscript{1}, Tanya Berger-Wolf\textsuperscript{1},\\
+Hari Subramoni\textsuperscript{1}, and Christopher Stewart\textsuperscript{1}}
+\IEEEauthorblockA{\textsuperscript{1}\textit{Dept. of Computer Science and Engineering, The Ohio State University}, Columbus, OH, USA \\
+\textsuperscript{2}\textit{Dept. of Civil and Environmental Engineering, Massachusetts Institute of Technology}, Cambridge, MA, USA \\
+Contact: kline.377@osu.edu}}
+
+\begin{document}
+\maketitle
+
+\section{Scope}
+
+This document collects the tables and figures that appeared in the submitted
+version of the paper and were removed from the camera-ready for space. Nothing
+here is new: every artifact is referenced from the main text, and the numbers
+reproduce those reported in the paper. Section numbers cited below
+(e.g.\ \S\ref{sec:fidelity}) refer to the main paper, not to this document.
+
+The material is organized in the order it is used by the paper:
+
+\begin{enumerate}[leftmargin=*,noitemsep]
+  \item \textbf{Notation} (Table~\ref{tab:notation}) --- symbols used throughout
+        the method (\S III).
+  \item \textbf{Fidelity scorecard} (Table~\ref{tab:fidelity_scorecard}) ---
+        summary of the three synthesis consistency checks (\S\ref{sec:fidelity}).
+  \item \textbf{Operational fidelity detail}
+        (Table~\ref{tab:operational_fidelity}) --- per-policy recorded vs.\
+        synthesized comparison underlying \S VI-A.2.
+  \item \textbf{Per-policy coverage--energy tradeoff}
+        (Fig.~\ref{fig:pareto-policies}) --- the operating points the four
+        inference policies admit (\S IV-C).
+  \item \textbf{Variance envelope} (Fig.~\ref{fig:variance-envelope}) --- the
+        nine modality $\times$ statistic cells behind the variance bound
+        (\S VI-A.1).
+  \item \textbf{Case-study takeaways} (Table~\ref{tab:case-takeaways}) ---
+        configurations, verdicts, and provisioning takeaways for CS1--CS4
+        (\S\ref{sec:case-study-results}).
+  \item \textbf{Intensity sweep} (Fig.~\ref{fig:intensity-sweep}) --- synthesis
+        under intensity scaling against natural per-site bounds (\S V-D.2).
+\end{enumerate}
+
+\noindent Analysis code and the derived per-modality event tables from which
+these artifacts are generated are in the project repository.
+
+\section{Notation}
+\input{figures/notation}
+\clearpage
+
+\section{Synthesis Fidelity}
+
+Table~\ref{tab:fidelity_scorecard} summarizes the three consistency checks
+reported in \S\ref{sec:fidelity}. These establish that synthesis is
+self-consistent with the recorded traces; they are not a validation against a
+deployed cross-modal system.
+
+\input{figures/tab_fidelity_scorecard}
+
+Table~\ref{tab:operational_fidelity} gives the per-policy detail behind the
+operational-fidelity check. Per-policy $p_{95}$ latency and SLO compliance match
+between recorded and synthesized traces; total energy scales with event count
+while per-event energy is invariant within a policy.
+
+\begin{table*}[b]
+\centering
+\begin{tabular}{@{}l rrr rrr@{}}
+\toprule
+& \multicolumn{3}{c}{\textbf{Recorded}} & \multicolumn{3}{c}{\textbf{Synthesized}} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+\textbf{Policy} & $p_{95}$ (ms) & SLO (\%) & Energy (kJ) & $p_{95}$ (ms) & SLO (\%) & Energy (kJ) \\
+\midrule
+process-all & $100$ & $100$ & $95.4$ & $100$ & $100$ & $453.7$ \\
+event-triggered & $100$ & $100$ & $9.9$ & $100$ & $100$ & $38.0$ \\
+adaptive & $200$ & $100$ & $11.9$ & $200$ & $100$ & $12.0$ \\
+control-theoretic & $200$ & $100$ & $9.9$ & $200$ & $100$ & $38.0$ \\
+\bottomrule
+\end{tabular}
+\caption{Operational fidelity on the laptop tier: recorded strict camera trace
+($n = 39\,742$ events) vs.\ identity-synthesized camera-only trace
+($n \approx 189\,000$ events, mean over 3 seeds). Per-policy
+$p_{95}$ latency and SLO compliance match exactly between recorded and
+synthesized; total energy scales with event count and per-event energy is
+exactly invariant ($2.40$\,J/event in all eight cells). Policy ranking by
+$p_{95}$ latency is preserved exactly (Kendall $\tau = 1.0$).}
+\label{tab:operational_fidelity}
+\end{table*}
+
+\begin{figure*}[htp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/fig_08_pareto_policies.pdf}
+    \caption{Per-policy coverage--energy tradeoff on the recorded camera trace at the field-laptop tier.}
+  \label{fig:pareto-policies}
+\end{figure*}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/fig_app_03_variance_envelope.pdf}
+    \caption{Variance envelope across modality $\times$ statistic bins. All 9 cells satisfy $\mathrm{spread}_s[\theta(T^*)] \leq \mathrm{spread}_\mathrm{site}[\theta(T_m)]$.}
+  \label{fig:variance-envelope}
+\end{figure*}
+\clearpage
+
+\section{Case-Study Detail}
+
+\input{figures/case_studies_takeaways}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/fig_app_04_intensity_sweep.pdf}
+    \caption{Synthesis under intensity scaling $r_k$ for $k \in \{0.5, 1, 2, 5, 10, 20\}$, compared against natural per-site bounds (shaded).}
+  \label{fig:intensity-sweep}
+\end{figure*}
+
+\end{document}
