@@ -1,0 +1,78 @@
+{
+  "modality": "citizen_science",
+  "total_events": 139,
+  "date_range": [
+    "2025-08-04T00:00:00",
+    "2025-08-28T23:59:59"
+  ],
+  "campaign_scope": "campaign2_aug4_aug28",
+  "aggregate": {
+    "mean_rate_per_hour": 0.3283,
+    "cv": 5.0536,
+    "burstiness_B": 0.6696,
+    "diurnal_profile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      2.6266,
+      2.9768,
+      2.1596,
+      0.3502,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "rate_model": {
+    "thresholds": [
+      0.8,
+      0.95,
+      0.99,
+      0.995
+    ],
+    "change_points": {
+      "0.8": [],
+      "0.95": [],
+      "0.99": [],
+      "0.995": []
+    }
+  },
+  "per_site_variance": [
+    {
+      "site": "unknown",
+      "config_keys": {
+        "site": "unknown"
+      },
+      "n_events": 139,
+      "mean_rate_per_hour": 0.3283,
+      "cv": 5.0536,
+      "burstiness_B": 0.6696,
+      "diurnal_ks_vs_aggregate": 0.0
+    }
+  ],
+  "excluded_configs": [],
+  "provenance": {
+    "source_csv": "processing_output/experimental_results/exp1_cross_modal_arrival_rates/results/timestamps_citizen_science.csv",
+    "change_points_dir": "processing_output/experimental_results/exp1_cross_modal_arrival_rates/results",
+    "generated_at": "2026-04-27T02:47:27.759846+00:00",
+    "min_events_per_site": 30,
+    "group_keys": [
+      "site"
+    ],
+    "degenerate_cv_eps": 1e-06
+  }
+}

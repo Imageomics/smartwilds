@@ -1,0 +1,652 @@
+{
+  "per_cell": [
+    {
+      "modality": "camera_trap",
+      "intensity_multiplier": 0.5,
+      "n_seeds": 5,
+      "B_mean": 0.6212315003892671,
+      "B_std": 0.08331425815082448,
+      "CV_mean": 4.506855479707066,
+      "CV_std": 1.2971429455827372,
+      "mean_rate_per_hour": 161.4511450893188,
+      "B_in_envelope": true,
+      "CV_in_envelope": true
+    },
+    {
+      "modality": "camera_trap",
+      "intensity_multiplier": 1.0,
+      "n_seeds": 5,
+      "B_mean": 0.6903712373118472,
+      "B_std": 0.12029866262221359,
+      "CV_mean": 6.388266297696766,
+      "CV_std": 3.042440807990987,
+      "mean_rate_per_hour": 321.95291608266444,
+      "B_in_envelope": true,
+      "CV_in_envelope": true
+    },
+    {
+      "modality": "camera_trap",
+      "intensity_multiplier": 2.0,
+      "n_seeds": 5,
+      "B_mean": 0.7522304569300656,
+      "B_std": 0.08327225127277996,
+      "CV_mean": 7.860447319103912,
+      "CV_std": 3.039732381955595,
+      "mean_rate_per_hour": 641.4546274852273,
+      "B_in_envelope": true,
+      "CV_in_envelope": true
+    },
+    {
+      "modality": "camera_trap",
+      "intensity_multiplier": 5.0,
+      "n_seeds": 5,
+      "B_mean": 0.7658719277083745,
+      "B_std": 0.1489887380827091,
+      "CV_mean": 11.051104057407334,
+      "CV_std": 7.4719210740274224,
+      "mean_rate_per_hour": 1607.5340036711539,
+      "B_in_envelope": true,
+      "CV_in_envelope": true
+    },
+    {
+      "modality": "camera_trap",
+      "intensity_multiplier": 10.0,
+      "n_seeds": 5,
+      "B_mean": 0.8468341328981014,
+      "B_std": 0.020775596064988685,
+      "CV_mean": 12.244917364901783,
+      "CV_std": 1.7315692561161897,
+      "mean_rate_per_hour": 3189.7236646959755,
+      "B_in_envelope": true,
+      "CV_in_envelope": true
+    },
+    {
+      "modality": "camera_trap",
+      "intensity_multiplier": 20.0,
+      "n_seeds": 5,
+      "B_mean": 0.8737662816924544,
+      "B_std": 0.01376745583554596,
+      "CV_mean": 14.98883882738032,
+      "CV_std": 1.667551882501289,
+      "mean_rate_per_hour": 6357.053134187294,
+      "B_in_envelope": true,
+      "CV_in_envelope": true
+    },
+    {
+      "modality": "bioacoustic",
+      "intensity_multiplier": 0.5,
+      "n_seeds": 5,
+      "B_mean": -0.09745597980669234,
+      "B_std": 0.02378724260013035,
+      "CV_mean": 0.8230979980024211,
+      "CV_std": 0.040455564027979896,
+      "mean_rate_per_hour": 0.8857219693823396,
+      "B_in_envelope": true,
+      "CV_in_envelope": true
+    },
+    {
+      "modality": "bioacoustic",
+      "intensity_multiplier": 1.0,
+      "n_seeds": 5,
+      "B_mean": -0.1684516521554878,
+      "B_std": 0.018212006184585322,
+      "CV_mean": 0.712002471655746,
+      "CV_std": 0.026915514582536656,
+      "mean_rate_per_hour": 1.289272417483057,
+      "B_in_envelope": true,
+      "CV_in_envelope": true
+    },
+    {
+      "modality": "bioacoustic",
+      "intensity_multiplier": 2.0,
+      "n_seeds": 5,
+      "B_mean": -0.2466082380700121,
+      "B_std": 0.01230633584021931,
+      "CV_mean": 0.604479145184531,
+      "CV_std": 0.015939433335681583,
+      "mean_rate_per_hour": 1.5927880591443935,
+      "B_in_envelope": true,
+      "CV_in_envelope": true
+    },
+    {
+      "modality": "bioacoustic",
+      "intensity_multiplier": 5.0,
+      "n_seeds": 5,
+      "B_mean": -0.2916683019025422,
+      "B_std": 0.0019984904404730056,
+      "CV_mean": 0.5483881036046094,
+      "CV_std": 0.0023971051396729903,
+      "mean_rate_per_hour": 1.7174603159289572,
+      "B_in_envelope": true,
+      "CV_in_envelope": true
+    },
+    {
+      "modality": "bioacoustic",
+      "intensity_multiplier": 10.0,
+      "n_seeds": 5,
+      "B_mean": -0.292185823406096,
+      "B_std": 0.0,
+      "CV_mean": 0.5477650069926969,
+      "CV_std": 0.0,
+      "mean_rate_per_hour": 1.7209334409358914,
+      "B_in_envelope": true,
+      "CV_in_envelope": true
+    },
+    {
+      "modality": "bioacoustic",
+      "intensity_multiplier": 20.0,
+      "n_seeds": 5,
+      "B_mean": -0.292185823406096,
+      "B_std": 0.0,
+      "CV_mean": 0.5477650069926969,
+      "CV_std": 0.0,
+      "mean_rate_per_hour": 1.7209334409358914,
+      "B_in_envelope": true,
+      "CV_in_envelope": true
+    },
+    {
+      "modality": "drone",
+      "intensity_multiplier": 0.5,
+      "n_seeds": 5,
+      "B_mean": 0.9631000513456971,
+      "B_std": 0.0024401654275712087,
+      "CV_mean": 53.39825753384764,
+      "CV_std": 3.7404462799042593,
+      "mean_rate_per_hour": 125.17504868942737,
+      "B_in_envelope": false,
+      "CV_in_envelope": false
+    },
+    {
+      "modality": "drone",
+      "intensity_multiplier": 1.0,
+      "n_seeds": 5,
+      "B_mean": 0.9626138858813966,
+      "B_std": 0.002207591865738364,
+      "CV_mean": 52.64961408159011,
+      "CV_std": 3.2591959296227,
+      "mean_rate_per_hour": 234.87192502433572,
+      "B_in_envelope": false,
+      "CV_in_envelope": false
+    },
+    {
+      "modality": "drone",
+      "intensity_multiplier": 2.0,
+      "n_seeds": 5,
+      "B_mean": 0.9656942173689227,
+      "B_std": 0.0013464521265056971,
+      "CV_mean": 57.37156541886931,
+      "CV_std": 2.3050159421064964,
+      "mean_rate_per_hour": 470.3074537181179,
+      "B_in_envelope": false,
+      "CV_in_envelope": false
+    },
+    {
+      "modality": "drone",
+      "intensity_multiplier": 5.0,
+      "n_seeds": 5,
+      "B_mean": 0.9665558947701148,
+      "B_std": 0.0020950427091628553,
+      "CV_mean": 58.988373910512415,
+      "CV_std": 3.7394165774982113,
+      "mean_rate_per_hour": 1172.3021213403576,
+      "B_in_envelope": false,
+      "CV_in_envelope": false
+    },
+    {
+      "modality": "drone",
+      "intensity_multiplier": 10.0,
+      "n_seeds": 5,
+      "B_mean": 0.9670806337889672,
+      "B_std": 0.0004978530583374553,
+      "CV_mean": 59.76544284429534,
+      "CV_std": 0.9035715253816348,
+      "mean_rate_per_hour": 2335.837342034762,
+      "B_in_envelope": false,
+      "CV_in_envelope": false
+    },
+    {
+      "modality": "drone",
+      "intensity_multiplier": 20.0,
+      "n_seeds": 5,
+      "B_mean": 0.9663572914185939,
+      "B_std": 0.001093936645161372,
+      "CV_mean": 58.49968301260124,
+      "CV_std": 1.9779670113025671,
+      "mean_rate_per_hour": 4666.409522349775,
+      "B_in_envelope": false,
+      "CV_in_envelope": false
+    },
+    {
+      "modality": "citizen_science",
+      "intensity_multiplier": 0.5,
+      "n_seeds": 5,
+      "B_mean": 0.6249310876704274,
+      "B_std": 0.03913662481204142,
+      "CV_mean": 4.378321529561617,
+      "CV_std": 0.551712725314491,
+      "mean_rate_per_hour": 0.12515240861860127,
+      "B_in_envelope": null,
+      "CV_in_envelope": null
+    },
+    {
+      "modality": "citizen_science",
+      "intensity_multiplier": 1.0,
+      "n_seeds": 5,
+      "B_mean": 0.6436816162680316,
+      "B_std": 0.05190043385797119,
+      "CV_mean": 4.7222084603524594,
+      "CV_std": 0.9439376824129646,
+      "mean_rate_per_hour": 0.2033992699366444,
+      "B_in_envelope": null,
+      "CV_in_envelope": null
+    },
+    {
+      "modality": "citizen_science",
+      "intensity_multiplier": 2.0,
+      "n_seeds": 5,
+      "B_mean": 0.6659765886909883,
+      "B_std": 0.024824834455726297,
+      "CV_mean": 5.0146942022227,
+      "CV_std": 0.45580615895073123,
+      "mean_rate_per_hour": 0.2777605819406953,
+      "B_in_envelope": null,
+      "CV_in_envelope": null
+    },
+    {
+      "modality": "citizen_science",
+      "intensity_multiplier": 5.0,
+      "n_seeds": 5,
+      "B_mean": 0.6781397729860295,
+      "B_std": 0.019059606316659858,
+      "CV_mean": 5.232871719271832,
+      "CV_std": 0.4009465366320342,
+      "mean_rate_per_hour": 0.3263746552975082,
+      "B_in_envelope": null,
+      "CV_in_envelope": null
+    },
+    {
+      "modality": "citizen_science",
+      "intensity_multiplier": 10.0,
+      "n_seeds": 5,
+      "B_mean": 0.6696160579163424,
+      "B_std": 0.0,
+      "CV_mean": 5.053562977021364,
+      "CV_std": 0.0,
+      "mean_rate_per_hour": 0.3283202568194009,
+      "B_in_envelope": null,
+      "CV_in_envelope": null
+    },
+    {
+      "modality": "citizen_science",
+      "intensity_multiplier": 20.0,
+      "n_seeds": 5,
+      "B_mean": 0.6696160579163424,
+      "B_std": 0.0,
+      "CV_mean": 5.053562977021364,
+      "CV_std": 0.0,
+      "mean_rate_per_hour": 0.3283202568194009,
+      "B_in_envelope": null,
+      "CV_in_envelope": null
+    }
+  ],
+  "per_modality_summary": [
+    {
+      "modality": "camera_trap",
+      "envelope_available": true,
+      "envelope_B_band": [
+        0.042319999999999997,
+        0.95044
+      ],
+      "envelope_CV_band": [
+        1.09344,
+        64.85112
+      ],
+      "cells": [
+        {
+          "modality": "camera_trap",
+          "intensity_multiplier": 0.5,
+          "n_seeds": 5,
+          "B_mean": 0.6212315003892671,
+          "B_std": 0.08331425815082448,
+          "CV_mean": 4.506855479707066,
+          "CV_std": 1.2971429455827372,
+          "mean_rate_per_hour": 161.4511450893188,
+          "B_in_envelope": true,
+          "CV_in_envelope": true
+        },
+        {
+          "modality": "camera_trap",
+          "intensity_multiplier": 1.0,
+          "n_seeds": 5,
+          "B_mean": 0.6903712373118472,
+          "B_std": 0.12029866262221359,
+          "CV_mean": 6.388266297696766,
+          "CV_std": 3.042440807990987,
+          "mean_rate_per_hour": 321.95291608266444,
+          "B_in_envelope": true,
+          "CV_in_envelope": true
+        },
+        {
+          "modality": "camera_trap",
+          "intensity_multiplier": 2.0,
+          "n_seeds": 5,
+          "B_mean": 0.7522304569300656,
+          "B_std": 0.08327225127277996,
+          "CV_mean": 7.860447319103912,
+          "CV_std": 3.039732381955595,
+          "mean_rate_per_hour": 641.4546274852273,
+          "B_in_envelope": true,
+          "CV_in_envelope": true
+        },
+        {
+          "modality": "camera_trap",
+          "intensity_multiplier": 5.0,
+          "n_seeds": 5,
+          "B_mean": 0.7658719277083745,
+          "B_std": 0.1489887380827091,
+          "CV_mean": 11.051104057407334,
+          "CV_std": 7.4719210740274224,
+          "mean_rate_per_hour": 1607.5340036711539,
+          "B_in_envelope": true,
+          "CV_in_envelope": true
+        },
+        {
+          "modality": "camera_trap",
+          "intensity_multiplier": 10.0,
+          "n_seeds": 5,
+          "B_mean": 0.8468341328981014,
+          "B_std": 0.020775596064988685,
+          "CV_mean": 12.244917364901783,
+          "CV_std": 1.7315692561161897,
+          "mean_rate_per_hour": 3189.7236646959755,
+          "B_in_envelope": true,
+          "CV_in_envelope": true
+        },
+        {
+          "modality": "camera_trap",
+          "intensity_multiplier": 20.0,
+          "n_seeds": 5,
+          "B_mean": 0.8737662816924544,
+          "B_std": 0.01376745583554596,
+          "CV_mean": 14.98883882738032,
+          "CV_std": 1.667551882501289,
+          "mean_rate_per_hour": 6357.053134187294,
+          "B_in_envelope": true,
+          "CV_in_envelope": true
+        }
+      ],
+      "first_break_k_B": null,
+      "first_break_k_CV": null
+    },
+    {
+      "modality": "bioacoustic",
+      "envelope_available": true,
+      "envelope_B_band": [
+        -0.6502,
+        0.21023999999999998
+      ],
+      "envelope_CV_band": [
+        0.21225,
+        1.53443
+      ],
+      "cells": [
+        {
+          "modality": "bioacoustic",
+          "intensity_multiplier": 0.5,
+          "n_seeds": 5,
+          "B_mean": -0.09745597980669234,
+          "B_std": 0.02378724260013035,
+          "CV_mean": 0.8230979980024211,
+          "CV_std": 0.040455564027979896,
+          "mean_rate_per_hour": 0.8857219693823396,
+          "B_in_envelope": true,
+          "CV_in_envelope": true
+        },
+        {
+          "modality": "bioacoustic",
+          "intensity_multiplier": 1.0,
+          "n_seeds": 5,
+          "B_mean": -0.1684516521554878,
+          "B_std": 0.018212006184585322,
+          "CV_mean": 0.712002471655746,
+          "CV_std": 0.026915514582536656,
+          "mean_rate_per_hour": 1.289272417483057,
+          "B_in_envelope": true,
+          "CV_in_envelope": true
+        },
+        {
+          "modality": "bioacoustic",
+          "intensity_multiplier": 2.0,
+          "n_seeds": 5,
+          "B_mean": -0.2466082380700121,
+          "B_std": 0.01230633584021931,
+          "CV_mean": 0.604479145184531,
+          "CV_std": 0.015939433335681583,
+          "mean_rate_per_hour": 1.5927880591443935,
+          "B_in_envelope": true,
+          "CV_in_envelope": true
+        },
+        {
+          "modality": "bioacoustic",
+          "intensity_multiplier": 5.0,
+          "n_seeds": 5,
+          "B_mean": -0.2916683019025422,
+          "B_std": 0.0019984904404730056,
+          "CV_mean": 0.5483881036046094,
+          "CV_std": 0.0023971051396729903,
+          "mean_rate_per_hour": 1.7174603159289572,
+          "B_in_envelope": true,
+          "CV_in_envelope": true
+        },
+        {
+          "modality": "bioacoustic",
+          "intensity_multiplier": 10.0,
+          "n_seeds": 5,
+          "B_mean": -0.292185823406096,
+          "B_std": 0.0,
+          "CV_mean": 0.5477650069926969,
+          "CV_std": 0.0,
+          "mean_rate_per_hour": 1.7209334409358914,
+          "B_in_envelope": true,
+          "CV_in_envelope": true
+        },
+        {
+          "modality": "bioacoustic",
+          "intensity_multiplier": 20.0,
+          "n_seeds": 5,
+          "B_mean": -0.292185823406096,
+          "B_std": 0.0,
+          "CV_mean": 0.5477650069926969,
+          "CV_std": 0.0,
+          "mean_rate_per_hour": 1.7209334409358914,
+          "B_in_envelope": true,
+          "CV_in_envelope": true
+        }
+      ],
+      "first_break_k_B": null,
+      "first_break_k_CV": null
+    },
+    {
+      "modality": "drone",
+      "envelope_available": true,
+      "envelope_B_band": [
+        -0.88974,
+        -0.68796
+      ],
+      "envelope_CV_band": [
+        0.05863,
+        0.18544
+      ],
+      "cells": [
+        {
+          "modality": "drone",
+          "intensity_multiplier": 0.5,
+          "n_seeds": 5,
+          "B_mean": 0.9631000513456971,
+          "B_std": 0.0024401654275712087,
+          "CV_mean": 53.39825753384764,
+          "CV_std": 3.7404462799042593,
+          "mean_rate_per_hour": 125.17504868942737,
+          "B_in_envelope": false,
+          "CV_in_envelope": false
+        },
+        {
+          "modality": "drone",
+          "intensity_multiplier": 1.0,
+          "n_seeds": 5,
+          "B_mean": 0.9626138858813966,
+          "B_std": 0.002207591865738364,
+          "CV_mean": 52.64961408159011,
+          "CV_std": 3.2591959296227,
+          "mean_rate_per_hour": 234.87192502433572,
+          "B_in_envelope": false,
+          "CV_in_envelope": false
+        },
+        {
+          "modality": "drone",
+          "intensity_multiplier": 2.0,
+          "n_seeds": 5,
+          "B_mean": 0.9656942173689227,
+          "B_std": 0.0013464521265056971,
+          "CV_mean": 57.37156541886931,
+          "CV_std": 2.3050159421064964,
+          "mean_rate_per_hour": 470.3074537181179,
+          "B_in_envelope": false,
+          "CV_in_envelope": false
+        },
+        {
+          "modality": "drone",
+          "intensity_multiplier": 5.0,
+          "n_seeds": 5,
+          "B_mean": 0.9665558947701148,
+          "B_std": 0.0020950427091628553,
+          "CV_mean": 58.988373910512415,
+          "CV_std": 3.7394165774982113,
+          "mean_rate_per_hour": 1172.3021213403576,
+          "B_in_envelope": false,
+          "CV_in_envelope": false
+        },
+        {
+          "modality": "drone",
+          "intensity_multiplier": 10.0,
+          "n_seeds": 5,
+          "B_mean": 0.9670806337889672,
+          "B_std": 0.0004978530583374553,
+          "CV_mean": 59.76544284429534,
+          "CV_std": 0.9035715253816348,
+          "mean_rate_per_hour": 2335.837342034762,
+          "B_in_envelope": false,
+          "CV_in_envelope": false
+        },
+        {
+          "modality": "drone",
+          "intensity_multiplier": 20.0,
+          "n_seeds": 5,
+          "B_mean": 0.9663572914185939,
+          "B_std": 0.001093936645161372,
+          "CV_mean": 58.49968301260124,
+          "CV_std": 1.9779670113025671,
+          "mean_rate_per_hour": 4666.409522349775,
+          "B_in_envelope": false,
+          "CV_in_envelope": false
+        }
+      ],
+      "first_break_k_B": 2.0,
+      "first_break_k_CV": 2.0
+    },
+    {
+      "modality": "citizen_science",
+      "envelope_available": false,
+      "envelope_B_band": null,
+      "envelope_CV_band": null,
+      "cells": [
+        {
+          "modality": "citizen_science",
+          "intensity_multiplier": 0.5,
+          "n_seeds": 5,
+          "B_mean": 0.6249310876704274,
+          "B_std": 0.03913662481204142,
+          "CV_mean": 4.378321529561617,
+          "CV_std": 0.551712725314491,
+          "mean_rate_per_hour": 0.12515240861860127,
+          "B_in_envelope": null,
+          "CV_in_envelope": null
+        },
+        {
+          "modality": "citizen_science",
+          "intensity_multiplier": 1.0,
+          "n_seeds": 5,
+          "B_mean": 0.6436816162680316,
+          "B_std": 0.05190043385797119,
+          "CV_mean": 4.7222084603524594,
+          "CV_std": 0.9439376824129646,
+          "mean_rate_per_hour": 0.2033992699366444,
+          "B_in_envelope": null,
+          "CV_in_envelope": null
+        },
+        {
+          "modality": "citizen_science",
+          "intensity_multiplier": 2.0,
+          "n_seeds": 5,
+          "B_mean": 0.6659765886909883,
+          "B_std": 0.024824834455726297,
+          "CV_mean": 5.0146942022227,
+          "CV_std": 0.45580615895073123,
+          "mean_rate_per_hour": 0.2777605819406953,
+          "B_in_envelope": null,
+          "CV_in_envelope": null
+        },
+        {
+          "modality": "citizen_science",
+          "intensity_multiplier": 5.0,
+          "n_seeds": 5,
+          "B_mean": 0.6781397729860295,
+          "B_std": 0.019059606316659858,
+          "CV_mean": 5.232871719271832,
+          "CV_std": 0.4009465366320342,
+          "mean_rate_per_hour": 0.3263746552975082,
+          "B_in_envelope": null,
+          "CV_in_envelope": null
+        },
+        {
+          "modality": "citizen_science",
+          "intensity_multiplier": 10.0,
+          "n_seeds": 5,
+          "B_mean": 0.6696160579163424,
+          "B_std": 0.0,
+          "CV_mean": 5.053562977021364,
+          "CV_std": 0.0,
+          "mean_rate_per_hour": 0.3283202568194009,
+          "B_in_envelope": null,
+          "CV_in_envelope": null
+        },
+        {
+          "modality": "citizen_science",
+          "intensity_multiplier": 20.0,
+          "n_seeds": 5,
+          "B_mean": 0.6696160579163424,
+          "B_std": 0.0,
+          "CV_mean": 5.053562977021364,
+          "CV_std": 0.0,
+          "mean_rate_per_hour": 0.3283202568194009,
+          "B_in_envelope": null,
+          "CV_in_envelope": null
+        }
+      ],
+      "first_break_k_B": null,
+      "first_break_k_CV": null
+    }
+  ],
+  "generated_at": "2026-04-28T01:27:45.136010+00:00",
+  "multipliers": [
+    0.5,
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    20.0
+  ],
+  "n_seeds": 5,
+  "duration_days": 25,
+  "envelope_source": "processing_output/experimental_resultsv2/exp6_2a_trace_fidelity/results/variance_envelope.json"
+}

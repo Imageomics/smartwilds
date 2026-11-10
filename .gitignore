@@ -4,7 +4,7 @@ __pycache__/
 *.pt
 results/
 logs/
-data/
+/data/            # downloaded Hugging Face datasets at the repo root only
 media/
 drone_frame.jpg
 site/

@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-04-27T18:49:47.965010+00:00",
+  "duration_days": 25,
+  "multipliers": [
+    0.5,
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    20.0
+  ],
+  "n_seeds_panel_b": 5,
+  "n_combos_max_panel_a": 10,
+  "panel_A_independent": {
+    "per_panel": [
+      {
+        "modality": "bioacoustic",
+        "schedule": "hourly",
+        "n_sites_range": [
+          1,
+          2
+        ],
+        "B_at_min_n": -0.6256868522097441,
+        "B_at_max_n": -0.78067324986759,
+        "delta_B": -0.15498639765784594,
+        "slope_per_site": -0.1549863976578459,
+        "direction": "decreasing (CLT prediction holds \u2014 sites approximately independent)"
+      },
+      {
+        "modality": "bioacoustic",
+        "schedule": "sunrise_sunset",
+        "n_sites_range": [
+          1,
+          2
+        ],
+        "B_at_min_n": 0.18842612665574623,
+        "B_at_max_n": 0.1893219809796124,
+        "delta_B": 0.0008958543238661576,
+        "slope_per_site": 0.0008958543238661706,
+        "direction": "approximately flat (sensor cadence dominates)"
+      },
+      {
+        "modality": "camera_trap",
+        "schedule": "",
+        "n_sites_range": [
+          1,
+          5
+        ],
+        "B_at_min_n": 0.536764658222821,
+        "B_at_max_n": 0.5348422518965873,
+        "delta_B": -0.0019224063262337499,
+        "slope_per_site": -0.018590693589189015,
+        "direction": "decreasing (CLT prediction holds \u2014 sites approximately independent)"
+      }
+    ]
+  },
+  "panel_B_correlated": {
+    "per_modality": [
+      {
+        "modality": "bioacoustic",
+        "multipliers": [
+          0.5,
+          1.0,
+          2.0,
+          5.0,
+          10.0,
+          20.0
+        ],
+        "B_min": -0.292185823406096,
+        "B_max": -0.09745597980669235,
+        "B_range": 0.19472984359940365,
+        "tolerance": 0.05,
+        "pass": false
+      },
+      {
+        "modality": "camera_trap",
+        "multipliers": [
+          0.5,
+          1.0,
+          2.0,
+          5.0,
+          10.0,
+          20.0
+        ],
+        "B_min": 0.6212315003892672,
+        "B_max": 0.8737662816924544,
+        "B_range": 0.2525347813031872,
+        "tolerance": 0.05,
+        "pass": false
+      },
+      {
+        "modality": "citizen_science",
+        "multipliers": [
+          0.5,
+          1.0,
+          2.0,
+          5.0,
+          10.0,
+          20.0
+        ],
+        "B_min": 0.6249310876704274,
+        "B_max": 0.6781397729860295,
+        "B_range": 0.05320868531560208,
+        "tolerance": 0.05,
+        "pass": false
+      },
+      {
+        "modality": "drone",
+        "multipliers": [
+          0.5,
+          1.0,
+          2.0,
+          5.0,
+          10.0,
+          20.0
+        ],
+        "B_min": 0.9626138858813966,
+        "B_max": 0.9670806337889672,
+        "B_range": 0.004466747907570623,
+        "tolerance": 0.05,
+        "pass": true
+      }
+    ],
+    "n_pass": 1,
+    "n_total": 4
+  }
+}
