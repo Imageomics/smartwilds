@@ -1,5 +1,6 @@
 # Field campaigns
 
+<!-- --8<-- [start:body] -->
 Data summaries and the per-campaign data reports for the three 2025 SmartWilds
 campaigns at The Wilds. The field logs, site descriptions, equipment list,
 field collection protocols, and Google Earth site files live in the public
@@ -18,3 +19,4 @@ directory: file counts and sizes per modality and deployment, the metadata
 files present, known issues (clock errors, missing telemetry, battery
 exhaustion), and the people who collected the data. Paths written as
 `<archive>/...` refer to the project's field archive, which is not public.
+<!-- --8<-- [end:body] -->

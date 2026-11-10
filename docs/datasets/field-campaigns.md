@@ -1,6 +1,6 @@
 # Field campaigns
 
---8<-- "field_campaigns/README.md"
+--8<-- "field_campaigns/README.md:body"
 
 ## Files
 

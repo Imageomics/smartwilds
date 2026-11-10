@@ -47,7 +47,7 @@ annotation method and provenance.
 | `metadata/` | The dataset cards of the five SmartWilds datasets, the defect inventory, the per-device sensor configurations, and the card images |
 | `guidelines/` | Local copies of the FAIR² Drones documentation standard the cards follow, for use as agent context |
 | `field_campaigns/` | Data summaries and per-campaign data reports (field logs and protocols live in [Imageomics/naturelab](https://github.com/Imageomics/naturelab)) |
-| `darwin_core/` | Interim copy of the current Darwin Core tables (those under 100 MB) until the datasets are published |
+| `darwin_core/` | The Darwin Core Event and Occurrence tables, one folder per dataset |
 | `scripts/README.md` | What each script does, its inputs and outputs, and the environment variables it reads |
 | `scripts/darwin_core/` | Darwin Core Event and Occurrence generator, and raw-WAV reconciliation |
 | `scripts/georeferencing/` | Camera-trap (pinhole model) and drone (ground-ray) projection, with their configs |

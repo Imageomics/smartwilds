@@ -1,6 +1,6 @@
 # Darwin Core tables
 
---8<-- "darwin_core/README.md"
+--8<-- "darwin_core/README.md:body"
 
 ## Column definitions
 

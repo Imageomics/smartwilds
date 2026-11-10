@@ -33,7 +33,7 @@ already in the [SmartWilds collection](https://huggingface.co/collections/imageo
 | Part | Where |
 |---|---|
 | How to join the modalities | [Joining in space and time](datasets/joining.md) |
-| Darwin Core tables (current build) | [`darwin_core/`](datasets/darwin-core-tables.md) |
+| Darwin Core tables | [`darwin_core/`](datasets/darwin-core-tables.md) |
 | Dataset cards for the five SmartWilds datasets | [`metadata/`](datasets/dataset-cards.md) |
 | Supplemental material, defect inventory, camera-trap release note | [`docs/`](SUPPLEMENTAL.md) |
 | Data summaries and campaign data reports | [`field_campaigns/`](datasets/field-campaigns.md) |

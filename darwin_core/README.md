@@ -1,35 +1,35 @@
-# Darwin Core tables (interim copy)
+# Darwin Core tables
 
-Temporary home for the current SmartWilds Darwin Core tables while the datasets
-are being prepared for Hugging Face. These are copies of the `data/` directory
-of each staged dataset (release build 2026-10-22; camera and merged tables
-updated 2026-11-08). The datasets themselves, with media manifests, metadata,
-provenance records, and checksums, are the release of record; this directory
-will be removed once they are published.
+<!-- --8<-- [start:body] -->
+The Darwin Core Event and Occurrence tables of the SmartWilds release (build
+2026-10-22; camera and merged tables updated 2026-11-08), one folder per
+dataset. These are the tables of record. Column definitions are in each
+dataset card under `metadata/`, and the verification-status vocabulary differs
+by table (see the supplemental material, S9.3). All tables share one Event
+hierarchy rooted at `TheWilds_2025`.
 
 | File | Size | Status |
 |---|---:|---|
 | `smartwilds/events_all_modalities.csv` | 7.7 MB | copied |
-| `smartwilds/occurrences_all_modalities.csv` | 521.6 MB | too large for GitHub |
+| `smartwilds/occurrences_all_modalities.csv` | 521.6 MB | not in this folder (over 100 MB) |
 | `smartwilds/text_events.csv` | 0.0 MB | copied |
 | `smartwilds/text_occurrences.csv` | 0.0 MB | copied |
 | `smartwilds/site_selection_rationale.csv` | 0.0 MB | copied |
 | `smartwilds-camera-traps/events.csv` | 8.3 MB | copied |
 | `smartwilds-camera-traps/occurrences.csv` | 67.3 MB | copied |
-| `smartwilds-camera-traps/images.csv` | 139.2 MB | too large for GitHub |
+| `smartwilds-camera-traps/images.csv` | 139.2 MB | not in this folder (over 100 MB) |
 | `smartwilds-bioacoustics/events.csv` | 1.7 MB | copied |
 | `smartwilds-bioacoustics/occurrences.csv` | 6.5 MB | copied |
 | `smartwilds-bioacoustics/recordings.csv` | 1.1 MB | copied |
 | `smartwilds-drones/events.csv` | 0.0 MB | copied |
-| `smartwilds-drones/occurrences.csv` | 431.5 MB | too large for GitHub |
+| `smartwilds-drones/occurrences.csv` | 431.5 MB | not in this folder (over 100 MB) |
 | `smartwilds-drones/detections.csv` | 78.3 MB | copied |
 | `smartwilds-citizen-science/events.csv` | 0.0 MB | copied |
 | `smartwilds-citizen-science/occurrences.csv` | 0.5 MB | copied |
 
-GitHub rejects files over 100 MB, so the three large tables are not here. They
-are in the staged datasets and will be published with them.
-
-The tables share one Event hierarchy rooted at `TheWilds_2025`. Column
-definitions are in each dataset's `metadata/DATA_DICTIONARY.md`; the
-verification-status vocabulary differs by table (see `docs/SUPPLEMENTAL.md`,
-S9.3).
+Three tables exceed GitHub's 100 MB file limit and are not in this folder:
+the merged Occurrence table, the camera image inventory, and the drone
+Occurrence table. They are available from the authors on request, and their
+row counts and checksums are recorded in the dataset cards and the
+supplemental material.
+<!-- --8<-- [end:body] -->
