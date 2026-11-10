@@ -10,7 +10,9 @@ release.
     identified (the face is then under about 10 px), so the file is released as
     is. Any person box at or above 80 px, at confidence ≥ 0.2, sends the file to
     human review. Review decides: release (false positive or not identifiable)
-    or scrub.
+    or remove. Media in which a person can be individually identified are
+    removed from the release; drone videos are trimmed losslessly at launch
+    and landing instead of being dropped whole.
 
 ## Steps
 

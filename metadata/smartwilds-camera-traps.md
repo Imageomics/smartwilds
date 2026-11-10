@@ -123,8 +123,12 @@ Event and Occurrence dates and times use the corrected image timestamps.
 
 `media_manifest.csv` supplies release-relative paths and packaging status for
 raw media. Privacy fields retain screening evidence and record the
-human-review outcome. The 31 curated images flagged by screening were reviewed
-and cleared for retention.
+human-review outcome. Media in which a person can be individually identified are removed from the
+release. People too small to identify (a person box under 80 px in the native
+image, where the face is under about 10 px) are retained; every file with a
+larger person detection was reviewed by a person before release.
+The 31 curated images flagged by screening were reviewed and cleared for
+retention.
 
 ## Limitations
 

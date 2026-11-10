@@ -230,7 +230,13 @@ have no `frame_index`.
 ### Personal and sensitive information
 
 3,114 Occurrences are labeled *Homo sapiens*: field staff and visitors seen
-from altitude. <!-- TODO(release): decide on blurring/withholding policy for frames with people. -->
+from altitude. Media in which a person can be individually identified are removed from the
+release. People too small to identify (a person box under 80 px in the native
+image, where the face is under about 10 px) are retained; every file with a
+larger person detection was reviewed by a person before release.
+For drone videos this means trimming launch and landing segments where the
+operators are identifiable; the trims are lossless and recorded in the
+media manifest.
 
 ## Considerations for Using the Data
 

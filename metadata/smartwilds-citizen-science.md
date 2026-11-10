@@ -1,5 +1,5 @@
 ---
-license: cc0-1.0  # TODO(license): visitor-submitted media; confirm contributor consent and license terms
+license: cc0-1.0
 language:
 - en
 pretty_name: SmartWilds Citizen Science (The Wilds 2025)
@@ -18,7 +18,8 @@ tags:
 size_categories:
 - n<1K
 description: >-
-  Visitor-submitted wildlife photographs from 13 observation sessions at The
+  Visitor-style wildlife photographs, taken by project researchers, from 13
+  observation sessions at The
   Wilds (Ohio, USA), 2025: 1,103 raw media files, 564 curated wildlife photos,
   and 622 expert-verified Darwin Core Occurrences.
 
@@ -46,8 +47,10 @@ rooted at `TheWilds_2025` and are joined by the SmartWilds collection.
 - **Paper:** SmartWilds: Integrating, Aligning, and Documenting Multi-Modal Field Sensing Data (under review)
 - **Release build:** 2026-10-22
 
-Park visitors submitted photographs through a structured web form. The
-release distinguishes four counts, each a different unit:
+Members of the project team, moving through the park as visitors do,
+submitted photographs through a structured web form; the team holds the
+rights to the media. The release distinguishes four counts, each a different
+unit:
 
 | Unit | Count |
 |---|---:|
@@ -72,8 +75,12 @@ The Event table has 14 rows: 1 `Project` and 13 `ObservationSession`.
 
 ### Personal and sensitive information
 
-The photos were taken by members of the public, and some may show people.
-<!-- TODO(release): confirm visitor consent / terms of submission permit redistribution; screen for identifiable people. -->
+The photographs were taken by project researchers, not by members of the
+public, so no third-party consent is needed for their release. Some show
+other visitors. Media in which a person can be individually identified are removed from the
+release. People too small to identify (a person box under 80 px in the native
+image, where the face is under about 10 px) are retained; every file with a
+larger person detection was reviewed by a person before release.
 
 ## Considerations for Using the Data
 

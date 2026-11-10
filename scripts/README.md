@@ -46,7 +46,9 @@ the machine the pipeline originally ran on.
 
 Person screening with MegaDetector v5a, then triage by identifiability. A
 person whose box is shorter than 80 px in the native image cannot be identified
-and the file is released as is; anything larger goes to human review.
+and the file is released as is; anything larger goes to human review, and media
+in which a person can be individually identified are removed from the release
+(drone videos are trimmed at launch and landing instead).
 
 | Script | What it does |
 |---|---|
