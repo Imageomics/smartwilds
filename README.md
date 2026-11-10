@@ -27,8 +27,8 @@ Events and 401,602 unique Occurrences. See
 [`docs/CAMERA_TRAP_RELEASE.md`](docs/CAMERA_TRAP_RELEASE.md) for the
 annotation method and provenance.
 
-- **Data:** one Hugging Face dataset per modality, joined by the
-  SmartWilds collection <!-- TODO: collection URL + per-modality repo links/DOIs -->
+- **Data:** [imageomics/smartwilds_metadata](https://huggingface.co/datasets/imageomics/smartwilds_metadata) on Hugging Face, in the
+  [SmartWilds collection](https://huggingface.co/collections/imageomics/smartwilds)
 - **Field protocols, forms, and logs:**
   [Imageomics/naturelab](https://github.com/Imageomics/naturelab)
 - **Paper:** *SmartWilds: Integrating, Aligning, and Documenting Multi-Modal
@@ -44,10 +44,9 @@ annotation method and provenance.
 | `docs/DEFECT_INVENTORY.md` | All 22 defect classes found during integration: scope, what detected each, the repair, and the residual risk |
 | `docs/CAMERA_TRAP_RELEASE.md` | Scope and label provenance of the 2026-11-08 camera-trap release |
 | `docs/AGENT_ASSISTED_DOCUMENTATION.md` | How LLM coding agents were used to inventory, document, and quality-check the data, and the guidelines they were given |
-| `metadata/` | The dataset cards of the five SmartWilds datasets, the defect inventory, the per-device sensor configurations, and the card images |
+| `metadata/` | The dataset cards (the `smartwilds_metadata` card and the five component cards), the defect inventory, the per-device sensor configurations, and the card images |
 | `guidelines/` | Local copies of the FAIR² Drones documentation standard the cards follow, for use as agent context |
 | `field_campaigns/` | Data summaries and per-campaign data reports (field logs and protocols live in [Imageomics/naturelab](https://github.com/Imageomics/naturelab)) |
-| `darwin_core/` | The Darwin Core Event and Occurrence tables, one folder per dataset |
 | `scripts/README.md` | What each script does, its inputs and outputs, and the environment variables it reads |
 | `scripts/darwin_core/` | Darwin Core Event and Occurrence generator, and raw-WAV reconciliation |
 | `scripts/georeferencing/` | Camera-trap (pinhole model) and drone (ground-ray) projection, with their configs |
@@ -62,8 +61,8 @@ annotation method and provenance.
 
 ```bash
 pip install -r requirements.txt
-huggingface-cli download --repo-type dataset <camera-trap repo> --local-dir smartwilds-camera-traps
-python examples/quickstart.py smartwilds-camera-traps
+huggingface-cli download --repo-type dataset imageomics/smartwilds_metadata --local-dir smartwilds_metadata
+python examples/quickstart.py smartwilds_metadata/smartwilds-camera-traps
 ```
 
 Pass several dataset folders to combine modalities. They share one Event

@@ -5,7 +5,8 @@ anything from the tables.
 
 ```bash
 pip install -r requirements.txt
-python examples/quickstart.py darwin_core/smartwilds-camera-traps darwin_core/smartwilds-bioacoustics
+huggingface-cli download --repo-type dataset imageomics/smartwilds_metadata --local-dir smartwilds_metadata
+python examples/quickstart.py smartwilds_metadata/smartwilds-camera-traps smartwilds_metadata/smartwilds-bioacoustics
 ```
 
 Pass one or more dataset folders (each with `data/events.csv` and
@@ -22,7 +23,3 @@ Event hierarchy, so modalities can be combined. The script:
    and its video is present: `frame_index` is the native frame index, so any
    detection can be rendered from the raw video with OpenCV.
 
-!!! tip
-    The folders in `darwin_core/` use `events.csv` / `occurrences.csv` directly
-    (no `data/` level). Either pass a downloaded dataset folder, or point the
-    script at a folder laid out as `data/events.csv`.

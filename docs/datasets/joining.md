@@ -3,7 +3,8 @@
 The point of the release is that four independently collected modalities can
 be put on the same spatial and temporal footing. This page says which columns
 do that, what their precision is, and where the traps are. A runnable example
-is at `examples/join_camera_acoustic_by_site_hour.py`.
+is at `examples/join_camera_acoustic_by_site_hour.py` (download the dataset
+first, as shown in [Darwin Core tables](darwin-core-tables.md)).
 
 ## Temporal keys
 

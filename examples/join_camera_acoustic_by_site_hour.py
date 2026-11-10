@@ -5,8 +5,10 @@ def load(root):
     oc = pd.read_csv(f"{root}/occurrences.csv", dtype=str, keep_default_na=False)
     return ev, oc
 
-cam_ev, cam = load("darwin_core/smartwilds-camera-traps")
-aru_ev, aru = load("darwin_core/smartwilds-bioacoustics")
+# Download first:
+#   huggingface-cli download --repo-type dataset imageomics/smartwilds_metadata --local-dir smartwilds_metadata
+cam_ev, cam = load("smartwilds_metadata/smartwilds-camera-traps/data")
+aru_ev, aru = load("smartwilds_metadata/smartwilds-bioacoustics/data")
 
 # 1. Temporal key: corrected local timestamp, truncated to the hour.
 for df in (cam, aru):

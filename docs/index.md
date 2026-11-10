@@ -33,7 +33,7 @@ already in the [SmartWilds collection](https://huggingface.co/collections/imageo
 | Part | Where |
 |---|---|
 | How to join the modalities | [Joining in space and time](datasets/joining.md) |
-| Darwin Core tables | [`darwin_core/`](datasets/darwin-core-tables.md) |
+| Darwin Core tables | [`imageomics/smartwilds_metadata`](https://huggingface.co/datasets/imageomics/smartwilds_metadata) on Hugging Face ([guide](datasets/darwin-core-tables.md)) |
 | Dataset cards for the five SmartWilds datasets | [`metadata/`](datasets/dataset-cards.md) |
 | Supplemental material, defect inventory, camera-trap release note | [`docs/`](SUPPLEMENTAL.md) |
 | Data summaries and campaign data reports | [`field_campaigns/`](datasets/field-campaigns.md) |
@@ -47,7 +47,8 @@ already in the [SmartWilds collection](https://huggingface.co/collections/imageo
 git clone https://github.com/Imageomics/smartwilds
 cd smartwilds
 pip install -r requirements.txt
-python examples/quickstart.py darwin_core/smartwilds-camera-traps darwin_core/smartwilds-bioacoustics
+huggingface-cli download --repo-type dataset imageomics/smartwilds_metadata --local-dir smartwilds_metadata
+python examples/quickstart.py smartwilds_metadata/smartwilds-camera-traps smartwilds_metadata/smartwilds-bioacoustics
 ```
 
 The quickstart loads the tables, applies a verification floor, joins

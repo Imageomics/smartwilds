@@ -6,6 +6,7 @@ published; their sources are kept here.
 
 | Card | Dataset |
 |---|---|
+| [`smartwilds_metadata.md`](https://github.com/Imageomics/smartwilds/blob/main/metadata/smartwilds_metadata.md) | The published metadata dataset, [`imageomics/smartwilds_metadata`](https://huggingface.co/datasets/imageomics/smartwilds_metadata), which contains the five components below |
 | [`smartwilds.md`](https://github.com/Imageomics/smartwilds/blob/main/metadata/smartwilds.md) | Study level: merged Event table, text records, sensor configurations, arrival traces |
 | [`smartwilds-camera-traps.md`](https://github.com/Imageomics/smartwilds/blob/main/metadata/smartwilds-camera-traps.md) | Camera traps |
 | [`smartwilds-bioacoustics.md`](https://github.com/Imageomics/smartwilds/blob/main/metadata/smartwilds-bioacoustics.md) | Bioacoustics |

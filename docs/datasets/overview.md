@@ -54,10 +54,9 @@ defects themselves are in the [defect inventory](../DEFECT_INVENTORY.md).
 
 ## Where the files are
 
-- The tables are in [`darwin_core/`](darwin-core-tables.md). The three that
-  exceed GitHub's 100 MB file limit (merged Occurrences, camera image
-  inventory, drone Occurrences) are listed there with their sizes and are
-  available from the authors on request.
+- The tables are published as [`imageomics/smartwilds_metadata`](https://huggingface.co/datasets/imageomics/smartwilds_metadata) on
+  Hugging Face; see [Darwin Core tables](darwin-core-tables.md) for the layout
+  and how to load them.
 - The dataset cards, written to the FAIR² Drones and Imageomics templates, are
   in [`metadata/`](dataset-cards.md).
 - The 2025 pilot media are already public in the
