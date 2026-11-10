@@ -17,8 +17,11 @@ first, as shown in [Darwin Core tables](darwin-core-tables.md)).
 !!! warning "Three temporal traps"
     - **Camera clocks were wrong on 93.9% of images** (defect 1). Use the
       corrected values; the burned-in overlay in the image shows the raw clock.
-    - **The 2025-08-11 drone flights have a date but no time** (defect 15):
-      their `eventTime` is blank and they cannot be placed within the day.
+    - **The 2025-08-11 drone flights had a date but no time** (defect 15). Their
+      times were recovered from the video container creation times, with the
+      clock convention settled against the field log (`provenance/drone_time_recovery_20250811.json`
+      in the drone dataset); the DJI convention is inferred, so treat those
+      times as minute-level.
     - **Acoustic Events are recording windows**, not instants: a 5- or
       15-minute WAV. An acoustic Occurrence's time is the recording start.
 

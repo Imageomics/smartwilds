@@ -12,3 +12,8 @@
 
 Field logs by date, site descriptions with GPS fixes, the equipment list, and
 the field collection protocols: [`Imageomics/naturelab`](https://github.com/Imageomics/naturelab).
+
+The field logs are evidence, not just context. The time of day of the
+2025-08-11 drone flights (defect 15) was recovered from the video containers
+only because the field log and the JotForm check-ins fixed the morning's
+schedule and so settled which aircraft wrote local time and which wrote UTC.

@@ -39,7 +39,7 @@ already in the [SmartWilds collection](https://huggingface.co/collections/imageo
 | Supplemental material, defect inventory, camera-trap release note | [`docs/`](SUPPLEMENTAL.md) |
 | Data summaries and campaign data reports | [`field_campaigns/`](datasets/field-campaigns.md) |
 | Generation, validation, georeferencing, screening scripts | [`scripts/`](scripts/index.md) |
-| What the dataset enables: cross-modal ecology, CV benchmarking, systems planning, biodiversity monitoring, deployment design, integration methods | [What the dataset enables](analysis/index.md) |
+| Applications: cross-modal ecology, CV benchmarking, systems planning, biodiversity monitoring, deployment design, integration methods | [Applications](analysis/index.md) |
 | How the agents were used, and how to use them on your data | [Agents](agents/index.md) |
 
 ## Getting started
@@ -72,8 +72,8 @@ Several papers build on SmartWilds; each describes one part of the project.
   (2026): annotation-free verification of Milu deer activity.
 - [Resolve, Clear, or Defer: Training-Free Active Prototype Triage for
   Ecological Detection Pipelines](https://arxiv.org/abs/2611.01466) (2026): the
-  semi-automated labeling evaluated on SmartWilds that produced the camera-trap
-  labels.
+  semi-automated labeling method behind the camera-trap labels, evaluated on
+  SmartWilds and other datasets.
 
 ## Citation
 

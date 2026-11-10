@@ -207,11 +207,13 @@ have no `frame_index`.
 
 ### Known defects and repairs
 
-- **Aug 11 session has no time of day.** Its `eventDate` was exported as the
-  string `nan` (41,524 Occurrences). The date was restored from the flight
-  identifier. `eventTime` is blank because neither the telemetry nor the video
-  containers keep a trustworthy capture time. Do not use these rows for
-  intra-day or inter-arrival analyses.
+- **Aug 11 session had no time of day.** Its `eventDate` was exported as the
+  string `nan` (41,524 Occurrences); the date was restored from the flight
+  identifier. The times were recovered from the video container creation
+  times, with each aircraft's clock convention settled against reference
+  flights and the day's field log (`metadata/provenance/drone_time_recovery_20250811.json`).
+  The Parrot times are verified to the second; the DJI times rest on an
+  inferred local-time convention and should be read as minute-level.
 - **Impossible coordinates on 7 Events** (`nan`, or longitude ≈ 500). These were
   replaced with a validated static video location, or left blank.
 - **Frame media lost from scratch storage.** Extracted frames were deleted when

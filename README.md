@@ -34,7 +34,7 @@ annotation method and provenance.
   [Imageomics/naturelab](https://github.com/Imageomics/naturelab)
 - **Papers:** see [Papers](#papers) below
 
-## What the dataset enables
+## Applications
 
 - **Comparing modalities for ecological findings.** Camera and acoustic
   activity patterns recovered independently and corroborated against each
@@ -52,7 +52,7 @@ annotation method and provenance.
 - **Methods for integrating heterogeneous field data.** The defect inventory
   and repair methods as a documented worked case.
 
-See [What the dataset enables](https://imageomics.github.io/smartwilds/analysis/) for the papers behind each.
+See [Applications](https://imageomics.github.io/smartwilds/analysis/) for the papers behind each.
 
 ## What is here
 
@@ -153,7 +153,7 @@ none of them is "the" SmartWilds paper.
 | [*SmartWilds: Multimodal Wildlife Monitoring Dataset*](https://arxiv.org/abs/2509.18894) (2025) | The four-day pilot deployment and its first data release |
 | *A Blueprint for Cross-Modal Coordination at the Far Edge* (to appear) | Workload characterization and synthesis for planning cross-modal sensing systems; code in `analysis/cross_modal_coordination/` |
 | [*Cross-Modal Corroboration for Annotation-Free Wildlife Monitoring*](https://arxiv.org/abs/2606.21613) (2026) | Annotation-free verification of Milu deer activity from camera traps and acoustics |
-| [*Resolve, Clear, or Defer: Training-Free Active Prototype Triage for Ecological Detection Pipelines*](https://arxiv.org/abs/2611.01466) (2026) | The semi-automated labeling method, evaluated on SmartWilds, that produced the current camera-trap labels |
+| [*Resolve, Clear, or Defer: Training-Free Active Prototype Triage for Ecological Detection Pipelines*](https://arxiv.org/abs/2611.01466) (2026) | The semi-automated labeling method behind the current camera-trap labels, evaluated on SmartWilds and other datasets |
 
 ```bibtex
 @article{kline2026smartwilds,

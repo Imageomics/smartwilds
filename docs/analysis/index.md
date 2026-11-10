@@ -1,4 +1,4 @@
-# What the dataset enables
+# Applications
 
 Clean, aligned metadata is not an end in itself. These are the kinds of work
 that the SmartWilds tables support, each using a different property of them.
@@ -25,8 +25,8 @@ reference sets for camera traps (2,067 boxes) and drones (27,159 boxes). That
 is what lets a labeling method be evaluated rather than just applied.
 *Resolve, Clear, or Defer: Training-Free Active Prototype Triage for Ecological
 Detection Pipelines* ([Potlapally et al., 2026](https://arxiv.org/abs/2611.01466))
-developed and evaluated the semi-automated triage that produced the current
-camera-trap labels; the per-rank accuracy of the drone labels is measured
+developed the semi-automated triage that produced the current camera-trap
+labels and evaluated it on SmartWilds and other datasets; the per-rank accuracy of the drone labels is measured
 against the drone reference set (supplement, S9). When the media are released,
 the same tables become detection, classification, and tracking benchmarks with
 known label quality.

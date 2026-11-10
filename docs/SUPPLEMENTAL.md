@@ -312,7 +312,7 @@ have standardized them.
 | 2 | Sensor inactive by schedule | Deployment-level schedule field | 5 min/hr recorders are off 91.7% of the time by design |
 | 3 | Sensor inactive by failure | Capture gap vs. logged deployment window, with cause | TW02-CT01 battery, Aug 18–25 |
 | 4 | Captured but not represented | Raw file inventory vs. Event table | 78 transfer-duplicate WAVs and 4 failed WAVs, each classified per path (S3) |
-| 5 | Metadata unusable for a purpose | Status/provenance column | 41,524 drone Occurrences with a date but no time of day (S10); 70,219 detections unprojectable (S6) |
+| 5 | Metadata unusable for a purpose | Status/provenance column | 70,219 drone detections unprojectable (S6); until 2026-11-10, 41,524 drone Occurrences with a date but no time of day (S10, since recovered) |
 | 6 | Excluded in QC | Documented exclusion | People-only TW07-CT05 deployment excluded; one drone video reviewed and kept as a zero-Occurrence `MediaEvent` |
 
 States 1 and 2 have opposite implications for a coordination policy, which is
@@ -540,11 +540,26 @@ the check tested for null/empty and `"nan"` is neither.
 
 **Repair (release build 2026-10-22).** `eventDate` was restored to
 `2025-08-11` from the flight identifier and marked as identifier-derived.
-`eventTime` is left blank: neither the DJI telemetry nor the video containers
-retain a trustworthy capture time, and no time was synthesized from file
-modification times. These records can be placed on a day but not within it,
-and they are excluded from inter-arrival and diurnal analyses. Drones flew on
-6 dates; the old count of 7 included the string `nan`.
+Drones flew on 6 dates; the old count of 7 included the string `nan`.
+
+**Time recovery (2026-11-10).** The processed telemetry had no clock, but the
+five video containers carry a creation time. Whether an aircraft writes UTC or
+local time into that field is airframe-specific, so it was settled against
+flights with independently known times: the Parrot Anafi writes UTC (its
+2025-08-18 video agrees with the telemetry file name to within 2 s), and the
+DJI Air 2 writes UTC (its 2025-09-08 video agrees with the telemetry's
+`datetime(utc)`). The 2025-08-11 Parrot videos therefore started at 09:12:43,
+09:14:19, and 09:19:55 local. The DJI Mavic 3 videos read 10:29:39 and
+10:31:32; read as UTC that would be 06:29, before anyone was on site, so this
+airframe wrote local time, which the telemetry export file name
+(`…_[10-29-13]`) and the field log also support. The field log places the
+Parrot flight at Stop 1 (Nomad Ridge, lake survey) and the DJI at the dock,
+Stop 5; the JotForm check-ins run 09:32 to 10:48. `eventTime` is now set for
+the 5 `MediaEvent`s and 2 flights (start/end intervals) and for all 41,524
+Occurrences (video start + `frame_index` / fps, to the second). The DJI
+convention is inferred rather than verified, so those times should be read as
+minute-level. The record is `metadata/provenance/drone_time_recovery_20250811.json`
+in the drone dataset.
 
 The same audit found impossible coordinates (`nan`, longitude ≈ 500) on seven
 drone Events, now replaced with a validated static video location or left
@@ -631,14 +646,14 @@ timestamp. Validator coverage should be reported, not assumed.
 | Study root | 1 | — | | | |
 | Camera traps | 13 | 224,149 | 29 | 624 | 7 |
 | Bioacoustics | 2,382 | 9,960 | 29 | 650 | 6 |
-| Drones | 55 | 318,203 | 6 | 8* | 15 |
+| Drones | 55 | 318,203 | 6 | 10* | 15 |
 | Citizen science | 14 | 622 | 13 | 28 | 0 |
 | Text data | 5 | 30 | 4 | 4 | 6 |
 | **Total** | **2,470** | **552,964** | | | |
 
-\* the 2025-08-11 session has a date but no time of day, so it contributes no
-hourly bin (S10). Camera dates and bins use the corrected timestamps of the
-release build (439 curated records re-timed).
+\* includes the 2025-08-11 session's bins after its times were recovered on
+2026-11-10 (S10); the integration pass had counted 8. Camera dates and bins use
+the corrected timestamps of the release build (439 curated records re-timed).
 
 Camera-trap figures here are the first-generation table in the merged
 snapshot. The released post-triage camera dataset has 19,762 Events (1
@@ -667,13 +682,14 @@ inter-arrival times: −1 periodic, 0 Poisson, →1 maximally bursty.
 | **Detection** | | | | | |
 | Camera traps | 208,054 | 346.76 | 7.26 | +0.758 | 25 |
 | Bioacoustics | 8,865 | 14.78 | 3.21 | +0.525 | 25 |
-| Drones | 53,238 | 88.73 | 229.61 | +0.991 | 2 |
+| Drones | 94,762 | 157.94 | 216.25 | +0.991 | 3 |
 | Citizen science | 242 | 0.40 | 5.30 | +0.682 | 10 |
 
 Detection streams count machine-derived Occurrences only; curated review
 records are excluded. Acoustic recordings include the 64 zero-detection WAVs.
-Excluded from timed statistics: 41,524 drone Occurrences (date but no time,
-S10). Every stream is released as a versioned trace (`analysis/arrival_traces_v2/`
+The drone row includes the 41,524 Occurrences of 2025-08-11 since their times
+were recovered (S10); before that recovery the stream had 53,238 Campaign-2
+arrivals at 88.73/hr, CV 229.61, B +0.991 over 2 dates. Every stream is released as a versioned trace (`analysis/arrival_traces_v2/`
 in the study-level dataset) with a source-record ID per arrival, inclusion rules,
 and input checksums; earlier unversioned arrival summaries are deprecated.
 Acquisition arrivals are not reconstructible for drones (per-frame times are not
@@ -859,7 +875,7 @@ repaired in the release build (row 21) and the 2026-11-08 camera update (row 22)
 | 12 | Drone video not processed | Drone | 1 / 39 raw videos | File inventory vs. event table (Cross-check) | Reviewed (no usable content); retained as a zero-Occurrence `MediaEvent` | --- |
 | 13 | Media references to purged scratch workspace | Drone | 16,069 frame paths, 307,260 Occ. | Resolving every `associatedMedia` path (Cross-check) | Replaced with the retained original video, flagged as a video-level fallback | Frame-level media link lost for those rows |
 | 14 | Unreviewed fine-rank taxon labels | Cam, Drone | Merged snapshot: 550,722 Occ. `unverified` (99.6%); post-triage camera table: 71,009 Occ. `machine-resolved` (97.6%) | Human-annotated validation subsets (Human inspection) | Camera labels replaced by embedding-based triage with human review and a 2,067-box reference set (S9.1); drone labels kept `unverified`, with a seven-video human-annotated reference set (S9.2); accuracy reported per rank and per method | Drone species-rank labels include implausible taxa; triage label accuracy against the camera reference set not yet reported |
-| 15 | Null written as the string `nan` | Drone | 41,524 / 318,203 Occ. (13.1%); 5 Events + 2 deployments | Date redundantly encoded in the `eventID` (Redundant encoding in data) | Date restored from the identifier and flagged as derived; time left blank | 2025-08-11 session absent from intra-day analysis (paper §sentinel values; S10) |
+| 15 | Null written as the string `nan` | Drone | 41,524 / 318,203 Occ. (13.1%); 5 Events + 2 deployments | Date redundantly encoded in the `eventID`; time from the video containers cross-checked against the field log (Redundant encoding in data; External record) | Date restored from the identifier and flagged as derived (release build 2026-10-22); time of day recovered on 2026-11-10 from the video container creation times, with each aircraft's clock convention settled against reference flights and the field log and JotForm check-ins of the day (`provenance/drone_time_recovery_20250811.json`) | DJI clock convention is inferred from the field schedule, not verified on a reference flight; treat those times as minute-level |
 | 16 | Impossible drone coordinates (`nan`, longitude ≈500) | Drone | 7 Events | Domain check on coordinate pairs (Cross-check) | Valid static video location if inside study area, else blank | Those Events lack a flight-level position |
 | 17 | Curated records bypassed timestamp correction | Cam | 439 / 946 curated Occ. | Occurrence date outside parent deployment interval (Cross-check) | Re-timed from the corrected camera timestamp map (release build 2026-10-22) | --- |
 | 18 | Root Event row absent from Event table | All | 1 dangling `parentEventID` | Referential check over the Event table (Cross-check) | Study root Event added; parent links validated | --- |

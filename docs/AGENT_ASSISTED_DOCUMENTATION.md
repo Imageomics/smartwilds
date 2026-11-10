@@ -33,7 +33,10 @@ timestamp correction), the string `nan` where a date should be, duplicate
 identifiers after an annotation update, and media references pointing at a
 scratch workspace that no longer existed. The inventory records, for each
 defect, what made it visible; that column is in large part a record of these
-checks.
+checks. The field notes were part of the evidence, not just context: the time
+of day of the 2025-08-11 drone flights (defect 15) was recovered from the
+video containers only after the field log and the day's JotForm check-ins
+settled which aircraft wrote local time and which wrote UTC.
 
 **Automated QA/QC.** The checks that proved useful were turned into scripts
 so they run on every rebuild rather than once: the read-only table audit
