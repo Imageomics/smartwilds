@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#what-the-metadata-enables" class="md-skip">
+        <a href="#what-the-dataset-enables" class="md-skip">
           Skip to content
         </a>
       
@@ -299,7 +299,7 @@
           
   
   
-  What it enables
+  What the dataset enables
 
         </a>
       </li>
@@ -1016,7 +1016,7 @@
   <span class="md-ellipsis">
     
   
-    What it enables
+    What the dataset enables
   
 
     
@@ -1032,7 +1032,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    What it enables
+    What the dataset enables
   
 
           </label>
@@ -1105,17 +1105,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#planning-cross-modal-sensing-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Planning cross-modal sensing systems
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#comparing-modalities-for-ecological-findings" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1127,10 +1116,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#benchmarking-computer-vision-pipelines" class="md-nav__link">
+  <a href="#benchmarking-computer-vision-and-labeling-pipelines" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Benchmarking computer-vision pipelines
+        Benchmarking computer-vision and labeling pipelines
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planning-cross-modal-sensing-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planning cross-modal sensing systems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#biodiversity-monitoring-and-detectability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Biodiversity monitoring and detectability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-sensor-deployments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Designing sensor deployments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods-for-integrating-heterogeneous-field-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods for integrating heterogeneous field data
       
     </span>
   </a>
@@ -1405,17 +1438,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#planning-cross-modal-sensing-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Planning cross-modal sensing systems
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#comparing-modalities-for-ecological-findings" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1427,10 +1449,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#benchmarking-computer-vision-pipelines" class="md-nav__link">
+  <a href="#benchmarking-computer-vision-and-labeling-pipelines" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Benchmarking computer-vision pipelines
+        Benchmarking computer-vision and labeling pipelines
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planning-cross-modal-sensing-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planning cross-modal sensing systems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#biodiversity-monitoring-and-detectability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Biodiversity monitoring and detectability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-sensor-deployments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Designing sensor deployments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods-for-integrating-heterogeneous-field-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods for integrating heterogeneous field data
       
     </span>
   </a>
@@ -1457,38 +1523,64 @@
   
 
 
-<h1 id="what-the-metadata-enables">What the metadata enables<a class="headerlink" href="#what-the-metadata-enables" title="Permanent link">¶</a></h1>
-<p>Clean, aligned metadata is not an end in itself. Three kinds of work have
-already been built on the SmartWilds tables, each using a different property
-of them.</p>
+<h1 id="what-the-dataset-enables">What the dataset enables<a class="headerlink" href="#what-the-dataset-enables" title="Permanent link">¶</a></h1>
+<p>Clean, aligned metadata is not an end in itself. These are the kinds of work
+that the SmartWilds tables support, each using a different property of them.
+The first three have published or submitted papers behind them.</p>
+<h2 id="comparing-modalities-for-ecological-findings">Comparing modalities for ecological findings<a class="headerlink" href="#comparing-modalities-for-ecological-findings" title="Permanent link">¶</a></h2>
+<p>Camera traps and acoustic recorders share site codes and a corrected time
+base, so activity patterns recovered independently by vision and by sound can
+be compared without manual labels. <em>Cross-Modal Corroboration for
+Annotation-Free Wildlife Monitoring</em> (<a href="https://arxiv.org/abs/2606.21613">Pillai et al., 2026</a>)
+shows that vision-based detection and acoustic vocalization analysis
+independently recover Milu deer activity patterns consistent with the
+species' known ecology, using expert knowledge of those patterns as the
+validation signal. The <a href="../datasets/joining/">joining guide</a> gives the keys
+and a worked site-hour example.</p>
+<h2 id="benchmarking-computer-vision-and-labeling-pipelines">Benchmarking computer-vision and labeling pipelines<a class="headerlink" href="#benchmarking-computer-vision-and-labeling-pipelines" title="Permanent link">¶</a></h2>
+<p>The camera-trap tables keep every label's provenance (<code>triage_resolved</code>,
+<code>triage_reviewed</code>, <code>triage_forced_1nn</code>, <code>human-edit</code>, <code>human-reviewed</code>) and
+the original proposal geometry, and the release documents human-annotated
+reference sets for camera traps (2,067 boxes) and drones (27,159 boxes). That
+is what lets a labeling method be evaluated rather than just applied.
+<em>Resolve, Clear, or Defer: Training-Free Active Prototype Triage for Ecological
+Detection Pipelines</em> (<a href="https://arxiv.org/abs/2611.01466">Potlapally et al., 2026</a>)
+developed and evaluated the semi-automated triage that produced the current
+camera-trap labels; the per-rank accuracy of the drone labels is measured
+against the drone reference set (supplement, S9). When the media are released,
+the same tables become detection, classification, and tracking benchmarks with
+known label quality.</p>
 <h2 id="planning-cross-modal-sensing-systems">Planning cross-modal sensing systems<a class="headerlink" href="#planning-cross-modal-sensing-systems" title="Permanent link">¶</a></h2>
-<p>Second-level corrected timestamps, sensor configurations, and confidence-scored
+<p>Second-level timestamps, sensor configurations, and confidence-scored
 detections across four co-located modalities make it possible to characterize
 each modality's workload, synthesize the workload a coordinated system would
 produce, and predict which hardware tier can carry it. <em>A Blueprint for
 Cross-Modal Coordination at the Far Edge</em> does this; its code and derived data
 are in <code>analysis/cross_modal_coordination/</code>. See
 <a href="cross-modal-coordination/">Cross-modal coordination</a>.</p>
-<h2 id="comparing-modalities-for-ecological-findings">Comparing modalities for ecological findings<a class="headerlink" href="#comparing-modalities-for-ecological-findings" title="Permanent link">¶</a></h2>
-<p>Because camera traps and acoustic recorders share site codes and a corrected
-time base, activity patterns recovered independently by vision and by sound
-can be compared without any manual labels. <em>Cross-Modal Corroboration for
-Annotation-Free Wildlife Monitoring</em> (<a href="https://arxiv.org/abs/2606.21613">Pillai et al., 2026</a>)
-shows that BioCLIP-based detection and acoustic vocalization analysis
-independently recover Milu deer activity patterns consistent with the
-species' known ecology, using expert knowledge of those patterns as the
-validation signal. The <a href="../datasets/joining/">joining guide</a> gives the keys
-and a worked site-hour example.</p>
-<h2 id="benchmarking-computer-vision-pipelines">Benchmarking computer-vision pipelines<a class="headerlink" href="#benchmarking-computer-vision-pipelines" title="Permanent link">¶</a></h2>
-<p>The camera-trap tables keep every label's provenance (<code>triage_resolved</code>,
-<code>triage_reviewed</code>, <code>triage_forced_1nn</code>, <code>human-edit</code>, <code>human-reviewed</code>) and
-original SAM3 geometry, and the release documents human-annotated reference
-sets for camera traps and drones. That is what lets a labeling method be
-evaluated rather than just applied. <em>Resolve, Clear, or Defer: Training-Free
-Active Prototype Triage for Ecological Detection Pipelines</em>
-(<a href="https://arxiv.org/abs/2611.01466">Potlapally et al., 2026</a>) developed and
-evaluated the semi-automated triage that produced the current camera-trap
-labels on SmartWilds; see the <a href="../CAMERA_TRAP_RELEASE/">camera-trap release note</a>.</p>
+<h2 id="biodiversity-monitoring-and-detectability">Biodiversity monitoring and detectability<a class="headerlink" href="#biodiversity-monitoring-and-detectability" title="Permanent link">¶</a></h2>
+<p>The Occurrence tables give species occurrence and relative activity per site,
+hour, and date for every modality, with the sensor configuration that
+produced each record. That supports diel activity analysis, species richness
+and detection-frequency comparison across sensors, and the question of how
+detectability depends on camera trigger mode, recorder schedule, flight
+altitude, or visitor attention. Multi-sensor fusion for biodiversity
+assessment on these tables is in preparation.</p>
+<h2 id="designing-sensor-deployments">Designing sensor deployments<a class="headerlink" href="#designing-sensor-deployments" title="Permanent link">¶</a></h2>
+<p>Which modality uniquely covers which places and hours (sensor marginal value),
+how co-located sensors overlap, and how burstiness changes with the number and
+spacing of sites are all answerable from the Event hierarchy and the arrival
+traces. Those answers feed the next deployment: where to place sensors, which
+to co-locate, and what each adds.</p>
+<h2 id="methods-for-integrating-heterogeneous-field-data">Methods for integrating heterogeneous field data<a class="headerlink" href="#methods-for-integrating-heterogeneous-field-data" title="Permanent link">¶</a></h2>
+<p>The 22-item <a href="../DEFECT_INVENTORY/">defect inventory</a>, the 18 timestamp
+reconstruction methods, the telemetry mapping across three drone platforms,
+and the raw-inventory reconciliation are a documented worked case of turning
+four uncoordinated sensor streams into one standards-compliant release. The
+paper under review, <em>SmartWilds: Integrating, Aligning, and Documenting
+Multi-Modal Field Sensing Data</em>, is about this, and the
+<a href="../agents/">agent documentation</a> shows how to repeat it with LLM
+coding agents.</p>
 <p>Each dataset card lists the tasks its tables support under <em>Supported Tasks
 and Applications</em>.</p>
 
