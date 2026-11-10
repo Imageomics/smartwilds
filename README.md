@@ -9,7 +9,8 @@ how four independently collected sensor streams were integrated into one Darwin
 Core release, how their clocks and coordinates were repaired so the modalities
 can be joined in space and time, what was found wrong with the data and how it
 was fixed, and how LLM coding agents did much of that documentation work. The
-raw images and recordings, and their labeling, are out of scope.
+raw images and recordings, and their labeling, are out of scope here; the raw
+files will be released in the future.
 
 **Documentation site:** <https://imageomics.github.io/smartwilds/>
 

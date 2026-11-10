@@ -12,8 +12,8 @@ data and how it was fixed, and how LLM coding agents did much of that
 documentation work.
 
 It is deliberately not about the raw images and recordings, and not about
-labeling them. Those are separate, and the people who work with such data know
-how to do them. What is usually missing, and what this release provides, is the
+labeling them. The raw files will be released in the future; the people who
+work with such data know how to label them. What is usually missing, and what this release provides, is the
 cleaned, documented metadata layer that lets the modalities be analyzed
 together.
 
@@ -34,8 +34,8 @@ photography.
 The Darwin Core Event and Occurrence tables, the dataset cards, the
 supplemental material and defect inventory, the field notes and campaign
 reports, and the code that produced and validated all of it. The raw media
-(images, audio, video) are not distributed here; the 2025 pilot media are in
-the [SmartWilds collection](https://huggingface.co/collections/imageomics/smartwilds).
+(images, audio, video) will be released in the future. The 2025 pilot media are
+already in the [SmartWilds collection](https://huggingface.co/collections/imageomics/smartwilds).
 
 | Part | Where |
 |---|---|
