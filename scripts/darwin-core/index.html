@@ -1444,6 +1444,12 @@ release rests on.</p>
 </tr>
 </tbody>
 </table>
+<p>The "Tree-of-Life prediction CSVs" are the per-box outputs of BioCLIP 2
+(<code>imageomics/bioclip-2</code>, trained on TreeOfLife-200M) in open-world Tree of
+Life mode: for each SAM3 box, the top-1 taxon with its rank hierarchy (kingdom
+to species) and the top-5 candidates, as recorded in <code>identificationRemarks</code>
+(<code>Tree-of-Life rank</code>, <code>top1 score</code>). They were produced in the external
+detection workspace; the code that wrote them is not in this repository.</p>
 <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SMARTWILDS_ARCHIVE</span><span class="o">=</span>/path/to/TheWilds2025
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SMARTWILDS_DWC_OUT</span><span class="o">=</span><span class="nv">$SMARTWILDS_ARCHIVE</span>/processing_output/darwin_core_release
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>python<span class="w"> </span>scripts/darwin_core/generate_darwin_core.py<span class="w"> </span>--force

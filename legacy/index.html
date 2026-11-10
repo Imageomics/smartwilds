@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#legacy-branches" class="md-skip">
+        <a href="#legacy-repositories-and-branches" class="md-skip">
           Skip to content
         </a>
       
@@ -1402,7 +1402,12 @@
   
 
 
-<h1 id="legacy-branches">Legacy branches<a class="headerlink" href="#legacy-branches" title="Permanent link">¶</a></h1>
+<h1 id="legacy-repositories-and-branches">Legacy repositories and branches<a class="headerlink" href="#legacy-repositories-and-branches" title="Permanent link">¶</a></h1>
+<p>Two earlier repositories preceded this one. <a href="https://github.com/Imageomics/naturelab"><code>Imageomics/naturelab</code></a>
+remains the public home of the field logs, the field collection protocols,
+the Google Earth site files, and the data-storage protocol; this repository
+links to it rather than duplicating them. <code>Imageomics/wilds_multimodal_data</code>
+was the internal working repository and is subsumed here as described below.</p>
 <p>This repository subsumes the project's earlier working repository,
 <code>Imageomics/wilds_multimodal_data</code>. Every branch of that repository was
 brought over with its full history under the <code>legacy/wilds_multimodal_data/</code>
@@ -1456,8 +1461,10 @@ prefix, so nothing was lost, and <code>main</code> stays the curated metadata re
 <h2 id="the-milu-deer-activity-project">The Milu-deer activity project<a class="headerlink" href="#the-milu-deer-activity-project" title="Permanent link">¶</a></h2>
 <p>The camera-trap and acoustic analysis on <code>smartwilds-analysis</code> and the
 <code>deer_vocalizations</code> classifier belong to a separate project by Bharath Pillai
-and Varun Viswapriyan on Milu (Père David's) deer activity patterns, published
-as <a href="https://arxiv.org/abs/2606.21613">Cross-Modal Corroboration for Annotation-Free Wildlife Monitoring</a>.
+and Varun Viswapriyan on annotation-free verification of Milu (Père David's)
+deer activity, using deer calls and distance estimation. It has a workshop
+paper, <a href="https://arxiv.org/abs/2606.21613">Cross-Modal Corroboration for Annotation-Free Wildlife Monitoring</a>,
+and a journal paper under review.
 That work uses its own labels and its own acoustic model; the holistic dataset
 documented here uses a substantially updated labeling protocol (see the
 <a href="../CAMERA_TRAP_RELEASE/">camera-trap release note</a>). The two are kept

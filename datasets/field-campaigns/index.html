@@ -1320,10 +1320,13 @@
 
 <h1 id="field-campaigns">Field campaigns<a class="headerlink" href="#field-campaigns" title="Permanent link">¶</a></h1>
 <h1 id="field-campaigns_1">Field campaigns<a class="headerlink" href="#field-campaigns_1" title="Permanent link">¶</a></h1>
-<p>Field notes, data summaries, and the per-campaign data reports for the three
-2025 SmartWilds campaigns at The Wilds. The raw media and the processed
-detection outputs described in these reports are not in this repository; they
-are distributed through the SmartWilds datasets (see the top-level README).</p>
+<p>Data summaries and the per-campaign data reports for the three 2025 SmartWilds
+campaigns at The Wilds. The field logs, site descriptions, equipment list,
+field collection protocols, and Google Earth site files live in the public
+<a href="https://github.com/Imageomics/naturelab"><code>Imageomics/naturelab</code></a> repository
+(<code>field_log/</code> and <code>procedures/</code>); they are not duplicated here. The raw media
+and processed detection outputs described in the reports will be released in
+the future.</p>
 <table>
 <thead>
 <tr>
@@ -1336,7 +1339,7 @@ are distributed through the SmartWilds datasets (see the top-level README).</p>
 <tr>
 <td><code>thewilds_20250630_20250703/</code></td>
 <td>June 30 – July 3, 2025 (pilot)</td>
-<td><code>field_notes/</code> (equipment list, site descriptions, deployment and retrieval notes), <code>data_summary.md</code> (working file inventory), data report</td>
+<td><code>data_summary.md</code> (working file inventory), data report</td>
 </tr>
 <tr>
 <td><code>thewilds_20250804_20250828/</code></td>
@@ -1355,9 +1358,6 @@ directory: file counts and sizes per modality and deployment, the metadata
 files present, known issues (clock errors, missing telemetry, battery
 exhaustion), and the people who collected the data. Paths written as
 <code>&lt;archive&gt;/...</code> refer to the project's field archive, which is not public.</p>
-<p>The site descriptions record GPS fixes for the sensor sites. Those fixes are
-also the basis of the <code>decimalLatitude</code>/<code>decimalLongitude</code> values in the
-released Darwin Core Event tables.</p>
 <h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">¶</a></h2>
 <table>
 <thead>
@@ -1369,7 +1369,7 @@ released Darwin Core Event tables.</p>
 <tbody>
 <tr>
 <td>June 30 – July 3, 2025</td>
-<td><a href="https://github.com/Imageomics/smartwilds/blob/main/field_campaigns/thewilds_20250630_20250703/data_summary.md"><code>data_summary.md</code></a>, <a href="https://github.com/Imageomics/smartwilds/blob/main/field_campaigns/thewilds_20250630_20250703/thewilds_20250630_20250703_data_report.md">data report</a>, <a href="https://github.com/Imageomics/smartwilds/tree/main/field_campaigns/thewilds_20250630_20250703/field_notes"><code>field_notes/</code></a></td>
+<td><a href="https://github.com/Imageomics/smartwilds/blob/main/field_campaigns/thewilds_20250630_20250703/data_summary.md"><code>data_summary.md</code></a>, <a href="https://github.com/Imageomics/smartwilds/blob/main/field_campaigns/thewilds_20250630_20250703/thewilds_20250630_20250703_data_report.md">data report</a></td>
 </tr>
 <tr>
 <td>August 4 – 28, 2025</td>
@@ -1381,6 +1381,8 @@ released Darwin Core Event tables.</p>
 </tr>
 </tbody>
 </table>
+<p>Field logs by date, site descriptions with GPS fixes, the equipment list, and
+the field collection protocols: <a href="https://github.com/Imageomics/naturelab"><code>Imageomics/naturelab</code></a>.</p>
 
 
 

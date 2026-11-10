@@ -1462,9 +1462,12 @@ differs by table. Camera-trap labels carry a <code>labelProvenance</code>
 (<code>triage_resolved</code>, <code>triage_reviewed</code>, <code>triage_forced_1nn</code>, <code>human-edit</code>,
 <code>human-reviewed</code>); drone and acoustic labels are <code>unverified</code> or
 <code>validated</code>; the 12 human-added drone starling boxes are
-<code>human-supported; limited-resolution</code>. For the BioCLIP Tree-of-Life drone
-labels, species-rank accuracy on human-annotated subsets is 0.271 and
-class-rank accuracy is 0.845 (supplement, S9).</p>
+<code>human-supported; limited-resolution</code>. The drone labels come from BioCLIP 2
+(the TreeOfLife-200M model, <code>imageomics/bioclip-2</code>) run in its open-world
+Tree of Life mode, which predicts a taxon with its full rank hierarchy rather
+than choosing among a fixed label list; species-rank accuracy on
+human-annotated subsets is 0.271 and class-rank accuracy is 0.845
+(supplement, S9).</p>
 </div>
 <ul>
 <li><strong>Occurrences are detection crops, not individuals.</strong> Bursts and adjacent
