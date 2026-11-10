@@ -6,6 +6,12 @@ dataset recorded with camera traps, acoustic recorders, drones, and visitor
 photographs at [The Wilds](https://thewilds.columbuszoo.org/) (Cumberland,
 Ohio) in summer 2025.
 
+![Sensor deployment across The Wilds](metadata/images/smartwilds/deployment_map.png)
+*Sensor deployment across The Wilds: camera traps with viewing angles, Song Meter recorders, citizen-science photo locations, and drone flight tracks. Satellite imagery © Google.*
+
+![The same three species seen by camera trap, drone, and citizen science](metadata/images/smartwilds/cross_modal_preview.png)
+*The same three managed focal species (Sichuan takin, Milu deer, Przewalski's horse) observed by camera trap, drone, and citizen-science photography.*
+
 ## Camera-trap release (2026-11-08)
 
 The current camera-trap release (`smartwilds-camera-traps`) contains 72,775
