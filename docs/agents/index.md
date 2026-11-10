@@ -17,7 +17,7 @@ and prompts that worked.
    describing the layout, the modalities, the naming conventions, and where
    notes go saves re-explaining every session. Ours is a page long.
 3. **Put the standards in context.** Download the
-   [FAIR² Drones template and quick-start checklist](https://github.com/Imageomics/fair_drones)
+   [FAIR² Drones template and quick-start checklist](https://imageomics.github.io/fair_drones/)
    and the [Imageomics dataset card template](https://imageomics.github.io/Imageomics-guide/wiki-guide/HF_DatasetCard_Template_Imageomics/)
    into a `documentation/guidelines/` directory and tell the agent to follow
    them. See [Guidelines to give the agent](guidelines.md).

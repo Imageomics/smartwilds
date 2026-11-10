@@ -7,7 +7,7 @@ reusable skill) for every documentation task.
 
 | Resource | Use |
 |---|---|
-| [FAIR² Drones Data Standard](https://github.com/Imageomics/fair_drones): `TEMPLATE.md`, `QUICKSTART_GUIDE.md` | Dataset card structure and required metadata for drone and multi-sensor wildlife datasets: Darwin Core Event and Occurrence fields, platform and sensor metadata, annotation and quality fields |
+| [FAIR² Drones Data Standard](https://imageomics.github.io/fair_drones/) ([repository](https://github.com/Imageomics/fair_drones)): `TEMPLATE.md`, `QUICKSTART_GUIDE.md` | Dataset card structure and required metadata for drone and multi-sensor wildlife datasets: Darwin Core Event and Occurrence fields, platform and sensor metadata, annotation and quality fields |
 | [Imageomics dataset card template](https://imageomics.github.io/Imageomics-guide/wiki-guide/HF_DatasetCard_Template_Imageomics/), part of the Imageomics Guide (Campolongo et al., 2026) | Base card template for biodiversity and computer-vision datasets, which the FAIR² template extends |
 | [`guidelines/ACKNOWLEDGEMENTS.md`](https://github.com/Imageomics/smartwilds/blob/main/guidelines/ACKNOWLEDGEMENTS.md) | The funder acknowledgements and disclaimer, to be copied verbatim, never paraphrased |
 | [Hugging Face dataset cards](https://huggingface.co/docs/hub/datasets-cards) | YAML front matter and card conventions |
@@ -54,10 +54,34 @@ copied, and the rule that missing information is recorded as missing.
   biodiversity data standard. *PLoS ONE* 7(1), e29715.
   <https://doi.org/10.1371/journal.pone.0029715>
 - Kline, J. and Campolongo, E. G. (2026). FAIR² Drones Data Standard for
-  Wildlife Datasets. <https://github.com/Imageomics/fair_drones>
+  Wildlife Datasets. <https://imageomics.github.io/fair_drones/>
+- Kline, J. M., Potlapally, A., and Campolongo, E. G. (2026). SmartWilds:
+  Integrating, Aligning, and Documenting Multi-Modal Field Sensing Data. Under
+  review.
 - Campolongo, E. G., Thompson, M. J., Zhang, N., Duan, Y., Bradley, J., & Lapp, H.
   (2026). Imageomics Guide (Version 2.3.1) [Computer software].
   <https://doi.org/10.5281/zenodo.17817610>
 - Barnas, A. F. et al. (2020). A standardized protocol for reporting methods
   when using drones for wildlife research. *Journal of Unmanned Vehicle
   Systems* 8(2), 89–98. <https://doi.org/10.1139/juvs-2019-0011>
+
+To cite the standard and the paper:
+
+```bibtex
+@misc{fair_drone_standard,
+  title        = {FAIR² Drones Data Standard for Wildlife Datasets},
+  author       = {Jenna Kline, Elizabeth Campolongo},
+  year         = {2026},
+  publisher    = {GitHub},
+  howpublished = {\url{https://github.com/Imageomics/fair_drones}}
+}
+```
+
+```bibtex
+@article{kline2026smartwilds,
+  author  = {Kline, Jenna M. and Potlapally, Anirudh and Campolongo, Elizabeth G.},
+  title   = {SmartWilds: Integrating, Aligning, and Documenting Multi-Modal Field Sensing Data},
+  year    = {2026},
+  note    = {Under review}
+}
+```

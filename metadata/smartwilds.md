@@ -93,10 +93,26 @@ TheWilds_2025 (study, 2025-06-30/2025-09-08)
   the repair applied, and the residual risk.
 - `metadata/provenance/`: the final release audit.
 
+## Licensing
+
+Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Scripts: MIT.
+
 ## Citation
 
 Cite the paper, plus each modality dataset you use. Dataset DOIs will be
 assigned with the raw data release.
+
+```bibtex
+@article{kline2026smartwilds,
+  author  = {Kline, Jenna M. and Potlapally, Anirudh and Campolongo, Elizabeth G.},
+  title   = {SmartWilds: Integrating, Aligning, and Documenting Multi-Modal Field Sensing Data},
+  year    = {2026},
+  note    = {Under review}
+}
+```
+
+This dataset card follows the [FAIR² Drones Data Standard](https://imageomics.github.io/fair_drones/)
+(Kline and Campolongo, 2026).
 
 ## Acknowledgements
 

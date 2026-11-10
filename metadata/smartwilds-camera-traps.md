@@ -154,6 +154,10 @@ The semi-automated labeling workflow follows [Potlapally et al. (2026),
 *Resolve, Clear, or Defer: Training-Free Active Prototype Triage for Ecological
 Detection Pipelines*](https://arxiv.org/abs/2611.01466).
 
+## Licensing
+
+Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Scripts: MIT.
+
 ## Citation
 
 ```bibtex
@@ -166,6 +170,20 @@ Detection Pipelines*](https://arxiv.org/abs/2611.01466).
   url       = {https://huggingface.co/datasets/imageomics/smartwilds-camera-traps}
 }
 ```
+
+Please also cite the paper:
+
+```bibtex
+@article{kline2026smartwilds,
+  author  = {Kline, Jenna M. and Potlapally, Anirudh and Campolongo, Elizabeth G.},
+  title   = {SmartWilds: Integrating, Aligning, and Documenting Multi-Modal Field Sensing Data},
+  year    = {2026},
+  note    = {Under review}
+}
+```
+
+This dataset card follows the [FAIR² Drones Data Standard](https://imageomics.github.io/fair_drones/)
+(Kline and Campolongo, 2026).
 
 ## Acknowledgements
 

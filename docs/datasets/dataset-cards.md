@@ -20,7 +20,7 @@ sensors were co-located), and the card images under `metadata/images/`.
 
 ## How the cards were written
 
-The cards follow the [FAIR² Drones Data Standard](https://github.com/Imageomics/fair_drones)
+The cards follow the [FAIR² Drones Data Standard](https://imageomics.github.io/fair_drones/)
 template, which extends the [Imageomics dataset card template](https://imageomics.github.io/Imageomics-guide/wiki-guide/HF_DatasetCard_Template_Imageomics/)
 with Darwin Core coverage fields, platform specifications, and annotation
 quality fields. They were drafted by LLM coding agents from the tables and the

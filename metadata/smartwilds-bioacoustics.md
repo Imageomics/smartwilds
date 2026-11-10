@@ -192,8 +192,7 @@ in the study-level SmartWilds dataset.
 
 ## Licensing
 
-Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
-<!-- TODO(license): confirm across the collection -->. Scripts: MIT.
+Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Scripts: MIT.
 
 ## Citation
 
@@ -207,6 +206,20 @@ Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
   url       = {https://huggingface.co/datasets/imageomics/smartwilds-bioacoustics}
 }
 ```
+
+Please also cite the paper:
+
+```bibtex
+@article{kline2026smartwilds,
+  author  = {Kline, Jenna M. and Potlapally, Anirudh and Campolongo, Elizabeth G.},
+  title   = {SmartWilds: Integrating, Aligning, and Documenting Multi-Modal Field Sensing Data},
+  year    = {2026},
+  note    = {Under review}
+}
+```
+
+This dataset card follows the [FAIR² Drones Data Standard](https://imageomics.github.io/fair_drones/)
+(Kline and Campolongo, 2026).
 
 ## Acknowledgements
 

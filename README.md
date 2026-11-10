@@ -157,8 +157,8 @@ will add it here.
 
 ## License
 
-Code: MIT (see `LICENSE`). Data: see each dataset card.
-<!-- TODO(license): confirm data license across the collection -->
+Code: MIT (see `LICENSE`). Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) for all five datasets, following the
+[Imageomics licensing policy](https://imageomics.github.io/Imageomics-guide/wiki-guide/Digital-products-release-licensing-policy/).
 
 ## Acknowledgements
 

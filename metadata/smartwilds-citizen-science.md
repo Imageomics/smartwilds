@@ -96,6 +96,37 @@ validation checks, and the full defect inventory are in
 [`SUPPLEMENTAL.md`](https://huggingface.co/datasets/imageomics/smartwilds/blob/main/SUPPLEMENTAL.md)
 in the study-level SmartWilds dataset.
 
+## Licensing
+
+Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Scripts: MIT.
+
+## Citation
+
+```bibtex
+@misc{smartwilds2025_citizen_science,
+  author    = {Kline, Jenna M. and Potlapally, Anirudh and Campolongo, Elizabeth G.},
+  title     = {SmartWilds Citizen Science (The Wilds 2025)},
+  year      = {2026},
+  publisher = {Hugging Face},
+  note      = {DOI pending the raw data release},
+  url       = {https://huggingface.co/datasets/imageomics/smartwilds-citizen-science}
+}
+```
+
+Please also cite the paper:
+
+```bibtex
+@article{kline2026smartwilds,
+  author  = {Kline, Jenna M. and Potlapally, Anirudh and Campolongo, Elizabeth G.},
+  title   = {SmartWilds: Integrating, Aligning, and Documenting Multi-Modal Field Sensing Data},
+  year    = {2026},
+  note    = {Under review}
+}
+```
+
+This dataset card follows the [FAIR² Drones Data Standard](https://imageomics.github.io/fair_drones/)
+(Kline and Campolongo, 2026).
+
 ## Acknowledgements
 
 This project is supported by the [Imageomics Institute](https://imageomics.org), which is funded by the US National Science Foundation's Harnessing the Data Revolution (HDR) program under [Award #2118240](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2118240) (Imageomics: A New Frontier of Biological Information Powered by Knowledge-Guided Machine Learning), and by the [AI Institute for Intelligent Cyberinfrastructure with Computational Learning in the Environment (ICICLE)](https://icicle.osu.edu/), which is funded by the US National Science Foundation under [Award #2112606](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2112606).
