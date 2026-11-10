@@ -158,7 +158,7 @@ Detection Pipelines*](https://arxiv.org/abs/2611.01466).
   title     = {SmartWilds Camera Traps (The Wilds 2025)},
   year      = {2026},
   publisher = {Hugging Face},
-  doi       = {TODO},
+  note      = {DOI pending the raw data release},
   url       = {https://huggingface.co/datasets/imageomics/smartwilds-camera-traps}
 }
 ```

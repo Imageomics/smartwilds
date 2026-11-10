@@ -95,7 +95,8 @@ TheWilds_2025 (study, 2025-06-30/2025-09-08)
 
 ## Citation
 
-Cite the paper, plus each modality dataset you use. <!-- TODO: DOIs -->
+Cite the paper, plus each modality dataset you use. Dataset DOIs will be
+assigned with the raw data release.
 
 ## Acknowledgements
 

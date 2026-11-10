@@ -29,7 +29,7 @@ description: >-
 
 fair2_compliance:
   findable:
-    doi: ""  # TODO: assign on publication
+    doi: ""  # pending the raw data release
     metadata_registry: ["DataCite", "GBIF"]
   accessible:
     open_access: true
@@ -203,7 +203,7 @@ Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
   title     = {SmartWilds Bioacoustics (The Wilds 2025)},
   year      = {2026},
   publisher = {Hugging Face},
-  doi       = {TODO},
+  note      = {DOI pending the raw data release},
   url       = {https://huggingface.co/datasets/imageomics/smartwilds-bioacoustics}
 }
 ```
