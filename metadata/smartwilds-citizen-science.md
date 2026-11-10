@@ -82,6 +82,23 @@ release. People too small to identify (a person box under 80 px in the native
 image, where the face is under about 10 px) are retained; every file with a
 larger person detection was reviewed by a person before release.
 
+### Supported Tasks and Applications
+
+This dataset supports ecological analysis and sensing-systems research; the computer-vision tasks apply once the photographs are released.
+
+**🌿 Ecological Applications:**
+- Expert-verified species records (622) as a validation set for the machine-labeled modalities
+- Visitor-perspective sampling bias: which taxa and places opportunistic photography captures
+- Cross-modal corroboration of focal-species presence by date
+
+**⚙️ Sensing-Systems Research:**
+- Sparse, bursty human-reported arrivals as priors for sensor scheduling (citizen-science-as-prior case study)
+- Session-level effort and timing from observation sessions
+
+**🤖 Computer Vision Tasks (with the photo release):**
+- Species classification on smartphone imagery with verified labels
+- Detection on photographs with annotation boxes
+
 ## Considerations for Using the Data
 
 - **Submissions arrive only during operating hours.** The diurnal profile is

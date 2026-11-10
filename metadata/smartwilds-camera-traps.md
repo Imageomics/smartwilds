@@ -82,6 +82,31 @@ All `associatedMedia` and manifest `release_path` values are release-relative
 `media/...` paths. The media manifest references raw media; it does not copy
 media into this release tree.
 
+### Supported Tasks and Applications
+
+This dataset supports ecological analysis, data-quality research, and sensing-systems research; the computer-vision tasks apply once the images are released.
+
+**🌿 Ecological Applications:**
+- Species occurrence and relative activity by site, hour, and date from 72,775 operational detections
+- Diel activity patterns from corrected capture timestamps
+- Co-occurrence with the acoustic and drone modalities at shared sites (TW02, TW06, TW09)
+- Detection-rate comparison across camera models, trigger modes, and placements
+
+**🧹 Data-Quality and Metadata Research:**
+- Timestamp reconstruction: 18 per-deployment correction methods with method and confidence per image
+- Label provenance: triage-resolved, human-reviewed, forced nearest-prototype, and human-edited labels kept distinct
+- Semi-automated labeling evaluation against the human-reviewed subset
+
+**⚙️ Sensing-Systems Research:**
+- Image-capture and detection arrival traces for workload characterization (burstiness, diurnal rate changes)
+- Blank-image filtering and storage savings from the full image inventory
+- Edge hardware provisioning for camera-trap detection pipelines
+
+**🤖 Computer Vision Tasks (with the image release):**
+- Object detection (SAM3 proposal geometry, 72,775 boxes)
+- Species classification from detection crops
+- Benchmarking semi-automated labeling against the 2,067-box human reference set
+
 ## Dataset Details
 
 - **Curated by:** Jenna M. Kline, Anirudh Potlapally, Elizabeth G. Campolongo

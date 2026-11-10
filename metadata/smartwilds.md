@@ -63,6 +63,25 @@ TheWilds_2025 (study, 2025-06-30/2025-09-08)
 - **Paper:** SmartWilds: Integrating, Aligning, and Documenting Multi-Modal Field Sensing Data (under review)
 - **Release build:** 2026-10-22, camera tables updated 2026-11-08
 
+### Supported Tasks and Applications
+
+The study-level tables support cross-modal and systems analyses that no single modality allows.
+
+**🔗 Cross-Modal Analysis:**
+- Joining camera, acoustic, drone, and citizen-science records by site, campaign, and time on one Event hierarchy
+- Co-occurrence and corroboration of focal-species activity across sensors
+- Sensor marginal value: which modality uniquely covers which places and hours
+
+**⚙️ Sensing-Systems Research:**
+- Campaign-2 arrival traces at acquisition and inference layers for workload characterization
+- Synthesis of coordinated multi-modal workloads and hardware feasibility prediction (see the cross-modal coordination analysis)
+- Burstiness as a function of modality and deployment topology
+
+**🧹 Data-Quality and Metadata Research:**
+- A 22-item defect inventory with detection family, repair, and residual risk for each defect
+- Typed missingness and sentinel-value handling across modalities
+- Standards crosswalk between Darwin Core, Humboldt, and sensor metadata
+
 ## Contents
 
 - `data/events_all_modalities.csv`: all 22,242 Events, including the final
