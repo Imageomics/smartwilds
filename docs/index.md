@@ -4,18 +4,11 @@
 
 SmartWilds is a multi-modal sensing dataset recorded with camera traps, acoustic
 recorders, drones, and visitor photographs at [The Wilds](https://thewilds.columbuszoo.org/)
-(Cumberland, Ohio) in summer 2025. This repository is about the **metadata**:
-how four independently collected sensor streams were integrated into one
-Darwin Core release, how their clocks and coordinates were repaired so they can
-be [joined in space and time](datasets/joining.md), what was found wrong with the
-data and how it was fixed, and how LLM coding agents did much of that
-documentation work.
-
-It is deliberately not about the raw images and recordings, and not about
-labeling them. The raw files will be released in the future; the people who
-work with such data know how to label them. What is usually missing, and what this release provides, is the
-cleaned, documented metadata layer that lets the modalities be analyzed
-together.
+(Cumberland, Ohio) in summer 2025. This repository holds the metadata: Darwin
+Core tables for all four modalities on one Event hierarchy, with corrected
+timestamps and coordinates so they can be [joined in space and time](datasets/joining.md),
+the record of every [defect found and repaired](DEFECT_INVENTORY.md), and the
+code that did it. Raw images and labels will be released soon.
 
 ![Sensor deployment across The Wilds](images/deployment_map.png)
 
@@ -33,8 +26,8 @@ photography.
 
 The Darwin Core Event and Occurrence tables, the dataset cards, the
 supplemental material and defect inventory, the field notes and campaign
-reports, and the code that produced and validated all of it. The raw media
-(images, audio, video) will be released in the future. The 2025 pilot media are
+reports, and the code that produced and validated all of it. Raw images and labels will be
+released soon. The 2025 pilot media are
 already in the [SmartWilds collection](https://huggingface.co/collections/imageomics/smartwilds).
 
 | Part | Where |

@@ -4,9 +4,8 @@ Data summaries and the per-campaign data reports for the three 2025 SmartWilds
 campaigns at The Wilds. The field logs, site descriptions, equipment list,
 field collection protocols, and Google Earth site files live in the public
 [`Imageomics/naturelab`](https://github.com/Imageomics/naturelab) repository
-(`field_log/` and `procedures/`); they are not duplicated here. The raw media
-and processed detection outputs described in the reports will be released in
-the future.
+(`field_log/` and `procedures/`); they are not duplicated here. Raw images and
+labels will be released soon.
 
 | Campaign | Dates | What is here |
 |---|---|---|
