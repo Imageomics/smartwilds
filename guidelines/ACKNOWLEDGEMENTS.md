@@ -21,13 +21,13 @@ Special thanks to Dan Beetem and [The Wilds](https://www.thewilds.org/) in Ohio 
 
 This work used the [Ohio Supercomputer Center](https://www.osc.edu/). Cite it as:
 
-> Ohio Supercomputer Center. (1987). *Ohio Supercomputer Center*. Columbus, OH: Ohio Supercomputer Center. <http://osc.edu/ark:/19495/f5s1ph73>
+> Ohio Supercomputer Center. 1987. Ohio Supercomputer Center. Columbus OH: Ohio Supercomputer Center. <https://ror.org/01apna436>
 
 ```bibtex
 @misc{OhioSupercomputerCenter1987,
   author = {{Ohio Supercomputer Center}},
   title  = {Ohio Supercomputer Center},
   year   = {1987},
-  url    = {http://osc.edu/ark:/19495/f5s1ph73}
+  url    = {https://ror.org/01apna436}
 }
 ```
