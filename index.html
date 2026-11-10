@@ -1481,7 +1481,7 @@ already in the <a href="https://huggingface.co/collections/imageomics/smartwilds
 </tr>
 <tr>
 <td>Darwin Core tables</td>
-<td><a href="datasets/darwin-core-tables/"><code>darwin_core/</code></a></td>
+<td><a href="https://huggingface.co/datasets/imageomics/smartwilds_metadata"><code>imageomics/smartwilds_metadata</code></a> on Hugging Face (<a href="datasets/darwin-core-tables/">guide</a>)</td>
 </tr>
 <tr>
 <td>Dataset cards for the five SmartWilds datasets</td>
@@ -1513,7 +1513,8 @@ already in the <a href="https://huggingface.co/collections/imageomics/smartwilds
 <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Imageomics/smartwilds
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>smartwilds
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>python<span class="w"> </span>examples/quickstart.py<span class="w"> </span>darwin_core/smartwilds-camera-traps<span class="w"> </span>darwin_core/smartwilds-bioacoustics
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>huggingface-cli<span class="w"> </span>download<span class="w"> </span>--repo-type<span class="w"> </span>dataset<span class="w"> </span>imageomics/smartwilds_metadata<span class="w"> </span>--local-dir<span class="w"> </span>smartwilds_metadata
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>python<span class="w"> </span>examples/quickstart.py<span class="w"> </span>smartwilds_metadata/smartwilds-camera-traps<span class="w"> </span>smartwilds_metadata/smartwilds-bioacoustics
 </code></pre></div>
 <p>The quickstart loads the tables, applies a verification floor, joins
 Occurrences to their Events, and summarizes them by deployment and by class.

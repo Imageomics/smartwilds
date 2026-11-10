@@ -623,6 +623,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#getting-the-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting the tables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#column-definitions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1355,6 +1366,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#getting-the-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting the tables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#column-definitions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1386,111 +1408,42 @@
 
 
 <h1 id="darwin-core-tables">Darwin Core tables<a class="headerlink" href="#darwin-core-tables" title="Permanent link">¶</a></h1>
-<p>The Darwin Core Event and Occurrence tables of the SmartWilds release (build
-2026-10-22; camera and merged tables updated 2026-11-08), one folder per
-dataset. These are the tables of record. Column definitions are in each
-dataset card under <code>metadata/</code>, and the verification-status vocabulary differs
-by table (see the supplemental material, S9.3). All tables share one Event
-hierarchy rooted at <code>TheWilds_2025</code>.</p>
-<table>
-<thead>
-<tr>
-<th>File</th>
-<th style="text-align: right;">Size</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>smartwilds/events_all_modalities.csv</code></td>
-<td style="text-align: right;">7.7 MB</td>
-<td>copied</td>
-</tr>
-<tr>
-<td><code>smartwilds/occurrences_all_modalities.csv</code></td>
-<td style="text-align: right;">521.6 MB</td>
-<td>not in this folder (over 100 MB)</td>
-</tr>
-<tr>
-<td><code>smartwilds/text_events.csv</code></td>
-<td style="text-align: right;">0.0 MB</td>
-<td>copied</td>
-</tr>
-<tr>
-<td><code>smartwilds/text_occurrences.csv</code></td>
-<td style="text-align: right;">0.0 MB</td>
-<td>copied</td>
-</tr>
-<tr>
-<td><code>smartwilds/site_selection_rationale.csv</code></td>
-<td style="text-align: right;">0.0 MB</td>
-<td>copied</td>
-</tr>
-<tr>
-<td><code>smartwilds-camera-traps/events.csv</code></td>
-<td style="text-align: right;">8.3 MB</td>
-<td>copied</td>
-</tr>
-<tr>
-<td><code>smartwilds-camera-traps/occurrences.csv</code></td>
-<td style="text-align: right;">67.3 MB</td>
-<td>copied</td>
-</tr>
-<tr>
-<td><code>smartwilds-camera-traps/images.csv</code></td>
-<td style="text-align: right;">139.2 MB</td>
-<td>not in this folder (over 100 MB)</td>
-</tr>
-<tr>
-<td><code>smartwilds-bioacoustics/events.csv</code></td>
-<td style="text-align: right;">1.7 MB</td>
-<td>copied</td>
-</tr>
-<tr>
-<td><code>smartwilds-bioacoustics/occurrences.csv</code></td>
-<td style="text-align: right;">6.5 MB</td>
-<td>copied</td>
-</tr>
-<tr>
-<td><code>smartwilds-bioacoustics/recordings.csv</code></td>
-<td style="text-align: right;">1.1 MB</td>
-<td>copied</td>
-</tr>
-<tr>
-<td><code>smartwilds-drones/events.csv</code></td>
-<td style="text-align: right;">0.0 MB</td>
-<td>copied</td>
-</tr>
-<tr>
-<td><code>smartwilds-drones/occurrences.csv</code></td>
-<td style="text-align: right;">431.5 MB</td>
-<td>not in this folder (over 100 MB)</td>
-</tr>
-<tr>
-<td><code>smartwilds-drones/detections.csv</code></td>
-<td style="text-align: right;">78.3 MB</td>
-<td>copied</td>
-</tr>
-<tr>
-<td><code>smartwilds-citizen-science/events.csv</code></td>
-<td style="text-align: right;">0.0 MB</td>
-<td>copied</td>
-</tr>
-<tr>
-<td><code>smartwilds-citizen-science/occurrences.csv</code></td>
-<td style="text-align: right;">0.5 MB</td>
-<td>copied</td>
-</tr>
-</tbody>
-</table>
-<p>Three tables exceed GitHub's 100 MB file limit and are not in this folder:
-the merged Occurrence table, the camera image inventory, and the drone
-Occurrence table. They are available from the authors on request, and their
-row counts and checksums are recorded in the dataset cards and the
-supplemental material.</p>
+<p>The Darwin Core Event and Occurrence tables of the SmartWilds release are
+published as one Hugging Face dataset,
+<a href="https://huggingface.co/datasets/imageomics/smartwilds_metadata"><code>imageomics/smartwilds_metadata</code></a>,
+part of the <a href="https://huggingface.co/collections/imageomics/smartwilds">SmartWilds collection</a>.
+It holds the five components of the release, each a complete FAIR² package,
+plus the supplemental material:</p>
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>smartwilds_metadata/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── README.md                      # dataset card
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── SUPPLEMENTAL.md
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── smartwilds-camera-traps/       # 19,785 Events, 72,775 Occurrences, 235,778-image inventory
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── smartwilds-bioacoustics/       # 2,382 Events, 9,960 Occurrences, 2,371 recordings
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── smartwilds-drones/             # 55 Events, 318,215 Occurrences, frame-indexed detections
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├── smartwilds-citizen-science/    # 14 Events, 622 Occurrences
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>└── smartwilds/                    # study level: merged tables, text records, arrival traces
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    └── &lt;component&gt;/
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        ├── README.md              # component dataset card
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        ├── data/                  # events.csv, occurrences.csv, per-file tables
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        ├── metadata/              # DATA_DICTIONARY.md, deployments, configs, provenance/
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        ├── media_manifest.csv
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        └── CHECKSUMS.sha256
+</code></pre></div>
+<p>Release build 2026-10-22; camera and merged tables updated 2026-11-08. All
+tables share one Event hierarchy rooted at <code>TheWilds_2025</code>.</p>
+<h2 id="getting-the-tables">Getting the tables<a class="headerlink" href="#getting-the-tables" title="Permanent link">¶</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>huggingface_hub
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>huggingface-cli<span class="w"> </span>download<span class="w"> </span>--repo-type<span class="w"> </span>dataset<span class="w"> </span>imageomics/smartwilds_metadata<span class="w"> </span>--local-dir<span class="w"> </span>smartwilds_metadata
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>python<span class="w"> </span>examples/quickstart.py<span class="w"> </span>smartwilds_metadata/smartwilds-camera-traps<span class="w"> </span>smartwilds_metadata/smartwilds-bioacoustics
+</code></pre></div>
+<p>Or load one table directly:</p>
+<div class="language-python highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">oc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"hf://datasets/imageomics/smartwilds_metadata/smartwilds-camera-traps/data/occurrences.csv"</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>                 <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">keep_default_na</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
 <h2 id="column-definitions">Column definitions<a class="headerlink" href="#column-definitions" title="Permanent link">¶</a></h2>
-<p>Each dataset card and data dictionary defines the columns. The Darwin Core
-terms follow <a href="https://dwc.tdwg.org/terms/">https://dwc.tdwg.org/terms/</a>; SmartWilds-specific columns
+<p>Each component's <code>metadata/DATA_DICTIONARY.md</code> defines its columns. The Darwin
+Core terms follow <a href="https://dwc.tdwg.org/terms/">https://dwc.tdwg.org/terms/</a>; SmartWilds-specific columns
 (<code>labelProvenance</code>, <code>geometryProvenance</code>, <code>triageRound</code>, the timestamp
 correction fields of <code>images.csv</code>, the privacy screening fields of the media
 manifests) are defined in the <a href="../../SUPPLEMENTAL/#s12-darwin-core-field-dictionary">supplemental material</a>.</p>
