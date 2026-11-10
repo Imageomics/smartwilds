@@ -26,7 +26,7 @@
     
     
       
-        <title>Legacy branches - SmartWilds</title>
+        <title>Related repositories - SmartWilds</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#legacy-repositories-and-branches" class="md-skip">
+        <a href="#related-repositories" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Legacy branches
+              Related repositories
             
           </span>
         </div>
@@ -339,7 +339,7 @@
   
     
   
-  Legacy branches
+  Related repositories
 
       </a>
     </li>
@@ -1234,7 +1234,7 @@
   <span class="md-ellipsis">
     
   
-    Legacy branches
+    Related repositories
   
 
     
@@ -1252,7 +1252,7 @@
   <span class="md-ellipsis">
     
   
-    Legacy branches
+    Related repositories
   
 
     
@@ -1402,86 +1402,35 @@
   
 
 
-<h1 id="legacy-repositories-and-branches">Legacy repositories and branches<a class="headerlink" href="#legacy-repositories-and-branches" title="Permanent link">¶</a></h1>
-<p>Two earlier repositories preceded this one. <a href="https://github.com/Imageomics/naturelab"><code>Imageomics/naturelab</code></a>
-remains the public home of the field logs, the field collection protocols,
-the Google Earth site files, and the data-storage protocol; this repository
-links to it rather than duplicating them. <code>Imageomics/wilds_multimodal_data</code>
-was the internal working repository and is subsumed here as described below.</p>
-<p>This repository subsumes the project's earlier working repository,
-<code>Imageomics/wilds_multimodal_data</code>. Every branch of that repository was
-brought over with its full history under the <code>legacy/wilds_multimodal_data/</code>
-prefix, so nothing was lost, and <code>main</code> stays the curated metadata release.</p>
-<table>
-<thead>
-<tr>
-<th>Branch</th>
-<th>What it holds</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>wip</code> (latest, 424 files)</td>
-<td>The internal working tree: documentation (manuscripts, meeting notes, the ADAE arrival-rate model, the annotation pipeline), the experimental results of the systems analysis, and the Hugging Face release staging (cards, build scripts, people screening)</td>
-</tr>
-<tr>
-<td><code>sys-dataset-icde</code>, <code>add-documentation</code></td>
-<td>Earlier states of the same tree</td>
-</tr>
-<tr>
-<td><code>sam3_detection_pipeline</code></td>
-<td>The SAM3 text-prompted detection pipeline for drone imagery with optional BioCLIP enrichment, its performance benchmarks, and the camera-trap storage analysis</td>
-</tr>
-<tr>
-<td><code>smartwilds-analysis</code></td>
-<td>Early per-modality analysis: camera-trap detections with GPS for three deployments, BirdNET hourly and sunrise/sunset sheets, species heat-map notebooks. Part of the Milu-deer activity work (see below)</td>
-</tr>
-<tr>
-<td><code>copilot/create-heat-maps-for-sensors</code></td>
-<td>Heat-map generators per sensor modality</td>
-</tr>
-<tr>
-<td><code>citizen_science</code></td>
-<td>Early visitor-photo processing: MegaDetector v5 and BioCLIP detection, review tools, detection CSV format. Superseded by the labeling protocol of the holistic dataset</td>
-</tr>
-<tr>
-<td><code>deer_vocalizations</code></td>
-<td>YAMNet + XGBoost classifier for Père David's deer vocalizations in field recordings, trained on the <code>imageomics/pere-david-deer-vocalizations</code> dataset. Part of the Milu-deer activity work (see below)</td>
-</tr>
-<tr>
-<td><code>yuanyang-profile-scripts</code></td>
-<td>Benchmark scripts (YOLO, BioCLIP, BirdNET runtime on the benchmark subsets) and result tables</td>
-</tr>
-<tr>
-<td><code>main</code></td>
-<td>The original two-line README</td>
-</tr>
-</tbody>
-</table>
+<h1 id="related-repositories">Related repositories<a class="headerlink" href="#related-repositories" title="Permanent link">¶</a></h1>
+<p>Two earlier repositories preceded this one.</p>
+<ul>
+<li><a href="https://github.com/Imageomics/naturelab"><code>Imageomics/naturelab</code></a> is the
+  public home of the field logs, the field collection protocols, the Google
+  Earth site files, and the data-storage protocol. This repository links to it
+  rather than duplicating them.</li>
+<li><code>Imageomics/wilds_multimodal_data</code> was the internal working repository. Its
+  history is preserved here under the <code>legacy/wilds_multimodal_data/</code> branch
+  prefix; <code>main</code> is the curated metadata release.</li>
+</ul>
 <h2 id="the-milu-deer-activity-project">The Milu-deer activity project<a class="headerlink" href="#the-milu-deer-activity-project" title="Permanent link">¶</a></h2>
-<p>The camera-trap and acoustic analysis on <code>smartwilds-analysis</code> and the
-<code>deer_vocalizations</code> classifier belong to a separate project by Bharath Pillai
-and Varun Viswapriyan on annotation-free verification of Milu (Père David's)
-deer activity, using deer calls and distance estimation. It has a workshop
-paper, <a href="https://arxiv.org/abs/2606.21613">Cross-Modal Corroboration for Annotation-Free Wildlife Monitoring</a>,
-and a journal paper under review.
-That work uses its own labels and its own acoustic model; the holistic dataset
-documented here uses a substantially updated labeling protocol (see the
-<a href="../CAMERA_TRAP_RELEASE/">camera-trap release note</a>). The two are kept
-separate on purpose: nothing from those branches is merged into <code>main</code>, and
-the numbers in this release should not be read as inputs to or outputs of that
-paper.</p>
+<p>The camera-trap and acoustic analysis on the legacy branches belongs to a
+separate project by Bharath Pillai and Varun Viswapriyan on annotation-free
+verification of Milu (Père David's) deer activity, using deer calls and
+distance estimation. It has a workshop paper,
+<a href="https://arxiv.org/abs/2606.21613">Cross-Modal Corroboration for Annotation-Free Wildlife Monitoring</a>,
+and a journal paper under review. That work uses its own labels and its own
+acoustic model; the holistic dataset documented here uses a substantially
+updated labeling protocol (see the <a href="../CAMERA_TRAP_RELEASE/">camera-trap release note</a>).
+The two are kept separate on purpose, and the numbers in this release should
+not be read as inputs to or outputs of that paper.</p>
 <h2 id="what-was-migrated">What was migrated<a class="headerlink" href="#what-was-migrated" title="Permanent link">¶</a></h2>
-<p>What belongs to the metadata release has been migrated into <code>main</code>: the
-sensor configurations (<code>metadata/sensor_configurations.md</code>), the
+<p>The sensor configurations (<code>metadata/sensor_configurations.md</code>), the
 documentation guidelines (<code>guidelines/</code>), the dataset cards, the defect
-inventory, and the supplemental material. The labeling pipelines, model
-experiments, and systems-paper results stay on their branches; they are a
-different kind of artifact from the one this release documents.</p>
-<p>To look at a legacy branch:</p>
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>fetch<span class="w"> </span>origin<span class="w"> </span><span class="s1">'refs/heads/legacy/*:refs/remotes/origin/legacy/*'</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>switch<span class="w"> </span>--detach<span class="w"> </span>origin/legacy/wilds_multimodal_data/sam3_detection_pipeline
-</code></pre></div>
+inventory, the supplemental material, and the cross-modal coordination
+analysis (<code>analysis/cross_modal_coordination/</code>) are in <code>main</code>. Labeling
+pipelines, model experiments, and raw experiment outputs stay on the legacy
+branches.</p>
 
 
 
