@@ -1,5 +1,5 @@
 site_name: SmartWilds
-site_description: Integration, alignment, and release code and documentation for the SmartWilds multi-modal field sensing dataset
+site_description: Code and documentation for SmartWilds, a multi-modal field sensing dataset from The Wilds, Ohio
 site_author: SmartWilds team, Imageomics Institute
 site_url: https://imageomics.github.io/smartwilds
 
