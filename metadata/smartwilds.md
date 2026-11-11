@@ -37,10 +37,10 @@ at The Wilds (Cumberland, Ohio). Each modality has its own dataset and DOI:
 
 | Dataset | Content |
 |---|---|
-| [smartwilds-camera-traps](https://huggingface.co/datasets/imageomics/smartwilds-camera-traps) | 235,778 processed images, 19,785 Events, 72,775 original-SAM3-geometry operational Occurrences; the 2,067-box reference set is separate |
-| [smartwilds-bioacoustics](https://huggingface.co/datasets/imageomics/smartwilds-bioacoustics) | 2,371 WAV recordings, 9,960 Occurrences |
-| [smartwilds-drones](https://huggingface.co/datasets/imageomics/smartwilds-drones) | 39 videos, 15 flight sessions, 318,215 Occurrences |
-| [smartwilds-citizen-science](https://huggingface.co/datasets/imageomics/smartwilds-citizen-science) | 1,103 media files, 622 Occurrences |
+| [smartwilds-camera-traps](https://huggingface.co/datasets/ABC-Center/smartwilds_metadata/tree/main/smartwilds-camera-traps) | 235,778 processed images, 19,785 Events, 72,775 original-SAM3-geometry operational Occurrences; the 2,067-box reference set is separate |
+| [smartwilds-bioacoustics](https://huggingface.co/datasets/ABC-Center/smartwilds_metadata/tree/main/smartwilds-bioacoustics) | 2,371 WAV recordings, 9,960 Occurrences |
+| [smartwilds-drones](https://huggingface.co/datasets/ABC-Center/smartwilds_metadata/tree/main/smartwilds-drones) | 39 videos, 15 flight sessions, 318,215 Occurrences |
+| [smartwilds-citizen-science](https://huggingface.co/datasets/ABC-Center/smartwilds_metadata/tree/main/smartwilds-citizen-science) | 1,103 media files, 622 Occurrences |
 | **smartwilds** (this dataset) | study root, merged Event table, text records, arrival traces |
 
 All five datasets share one Event hierarchy. The camera branch has its own

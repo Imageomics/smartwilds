@@ -29,12 +29,12 @@ The Darwin Core Event and Occurrence tables, the dataset cards, the
 supplemental material and defect inventory, the field notes and campaign
 reports, and the code that produced and validated all of it. Raw images and labels will be
 released soon. The 2025 pilot media are
-already in the [SmartWilds collection](https://huggingface.co/collections/imageomics/smartwilds).
+already in the [SmartWilds collection](https://huggingface.co/collections/ABC-Center/smartwilds-6af3c0aac0a67864cbf6edb4).
 
 | Part | Where |
 |---|---|
 | How to join the modalities | [Joining in space and time](datasets/joining.md) |
-| Darwin Core tables | [`imageomics/smartwilds_metadata`](https://huggingface.co/datasets/imageomics/smartwilds_metadata) on Hugging Face ([guide](datasets/darwin-core-tables.md)) |
+| Darwin Core tables | [`ABC-Center/smartwilds_metadata`](https://huggingface.co/datasets/ABC-Center/smartwilds_metadata) on Hugging Face ([guide](datasets/darwin-core-tables.md)) |
 | Dataset cards for the five SmartWilds datasets | [`metadata/`](datasets/dataset-cards.md) |
 | Supplemental material, defect inventory, camera-trap release note | [`docs/`](SUPPLEMENTAL.md) |
 | Data summaries and campaign data reports | [`field_campaigns/`](datasets/field-campaigns.md) |
@@ -48,7 +48,7 @@ already in the [SmartWilds collection](https://huggingface.co/collections/imageo
 git clone https://github.com/Imageomics/smartwilds
 cd smartwilds
 pip install -r requirements.txt
-huggingface-cli download --repo-type dataset imageomics/smartwilds_metadata --local-dir smartwilds_metadata
+huggingface-cli download --repo-type dataset ABC-Center/smartwilds_metadata --local-dir smartwilds_metadata
 python examples/quickstart.py smartwilds_metadata/smartwilds-camera-traps smartwilds_metadata/smartwilds-bioacoustics
 ```
 

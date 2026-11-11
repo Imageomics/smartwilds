@@ -83,7 +83,7 @@ heard in each file.**
 This is the bioacoustics dataset of the **SmartWilds** collection. Each modality
 has its own dataset and DOI. They share one Darwin Core Event hierarchy rooted
 at `TheWilds_2025` and are joined by the
-[SmartWilds collection](https://huggingface.co/collections/imageomics/smartwilds).
+[SmartWilds collection](https://huggingface.co/collections/ABC-Center/smartwilds-6af3c0aac0a67864cbf6edb4).
 
 ## Dataset Details
 
@@ -187,7 +187,7 @@ The zero-detection recordings are kept as Events. This lets a user tell
 
 Extended inventories, the timestamp-repair methods, the standards crosswalk,
 validation checks, and the full defect inventory are in
-[`SUPPLEMENTAL.md`](https://huggingface.co/datasets/imageomics/smartwilds/blob/main/SUPPLEMENTAL.md)
+[`SUPPLEMENTAL.md`](https://huggingface.co/datasets/ABC-Center/smartwilds_metadata/blob/main/SUPPLEMENTAL.md)
 in the study-level SmartWilds dataset.
 
 ## Licensing
@@ -203,7 +203,7 @@ Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Scripts: MI
   year      = {2026},
   publisher = {Hugging Face},
   note      = {DOI pending the raw data release},
-  url       = {https://huggingface.co/datasets/imageomics/smartwilds-bioacoustics}
+  url       = {https://huggingface.co/datasets/ABC-Center/smartwilds_metadata/tree/main/smartwilds-bioacoustics}
 }
 ```
 

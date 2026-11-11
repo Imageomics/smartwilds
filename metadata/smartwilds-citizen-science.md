@@ -110,7 +110,7 @@ This dataset supports ecological analysis and sensing-systems research; the comp
 
 Extended inventories, the timestamp-repair methods, the standards crosswalk,
 validation checks, and the full defect inventory are in
-[`SUPPLEMENTAL.md`](https://huggingface.co/datasets/imageomics/smartwilds/blob/main/SUPPLEMENTAL.md)
+[`SUPPLEMENTAL.md`](https://huggingface.co/datasets/ABC-Center/smartwilds_metadata/blob/main/SUPPLEMENTAL.md)
 in the study-level SmartWilds dataset.
 
 ## Licensing
@@ -126,7 +126,7 @@ Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Scripts: MI
   year      = {2026},
   publisher = {Hugging Face},
   note      = {DOI pending the raw data release},
-  url       = {https://huggingface.co/datasets/imageomics/smartwilds-citizen-science}
+  url       = {https://huggingface.co/datasets/ABC-Center/smartwilds_metadata/tree/main/smartwilds-citizen-science}
 }
 ```
 

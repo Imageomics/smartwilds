@@ -21,7 +21,7 @@ Last updated: 2026-11-10.
 Release: SmartWilds release build 2026-10-22, camera tables updated 2026-11-08.
 It supersedes the 2026-07-24 integration pass. Paths such as
 `processing_output/...` are relative to the project archive; the released files
-are in the per-modality datasets of the [SmartWilds collection](https://huggingface.co/collections/imageomics/smartwilds).
+are in the per-modality datasets of the [SmartWilds collection](https://huggingface.co/collections/ABC-Center/smartwilds-6af3c0aac0a67864cbf6edb4).
 
 ---
 
@@ -844,7 +844,7 @@ from:
 
 Each modality is published as its own Hugging Face dataset with its own DOI,
 and a study-level dataset holds the merged Event table, the text records, the
-arrival traces, and this supplement. The [SmartWilds collection](https://huggingface.co/collections/imageomics/smartwilds) joins all five.
+arrival traces, and this supplement. The [SmartWilds collection](https://huggingface.co/collections/ABC-Center/smartwilds-6af3c0aac0a67864cbf6edb4) joins all five.
 DOIs, the license, and the maintenance commitment will be listed here at
 publication. Contact: Jenna M. Kline (kline.377@osu.edu).
 

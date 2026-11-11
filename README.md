@@ -28,8 +28,8 @@ Events and 401,602 unique Occurrences. See
 [`docs/CAMERA_TRAP_RELEASE.md`](docs/CAMERA_TRAP_RELEASE.md) for the
 annotation method and provenance.
 
-- **Data:** [imageomics/smartwilds_metadata](https://huggingface.co/datasets/imageomics/smartwilds_metadata) on Hugging Face, in the
-  [SmartWilds collection](https://huggingface.co/collections/imageomics/smartwilds)
+- **Data:** [ABC-Center/smartwilds_metadata](https://huggingface.co/datasets/ABC-Center/smartwilds_metadata) on Hugging Face, in the
+  [SmartWilds collection](https://huggingface.co/collections/ABC-Center/smartwilds-6af3c0aac0a67864cbf6edb4)
 - **Field protocols, forms, and logs:**
   [Imageomics/naturelab](https://github.com/Imageomics/naturelab)
 - **Papers:** see [Papers](#papers) below
@@ -79,7 +79,7 @@ See [Applications](https://imageomics.github.io/smartwilds/analysis/) for the pa
 
 ```bash
 pip install -r requirements.txt
-huggingface-cli download --repo-type dataset imageomics/smartwilds_metadata --local-dir smartwilds_metadata
+huggingface-cli download --repo-type dataset ABC-Center/smartwilds_metadata --local-dir smartwilds_metadata
 python examples/quickstart.py smartwilds_metadata/smartwilds-camera-traps
 ```
 

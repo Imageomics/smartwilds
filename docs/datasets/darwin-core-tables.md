@@ -2,13 +2,10 @@
 
 The Darwin Core Event and Occurrence tables of the SmartWilds release are
 published as one Hugging Face dataset,
-[`imageomics/smartwilds_metadata`](https://huggingface.co/datasets/imageomics/smartwilds_metadata),
-part of the [SmartWilds collection](https://huggingface.co/collections/imageomics/smartwilds).
+[`ABC-Center/smartwilds_metadata`](https://huggingface.co/datasets/ABC-Center/smartwilds_metadata),
+part of the [SmartWilds collection](https://huggingface.co/collections/ABC-Center/smartwilds-6af3c0aac0a67864cbf6edb4).
 It holds the five components of the release, each a complete FAIR² package,
-plus the supplemental material. Files under 10 MB are on the Hub today; the
-twelve larger tables (1.8 GB uncompressed, about 140 MB zipped) are published
-as one archive on Zenodo with a DOI and will join the Hub repository when
-storage allows. The dataset card lists which files are where.
+plus the supplemental material:
 
 ```
 smartwilds_metadata/
@@ -34,7 +31,7 @@ tables share one Event hierarchy rooted at `TheWilds_2025`.
 
 ```bash
 pip install huggingface_hub
-huggingface-cli download --repo-type dataset imageomics/smartwilds_metadata --local-dir smartwilds_metadata
+huggingface-cli download --repo-type dataset ABC-Center/smartwilds_metadata --local-dir smartwilds_metadata
 python examples/quickstart.py smartwilds_metadata/smartwilds-camera-traps smartwilds_metadata/smartwilds-bioacoustics
 ```
 
@@ -42,7 +39,7 @@ Or load one table directly:
 
 ```python
 import pandas as pd
-oc = pd.read_csv("hf://datasets/imageomics/smartwilds_metadata/smartwilds-camera-traps/data/occurrences.csv",
+oc = pd.read_csv("hf://datasets/ABC-Center/smartwilds_metadata/smartwilds-camera-traps/data/occurrences.csv",
                  dtype=str, keep_default_na=False)
 ```
 

@@ -192,7 +192,7 @@ Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Scripts: MI
   year      = {2026},
   publisher = {Hugging Face},
   note      = {DOI pending the raw data release},
-  url       = {https://huggingface.co/datasets/imageomics/smartwilds-camera-traps}
+  url       = {https://huggingface.co/datasets/ABC-Center/smartwilds_metadata/tree/main/smartwilds-camera-traps}
 }
 ```
 

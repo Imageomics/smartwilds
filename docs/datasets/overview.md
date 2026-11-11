@@ -54,11 +54,11 @@ defects themselves are in the [defect inventory](../DEFECT_INVENTORY.md).
 
 ## Where the files are
 
-- The tables are published as [`imageomics/smartwilds_metadata`](https://huggingface.co/datasets/imageomics/smartwilds_metadata) on
+- The tables are published as [`ABC-Center/smartwilds_metadata`](https://huggingface.co/datasets/ABC-Center/smartwilds_metadata) on
   Hugging Face; see [Darwin Core tables](darwin-core-tables.md) for the layout
   and how to load them.
 - The dataset cards, written to the FAIR² Drones and Imageomics templates, are
   in [`metadata/`](dataset-cards.md).
 - The 2025 pilot media are already public in the
-  [SmartWilds collection](https://huggingface.co/collections/imageomics/smartwilds)
+  [SmartWilds collection](https://huggingface.co/collections/ABC-Center/smartwilds-6af3c0aac0a67864cbf6edb4)
   on Hugging Face.

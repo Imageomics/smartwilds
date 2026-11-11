@@ -114,7 +114,7 @@ separately.
 - **Homepage and code:** <https://github.com/Imageomics/smartwilds> (documentation: <https://imageomics.github.io/smartwilds/>)
 - **Paper:** SmartWilds: Integrating, Aligning, and Documenting Multi-Modal Field Sensing Data (under review)
 - **Release build:** 2026-10-22; camera and merged tables updated 2026-11-08
-- **Collection:** [SmartWilds](https://huggingface.co/collections/imageomics/smartwilds), which also holds the 2025 pilot media
+- **Collection:** [SmartWilds](https://huggingface.co/collections/ABC-Center/smartwilds-6af3c0aac0a67864cbf6edb4), which also holds the 2025 pilot media and the pilot paper
 
 | Component | Events | Occurrences | Notes |
 |---|---:|---:|---|
@@ -159,26 +159,6 @@ This dataset supports cross-modal ecological analysis, data-quality research, an
 - Object detection and species classification (camera traps, drones, visitor photos) with provenance-labeled boxes and human reference sets
 - Multi-object tracking on frame-indexed drone detections
 - Bird call classification and sound-event detection against BirdNET outputs
-
-## Where the files are
-
-Files under 10 MB are in this Hugging Face repository: every dataset card,
-data dictionary, provenance record, and Event table, the bioacoustic and
-citizen-science tables, the bioacoustic recording inventory, and the
-supplemental material. The twelve larger tables (the camera-trap and drone
-Occurrence tables, the camera image inventory and media manifest, the drone
-detections, the merged Occurrence table, and the arrival traces; 1.8 GB
-uncompressed) are published as one archive on Zenodo, with a DOI, and will be
-added here when storage allows. Until the Zenodo record is live they are
-available from the authors on request.
-
-| Component | Here | On Zenodo |
-|---|---|---|
-| `smartwilds-camera-traps/` | events, dictionary, deployments, provenance, arrival statistics | occurrences, images, media manifest, arrival traces |
-| `smartwilds-bioacoustics/` | complete | complete |
-| `smartwilds-drones/` | events, flights, platforms, provenance | occurrences, detections |
-| `smartwilds-citizen-science/` | complete | complete |
-| `smartwilds/` (study level) | events, text records, sensor configurations, defect inventory, arrival-trace contract | merged occurrences, arrival traces |
 
 ## Layout
 
@@ -236,7 +216,7 @@ Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Scripts: MI
   title     = {SmartWilds Metadata (The Wilds 2025)},
   year      = {2026},
   publisher = {Hugging Face},
-  url       = {https://huggingface.co/datasets/imageomics/smartwilds_metadata}
+  url       = {https://huggingface.co/datasets/ABC-Center/smartwilds_metadata}
 }
 ```
 

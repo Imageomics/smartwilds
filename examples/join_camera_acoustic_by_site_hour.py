@@ -6,7 +6,7 @@ def load(root):
     return ev, oc
 
 # Download first:
-#   huggingface-cli download --repo-type dataset imageomics/smartwilds_metadata --local-dir smartwilds_metadata
+#   huggingface-cli download --repo-type dataset ABC-Center/smartwilds_metadata --local-dir smartwilds_metadata
 cam_ev, cam = load("smartwilds_metadata/smartwilds-camera-traps/data")
 aru_ev, aru = load("smartwilds_metadata/smartwilds-bioacoustics/data")
 
