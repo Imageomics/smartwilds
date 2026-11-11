@@ -1438,13 +1438,10 @@
 <h1 id="darwin-core-tables">Darwin Core tables<a class="headerlink" href="#darwin-core-tables" title="Permanent link">¶</a></h1>
 <p>The Darwin Core Event and Occurrence tables of the SmartWilds release are
 published as one Hugging Face dataset,
-<a href="https://huggingface.co/datasets/imageomics/smartwilds_metadata"><code>imageomics/smartwilds_metadata</code></a>,
-part of the <a href="https://huggingface.co/collections/imageomics/smartwilds">SmartWilds collection</a>.
+<a href="https://huggingface.co/datasets/ABC-Center/smartwilds_metadata"><code>ABC-Center/smartwilds_metadata</code></a>,
+part of the <a href="https://huggingface.co/collections/ABC-Center/smartwilds-6af3c0aac0a67864cbf6edb4">SmartWilds collection</a>.
 It holds the five components of the release, each a complete FAIR² package,
-plus the supplemental material. Files under 10 MB are on the Hub today; the
-twelve larger tables (1.8 GB uncompressed, about 140 MB zipped) are published
-as one archive on Zenodo with a DOI and will join the Hub repository when
-storage allows. The dataset card lists which files are where.</p>
+plus the supplemental material:</p>
 <div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>smartwilds_metadata/
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── README.md                      # dataset card
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── SUPPLEMENTAL.md
@@ -1464,12 +1461,12 @@ storage allows. The dataset card lists which files are where.</p>
 tables share one Event hierarchy rooted at <code>TheWilds_2025</code>.</p>
 <h2 id="getting-the-tables">Getting the tables<a class="headerlink" href="#getting-the-tables" title="Permanent link">¶</a></h2>
 <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>huggingface_hub
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>huggingface-cli<span class="w"> </span>download<span class="w"> </span>--repo-type<span class="w"> </span>dataset<span class="w"> </span>imageomics/smartwilds_metadata<span class="w"> </span>--local-dir<span class="w"> </span>smartwilds_metadata
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>huggingface-cli<span class="w"> </span>download<span class="w"> </span>--repo-type<span class="w"> </span>dataset<span class="w"> </span>ABC-Center/smartwilds_metadata<span class="w"> </span>--local-dir<span class="w"> </span>smartwilds_metadata
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>python<span class="w"> </span>examples/quickstart.py<span class="w"> </span>smartwilds_metadata/smartwilds-camera-traps<span class="w"> </span>smartwilds_metadata/smartwilds-bioacoustics
 </code></pre></div>
 <p>Or load one table directly:</p>
 <div class="language-python highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">oc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"hf://datasets/imageomics/smartwilds_metadata/smartwilds-camera-traps/data/occurrences.csv"</span><span class="p">,</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">oc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"hf://datasets/ABC-Center/smartwilds_metadata/smartwilds-camera-traps/data/occurrences.csv"</span><span class="p">,</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>                 <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">keep_default_na</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="column-definitions">Column definitions<a class="headerlink" href="#column-definitions" title="Permanent link">¶</a></h2>
